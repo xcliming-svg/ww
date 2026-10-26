@@ -10,7 +10,7 @@ import registry from '../../data/schemas/registry.json';
 export function loadConfig() {
   const raw = Object.fromEntries([...Object.entries(modules), ...Object.entries(translations)].filter(([p]) => registry.includes(p.slice(1))).map(([p, v]) => [p.slice(1), v]));
   raw['desktop/builder.json'] = desktop;
-  if (!validateContent(raw)) throw new Error('CONFIG_INVALID');
+  if (!validateContent(raw)) throw new Error('CONFIG_INVALID', { cause: 'errors' in validateContent ? validateContent.errors : undefined });
   /** @type {import('../domain/model/contracts.js').DomainConfig} */
   const domain = {
     nodes: /** @type {import('../domain/model/contracts.js').TechNode[]} */ (raw['data/tech/nodes.json']),

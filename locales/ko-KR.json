@@ -156,6 +156,7 @@
   "error.OVERFLOW": "군수물자 한도를 초과했습니다.",
   "error.RULES_UNRESOLVED": "전투 규칙이 아직 확정되지 않았습니다.",
   "error.CONFIG_INVALID": "게임 설정을 읽을 수 없습니다.",
+  "error.STARTUP_FAILED": "게임 화면을 시작하지 못했습니다.",
   "error.SAVE_CORRUPT": "저장 파일이 손상되었거나 유효하지 않습니다. 원본은 보존됩니다.",
   "error.SAVE_VERSION": "지원하지 않는 저장 버전입니다.",
   "error.SAVE_MISMATCH": "저장 파일과 현재 콘텐츠 버전이 다릅니다.",

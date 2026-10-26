@@ -4,6 +4,7 @@ import { createHash } from 'node:crypto';
 import { spawnSync } from 'node:child_process';
 import ts from 'typescript';
 import Ajv from 'ajv';
+import { validateContent, validateSave, validateSaveV1 } from '../src/infrastructure/schema-validators.js';
 import { validateTechGraph } from '../src/domain/tech/TechGraph.js';
 /** @param {string} file */ const read = async file => JSON.parse(await fs.readFile(file, 'utf8'));
 /** @param {string} dir @returns {Promise<string[]>} */
@@ -22,9 +23,39 @@ if (mode === 'syntax') {
 }
 if (mode === 'schemas') {
   const ajv = new Ajv({ allErrors: true, strict: true });
-  const validate = ajv.compile(await read('data/schemas/content.schema.json')); check(validate(data), JSON.stringify(validate.errors));
-  ajv.compile(await read('data/schemas/save.schema.json'));
-  ajv.compile(await read('data/schemas/save-v1.schema.json'));
+  const contentSchema = await read('data/schemas/content.schema.json');
+  const validate = ajv.compile(contentSchema); check(validate(data), JSON.stringify(validate.errors));
+  const saveSchemas = [await read('data/schemas/save-v1.schema.json'), await read('data/schemas/save.schema.json')];
+  /** JSON Schema checks only: no app, DOM, Phaser, storage, or game commands.
+   * @param {string} name @param {import('ajv').ValidateFunction} reference
+   * @param {(value:any)=>boolean} generated @param {any} value @param {boolean} expected */
+  function checkGenerated(name, reference, generated, value, expected) {
+    check(reference(value) === expected, `Schema fixture contract:${name}`);
+    try { check(generated(value) === expected, `Generated schema mismatch:${name}`); }
+    catch (error) { check(false, `Generated schema threw:${name}:${error instanceof Error ? error.message : String(error)}`); }
+  }
+  checkGenerated('content/current', validate, validateContent, data, true);
+  const missing = { ...data }; delete missing['data/rules.json'];
+  checkGenerated('content/missing-file', validate, validateContent, missing, false);
+  for (const extra of [0, 1]) {
+    const unicode = structuredClone(data);
+    unicode['data/tech/nodes.json'][0].labelKey = '\u{1F6E1}'.repeat(contentSchema.properties['data/tech/nodes.json'].items.properties.labelKey.maxLength + extra);
+    checkGenerated(`content/unicode-${extra}`, validate, validateContent, unicode, extra === 0);
+  }
+  const state = { mode: 'campaign', phase: 'preparation', campaignId: 'schema-fixture', wave: 1, seed: 0, rngState: 0,
+    supplies: 100, formationStage: '3', buildingIds: ['hq', 'barracks'], researchIds: ['rifleR'], upgradeLevels: {}, placements: [],
+    commandIds: [], acknowledgedNodeIds: [], tutorialStep: 0, clearedWaveCount: 0, resolutionIds: [], hqHp: 450, checkpoint: null };
+  for (const [index, schema] of saveSchemas.entries()) {
+    const reference = ajv.compile(schema); const generated = index === 0 ? validateSaveV1 : validateSave;
+    const envelope = { schemaVersion: index + 1, configVersion: 'schema-fixture', contentVersion: 'schema-fixture', savedAt: '2026-10-26T00:00:00.000Z',
+      state: index === 0 ? state : { ...state, investments: [] }, checksum: '0'.repeat(64) };
+    checkGenerated(`save-v${index + 1}/valid`, reference, generated, envelope, true);
+    checkGenerated(`save-v${index + 1}/invalid`, reference, generated, { ...envelope, checksum: 'invalid' }, false);
+    for (const extra of [0, 1]) {
+      const unicode = { ...envelope, configVersion: '\u{1F6E1}'.repeat(schema.properties.configVersion.maxLength + extra) };
+      checkGenerated(`save-v${index + 1}/unicode-${extra}`, reference, generated, unicode, extra === 0);
+    }
+  }
   const allData = [...await walk('data'), ...await walk('locales')].filter(p => p.endsWith('.json') && !p.includes('/schemas/'));
   for (const p of allData) check(registry.includes(p), `Unregistered JSON: ${p}`);
   const candidate = data[`data/balance/${data['data/balance/active.json'].candidate}.json`];
