@@ -1,0 +1,410 @@
+{
+  "version": "role-probes-v1",
+  "probes": {
+    "version": "role-probes-v1",
+    "seeds": 1000,
+    "startSeed": 200000,
+    "wave": 50,
+    "cells": [
+      {
+        "row": 1,
+        "col": 2
+      },
+      {
+        "row": 3,
+        "col": 2
+      },
+      {
+        "row": 2,
+        "col": 1
+      },
+      {
+        "row": 2,
+        "col": 3
+      }
+    ],
+    "directions": [
+      "north",
+      "south",
+      "east",
+      "west"
+    ],
+    "enemyUnits": [
+      "rifle",
+      "tank",
+      "bomber"
+    ],
+    "enemyCount": 8,
+    "spawnGroups": 2
+  },
+  "candidate": "candidate-v11",
+  "engineHash": "119e53a226c88b4ea8849372c7a0ace91ede7de27504c0a9a76eb6617f6a4550",
+  "configHash": "42122499f701899054493e3caf5aa66e3c2b8e94f24b04432ce5f2350f252139",
+  "rows": [
+    {
+      "unitId": "rifle",
+      "enemyUnit": "rifle",
+      "n": 1000,
+      "wins": 0,
+      "invalid": 0,
+      "deploymentCost": 80,
+      "meanHq": 0,
+      "meanDamage": 143.4194400000001
+    },
+    {
+      "unitId": "rifle",
+      "enemyUnit": "tank",
+      "n": 1000,
+      "wins": 0,
+      "invalid": 0,
+      "deploymentCost": 80,
+      "meanHq": 0,
+      "meanDamage": 0
+    },
+    {
+      "unitId": "rifle",
+      "enemyUnit": "bomber",
+      "n": 1000,
+      "wins": 0,
+      "invalid": 0,
+      "deploymentCost": 80,
+      "meanHq": 0,
+      "meanDamage": 0
+    },
+    {
+      "unitId": "mg",
+      "enemyUnit": "rifle",
+      "n": 1000,
+      "wins": 270,
+      "invalid": 0,
+      "deploymentCost": 140,
+      "meanHq": 121.5,
+      "meanDamage": 474.629759999999
+    },
+    {
+      "unitId": "mg",
+      "enemyUnit": "tank",
+      "n": 1000,
+      "wins": 0,
+      "invalid": 0,
+      "deploymentCost": 140,
+      "meanHq": 0,
+      "meanDamage": 0
+    },
+    {
+      "unitId": "mg",
+      "enemyUnit": "bomber",
+      "n": 1000,
+      "wins": 0,
+      "invalid": 0,
+      "deploymentCost": 140,
+      "meanHq": 0,
+      "meanDamage": 0
+    },
+    {
+      "unitId": "mortar",
+      "enemyUnit": "rifle",
+      "n": 1000,
+      "wins": 622,
+      "invalid": 0,
+      "deploymentCost": 200,
+      "meanHq": 279.9,
+      "meanDamage": 514.4561999999958
+    },
+    {
+      "unitId": "mortar",
+      "enemyUnit": "tank",
+      "n": 1000,
+      "wins": 0,
+      "invalid": 0,
+      "deploymentCost": 200,
+      "meanHq": 0,
+      "meanDamage": 92.82000000000023
+    },
+    {
+      "unitId": "mortar",
+      "enemyUnit": "bomber",
+      "n": 1000,
+      "wins": 0,
+      "invalid": 0,
+      "deploymentCost": 200,
+      "meanHq": 0,
+      "meanDamage": 0
+    },
+    {
+      "unitId": "gun",
+      "enemyUnit": "rifle",
+      "n": 1000,
+      "wins": 1000,
+      "invalid": 0,
+      "deploymentCost": 320,
+      "meanHq": 450,
+      "meanDamage": 554.4460799999946
+    },
+    {
+      "unitId": "gun",
+      "enemyUnit": "tank",
+      "n": 1000,
+      "wins": 0,
+      "invalid": 0,
+      "deploymentCost": 320,
+      "meanHq": 0,
+      "meanDamage": 619.0338000000012
+    },
+    {
+      "unitId": "gun",
+      "enemyUnit": "bomber",
+      "n": 1000,
+      "wins": 0,
+      "invalid": 0,
+      "deploymentCost": 320,
+      "meanHq": 0,
+      "meanDamage": 5.334030000000036
+    },
+    {
+      "unitId": "at",
+      "enemyUnit": "rifle",
+      "n": 1000,
+      "wins": 0,
+      "invalid": 0,
+      "deploymentCost": 160,
+      "meanHq": 0,
+      "meanDamage": 242.23492000000346
+    },
+    {
+      "unitId": "at",
+      "enemyUnit": "tank",
+      "n": 1000,
+      "wins": 0,
+      "invalid": 0,
+      "deploymentCost": 160,
+      "meanHq": 0,
+      "meanDamage": 771.1782399999984
+    },
+    {
+      "unitId": "at",
+      "enemyUnit": "bomber",
+      "n": 1000,
+      "wins": 0,
+      "invalid": 0,
+      "deploymentCost": 160,
+      "meanHq": 0,
+      "meanDamage": 0
+    },
+    {
+      "unitId": "car",
+      "enemyUnit": "rifle",
+      "n": 1000,
+      "wins": 1000,
+      "invalid": 0,
+      "deploymentCost": 240,
+      "meanHq": 450,
+      "meanDamage": 527.0399999999911
+    },
+    {
+      "unitId": "car",
+      "enemyUnit": "tank",
+      "n": 1000,
+      "wins": 0,
+      "invalid": 0,
+      "deploymentCost": 240,
+      "meanHq": 0,
+      "meanDamage": 0
+    },
+    {
+      "unitId": "car",
+      "enemyUnit": "bomber",
+      "n": 1000,
+      "wins": 0,
+      "invalid": 0,
+      "deploymentCost": 240,
+      "meanHq": 0,
+      "meanDamage": 0
+    },
+    {
+      "unitId": "tank",
+      "enemyUnit": "rifle",
+      "n": 1000,
+      "wins": 1000,
+      "invalid": 0,
+      "deploymentCost": 400,
+      "meanHq": 450,
+      "meanDamage": 533.0385999999921
+    },
+    {
+      "unitId": "tank",
+      "enemyUnit": "tank",
+      "n": 1000,
+      "wins": 0,
+      "invalid": 0,
+      "deploymentCost": 400,
+      "meanHq": 0,
+      "meanDamage": 734.58
+    },
+    {
+      "unitId": "tank",
+      "enemyUnit": "bomber",
+      "n": 1000,
+      "wins": 0,
+      "invalid": 0,
+      "deploymentCost": 400,
+      "meanHq": 0,
+      "meanDamage": 0
+    },
+    {
+      "unitId": "heavy",
+      "enemyUnit": "rifle",
+      "n": 1000,
+      "wins": 1000,
+      "invalid": 0,
+      "deploymentCost": 640,
+      "meanHq": 450,
+      "meanDamage": 533.0350799999919
+    },
+    {
+      "unitId": "heavy",
+      "enemyUnit": "tank",
+      "n": 1000,
+      "wins": 4,
+      "invalid": 0,
+      "deploymentCost": 640,
+      "meanHq": 1.8,
+      "meanDamage": 1704.5683199999876
+    },
+    {
+      "unitId": "heavy",
+      "enemyUnit": "bomber",
+      "n": 1000,
+      "wins": 0,
+      "invalid": 0,
+      "deploymentCost": 640,
+      "meanHq": 0,
+      "meanDamage": 0
+    },
+    {
+      "unitId": "destroyer",
+      "enemyUnit": "rifle",
+      "n": 1000,
+      "wins": 1000,
+      "invalid": 0,
+      "deploymentCost": 400,
+      "meanHq": 450,
+      "meanDamage": 531.2378399999924
+    },
+    {
+      "unitId": "destroyer",
+      "enemyUnit": "tank",
+      "n": 1000,
+      "wins": 321,
+      "invalid": 0,
+      "deploymentCost": 400,
+      "meanHq": 144.45,
+      "meanDamage": 2236.463600000003
+    },
+    {
+      "unitId": "destroyer",
+      "enemyUnit": "bomber",
+      "n": 1000,
+      "wins": 0,
+      "invalid": 0,
+      "deploymentCost": 400,
+      "meanHq": 0,
+      "meanDamage": 3.0753000000000497
+    },
+    {
+      "unitId": "fighter",
+      "enemyUnit": "rifle",
+      "n": 1000,
+      "wins": 1000,
+      "invalid": 0,
+      "deploymentCost": 480,
+      "meanHq": 450,
+      "meanDamage": 533.339879999997
+    },
+    {
+      "unitId": "fighter",
+      "enemyUnit": "tank",
+      "n": 1000,
+      "wins": 0,
+      "invalid": 0,
+      "deploymentCost": 480,
+      "meanHq": 0,
+      "meanDamage": 530.9903999999964
+    },
+    {
+      "unitId": "fighter",
+      "enemyUnit": "bomber",
+      "n": 1000,
+      "wins": 0,
+      "invalid": 0,
+      "deploymentCost": 480,
+      "meanHq": 0,
+      "meanDamage": 687.4956800000028
+    },
+    {
+      "unitId": "attacker",
+      "enemyUnit": "rifle",
+      "n": 1000,
+      "wins": 1000,
+      "invalid": 0,
+      "deploymentCost": 560,
+      "meanHq": 450,
+      "meanDamage": 542.5293599999939
+    },
+    {
+      "unitId": "attacker",
+      "enemyUnit": "tank",
+      "n": 1000,
+      "wins": 1000,
+      "invalid": 0,
+      "deploymentCost": 560,
+      "meanHq": 450,
+      "meanDamage": 2459.520000000016
+    },
+    {
+      "unitId": "attacker",
+      "enemyUnit": "bomber",
+      "n": 1000,
+      "wins": 0,
+      "invalid": 0,
+      "deploymentCost": 560,
+      "meanHq": 0,
+      "meanDamage": 0
+    },
+    {
+      "unitId": "bomber",
+      "enemyUnit": "rifle",
+      "n": 1000,
+      "wins": 1000,
+      "invalid": 0,
+      "deploymentCost": 720,
+      "meanHq": 450,
+      "meanDamage": 531.2563199999915
+    },
+    {
+      "unitId": "bomber",
+      "enemyUnit": "tank",
+      "n": 1000,
+      "wins": 1000,
+      "invalid": 0,
+      "deploymentCost": 720,
+      "meanHq": 450,
+      "meanDamage": 2471.77518000001
+    },
+    {
+      "unitId": "bomber",
+      "enemyUnit": "bomber",
+      "n": 1000,
+      "wins": 0,
+      "invalid": 0,
+      "deploymentCost": 720,
+      "meanHq": 0,
+      "meanDamage": 37.92400000000004
+    }
+  ],
+  "limits": [
+    "Combat-only fixture with equal slot counts, different deployment costs",
+    "No research economy or upgrades in this fixture",
+    "Not a campaign completion rate or a human playtest"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "defaultLocale": "ko-KR",
+  "fallbackLocale": "ko-KR",
+  "supportedLocales": [
+    "ko-KR"
+  ],
+  "fontAssetIds": {
+    "ko-KR": "font.ui.koKR"
+  }
+}

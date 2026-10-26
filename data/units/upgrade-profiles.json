@@ -1,0 +1,14 @@
+[
+  {
+    "id": "power",
+    "labelKey": "upgrade.power",
+    "costs": null,
+    "multipliers": null
+  },
+  {
+    "id": "survive",
+    "labelKey": "upgrade.survive",
+    "costs": null,
+    "multipliers": null
+  }
+]

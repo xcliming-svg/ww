@@ -1,0 +1,27 @@
+[
+  {
+    "from": "mortar",
+    "to": "gun",
+    "focus": "infantry"
+  },
+  {
+    "from": "car",
+    "to": "tank",
+    "focus": "armor"
+  },
+  {
+    "from": "tank",
+    "to": "heavy",
+    "focus": "armor"
+  },
+  {
+    "from": "tank",
+    "to": "destroyer",
+    "focus": "armor"
+  },
+  {
+    "from": "attacker",
+    "to": "bomber",
+    "focus": "infantry"
+  }
+]

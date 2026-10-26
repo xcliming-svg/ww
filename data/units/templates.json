@@ -1,0 +1,86 @@
+[
+  {
+    "id": "rifle",
+    "assetId": "unit.rifle.idle",
+    "baseStatKey": "rifle",
+    "costKey": "rifle",
+    "category": "infantry"
+  },
+  {
+    "id": "mg",
+    "assetId": "unit.mg.idle",
+    "baseStatKey": "mg",
+    "costKey": "mg",
+    "category": "infantry"
+  },
+  {
+    "id": "mortar",
+    "assetId": "unit.mortar.idle",
+    "baseStatKey": "mortar",
+    "costKey": "mortar",
+    "category": "artillery"
+  },
+  {
+    "id": "gun",
+    "assetId": "unit.gun.idle",
+    "baseStatKey": "gun",
+    "costKey": "gun",
+    "category": "artillery"
+  },
+  {
+    "id": "at",
+    "assetId": "unit.at.idle",
+    "baseStatKey": "at",
+    "costKey": "at",
+    "category": "infantry"
+  },
+  {
+    "id": "car",
+    "assetId": "unit.car.idle",
+    "baseStatKey": "car",
+    "costKey": "car",
+    "category": "armor"
+  },
+  {
+    "id": "tank",
+    "assetId": "unit.tank.idle",
+    "baseStatKey": "tank",
+    "costKey": "tank",
+    "category": "armor"
+  },
+  {
+    "id": "heavy",
+    "assetId": "unit.heavy.idle",
+    "baseStatKey": "heavy",
+    "costKey": "heavy",
+    "category": "armor"
+  },
+  {
+    "id": "destroyer",
+    "assetId": "unit.destroyer.idle",
+    "baseStatKey": "destroyer",
+    "costKey": "destroyer",
+    "category": "armor"
+  },
+  {
+    "id": "fighter",
+    "assetId": "unit.fighter.idle",
+    "baseStatKey": "fighter",
+    "costKey": "fighter",
+    "category": "aircraft"
+  },
+  {
+    "id": "attacker",
+    "assetId": "unit.attacker.idle",
+    "baseStatKey": "attacker",
+    "costKey": "attacker",
+    "category": "aircraft"
+  },
+  {
+    "id": "bomber",
+    "assetId": "unit.bomber.idle",
+    "baseStatKey": "bomber",
+    "costKey": "bomber",
+    "category": "aircraft"
+  }
+]

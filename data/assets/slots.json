@@ -1,0 +1,2415 @@
+[
+  {
+    "assetId": "building.hq.idle",
+    "category": "building",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "building.hq.damaged",
+    "category": "building",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "building.hq.destroyed",
+    "category": "building",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "unit.rifle.idle",
+    "category": "unit",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "unit.rifle.attack",
+    "category": "unit",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "unit.rifle.hit",
+    "category": "unit",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "unit.rifle.death",
+    "category": "unit",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "unit.mg.idle",
+    "category": "unit",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "unit.mg.attack",
+    "category": "unit",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "unit.mg.hit",
+    "category": "unit",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "unit.mg.death",
+    "category": "unit",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "unit.mortar.idle",
+    "category": "unit",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "unit.mortar.attack",
+    "category": "unit",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "unit.mortar.hit",
+    "category": "unit",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "unit.mortar.death",
+    "category": "unit",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "unit.gun.idle",
+    "category": "unit",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "unit.gun.attack",
+    "category": "unit",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "unit.gun.hit",
+    "category": "unit",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "unit.gun.death",
+    "category": "unit",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "unit.at.idle",
+    "category": "unit",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "unit.at.attack",
+    "category": "unit",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "unit.at.hit",
+    "category": "unit",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "unit.at.death",
+    "category": "unit",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "unit.car.idle",
+    "category": "unit",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "unit.car.attack",
+    "category": "unit",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "unit.car.hit",
+    "category": "unit",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "unit.car.death",
+    "category": "unit",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "unit.tank.idle",
+    "category": "unit",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "unit.tank.attack",
+    "category": "unit",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "unit.tank.hit",
+    "category": "unit",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "unit.tank.death",
+    "category": "unit",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "unit.heavy.idle",
+    "category": "unit",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "unit.heavy.attack",
+    "category": "unit",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "unit.heavy.hit",
+    "category": "unit",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "unit.heavy.death",
+    "category": "unit",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "unit.destroyer.idle",
+    "category": "unit",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "unit.destroyer.attack",
+    "category": "unit",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "unit.destroyer.hit",
+    "category": "unit",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "unit.destroyer.death",
+    "category": "unit",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "unit.fighter.idle",
+    "category": "unit",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "unit.fighter.attack",
+    "category": "unit",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "unit.fighter.hit",
+    "category": "unit",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "unit.fighter.death",
+    "category": "unit",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "unit.attacker.idle",
+    "category": "unit",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "unit.attacker.attack",
+    "category": "unit",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "unit.attacker.hit",
+    "category": "unit",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "unit.attacker.death",
+    "category": "unit",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "unit.bomber.idle",
+    "category": "unit",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "unit.bomber.attack",
+    "category": "unit",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "unit.bomber.hit",
+    "category": "unit",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "unit.bomber.death",
+    "category": "unit",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "terrain.ground",
+    "category": "terrain",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "terrain.road",
+    "category": "terrain",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "terrain.junction",
+    "category": "terrain",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "terrain.spawn",
+    "category": "terrain",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "fx.bullet",
+    "category": "fx",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "fx.shell",
+    "category": "fx",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "fx.tracer",
+    "category": "fx",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "fx.explosion",
+    "category": "fx",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "fx.impact",
+    "category": "fx",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "ui.recon.north",
+    "category": "ui",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "ui.recon.south",
+    "category": "ui",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "ui.recon.east",
+    "category": "ui",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "ui.recon.west",
+    "category": "ui",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "ui.recon.unknown",
+    "category": "ui",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "ui.check",
+    "category": "ui",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "ui.new",
+    "category": "ui",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "ui.locked",
+    "category": "ui",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "ui.info",
+    "category": "ui",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "ui.warning",
+    "category": "ui",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "ui.upgrade",
+    "category": "ui",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "ui.currency",
+    "category": "ui",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "tech.building",
+    "category": "tech",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "tech.research",
+    "category": "tech",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "tech.unit",
+    "category": "tech",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "tech.link",
+    "category": "tech",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "audio.bgm.main",
+    "category": "audio",
+    "relativePath": null,
+    "fallbackKind": "silent",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "audio.sfx.fire",
+    "category": "audio",
+    "relativePath": null,
+    "fallbackKind": "silent",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "font.ui.koKR",
+    "category": "font",
+    "relativePath": "assets/fonts/NotoSansKR-variable.ttf",
+    "fallbackKind": "system-font",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "noto-sans-kr",
+    "status": "ready"
+  },
+  {
+    "assetId": "enemy.rifle.idle",
+    "category": "enemy",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "enemy.rifle.attack",
+    "category": "enemy",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "enemy.rifle.hit",
+    "category": "enemy",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "enemy.rifle.death",
+    "category": "enemy",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "enemy.mg.idle",
+    "category": "enemy",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "enemy.mg.attack",
+    "category": "enemy",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "enemy.mg.hit",
+    "category": "enemy",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "enemy.mg.death",
+    "category": "enemy",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "enemy.mortar.idle",
+    "category": "enemy",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "enemy.mortar.attack",
+    "category": "enemy",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "enemy.mortar.hit",
+    "category": "enemy",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "enemy.mortar.death",
+    "category": "enemy",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "enemy.gun.idle",
+    "category": "enemy",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "enemy.gun.attack",
+    "category": "enemy",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "enemy.gun.hit",
+    "category": "enemy",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "enemy.gun.death",
+    "category": "enemy",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "enemy.at.idle",
+    "category": "enemy",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "enemy.at.attack",
+    "category": "enemy",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "enemy.at.hit",
+    "category": "enemy",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "enemy.at.death",
+    "category": "enemy",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "enemy.car.idle",
+    "category": "enemy",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "enemy.car.attack",
+    "category": "enemy",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "enemy.car.hit",
+    "category": "enemy",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "enemy.car.death",
+    "category": "enemy",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "enemy.tank.idle",
+    "category": "enemy",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "enemy.tank.attack",
+    "category": "enemy",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "enemy.tank.hit",
+    "category": "enemy",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "enemy.tank.death",
+    "category": "enemy",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "enemy.heavy.idle",
+    "category": "enemy",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "enemy.heavy.attack",
+    "category": "enemy",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "enemy.heavy.hit",
+    "category": "enemy",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "enemy.heavy.death",
+    "category": "enemy",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "enemy.destroyer.idle",
+    "category": "enemy",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "enemy.destroyer.attack",
+    "category": "enemy",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "enemy.destroyer.hit",
+    "category": "enemy",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "enemy.destroyer.death",
+    "category": "enemy",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "enemy.fighter.idle",
+    "category": "enemy",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "enemy.fighter.attack",
+    "category": "enemy",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "enemy.fighter.hit",
+    "category": "enemy",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "enemy.fighter.death",
+    "category": "enemy",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "enemy.attacker.idle",
+    "category": "enemy",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "enemy.attacker.attack",
+    "category": "enemy",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "enemy.attacker.hit",
+    "category": "enemy",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "enemy.attacker.death",
+    "category": "enemy",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "enemy.bomber.idle",
+    "category": "enemy",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "enemy.bomber.attack",
+    "category": "enemy",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "enemy.bomber.hit",
+    "category": "enemy",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  },
+  {
+    "assetId": "enemy.bomber.death",
+    "category": "enemy",
+    "relativePath": null,
+    "fallbackKind": "pixel-shape",
+    "designSize": [
+      32,
+      32
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animationFrames": [],
+    "fpsKey": null,
+    "paletteKey": "default",
+    "attributionId": "project-shapes",
+    "status": "placeholder"
+  }
+]

@@ -1,0 +1,160 @@
+{
+  "source": "docs/balance-reports/candidate-v11-refund-exploration.json",
+  "configHash": "42122499f701899054493e3caf5aa66e3c2b8e94f24b04432ce5f2350f252139",
+  "engineHash": "9d89be18163420caf1834f93c18c3a3553c29202c4b7f4df4ef3c74a504317a1",
+  "policyHash": "47608daf4394dad521610e0a12c0bca88dd26219845fa47f4893c9f91dd7b7a2",
+  "contentHash": "27d569c7c6ed8b4c3732e4144e18864c07d13ceaffe27f8fcf0c340e7f832c96",
+  "accountingErrors": 0,
+  "policies": [
+    {
+      "policy": "recon",
+      "n": 8,
+      "cleared": 8,
+      "completionRate": 1,
+      "wilson95": [
+        0.6755843804891231,
+        1
+      ],
+      "averageReached": 100,
+      "maxReached": 100,
+      "invalid": 0,
+      "minimumBalance": 16648,
+      "decileSurvivors": [
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8
+      ],
+      "compositionEntropy": 1.2818656761904856,
+      "unitCounts": {
+        "rifle": 72,
+        "mg": 272,
+        "gun": 10840,
+        "fighter": 2112,
+        "destroyer": 2112
+      },
+      "refundedTotal": 0,
+      "finalBalanceMean": 16648
+    },
+    {
+      "policy": "respec",
+      "n": 8,
+      "cleared": 8,
+      "completionRate": 1,
+      "wilson95": [
+        0.6755843804891231,
+        1
+      ],
+      "averageReached": 100,
+      "maxReached": 100,
+      "invalid": 0,
+      "minimumBalance": 12435,
+      "decileSurvivors": [
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8
+      ],
+      "compositionEntropy": 1.7955282345469306,
+      "unitCounts": {
+        "rifle": 80,
+        "mg": 440,
+        "gun": 8768,
+        "fighter": 2376,
+        "destroyer": 2272,
+        "tank": 1472
+      },
+      "refundedTotal": 296800,
+      "finalBalanceMean": 12535
+    }
+  ],
+  "pairSummary": [
+    {
+      "kind": "same-roster-position-swap",
+      "n": 0,
+      "outcomeDifferences": 0,
+      "hqDifferences": 0,
+      "averageHqDelta": 0
+    },
+    {
+      "kind": "same-position-without-upgrades",
+      "n": 0,
+      "outcomeDifferences": 0,
+      "hqDifferences": 0,
+      "averageHqDelta": 0
+    }
+  ],
+  "criteria": {
+    "status": "engineering-target",
+    "source": "docs/BALANCE_TARGET_2026-10-26.md",
+    "minimumSeeds": 1000,
+    "maximumSeeds": 5000,
+    "completionRate": {
+      "recon": 0.8,
+      "mixed": 0.6
+    },
+    "wrongMaximumRate": 0.05,
+    "maximumInvalid": 0,
+    "maximumAccountingErrors": 0,
+    "minimumPositionDifferences": 1,
+    "minimumUpgradeDifferences": 1
+  },
+  "checks": [
+    {
+      "id": "sample-size",
+      "pass": false
+    },
+    {
+      "id": "completion-recon",
+      "pass": true
+    },
+    {
+      "id": "completion-mixed",
+      "pass": false
+    },
+    {
+      "id": "wrong-formation",
+      "pass": false
+    },
+    {
+      "id": "invalid-results",
+      "pass": true
+    },
+    {
+      "id": "accounting",
+      "pass": true
+    },
+    {
+      "id": "nonnegative-balance",
+      "pass": true
+    },
+    {
+      "id": "position-effect",
+      "pass": false
+    },
+    {
+      "id": "upgrade-effect",
+      "pass": false
+    }
+  ],
+  "calibrationPassed": false,
+  "limits": [
+    "Automated first-attempt policies, not human play",
+    "No browser/performance validation",
+    "Numerical targets are engineering interpretations of the user difficulty choice",
+    "Unit selection entropy is not proof of strategic diversity",
+    "Damage contribution may include simultaneous overkill; use HQ and outcome for exact paired effects"
+  ]
+}

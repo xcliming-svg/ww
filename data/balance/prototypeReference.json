@@ -1,0 +1,31 @@
+{
+  "source": "docs/ww2_upward_tree.html",
+  "status": "reference-only",
+  "costs": {
+    "rifle": 30,
+    "mgR": 65,
+    "mg": 65,
+    "mortarR": 70,
+    "mortar": 75,
+    "gunR": 135,
+    "gun": 135,
+    "atR": 75,
+    "at": 65,
+    "factory": 150,
+    "carR": 95,
+    "car": 95,
+    "tankR": 150,
+    "tank": 175,
+    "heavyR": 215,
+    "heavy": 280,
+    "destroyerR": 160,
+    "destroyer": 185,
+    "airfield": 200,
+    "fighterR": 150,
+    "fighter": 165,
+    "attackerR": 145,
+    "attacker": 185,
+    "bomberR": 225,
+    "bomber": 260
+  }
+}

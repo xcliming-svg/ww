@@ -1,0 +1,13 @@
+{
+  "ground": 15856105,
+  "road": 13947587,
+  "grid": 11514528,
+  "hq": 3037788,
+  "friendly": 3894643,
+  "enemy": 11426119,
+  "locked": 14343372,
+  "text": 2371883,
+  "default": 3894643,
+  "unitLabel": "#ffffff",
+  "unitLabelBackground": "#24372e"
+}

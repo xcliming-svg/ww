@@ -1,0 +1,76 @@
+{
+  "policies": [
+    "infantry",
+    "antiArmor",
+    "armor",
+    "air",
+    "mixed",
+    "recon",
+    "random",
+    "wrong",
+    "respec"
+  ],
+  "minimumSeeds": 1000,
+  "maximumSeeds": 5000,
+  "version": "policies-v3-refund",
+  "holdoutSeedOffset": 100000,
+  "warmupThroughWave": 7,
+  "airResponseWave": 35,
+  "growthBudgetFraction": 0.4,
+  "reserveTriggerMultiplier": 2,
+  "starterUnit": "rifle",
+  "earlyPriorityUnit": "mg",
+  "profiles": {
+    "infantry": [
+      "mg",
+      "rifle"
+    ],
+    "antiArmor": [
+      "at",
+      "mg",
+      "rifle"
+    ],
+    "armor": [
+      "heavy",
+      "tank",
+      "car",
+      "rifle"
+    ],
+    "air": [
+      "attacker",
+      "fighter",
+      "bomber",
+      "rifle"
+    ],
+    "mixed": [
+      "gun",
+      "fighter",
+      "destroyer",
+      "tank",
+      "mg",
+      "rifle"
+    ],
+    "recon": [
+      "gun",
+      "fighter",
+      "destroyer",
+      "rifle"
+    ],
+    "random": [
+      "mg",
+      "tank",
+      "fighter",
+      "at",
+      "mortar",
+      "rifle"
+    ],
+    "wrong": [
+      "rifle"
+    ]
+  },
+  "reallocationPolicies": [
+    "mixed",
+    "recon"
+  ],
+  "reallocationInterval": 10
+}

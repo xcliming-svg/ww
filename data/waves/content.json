@@ -1,0 +1,73 @@
+{
+  "maxWave": 100,
+  "directions": [
+    "north",
+    "south",
+    "east",
+    "west"
+  ],
+  "unlockEnemies": [
+    {
+      "wave": 1,
+      "ids": [
+        "rifle"
+      ]
+    },
+    {
+      "wave": 5,
+      "ids": [
+        "rifle",
+        "mg"
+      ]
+    },
+    {
+      "wave": 12,
+      "ids": [
+        "rifle",
+        "mg",
+        "car"
+      ]
+    },
+    {
+      "wave": 20,
+      "ids": [
+        "mg",
+        "car",
+        "tank",
+        "mortar"
+      ]
+    },
+    {
+      "wave": 35,
+      "ids": [
+        "tank",
+        "at",
+        "fighter",
+        "attacker"
+      ]
+    },
+    {
+      "wave": 55,
+      "ids": [
+        "tank",
+        "heavy",
+        "destroyer",
+        "fighter",
+        "attacker",
+        "gun"
+      ]
+    },
+    {
+      "wave": 75,
+      "ids": [
+        "heavy",
+        "destroyer",
+        "fighter",
+        "attacker",
+        "bomber",
+        "gun"
+      ]
+    }
+  ],
+  "seedPolicy": "paired-campaign-v1"
+}

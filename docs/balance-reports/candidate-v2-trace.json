@@ -1,0 +1,66 @@
+{
+  "candidate": "candidate-v2",
+  "configHash": "f6846730a64738eb871e1578f6480301a03885c2da84b70b43b529287b7eb0ba",
+  "contentVersion": "defense-100-v1",
+  "policyVersion": "policies-v1",
+  "samples": 1,
+  "offset": 1,
+  "policies": [
+    "mixed"
+  ],
+  "status": "complete",
+  "generatedAt": "2026-10-25T23:00:05.589Z",
+  "summary": [
+    {
+      "policy": "mixed",
+      "n": 1,
+      "cleared": 0,
+      "completionRate": 0,
+      "wilson95": [
+        0,
+        0.7934567085261071
+      ],
+      "averageReached": 4,
+      "maxReached": 4,
+      "invalid": 0,
+      "minimumBalance": 115,
+      "decileSurvivors": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "policy": "mixed",
+      "seed": 1,
+      "reached": 4,
+      "cleared": false,
+      "firstDefeat": 5,
+      "hqHp": 0,
+      "balance": 115,
+      "spent": 825,
+      "income": 940,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 8,
+        "mg": 5,
+        "at": 1
+      },
+      "damageByUnit": {
+        "rifle": 301.44,
+        "mg": 298.32000000000005,
+        "at": 61.44
+      }
+    }
+  ]
+}

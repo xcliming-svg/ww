@@ -1,0 +1,303 @@
+{
+  "source": "docs/balance-reports/candidate-v7-final-1000.json",
+  "configHash": "2e6bf163249bc56bd8ca772950a2128f30eea73b68776c17cd187f329f93a287",
+  "engineHash": "bfc0b421a82be9576daacade198aadecd45f782a0bde7ee645367669695f51aa",
+  "policyHash": "bb7994cf979dc76662a6f2ff889b7a3ef14d4768fc03ea01dd314cea54cfde81",
+  "contentHash": "27d569c7c6ed8b4c3732e4144e18864c07d13ceaffe27f8fcf0c340e7f832c96",
+  "accountingErrors": 0,
+  "policies": [
+    {
+      "policy": "infantry",
+      "n": 1000,
+      "cleared": 0,
+      "completionRate": 0,
+      "wilson95": [
+        0,
+        0.003826898586390522
+      ],
+      "averageReached": 11.639,
+      "maxReached": 17,
+      "invalid": 0,
+      "minimumBalance": 1808,
+      "decileSurvivors": [
+        1000,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "compositionEntropy": 0.19338362150913987,
+      "unitCounts": {
+        "rifle": 2000,
+        "mg": 65116
+      },
+      "finalBalanceMean": 2036.36
+    },
+    {
+      "policy": "antiArmor",
+      "n": 1000,
+      "cleared": 0,
+      "completionRate": 0,
+      "wilson95": [
+        0,
+        0.003826898586390522
+      ],
+      "averageReached": 13.407,
+      "maxReached": 21,
+      "invalid": 0,
+      "minimumBalance": 652,
+      "decileSurvivors": [
+        779,
+        19,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "compositionEntropy": 1.0961647849274536,
+      "unitCounts": {
+        "rifle": 2000,
+        "mg": 51088,
+        "at": 31088
+      },
+      "finalBalanceMean": 2267.704
+    },
+    {
+      "policy": "armor",
+      "n": 1000,
+      "cleared": 0,
+      "completionRate": 0,
+      "wilson95": [
+        0,
+        0.003826898586390522
+      ],
+      "averageReached": 7.397,
+      "maxReached": 19,
+      "invalid": 0,
+      "minimumBalance": 1,
+      "decileSurvivors": [
+        40,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "compositionEntropy": 1.2848807960245376,
+      "unitCounts": {
+        "rifle": 2936,
+        "mg": 20328,
+        "car": 9864,
+        "tank": 84
+      },
+      "finalBalanceMean": 133.554
+    },
+    {
+      "policy": "air",
+      "n": 1000,
+      "cleared": 1,
+      "completionRate": 0.001,
+      "wilson95": [
+        0.0001765418290572713,
+        0.0056427029601604705
+      ],
+      "averageReached": 20.907,
+      "maxReached": 100,
+      "invalid": 0,
+      "minimumBalance": 2,
+      "decileSurvivors": [
+        1000,
+        506,
+        107,
+        36,
+        23,
+        13,
+        5,
+        3,
+        2,
+        1
+      ],
+      "compositionEntropy": 1.8435680444148077,
+      "unitCounts": {
+        "rifle": 55390,
+        "mg": 75267,
+        "attacker": 37584,
+        "fighter": 8662,
+        "bomber": 3605
+      },
+      "finalBalanceMean": 26.275
+    },
+    {
+      "policy": "mixed",
+      "n": 1000,
+      "cleared": 0,
+      "completionRate": 0,
+      "wilson95": [
+        0,
+        0.003826898586390522
+      ],
+      "averageReached": 30.119,
+      "maxReached": 82,
+      "invalid": 0,
+      "minimumBalance": 2,
+      "decileSurvivors": [
+        957,
+        619,
+        384,
+        288,
+        181,
+        92,
+        32,
+        1,
+        0,
+        0
+      ],
+      "compositionEntropy": 2.5129211739684405,
+      "unitCounts": {
+        "rifle": 62103,
+        "mg": 99879,
+        "at": 61380,
+        "tank": 63851,
+        "gun": 43094,
+        "fighter": 37989
+      },
+      "finalBalanceMean": 643.248
+    },
+    {
+      "policy": "recon",
+      "n": 1000,
+      "cleared": 24,
+      "completionRate": 0.024,
+      "wilson95": [
+        0.016180052367186296,
+        0.03546315508705749
+      ],
+      "averageReached": 82.196,
+      "maxReached": 100,
+      "invalid": 0,
+      "minimumBalance": 3381,
+      "decileSurvivors": [
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        549,
+        151,
+        24
+      ],
+      "compositionEntropy": 1.3129509137384983,
+      "unitCounts": {
+        "rifle": 209027,
+        "mg": 67193,
+        "gun": 1067853,
+        "fighter": 178055
+      },
+      "finalBalanceMean": 11747.945
+    },
+    {
+      "policy": "random",
+      "n": 1000,
+      "cleared": 0,
+      "completionRate": 0,
+      "wilson95": [
+        0,
+        0.003826898586390522
+      ],
+      "averageReached": 18.511,
+      "maxReached": 60,
+      "invalid": 0,
+      "minimumBalance": 0,
+      "decileSurvivors": [
+        851,
+        404,
+        102,
+        32,
+        6,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "compositionEntropy": 2.4074740535656343,
+      "unitCounts": {
+        "rifle": 20966,
+        "mg": 50889,
+        "at": 29716,
+        "tank": 19845,
+        "mortar": 19919,
+        "fighter": 9429
+      },
+      "finalBalanceMean": 163.53
+    },
+    {
+      "policy": "wrong",
+      "n": 1000,
+      "cleared": 0,
+      "completionRate": 0,
+      "wilson95": [
+        0,
+        0.003826898586390522
+      ],
+      "averageReached": 3.372,
+      "maxReached": 6,
+      "invalid": 0,
+      "minimumBalance": 610,
+      "decileSurvivors": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "compositionEntropy": 0,
+      "unitCounts": {
+        "rifle": 10116
+      },
+      "finalBalanceMean": 716.88
+    }
+  ],
+  "pairSummary": [
+    {
+      "kind": "same-roster-position-swap",
+      "n": 7823,
+      "outcomeDifferences": 1178,
+      "hqDifferences": 1214,
+      "averageHqDelta": -59.798944773104985
+    },
+    {
+      "kind": "same-position-without-upgrades",
+      "n": 7823,
+      "outcomeDifferences": 450,
+      "hqDifferences": 554,
+      "averageHqDelta": -27.064952074651682
+    }
+  ],
+  "limits": [
+    "Automated first-attempt policies, not human play",
+    "No browser/performance validation",
+    "Win-rate and strategy-diversity acceptance targets are not agreed",
+    "Unit selection entropy is not proof of strategic diversity"
+  ]
+}

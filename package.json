@@ -1,0 +1,45 @@
+{
+  "name": "ww2-auto-defense",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "WW2 offline auto defense",
+  "author": "",
+  "license": "UNLICENSED",
+  "main": "desktop/main.cjs",
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "vite build",
+    "desktop": "electron .",
+    "package:win": "npm run build && electron-builder --win --config desktop/builder.json",
+    "lint": "eslint src tools desktop *.js",
+    "typecheck": "tsc -p jsconfig.json",
+    "check:syntax": "node tools/check.mjs syntax",
+    "check:schemas": "node tools/check.mjs schemas",
+    "check:graph": "node tools/check.mjs graph",
+    "check:locales": "node tools/check.mjs locales",
+    "check:assets": "node tools/check.mjs assets",
+    "check:deps": "node tools/check.mjs deps",
+    "check:package": "node tools/check.mjs package",
+    "check:all": "node tools/check-all.mjs",
+    "balance:simulate": "node tools/balance-sim.mjs",
+    "balance:report": "node tools/balance-report.mjs",
+    "balance:compare": "node tools/balance-compare.mjs"
+  },
+  "dependencies": {
+    "phaser": "4.2.1",
+    "ajv": "8.20.0"
+  },
+  "devDependencies": {
+    "vite": "8.3.5",
+    "electron": "45.0.0",
+    "electron-builder": "26.18.0",
+    "eslint": "10.13.0",
+    "typescript": "5.9.3",
+    "globals": "17.13.0",
+    "@types/node": "26.6.5"
+  }
+}

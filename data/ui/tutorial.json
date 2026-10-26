@@ -1,0 +1,8 @@
+{
+  "steps": [
+    "tutorial.recon",
+    "tutorial.research",
+    "tutorial.place",
+    "tutorial.start"
+  ]
+}

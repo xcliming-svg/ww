@@ -1,0 +1,1079 @@
+{
+  "candidate": "candidate-v6",
+  "configHash": "361b14a3cf42f02734a3ceea7a72c62d9a8b74f2fc98d91c6e7659256bc0d44a",
+  "contentVersion": "defense-100-v1",
+  "policyVersion": "policies-v1",
+  "samples": 32,
+  "offset": 1,
+  "policies": [
+    "recon"
+  ],
+  "status": "complete",
+  "generatedAt": "2026-10-25T23:04:13.269Z",
+  "summary": [
+    {
+      "policy": "recon",
+      "n": 32,
+      "cleared": 0,
+      "completionRate": 0,
+      "wilson95": [
+        0,
+        0.1071827150573635
+      ],
+      "averageReached": 68.1875,
+      "maxReached": 75,
+      "invalid": 0,
+      "minimumBalance": 1,
+      "decileSurvivors": [
+        32,
+        32,
+        32,
+        31,
+        29,
+        29,
+        19,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "policy": "recon",
+      "seed": 1,
+      "reached": 74,
+      "cleared": false,
+      "firstDefeat": 75,
+      "hqHp": 0,
+      "balance": 4501,
+      "spent": 122879,
+      "income": 127380,
+      "invalid": 0,
+      "deciles": [
+        633,
+        1021,
+        1921,
+        1821,
+        2221,
+        2621,
+        5021
+      ],
+      "unitCounts": {
+        "rifle": 212,
+        "mg": 63,
+        "gun": 905,
+        "fighter": 146
+      },
+      "damageByUnit": {
+        "rifle": 120,
+        "mg": 875.8000000000002,
+        "gun": 95555.77000000002,
+        "fighter": 16931.879999999997
+      }
+    },
+    {
+      "policy": "recon",
+      "seed": 2,
+      "reached": 75,
+      "cleared": false,
+      "firstDefeat": 76,
+      "hqHp": 0,
+      "balance": 5166,
+      "spent": 125434,
+      "income": 130600,
+      "invalid": 0,
+      "deciles": [
+        633,
+        1021,
+        1921,
+        1821,
+        2226,
+        2666,
+        5066
+      ],
+      "unitCounts": {
+        "rifle": 212,
+        "mg": 62,
+        "gun": 928,
+        "fighter": 148
+      },
+      "damageByUnit": {
+        "rifle": 120,
+        "mg": 806.6100000000001,
+        "gun": 107128.83250000002,
+        "fighter": 14211.719999999998
+      }
+    },
+    {
+      "policy": "recon",
+      "seed": 3,
+      "reached": 75,
+      "cleared": false,
+      "firstDefeat": 76,
+      "hqHp": 0,
+      "balance": 5121,
+      "spent": 125479,
+      "income": 130600,
+      "invalid": 0,
+      "deciles": [
+        633,
+        1021,
+        1921,
+        1821,
+        2221,
+        2621,
+        5021
+      ],
+      "unitCounts": {
+        "rifle": 206,
+        "mg": 69,
+        "gun": 928,
+        "fighter": 147
+      },
+      "damageByUnit": {
+        "rifle": 120,
+        "mg": 856.9000000000002,
+        "gun": 111135.09750000003,
+        "fighter": 15063.522499999997
+      }
+    },
+    {
+      "policy": "recon",
+      "seed": 4,
+      "reached": 68,
+      "cleared": false,
+      "firstDefeat": 69,
+      "hqHp": 0,
+      "balance": 1621,
+      "spent": 107279,
+      "income": 108900,
+      "invalid": 0,
+      "deciles": [
+        633,
+        1021,
+        1921,
+        1821,
+        2221,
+        2621
+      ],
+      "unitCounts": {
+        "rifle": 212,
+        "mg": 63,
+        "gun": 785,
+        "fighter": 122
+      },
+      "damageByUnit": {
+        "rifle": 120,
+        "mg": 796.8000000000002,
+        "gun": 94226.895,
+        "fighter": 10306.364999999998
+      }
+    },
+    {
+      "policy": "recon",
+      "seed": 5,
+      "reached": 74,
+      "cleared": false,
+      "firstDefeat": 75,
+      "hqHp": 0,
+      "balance": 4541,
+      "spent": 122839,
+      "income": 127380,
+      "invalid": 0,
+      "deciles": [
+        633,
+        1021,
+        1921,
+        1831,
+        2226,
+        2661,
+        5061
+      ],
+      "unitCounts": {
+        "rifle": 205,
+        "mg": 73,
+        "gun": 903,
+        "fighter": 145
+      },
+      "damageByUnit": {
+        "rifle": 120,
+        "mg": 791.5600000000001,
+        "gun": 105436.34499999994,
+        "fighter": 11936.152499999997
+      }
+    },
+    {
+      "policy": "recon",
+      "seed": 6,
+      "reached": 48,
+      "cleared": false,
+      "firstDefeat": 49,
+      "hqHp": 0,
+      "balance": 11,
+      "spent": 57689,
+      "income": 57700,
+      "invalid": 0,
+      "deciles": [
+        633,
+        1021,
+        1921,
+        1821
+      ],
+      "unitCounts": {
+        "rifle": 194,
+        "mg": 49,
+        "gun": 413,
+        "fighter": 46
+      },
+      "damageByUnit": {
+        "rifle": 120,
+        "mg": 776.0800000000002,
+        "gun": 38191.80249999997,
+        "fighter": 5132.719999999999
+      }
+    },
+    {
+      "policy": "recon",
+      "seed": 7,
+      "reached": 66,
+      "cleared": false,
+      "firstDefeat": 67,
+      "hqHp": 0,
+      "balance": 981,
+      "spent": 102079,
+      "income": 103060,
+      "invalid": 0,
+      "deciles": [
+        633,
+        1021,
+        1921,
+        1821,
+        2221,
+        2621
+      ],
+      "unitCounts": {
+        "rifle": 212,
+        "mg": 63,
+        "gun": 745,
+        "fighter": 114
+      },
+      "damageByUnit": {
+        "rifle": 120,
+        "mg": 817.6400000000001,
+        "gun": 82005.40499999991,
+        "fighter": 9876.744999999995
+      }
+    },
+    {
+      "policy": "recon",
+      "seed": 8,
+      "reached": 74,
+      "cleared": false,
+      "firstDefeat": 75,
+      "hqHp": 0,
+      "balance": 4546,
+      "spent": 122834,
+      "income": 127380,
+      "invalid": 0,
+      "deciles": [
+        633,
+        1021,
+        1921,
+        1831,
+        2231,
+        2666,
+        5066
+      ],
+      "unitCounts": {
+        "rifle": 203,
+        "mg": 76,
+        "gun": 902,
+        "fighter": 145
+      },
+      "damageByUnit": {
+        "rifle": 120,
+        "mg": 802.4700000000001,
+        "gun": 104657.26999999997,
+        "fighter": 13231.6525
+      }
+    },
+    {
+      "policy": "recon",
+      "seed": 9,
+      "reached": 73,
+      "cleared": false,
+      "firstDefeat": 74,
+      "hqHp": 0,
+      "balance": 3966,
+      "spent": 120234,
+      "income": 124200,
+      "invalid": 0,
+      "deciles": [
+        633,
+        1021,
+        1921,
+        1826,
+        2226,
+        2666,
+        5066
+      ],
+      "unitCounts": {
+        "rifle": 207,
+        "mg": 72,
+        "gun": 880,
+        "fighter": 143
+      },
+      "damageByUnit": {
+        "rifle": 120,
+        "mg": 887.0900000000003,
+        "gun": 92653.81249999997,
+        "fighter": 15109.814999999991
+      }
+    },
+    {
+      "policy": "recon",
+      "seed": 10,
+      "reached": 36,
+      "cleared": false,
+      "firstDefeat": 37,
+      "hqHp": 0,
+      "balance": 1,
+      "spent": 34659,
+      "income": 34660,
+      "invalid": 0,
+      "deciles": [
+        633,
+        1021,
+        1921
+      ],
+      "unitCounts": {
+        "rifle": 105,
+        "mg": 39,
+        "gun": 262,
+        "fighter": 8
+      },
+      "damageByUnit": {
+        "rifle": 120,
+        "mg": 797.0400000000002,
+        "gun": 25230.04,
+        "fighter": 1422.4974999999997
+      }
+    },
+    {
+      "policy": "recon",
+      "seed": 11,
+      "reached": 73,
+      "cleared": false,
+      "firstDefeat": 74,
+      "hqHp": 0,
+      "balance": 3956,
+      "spent": 120244,
+      "income": 124200,
+      "invalid": 0,
+      "deciles": [
+        633,
+        1021,
+        1921,
+        1841,
+        2226,
+        2656,
+        5056
+      ],
+      "unitCounts": {
+        "rifle": 214,
+        "mg": 58,
+        "gun": 891,
+        "fighter": 139
+      },
+      "damageByUnit": {
+        "rifle": 120,
+        "mg": 776.3200000000002,
+        "gun": 108091.32000000004,
+        "fighter": 12312.642499999996
+      }
+    },
+    {
+      "policy": "recon",
+      "seed": 12,
+      "reached": 73,
+      "cleared": false,
+      "firstDefeat": 74,
+      "hqHp": 0,
+      "balance": 3956,
+      "spent": 120244,
+      "income": 124200,
+      "invalid": 0,
+      "deciles": [
+        633,
+        1021,
+        1921,
+        1841,
+        2226,
+        2656,
+        5056
+      ],
+      "unitCounts": {
+        "rifle": 207,
+        "mg": 70,
+        "gun": 884,
+        "fighter": 141
+      },
+      "damageByUnit": {
+        "rifle": 120,
+        "mg": 828.7400000000001,
+        "gun": 101002.62749999997,
+        "fighter": 15052.195
+      }
+    },
+    {
+      "policy": "recon",
+      "seed": 13,
+      "reached": 74,
+      "cleared": false,
+      "firstDefeat": 75,
+      "hqHp": 0,
+      "balance": 4501,
+      "spent": 122879,
+      "income": 127380,
+      "invalid": 0,
+      "deciles": [
+        633,
+        1021,
+        1921,
+        1831,
+        2221,
+        2621,
+        5021
+      ],
+      "unitCounts": {
+        "rifle": 216,
+        "mg": 59,
+        "gun": 903,
+        "fighter": 148
+      },
+      "damageByUnit": {
+        "rifle": 120,
+        "mg": 795.1000000000001,
+        "gun": 106669.71250000002,
+        "fighter": 11281.362499999997
+      }
+    },
+    {
+      "policy": "recon",
+      "seed": 14,
+      "reached": 40,
+      "cleared": false,
+      "firstDefeat": 41,
+      "hqHp": 0,
+      "balance": 1,
+      "spent": 41699,
+      "income": 41700,
+      "invalid": 0,
+      "deciles": [
+        633,
+        1021,
+        1921,
+        1831
+      ],
+      "unitCounts": {
+        "rifle": 141,
+        "mg": 45,
+        "gun": 303,
+        "fighter": 21
+      },
+      "damageByUnit": {
+        "rifle": 120,
+        "mg": 806.4900000000002,
+        "gun": 26752.709999999995,
+        "fighter": 2149.1999999999994
+      }
+    },
+    {
+      "policy": "recon",
+      "seed": 15,
+      "reached": 68,
+      "cleared": false,
+      "firstDefeat": 69,
+      "hqHp": 0,
+      "balance": 1671,
+      "spent": 107229,
+      "income": 108900,
+      "invalid": 0,
+      "deciles": [
+        633,
+        1021,
+        1921,
+        1836,
+        2231,
+        2671
+      ],
+      "unitCounts": {
+        "rifle": 205,
+        "mg": 75,
+        "gun": 779,
+        "fighter": 123
+      },
+      "damageByUnit": {
+        "rifle": 120,
+        "mg": 776.3200000000002,
+        "gun": 85303.77499999997,
+        "fighter": 12227.489999999996
+      }
+    },
+    {
+      "policy": "recon",
+      "seed": 16,
+      "reached": 74,
+      "cleared": false,
+      "firstDefeat": 75,
+      "hqHp": 0,
+      "balance": 4501,
+      "spent": 122879,
+      "income": 127380,
+      "invalid": 0,
+      "deciles": [
+        633,
+        1021,
+        1921,
+        1836,
+        2221,
+        2621,
+        5021
+      ],
+      "unitCounts": {
+        "rifle": 214,
+        "mg": 61,
+        "gun": 904,
+        "fighter": 147
+      },
+      "damageByUnit": {
+        "rifle": 120,
+        "mg": 838.2400000000001,
+        "gun": 107122.19000000005,
+        "fighter": 14399.912499999999
+      }
+    },
+    {
+      "policy": "recon",
+      "seed": 17,
+      "reached": 73,
+      "cleared": false,
+      "firstDefeat": 74,
+      "hqHp": 0,
+      "balance": 3956,
+      "spent": 120244,
+      "income": 124200,
+      "invalid": 0,
+      "deciles": [
+        633,
+        1021,
+        1921,
+        1826,
+        2226,
+        2656,
+        5056
+      ],
+      "unitCounts": {
+        "rifle": 205,
+        "mg": 72,
+        "gun": 885,
+        "fighter": 140
+      },
+      "damageByUnit": {
+        "rifle": 120,
+        "mg": 776.3200000000002,
+        "gun": 100226.54250000008,
+        "fighter": 13904.497499999994
+      }
+    },
+    {
+      "policy": "recon",
+      "seed": 18,
+      "reached": 74,
+      "cleared": false,
+      "firstDefeat": 75,
+      "hqHp": 0,
+      "balance": 4501,
+      "spent": 122879,
+      "income": 127380,
+      "invalid": 0,
+      "deciles": [
+        633,
+        1021,
+        1921,
+        1826,
+        2221,
+        2621,
+        5021
+      ],
+      "unitCounts": {
+        "rifle": 204,
+        "mg": 71,
+        "gun": 909,
+        "fighter": 142
+      },
+      "damageByUnit": {
+        "rifle": 120,
+        "mg": 796.9200000000001,
+        "gun": 106373.28000000003,
+        "fighter": 13594.164999999997
+      }
+    },
+    {
+      "policy": "recon",
+      "seed": 19,
+      "reached": 64,
+      "cleared": false,
+      "firstDefeat": 65,
+      "hqHp": 0,
+      "balance": 541,
+      "spent": 96839,
+      "income": 97380,
+      "invalid": 0,
+      "deciles": [
+        633,
+        1021,
+        1921,
+        1831,
+        2236,
+        2661
+      ],
+      "unitCounts": {
+        "rifle": 206,
+        "mg": 67,
+        "gun": 713,
+        "fighter": 100
+      },
+      "damageByUnit": {
+        "rifle": 120,
+        "mg": 817.2800000000002,
+        "gun": 74552.39749999995,
+        "fighter": 9746.814999999995
+      }
+    },
+    {
+      "policy": "recon",
+      "seed": 20,
+      "reached": 74,
+      "cleared": false,
+      "firstDefeat": 75,
+      "hqHp": 0,
+      "balance": 4546,
+      "spent": 122834,
+      "income": 127380,
+      "invalid": 0,
+      "deciles": [
+        633,
+        1021,
+        1921,
+        1836,
+        2231,
+        2666,
+        5066
+      ],
+      "unitCounts": {
+        "rifle": 211,
+        "mg": 68,
+        "gun": 898,
+        "fighter": 149
+      },
+      "damageByUnit": {
+        "rifle": 120,
+        "mg": 795.46,
+        "gun": 103505.50250000003,
+        "fighter": 14664.727499999995
+      }
+    },
+    {
+      "policy": "recon",
+      "seed": 21,
+      "reached": 68,
+      "cleared": false,
+      "firstDefeat": 69,
+      "hqHp": 0,
+      "balance": 1656,
+      "spent": 107244,
+      "income": 108900,
+      "invalid": 0,
+      "deciles": [
+        633,
+        1021,
+        1921,
+        1826,
+        2226,
+        2656
+      ],
+      "unitCounts": {
+        "rifle": 205,
+        "mg": 72,
+        "gun": 785,
+        "fighter": 120
+      },
+      "damageByUnit": {
+        "rifle": 120,
+        "mg": 806.4900000000001,
+        "gun": 82065.05249999998,
+        "fighter": 12889.774999999998
+      }
+    },
+    {
+      "policy": "recon",
+      "seed": 22,
+      "reached": 61,
+      "cleared": false,
+      "firstDefeat": 62,
+      "hqHp": 0,
+      "balance": 116,
+      "spent": 89044,
+      "income": 89160,
+      "invalid": 0,
+      "deciles": [
+        633,
+        1021,
+        1921,
+        1821,
+        2226,
+        2656
+      ],
+      "unitCounts": {
+        "rifle": 206,
+        "mg": 66,
+        "gun": 655,
+        "fighter": 87
+      },
+      "damageByUnit": {
+        "rifle": 120,
+        "mg": 795.34,
+        "gun": 71270.79999999996,
+        "fighter": 8391.162499999999
+      }
+    },
+    {
+      "policy": "recon",
+      "seed": 23,
+      "reached": 63,
+      "cleared": false,
+      "firstDefeat": 64,
+      "hqHp": 0,
+      "balance": 366,
+      "spent": 94234,
+      "income": 94600,
+      "invalid": 0,
+      "deciles": [
+        633,
+        1021,
+        1921,
+        1836,
+        2231,
+        2666
+      ],
+      "unitCounts": {
+        "rifle": 211,
+        "mg": 68,
+        "gun": 678,
+        "fighter": 105
+      },
+      "damageByUnit": {
+        "rifle": 120,
+        "mg": 776.2000000000002,
+        "gun": 68151.03999999998,
+        "fighter": 11916.382499999994
+      }
+    },
+    {
+      "policy": "recon",
+      "seed": 24,
+      "reached": 74,
+      "cleared": false,
+      "firstDefeat": 75,
+      "hqHp": 0,
+      "balance": 4536,
+      "spent": 122844,
+      "income": 127380,
+      "invalid": 0,
+      "deciles": [
+        633,
+        1021,
+        1921,
+        1831,
+        2226,
+        2656,
+        5056
+      ],
+      "unitCounts": {
+        "rifle": 207,
+        "mg": 70,
+        "gun": 904,
+        "fighter": 145
+      },
+      "damageByUnit": {
+        "rifle": 120,
+        "mg": 796.9200000000001,
+        "gun": 101803.42250000006,
+        "fighter": 12837.405000000006
+      }
+    },
+    {
+      "policy": "recon",
+      "seed": 25,
+      "reached": 74,
+      "cleared": false,
+      "firstDefeat": 75,
+      "hqHp": 0,
+      "balance": 4541,
+      "spent": 122839,
+      "income": 127380,
+      "invalid": 0,
+      "deciles": [
+        633,
+        1021,
+        1921,
+        1831,
+        2236,
+        2661,
+        5061
+      ],
+      "unitCounts": {
+        "rifle": 214,
+        "mg": 59,
+        "gun": 909,
+        "fighter": 144
+      },
+      "damageByUnit": {
+        "rifle": 120,
+        "mg": 776.3200000000002,
+        "gun": 103089.3050000001,
+        "fighter": 15946.842499999988
+      }
+    },
+    {
+      "policy": "recon",
+      "seed": 26,
+      "reached": 67,
+      "cleared": false,
+      "firstDefeat": 68,
+      "hqHp": 0,
+      "balance": 1281,
+      "spent": 104679,
+      "income": 105960,
+      "invalid": 0,
+      "deciles": [
+        633,
+        1021,
+        1921,
+        1836,
+        2221,
+        2621
+      ],
+      "unitCounts": {
+        "rifle": 212,
+        "mg": 63,
+        "gun": 765,
+        "fighter": 118
+      },
+      "damageByUnit": {
+        "rifle": 120,
+        "mg": 887.7700000000002,
+        "gun": 81750.81250000004,
+        "fighter": 11906.649999999996
+      }
+    },
+    {
+      "policy": "recon",
+      "seed": 27,
+      "reached": 74,
+      "cleared": false,
+      "firstDefeat": 75,
+      "hqHp": 0,
+      "balance": 4501,
+      "spent": 122879,
+      "income": 127380,
+      "invalid": 0,
+      "deciles": [
+        633,
+        1021,
+        1921,
+        1826,
+        2221,
+        2621,
+        5021
+      ],
+      "unitCounts": {
+        "rifle": 212,
+        "mg": 63,
+        "gun": 905,
+        "fighter": 146
+      },
+      "damageByUnit": {
+        "rifle": 120,
+        "mg": 806.3700000000001,
+        "gun": 112742.15250000004,
+        "fighter": 11350.65
+      }
+    },
+    {
+      "policy": "recon",
+      "seed": 28,
+      "reached": 75,
+      "cleared": false,
+      "firstDefeat": 76,
+      "hqHp": 0,
+      "balance": 5121,
+      "spent": 125479,
+      "income": 130600,
+      "invalid": 0,
+      "deciles": [
+        633,
+        1021,
+        1921,
+        1836,
+        2231,
+        2621,
+        5021
+      ],
+      "unitCounts": {
+        "rifle": 207,
+        "mg": 73,
+        "gun": 917,
+        "fighter": 153
+      },
+      "damageByUnit": {
+        "rifle": 120,
+        "mg": 815.94,
+        "gun": 106800.00249999996,
+        "fighter": 14767.722499999996
+      }
+    },
+    {
+      "policy": "recon",
+      "seed": 29,
+      "reached": 73,
+      "cleared": false,
+      "firstDefeat": 74,
+      "hqHp": 0,
+      "balance": 3921,
+      "spent": 120279,
+      "income": 124200,
+      "invalid": 0,
+      "deciles": [
+        633,
+        1021,
+        1921,
+        1821,
+        2241,
+        2621,
+        5021
+      ],
+      "unitCounts": {
+        "rifle": 210,
+        "mg": 65,
+        "gun": 886,
+        "fighter": 141
+      },
+      "damageByUnit": {
+        "rifle": 120,
+        "mg": 874.2200000000001,
+        "gun": 101104.20250000003,
+        "fighter": 14027.947499999993
+      }
+    },
+    {
+      "policy": "recon",
+      "seed": 30,
+      "reached": 75,
+      "cleared": false,
+      "firstDefeat": 76,
+      "hqHp": 0,
+      "balance": 5166,
+      "spent": 125434,
+      "income": 130600,
+      "invalid": 0,
+      "deciles": [
+        633,
+        1021,
+        1921,
+        1821,
+        2241,
+        2666,
+        5066
+      ],
+      "unitCounts": {
+        "rifle": 208,
+        "mg": 66,
+        "gun": 930,
+        "fighter": 146
+      },
+      "damageByUnit": {
+        "rifle": 120,
+        "mg": 839.8300000000002,
+        "gun": 102049.78250000012,
+        "fighter": 15015.764999999996
+      }
+    },
+    {
+      "policy": "recon",
+      "seed": 31,
+      "reached": 66,
+      "cleared": false,
+      "firstDefeat": 67,
+      "hqHp": 0,
+      "balance": 1021,
+      "spent": 102039,
+      "income": 103060,
+      "invalid": 0,
+      "deciles": [
+        633,
+        1021,
+        1921,
+        1831,
+        2231,
+        2661
+      ],
+      "unitCounts": {
+        "rifle": 211,
+        "mg": 67,
+        "gun": 740,
+        "fighter": 116
+      },
+      "damageByUnit": {
+        "rifle": 120,
+        "mg": 817.5200000000001,
+        "gun": 80949.79749999997,
+        "fighter": 10730.509999999998
+      }
+    },
+    {
+      "policy": "recon",
+      "seed": 32,
+      "reached": 62,
+      "cleared": false,
+      "firstDefeat": 63,
+      "hqHp": 0,
+      "balance": 221,
+      "spent": 91639,
+      "income": 91860,
+      "invalid": 0,
+      "deciles": [
+        633,
+        1021,
+        1921,
+        1826,
+        2231,
+        2661
+      ],
+      "unitCounts": {
+        "rifle": 207,
+        "mg": 71,
+        "gun": 662,
+        "fighter": 98
+      },
+      "damageByUnit": {
+        "rifle": 120,
+        "mg": 815.9400000000002,
+        "gun": 65768.01249999991,
+        "fighter": 10682.567499999996
+      }
+    }
+  ]
+}

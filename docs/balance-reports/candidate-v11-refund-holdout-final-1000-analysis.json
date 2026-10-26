@@ -1,0 +1,526 @@
+{
+  "source": "docs/balance-reports/candidate-v11-refund-holdout-final-1000.json",
+  "configHash": "42122499f701899054493e3caf5aa66e3c2b8e94f24b04432ce5f2350f252139",
+  "engineHash": "f4454553acba2f2cf16fb221a544735ca30aca0f878668d3d0f23dd96e034db8",
+  "policyHash": "47608daf4394dad521610e0a12c0bca88dd26219845fa47f4893c9f91dd7b7a2",
+  "contentHash": "27d569c7c6ed8b4c3732e4144e18864c07d13ceaffe27f8fcf0c340e7f832c96",
+  "accountingErrors": 0,
+  "policies": [
+    {
+      "policy": "mixed",
+      "n": 1000,
+      "cleared": 855,
+      "completionRate": 0.855,
+      "wilson95": [
+        0.831817486934133,
+        0.8754654150695298
+      ],
+      "averageReached": 97.627,
+      "maxReached": 100,
+      "invalid": 0,
+      "minimumBalance": 3,
+      "decileSurvivors": [
+        1000,
+        987,
+        987,
+        987,
+        987,
+        987,
+        987,
+        978,
+        932,
+        855
+      ],
+      "compositionEntropy": 2.1293686113950647,
+      "unitCounts": {
+        "rifle": 10883,
+        "mg": 98320,
+        "gun": 745691,
+        "fighter": 317390,
+        "tank": 399353,
+        "destroyer": 303507
+      },
+      "refundedTotal": 0,
+      "economyByDecile": [
+        {
+          "wave": 10,
+          "n": 1000,
+          "minimum": 828,
+          "maximum": 828,
+          "mean": 828
+        },
+        {
+          "wave": 20,
+          "n": 987,
+          "minimum": 1323,
+          "maximum": 1323,
+          "mean": 1323
+        },
+        {
+          "wave": 30,
+          "n": 987,
+          "minimum": 3123,
+          "maximum": 3123,
+          "mean": 3123
+        },
+        {
+          "wave": 40,
+          "n": 987,
+          "minimum": 4153,
+          "maximum": 4273,
+          "mean": 4187.123606889564
+        },
+        {
+          "wave": 50,
+          "n": 987,
+          "minimum": 4553,
+          "maximum": 4813,
+          "mean": 4649.859169199594
+        },
+        {
+          "wave": 60,
+          "n": 987,
+          "minimum": 4993,
+          "maximum": 5313,
+          "mean": 5132.229989868288
+        },
+        {
+          "wave": 70,
+          "n": 987,
+          "minimum": 5493,
+          "maximum": 5813,
+          "mean": 5636.910840932118
+        },
+        {
+          "wave": 80,
+          "n": 978,
+          "minimum": 5973,
+          "maximum": 6373,
+          "mean": 6158.807770961145
+        },
+        {
+          "wave": 90,
+          "n": 932,
+          "minimum": 6493,
+          "maximum": 6913,
+          "mean": 6694.266094420601
+        },
+        {
+          "wave": 100,
+          "n": 855,
+          "minimum": 7033,
+          "maximum": 7473,
+          "mean": 7241.93567251462
+        }
+      ],
+      "finalBalanceMean": 6780.655
+    },
+    {
+      "policy": "recon",
+      "n": 1000,
+      "cleared": 868,
+      "completionRate": 0.868,
+      "wilson95": [
+        0.8456047044505801,
+        0.8875786981898366
+      ],
+      "averageReached": 98.789,
+      "maxReached": 100,
+      "invalid": 0,
+      "minimumBalance": 10328,
+      "decileSurvivors": [
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        991,
+        949,
+        868
+      ],
+      "compositionEntropy": 1.2816970421432816,
+      "unitCounts": {
+        "rifle": 9000,
+        "mg": 34000,
+        "gun": 1337736,
+        "fighter": 259684,
+        "destroyer": 259684
+      },
+      "refundedTotal": 0,
+      "economyByDecile": [
+        {
+          "wave": 10,
+          "n": 1000,
+          "minimum": 783,
+          "maximum": 783,
+          "mean": 783
+        },
+        {
+          "wave": 20,
+          "n": 1000,
+          "minimum": 1328,
+          "maximum": 1328,
+          "mean": 1328
+        },
+        {
+          "wave": 30,
+          "n": 1000,
+          "minimum": 4528,
+          "maximum": 4528,
+          "mean": 4528
+        },
+        {
+          "wave": 40,
+          "n": 1000,
+          "minimum": 7048,
+          "maximum": 7048,
+          "mean": 7048
+        },
+        {
+          "wave": 50,
+          "n": 1000,
+          "minimum": 8648,
+          "maximum": 8648,
+          "mean": 8648
+        },
+        {
+          "wave": 60,
+          "n": 1000,
+          "minimum": 10248,
+          "maximum": 10248,
+          "mean": 10248
+        },
+        {
+          "wave": 70,
+          "n": 1000,
+          "minimum": 11848,
+          "maximum": 11848,
+          "mean": 11848
+        },
+        {
+          "wave": 80,
+          "n": 991,
+          "minimum": 13448,
+          "maximum": 13448,
+          "mean": 13448
+        },
+        {
+          "wave": 90,
+          "n": 949,
+          "minimum": 15048,
+          "maximum": 15048,
+          "mean": 15048
+        },
+        {
+          "wave": 100,
+          "n": 868,
+          "minimum": 16648,
+          "maximum": 16648,
+          "mean": 16648
+        }
+      ],
+      "finalBalanceMean": 16169.12
+    },
+    {
+      "policy": "wrong",
+      "n": 1000,
+      "cleared": 0,
+      "completionRate": 0,
+      "wilson95": [
+        0,
+        0.003826898586390522
+      ],
+      "averageReached": 3.394,
+      "maxReached": 6,
+      "invalid": 0,
+      "minimumBalance": 500,
+      "decileSurvivors": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "compositionEntropy": 0,
+      "unitCounts": {
+        "rifle": 10182
+      },
+      "refundedTotal": 0,
+      "economyByDecile": [
+        {
+          "wave": 10,
+          "n": 0,
+          "minimum": null,
+          "maximum": null,
+          "mean": null
+        },
+        {
+          "wave": 20,
+          "n": 0,
+          "minimum": null,
+          "maximum": null,
+          "mean": null
+        },
+        {
+          "wave": 30,
+          "n": 0,
+          "minimum": null,
+          "maximum": null,
+          "mean": null
+        },
+        {
+          "wave": 40,
+          "n": 0,
+          "minimum": null,
+          "maximum": null,
+          "mean": null
+        },
+        {
+          "wave": 50,
+          "n": 0,
+          "minimum": null,
+          "maximum": null,
+          "mean": null
+        },
+        {
+          "wave": 60,
+          "n": 0,
+          "minimum": null,
+          "maximum": null,
+          "mean": null
+        },
+        {
+          "wave": 70,
+          "n": 0,
+          "minimum": null,
+          "maximum": null,
+          "mean": null
+        },
+        {
+          "wave": 80,
+          "n": 0,
+          "minimum": null,
+          "maximum": null,
+          "mean": null
+        },
+        {
+          "wave": 90,
+          "n": 0,
+          "minimum": null,
+          "maximum": null,
+          "mean": null
+        },
+        {
+          "wave": 100,
+          "n": 0,
+          "minimum": null,
+          "maximum": null,
+          "mean": null
+        }
+      ],
+      "finalBalanceMean": 618.2
+    },
+    {
+      "policy": "respec",
+      "n": 1000,
+      "cleared": 774,
+      "completionRate": 0.774,
+      "wilson95": [
+        0.7470571078650102,
+        0.7988457517096478
+      ],
+      "averageReached": 96.973,
+      "maxReached": 100,
+      "invalid": 0,
+      "minimumBalance": 4765,
+      "decileSurvivors": [
+        1000,
+        1000,
+        1000,
+        993,
+        993,
+        993,
+        993,
+        984,
+        901,
+        774
+      ],
+      "compositionEntropy": 1.8031282918067495,
+      "unitCounts": {
+        "rifle": 10000,
+        "mg": 55000,
+        "gun": 1054583,
+        "fighter": 285880,
+        "destroyer": 272880,
+        "tank": 180433
+      },
+      "refundedTotal": 36415744,
+      "economyByDecile": [
+        {
+          "wave": 10,
+          "n": 1000,
+          "minimum": 828,
+          "maximum": 828,
+          "mean": 828
+        },
+        {
+          "wave": 20,
+          "n": 1000,
+          "minimum": 1395,
+          "maximum": 1395,
+          "mean": 1395
+        },
+        {
+          "wave": 30,
+          "n": 1000,
+          "minimum": 2613,
+          "maximum": 2613,
+          "mean": 2613
+        },
+        {
+          "wave": 40,
+          "n": 993,
+          "minimum": 6215,
+          "maximum": 6215,
+          "mean": 6215
+        },
+        {
+          "wave": 50,
+          "n": 993,
+          "minimum": 5533,
+          "maximum": 5713,
+          "mean": 5595.880161127895
+        },
+        {
+          "wave": 60,
+          "n": 993,
+          "minimum": 8215,
+          "maximum": 8395,
+          "mean": 8277.880161127896
+        },
+        {
+          "wave": 70,
+          "n": 993,
+          "minimum": 7593,
+          "maximum": 7853,
+          "mean": 7700.5327291037265
+        },
+        {
+          "wave": 80,
+          "n": 984,
+          "minimum": 10275,
+          "maximum": 10535,
+          "mean": 10382.764227642276
+        },
+        {
+          "wave": 90,
+          "n": 901,
+          "minimum": 9693,
+          "maximum": 9993,
+          "mean": 9837.084350721421
+        },
+        {
+          "wave": 100,
+          "n": 774,
+          "minimum": 12375,
+          "maximum": 12675,
+          "mean": 12517.635658914729
+        }
+      ],
+      "finalBalanceMean": 11806.96
+    }
+  ],
+  "pairSummary": [
+    {
+      "kind": "same-roster-position-swap",
+      "n": 9829,
+      "outcomeDifferences": 42,
+      "hqDifferences": 82,
+      "averageHqDelta": -0.3623953606674127
+    },
+    {
+      "kind": "same-position-without-upgrades",
+      "n": 9829,
+      "outcomeDifferences": 510,
+      "hqDifferences": 671,
+      "averageHqDelta": -25.644179945060507
+    }
+  ],
+  "invalidPairs": 0,
+  "criteria": {
+    "status": "engineering-target",
+    "source": "docs/BALANCE_TARGET_2026-10-26.md",
+    "minimumSeeds": 1000,
+    "maximumSeeds": 5000,
+    "completionRate": {
+      "recon": 0.8,
+      "mixed": 0.6
+    },
+    "wrongMaximumRate": 0.05,
+    "maximumInvalid": 0,
+    "maximumAccountingErrors": 0,
+    "minimumPositionDifferences": 1,
+    "minimumUpgradeDifferences": 1
+  },
+  "checks": [
+    {
+      "id": "sample-size",
+      "pass": true
+    },
+    {
+      "id": "completion-recon",
+      "pass": true
+    },
+    {
+      "id": "completion-mixed",
+      "pass": true
+    },
+    {
+      "id": "wrong-formation",
+      "pass": true
+    },
+    {
+      "id": "invalid-results",
+      "pass": true
+    },
+    {
+      "id": "invalid-paired-results",
+      "pass": true
+    },
+    {
+      "id": "accounting",
+      "pass": true
+    },
+    {
+      "id": "nonnegative-balance",
+      "pass": true
+    },
+    {
+      "id": "position-effect",
+      "pass": true
+    },
+    {
+      "id": "upgrade-effect",
+      "pass": true
+    },
+    {
+      "id": "refund-policy-exercised",
+      "pass": true
+    }
+  ],
+  "calibrationPassed": true,
+  "limits": [
+    "Automated first-attempt policies, not human play",
+    "No browser/performance validation",
+    "Numerical targets are engineering interpretations of the user difficulty choice",
+    "Unit selection entropy is not proof of strategic diversity",
+    "Damage contribution may include simultaneous overkill; use HQ and outcome for exact paired effects"
+  ]
+}

@@ -1,0 +1,6 @@
+[
+  {"id":"all","labelKey":"tree.filterAll","targetClass":null,"minimumModifier":0},
+  {"id":"infantry","labelKey":"tree.filterInfantry","targetClass":"infantry","minimumModifier":1},
+  {"id":"armor","labelKey":"tree.filterArmor","targetClass":"armor","minimumModifier":1},
+  {"id":"aircraft","labelKey":"tree.filterAircraft","targetClass":"aircraft","minimumModifier":1}
+]

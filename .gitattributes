@@ -1,0 +1,19 @@
+* text=auto whitespace=trailing-space,space-before-tab,cr-at-eol
+*.js text eol=lf
+*.mjs text eol=lf
+*.cjs text eol=lf
+*.json text eol=lf
+*.css text eol=lf
+*.ttf binary
+*.png binary
+
+# Preserve the exact bytes used by the recorded balance/source hashes.
+src/domain/** -text
+tools/balance-policy.mjs -text
+data/simulation/policy-profiles.json -text
+data/balance/candidate-*.json -text
+data/waves/content.json -text
+docs/ww2_auto_defense_game_design_v2.md -text
+docs/ww2_upward_tree.html -text
+# Keep the upstream license text verbatim, including its existing spaces.
+public/assets/fonts/OFL.txt -text whitespace=-blank-at-eol

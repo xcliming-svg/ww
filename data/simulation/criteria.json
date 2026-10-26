@@ -1,0 +1,15 @@
+{
+  "status": "engineering-target",
+  "source": "docs/BALANCE_TARGET_2026-10-26.md",
+  "minimumSeeds": 1000,
+  "maximumSeeds": 5000,
+  "completionRate": {
+    "recon": 0.8,
+    "mixed": 0.6
+  },
+  "wrongMaximumRate": 0.05,
+  "maximumInvalid": 0,
+  "maximumAccountingErrors": 0,
+  "minimumPositionDifferences": 1,
+  "minimumUpgradeDifferences": 1
+}

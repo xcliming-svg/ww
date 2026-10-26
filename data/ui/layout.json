@@ -1,0 +1,23 @@
+{
+  "treeRatio": 7,
+  "battleRatio": 3,
+  "minWidth": 1280,
+  "minHeight": 720,
+  "worldSize": 416,
+  "cellSize": 32,
+  "gridOrigin": 60,
+  "zoomMin": 0.3,
+  "zoomMax": 1.5,
+  "zoomStep": 0.1,
+  "zoomInitial": 0.7,
+  "minClickSize": 44,
+  "fontSize": 14,
+  "saveDelayMs": 300,
+  "saveMaxBytes": 1048576,
+  "speeds": [
+    1,
+    2
+  ],
+  "defaultSpeed": 1,
+  "unitLabelSize": 8
+}

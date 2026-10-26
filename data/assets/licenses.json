@@ -1,0 +1,27 @@
+{
+  "items": [
+    {
+      "id": "noto-sans-kr",
+      "license": "OFL-1.1",
+      "author": "The Noto Project Authors",
+      "source": "https://github.com/google/fonts/tree/main/ofl/notosanskr",
+      "files": [
+        {
+          "path": "public/assets/fonts/NotoSansKR-variable.ttf",
+          "sha256": "194018e6b2b293a7964f037b25c0249ce1418bc9ab3c971060a03aa57861e252"
+        },
+        {
+          "path": "public/assets/fonts/OFL.txt",
+          "sha256": "1c05c68c34f9708415aada51f17e1b0092d2cea709bf4a94cd38114f9e73d7d9"
+        }
+      ]
+    },
+    {
+      "id": "project-shapes",
+      "license": "project-original",
+      "author": "Project",
+      "source": null,
+      "files": []
+    }
+  ]
+}

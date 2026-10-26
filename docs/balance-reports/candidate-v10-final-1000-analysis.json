@@ -1,0 +1,359 @@
+{
+  "source": "docs/balance-reports/candidate-v10-final-1000.json",
+  "configHash": "bce071e432a46f4b1b8078c90f2966c0d2e98e870395a8e4006b218599b3a44f",
+  "engineHash": "119e53a226c88b4ea8849372c7a0ace91ede7de27504c0a9a76eb6617f6a4550",
+  "policyHash": "d558d011c2d8ff0c2923106df0eaf53864f3ce5a14a3c446b356b37393a2cfbf",
+  "contentHash": "27d569c7c6ed8b4c3732e4144e18864c07d13ceaffe27f8fcf0c340e7f832c96",
+  "accountingErrors": 0,
+  "policies": [
+    {
+      "policy": "infantry",
+      "n": 1000,
+      "cleared": 0,
+      "completionRate": 0,
+      "wilson95": [
+        0,
+        0.003826898586390522
+      ],
+      "averageReached": 11.85,
+      "maxReached": 17,
+      "invalid": 0,
+      "minimumBalance": 2818,
+      "decileSurvivors": [
+        1000,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "compositionEntropy": 0.1896880109881392,
+      "unitCounts": {
+        "rifle": 2000,
+        "mg": 66808
+      },
+      "finalBalanceMean": 3242.72
+    },
+    {
+      "policy": "antiArmor",
+      "n": 1000,
+      "cleared": 0,
+      "completionRate": 0,
+      "wilson95": [
+        0,
+        0.003826898586390522
+      ],
+      "averageReached": 21.194,
+      "maxReached": 35,
+      "invalid": 0,
+      "minimumBalance": 2318,
+      "decileSurvivors": [
+        1000,
+        563,
+        125,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "compositionEntropy": 1.069892858523222,
+      "unitCounts": {
+        "rifle": 2000,
+        "mg": 94980,
+        "at": 74980
+      },
+      "finalBalanceMean": 9262.36
+    },
+    {
+      "policy": "armor",
+      "n": 1000,
+      "cleared": 0,
+      "completionRate": 0,
+      "wilson95": [
+        0,
+        0.003826898586390522
+      ],
+      "averageReached": 10.072,
+      "maxReached": 26,
+      "invalid": 0,
+      "minimumBalance": 3,
+      "decileSurvivors": [
+        237,
+        136,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "compositionEntropy": 2.123916570788194,
+      "unitCounts": {
+        "rifle": 9098,
+        "mg": 21806,
+        "car": 9626,
+        "tank": 14143,
+        "heavy": 3659
+      },
+      "finalBalanceMean": 222.46
+    },
+    {
+      "policy": "air",
+      "n": 1000,
+      "cleared": 176,
+      "completionRate": 0.176,
+      "wilson95": [
+        0.15364903702878677,
+        0.2008307932551943
+      ],
+      "averageReached": 72.358,
+      "maxReached": 100,
+      "invalid": 0,
+      "minimumBalance": 3,
+      "decileSurvivors": [
+        1000,
+        971,
+        971,
+        903,
+        802,
+        717,
+        593,
+        441,
+        282,
+        176
+      ],
+      "compositionEntropy": 2.256631915271969,
+      "unitCounts": {
+        "rifle": 175618,
+        "mg": 400393,
+        "attacker": 265274,
+        "fighter": 257347,
+        "bomber": 190160
+      },
+      "finalBalanceMean": 416.285
+    },
+    {
+      "policy": "mixed",
+      "n": 1000,
+      "cleared": 856,
+      "completionRate": 0.856,
+      "wilson95": [
+        0.8328758480857206,
+        0.8763994001207693
+      ],
+      "averageReached": 96.245,
+      "maxReached": 100,
+      "invalid": 0,
+      "minimumBalance": 3,
+      "decileSurvivors": [
+        1000,
+        970,
+        970,
+        970,
+        970,
+        970,
+        970,
+        953,
+        915,
+        856
+      ],
+      "compositionEntropy": 2.1301258426903664,
+      "unitCounts": {
+        "rifle": 10730,
+        "mg": 97436,
+        "gun": 733816,
+        "fighter": 312249,
+        "tank": 392602,
+        "destroyer": 298519
+      },
+      "finalBalanceMean": 6706.45
+    },
+    {
+      "policy": "recon",
+      "n": 1000,
+      "cleared": 867,
+      "completionRate": 0.867,
+      "wilson95": [
+        0.8445418814116622,
+        0.8866491750259272
+      ],
+      "averageReached": 98.61,
+      "maxReached": 100,
+      "invalid": 0,
+      "minimumBalance": 10328,
+      "decileSurvivors": [
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        981,
+        941,
+        867
+      ],
+      "compositionEntropy": 1.281667814278213,
+      "unitCounts": {
+        "rifle": 9000,
+        "mg": 34000,
+        "gun": 1334888,
+        "fighter": 258972,
+        "destroyer": 258972
+      },
+      "finalBalanceMean": 16138.32
+    },
+    {
+      "policy": "random",
+      "n": 1000,
+      "cleared": 0,
+      "completionRate": 0,
+      "wilson95": [
+        0,
+        0.003826898586390522
+      ],
+      "averageReached": 38.756,
+      "maxReached": 78,
+      "invalid": 0,
+      "minimumBalance": 4,
+      "decileSurvivors": [
+        1000,
+        895,
+        726,
+        483,
+        219,
+        82,
+        14,
+        0,
+        0,
+        0
+      ],
+      "compositionEntropy": 2.3728757510727267,
+      "unitCounts": {
+        "rifle": 5371,
+        "mg": 123720,
+        "at": 100156,
+        "tank": 94614,
+        "fighter": 94799,
+        "mortar": 93128
+      },
+      "finalBalanceMean": 11816.306
+    },
+    {
+      "policy": "wrong",
+      "n": 1000,
+      "cleared": 0,
+      "completionRate": 0,
+      "wilson95": [
+        0,
+        0.003826898586390522
+      ],
+      "averageReached": 3.372,
+      "maxReached": 6,
+      "invalid": 0,
+      "minimumBalance": 500,
+      "decileSurvivors": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "compositionEntropy": 0,
+      "unitCounts": {
+        "rifle": 10116
+      },
+      "finalBalanceMean": 611.6
+    }
+  ],
+  "pairSummary": [
+    {
+      "kind": "same-roster-position-swap",
+      "n": 9812,
+      "outcomeDifferences": 52,
+      "hqDifferences": 102,
+      "averageHqDelta": -0.38002258459029775
+    },
+    {
+      "kind": "same-position-without-upgrades",
+      "n": 9812,
+      "outcomeDifferences": 492,
+      "hqDifferences": 653,
+      "averageHqDelta": -24.925739457806767
+    }
+  ],
+  "criteria": {
+    "status": "engineering-target",
+    "source": "docs/BALANCE_TARGET_2026-10-26.md",
+    "minimumSeeds": 1000,
+    "maximumSeeds": 5000,
+    "completionRate": {
+      "recon": 0.8,
+      "mixed": 0.6
+    },
+    "wrongMaximumRate": 0.05,
+    "maximumInvalid": 0,
+    "maximumAccountingErrors": 0,
+    "minimumPositionDifferences": 1,
+    "minimumUpgradeDifferences": 1
+  },
+  "checks": [
+    {
+      "id": "sample-size",
+      "pass": true
+    },
+    {
+      "id": "completion-recon",
+      "pass": true
+    },
+    {
+      "id": "completion-mixed",
+      "pass": true
+    },
+    {
+      "id": "wrong-formation",
+      "pass": true
+    },
+    {
+      "id": "invalid-results",
+      "pass": true
+    },
+    {
+      "id": "accounting",
+      "pass": true
+    },
+    {
+      "id": "nonnegative-balance",
+      "pass": true
+    },
+    {
+      "id": "position-effect",
+      "pass": true
+    },
+    {
+      "id": "upgrade-effect",
+      "pass": true
+    }
+  ],
+  "calibrationPassed": true,
+  "limits": [
+    "Automated first-attempt policies, not human play",
+    "No browser/performance validation",
+    "Numerical targets are engineering interpretations of the user difficulty choice",
+    "Unit selection entropy is not proof of strategic diversity"
+  ]
+}

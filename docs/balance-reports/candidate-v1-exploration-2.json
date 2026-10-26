@@ -1,0 +1,2752 @@
+{
+  "candidate": "candidate-v1",
+  "configHash": "1572e693e2c507f5444eeb43b233f889848c51509b70c36985a306ba3b1efb66",
+  "contentVersion": "tech-28-v1",
+  "policyVersion": "policies-v1",
+  "samples": 16,
+  "offset": 1,
+  "policies": [
+    "infantry",
+    "antiArmor",
+    "armor",
+    "air",
+    "mixed",
+    "recon",
+    "random",
+    "wrong"
+  ],
+  "status": "complete",
+  "generatedAt": "2026-10-25T22:51:28.869Z",
+  "summary": [
+    {
+      "policy": "infantry",
+      "n": 16,
+      "cleared": 0,
+      "completionRate": 0,
+      "wilson95": [
+        0,
+        0.19361341827271994
+      ],
+      "averageReached": 1,
+      "maxReached": 1,
+      "invalid": 0,
+      "minimumBalance": 4,
+      "decileSurvivors": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "policy": "antiArmor",
+      "n": 16,
+      "cleared": 0,
+      "completionRate": 0,
+      "wilson95": [
+        0,
+        0.19361341827271994
+      ],
+      "averageReached": 1,
+      "maxReached": 1,
+      "invalid": 0,
+      "minimumBalance": 4,
+      "decileSurvivors": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "policy": "armor",
+      "n": 16,
+      "cleared": 0,
+      "completionRate": 0,
+      "wilson95": [
+        0,
+        0.19361341827271994
+      ],
+      "averageReached": 1,
+      "maxReached": 1,
+      "invalid": 0,
+      "minimumBalance": 8,
+      "decileSurvivors": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "policy": "air",
+      "n": 16,
+      "cleared": 0,
+      "completionRate": 0,
+      "wilson95": [
+        0,
+        0.19361341827271994
+      ],
+      "averageReached": 3.75,
+      "maxReached": 4,
+      "invalid": 0,
+      "minimumBalance": 58,
+      "decileSurvivors": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "policy": "mixed",
+      "n": 16,
+      "cleared": 0,
+      "completionRate": 0,
+      "wilson95": [
+        0,
+        0.19361341827271994
+      ],
+      "averageReached": 3.75,
+      "maxReached": 4,
+      "invalid": 0,
+      "minimumBalance": 19,
+      "decileSurvivors": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "policy": "recon",
+      "n": 16,
+      "cleared": 0,
+      "completionRate": 0,
+      "wilson95": [
+        0,
+        0.19361341827271994
+      ],
+      "averageReached": 3.75,
+      "maxReached": 4,
+      "invalid": 0,
+      "minimumBalance": 19,
+      "decileSurvivors": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "policy": "random",
+      "n": 16,
+      "cleared": 0,
+      "completionRate": 0,
+      "wilson95": [
+        0,
+        0.19361341827271994
+      ],
+      "averageReached": 3.75,
+      "maxReached": 4,
+      "invalid": 0,
+      "minimumBalance": 4,
+      "decileSurvivors": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "policy": "wrong",
+      "n": 16,
+      "cleared": 0,
+      "completionRate": 0,
+      "wilson95": [
+        0,
+        0.19361341827271994
+      ],
+      "averageReached": 3,
+      "maxReached": 3,
+      "invalid": 0,
+      "minimumBalance": 108,
+      "decileSurvivors": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "policy": "infantry",
+      "seed": 1,
+      "reached": 1,
+      "cleared": false,
+      "firstDefeat": 2,
+      "hqHp": 0,
+      "balance": 4,
+      "spent": 204,
+      "income": 208,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 4
+      },
+      "damageByUnit": {
+        "rifle": 240
+      }
+    },
+    {
+      "policy": "infantry",
+      "seed": 2,
+      "reached": 1,
+      "cleared": false,
+      "firstDefeat": 2,
+      "hqHp": 0,
+      "balance": 4,
+      "spent": 204,
+      "income": 208,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 4
+      },
+      "damageByUnit": {
+        "rifle": 240
+      }
+    },
+    {
+      "policy": "infantry",
+      "seed": 3,
+      "reached": 1,
+      "cleared": false,
+      "firstDefeat": 2,
+      "hqHp": 0,
+      "balance": 4,
+      "spent": 204,
+      "income": 208,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 4
+      },
+      "damageByUnit": {
+        "rifle": 240
+      }
+    },
+    {
+      "policy": "infantry",
+      "seed": 4,
+      "reached": 1,
+      "cleared": false,
+      "firstDefeat": 2,
+      "hqHp": 0,
+      "balance": 4,
+      "spent": 204,
+      "income": 208,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 4
+      },
+      "damageByUnit": {
+        "rifle": 240
+      }
+    },
+    {
+      "policy": "infantry",
+      "seed": 5,
+      "reached": 1,
+      "cleared": false,
+      "firstDefeat": 2,
+      "hqHp": 0,
+      "balance": 4,
+      "spent": 204,
+      "income": 208,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 4
+      },
+      "damageByUnit": {
+        "rifle": 240
+      }
+    },
+    {
+      "policy": "infantry",
+      "seed": 6,
+      "reached": 1,
+      "cleared": false,
+      "firstDefeat": 2,
+      "hqHp": 0,
+      "balance": 4,
+      "spent": 204,
+      "income": 208,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 4
+      },
+      "damageByUnit": {
+        "rifle": 240
+      }
+    },
+    {
+      "policy": "infantry",
+      "seed": 7,
+      "reached": 1,
+      "cleared": false,
+      "firstDefeat": 2,
+      "hqHp": 0,
+      "balance": 4,
+      "spent": 204,
+      "income": 208,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 4
+      },
+      "damageByUnit": {
+        "rifle": 240
+      }
+    },
+    {
+      "policy": "infantry",
+      "seed": 8,
+      "reached": 1,
+      "cleared": false,
+      "firstDefeat": 2,
+      "hqHp": 0,
+      "balance": 4,
+      "spent": 204,
+      "income": 208,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 4
+      },
+      "damageByUnit": {
+        "rifle": 240
+      }
+    },
+    {
+      "policy": "infantry",
+      "seed": 9,
+      "reached": 1,
+      "cleared": false,
+      "firstDefeat": 2,
+      "hqHp": 0,
+      "balance": 4,
+      "spent": 204,
+      "income": 208,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 4
+      },
+      "damageByUnit": {
+        "rifle": 240
+      }
+    },
+    {
+      "policy": "infantry",
+      "seed": 10,
+      "reached": 1,
+      "cleared": false,
+      "firstDefeat": 2,
+      "hqHp": 0,
+      "balance": 4,
+      "spent": 204,
+      "income": 208,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 4
+      },
+      "damageByUnit": {
+        "rifle": 240
+      }
+    },
+    {
+      "policy": "infantry",
+      "seed": 11,
+      "reached": 1,
+      "cleared": false,
+      "firstDefeat": 2,
+      "hqHp": 0,
+      "balance": 4,
+      "spent": 204,
+      "income": 208,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 4
+      },
+      "damageByUnit": {
+        "rifle": 240
+      }
+    },
+    {
+      "policy": "infantry",
+      "seed": 12,
+      "reached": 1,
+      "cleared": false,
+      "firstDefeat": 2,
+      "hqHp": 0,
+      "balance": 4,
+      "spent": 204,
+      "income": 208,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 4
+      },
+      "damageByUnit": {
+        "rifle": 240
+      }
+    },
+    {
+      "policy": "infantry",
+      "seed": 13,
+      "reached": 1,
+      "cleared": false,
+      "firstDefeat": 2,
+      "hqHp": 0,
+      "balance": 4,
+      "spent": 204,
+      "income": 208,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 4
+      },
+      "damageByUnit": {
+        "rifle": 240
+      }
+    },
+    {
+      "policy": "infantry",
+      "seed": 14,
+      "reached": 1,
+      "cleared": false,
+      "firstDefeat": 2,
+      "hqHp": 0,
+      "balance": 4,
+      "spent": 204,
+      "income": 208,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 4
+      },
+      "damageByUnit": {
+        "rifle": 240
+      }
+    },
+    {
+      "policy": "infantry",
+      "seed": 15,
+      "reached": 1,
+      "cleared": false,
+      "firstDefeat": 2,
+      "hqHp": 0,
+      "balance": 4,
+      "spent": 204,
+      "income": 208,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 4
+      },
+      "damageByUnit": {
+        "rifle": 240
+      }
+    },
+    {
+      "policy": "infantry",
+      "seed": 16,
+      "reached": 1,
+      "cleared": false,
+      "firstDefeat": 2,
+      "hqHp": 0,
+      "balance": 4,
+      "spent": 204,
+      "income": 208,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 4
+      },
+      "damageByUnit": {
+        "rifle": 240
+      }
+    },
+    {
+      "policy": "antiArmor",
+      "seed": 1,
+      "reached": 1,
+      "cleared": false,
+      "firstDefeat": 2,
+      "hqHp": 0,
+      "balance": 4,
+      "spent": 204,
+      "income": 208,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 4
+      },
+      "damageByUnit": {
+        "rifle": 240
+      }
+    },
+    {
+      "policy": "antiArmor",
+      "seed": 2,
+      "reached": 1,
+      "cleared": false,
+      "firstDefeat": 2,
+      "hqHp": 0,
+      "balance": 4,
+      "spent": 204,
+      "income": 208,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 4
+      },
+      "damageByUnit": {
+        "rifle": 240
+      }
+    },
+    {
+      "policy": "antiArmor",
+      "seed": 3,
+      "reached": 1,
+      "cleared": false,
+      "firstDefeat": 2,
+      "hqHp": 0,
+      "balance": 4,
+      "spent": 204,
+      "income": 208,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 4
+      },
+      "damageByUnit": {
+        "rifle": 240
+      }
+    },
+    {
+      "policy": "antiArmor",
+      "seed": 4,
+      "reached": 1,
+      "cleared": false,
+      "firstDefeat": 2,
+      "hqHp": 0,
+      "balance": 4,
+      "spent": 204,
+      "income": 208,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 4
+      },
+      "damageByUnit": {
+        "rifle": 240
+      }
+    },
+    {
+      "policy": "antiArmor",
+      "seed": 5,
+      "reached": 1,
+      "cleared": false,
+      "firstDefeat": 2,
+      "hqHp": 0,
+      "balance": 4,
+      "spent": 204,
+      "income": 208,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 4
+      },
+      "damageByUnit": {
+        "rifle": 240
+      }
+    },
+    {
+      "policy": "antiArmor",
+      "seed": 6,
+      "reached": 1,
+      "cleared": false,
+      "firstDefeat": 2,
+      "hqHp": 0,
+      "balance": 4,
+      "spent": 204,
+      "income": 208,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 4
+      },
+      "damageByUnit": {
+        "rifle": 240
+      }
+    },
+    {
+      "policy": "antiArmor",
+      "seed": 7,
+      "reached": 1,
+      "cleared": false,
+      "firstDefeat": 2,
+      "hqHp": 0,
+      "balance": 4,
+      "spent": 204,
+      "income": 208,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 4
+      },
+      "damageByUnit": {
+        "rifle": 240
+      }
+    },
+    {
+      "policy": "antiArmor",
+      "seed": 8,
+      "reached": 1,
+      "cleared": false,
+      "firstDefeat": 2,
+      "hqHp": 0,
+      "balance": 4,
+      "spent": 204,
+      "income": 208,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 4
+      },
+      "damageByUnit": {
+        "rifle": 240
+      }
+    },
+    {
+      "policy": "antiArmor",
+      "seed": 9,
+      "reached": 1,
+      "cleared": false,
+      "firstDefeat": 2,
+      "hqHp": 0,
+      "balance": 4,
+      "spent": 204,
+      "income": 208,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 4
+      },
+      "damageByUnit": {
+        "rifle": 240
+      }
+    },
+    {
+      "policy": "antiArmor",
+      "seed": 10,
+      "reached": 1,
+      "cleared": false,
+      "firstDefeat": 2,
+      "hqHp": 0,
+      "balance": 4,
+      "spent": 204,
+      "income": 208,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 4
+      },
+      "damageByUnit": {
+        "rifle": 240
+      }
+    },
+    {
+      "policy": "antiArmor",
+      "seed": 11,
+      "reached": 1,
+      "cleared": false,
+      "firstDefeat": 2,
+      "hqHp": 0,
+      "balance": 4,
+      "spent": 204,
+      "income": 208,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 4
+      },
+      "damageByUnit": {
+        "rifle": 240
+      }
+    },
+    {
+      "policy": "antiArmor",
+      "seed": 12,
+      "reached": 1,
+      "cleared": false,
+      "firstDefeat": 2,
+      "hqHp": 0,
+      "balance": 4,
+      "spent": 204,
+      "income": 208,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 4
+      },
+      "damageByUnit": {
+        "rifle": 240
+      }
+    },
+    {
+      "policy": "antiArmor",
+      "seed": 13,
+      "reached": 1,
+      "cleared": false,
+      "firstDefeat": 2,
+      "hqHp": 0,
+      "balance": 4,
+      "spent": 204,
+      "income": 208,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 4
+      },
+      "damageByUnit": {
+        "rifle": 240
+      }
+    },
+    {
+      "policy": "antiArmor",
+      "seed": 14,
+      "reached": 1,
+      "cleared": false,
+      "firstDefeat": 2,
+      "hqHp": 0,
+      "balance": 4,
+      "spent": 204,
+      "income": 208,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 4
+      },
+      "damageByUnit": {
+        "rifle": 240
+      }
+    },
+    {
+      "policy": "antiArmor",
+      "seed": 15,
+      "reached": 1,
+      "cleared": false,
+      "firstDefeat": 2,
+      "hqHp": 0,
+      "balance": 4,
+      "spent": 204,
+      "income": 208,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 4
+      },
+      "damageByUnit": {
+        "rifle": 240
+      }
+    },
+    {
+      "policy": "antiArmor",
+      "seed": 16,
+      "reached": 1,
+      "cleared": false,
+      "firstDefeat": 2,
+      "hqHp": 0,
+      "balance": 4,
+      "spent": 204,
+      "income": 208,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 4
+      },
+      "damageByUnit": {
+        "rifle": 240
+      }
+    },
+    {
+      "policy": "armor",
+      "seed": 1,
+      "reached": 1,
+      "cleared": false,
+      "firstDefeat": 2,
+      "hqHp": 0,
+      "balance": 8,
+      "spent": 200,
+      "income": 208,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 4
+      },
+      "damageByUnit": {
+        "rifle": 240
+      }
+    },
+    {
+      "policy": "armor",
+      "seed": 2,
+      "reached": 1,
+      "cleared": false,
+      "firstDefeat": 2,
+      "hqHp": 0,
+      "balance": 8,
+      "spent": 200,
+      "income": 208,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 4
+      },
+      "damageByUnit": {
+        "rifle": 240
+      }
+    },
+    {
+      "policy": "armor",
+      "seed": 3,
+      "reached": 1,
+      "cleared": false,
+      "firstDefeat": 2,
+      "hqHp": 0,
+      "balance": 8,
+      "spent": 200,
+      "income": 208,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 4
+      },
+      "damageByUnit": {
+        "rifle": 240
+      }
+    },
+    {
+      "policy": "armor",
+      "seed": 4,
+      "reached": 1,
+      "cleared": false,
+      "firstDefeat": 2,
+      "hqHp": 0,
+      "balance": 8,
+      "spent": 200,
+      "income": 208,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 4
+      },
+      "damageByUnit": {
+        "rifle": 240
+      }
+    },
+    {
+      "policy": "armor",
+      "seed": 5,
+      "reached": 1,
+      "cleared": false,
+      "firstDefeat": 2,
+      "hqHp": 0,
+      "balance": 8,
+      "spent": 200,
+      "income": 208,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 4
+      },
+      "damageByUnit": {
+        "rifle": 240
+      }
+    },
+    {
+      "policy": "armor",
+      "seed": 6,
+      "reached": 1,
+      "cleared": false,
+      "firstDefeat": 2,
+      "hqHp": 0,
+      "balance": 8,
+      "spent": 200,
+      "income": 208,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 4
+      },
+      "damageByUnit": {
+        "rifle": 240
+      }
+    },
+    {
+      "policy": "armor",
+      "seed": 7,
+      "reached": 1,
+      "cleared": false,
+      "firstDefeat": 2,
+      "hqHp": 0,
+      "balance": 8,
+      "spent": 200,
+      "income": 208,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 4
+      },
+      "damageByUnit": {
+        "rifle": 240
+      }
+    },
+    {
+      "policy": "armor",
+      "seed": 8,
+      "reached": 1,
+      "cleared": false,
+      "firstDefeat": 2,
+      "hqHp": 0,
+      "balance": 8,
+      "spent": 200,
+      "income": 208,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 4
+      },
+      "damageByUnit": {
+        "rifle": 240
+      }
+    },
+    {
+      "policy": "armor",
+      "seed": 9,
+      "reached": 1,
+      "cleared": false,
+      "firstDefeat": 2,
+      "hqHp": 0,
+      "balance": 8,
+      "spent": 200,
+      "income": 208,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 4
+      },
+      "damageByUnit": {
+        "rifle": 240
+      }
+    },
+    {
+      "policy": "armor",
+      "seed": 10,
+      "reached": 1,
+      "cleared": false,
+      "firstDefeat": 2,
+      "hqHp": 0,
+      "balance": 8,
+      "spent": 200,
+      "income": 208,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 4
+      },
+      "damageByUnit": {
+        "rifle": 240
+      }
+    },
+    {
+      "policy": "armor",
+      "seed": 11,
+      "reached": 1,
+      "cleared": false,
+      "firstDefeat": 2,
+      "hqHp": 0,
+      "balance": 8,
+      "spent": 200,
+      "income": 208,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 4
+      },
+      "damageByUnit": {
+        "rifle": 240
+      }
+    },
+    {
+      "policy": "armor",
+      "seed": 12,
+      "reached": 1,
+      "cleared": false,
+      "firstDefeat": 2,
+      "hqHp": 0,
+      "balance": 8,
+      "spent": 200,
+      "income": 208,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 4
+      },
+      "damageByUnit": {
+        "rifle": 240
+      }
+    },
+    {
+      "policy": "armor",
+      "seed": 13,
+      "reached": 1,
+      "cleared": false,
+      "firstDefeat": 2,
+      "hqHp": 0,
+      "balance": 8,
+      "spent": 200,
+      "income": 208,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 4
+      },
+      "damageByUnit": {
+        "rifle": 240
+      }
+    },
+    {
+      "policy": "armor",
+      "seed": 14,
+      "reached": 1,
+      "cleared": false,
+      "firstDefeat": 2,
+      "hqHp": 0,
+      "balance": 8,
+      "spent": 200,
+      "income": 208,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 4
+      },
+      "damageByUnit": {
+        "rifle": 240
+      }
+    },
+    {
+      "policy": "armor",
+      "seed": 15,
+      "reached": 1,
+      "cleared": false,
+      "firstDefeat": 2,
+      "hqHp": 0,
+      "balance": 8,
+      "spent": 200,
+      "income": 208,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 4
+      },
+      "damageByUnit": {
+        "rifle": 240
+      }
+    },
+    {
+      "policy": "armor",
+      "seed": 16,
+      "reached": 1,
+      "cleared": false,
+      "firstDefeat": 2,
+      "hqHp": 0,
+      "balance": 8,
+      "spent": 200,
+      "income": 208,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 4
+      },
+      "damageByUnit": {
+        "rifle": 240
+      }
+    },
+    {
+      "policy": "air",
+      "seed": 1,
+      "reached": 3,
+      "cleared": false,
+      "firstDefeat": 4,
+      "hqHp": 0,
+      "balance": 58,
+      "spent": 390,
+      "income": 448,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 10
+      },
+      "damageByUnit": {
+        "rifle": 422.15999999999997
+      }
+    },
+    {
+      "policy": "air",
+      "seed": 2,
+      "reached": 4,
+      "cleared": false,
+      "firstDefeat": 5,
+      "hqHp": 0,
+      "balance": 60,
+      "spent": 520,
+      "income": 580,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 14
+      },
+      "damageByUnit": {
+        "rifle": 520.3199999999999
+      }
+    },
+    {
+      "policy": "air",
+      "seed": 3,
+      "reached": 4,
+      "cleared": false,
+      "firstDefeat": 5,
+      "hqHp": 0,
+      "balance": 60,
+      "spent": 520,
+      "income": 580,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 14
+      },
+      "damageByUnit": {
+        "rifle": 484.31999999999994
+      }
+    },
+    {
+      "policy": "air",
+      "seed": 4,
+      "reached": 4,
+      "cleared": false,
+      "firstDefeat": 5,
+      "hqHp": 0,
+      "balance": 60,
+      "spent": 520,
+      "income": 580,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 14
+      },
+      "damageByUnit": {
+        "rifle": 607.1999999999999
+      }
+    },
+    {
+      "policy": "air",
+      "seed": 5,
+      "reached": 4,
+      "cleared": false,
+      "firstDefeat": 5,
+      "hqHp": 0,
+      "balance": 60,
+      "spent": 520,
+      "income": 580,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 14
+      },
+      "damageByUnit": {
+        "rifle": 520.3199999999999
+      }
+    },
+    {
+      "policy": "air",
+      "seed": 6,
+      "reached": 3,
+      "cleared": false,
+      "firstDefeat": 4,
+      "hqHp": 0,
+      "balance": 58,
+      "spent": 390,
+      "income": 448,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 10
+      },
+      "damageByUnit": {
+        "rifle": 422.15999999999997
+      }
+    },
+    {
+      "policy": "air",
+      "seed": 7,
+      "reached": 4,
+      "cleared": false,
+      "firstDefeat": 5,
+      "hqHp": 0,
+      "balance": 60,
+      "spent": 520,
+      "income": 580,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 14
+      },
+      "damageByUnit": {
+        "rifle": 581.76
+      }
+    },
+    {
+      "policy": "air",
+      "seed": 8,
+      "reached": 4,
+      "cleared": false,
+      "firstDefeat": 5,
+      "hqHp": 0,
+      "balance": 60,
+      "spent": 520,
+      "income": 580,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 14
+      },
+      "damageByUnit": {
+        "rifle": 520.3199999999999
+      }
+    },
+    {
+      "policy": "air",
+      "seed": 9,
+      "reached": 3,
+      "cleared": false,
+      "firstDefeat": 4,
+      "hqHp": 0,
+      "balance": 58,
+      "spent": 390,
+      "income": 448,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 10
+      },
+      "damageByUnit": {
+        "rifle": 422.15999999999997
+      }
+    },
+    {
+      "policy": "air",
+      "seed": 10,
+      "reached": 4,
+      "cleared": false,
+      "firstDefeat": 5,
+      "hqHp": 0,
+      "balance": 60,
+      "spent": 520,
+      "income": 580,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 14
+      },
+      "damageByUnit": {
+        "rifle": 545.76
+      }
+    },
+    {
+      "policy": "air",
+      "seed": 11,
+      "reached": 4,
+      "cleared": false,
+      "firstDefeat": 5,
+      "hqHp": 0,
+      "balance": 60,
+      "spent": 520,
+      "income": 580,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 14
+      },
+      "damageByUnit": {
+        "rifle": 520.3199999999999
+      }
+    },
+    {
+      "policy": "air",
+      "seed": 12,
+      "reached": 4,
+      "cleared": false,
+      "firstDefeat": 5,
+      "hqHp": 0,
+      "balance": 60,
+      "spent": 520,
+      "income": 580,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 14
+      },
+      "damageByUnit": {
+        "rifle": 484.31999999999994
+      }
+    },
+    {
+      "policy": "air",
+      "seed": 13,
+      "reached": 4,
+      "cleared": false,
+      "firstDefeat": 5,
+      "hqHp": 0,
+      "balance": 60,
+      "spent": 520,
+      "income": 580,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 14
+      },
+      "damageByUnit": {
+        "rifle": 520.3199999999999
+      }
+    },
+    {
+      "policy": "air",
+      "seed": 14,
+      "reached": 4,
+      "cleared": false,
+      "firstDefeat": 5,
+      "hqHp": 0,
+      "balance": 60,
+      "spent": 520,
+      "income": 580,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 14
+      },
+      "damageByUnit": {
+        "rifle": 607.1999999999999
+      }
+    },
+    {
+      "policy": "air",
+      "seed": 15,
+      "reached": 3,
+      "cleared": false,
+      "firstDefeat": 4,
+      "hqHp": 0,
+      "balance": 58,
+      "spent": 390,
+      "income": 448,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 10
+      },
+      "damageByUnit": {
+        "rifle": 422.15999999999997
+      }
+    },
+    {
+      "policy": "air",
+      "seed": 16,
+      "reached": 4,
+      "cleared": false,
+      "firstDefeat": 5,
+      "hqHp": 0,
+      "balance": 60,
+      "spent": 520,
+      "income": 580,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 14
+      },
+      "damageByUnit": {
+        "rifle": 545.76
+      }
+    },
+    {
+      "policy": "mixed",
+      "seed": 1,
+      "reached": 3,
+      "cleared": false,
+      "firstDefeat": 4,
+      "hqHp": 0,
+      "balance": 27,
+      "spent": 421,
+      "income": 448,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 9,
+        "at": 1
+      },
+      "damageByUnit": {
+        "rifle": 362.15999999999997,
+        "at": 52.5
+      }
+    },
+    {
+      "policy": "mixed",
+      "seed": 2,
+      "reached": 4,
+      "cleared": false,
+      "firstDefeat": 5,
+      "hqHp": 0,
+      "balance": 19,
+      "spent": 561,
+      "income": 580,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 11,
+        "at": 3
+      },
+      "damageByUnit": {
+        "rifle": 423.23999999999995,
+        "at": 96.08
+      }
+    },
+    {
+      "policy": "mixed",
+      "seed": 3,
+      "reached": 4,
+      "cleared": false,
+      "firstDefeat": 5,
+      "hqHp": 0,
+      "balance": 19,
+      "spent": 561,
+      "income": 580,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 11,
+        "at": 3
+      },
+      "damageByUnit": {
+        "rifle": 423.23999999999995,
+        "at": 61.08
+      }
+    },
+    {
+      "policy": "mixed",
+      "seed": 4,
+      "reached": 4,
+      "cleared": false,
+      "firstDefeat": 5,
+      "hqHp": 0,
+      "balance": 19,
+      "spent": 561,
+      "income": 580,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 11,
+        "at": 3
+      },
+      "damageByUnit": {
+        "rifle": 484.67999999999995,
+        "at": 122.52
+      }
+    },
+    {
+      "policy": "mixed",
+      "seed": 5,
+      "reached": 4,
+      "cleared": false,
+      "firstDefeat": 5,
+      "hqHp": 0,
+      "balance": 19,
+      "spent": 561,
+      "income": 580,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 11,
+        "at": 3
+      },
+      "damageByUnit": {
+        "rifle": 423.23999999999995,
+        "at": 113.58
+      }
+    },
+    {
+      "policy": "mixed",
+      "seed": 6,
+      "reached": 3,
+      "cleared": false,
+      "firstDefeat": 4,
+      "hqHp": 0,
+      "balance": 27,
+      "spent": 421,
+      "income": 448,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 9,
+        "at": 1
+      },
+      "damageByUnit": {
+        "rifle": 362.15999999999997,
+        "at": 52.5
+      }
+    },
+    {
+      "policy": "mixed",
+      "seed": 7,
+      "reached": 4,
+      "cleared": false,
+      "firstDefeat": 5,
+      "hqHp": 0,
+      "balance": 19,
+      "spent": 561,
+      "income": 580,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 11,
+        "at": 3
+      },
+      "damageByUnit": {
+        "rifle": 423.23999999999995,
+        "at": 157.51999999999998
+      }
+    },
+    {
+      "policy": "mixed",
+      "seed": 8,
+      "reached": 4,
+      "cleared": false,
+      "firstDefeat": 5,
+      "hqHp": 0,
+      "balance": 19,
+      "spent": 561,
+      "income": 580,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 11,
+        "at": 3
+      },
+      "damageByUnit": {
+        "rifle": 423.23999999999995,
+        "at": 96.08
+      }
+    },
+    {
+      "policy": "mixed",
+      "seed": 9,
+      "reached": 3,
+      "cleared": false,
+      "firstDefeat": 4,
+      "hqHp": 0,
+      "balance": 27,
+      "spent": 421,
+      "income": 448,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 9,
+        "at": 1
+      },
+      "damageByUnit": {
+        "rifle": 362.15999999999997,
+        "at": 52.5
+      }
+    },
+    {
+      "policy": "mixed",
+      "seed": 10,
+      "reached": 4,
+      "cleared": false,
+      "firstDefeat": 5,
+      "hqHp": 0,
+      "balance": 19,
+      "spent": 561,
+      "income": 580,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 11,
+        "at": 3
+      },
+      "damageByUnit": {
+        "rifle": 423.23999999999995,
+        "at": 122.52
+      }
+    },
+    {
+      "policy": "mixed",
+      "seed": 11,
+      "reached": 4,
+      "cleared": false,
+      "firstDefeat": 5,
+      "hqHp": 0,
+      "balance": 19,
+      "spent": 561,
+      "income": 580,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 11,
+        "at": 3
+      },
+      "damageByUnit": {
+        "rifle": 423.23999999999995,
+        "at": 96.08
+      }
+    },
+    {
+      "policy": "mixed",
+      "seed": 12,
+      "reached": 4,
+      "cleared": false,
+      "firstDefeat": 5,
+      "hqHp": 0,
+      "balance": 19,
+      "spent": 561,
+      "income": 580,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 11,
+        "at": 3
+      },
+      "damageByUnit": {
+        "rifle": 423.23999999999995,
+        "at": 61.08
+      }
+    },
+    {
+      "policy": "mixed",
+      "seed": 13,
+      "reached": 4,
+      "cleared": false,
+      "firstDefeat": 5,
+      "hqHp": 0,
+      "balance": 19,
+      "spent": 561,
+      "income": 580,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 11,
+        "at": 3
+      },
+      "damageByUnit": {
+        "rifle": 423.23999999999995,
+        "at": 96.08
+      }
+    },
+    {
+      "policy": "mixed",
+      "seed": 14,
+      "reached": 4,
+      "cleared": false,
+      "firstDefeat": 5,
+      "hqHp": 0,
+      "balance": 19,
+      "spent": 561,
+      "income": 580,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 11,
+        "at": 3
+      },
+      "damageByUnit": {
+        "rifle": 484.67999999999995,
+        "at": 122.52
+      }
+    },
+    {
+      "policy": "mixed",
+      "seed": 15,
+      "reached": 3,
+      "cleared": false,
+      "firstDefeat": 4,
+      "hqHp": 0,
+      "balance": 27,
+      "spent": 421,
+      "income": 448,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 9,
+        "at": 1
+      },
+      "damageByUnit": {
+        "rifle": 362.15999999999997,
+        "at": 52.5
+      }
+    },
+    {
+      "policy": "mixed",
+      "seed": 16,
+      "reached": 4,
+      "cleared": false,
+      "firstDefeat": 5,
+      "hqHp": 0,
+      "balance": 19,
+      "spent": 561,
+      "income": 580,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 11,
+        "at": 3
+      },
+      "damageByUnit": {
+        "rifle": 423.23999999999995,
+        "at": 113.58
+      }
+    },
+    {
+      "policy": "recon",
+      "seed": 1,
+      "reached": 3,
+      "cleared": false,
+      "firstDefeat": 4,
+      "hqHp": 0,
+      "balance": 27,
+      "spent": 421,
+      "income": 448,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 9,
+        "at": 1
+      },
+      "damageByUnit": {
+        "rifle": 362.15999999999997,
+        "at": 52.5
+      }
+    },
+    {
+      "policy": "recon",
+      "seed": 2,
+      "reached": 4,
+      "cleared": false,
+      "firstDefeat": 5,
+      "hqHp": 0,
+      "balance": 19,
+      "spent": 561,
+      "income": 580,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 11,
+        "at": 3
+      },
+      "damageByUnit": {
+        "rifle": 423.23999999999995,
+        "at": 96.08
+      }
+    },
+    {
+      "policy": "recon",
+      "seed": 3,
+      "reached": 4,
+      "cleared": false,
+      "firstDefeat": 5,
+      "hqHp": 0,
+      "balance": 19,
+      "spent": 561,
+      "income": 580,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 11,
+        "at": 3
+      },
+      "damageByUnit": {
+        "rifle": 423.23999999999995,
+        "at": 61.08
+      }
+    },
+    {
+      "policy": "recon",
+      "seed": 4,
+      "reached": 4,
+      "cleared": false,
+      "firstDefeat": 5,
+      "hqHp": 0,
+      "balance": 19,
+      "spent": 561,
+      "income": 580,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 11,
+        "at": 3
+      },
+      "damageByUnit": {
+        "rifle": 484.67999999999995,
+        "at": 122.52
+      }
+    },
+    {
+      "policy": "recon",
+      "seed": 5,
+      "reached": 4,
+      "cleared": false,
+      "firstDefeat": 5,
+      "hqHp": 0,
+      "balance": 19,
+      "spent": 561,
+      "income": 580,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 11,
+        "at": 3
+      },
+      "damageByUnit": {
+        "rifle": 423.23999999999995,
+        "at": 113.58
+      }
+    },
+    {
+      "policy": "recon",
+      "seed": 6,
+      "reached": 3,
+      "cleared": false,
+      "firstDefeat": 4,
+      "hqHp": 0,
+      "balance": 27,
+      "spent": 421,
+      "income": 448,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 9,
+        "at": 1
+      },
+      "damageByUnit": {
+        "rifle": 362.15999999999997,
+        "at": 52.5
+      }
+    },
+    {
+      "policy": "recon",
+      "seed": 7,
+      "reached": 4,
+      "cleared": false,
+      "firstDefeat": 5,
+      "hqHp": 0,
+      "balance": 19,
+      "spent": 561,
+      "income": 580,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 11,
+        "at": 3
+      },
+      "damageByUnit": {
+        "rifle": 423.23999999999995,
+        "at": 157.51999999999998
+      }
+    },
+    {
+      "policy": "recon",
+      "seed": 8,
+      "reached": 4,
+      "cleared": false,
+      "firstDefeat": 5,
+      "hqHp": 0,
+      "balance": 19,
+      "spent": 561,
+      "income": 580,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 11,
+        "at": 3
+      },
+      "damageByUnit": {
+        "rifle": 423.23999999999995,
+        "at": 96.08
+      }
+    },
+    {
+      "policy": "recon",
+      "seed": 9,
+      "reached": 3,
+      "cleared": false,
+      "firstDefeat": 4,
+      "hqHp": 0,
+      "balance": 27,
+      "spent": 421,
+      "income": 448,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 9,
+        "at": 1
+      },
+      "damageByUnit": {
+        "rifle": 362.15999999999997,
+        "at": 52.5
+      }
+    },
+    {
+      "policy": "recon",
+      "seed": 10,
+      "reached": 4,
+      "cleared": false,
+      "firstDefeat": 5,
+      "hqHp": 0,
+      "balance": 19,
+      "spent": 561,
+      "income": 580,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 11,
+        "at": 3
+      },
+      "damageByUnit": {
+        "rifle": 423.23999999999995,
+        "at": 122.52
+      }
+    },
+    {
+      "policy": "recon",
+      "seed": 11,
+      "reached": 4,
+      "cleared": false,
+      "firstDefeat": 5,
+      "hqHp": 0,
+      "balance": 19,
+      "spent": 561,
+      "income": 580,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 11,
+        "at": 3
+      },
+      "damageByUnit": {
+        "rifle": 423.23999999999995,
+        "at": 96.08
+      }
+    },
+    {
+      "policy": "recon",
+      "seed": 12,
+      "reached": 4,
+      "cleared": false,
+      "firstDefeat": 5,
+      "hqHp": 0,
+      "balance": 19,
+      "spent": 561,
+      "income": 580,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 11,
+        "at": 3
+      },
+      "damageByUnit": {
+        "rifle": 423.23999999999995,
+        "at": 61.08
+      }
+    },
+    {
+      "policy": "recon",
+      "seed": 13,
+      "reached": 4,
+      "cleared": false,
+      "firstDefeat": 5,
+      "hqHp": 0,
+      "balance": 19,
+      "spent": 561,
+      "income": 580,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 11,
+        "at": 3
+      },
+      "damageByUnit": {
+        "rifle": 423.23999999999995,
+        "at": 96.08
+      }
+    },
+    {
+      "policy": "recon",
+      "seed": 14,
+      "reached": 4,
+      "cleared": false,
+      "firstDefeat": 5,
+      "hqHp": 0,
+      "balance": 19,
+      "spent": 561,
+      "income": 580,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 11,
+        "at": 3
+      },
+      "damageByUnit": {
+        "rifle": 484.67999999999995,
+        "at": 122.52
+      }
+    },
+    {
+      "policy": "recon",
+      "seed": 15,
+      "reached": 3,
+      "cleared": false,
+      "firstDefeat": 4,
+      "hqHp": 0,
+      "balance": 27,
+      "spent": 421,
+      "income": 448,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 9,
+        "at": 1
+      },
+      "damageByUnit": {
+        "rifle": 362.15999999999997,
+        "at": 52.5
+      }
+    },
+    {
+      "policy": "recon",
+      "seed": 16,
+      "reached": 4,
+      "cleared": false,
+      "firstDefeat": 5,
+      "hqHp": 0,
+      "balance": 19,
+      "spent": 561,
+      "income": 580,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 11,
+        "at": 3
+      },
+      "damageByUnit": {
+        "rifle": 423.23999999999995,
+        "at": 113.58
+      }
+    },
+    {
+      "policy": "random",
+      "seed": 1,
+      "reached": 3,
+      "cleared": false,
+      "firstDefeat": 4,
+      "hqHp": 0,
+      "balance": 27,
+      "spent": 421,
+      "income": 448,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 9,
+        "at": 1
+      },
+      "damageByUnit": {
+        "rifle": 407.15999999999997
+      }
+    },
+    {
+      "policy": "random",
+      "seed": 2,
+      "reached": 4,
+      "cleared": false,
+      "firstDefeat": 5,
+      "hqHp": 0,
+      "balance": 19,
+      "spent": 561,
+      "income": 580,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 11,
+        "at": 3
+      },
+      "damageByUnit": {
+        "rifle": 423.23999999999995,
+        "at": 96.08
+      }
+    },
+    {
+      "policy": "random",
+      "seed": 3,
+      "reached": 4,
+      "cleared": false,
+      "firstDefeat": 5,
+      "hqHp": 0,
+      "balance": 49,
+      "spent": 531,
+      "income": 580,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 12,
+        "at": 2
+      },
+      "damageByUnit": {
+        "rifle": 423.23999999999995,
+        "at": 61.08
+      }
+    },
+    {
+      "policy": "random",
+      "seed": 4,
+      "reached": 4,
+      "cleared": false,
+      "firstDefeat": 5,
+      "hqHp": 0,
+      "balance": 19,
+      "spent": 561,
+      "income": 580,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 11,
+        "at": 3
+      },
+      "damageByUnit": {
+        "rifle": 545.76,
+        "at": 61.44
+      }
+    },
+    {
+      "policy": "random",
+      "seed": 5,
+      "reached": 4,
+      "cleared": false,
+      "firstDefeat": 5,
+      "hqHp": 0,
+      "balance": 19,
+      "spent": 561,
+      "income": 580,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 11,
+        "at": 3
+      },
+      "damageByUnit": {
+        "rifle": 453.23999999999995,
+        "at": 61.08
+      }
+    },
+    {
+      "policy": "random",
+      "seed": 6,
+      "reached": 3,
+      "cleared": false,
+      "firstDefeat": 4,
+      "hqHp": 0,
+      "balance": 27,
+      "spent": 421,
+      "income": 448,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 9,
+        "at": 1
+      },
+      "damageByUnit": {
+        "rifle": 407.15999999999997
+      }
+    },
+    {
+      "policy": "random",
+      "seed": 7,
+      "reached": 4,
+      "cleared": false,
+      "firstDefeat": 5,
+      "hqHp": 0,
+      "balance": 79,
+      "spent": 501,
+      "income": 580,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 13,
+        "at": 1
+      },
+      "damageByUnit": {
+        "rifle": 575.76
+      }
+    },
+    {
+      "policy": "random",
+      "seed": 8,
+      "reached": 4,
+      "cleared": false,
+      "firstDefeat": 5,
+      "hqHp": 0,
+      "balance": 4,
+      "spent": 576,
+      "income": 580,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 14
+      },
+      "damageByUnit": {
+        "rifle": 514.3199999999999
+      }
+    },
+    {
+      "policy": "random",
+      "seed": 9,
+      "reached": 3,
+      "cleared": false,
+      "firstDefeat": 4,
+      "hqHp": 0,
+      "balance": 27,
+      "spent": 421,
+      "income": 448,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 9,
+        "at": 1
+      },
+      "damageByUnit": {
+        "rifle": 407.15999999999997
+      }
+    },
+    {
+      "policy": "random",
+      "seed": 10,
+      "reached": 4,
+      "cleared": false,
+      "firstDefeat": 5,
+      "hqHp": 0,
+      "balance": 19,
+      "spent": 561,
+      "income": 580,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 11,
+        "at": 3
+      },
+      "damageByUnit": {
+        "rifle": 483.23999999999995,
+        "at": 61.08
+      }
+    },
+    {
+      "policy": "random",
+      "seed": 11,
+      "reached": 4,
+      "cleared": false,
+      "firstDefeat": 5,
+      "hqHp": 0,
+      "balance": 19,
+      "spent": 561,
+      "income": 580,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 11,
+        "at": 3
+      },
+      "damageByUnit": {
+        "rifle": 453.23999999999995,
+        "at": 61.08
+      }
+    },
+    {
+      "policy": "random",
+      "seed": 12,
+      "reached": 4,
+      "cleared": false,
+      "firstDefeat": 5,
+      "hqHp": 0,
+      "balance": 19,
+      "spent": 561,
+      "income": 580,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 11,
+        "at": 3
+      },
+      "damageByUnit": {
+        "rifle": 423.23999999999995,
+        "at": 61.08
+      }
+    },
+    {
+      "policy": "random",
+      "seed": 13,
+      "reached": 4,
+      "cleared": false,
+      "firstDefeat": 5,
+      "hqHp": 0,
+      "balance": 49,
+      "spent": 531,
+      "income": 580,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 12,
+        "at": 2
+      },
+      "damageByUnit": {
+        "rifle": 453.23999999999995,
+        "at": 61.08
+      }
+    },
+    {
+      "policy": "random",
+      "seed": 14,
+      "reached": 4,
+      "cleared": false,
+      "firstDefeat": 5,
+      "hqHp": 0,
+      "balance": 49,
+      "spent": 531,
+      "income": 580,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 12,
+        "at": 2
+      },
+      "damageByUnit": {
+        "rifle": 607.1999999999999
+      }
+    },
+    {
+      "policy": "random",
+      "seed": 15,
+      "reached": 3,
+      "cleared": false,
+      "firstDefeat": 4,
+      "hqHp": 0,
+      "balance": 27,
+      "spent": 421,
+      "income": 448,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 9,
+        "at": 1
+      },
+      "damageByUnit": {
+        "rifle": 407.15999999999997
+      }
+    },
+    {
+      "policy": "random",
+      "seed": 16,
+      "reached": 4,
+      "cleared": false,
+      "firstDefeat": 5,
+      "hqHp": 0,
+      "balance": 19,
+      "spent": 561,
+      "income": 580,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 11,
+        "at": 3
+      },
+      "damageByUnit": {
+        "rifle": 484.31999999999994,
+        "at": 52.5
+      }
+    },
+    {
+      "policy": "wrong",
+      "seed": 1,
+      "reached": 3,
+      "cleared": false,
+      "firstDefeat": 4,
+      "hqHp": 0,
+      "balance": 108,
+      "spent": 340,
+      "income": 448,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 9
+      },
+      "damageByUnit": {
+        "rifle": 362.15999999999997
+      }
+    },
+    {
+      "policy": "wrong",
+      "seed": 2,
+      "reached": 3,
+      "cleared": false,
+      "firstDefeat": 4,
+      "hqHp": 0,
+      "balance": 108,
+      "spent": 340,
+      "income": 448,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 9
+      },
+      "damageByUnit": {
+        "rifle": 423.23999999999995
+      }
+    },
+    {
+      "policy": "wrong",
+      "seed": 3,
+      "reached": 3,
+      "cleared": false,
+      "firstDefeat": 4,
+      "hqHp": 0,
+      "balance": 108,
+      "spent": 340,
+      "income": 448,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 9
+      },
+      "damageByUnit": {
+        "rifle": 423.23999999999995
+      }
+    },
+    {
+      "policy": "wrong",
+      "seed": 4,
+      "reached": 3,
+      "cleared": false,
+      "firstDefeat": 4,
+      "hqHp": 0,
+      "balance": 108,
+      "spent": 340,
+      "income": 448,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 9
+      },
+      "damageByUnit": {
+        "rifle": 423.23999999999995
+      }
+    },
+    {
+      "policy": "wrong",
+      "seed": 5,
+      "reached": 3,
+      "cleared": false,
+      "firstDefeat": 4,
+      "hqHp": 0,
+      "balance": 108,
+      "spent": 340,
+      "income": 448,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 9
+      },
+      "damageByUnit": {
+        "rifle": 423.23999999999995
+      }
+    },
+    {
+      "policy": "wrong",
+      "seed": 6,
+      "reached": 3,
+      "cleared": false,
+      "firstDefeat": 4,
+      "hqHp": 0,
+      "balance": 108,
+      "spent": 340,
+      "income": 448,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 9
+      },
+      "damageByUnit": {
+        "rifle": 362.15999999999997
+      }
+    },
+    {
+      "policy": "wrong",
+      "seed": 7,
+      "reached": 3,
+      "cleared": false,
+      "firstDefeat": 4,
+      "hqHp": 0,
+      "balance": 108,
+      "spent": 340,
+      "income": 448,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 9
+      },
+      "damageByUnit": {
+        "rifle": 423.23999999999995
+      }
+    },
+    {
+      "policy": "wrong",
+      "seed": 8,
+      "reached": 3,
+      "cleared": false,
+      "firstDefeat": 4,
+      "hqHp": 0,
+      "balance": 108,
+      "spent": 340,
+      "income": 448,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 9
+      },
+      "damageByUnit": {
+        "rifle": 423.23999999999995
+      }
+    },
+    {
+      "policy": "wrong",
+      "seed": 9,
+      "reached": 3,
+      "cleared": false,
+      "firstDefeat": 4,
+      "hqHp": 0,
+      "balance": 108,
+      "spent": 340,
+      "income": 448,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 9
+      },
+      "damageByUnit": {
+        "rifle": 362.15999999999997
+      }
+    },
+    {
+      "policy": "wrong",
+      "seed": 10,
+      "reached": 3,
+      "cleared": false,
+      "firstDefeat": 4,
+      "hqHp": 0,
+      "balance": 108,
+      "spent": 340,
+      "income": 448,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 9
+      },
+      "damageByUnit": {
+        "rifle": 423.23999999999995
+      }
+    },
+    {
+      "policy": "wrong",
+      "seed": 11,
+      "reached": 3,
+      "cleared": false,
+      "firstDefeat": 4,
+      "hqHp": 0,
+      "balance": 108,
+      "spent": 340,
+      "income": 448,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 9
+      },
+      "damageByUnit": {
+        "rifle": 423.23999999999995
+      }
+    },
+    {
+      "policy": "wrong",
+      "seed": 12,
+      "reached": 3,
+      "cleared": false,
+      "firstDefeat": 4,
+      "hqHp": 0,
+      "balance": 108,
+      "spent": 340,
+      "income": 448,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 9
+      },
+      "damageByUnit": {
+        "rifle": 423.23999999999995
+      }
+    },
+    {
+      "policy": "wrong",
+      "seed": 13,
+      "reached": 3,
+      "cleared": false,
+      "firstDefeat": 4,
+      "hqHp": 0,
+      "balance": 108,
+      "spent": 340,
+      "income": 448,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 9
+      },
+      "damageByUnit": {
+        "rifle": 423.23999999999995
+      }
+    },
+    {
+      "policy": "wrong",
+      "seed": 14,
+      "reached": 3,
+      "cleared": false,
+      "firstDefeat": 4,
+      "hqHp": 0,
+      "balance": 108,
+      "spent": 340,
+      "income": 448,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 9
+      },
+      "damageByUnit": {
+        "rifle": 423.23999999999995
+      }
+    },
+    {
+      "policy": "wrong",
+      "seed": 15,
+      "reached": 3,
+      "cleared": false,
+      "firstDefeat": 4,
+      "hqHp": 0,
+      "balance": 108,
+      "spent": 340,
+      "income": 448,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 9
+      },
+      "damageByUnit": {
+        "rifle": 362.15999999999997
+      }
+    },
+    {
+      "policy": "wrong",
+      "seed": 16,
+      "reached": 3,
+      "cleared": false,
+      "firstDefeat": 4,
+      "hqHp": 0,
+      "balance": 108,
+      "spent": 340,
+      "income": 448,
+      "invalid": 0,
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 9
+      },
+      "damageByUnit": {
+        "rifle": 423.23999999999995
+      }
+    }
+  ]
+}

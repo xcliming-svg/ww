@@ -1,0 +1,386 @@
+[
+  {
+    "id": "hq",
+    "kind": "hq",
+    "parentIds": [],
+    "producerId": null,
+    "unlocksUnitId": null,
+    "labelKey": "tech.hq.name",
+    "descriptionKey": "tech.hq.description",
+    "assetId": "building.hq.idle",
+    "roleTags": [],
+    "startsUnlocked": true
+  },
+  {
+    "id": "rifleR",
+    "kind": "research",
+    "parentIds": [
+      "barracks"
+    ],
+    "producerId": null,
+    "unlocksUnitId": "rifle",
+    "labelKey": "tech.rifleR.name",
+    "descriptionKey": "tech.rifleR.description",
+    "assetId": "tech.research",
+    "roleTags": [],
+    "startsUnlocked": true
+  },
+  {
+    "id": "rifle",
+    "kind": "unit",
+    "parentIds": [
+      "rifleR"
+    ],
+    "producerId": "barracks",
+    "unlocksUnitId": null,
+    "labelKey": "tech.rifle.name",
+    "descriptionKey": "tech.rifle.description",
+    "assetId": "unit.rifle.idle",
+    "roleTags": [],
+    "startsUnlocked": false
+  },
+  {
+    "id": "barracks",
+    "kind": "building",
+    "parentIds": [],
+    "producerId": null,
+    "unlocksUnitId": null,
+    "labelKey": "tech.barracks.name",
+    "descriptionKey": "tech.barracks.description",
+    "assetId": "tech.building",
+    "roleTags": [],
+    "startsUnlocked": true
+  },
+  {
+    "id": "mgR",
+    "kind": "research",
+    "parentIds": [
+      "barracks"
+    ],
+    "producerId": null,
+    "unlocksUnitId": "mg",
+    "labelKey": "tech.mgR.name",
+    "descriptionKey": "tech.mgR.description",
+    "assetId": "tech.research",
+    "roleTags": [],
+    "startsUnlocked": false
+  },
+  {
+    "id": "mg",
+    "kind": "unit",
+    "parentIds": [
+      "mgR"
+    ],
+    "producerId": "barracks",
+    "unlocksUnitId": null,
+    "labelKey": "tech.mg.name",
+    "descriptionKey": "tech.mg.description",
+    "assetId": "unit.mg.idle",
+    "roleTags": [],
+    "startsUnlocked": false
+  },
+  {
+    "id": "mortarR",
+    "kind": "research",
+    "parentIds": [
+      "barracks"
+    ],
+    "producerId": null,
+    "unlocksUnitId": "mortar",
+    "labelKey": "tech.mortarR.name",
+    "descriptionKey": "tech.mortarR.description",
+    "assetId": "tech.research",
+    "roleTags": [],
+    "startsUnlocked": false
+  },
+  {
+    "id": "mortar",
+    "kind": "unit",
+    "parentIds": [
+      "mortarR"
+    ],
+    "producerId": "barracks",
+    "unlocksUnitId": null,
+    "labelKey": "tech.mortar.name",
+    "descriptionKey": "tech.mortar.description",
+    "assetId": "unit.mortar.idle",
+    "roleTags": [],
+    "startsUnlocked": false
+  },
+  {
+    "id": "gunR",
+    "kind": "research",
+    "parentIds": [
+      "mortarR"
+    ],
+    "producerId": null,
+    "unlocksUnitId": "gun",
+    "labelKey": "tech.gunR.name",
+    "descriptionKey": "tech.gunR.description",
+    "assetId": "tech.research",
+    "roleTags": [],
+    "startsUnlocked": false
+  },
+  {
+    "id": "gun",
+    "kind": "unit",
+    "parentIds": [
+      "gunR"
+    ],
+    "producerId": "barracks",
+    "unlocksUnitId": null,
+    "labelKey": "tech.gun.name",
+    "descriptionKey": "tech.gun.description",
+    "assetId": "unit.gun.idle",
+    "roleTags": [],
+    "startsUnlocked": false
+  },
+  {
+    "id": "atR",
+    "kind": "research",
+    "parentIds": [
+      "barracks"
+    ],
+    "producerId": null,
+    "unlocksUnitId": "at",
+    "labelKey": "tech.atR.name",
+    "descriptionKey": "tech.atR.description",
+    "assetId": "tech.research",
+    "roleTags": [],
+    "startsUnlocked": false
+  },
+  {
+    "id": "at",
+    "kind": "unit",
+    "parentIds": [
+      "atR"
+    ],
+    "producerId": "barracks",
+    "unlocksUnitId": null,
+    "labelKey": "tech.at.name",
+    "descriptionKey": "tech.at.description",
+    "assetId": "unit.at.idle",
+    "roleTags": [],
+    "startsUnlocked": false
+  },
+  {
+    "id": "factory",
+    "kind": "building",
+    "parentIds": [],
+    "producerId": null,
+    "unlocksUnitId": null,
+    "labelKey": "tech.factory.name",
+    "descriptionKey": "tech.factory.description",
+    "assetId": "tech.building",
+    "roleTags": [],
+    "startsUnlocked": false
+  },
+  {
+    "id": "carR",
+    "kind": "research",
+    "parentIds": [
+      "factory"
+    ],
+    "producerId": null,
+    "unlocksUnitId": "car",
+    "labelKey": "tech.carR.name",
+    "descriptionKey": "tech.carR.description",
+    "assetId": "tech.research",
+    "roleTags": [],
+    "startsUnlocked": false
+  },
+  {
+    "id": "car",
+    "kind": "unit",
+    "parentIds": [
+      "carR"
+    ],
+    "producerId": "factory",
+    "unlocksUnitId": null,
+    "labelKey": "tech.car.name",
+    "descriptionKey": "tech.car.description",
+    "assetId": "unit.car.idle",
+    "roleTags": [],
+    "startsUnlocked": false
+  },
+  {
+    "id": "tankR",
+    "kind": "research",
+    "parentIds": [
+      "carR"
+    ],
+    "producerId": null,
+    "unlocksUnitId": "tank",
+    "labelKey": "tech.tankR.name",
+    "descriptionKey": "tech.tankR.description",
+    "assetId": "tech.research",
+    "roleTags": [],
+    "startsUnlocked": false
+  },
+  {
+    "id": "tank",
+    "kind": "unit",
+    "parentIds": [
+      "tankR"
+    ],
+    "producerId": "factory",
+    "unlocksUnitId": null,
+    "labelKey": "tech.tank.name",
+    "descriptionKey": "tech.tank.description",
+    "assetId": "unit.tank.idle",
+    "roleTags": [],
+    "startsUnlocked": false
+  },
+  {
+    "id": "heavyR",
+    "kind": "research",
+    "parentIds": [
+      "tankR"
+    ],
+    "producerId": null,
+    "unlocksUnitId": "heavy",
+    "labelKey": "tech.heavyR.name",
+    "descriptionKey": "tech.heavyR.description",
+    "assetId": "tech.research",
+    "roleTags": [],
+    "startsUnlocked": false
+  },
+  {
+    "id": "heavy",
+    "kind": "unit",
+    "parentIds": [
+      "heavyR"
+    ],
+    "producerId": "factory",
+    "unlocksUnitId": null,
+    "labelKey": "tech.heavy.name",
+    "descriptionKey": "tech.heavy.description",
+    "assetId": "unit.heavy.idle",
+    "roleTags": [],
+    "startsUnlocked": false
+  },
+  {
+    "id": "destroyerR",
+    "kind": "research",
+    "parentIds": [
+      "tankR"
+    ],
+    "producerId": null,
+    "unlocksUnitId": "destroyer",
+    "labelKey": "tech.destroyerR.name",
+    "descriptionKey": "tech.destroyerR.description",
+    "assetId": "tech.research",
+    "roleTags": [],
+    "startsUnlocked": false
+  },
+  {
+    "id": "destroyer",
+    "kind": "unit",
+    "parentIds": [
+      "destroyerR"
+    ],
+    "producerId": "factory",
+    "unlocksUnitId": null,
+    "labelKey": "tech.destroyer.name",
+    "descriptionKey": "tech.destroyer.description",
+    "assetId": "unit.destroyer.idle",
+    "roleTags": [],
+    "startsUnlocked": false
+  },
+  {
+    "id": "airfield",
+    "kind": "building",
+    "parentIds": [],
+    "producerId": null,
+    "unlocksUnitId": null,
+    "labelKey": "tech.airfield.name",
+    "descriptionKey": "tech.airfield.description",
+    "assetId": "tech.building",
+    "roleTags": [],
+    "startsUnlocked": false
+  },
+  {
+    "id": "fighterR",
+    "kind": "research",
+    "parentIds": [
+      "airfield"
+    ],
+    "producerId": null,
+    "unlocksUnitId": "fighter",
+    "labelKey": "tech.fighterR.name",
+    "descriptionKey": "tech.fighterR.description",
+    "assetId": "tech.research",
+    "roleTags": [],
+    "startsUnlocked": false
+  },
+  {
+    "id": "fighter",
+    "kind": "unit",
+    "parentIds": [
+      "fighterR"
+    ],
+    "producerId": "airfield",
+    "unlocksUnitId": null,
+    "labelKey": "tech.fighter.name",
+    "descriptionKey": "tech.fighter.description",
+    "assetId": "unit.fighter.idle",
+    "roleTags": [],
+    "startsUnlocked": false
+  },
+  {
+    "id": "attackerR",
+    "kind": "research",
+    "parentIds": [
+      "airfield"
+    ],
+    "producerId": null,
+    "unlocksUnitId": "attacker",
+    "labelKey": "tech.attackerR.name",
+    "descriptionKey": "tech.attackerR.description",
+    "assetId": "tech.research",
+    "roleTags": [],
+    "startsUnlocked": false
+  },
+  {
+    "id": "attacker",
+    "kind": "unit",
+    "parentIds": [
+      "attackerR"
+    ],
+    "producerId": "airfield",
+    "unlocksUnitId": null,
+    "labelKey": "tech.attacker.name",
+    "descriptionKey": "tech.attacker.description",
+    "assetId": "unit.attacker.idle",
+    "roleTags": [],
+    "startsUnlocked": false
+  },
+  {
+    "id": "bomberR",
+    "kind": "research",
+    "parentIds": [
+      "attackerR"
+    ],
+    "producerId": null,
+    "unlocksUnitId": "bomber",
+    "labelKey": "tech.bomberR.name",
+    "descriptionKey": "tech.bomberR.description",
+    "assetId": "tech.research",
+    "roleTags": [],
+    "startsUnlocked": false
+  },
+  {
+    "id": "bomber",
+    "kind": "unit",
+    "parentIds": [
+      "bomberR"
+    ],
+    "producerId": "airfield",
+    "unlocksUnitId": null,
+    "labelKey": "tech.bomber.name",
+    "descriptionKey": "tech.bomber.description",
+    "assetId": "unit.bomber.idle",
+    "roleTags": [],
+    "startsUnlocked": false
+  }
+]

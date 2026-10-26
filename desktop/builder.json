@@ -1,0 +1,35 @@
+{
+  "appId": "local.ww.auto-defense",
+  "productName": "WW2 Auto Defense",
+  "asar": true,
+  "directories": {
+    "output": "release"
+  },
+  "files": [
+    "dist/**/*",
+    "desktop/**/*",
+    "data/ui/layout.json",
+    "locales/ko-KR.json",
+    "package.json"
+  ],
+  "extraResources": [
+    {
+      "from": "public/assets/fonts/OFL.txt",
+      "to": "licenses/NotoSansKR-OFL.txt"
+    },
+    {
+      "from": "data/assets/licenses.json",
+      "to": "licenses/assets.json"
+    },
+    {
+      "from": "public/licenses/THIRD_PARTY_NOTICES.txt",
+      "to": "licenses/THIRD_PARTY_NOTICES.txt"
+    }
+  ],
+  "win": {
+    "target": [
+      "dir"
+    ]
+  },
+  "npmRebuild": false
+}

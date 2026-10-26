@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>2차대전 상향 성장 기술 트리</title>
+<style>
+:root{--page:#f1f0e9;--panel:#fffefa;--ink:#24302b;--sub:#626c63;--line:#d8dbd0;--forest:#376653;--forest-light:#eaf3ed;--sand:#c7985b;--sand-light:#fbf2e6;--sky:#3c6d99;--sky-light:#eaf1f8;--purple:#6d6484;--purple-light:#f0edf6;--danger:#aa5447;--zoom:.78}
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;font-family:system-ui,-apple-system,'Apple SD Gothic Neo','Malgun Gothic',sans-serif;color:var(--ink);background:var(--page)}button,select{font:inherit}button{cursor:pointer}button:focus-visible,select:focus-visible{outline:3px solid #5f9bde;outline-offset:2px}button:disabled{opacity:.44;cursor:default}.site{max-width:1920px;margin:auto}.head{background:#253b33;color:white;padding:19px 28px 17px}.headtop{display:flex;justify-content:space-between;gap:18px;align-items:center;flex-wrap:wrap}.head h1{font-size:28px;letter-spacing:-1.1px;margin:0 0 5px;font-weight:800}.head p{margin:0;color:#d9e3d9;font-size:13px}.budget{background:#ffffff14;border:1px solid #ffffff38;border-radius:13px;padding:11px 17px;display:flex;align-items:baseline;gap:12px}.budget span{font-size:12px;color:#d8e8d8}.budget strong{font-size:26px;font-variant-numeric:tabular-nums}.bar{background:#fffefa;border-bottom:1px solid var(--line);padding:13px 27px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}.barLeft{display:flex;gap:14px;flex-wrap:wrap;align-items:center}.bar select{background:#f5f6f0;border:1px solid #b7c0b3;border-radius:8px;padding:8px 11px;color:var(--ink);font-weight:700}.bar label{font-size:12px;font-weight:800;color:#48574b}.bar-note{font-size:12px;color:#667168}.actions{display:flex;align-items:center;gap:7px}.uiBtn{background:white;color:#304639;border:1px solid #b8c2b6;border-radius:8px;padding:8px 11px;font-weight:750;font-size:12px}.uiBtn:hover:not(:disabled){background:#e7eee7}.uiBtn.dark{background:#3e5e4a;color:white;border-color:#3e5e4a}.uiBtn.dark:hover:not(:disabled){background:#2a4836}.content{display:grid;grid-template-columns:minmax(0,1fr) 325px;min-height:720px}.treeWrap{min-width:0;border-right:1px solid #d7dbd0;background-color:#f2f1eb;background-image:radial-gradient(#e0e2d8 1px,transparent 1px);background-size:22px 22px}.treeTop{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:12px 16px 0;flex-wrap:wrap}.treeTop small{font-size:12px;color:#59685a}.legend{display:flex;gap:13px;align-items:center;flex-wrap:wrap;font-size:11px;color:#5c695e}.legend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:5px}.zoom{display:flex;gap:5px;align-items:center}.zoom span{min-width:40px;text-align:center;font-weight:700;font-size:11px}.scroll{overflow:auto;max-height:calc(100vh - 207px);min-height:610px;scrollbar-color:#a8b5a7 #ecefe9}.space{position:relative}.world{position:absolute;left:0;top:0;width:2470px;height:1510px;transform:scale(var(--zoom));transform-origin:0 0}.branch{position:absolute;top:76px;height:1170px;border:1px solid rgba(107,116,103,.26);border-radius:24px}.branch.inf{left:14px;width:955px;background:#dbe5d81a}.branch.armor{left:980px;width:834px;background:#f8e2c536}.branch.air{left:1825px;width:634px;background:#dbe9f63d}.branchTitle{position:absolute;left:38px;font-size:22px;font-weight:850;letter-spacing:-.8px}.branchTitle small{display:block;font-size:12px;font-weight:500;color:#657063;letter-spacing:0;margin-top:2px}.branchTitle.inf{top:99px;left:39px}.branchTitle.armor{top:99px;left:1010px}.branchTitle.air{top:99px;left:1855px}.startTag{position:absolute;top:1304px;left:1079px;font-weight:850;font-size:16px;color:#647165;white-space:nowrap}.wireSvg{position:absolute;inset:0;pointer-events:none;overflow:visible}.wire{fill:none;stroke:#a6b4a6;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}.wire.toUnit{stroke:#82a48b}.wire.toResearch{stroke:#be9c6b;stroke-width:2.7}.wire.active{stroke:#367052;stroke-width:3.5}.wire.rootTrunk{stroke:#65856e;stroke-width:4;stroke-dasharray:9 7;opacity:.85}.wire.rootBranch{stroke:#65856e;stroke-width:3;stroke-dasharray:9 7;opacity:.7}.node{position:absolute;width:181px;height:72px;background:white;border:1px solid #b7c8b6;border-left:5px solid var(--node);border-radius:11px;box-shadow:0 4px 14px #263d2715;text-align:left;padding:10px 11px;color:#27352d;transition:box-shadow .12s, transform .12s;z-index:2}.node:hover{transform:translateY(-2px);box-shadow:0 7px 15px #263d2724}.node:focus-visible{z-index:3}.node .kind{font-size:10px;font-weight:900;letter-spacing:.02em;color:var(--node)}.node .name{font-size:15px;font-weight:800;line-height:1.2;white-space:nowrap;margin-top:4px}.node .meta{margin-top:4px;display:flex;justify-content:space-between;font-size:10px;gap:4px;color:#6d756c}.node .meta b{font-size:10px;color:#3b654b}.node.building{--node:#497c69;background:#f3f8f2}.node.research{--node:#b58348;background:#fffcf7}.node.unit{--node:#497ba3;background:#f4f8fb}.node.locked{opacity:.77;filter:saturate(.72)}.node.done{border-color:#579473;box-shadow:0 0 0 2px #b8d5bd44}.node.done .meta b{color:#267746}.node.chosen{outline:3px solid #c3a06c;outline-offset:2px}.node.starter{background:#f3f7f0}.node.hq{background:#2d5140;color:#fff;border-color:#2d5140;--node:#d5e8da}.node.hq .meta,.node.hq .meta b{color:#cee5d3}.side{background:#fffefa;padding:20px;overflow-y:auto;max-height:calc(100vh - 165px)}.eyebrow{font-size:11px;font-weight:900;letter-spacing:.07em;color:#758474}.side h2{margin:6px 0;font-size:27px;line-height:1.14;letter-spacing:-1px}.side p{margin:8px 0 16px;font-size:13px;line-height:1.7;color:#607063}.infobox{padding:14px;background:#f3f5f0;border:1px solid #d6e0d2;border-radius:11px;margin:12px 0}.infobox h3{font-size:13px;margin:0 0 9px}.condition{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:8px 0;font-size:12px;border-top:1px solid #dce2da}.condition:first-of-type{border-top:0}.condition span{color:#5c685e}.condition b{font-variant-numeric:tabular-nums}.cta{width:100%;background:#3e6148;color:white;border:0;padding:13px 12px;border-radius:9px;font-weight:850;margin-top:8px}.cta:hover:not(:disabled){background:#2d5339}.cta.secondary{color:#3b6348;background:#e5eee5}.cta.secondary:hover:not(:disabled){background:#d8e6d7}.unitUp{display:flex;gap:8px;align-items:center;justify-content:space-between;border-top:1px solid #dce2da;padding:10px 0}.unitUp:first-child{border-top:0}.unitUp span{font-size:12px;font-weight:700}.unitUp small{display:block;font-size:10px;color:#798478;margin-top:2px}.unitUp button{border:1px solid #a2b8a4;border-radius:7px;background:#fff;padding:8px;font-size:11px;font-weight:750;white-space:nowrap}.unitUp button:hover:not(:disabled){background:#e6f0e5}.statNote{font-size:10px;color:#788677;font-weight:500;float:right}.statSub{margin-top:12px!important}.statRow{display:grid;grid-template-columns:43px 1fr 34px;gap:8px;align-items:center;margin:9px 0;font-size:12px}.statRow b{text-align:right;font-variant-numeric:tabular-nums}.statTrack{height:9px;border-radius:10px;background:#e3e6dd;overflow:hidden}.statFill{height:100%;border-radius:10px;background:#487867}.statsBox .muted,.compareBox .muted{margin-top:10px;line-height:1.5}.compareTable{border-collapse:collapse;width:100%;margin-top:10px;font-size:11px}.compareTable th,.compareTable td{border-bottom:1px solid #dce2d9;padding:8px 2px;text-align:right}.compareTable th:first-child,.compareTable td:first-child{text-align:left}.compareTable th{font-weight:700;color:#69766c}.compareTable td strong{color:#286f49}.compareNote{font-size:12px;line-height:1.5;color:#455d4d}.missionHint{font-size:13px;line-height:1.6;padding:12px;background:#f9f2e9;border-left:3px solid #c89c62;border-radius:5px;color:#685643}.muted{font-size:11px;color:#798575}.tipList{display:flex;flex-direction:column;gap:8px;margin-top:12px}.tip{padding:10px 12px;border-radius:8px;background:#f4f6f1;border:1px solid #e2e8df;font-size:12px;line-height:1.5}.tip strong{display:block;color:#45674b;margin-bottom:2px}.sidefooter{font-size:11px;color:#88918a;margin-top:16px}.toast{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);color:white;background:#2a5940;border-radius:8px;padding:10px 15px;z-index:20;box-shadow:0 4px 18px #0003;opacity:0;pointer-events:none;transition:opacity .2s;max-width:90%}.toast.show{opacity:1}
+@media(max-width:1050px){.content{grid-template-columns:1fr}.scroll{max-height:600px;min-height:500px}.treeWrap{border-right:0;border-bottom:1px solid #d7dbd0}.side{max-height:none;padding:20px 25px}.bar{padding:12px 18px}}@media(max-width:580px){.head{padding:16px}.head h1{font-size:23px}.head p{font-size:12px}.budget{padding:8px 12px}.budget strong{font-size:20px}.bar{padding:10px 12px}.bar-note{width:100%}.scroll{max-height:530px}.treeTop{padding:9px 10px 0}.side{padding:17px}}
+</style>
+</head>
+<body>
+<div class="site">
+<header class="head"><div class="headtop"><div><h1>사령부에서 위로 자라는 기술 트리</h1><p>사령부가 뿌리입니다. 병영·공장·비행장에서 위쪽으로 발전하고, 같은 물자로 연구·생산·강화를 선택합니다.</p></div><div class="budget"><span>남은 군수물자</span><strong id="budget">—</strong></div></div></header>
+<div class="bar"><div class="barLeft"><label for="mission">예시 작전 예산</label><select id="mission"></select><span id="missionHint" class="bar-note"></span></div><div class="actions"><button class="uiBtn" id="undo" disabled>되돌리기</button><button class="uiBtn dark" id="reset">처음부터</button></div></div>
+<div class="content">
+<section class="treeWrap" aria-label="전체 기술 트리"><div class="treeTop"><small>맨 아래 사령부부터 위로 올라가세요. 점선은 시설 계열, 실선은 연구 해금입니다.</small><div class="legend"><span><i style="background:#497c69"></i>건물</span><span><i style="background:#b58348"></i>연구</span><span><i style="background:#497ba3"></i>유닛</span><div class="zoom"><button class="uiBtn" id="zmout" aria-label="축소">−</button><span id="zoomText">78%</span><button class="uiBtn" id="zmin" aria-label="확대">+</button><button class="uiBtn" id="fit">전체 보기</button><button class="uiBtn" id="goRoot">사령부로</button></div></div></div>
+<div class="scroll" id="scroll"><div class="space" id="space"><div class="world" id="world"><div class="startTag">↑ 위로 성장 · 사령부가 시작점</div><div class="branch inf"></div><div class="branch armor"></div><div class="branch air"></div><div class="branchTitle inf">보병 · 중화기 <small>적 보병을 막고, 진지를 공격합니다</small></div><div class="branchTitle armor">차량 · 전차 <small>빠른 장갑차에서 강한 전차로</small></div><div class="branchTitle air">항공기 <small>전투기와 공격기는 별도 선택, 폭격기는 공격기의 상위 화력</small></div><svg class="wireSvg" id="wires" width="2470" height="1510" viewBox="0 0 2470 1510"></svg><div id="nodeLayer"></div></div></div></div></section>
+<aside class="side" id="details"></aside>
+</div></div><div id="toast" class="toast" role="status" aria-live="polite"></div>
+<script>
+(()=>{
+'use strict';
+const W=2470,H=1510,NW=181,NH=72;
+const nodes=[
+{id:'hq',name:'사령부',type:'building',x:1150,y:1370,start:true,desc:'기술 트리의 뿌리입니다. 위쪽으로 병영·공장·비행장이 뻗어 나갑니다. 병영과 소총병 2분대는 처음부터 보유합니다.'},
+{id:'rifleR',name:'소총 훈련',type:'research',x:40,y:910,req:['barracks'],start:true,desc:'병영에서 시작하는 기본 보병 연구입니다. 작전 시작 시 이미 완료되어 있습니다.'},
+{id:'rifle',name:'소총병',type:'unit',x:40,y:730,req:['rifleR'],cost:30,initial:2,producer:'barracks',role:'가장 저렴한 기본 병력. 수가 많으면 넓은 지역을 지키기 좋습니다.'},
+{id:'barracks',name:'병영',type:'building',x:350,y:1138,start:true,desc:'보병과 중화기 유닛을 생산합니다. 처음부터 지어져 있습니다.'},
+{id:'mgR',name:'기관총',type:'research',x:245,y:910,req:['barracks'],cost:65,desc:'많은 적 보병을 한꺼번에 막을 수 있는 기관총을 확보합니다.'},
+{id:'mg',name:'기관총팀',type:'unit',x:245,y:730,req:['mgR'],producer:'barracks',cost:65,role:'몰려오는 적 보병에 강합니다. 전차를 상대하기는 어렵습니다.'},
+{id:'mortarR',name:'박격포',type:'research',x:455,y:910,req:['barracks'],cost:70,desc:'엄폐물 뒤의 적을 공격하는 무기를 확보합니다.'},
+{id:'mortar',name:'박격포팀',type:'unit',x:455,y:730,req:['mortarR'],producer:'barracks',cost:75,role:'엄폐한 적과 가벼운 진지를 공격합니다. 가까이 붙은 적에게는 약합니다.'},
+{id:'gunR',name:'야포',type:'research',x:620,y:490,req:['mortarR'],cost:135,desc:'박격포보다 사거리가 길고 보병·진지 공격력이 높은 야포를 확보합니다.',route:'below'},
+{id:'gun',name:'야포',type:'unit',x:620,y:310,req:['gunR'],producer:'barracks',cost:135,role:'멀리 떨어진 적 진지를 강하게 공격합니다. 비싸고 이동이 느립니다.'},
+{id:'atR',name:'대전차 무기',type:'research',x:755,y:910,req:['barracks'],cost:75,desc:'전차를 상대하기 위한 휴대 대전차 무기를 확보합니다.'},
+{id:'at',name:'대전차병',type:'unit',x:755,y:730,req:['atR'],producer:'barracks',cost:65,role:'장갑차와 전차 대응에 특화된 보병입니다. 일반 보병에게는 약합니다.'},
+{id:'factory',name:'공장',type:'building',x:1160,y:1138,cost:150,desc:'장갑차와 전차를 만들 수 있습니다. 처음부터 건설 가능하며 별도 연구가 필요 없습니다.'},
+{id:'carR',name:'장갑차',type:'research',x:1040,y:910,req:['factory'],cost:95,desc:'빠르고 저렴한 장갑차를 생산할 수 있습니다.'},
+{id:'car',name:'장갑차',type:'unit',x:1000,y:730,req:['carR'],producer:'factory',cost:95,role:'보병에게 강하고 빠르지만 강한 대전차 무기에는 취약합니다.'},
+{id:'tankR',name:'중형전차',type:'research',x:1260,y:635,req:['carR'],cost:150,desc:'장갑차보다 화력과 장갑이 뛰어난 중형전차를 확보합니다.',route:'below'},
+{id:'tank',name:'중형전차',type:'unit',x:1200,y:460,req:['tankR'],producer:'factory',cost:175,role:'보병과 장갑차 모두에 안정적인 기본 전차입니다.'},
+{id:'heavyR',name:'중전차',type:'research',x:1430,y:375,req:['tankR'],cost:215,desc:'중형전차보다 화력과 체력이 크게 오르지만 가격이 높고 느립니다.',route:'above'},
+{id:'heavy',name:'중전차',type:'unit',x:1425,y:195,req:['heavyR'],producer:'factory',cost:280,role:'정면 싸움에 강하지만 비싸고 느립니다.'},
+{id:'destroyerR',name:'구축전차',type:'research',x:1625,y:375,req:['tankR'],cost:160,desc:'중형전차보다 대전차 화력과 사거리가 강하지만 보병 대응력이 낮습니다.',route:'below'},
+{id:'destroyer',name:'구축전차',type:'unit',x:1625,y:195,req:['destroyerR'],producer:'factory',cost:185,role:'적 전차를 상대로 효율적이지만 보병에게 보호받아야 합니다.'},
+{id:'airfield',name:'비행장',type:'building',x:2020,y:1138,cost:200,desc:'전투기와 폭격기를 운용합니다. 처음부터 건설 가능하며 별도 연구가 필요 없습니다.'},
+{id:'fighterR',name:'전투기',type:'research',x:1880,y:910,req:['airfield'],cost:150,desc:'적 항공기를 막는 전투기를 확보합니다.'},
+{id:'fighter',name:'전투기',type:'unit',x:1880,y:730,req:['fighterR'],producer:'airfield',cost:165,role:'적 항공기 방어에 집중합니다. 지상 공격은 약합니다.'},
+{id:'attackerR',name:'공격기',type:'research',x:2110,y:910,req:['airfield'],cost:145,desc:'지상의 차량과 진지를 공격하는 항공기를 연구합니다. 전투기와 다른 선택지입니다.'},
+{id:'attacker',name:'공격기',type:'unit',x:2090,y:730,req:['attackerR'],producer:'airfield',cost:185,role:'전차와 지상 목표를 공격합니다. 전투기보다 대공전은 약합니다.'},
+{id:'bomberR',name:'폭격기',type:'research',x:2260,y:570,req:['attackerR'],cost:225,desc:'공격기보다 넓은 지역에 강한 폭격을 가합니다. 특히 보병과 진지에 강하지만 느리고 전차 정밀공격은 불리합니다.',route:'above'},
+{id:'bomber',name:'폭격기',type:'unit',x:2260,y:385,req:['bomberR'],producer:'airfield',cost:260,role:'밀집 보병과 진지를 폭격합니다. 적 전차·전투기를 직접 상대하는 데 불리합니다.'}
+];
+const missions=[
+{id:'village',name:'마을 방어',budget:700,note:'적 보병이 많고 장갑차도 조금 보입니다.'},
+{id:'bridge',name:'다리 탈환',budget:1050,note:'적 전차와 방어진지가 길을 막고 있습니다.'},
+{id:'airport',name:'비행장 방어',budget:1280,note:'적 보병·전차·항공기가 모두 등장할 수 있습니다.'}
+];
+const byId=Object.fromEntries(nodes.map(n=>[n.id,n]));
+const names={building:'건물',research:'연구',unit:'유닛'};
+let state,history=[],zoom=.78,selected='hq',toastTimer=null;
+function fresh(mission='village'){const m=missions.find(x=>x.id===mission)||missions[0];return {mission:m.id,budget:m.budget,built:['hq','barracks'],research:['rifleR'],counts:{rifle:2},upgrades:{}}}
+function save(){try{localStorage.setItem('ww2_upward_tree_v1',JSON.stringify({state,history,selected}))}catch(e){}}
+function load(){try{const obj=JSON.parse(localStorage.getItem('ww2_upward_tree_v1')||'null');if(obj&&missions.some(m=>m.id===obj.state?.mission)&&typeof obj.state?.budget==='number'){state=obj.state;history=Array.isArray(obj.history)?obj.history:[];selected=byId[obj.selected]?obj.selected:'hq';return}}catch(e){}state=fresh()}
+function assertTree(){const seen=new Set(),walking=new Set(),unitDirect={};for(const n of nodes){if(seen.has(n.id))throw Error('중복 노드 '+n.id);seen.add(n.id);for(const p of n.req||[]){if(!byId[p])throw Error('없는 선행 '+p);const t=byId[p].type+'>'+n.type;if(!['building>research','research>research','research>building','research>unit'].includes(t))throw Error('허용되지 않은 연결 '+t);if(n.type==='unit'){unitDirect[p]=(unitDirect[p]||0)+1}}if(n.type==='unit'&&(!(n.req||[]).length||n.req.some(p=>byId[p].type!=='research')))throw Error('유닛 선행 연구 오류 '+n.id)}for(const [k,v]of Object.entries(unitDirect))if(v>1)throw Error('연구 하나에 여러 유닛 '+k);function visit(id){if(walking.has(id))throw Error('순환 연결 '+id);if(!seen.has(id))throw Error('잘못된 id');if(visited.has(id))return;walking.add(id);for(const p of byId[id].req||[])visit(p);walking.delete(id);visited.add(id)}const visited=new Set();for(const n of nodes)visit(n.id);for(const n of nodes.filter(x=>x.type==='research'))if((unitDirect[n.id]||0)!==1)throw Error('유닛을 열지 않는 연구 '+n.id);
+for(const n of nodes.filter(x=>x.type==='unit'))if(!STATS[n.id])throw Error('능력치 없는 유닛 '+n.id);
+for(const research of nodes.filter(x=>x.type==='research'))for(const prevId of research.req||[]){
+if(byId[prevId].type!=='research')continue;
+const prevUnit=nodes.find(x=>x.type==='unit'&&(x.req||[]).includes(prevId));
+const unit=nodes.find(x=>x.type==='unit'&&(x.req||[]).includes(research.id));
+const p=PROGRESSION[unit.id];
+if(!p||p.from!==prevUnit.id)throw Error('연구 연결에 성장 정의가 없음: '+research.id);
+if(STATS[unit.id].dmg[p.focus]<=STATS[prevUnit.id].dmg[p.focus])throw Error('상위 기술 강점 미흡: '+research.id);
+if(p.kind==='상위'&&STATS[unit.id].hp<=STATS[prevUnit.id].hp)throw Error('상위 기술 체력 미흡: '+research.id);
+}
+return true}
+// 화력은 상대적인 전투 성능입니다. 보병 / 전차 / 진지 / 항공기 순서입니다.
+// 생산비, 연구비, 체력, 이동성 모두 임시 밸런스 수치이며 실제 전투 시뮬레이션은 아닙니다.
+const STATS={
+ rifle:    {hp:60,range:2,mobility:3,dmg:[15,1,3,0]},
+ mg:       {hp:65,range:3,mobility:1,dmg:[38,2,8,0]},
+ mortar:   {hp:45,range:4,mobility:1,dmg:[28,4,42,0]},
+ gun:      {hp:60,range:6,mobility:1,dmg:[36,28,78,0]},
+ at:       {hp:50,range:2,mobility:2,dmg:[8,60,8,0]},
+ car:      {hp:110,range:2,mobility:5,dmg:[52,16,12,0]},
+ tank:     {hp:230,range:4,mobility:3,dmg:[85,68,52,0]},
+ heavy:    {hp:420,range:4,mobility:2,dmg:[116,108,86,0]},
+ destroyer:{hp:220,range:5,mobility:2,dmg:[28,145,36,0]},
+ fighter:  {hp:120,range:4,mobility:5,dmg:[3,2,4,120]},
+ attacker: {hp:125,range:3,mobility:4,dmg:[55,85,50,18]},
+ bomber:   {hp:155,range:5,mobility:2,dmg:[110,40,140,6]}
+};
+const TARGETS=['보병','전차','진지','항공기'];
+const PROGRESSION={
+ gun:{from:'mortar',kind:'상위',focus:2,note:'진지 화력과 사거리 상승'},
+ tank:{from:'car',kind:'상위',focus:1,note:'장갑과 범용 전투력이 상승'},
+ heavy:{from:'tank',kind:'상위',focus:1,note:'더 높은 화력과 체력, 대신 느리고 비쌈'},
+ destroyer:{from:'tank',kind:'특화',focus:1,note:'전차 공격 특화. 보병 대응력은 감소'},
+ bomber:{from:'attacker',kind:'특화',focus:2,note:'진지와 밀집 보병에 강함. 대전차 정밀공격은 감소'}
+};
+const enemyLabel=['보병','전차','진지','항공기'];
+function effective(n){const base=STATS[n.id];if(!base)return null;const u=state.upgrades[n.id]||{};const atk=1+.18*(u.power||0),hp=1+.20*(u.survive||0);return {hp:Math.round(base.hp*hp),range:base.range,mobility:base.mobility,dmg:base.dmg.map(v=>Math.round(v*atk))}}
+function comparisonFor(id){const p=PROGRESSION[id];if(!p)return '';const prev=byId[p.from],n=byId[id],a=STATS[prev.id],b=STATS[n.id],idx=p.focus;const efficiency=v=>(100*v.dmg[idx]/byId[v===a?prev.id:n.id].cost).toFixed(1);return `<div class="infobox compareBox"><h3>${p.kind} 성장 비교 · ${prev.name} → ${n.name}</h3><div class="compareNote">${p.note}</div><table class="compareTable"><thead><tr><th>항목</th><th>${prev.name}</th><th>${n.name}</th></tr></thead><tbody><tr><td>${TARGETS[idx]} 상대 화력</td><td>${a.dmg[idx]}</td><td><strong>${b.dmg[idx]}</strong></td></tr><tr><td>체력</td><td>${a.hp}</td><td><strong>${b.hp}</strong></td></tr><tr><td>생산비</td><td>${prev.cost}</td><td>${n.cost}</td></tr><tr><td>${TARGETS[idx]} 화력 / 100물자</td><td>${efficiency(a)}</td><td>${efficiency(b)}</td></tr></tbody></table><div class="muted">기본 유닛 1개 기준. 연구비와 강화는 별도이므로 최적 빌드는 달라질 수 있습니다.</div></div>`}
+function statPanel(n){const s=effective(n),b=STATS[n.id];if(!s)return '';const max=150;return `<div class="infobox statsBox"><h3>전투 성능 <span class="statNote">현재 강화 반영</span></h3><div class="condition"><span>체력</span><b>${s.hp}${s.hp===b.hp?'':` (+${s.hp-b.hp})`}</b></div><div class="condition"><span>사거리</span><b>${s.range} / 6</b></div><div class="condition"><span>이동성</span><b>${s.mobility} / 5</b></div><h3 class="statSub">상대별 화력</h3>${s.dmg.map((d,i)=>`<div class="statRow"><span>${TARGETS[i]}</span><div class="statTrack"><div class="statFill" style="width:${Math.min(100,d/max*100)}%"></div></div><b>${d}</b></div>`).join('')}<div class="muted">화력 수치는 병과별 상대 성능을 나타낸 임시값입니다. 실제 전투 DPS나 승률을 의미하지 않습니다.</div></div>`}
+function researchPreview(r){const unit=nodes.find(n=>n.type==='unit'&&(n.req||[]).includes(r.id));if(!unit)return '';const s=STATS[unit.id];if(!s)return '';return `<div class="infobox"><h3>연구 결과 · ${unit.name} 생산 가능</h3><div class="condition"><span>생산비</span><b>${unit.cost} 물자</b></div><div class="condition"><span>체력 / 사거리</span><b>${s.hp} / ${s.range}</b></div><div class="condition"><span>강점</span><b>${TARGETS[s.dmg.indexOf(Math.max(...s.dmg))]} 상대 화력 ${Math.max(...s.dmg)}</b></div><div class="muted">연구비와 생산비는 별도입니다. 연구 완료 후 유닛을 생산할 수 있습니다.</div></div>`}
+function done(n){return n.type==='research'?state.research.includes(n.id):n.type==='building'?state.built.includes(n.id):(state.counts[n.id]||0)>0}
+function unlocked(n){return (n.req||[]).every(p=>done(byId[p]))}
+function available(n){return unlocked(n)&&(n.type!=='unit'||state.built.includes(n.producer))}
+function costUpgrade(n,key){const lv=state.upgrades[n.id]?.[key]||0;return Math.round(n.cost*(lv===0?.55:.8)/5)*5}
+function addHistory(){history.push(JSON.parse(JSON.stringify(state)));if(history.length>35)history.shift()}
+function spendOn(n){if(!available(n)|| (n.type!=='unit'&&done(n)) ||state.budget<(n.cost||0))return toast('먼저 필요한 건물과 연구를 확인하세요.');addHistory();state.budget-=n.cost||0;if(n.type==='building')state.built.push(n.id);else if(n.type==='research')state.research.push(n.id);else state.counts[n.id]=(state.counts[n.id]||0)+1;save();render()}
+function buyUpgrade(n,key){if(!available(n))return;const v=state.upgrades[n.id]||{},lv=v[key]||0,c=costUpgrade(n,key);if(lv>=2||state.budget<c)return;addHistory();state.budget-=c;state.upgrades[n.id]={...v,[key]:lv+1};save();render()}
+function toast(s){const el=document.getElementById('toast');el.textContent=s;el.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>el.classList.remove('show'),2200)}
+function status(n){return done(n)?'완료':available(n)?'선택 가능':'잠김'}
+function nodeHtml(n){let meta=n.type==='unit'?(state.counts[n.id]||0)+'개 생산':done(n)?'보유':(n.cost||0)+' 물자';if(n.type==='research'&&done(n))meta='연구 완료';if(n.type==='unit'&&done(n))meta=(state.counts[n.id]||0)+'개 편성';const disabled=!available(n);return `<span class="kind">${names[n.type]}</span><div class="name">${n.name}</div><div class="meta"><span>${meta}</span><b>${done(n)?'✓':disabled?'잠김':'○'}</b></div>`}
+function drawNodes(){const layer=document.getElementById('nodeLayer');for(const n of nodes){const el=document.createElement('button');el.className='node '+n.type+(n.id==='hq'?' hq':'');el.id='n-'+n.id;el.style.cssText=`left:${n.x}px;top:${n.y}px;`;el.onclick=()=>{selected=n.id;save();render()};layer.appendChild(el)}}
+function points(a,b){
+  const sx=a.x+NW/2,tx=b.x+NW/2;
+  const fromTop=a.y,toBottom=b.y+NH;
+  if(b.type==='unit'){
+    return `M${sx} ${fromTop} C${sx} ${fromTop-56},${tx} ${toBottom+56},${tx} ${toBottom}`;
+  }
+  if(a.type==='building'){
+    const mid=1050;
+    return `M${sx} ${fromTop} V${mid} H${tx} V${toBottom}`;
+  }
+  // Deeper research branches sideways from the parent to avoid its unit leaf.
+  const edgeX=a.x+NW-8,edgeY=a.y+32;
+  return `M${edgeX} ${edgeY} C${edgeX+105} ${edgeY-46},${tx+18} ${toBottom+115},${tx} ${toBottom}`;
+}
+function drawWires(){
+ const edges=[];
+ // Organizational root lines: not unlock dependencies. The building-to-building
+ // constraint is unchanged; these lines represent the HQ's three facility families.
+ const hq=byId.hq,roots=['barracks','factory','airfield'].map(k=>byId[k]);
+ const hx=hq.x+NW/2,splitY=1294;
+ edges.push(`<path class="wire rootTrunk" d="M${hx} ${hq.y} V${splitY} H${roots[0].x+NW/2} M${hx} ${splitY} H${roots[2].x+NW/2}"/>`);
+ for(const n of roots)edges.push(`<path class="wire rootBranch" d="M${n.x+NW/2} ${splitY} V${n.y+NH}"/>`);
+ for(const n of nodes)for(const p of n.req||[]){
+  const a=byId[p];const edgeClass=n.type==='unit'?'toUnit':a.type==='research'?'toResearch':'';
+  edges.push(`<path class="wire ${edgeClass} ${done(a)?'active':''}" d="${points(a,n)}"/>`);
+ }
+ document.getElementById('wires').innerHTML=edges.join('');
+}
+function renderNodes(){for(const n of nodes){const el=document.getElementById('n-'+n.id);el.innerHTML=nodeHtml(n);el.className='node '+n.type+(n.id==='hq'?' hq':'')+(done(n)?' done':'')+(!available(n)?' locked':'')+(selected===n.id?' chosen':'');el.setAttribute('aria-label',names[n.type]+' '+n.name+', '+status(n))}}
+function detail(){const el=document.getElementById('details'),n=byId[selected];const m=missions.find(x=>x.id===state.mission);let html=`<div class="eyebrow">${names[n.type]} · ${status(n)}</div><h2>${n.name}</h2><p>${n.desc||n.role}</p>`;
+if(n.id==='hq'){
+html+=`<div class="missionHint"><b>이번 작전: ${m.name}</b><div>${m.note}</div></div><div class="infobox"><h3>알아둘 규칙</h3><div class="condition"><span>소총병 + 병영</span><b>병영에서 시작</b></div><div class="condition"><span>공장 / 비행장</span><b>바로 건설 가능</b></div><div class="condition"><span>각 연구가 여는 유닛</span><b>정확히 1종</b></div><div class="condition"><span>군수물자</span><b>작전마다 고정</b></div></div><div class="tipList"><div class="tip"><strong>보병을 많이 상대한다면</strong>기관총을 먼저 확보하거나 소총병을 강화하세요. 같은 100 물자라도 적 종류에 따라 효율이 다릅니다.</div><div class="tip"><strong>전차가 걱정된다면</strong>대전차병을 확보하거나 장갑차 → 중형전차를 연구하세요. 상위 유닛은 한 대의 화력과 체력이 올라갑니다.</div><div class="tip"><strong>적 진지가 문제라면</strong>박격포 → 야포로 발전시키세요. 야포는 더 비싸지만 사거리와 진지 화력이 높습니다.</div></div>`;
+}else{
+const req=n.req||[];if(req.length)html+=`<div class="infobox"><h3>필요한 것</h3>${req.map(id=>`<div class="condition"><span>${byId[id].name}</span><b>${done(byId[id])?'✓ 완료':'아직 없음'}</b></div>`).join('')}${n.type==='unit'?`<div class="condition"><span>생산 시설: ${byId[n.producer].name}</span><b>${state.built.includes(n.producer)?'✓ 보유':'아직 없음'}</b></div>`:''}</div>`;
+if(n.type==='building'||n.type==='research'){
+const t=n.type==='building'?'건설':'연구';if(!done(n))html+=`<div class="infobox"><h3>${t} 비용</h3><div class="condition"><span>군수물자</span><b>${n.cost||0}</b></div><button class="cta" id="pay" ${!available(n)||state.budget<(n.cost||0)?'disabled':''}>${available(n)?t+'하기':'선행 조건 필요'}</button></div>`;
+else html+=`<div class="infobox"><h3>완료되었습니다</h3><div class="muted">${n.type==='building'?'이 시설에서 관련 무기를 연구할 수 있습니다.':'연결된 유닛을 생산할 수 있습니다.'}</div></div>`;
+if(n.type==='research'){html+=researchPreview(n);const unit=nodes.find(x=>x.type==='unit'&&(x.req||[]).includes(n.id));if(unit)html+=comparisonFor(unit.id)}
+}else{
+const count=state.counts[n.id]||0,ok=available(n);html+=`<div class="infobox"><h3>생산과 강화</h3><div class="condition"><span>현재 수량</span><b>${count}개 부대</b></div><button class="cta" id="pay" ${!ok||state.budget<n.cost?'disabled':''}>1개 생산 · ${n.cost} 물자</button></div><div class="infobox"><h3>${n.name} 전체 강화</h3>`;
+for(const [key,label,eff] of [['power','화력','공격 성능'],['survive','생존력','방어 성능']]){const lv=state.upgrades[n.id]?.[key]||0,c=costUpgrade(n,key);html+=`<div class="unitUp"><div><span>${label} ${lv}/2</span><small>${eff} 향상 · 같은 유닛 모두 적용</small></div><button data-up="${key}" ${!ok||lv>=2||state.budget<c?'disabled':''}>${lv===2?'최대 강화':c+' 물자'}</button></div>`}html+='</div>';html+=statPanel(n);html+=comparisonFor(n.id);
+}
+const c=nodes.filter(x=>(x.req||[]).includes(n.id));if(c.length)html+=`<div class="infobox"><h3>다음에 열리는 것</h3>${c.map(x=>`<div class="condition"><span>${x.name}</span><b>${names[x.type]}</b></div>`).join('')}</div>`;
+}
+html+=`<div class="sidefooter">상위 유닛은 1개 기준 성능이 높아집니다. 그러나 연구비·생산비·강화비를 모두 고려해야 합니다. 시간만 지나서는 기술이 열리지 않습니다.</div>`;el.innerHTML=html;el.querySelector('#pay')?.addEventListener('click',()=>spendOn(n));el.querySelectorAll('[data-up]').forEach(b=>b.addEventListener('click',()=>buyUpgrade(n,b.dataset.up)))}
+function render(){const m=missions.find(x=>x.id===state.mission);document.getElementById('budget').textContent=state.budget.toLocaleString('ko-KR');document.getElementById('mission').value=state.mission;document.getElementById('missionHint').textContent=m.note;document.getElementById('undo').disabled=!history.length;renderNodes();drawWires();detail()}
+function setZoom(z){zoom=Math.max(.44,Math.min(1.15,Math.round(z*100)/100));document.getElementById('world').style.setProperty('--zoom',zoom);document.getElementById('space').style.cssText=`width:${W*zoom}px;height:${H*zoom}px`;document.getElementById('zoomText').textContent=Math.round(zoom*100)+'%'}
+function centerOn(id){const n=byId[id],sc=document.getElementById('scroll');const left=(n.x+NW/2)*zoom-sc.clientWidth/2,top=(n.y+NH/2)*zoom-sc.clientHeight/2;sc.scrollLeft=Math.max(0,left);sc.scrollTop=Math.max(0,top)}
+function autoFit(){const sc=document.getElementById('scroll');const z=Math.min(1,(sc.clientWidth-18)/W);setZoom(z);sc.scrollTop=Math.max(0,sc.scrollHeight-sc.clientHeight);sc.scrollLeft=0}
+function reset(id=state.mission){state=fresh(id);history=[];selected='hq';save();render()}
+assertTree();load();drawNodes();setZoom(zoom);render();centerOn('hq');
+const sel=document.getElementById('mission');sel.innerHTML=missions.map(m=>`<option value="${m.id}">${m.name} · ${m.budget} 물자</option>`).join('');render();
+sel.onchange=e=>reset(e.target.value);document.getElementById('reset').onclick=()=>reset();document.getElementById('undo').onclick=()=>{if(!history.length)return;state=history.pop();save();render()};document.getElementById('zmin').onclick=()=>setZoom(zoom+.1);document.getElementById('zmout').onclick=()=>setZoom(zoom-.1);document.getElementById('fit').onclick=autoFit;document.getElementById('goRoot').onclick=()=>centerOn('hq');
+window.treeTest=()=>({layout:'bottom-up',root:'hq',rootChildren:['barracks','factory','airfield'],nodesLayout:Object.fromEntries(nodes.map(n=>[n.id,{x:n.x,y:n.y,req:n.req||[],type:n.type}])),stats:JSON.parse(JSON.stringify(STATS)),progression:JSON.parse(JSON.stringify(PROGRESSION)),effective:Object.fromEntries(nodes.filter(n=>n.type==='unit').map(n=>[n.id,effective(n)])),nodeCount:nodes.length,unitCount:nodes.filter(n=>n.type==='unit').length,researchCount:nodes.filter(n=>n.type==='research').length,buildingCount:nodes.filter(n=>n.type==='building').length,researchEdges:nodes.filter(n=>n.type==='research').reduce((sum,n)=>sum+(n.req||[]).filter(p=>byId[p].type==='research').length,0),researchWithoutUnit:nodes.filter(n=>n.type==='research'&&!nodes.some(c=>c.type==='unit'&&(c.req||[]).includes(n.id))).map(n=>n.id),budget:state.budget,mission:state.mission,built:[...state.built],research:[...state.research],counts:{...state.counts},upgrades:JSON.parse(JSON.stringify(state.upgrades)),validate:assertTree()});
+})();
+</script></body></html>

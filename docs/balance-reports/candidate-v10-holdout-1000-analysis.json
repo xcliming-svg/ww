@@ -1,0 +1,188 @@
+{
+  "source": "docs/balance-reports/candidate-v10-holdout-1000.json",
+  "configHash": "bce071e432a46f4b1b8078c90f2966c0d2e98e870395a8e4006b218599b3a44f",
+  "engineHash": "119e53a226c88b4ea8849372c7a0ace91ede7de27504c0a9a76eb6617f6a4550",
+  "policyHash": "d558d011c2d8ff0c2923106df0eaf53864f3ce5a14a3c446b356b37393a2cfbf",
+  "contentHash": "27d569c7c6ed8b4c3732e4144e18864c07d13ceaffe27f8fcf0c340e7f832c96",
+  "accountingErrors": 0,
+  "policies": [
+    {
+      "policy": "mixed",
+      "n": 1000,
+      "cleared": 855,
+      "completionRate": 0.855,
+      "wilson95": [
+        0.831817486934133,
+        0.8754654150695298
+      ],
+      "averageReached": 97.621,
+      "maxReached": 100,
+      "invalid": 0,
+      "minimumBalance": 3,
+      "decileSurvivors": [
+        1000,
+        987,
+        987,
+        987,
+        987,
+        987,
+        987,
+        979,
+        933,
+        855
+      ],
+      "compositionEntropy": 2.129383187634284,
+      "unitCounts": {
+        "rifle": 10883,
+        "mg": 98320,
+        "gun": 745625,
+        "fighter": 317366,
+        "tank": 399323,
+        "destroyer": 303483
+      },
+      "finalBalanceMean": 6780.295
+    },
+    {
+      "policy": "recon",
+      "n": 1000,
+      "cleared": 863,
+      "completionRate": 0.863,
+      "wilson95": [
+        0.84029446126432,
+        0.8829272103619605
+      ],
+      "averageReached": 98.774,
+      "maxReached": 100,
+      "invalid": 0,
+      "minimumBalance": 10328,
+      "decileSurvivors": [
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        991,
+        949,
+        863
+      ],
+      "compositionEntropy": 1.2816954109333327,
+      "unitCounts": {
+        "rifle": 9000,
+        "mg": 34000,
+        "gun": 1337576,
+        "fighter": 259644,
+        "destroyer": 259644
+      },
+      "finalBalanceMean": 16155.92
+    },
+    {
+      "policy": "wrong",
+      "n": 1000,
+      "cleared": 0,
+      "completionRate": 0,
+      "wilson95": [
+        0,
+        0.003826898586390522
+      ],
+      "averageReached": 3.394,
+      "maxReached": 6,
+      "invalid": 0,
+      "minimumBalance": 500,
+      "decileSurvivors": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "compositionEntropy": 0,
+      "unitCounts": {
+        "rifle": 10182
+      },
+      "finalBalanceMean": 618.2
+    }
+  ],
+  "pairSummary": [
+    {
+      "kind": "same-roster-position-swap",
+      "n": 9824,
+      "outcomeDifferences": 41,
+      "hqDifferences": 87,
+      "averageHqDelta": -0.32366459690553745
+    },
+    {
+      "kind": "same-position-without-upgrades",
+      "n": 9824,
+      "outcomeDifferences": 474,
+      "hqDifferences": 637,
+      "averageHqDelta": -24.122609690553727
+    }
+  ],
+  "criteria": {
+    "status": "engineering-target",
+    "source": "docs/BALANCE_TARGET_2026-10-26.md",
+    "minimumSeeds": 1000,
+    "maximumSeeds": 5000,
+    "completionRate": {
+      "recon": 0.8,
+      "mixed": 0.6
+    },
+    "wrongMaximumRate": 0.05,
+    "maximumInvalid": 0,
+    "maximumAccountingErrors": 0,
+    "minimumPositionDifferences": 1,
+    "minimumUpgradeDifferences": 1
+  },
+  "checks": [
+    {
+      "id": "sample-size",
+      "pass": true
+    },
+    {
+      "id": "completion-recon",
+      "pass": true
+    },
+    {
+      "id": "completion-mixed",
+      "pass": true
+    },
+    {
+      "id": "wrong-formation",
+      "pass": true
+    },
+    {
+      "id": "invalid-results",
+      "pass": true
+    },
+    {
+      "id": "accounting",
+      "pass": true
+    },
+    {
+      "id": "nonnegative-balance",
+      "pass": true
+    },
+    {
+      "id": "position-effect",
+      "pass": true
+    },
+    {
+      "id": "upgrade-effect",
+      "pass": true
+    }
+  ],
+  "calibrationPassed": true,
+  "limits": [
+    "Automated first-attempt policies, not human play",
+    "No browser/performance validation",
+    "Numerical targets are engineering interpretations of the user difficulty choice",
+    "Unit selection entropy is not proof of strategic diversity"
+  ]
+}

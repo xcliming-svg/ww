@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 2,
+  "configVersion": "candidate-v11-refund1",
+  "contentVersion": "defense-100-v1",
+  "maxWave": 100,
+  "combatSeconds": 30,
+  "gridSize": 5,
+  "hq": {
+    "row": 2,
+    "col": 2
+  },
+  "preview": {
+    "buildingIds": [
+      "hq",
+      "barracks"
+    ],
+    "researchIds": [
+      "rifleR"
+    ],
+    "formationStage": "3"
+  },
+  "decisions": {
+    "D-01": "retry-precombat-snapshot",
+    "D-02": "carryover",
+    "D-03": "blocker-combat",
+    "D-04": "sustained-attack",
+    "D-05": "nearest",
+    "D-06": "logical-slot-aircraft",
+    "D-07": "cross-13-sim-unlocks",
+    "D-08": "direction-only",
+    "D-09": "full-battle-30s-playback-hq-first",
+    "D-10": "tutorial-purchase-two",
+    "D-11": "mobile-shared-units",
+    "D-12": "windows-1280x720-1x-2x",
+    "D-13": "preparation-full-investment-refund"
+  }
+}
