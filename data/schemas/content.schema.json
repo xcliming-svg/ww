@@ -40,7 +40,13 @@
     "data/balance/candidate-v11.json",
     "data/save/compatibility.json",
     "data/ui/unit-filters.json",
-    "data/balance/candidate-v12-tech-tree.json"
+    "data/balance/candidate-v12-tech-tree.json",
+    "data/balance/candidate-v13-robot-defense.json",
+    "data/visual/unit-display.json",
+    "data/visual/defense-styles.json",
+    "data/visual/weapon-fx.json",
+    "data/visual/render-budget.json",
+    "locales/en-US.json"
   ],
   "properties": {
     "data/tech/nodes.json": {
@@ -2379,10 +2385,14 @@
           "type": "object",
           "additionalProperties": false,
           "required": [
-            "ko-KR"
+            "ko-KR",
+            "en-US"
           ],
           "properties": {
             "ko-KR": {
+              "type": "string"
+            },
+            "en-US": {
               "type": "string"
             }
           }
@@ -16126,7 +16136,8 @@
               "schemaVersion": {
                 "enum": [
                   1,
-                  2
+                  2,
+                  3
                 ]
               },
               "fromConfig": {
@@ -16177,6 +16188,2840 @@
     },
     "data/balance/candidate-v12-tech-tree.json": {
       "$ref": "#/properties/data~1balance~1candidate-v11.json"
+    },
+    "data/balance/candidate-v13-robot-defense.json": {
+      "type": "object",
+      "required": [
+        "id",
+        "status",
+        "version",
+        "initialSupplies",
+        "hqHp",
+        "costs",
+        "units",
+        "rewardBase",
+        "rewardPerWave",
+        "upgradeMultipliers",
+        "upgradeCostFactors",
+        "fixedStepSeconds",
+        "maxTicks",
+        "frameStride",
+        "spawnDistance",
+        "spawnInterval",
+        "contactRange",
+        "enemyPowerPerWave",
+        "enemyCountBase",
+        "enemyCountWaveInterval",
+        "enemyCountGrowth",
+        "expansionWaves",
+        "rewards",
+        "defenseDivisors",
+        "gradeModel"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "status": {
+          "type": "string",
+          "minLength": 1
+        },
+        "version": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "initialSupplies": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "hqHp": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "costs": {
+          "type": "object",
+          "required": [
+            "hq",
+            "rifleR",
+            "rifle",
+            "barracks",
+            "mgR",
+            "mg",
+            "mortarR",
+            "mortar",
+            "gunR",
+            "gun",
+            "atR",
+            "at",
+            "factory",
+            "carR",
+            "car",
+            "tankR",
+            "tank",
+            "heavyR",
+            "heavy",
+            "destroyerR",
+            "destroyer",
+            "airfield",
+            "fighterR",
+            "fighter",
+            "attackerR",
+            "attacker",
+            "bomberR",
+            "bomber"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "hq": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "rifleR": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "rifle": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "barracks": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "mgR": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "mg": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "mortarR": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "mortar": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "gunR": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "gun": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "atR": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "at": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "factory": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "carR": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "car": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "tankR": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "tank": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "heavyR": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "heavy": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "destroyerR": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "destroyer": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "airfield": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "fighterR": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "fighter": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "attackerR": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "attacker": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "bomberR": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "bomber": {
+              "type": "integer",
+              "minimum": 0
+            }
+          }
+        },
+        "units": {
+          "type": "object",
+          "required": [
+            "rifle",
+            "mg",
+            "mortar",
+            "gun",
+            "at",
+            "car",
+            "tank",
+            "heavy",
+            "destroyer",
+            "fighter",
+            "attacker",
+            "bomber"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "rifle": {
+              "type": "object",
+              "required": [
+                "hp",
+                "damage",
+                "cooldown",
+                "range",
+                "arc",
+                "speed",
+                "cost",
+                "splash",
+                "modifiers",
+                "category"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "hp": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "damage": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "cooldown": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "range": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "arc": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "speed": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "cost": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "splash": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "modifiers": {
+                  "type": "object",
+                  "required": [
+                    "infantry",
+                    "armor",
+                    "aircraft"
+                  ],
+                  "additionalProperties": false,
+                  "properties": {
+                    "infantry": {
+                      "type": "integer",
+                      "minimum": 0
+                    },
+                    "armor": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "aircraft": {
+                      "type": "number",
+                      "minimum": 0
+                    }
+                  }
+                },
+                "category": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            },
+            "mg": {
+              "type": "object",
+              "required": [
+                "hp",
+                "damage",
+                "cooldown",
+                "range",
+                "arc",
+                "speed",
+                "cost",
+                "splash",
+                "modifiers",
+                "category"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "hp": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "damage": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "cooldown": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "range": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "arc": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "speed": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "cost": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "splash": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "modifiers": {
+                  "type": "object",
+                  "required": [
+                    "infantry",
+                    "armor",
+                    "aircraft"
+                  ],
+                  "additionalProperties": false,
+                  "properties": {
+                    "infantry": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "armor": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "aircraft": {
+                      "type": "number",
+                      "minimum": 0
+                    }
+                  }
+                },
+                "category": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            },
+            "mortar": {
+              "type": "object",
+              "required": [
+                "hp",
+                "damage",
+                "cooldown",
+                "range",
+                "arc",
+                "speed",
+                "cost",
+                "splash",
+                "modifiers",
+                "category"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "hp": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "damage": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "cooldown": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "range": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "arc": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "speed": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "cost": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "splash": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "modifiers": {
+                  "type": "object",
+                  "required": [
+                    "infantry",
+                    "armor",
+                    "aircraft"
+                  ],
+                  "additionalProperties": false,
+                  "properties": {
+                    "infantry": {
+                      "type": "integer",
+                      "minimum": 0
+                    },
+                    "armor": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "aircraft": {
+                      "type": "number",
+                      "minimum": 0
+                    }
+                  }
+                },
+                "category": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            },
+            "gun": {
+              "type": "object",
+              "required": [
+                "hp",
+                "damage",
+                "cooldown",
+                "range",
+                "arc",
+                "speed",
+                "cost",
+                "splash",
+                "modifiers",
+                "category"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "hp": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "damage": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "cooldown": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "range": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "arc": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "speed": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "cost": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "splash": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "modifiers": {
+                  "type": "object",
+                  "required": [
+                    "infantry",
+                    "armor",
+                    "aircraft"
+                  ],
+                  "additionalProperties": false,
+                  "properties": {
+                    "infantry": {
+                      "type": "integer",
+                      "minimum": 0
+                    },
+                    "armor": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "aircraft": {
+                      "type": "number",
+                      "minimum": 0
+                    }
+                  }
+                },
+                "category": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            },
+            "at": {
+              "type": "object",
+              "required": [
+                "hp",
+                "damage",
+                "cooldown",
+                "range",
+                "arc",
+                "speed",
+                "cost",
+                "splash",
+                "modifiers",
+                "category"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "hp": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "damage": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "cooldown": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "range": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "arc": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "speed": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "cost": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "splash": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "modifiers": {
+                  "type": "object",
+                  "required": [
+                    "infantry",
+                    "armor",
+                    "aircraft"
+                  ],
+                  "additionalProperties": false,
+                  "properties": {
+                    "infantry": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "armor": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "aircraft": {
+                      "type": "number",
+                      "minimum": 0
+                    }
+                  }
+                },
+                "category": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            },
+            "car": {
+              "type": "object",
+              "required": [
+                "hp",
+                "damage",
+                "cooldown",
+                "range",
+                "arc",
+                "speed",
+                "cost",
+                "splash",
+                "modifiers",
+                "category"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "hp": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "damage": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "cooldown": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "range": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "arc": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "speed": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "cost": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "splash": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "modifiers": {
+                  "type": "object",
+                  "required": [
+                    "infantry",
+                    "armor",
+                    "aircraft"
+                  ],
+                  "additionalProperties": false,
+                  "properties": {
+                    "infantry": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "armor": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "aircraft": {
+                      "type": "number",
+                      "minimum": 0
+                    }
+                  }
+                },
+                "category": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            },
+            "tank": {
+              "type": "object",
+              "required": [
+                "hp",
+                "damage",
+                "cooldown",
+                "range",
+                "arc",
+                "speed",
+                "cost",
+                "splash",
+                "modifiers",
+                "category"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "hp": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "damage": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "cooldown": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "range": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "arc": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "speed": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "cost": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "splash": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "modifiers": {
+                  "type": "object",
+                  "required": [
+                    "infantry",
+                    "armor",
+                    "aircraft"
+                  ],
+                  "additionalProperties": false,
+                  "properties": {
+                    "infantry": {
+                      "type": "integer",
+                      "minimum": 0
+                    },
+                    "armor": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "aircraft": {
+                      "type": "number",
+                      "minimum": 0
+                    }
+                  }
+                },
+                "category": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            },
+            "heavy": {
+              "type": "object",
+              "required": [
+                "hp",
+                "damage",
+                "cooldown",
+                "range",
+                "arc",
+                "speed",
+                "cost",
+                "splash",
+                "modifiers",
+                "category"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "hp": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "damage": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "cooldown": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "range": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "arc": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "speed": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "cost": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "splash": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "modifiers": {
+                  "type": "object",
+                  "required": [
+                    "infantry",
+                    "armor",
+                    "aircraft"
+                  ],
+                  "additionalProperties": false,
+                  "properties": {
+                    "infantry": {
+                      "type": "integer",
+                      "minimum": 0
+                    },
+                    "armor": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "aircraft": {
+                      "type": "number",
+                      "minimum": 0
+                    }
+                  }
+                },
+                "category": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            },
+            "destroyer": {
+              "type": "object",
+              "required": [
+                "hp",
+                "damage",
+                "cooldown",
+                "range",
+                "arc",
+                "speed",
+                "cost",
+                "splash",
+                "modifiers",
+                "category"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "hp": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "damage": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "cooldown": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "range": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "arc": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "speed": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "cost": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "splash": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "modifiers": {
+                  "type": "object",
+                  "required": [
+                    "infantry",
+                    "armor",
+                    "aircraft"
+                  ],
+                  "additionalProperties": false,
+                  "properties": {
+                    "infantry": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "armor": {
+                      "type": "integer",
+                      "minimum": 0
+                    },
+                    "aircraft": {
+                      "type": "number",
+                      "minimum": 0
+                    }
+                  }
+                },
+                "category": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            },
+            "fighter": {
+              "type": "object",
+              "required": [
+                "hp",
+                "damage",
+                "cooldown",
+                "range",
+                "arc",
+                "speed",
+                "cost",
+                "splash",
+                "modifiers",
+                "category"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "hp": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "damage": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "cooldown": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "range": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "arc": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "speed": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "cost": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "splash": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "modifiers": {
+                  "type": "object",
+                  "required": [
+                    "infantry",
+                    "armor",
+                    "aircraft"
+                  ],
+                  "additionalProperties": false,
+                  "properties": {
+                    "infantry": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "armor": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "aircraft": {
+                      "type": "number",
+                      "minimum": 0
+                    }
+                  }
+                },
+                "category": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            },
+            "attacker": {
+              "type": "object",
+              "required": [
+                "hp",
+                "damage",
+                "cooldown",
+                "range",
+                "arc",
+                "speed",
+                "cost",
+                "splash",
+                "modifiers",
+                "category"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "hp": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "damage": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "cooldown": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "range": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "arc": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "speed": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "cost": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "splash": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "modifiers": {
+                  "type": "object",
+                  "required": [
+                    "infantry",
+                    "armor",
+                    "aircraft"
+                  ],
+                  "additionalProperties": false,
+                  "properties": {
+                    "infantry": {
+                      "type": "integer",
+                      "minimum": 0
+                    },
+                    "armor": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "aircraft": {
+                      "type": "number",
+                      "minimum": 0
+                    }
+                  }
+                },
+                "category": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            },
+            "bomber": {
+              "type": "object",
+              "required": [
+                "hp",
+                "damage",
+                "cooldown",
+                "range",
+                "arc",
+                "speed",
+                "cost",
+                "splash",
+                "modifiers",
+                "category"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "hp": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "damage": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "cooldown": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "range": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "arc": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "speed": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "cost": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "splash": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "modifiers": {
+                  "type": "object",
+                  "required": [
+                    "infantry",
+                    "armor",
+                    "aircraft"
+                  ],
+                  "additionalProperties": false,
+                  "properties": {
+                    "infantry": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "armor": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "aircraft": {
+                      "type": "number",
+                      "minimum": 0
+                    }
+                  }
+                },
+                "category": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            }
+          }
+        },
+        "rewardBase": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "rewardPerWave": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "upgradeMultipliers": {
+          "type": "array",
+          "items": {
+            "type": "number",
+            "minimum": 0
+          }
+        },
+        "upgradeCostFactors": {
+          "type": "array",
+          "items": {
+            "type": "number",
+            "minimum": 0
+          }
+        },
+        "fixedStepSeconds": {
+          "type": "number",
+          "minimum": 0,
+          "exclusiveMinimum": 0
+        },
+        "maxTicks": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "frameStride": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "spawnDistance": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "spawnInterval": {
+          "type": "number",
+          "minimum": 0
+        },
+        "contactRange": {
+          "type": "number",
+          "minimum": 0
+        },
+        "enemyPowerPerWave": {
+          "type": "number",
+          "minimum": 0
+        },
+        "enemyCountBase": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "enemyCountWaveInterval": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "enemyCountGrowth": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "expansionWaves": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "minimum": 0
+          }
+        },
+        "rewards": {
+          "type": "array",
+          "minItems": 100,
+          "maxItems": 100,
+          "items": {
+            "type": "integer",
+            "minimum": 0
+          }
+        },
+        "defenseDivisors": {
+          "type": "array",
+          "minItems": 4,
+          "maxItems": 4,
+          "items": {
+            "type": "number",
+            "exclusiveMinimum": 0
+          }
+        },
+        "gradeModel": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "minGrade",
+            "maxGrade",
+            "allyAnchorGrade",
+            "enemyWavesPerGrade",
+            "attackMultipliersG6ToG10",
+            "enemyHpUsesTroopMass",
+            "enemyDamageBelowAnchorUsesTroopMass"
+          ],
+          "properties": {
+            "minGrade": {
+              "const": 0
+            },
+            "maxGrade": {
+              "const": 10
+            },
+            "allyAnchorGrade": {
+              "const": 5
+            },
+            "enemyWavesPerGrade": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "attackMultipliersG6ToG10": {
+              "type": "array",
+              "minItems": 5,
+              "maxItems": 5,
+              "items": {
+                "type": "number",
+                "exclusiveMinimum": 0
+              }
+            },
+            "enemyHpUsesTroopMass": {
+              "const": true
+            },
+            "enemyDamageBelowAnchorUsesTroopMass": {
+              "const": true
+            }
+          }
+        }
+      }
+    },
+    "data/visual/unit-display.json": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schemaVersion",
+        "minGrade",
+        "maxGrade",
+        "allyVisibleToGrade",
+        "maxMarkersPerEntity",
+        "countsByGrade"
+      ],
+      "properties": {
+        "schemaVersion": {
+          "const": 2
+        },
+        "minGrade": {
+          "const": 0
+        },
+        "maxGrade": {
+          "const": 10
+        },
+        "allyVisibleToGrade": {
+          "const": [
+            5,
+            6,
+            7,
+            8
+          ]
+        },
+        "maxMarkersPerEntity": {
+          "const": 24
+        },
+        "countsByGrade": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "rifle",
+            "mg",
+            "mortar",
+            "gun",
+            "at",
+            "car",
+            "tank",
+            "heavy",
+            "destroyer",
+            "fighter",
+            "attacker",
+            "bomber"
+          ],
+          "properties": {
+            "rifle": {
+              "type": "array",
+              "minItems": 11,
+              "maxItems": 11,
+              "items": [
+                {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 24
+                },
+                {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 24
+                },
+                {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 24
+                },
+                {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 24
+                },
+                {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 24
+                },
+                {
+                  "const": 11
+                },
+                {
+                  "const": 15
+                },
+                {
+                  "const": 18
+                },
+                {
+                  "const": 20
+                },
+                {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 24
+                },
+                {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 24
+                }
+              ],
+              "additionalItems": false
+            },
+            "mg": {
+              "type": "array",
+              "minItems": 11,
+              "maxItems": 11,
+              "items": [
+                {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 24
+                },
+                {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 24
+                },
+                {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 24
+                },
+                {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 24
+                },
+                {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 24
+                },
+                {
+                  "const": 9
+                },
+                {
+                  "const": 12
+                },
+                {
+                  "const": 15
+                },
+                {
+                  "const": 17
+                },
+                {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 24
+                },
+                {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 24
+                }
+              ],
+              "additionalItems": false
+            },
+            "mortar": {
+              "type": "array",
+              "minItems": 11,
+              "maxItems": 11,
+              "items": [
+                {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 24
+                },
+                {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 24
+                },
+                {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 24
+                },
+                {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 24
+                },
+                {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 24
+                },
+                {
+                  "const": 5
+                },
+                {
+                  "const": 7
+                },
+                {
+                  "const": 8
+                },
+                {
+                  "const": 9
+                },
+                {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 24
+                },
+                {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 24
+                }
+              ],
+              "additionalItems": false
+            },
+            "gun": {
+              "type": "array",
+              "minItems": 11,
+              "maxItems": 11,
+              "items": [
+                {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 24
+                },
+                {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 24
+                },
+                {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 24
+                },
+                {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 24
+                },
+                {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 24
+                },
+                {
+                  "const": 3
+                },
+                {
+                  "const": 4
+                },
+                {
+                  "const": 5
+                },
+                {
+                  "const": 6
+                },
+                {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 24
+                },
+                {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 24
+                }
+              ],
+              "additionalItems": false
+            },
+            "at": {
+              "type": "array",
+              "minItems": 11,
+              "maxItems": 11,
+              "items": [
+                {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 24
+                },
+                {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 24
+                },
+                {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 24
+                },
+                {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 24
+                },
+                {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 24
+                },
+                {
+                  "const": 7
+                },
+                {
+                  "const": 10
+                },
+                {
+                  "const": 12
+                },
+                {
+                  "const": 13
+                },
+                {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 24
+                },
+                {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 24
+                }
+              ],
+              "additionalItems": false
+            },
+            "car": {
+              "type": "array",
+              "minItems": 11,
+              "maxItems": 11,
+              "items": [
+                {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 24
+                },
+                {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 24
+                },
+                {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 24
+                },
+                {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 24
+                },
+                {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 24
+                },
+                {
+                  "const": 6
+                },
+                {
+                  "const": 8
+                },
+                {
+                  "const": 10
+                },
+                {
+                  "const": 11
+                },
+                {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 24
+                },
+                {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 24
+                }
+              ],
+              "additionalItems": false
+            },
+            "tank": {
+              "type": "array",
+              "minItems": 11,
+              "maxItems": 11,
+              "items": [
+                {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 24
+                },
+                {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 24
+                },
+                {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 24
+                },
+                {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 24
+                },
+                {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 24
+                },
+                {
+                  "const": 4
+                },
+                {
+                  "const": 5
+                },
+                {
+                  "const": 6
+                },
+                {
+                  "const": 7
+                },
+                {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 24
+                },
+                {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 24
+                }
+              ],
+              "additionalItems": false
+            },
+            "heavy": {
+              "type": "array",
+              "minItems": 11,
+              "maxItems": 11,
+              "items": [
+                {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 24
+                },
+                {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 24
+                },
+                {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 24
+                },
+                {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 24
+                },
+                {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 24
+                },
+                {
+                  "const": 2
+                },
+                {
+                  "const": 2
+                },
+                {
+                  "const": 3
+                },
+                {
+                  "const": 4
+                },
+                {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 24
+                },
+                {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 24
+                }
+              ],
+              "additionalItems": false
+            },
+            "destroyer": {
+              "type": "array",
+              "minItems": 11,
+              "maxItems": 11,
+              "items": [
+                {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 24
+                },
+                {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 24
+                },
+                {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 24
+                },
+                {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 24
+                },
+                {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 24
+                },
+                {
+                  "const": 3
+                },
+                {
+                  "const": 3
+                },
+                {
+                  "const": 4
+                },
+                {
+                  "const": 5
+                },
+                {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 24
+                },
+                {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 24
+                }
+              ],
+              "additionalItems": false
+            },
+            "fighter": {
+              "type": "array",
+              "minItems": 11,
+              "maxItems": 11,
+              "items": [
+                {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 24
+                },
+                {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 24
+                },
+                {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 24
+                },
+                {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 24
+                },
+                {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 24
+                },
+                {
+                  "const": 6
+                },
+                {
+                  "const": 8
+                },
+                {
+                  "const": 10
+                },
+                {
+                  "const": 11
+                },
+                {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 24
+                },
+                {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 24
+                }
+              ],
+              "additionalItems": false
+            },
+            "attacker": {
+              "type": "array",
+              "minItems": 11,
+              "maxItems": 11,
+              "items": [
+                {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 24
+                },
+                {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 24
+                },
+                {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 24
+                },
+                {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 24
+                },
+                {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 24
+                },
+                {
+                  "const": 4
+                },
+                {
+                  "const": 5
+                },
+                {
+                  "const": 6
+                },
+                {
+                  "const": 7
+                },
+                {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 24
+                },
+                {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 24
+                }
+              ],
+              "additionalItems": false
+            },
+            "bomber": {
+              "type": "array",
+              "minItems": 11,
+              "maxItems": 11,
+              "items": [
+                {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 24
+                },
+                {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 24
+                },
+                {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 24
+                },
+                {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 24
+                },
+                {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 24
+                },
+                {
+                  "const": 2
+                },
+                {
+                  "const": 2
+                },
+                {
+                  "const": 3
+                },
+                {
+                  "const": 4
+                },
+                {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 24
+                },
+                {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 24
+                }
+              ],
+              "additionalItems": false
+            }
+          }
+        }
+      }
+    },
+    "data/visual/defense-styles.json": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schemaVersion",
+        "levels"
+      ],
+      "properties": {
+        "schemaVersion": {
+          "const": 1
+        },
+        "levels": {
+          "type": "array",
+          "minItems": 4,
+          "maxItems": 4,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "outlineWidthPx",
+              "outlineAlpha",
+              "reinforcedHatch"
+            ],
+            "properties": {
+              "outlineWidthPx": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 2
+              },
+              "outlineAlpha": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1
+              },
+              "reinforcedHatch": {
+                "type": "boolean"
+              }
+            }
+          }
+        }
+      }
+    },
+    "data/visual/weapon-fx.json": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schemaVersion",
+        "unitToFx",
+        "styles",
+        "maxActiveEffects",
+        "maxNewEffectsPerFrame"
+      ],
+      "properties": {
+        "schemaVersion": {
+          "const": 1
+        },
+        "unitToFx": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "rifle",
+            "mg",
+            "mortar",
+            "gun",
+            "at",
+            "car",
+            "tank",
+            "heavy",
+            "destroyer",
+            "fighter",
+            "attacker",
+            "bomber"
+          ],
+          "properties": {
+            "rifle": {
+              "enum": [
+                "bullet",
+                "burst",
+                "arc-shell",
+                "large-shell",
+                "rocket",
+                "light-bullet",
+                "medium-shell",
+                "heavy-shell",
+                "penetrator",
+                "intercept",
+                "precision",
+                "blast"
+              ]
+            },
+            "mg": {
+              "enum": [
+                "bullet",
+                "burst",
+                "arc-shell",
+                "large-shell",
+                "rocket",
+                "light-bullet",
+                "medium-shell",
+                "heavy-shell",
+                "penetrator",
+                "intercept",
+                "precision",
+                "blast"
+              ]
+            },
+            "mortar": {
+              "enum": [
+                "bullet",
+                "burst",
+                "arc-shell",
+                "large-shell",
+                "rocket",
+                "light-bullet",
+                "medium-shell",
+                "heavy-shell",
+                "penetrator",
+                "intercept",
+                "precision",
+                "blast"
+              ]
+            },
+            "gun": {
+              "enum": [
+                "bullet",
+                "burst",
+                "arc-shell",
+                "large-shell",
+                "rocket",
+                "light-bullet",
+                "medium-shell",
+                "heavy-shell",
+                "penetrator",
+                "intercept",
+                "precision",
+                "blast"
+              ]
+            },
+            "at": {
+              "enum": [
+                "bullet",
+                "burst",
+                "arc-shell",
+                "large-shell",
+                "rocket",
+                "light-bullet",
+                "medium-shell",
+                "heavy-shell",
+                "penetrator",
+                "intercept",
+                "precision",
+                "blast"
+              ]
+            },
+            "car": {
+              "enum": [
+                "bullet",
+                "burst",
+                "arc-shell",
+                "large-shell",
+                "rocket",
+                "light-bullet",
+                "medium-shell",
+                "heavy-shell",
+                "penetrator",
+                "intercept",
+                "precision",
+                "blast"
+              ]
+            },
+            "tank": {
+              "enum": [
+                "bullet",
+                "burst",
+                "arc-shell",
+                "large-shell",
+                "rocket",
+                "light-bullet",
+                "medium-shell",
+                "heavy-shell",
+                "penetrator",
+                "intercept",
+                "precision",
+                "blast"
+              ]
+            },
+            "heavy": {
+              "enum": [
+                "bullet",
+                "burst",
+                "arc-shell",
+                "large-shell",
+                "rocket",
+                "light-bullet",
+                "medium-shell",
+                "heavy-shell",
+                "penetrator",
+                "intercept",
+                "precision",
+                "blast"
+              ]
+            },
+            "destroyer": {
+              "enum": [
+                "bullet",
+                "burst",
+                "arc-shell",
+                "large-shell",
+                "rocket",
+                "light-bullet",
+                "medium-shell",
+                "heavy-shell",
+                "penetrator",
+                "intercept",
+                "precision",
+                "blast"
+              ]
+            },
+            "fighter": {
+              "enum": [
+                "bullet",
+                "burst",
+                "arc-shell",
+                "large-shell",
+                "rocket",
+                "light-bullet",
+                "medium-shell",
+                "heavy-shell",
+                "penetrator",
+                "intercept",
+                "precision",
+                "blast"
+              ]
+            },
+            "attacker": {
+              "enum": [
+                "bullet",
+                "burst",
+                "arc-shell",
+                "large-shell",
+                "rocket",
+                "light-bullet",
+                "medium-shell",
+                "heavy-shell",
+                "penetrator",
+                "intercept",
+                "precision",
+                "blast"
+              ]
+            },
+            "bomber": {
+              "enum": [
+                "bullet",
+                "burst",
+                "arc-shell",
+                "large-shell",
+                "rocket",
+                "light-bullet",
+                "medium-shell",
+                "heavy-shell",
+                "penetrator",
+                "intercept",
+                "precision",
+                "blast"
+              ]
+            }
+          }
+        },
+        "styles": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "bullet",
+            "burst",
+            "arc-shell",
+            "large-shell",
+            "rocket",
+            "light-bullet",
+            "medium-shell",
+            "heavy-shell",
+            "penetrator",
+            "intercept",
+            "precision",
+            "blast"
+          ],
+          "properties": {
+            "bullet": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "durationMs",
+                "widthPx",
+                "impactRadiusPx",
+                "decorativeTracers"
+              ],
+              "properties": {
+                "durationMs": {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                "widthPx": {
+                  "type": "number",
+                  "exclusiveMinimum": 0
+                },
+                "impactRadiusPx": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "decorativeTracers": {
+                  "type": "integer",
+                  "minimum": 1
+                }
+              }
+            },
+            "burst": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "durationMs",
+                "widthPx",
+                "impactRadiusPx",
+                "decorativeTracers"
+              ],
+              "properties": {
+                "durationMs": {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                "widthPx": {
+                  "type": "number",
+                  "exclusiveMinimum": 0
+                },
+                "impactRadiusPx": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "decorativeTracers": {
+                  "type": "integer",
+                  "minimum": 1
+                }
+              }
+            },
+            "arc-shell": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "durationMs",
+                "widthPx",
+                "impactRadiusPx",
+                "decorativeTracers"
+              ],
+              "properties": {
+                "durationMs": {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                "widthPx": {
+                  "type": "number",
+                  "exclusiveMinimum": 0
+                },
+                "impactRadiusPx": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "decorativeTracers": {
+                  "type": "integer",
+                  "minimum": 1
+                }
+              }
+            },
+            "large-shell": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "durationMs",
+                "widthPx",
+                "impactRadiusPx",
+                "decorativeTracers"
+              ],
+              "properties": {
+                "durationMs": {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                "widthPx": {
+                  "type": "number",
+                  "exclusiveMinimum": 0
+                },
+                "impactRadiusPx": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "decorativeTracers": {
+                  "type": "integer",
+                  "minimum": 1
+                }
+              }
+            },
+            "rocket": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "durationMs",
+                "widthPx",
+                "impactRadiusPx",
+                "decorativeTracers"
+              ],
+              "properties": {
+                "durationMs": {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                "widthPx": {
+                  "type": "number",
+                  "exclusiveMinimum": 0
+                },
+                "impactRadiusPx": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "decorativeTracers": {
+                  "type": "integer",
+                  "minimum": 1
+                }
+              }
+            },
+            "light-bullet": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "durationMs",
+                "widthPx",
+                "impactRadiusPx",
+                "decorativeTracers"
+              ],
+              "properties": {
+                "durationMs": {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                "widthPx": {
+                  "type": "number",
+                  "exclusiveMinimum": 0
+                },
+                "impactRadiusPx": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "decorativeTracers": {
+                  "type": "integer",
+                  "minimum": 1
+                }
+              }
+            },
+            "medium-shell": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "durationMs",
+                "widthPx",
+                "impactRadiusPx",
+                "decorativeTracers"
+              ],
+              "properties": {
+                "durationMs": {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                "widthPx": {
+                  "type": "number",
+                  "exclusiveMinimum": 0
+                },
+                "impactRadiusPx": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "decorativeTracers": {
+                  "type": "integer",
+                  "minimum": 1
+                }
+              }
+            },
+            "heavy-shell": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "durationMs",
+                "widthPx",
+                "impactRadiusPx",
+                "decorativeTracers"
+              ],
+              "properties": {
+                "durationMs": {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                "widthPx": {
+                  "type": "number",
+                  "exclusiveMinimum": 0
+                },
+                "impactRadiusPx": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "decorativeTracers": {
+                  "type": "integer",
+                  "minimum": 1
+                }
+              }
+            },
+            "penetrator": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "durationMs",
+                "widthPx",
+                "impactRadiusPx",
+                "decorativeTracers"
+              ],
+              "properties": {
+                "durationMs": {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                "widthPx": {
+                  "type": "number",
+                  "exclusiveMinimum": 0
+                },
+                "impactRadiusPx": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "decorativeTracers": {
+                  "type": "integer",
+                  "minimum": 1
+                }
+              }
+            },
+            "intercept": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "durationMs",
+                "widthPx",
+                "impactRadiusPx",
+                "decorativeTracers"
+              ],
+              "properties": {
+                "durationMs": {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                "widthPx": {
+                  "type": "number",
+                  "exclusiveMinimum": 0
+                },
+                "impactRadiusPx": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "decorativeTracers": {
+                  "type": "integer",
+                  "minimum": 1
+                }
+              }
+            },
+            "precision": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "durationMs",
+                "widthPx",
+                "impactRadiusPx",
+                "decorativeTracers"
+              ],
+              "properties": {
+                "durationMs": {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                "widthPx": {
+                  "type": "number",
+                  "exclusiveMinimum": 0
+                },
+                "impactRadiusPx": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "decorativeTracers": {
+                  "type": "integer",
+                  "minimum": 1
+                }
+              }
+            },
+            "blast": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "durationMs",
+                "widthPx",
+                "impactRadiusPx",
+                "decorativeTracers"
+              ],
+              "properties": {
+                "durationMs": {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                "widthPx": {
+                  "type": "number",
+                  "exclusiveMinimum": 0
+                },
+                "impactRadiusPx": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "decorativeTracers": {
+                  "type": "integer",
+                  "minimum": 1
+                }
+              }
+            }
+          }
+        },
+        "maxActiveEffects": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "maxNewEffectsPerFrame": {
+          "type": "integer",
+          "minimum": 1
+        }
+      }
+    },
+    "data/visual/render-budget.json": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schemaVersion",
+        "maxMarkersPerEntity",
+        "layouts",
+        "labelOffsetYPx",
+        "hpBarOffsetYPx",
+        "groundRecoilPx",
+        "groundRecoilMs",
+        "hitShakePx",
+        "hitShakeMs",
+        "deathFadeMs",
+        "droneMotion",
+        "maxActiveEffects",
+        "maxNewEffectsPerFrame"
+      ],
+      "properties": {
+        "schemaVersion": {
+          "const": 1
+        },
+        "maxMarkersPerEntity": {
+          "const": 24
+        },
+        "layouts": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "normal",
+            "compact"
+          ],
+          "properties": {
+            "normal": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "minCount",
+                "maxCount",
+                "markerSizePx",
+                "markerStepPx",
+                "maxColumns"
+              ],
+              "properties": {
+                "minCount": {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                "maxCount": {
+                  "type": "integer",
+                  "maximum": 24
+                },
+                "markerSizePx": {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                "markerStepPx": {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                "maxColumns": {
+                  "type": "integer",
+                  "minimum": 1
+                }
+              }
+            },
+            "compact": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "minCount",
+                "maxCount",
+                "markerSizePx",
+                "markerStepPx",
+                "maxColumns"
+              ],
+              "properties": {
+                "minCount": {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                "maxCount": {
+                  "type": "integer",
+                  "maximum": 24
+                },
+                "markerSizePx": {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                "markerStepPx": {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                "maxColumns": {
+                  "type": "integer",
+                  "minimum": 1
+                }
+              }
+            }
+          }
+        },
+        "labelOffsetYPx": {
+          "type": "number"
+        },
+        "hpBarOffsetYPx": {
+          "type": "number"
+        },
+        "groundRecoilPx": {
+          "type": "number",
+          "minimum": 0
+        },
+        "groundRecoilMs": {
+          "type": "number",
+          "minimum": 0
+        },
+        "hitShakePx": {
+          "type": "number",
+          "minimum": 0
+        },
+        "hitShakeMs": {
+          "type": "number",
+          "minimum": 0
+        },
+        "deathFadeMs": {
+          "type": "number",
+          "minimum": 0
+        },
+        "droneMotion": {
+          "type": "object",
+          "required": [
+            "fighter",
+            "attacker",
+            "bomber"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "fighter": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "radiusPx",
+                "periodMs"
+              ],
+              "properties": {
+                "radiusPx": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "periodMs": {
+                  "type": "number",
+                  "exclusiveMinimum": 0
+                }
+              }
+            },
+            "attacker": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "radiusPx",
+                "periodMs"
+              ],
+              "properties": {
+                "radiusPx": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "periodMs": {
+                  "type": "number",
+                  "exclusiveMinimum": 0
+                }
+              }
+            },
+            "bomber": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "radiusPx",
+                "periodMs"
+              ],
+              "properties": {
+                "radiusPx": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "periodMs": {
+                  "type": "number",
+                  "exclusiveMinimum": 0
+                }
+              }
+            }
+          }
+        },
+        "maxActiveEffects": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "maxNewEffectsPerFrame": {
+          "type": "integer",
+          "minimum": 1
+        }
+      }
+    },
+    "locales/en-US.json": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": {
+        "type": "string",
+        "minLength": 1
+      }
     }
   }
 }

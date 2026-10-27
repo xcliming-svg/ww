@@ -58,7 +58,7 @@ if (mode === 'schemas') {
   }
   const allData = [...await walk('data'), ...await walk('locales')].filter(p => p.endsWith('.json') && !p.includes('/schemas/'));
   for (const p of allData) check(registry.includes(p), `Unregistered JSON: ${p}`);
-  const candidate = data['data/balance/candidate-v12-tech-tree.json'];
+  const candidate = data['data/balance/candidate-v13-robot-defense.json'];
   if (candidate.rewards) check(candidate.rewards.length === 100 && candidate.rewards.every((/** @type {number} */ r) => Number.isSafeInteger(r) && r >= 0), 'Reward coverage/range');
   check(candidate.fixedStepSeconds > 0 && candidate.maxTicks > 0 && candidate.spawnInterval >= 0, 'Invalid simulation boundaries');
   check(candidate.upgradeMultipliers.length === candidate.upgradeCostFactors.length, 'Upgrade length mismatch');
@@ -105,10 +105,10 @@ if (mode === 'graph') {
   check(nodes.filter(n => n.kind === 'unit').every(n => n.minWave === 1 && n.revealParentIds.length === 1 && n.revealParentIds[0] === n.parentIds[0]), 'Unit unlock/reveal contract');
   const hint = data['data/tech/layout-hints.json'];
   check(hint.nodeWidth === hint.nodeHeight && hint.nodeWidth > 0, 'Square node dimensions');
-  const startup = data['data/balance/candidate-v12-tech-tree.json'];
+  const startup = data['data/balance/candidate-v13-robot-defense.json'];
   check(startup.initialSupplies === 160 && startup.costs.hq === 30 && startup.costs.barracks === 30, 'Opening costs');
   check(startup.initialSupplies - startup.costs.hq - startup.costs.barracks - startup.costs.rifleR - startup.costs.rifle * 2 === 20, 'Opening two rifle balance');
-  const stats = data['data/balance/candidate-v12-tech-tree.json'].units;
+  const stats = data['data/balance/candidate-v13-robot-defense.json'].units;
   for (const p of data['data/tech/progression.json']) {
     check(stats[p.from] && stats[p.to], `Missing progression unit:${p.to}`);
     check(stats[p.to].damage * stats[p.to].modifiers[p.focus] / stats[p.to].cooldown > stats[p.from].damage * stats[p.from].modifiers[p.focus] / stats[p.from].cooldown || stats[p.to].hp > stats[p.from].hp || stats[p.to].range > stats[p.from].range, `No progression benefit:${p.to}`);

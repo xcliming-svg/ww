@@ -6,6 +6,7 @@ import { createCampaign, startWave, resolveWave, advanceCampaign } from '../src/
 import { planWave } from '../src/domain/waves/WavePlanner.js';
 import { simulateBattle } from '../src/domain/systems/StepSimulation.js';
 import { buildForWave } from './balance-policy.mjs';
+import { resolveCombatBalance } from '../src/infrastructure/ResolveCombatBalance.js';
 /** @param {string} file */ const read = async file => JSON.parse(await fs.readFile(file, 'utf8'));
 const valueFlags = new Set(['--seeds', '--start-seed', '--config', '--out', '--policies', '--waves']);
 const switchFlags = new Set(['--resume', '--paired', '--trace']); const seenFlags = new Set();
@@ -21,8 +22,13 @@ if (!Number.isInteger(samples) || samples < 1 || samples > 5000 || !Number.isInt
 if (arg('--waves', '1-100') !== '1-100') throw new Error('FULL_CAMPAIGN_RANGE_REQUIRED');
 const activeCandidate = await read('data/balance/active.json');
 const configPath = arg('--config', `data/balance/${activeCandidate.candidate}.json`);
-const balanceText = await fs.readFile(configPath, 'utf8'); const balance = JSON.parse(balanceText);
-const configHash = createHash('sha256').update(balanceText).digest('hex');
+const balanceText = await fs.readFile(configPath, 'utf8');
+const rawBalance = JSON.parse(balanceText);
+const displayPath = 'data/visual/unit-display.json';
+const displayText = rawBalance.gradeModel ? await fs.readFile(displayPath, 'utf8') : null;
+const balance = displayText ? resolveCombatBalance(rawBalance, JSON.parse(displayText)) : rawBalance;
+const configHash = createHash('sha256').update(balanceText)
+  .update(displayText === null ? '' : '\n'+displayPath+'\n'+displayText).digest('hex');
 /** @param {string} directory @returns {Promise<string[]>} */
 async function sourceFiles(directory) {
   const entries = await fs.readdir(directory, { withFileTypes: true });
@@ -31,6 +37,7 @@ async function sourceFiles(directory) {
 const engineFiles = await sourceFiles('src/domain');
 const engineDigest = createHash('sha256');
 for (const file of engineFiles) engineDigest.update(file).update(await fs.readFile(file));
+if (displayText !== null) engineDigest.update('src/infrastructure/ResolveCombatBalance.js').update(await fs.readFile('src/infrastructure/ResolveCombatBalance.js')); 
 const engineHash = engineDigest.digest('hex');
 const policyHash = createHash('sha256').update(await fs.readFile('tools/balance-policy.mjs')).update(await fs.readFile('data/simulation/policy-profiles.json')).digest('hex');
 const contentHash = createHash('sha256').update(await fs.readFile('data/waves/content.json')).digest('hex');

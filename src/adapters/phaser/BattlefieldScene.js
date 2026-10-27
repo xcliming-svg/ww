@@ -1,8 +1,10 @@
 import Phaser from 'phaser';
 import layout from '../../../data/ui/layout.json';
 import theme from '../../../data/ui/theme.json';
-import templates from '../../../data/units/templates.json';
-import { drawUnit } from './PixelUnitRenderer.js';
+import { drawGlyph } from './PixelUnitRenderer.js';
+import { buildGroupPresentation } from '../../presentation/UnitGroupMath.js';
+import display from '../../../data/visual/unit-display.json';
+import renderBudget from '../../../data/visual/render-budget.json';
 import { drawEffects } from './FxLayer.js';
 import { sameCell, usableCell } from '../../domain/waves/FormationService.js';
 export class BattlefieldScene extends Phaser.Scene {
@@ -67,24 +69,62 @@ export class BattlefieldScene extends Phaser.Scene {
       g.lineBetween(center - scale / 4, center, center + scale / 4, center);
     }
     const frame = state.phase === 'combat' ? this.app.frame : null;
-    const entities = frame?.entities ?? state.placements.map(p => ({ id: p.instanceId, unitId: p.unitId, x: p.cell.col - 2, y: p.cell.row - 2, heading: Math.atan2(p.cell.row - 2, p.cell.col - 2), side: 'ally', hp: 1, maxHp: 1, category: templates.find(t => t.id === p.unitId)?.category ?? 'infantry' }));
+    const entities = frame?.entities ?? state.placements.map(p => {
+      const powerLevel = state.upgradeLevels[p.unitId]?.power ?? 0;
+      return { id: p.instanceId, unitId: p.unitId, x: p.cell.col - 2, y: p.cell.row - 2,
+        heading: Math.atan2(p.cell.row - 2, p.cell.col - 2), side: /** @type {'ally'} */ ('ally'),
+        hp: 1, maxHp: 1, defenseLevel: state.upgradeLevels[p.unitId]?.survive ?? 0,
+        combatGrade: display.allyVisibleToGrade[powerLevel] };
+    });
     const seen = new Set();
     for (const unit of entities) {
-      const assetId = `${unit.side === 'ally' ? 'unit' : 'enemy'}.${unit.unitId}.idle`;
-      let x = center + unit.x * scale, y = center + unit.y * scale;
-      if (unit.category === 'aircraft' && !this.app.settings.reducedMotion && frame) { x += Math.cos(frame.tick / 10) * scale / 6; y += Math.sin(frame.tick / 10) * scale / 6; }
+      let group;
+      try { group = buildGroupPresentation(unit, display, renderBudget); }
+      catch (error) { console.error('INVALID_GROUP_PRESENTATION', unit.id, error); continue; }
       seen.add(unit.id);
-      if (this.textures.exists(assetId)) {
-        let image = this.images.get(unit.id); if (!image) { image = this.add.image(x, y, assetId); this.images.set(unit.id, image); }
-        image.setPosition(Math.round(x), Math.round(y)).setDisplaySize(scale, scale);
-      } else drawUnit(g, templates.find(t => t.id === unit.unitId)?.category ?? unit.category, Math.round(x), Math.round(y), unit.heading, unit.side === 'enemy');
+      let x = center + unit.x * scale, y = center + unit.y * scale;
+      const motion = /** @type {Record<string,{radiusPx:number,periodMs:number}>} */ (renderBudget.droneMotion)[unit.unitId];
+      if (!this.app.settings.reducedMotion && frame) {
+        if (motion) {
+          const angle = this.app.elapsedMs * Math.PI * 2 / motion.periodMs;
+          x += Math.cos(angle) * motion.radiusPx; y += Math.sin(angle) * motion.radiusPx;
+        } else {
+          // Group recoil/shake are visual offsets only; domain coordinates never change.
+          const playbackMs = this.app.config.rules.combatSeconds * 1000;
+          const ticks = this.app.playback?.ticks ?? 0;
+          for (const event of frame.events) {
+            if (event.entityId !== unit.id || !ticks) continue;
+            const age = this.app.elapsedMs - event.tick / ticks * playbackMs;
+            if (event.type === 'fire' && age >= 0 && age < renderBudget.groundRecoilMs) {
+              const amount = renderBudget.groundRecoilPx * (1 - age / renderBudget.groundRecoilMs);
+              x -= Math.cos(unit.heading) * amount; y -= Math.sin(unit.heading) * amount;
+            }
+            if (event.type === 'hit' && age >= 0 && age < renderBudget.hitShakeMs) {
+              const amount = renderBudget.hitShakePx * (1 - age / renderBudget.hitShakeMs);
+              x += (event.sequence % 2 ? -1 : 1) * amount;
+            }
+          }
+        }
+      }
+      for (const marker of group.markers) if (marker.alpha > 0) {
+        drawGlyph(g, unit.unitId, Math.round(x + marker.dx), Math.round(y + marker.dy),
+          group.markerSizePx, unit.heading, unit.side === 'enemy', marker.alpha, group.defenseLevel);
+      }
       let label = this.labels.get(unit.id);
-      if (!label) { label = this.add.text(x, y, '', { fontFamily: 'GameUI', fontSize: `${layout.unitLabelSize}px`, color: theme.unitLabel, backgroundColor: theme.unitLabelBackground }).setOrigin(.5, 0).setDepth(1); this.labels.set(unit.id, label); }
-      label.setText(this.t(`unit.short.${unit.unitId}`)).setPosition(Math.round(x), Math.round(y + scale / 3));
-      g.fillStyle(theme.text); g.fillRect(x - scale / 3, y - scale / 2, scale * 2 / 3, 2); g.fillStyle(theme.friendly); g.fillRect(x - scale / 3, y - scale / 2, scale * 2 / 3 * unit.hp / unit.maxHp, 2);
+      if (!label) {
+        label = this.add.text(x, y, '', { fontFamily: 'GameUI', fontSize: `${layout.unitLabelSize}px`,
+          color: theme.unitLabel, backgroundColor: theme.unitLabelBackground }).setOrigin(.5, 0).setDepth(1);
+        this.labels.set(unit.id, label);
+      }
+      label.setText(this.t(`unit.short.${unit.unitId}`))
+        .setPosition(Math.round(x), Math.round(y + renderBudget.labelOffsetYPx));
+      g.fillStyle(theme.text);
+      g.fillRect(x - scale / 3, y + renderBudget.hpBarOffsetYPx, scale * 2 / 3, 2);
+      g.fillStyle(unit.side === 'enemy' ? theme.enemy : theme.friendly);
+      g.fillRect(x - scale / 3, y + renderBudget.hpBarOffsetYPx, scale * 2 / 3 * group.hpRatio, 2);
     }
-    for (const [id, image] of this.images) if (!seen.has(id)) { image.destroy(); this.images.delete(id); }
+    for (const [id, image] of this.images) { image.destroy(); this.images.delete(id); }
     for (const [id, label] of this.labels) if (!seen.has(id)) { label.destroy(); this.labels.delete(id); }
-    if (frame && !this.app.settings.reducedMotion) drawEffects(g, frame.events, center, scale);
+    if (frame && !this.app.settings.reducedMotion) drawEffects(g, frame.events, center, scale, this.app.elapsedMs, this.app.playback?.ticks ?? 0, this.app.config.rules.combatSeconds * 1000, frame.entities);
   }
 }

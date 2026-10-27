@@ -42,7 +42,7 @@ const respec = policies.find((/** @type {any} */ p) => p.policy === 'respec');
 if (respec) checks.push({ id: 'refund-policy-exercised', pass: respec.refundedTotal > 0 });
 const result = { source: file, configHash: report.configHash, engineHash: report.engineHash, policyHash: report.policyHash, contentHash: report.contentHash, accountingErrors, policies, pairSummary,
   invalidPairs, criteria, checks, calibrationPassed: checks.every(c => c.pass),
-  limits: ['Automated first-attempt policies, not human play', 'No browser/performance validation', 'Numerical targets are engineering interpretations of the user difficulty choice', 'Unit selection entropy is not proof of strategic diversity', 'Damage contribution may include simultaneous overkill; use HQ and outcome for exact paired effects'] };
+  limits: ['Automated first-attempt policies, not human play', 'No browser/performance validation', 'Numerical targets are engineering interpretations of the user difficulty choice', 'Unit selection entropy is not proof of strategic diversity', 'Damage by unit is credited from applied damage after simultaneous overkill attribution'] };
 const target = file.replace(/\.json$/, '-analysis.json');
 await fs.writeFile(target, JSON.stringify(result, null, 2));
 await fs.writeFile(target.replace(/\.json$/, '.md'), `# ${report.candidate} 정량 분석\n\n정책별 독립 seed ${report.samples}개. 회계 불일치 ${accountingErrors}건. 아래는 첫 시도 계산 결과이며 실제 재미/브라우저/실기 검증이 아니다.\n\n| 정책 | N | 100 완주 | 평균 도달 | 편성 엔트로피 | 평균 최종 잔액 |\n| --- | ---: | ---: | ---: | ---: | ---: |\n` + policies.map((/** @type {any} */ p) => `| ${p.policy} | ${p.n} | ${p.cleared} | ${p.averageReached.toFixed(2)} | ${p.compositionEntropy.toFixed(3)} | ${p.finalBalanceMean.toFixed(1)} |`).join('\n') + '\n\n' + pairSummary.map(p => `${p.kind}: N=${p.n}, 승패 차이 ${p.outcomeDifferences}, HQ 차이 ${p.hqDifferences}, 평균 HQ 차이 ${p.averageHqDelta.toFixed(2)}.`).join('\n\n') + '\n\n측정 기준: ' + criteria.source + '. 숫자 임계치는 사용자 난이도 선택의 내부 해석이다.\n\n' + checks.map(c => `- [${c.pass ? 'x' : ' '}] ${c.id}`).join('\n') + '\n\n엔트로피는 전략 다양성/체감 재미를 증명하지 않는다.\n');
@@ -51,8 +51,21 @@ if (process.argv.includes('--snapshot')) {
   async function walk(dir) { return (await Promise.all((await fs.readdir(dir, { withFileTypes: true })).map(e => e.isDirectory() ? walk(`${dir}/${e.name}`) : Promise.resolve([`${dir}/${e.name}`])))).flat().sort(); }
   const engineFiles = await walk('src/domain'); const digest = createHash('sha256');
   for (const p of engineFiles) digest.update(p).update(await fs.readFile(p));
-  if (digest.digest('hex') !== report.engineHash || createHash('sha256').update(await fs.readFile('tools/balance-policy.mjs')).update(await fs.readFile('data/simulation/policy-profiles.json')).digest('hex') !== report.policyHash || createHash('sha256').update(await fs.readFile(`data/balance/${report.candidate}.json`)).digest('hex') !== report.configHash || createHash('sha256').update(await fs.readFile('data/waves/content.json')).digest('hex') !== report.contentHash) throw new Error('SOURCE_CHANGED');
-  const names = [...engineFiles, 'tools/balance-policy.mjs', 'tools/balance-sim.mjs', 'tools/balance-report.mjs', 'data/simulation/criteria.json', 'data/simulation/policy-profiles.json', `data/balance/${report.candidate}.json`, 'data/waves/content.json', 'data/tech/nodes.json', 'data/rules.json', 'data/formation/layouts.json'];
+  const balanceText = await fs.readFile(`data/balance/${report.candidate}.json`, 'utf8');
+  const v13 = !!JSON.parse(balanceText).gradeModel;
+  const displayPath = 'data/visual/unit-display.json';
+  const displayText = v13 ? await fs.readFile(displayPath, 'utf8') : null;
+  if (v13) digest.update('src/infrastructure/ResolveCombatBalance.js').update(await fs.readFile('src/infrastructure/ResolveCombatBalance.js'));
+  const candidateHash = createHash('sha256').update(balanceText)
+    .update(displayText === null ? '' : '\n'+displayPath+'\n'+displayText).digest('hex');
+  if (digest.digest('hex') !== report.engineHash ||
+    createHash('sha256').update(await fs.readFile('tools/balance-policy.mjs')).update(await fs.readFile('data/simulation/policy-profiles.json')).digest('hex') !== report.policyHash ||
+    candidateHash !== report.configHash ||
+    createHash('sha256').update(await fs.readFile('data/waves/content.json')).digest('hex') !== report.contentHash) throw new Error('SOURCE_CHANGED');
+  const names = [...engineFiles, 'tools/balance-policy.mjs', 'tools/balance-sim.mjs', 'tools/balance-report.mjs',
+    'data/simulation/criteria.json', 'data/simulation/policy-profiles.json', `data/balance/${report.candidate}.json`,
+    'data/waves/content.json', 'data/tech/nodes.json', 'data/rules.json', 'data/formation/layouts.json',
+    ...(v13 ? [displayPath, 'src/infrastructure/ResolveCombatBalance.js'] : [])];
   const snapshot = Object.fromEntries(await Promise.all(names.map(async p => [p, await fs.readFile(p, 'utf8')])));
   await fs.writeFile(path.join(path.dirname(file), `${path.basename(file, '.json')}-source.json`), JSON.stringify({ engineHash: report.engineHash, policyHash: report.policyHash, files: snapshot }, null, 2));
 }

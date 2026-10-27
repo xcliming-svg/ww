@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "unitToFx": {
+    "rifle": "bullet",
+    "mg": "burst",
+    "mortar": "arc-shell",
+    "gun": "large-shell",
+    "at": "rocket",
+    "car": "light-bullet",
+    "tank": "medium-shell",
+    "heavy": "heavy-shell",
+    "destroyer": "penetrator",
+    "fighter": "intercept",
+    "attacker": "precision",
+    "bomber": "blast"
+  },
+  "styles": {
+    "bullet": {
+      "durationMs": 90,
+      "widthPx": 1,
+      "impactRadiusPx": 2,
+      "decorativeTracers": 1
+    },
+    "burst": {
+      "durationMs": 130,
+      "widthPx": 1,
+      "impactRadiusPx": 2,
+      "decorativeTracers": 3
+    },
+    "arc-shell": {
+      "durationMs": 290,
+      "widthPx": 2,
+      "impactRadiusPx": 5,
+      "decorativeTracers": 1
+    },
+    "large-shell": {
+      "durationMs": 330,
+      "widthPx": 3,
+      "impactRadiusPx": 7,
+      "decorativeTracers": 1
+    },
+    "rocket": {
+      "durationMs": 270,
+      "widthPx": 3,
+      "impactRadiusPx": 4,
+      "decorativeTracers": 1
+    },
+    "light-bullet": {
+      "durationMs": 100,
+      "widthPx": 1,
+      "impactRadiusPx": 2,
+      "decorativeTracers": 2
+    },
+    "medium-shell": {
+      "durationMs": 250,
+      "widthPx": 2,
+      "impactRadiusPx": 5,
+      "decorativeTracers": 1
+    },
+    "heavy-shell": {
+      "durationMs": 340,
+      "widthPx": 4,
+      "impactRadiusPx": 8,
+      "decorativeTracers": 1
+    },
+    "penetrator": {
+      "durationMs": 200,
+      "widthPx": 3,
+      "impactRadiusPx": 4,
+      "decorativeTracers": 1
+    },
+    "intercept": {
+      "durationMs": 85,
+      "widthPx": 1,
+      "impactRadiusPx": 2,
+      "decorativeTracers": 2
+    },
+    "precision": {
+      "durationMs": 135,
+      "widthPx": 1,
+      "impactRadiusPx": 3,
+      "decorativeTracers": 2
+    },
+    "blast": {
+      "durationMs": 380,
+      "widthPx": 4,
+      "impactRadiusPx": 10,
+      "decorativeTracers": 1
+    }
+  },
+  "maxActiveEffects": 80,
+  "maxNewEffectsPerFrame": 40
+}

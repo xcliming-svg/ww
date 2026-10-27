@@ -110,7 +110,15 @@ export class GameCoordinator {
     if (!this.playback || this.paused || this.menuPaused || this.state?.phase !== 'combat' || !Number.isFinite(deltaMs) || deltaMs <= 0) return;
     this.elapsedMs += deltaMs * this.settings.speed;
     const ratio = Math.min(1, this.elapsedMs / (this.config.rules.combatSeconds * 1000));
-    this.frame = this.playback.frames[Math.min(this.playback.frames.length - 1, Math.floor(ratio * this.playback.frames.length))] ?? null;
+    const targetTick = Math.floor(ratio * this.playback.ticks);
+    const frames = this.playback.frames;
+    let left = 0, right = frames.length - 1;
+    while (left < right) {
+      const middle = Math.ceil((left + right) / 2);
+      if (frames[middle].tick <= targetTick) left = middle;
+      else right = middle - 1;
+    }
+    this.frame = frames[left] ?? null;
     for (const listener of this.frameListeners) listener();
     if (ratio < 1) return;
     const result = resolveWave(this.state, this.playback, balance);

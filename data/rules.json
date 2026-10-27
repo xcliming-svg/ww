@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "configVersion": "candidate-v12-tech-tree",
+  "configVersion": "candidate-v13-robot-defense",
   "contentVersion": "defense-100-v1",
   "maxWave": 100,
   "combatSeconds": 30,

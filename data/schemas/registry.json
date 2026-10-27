@@ -36,5 +36,11 @@
   "data/balance/candidate-v11.json",
   "data/save/compatibility.json",
   "data/ui/unit-filters.json",
-  "data/balance/candidate-v12-tech-tree.json"
+  "data/balance/candidate-v12-tech-tree.json",
+  "data/balance/candidate-v13-robot-defense.json",
+  "data/visual/unit-display.json",
+  "data/visual/defense-styles.json",
+  "data/visual/weapon-fx.json",
+  "data/visual/render-budget.json",
+  "locales/en-US.json"
 ]

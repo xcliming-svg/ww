@@ -10,6 +10,7 @@ import input from '../../../data/ui/input.json';
 import tutorial from '../../../data/ui/tutorial.json';
 import localeManifest from '../../../locales/manifest.json';
 import balance from '../../infrastructure/ImplementationBalanceConfig.js';
+import display from '../../../data/visual/unit-display.json';
 
 export class GameShell {
   abort = new AbortController();
@@ -221,8 +222,12 @@ export class GameShell {
     if (node.kind === 'unit') {
       const stats = /** @type {Record<string,typeof balance.units.rifle>} */ (balance.units)[node.id];
       const power = balance.upgradeMultipliers[(state.upgradeLevels[node.id]?.power ?? 0) - 1] ?? 1;
-      const survive = balance.upgradeMultipliers[(state.upgradeLevels[node.id]?.survive ?? 0) - 1] ?? 1;
-      if (stats) body.append(el('p', t('tree.unitStats', { hp: Math.round(stats.hp * survive), damage: Math.round(stats.damage * power), range: stats.range, arc: stats.arc, cooldown: stats.cooldown })));
+      const defenseLevel = state.upgradeLevels[node.id]?.survive ?? 0;
+      const defense = ((1 - 1 / balance.defenseDivisors[defenseLevel]) * 100).toFixed(1);
+      const grade = display.allyVisibleToGrade[state.upgradeLevels[node.id]?.power ?? 0];
+      const count = /** @type {Record<string,number[]>} */ (display.countsByGrade)[node.id]?.[grade] ?? 0;
+      if (stats) body.append(el('p', t('tree.unitStats', { hp: stats.hp, damage: Math.round(stats.damage * power),
+        defense, count, grade, range: stats.range, arc: stats.arc, cooldown: stats.cooldown })));
       const empty = app.config.layouts[state.formationStage]?.some(c => !sameCell(c, app.config.rules.hq) && !state.placements.some(p => sameCell(p.cell, c)));
       const placement = button(t('tree.place', { cost: costText }), () => this.runAction({ type: 'place', nodeId: node.id }, node.id, 'unit'), !ready || !empty || cost === null || (state.supplies ?? 0) < cost);
       if (!empty) body.append(el('p', t('battle.noFreeCell'), 'hint'));

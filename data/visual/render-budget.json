@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "maxMarkersPerEntity": 24,
+  "layouts": {
+    "normal": {
+      "minCount": 1,
+      "maxCount": 20,
+      "markerSizePx": 4,
+      "markerStepPx": 5,
+      "maxColumns": 5
+    },
+    "compact": {
+      "minCount": 21,
+      "maxCount": 24,
+      "markerSizePx": 3,
+      "markerStepPx": 4,
+      "maxColumns": 6
+    }
+  },
+  "labelOffsetYPx": 12,
+  "hpBarOffsetYPx": -16,
+  "groundRecoilPx": 1,
+  "groundRecoilMs": 100,
+  "hitShakePx": 1,
+  "hitShakeMs": 120,
+  "deathFadeMs": 120,
+  "droneMotion": {
+    "fighter": {
+      "radiusPx": 6,
+      "periodMs": 700
+    },
+    "attacker": {
+      "radiusPx": 4,
+      "periodMs": 1100
+    },
+    "bomber": {
+      "radiusPx": 3,
+      "periodMs": 1500
+    }
+  },
+  "maxActiveEffects": 80,
+  "maxNewEffectsPerFrame": 40
+}
