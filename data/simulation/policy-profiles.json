@@ -12,7 +12,7 @@
   ],
   "minimumSeeds": 1000,
   "maximumSeeds": 5000,
-  "version": "policies-v3-refund",
+  "version": "policies-v4-paid-opening",
   "holdoutSeedOffset": 100000,
   "warmupThroughWave": 7,
   "airResponseWave": 35,

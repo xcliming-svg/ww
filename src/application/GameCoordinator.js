@@ -13,7 +13,7 @@ export class GameCoordinator {
   /** @type {Set<()=>void>} */ frameListeners = new Set();
   /** @type {import('../domain/model/contracts.js').GameState|null} */ state = null;
   screen = 'title'; selectedId = 'hq'; selectedInstance = ''; selectedUnit = ''; errorKey = ''; noticeKey = ''; noticeNameKey = ''; saveStatus = 'hud.unsaved';
-  calculating = false; loading = false; quitting = false; animationLock = false; paused = false; elapsedMs = 0;
+  calculating = false; loading = false; quitting = false; animationLock = false; paused = false; menuPaused = false; elapsedMs = 0;
   /** @type {ReturnType<import('../domain/systems/StepSimulation.js').simulateBattle>|null} */ playback = null;
   /** @type {import('../domain/systems/StepSimulation.js').CombatFrame|null} */ frame = null;
   /** @type {Worker|null} */ worker = null;
@@ -107,7 +107,7 @@ export class GameCoordinator {
   }
   restoreFailedCombat() { if (this.state?.checkpoint) this.state = this.state.checkpoint; this.errorKey = 'error.SIMULATION_INVALID'; this.emit(); }
   /** @param {number} deltaMs */ update(deltaMs) {
-    if (!this.playback || this.paused || this.state?.phase !== 'combat' || !Number.isFinite(deltaMs) || deltaMs <= 0) return;
+    if (!this.playback || this.paused || this.menuPaused || this.state?.phase !== 'combat' || !Number.isFinite(deltaMs) || deltaMs <= 0) return;
     this.elapsedMs += deltaMs * this.settings.speed;
     const ratio = Math.min(1, this.elapsedMs / (this.config.rules.combatSeconds * 1000));
     this.frame = this.playback.frames[Math.min(this.playback.frames.length - 1, Math.floor(ratio * this.playback.frames.length))] ?? null;

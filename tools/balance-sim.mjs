@@ -42,7 +42,8 @@ const requested = arg('--policies', 'all'); const policies = requested === 'all'
 if (policies.some((/** @type {string} */ p) => !available.includes(p)) || new Set(policies).size !== policies.length) throw new Error('UNKNOWN_POLICY');
 const options = { paired: process.argv.includes('--paired') };
 const output = arg('--out', `docs/balance-reports/${balance.id}-${offset}-${samples}.json`);
-/** @type {{policy:string,seed:number,reached:number,cleared:boolean,firstDefeat:number|null,hqHp:number,balance:number,spent:number,grossSpent:number,refunded:number,income:number,invalid:number,deciles:number[],unitCounts:Record<string,number>,damageByUnit:Record<string,number>}[]} */
+/** @typedef {{wave:number,stage:string,code:string}} SimulationFailure */
+/** @type {{policy:string,seed:number,reached:number,cleared:boolean,firstDefeat:number|null,hqHp:number,balance:number,spent:number,grossSpent:number,refunded:number,income:number,invalid:number,failure:SimulationFailure|null,opening:{supplies:number|null,units:number}|null,deciles:number[],unitCounts:Record<string,number>,damageByUnit:Record<string,number>}[]} */
 let rows = [];
 /** @type {{seed:number,wave:number,kind:string,baseline:string|null,variant:string|null,hqDelta:number}[]} */
 let pairs = [];
@@ -71,12 +72,15 @@ for (const policy of policies) {
   for (let seed = offset; seed < offset + samples; seed += 1) {
     if (rows.some(r => r.policy === policy && r.seed === seed)) continue;
     let state = createCampaign(config, balance, seed, `sim-${seed}`);
-    const row = { policy, seed, reached: 0, cleared: false, firstDefeat: /** @type {number|null} */ (null), hqHp: balance.hqHp, balance: balance.initialSupplies, spent: 0, grossSpent: 0, refunded: 0, income: balance.initialSupplies, invalid: 0, deciles: /** @type {number[]} */ ([]), unitCounts: /** @type {Record<string,number>} */ ({}), damageByUnit: /** @type {Record<string,number>} */ ({}) };
+    const row = { policy, seed, reached: 0, cleared: false, firstDefeat: /** @type {number|null} */ (null), hqHp: balance.hqHp, balance: balance.initialSupplies, spent: 0, grossSpent: 0, refunded: 0, income: balance.initialSupplies, invalid: 0, failure: /** @type {SimulationFailure|null} */ (null), opening: /** @type {{supplies:number|null,units:number}|null} */ (null), deciles: /** @type {number[]} */ ([]), unitCounts: /** @type {Record<string,number>} */ ({}), damageByUnit: /** @type {Record<string,number>} */ ({}) };
     for (let wave = 1; wave <= config.rules.maxWave; wave += 1) {
       const plan = planWave(wave, seed, balance, content); const before = state.supplies ?? 0;
       state = buildForWave(state, policy, config, plan, (cost, refund) => { row.grossSpent += cost; row.refunded += refund; }); row.spent += before - (state.supplies ?? 0);
+      row.balance = state.supplies ?? 0;
       for (const p of state.placements) row.unitCounts[p.unitId] = (row.unitCounts[p.unitId] ?? 0) + 1;
-      const started = startWave(state, config); if (!started.ok) { row.invalid++; break; }
+      if (wave === 1) row.opening = { supplies: state.supplies, units: state.placements.length };
+      const started = startWave(state, config);
+      if (!started.ok) { row.invalid++; row.failure = { wave, stage: 'start', code: started.errorCode }; break; }
       const result = simulateBattle(started.data, plan, balance); row.hqHp = result.hqHp;
       if (policy === 'recon' && wave % 10 === 0 && process.argv.includes('--paired')) {
         const swapped = structuredClone(started.data); const count = swapped.placements.length;
@@ -89,13 +93,15 @@ for (const policy of policies) {
       }
       if (process.argv.includes('--trace')) console.log(JSON.stringify({ policy, seed, wave, supplies: state.supplies, upgrades: state.upgradeLevels, placements: state.placements, spawns: plan.spawns, result: { outcome: result.outcome, hp: result.hqHp, ticks: result.ticks, damage: result.damageByUnit } }));
       for (const [id, amount] of Object.entries(result.damageByUnit)) row.damageByUnit[id] = (row.damageByUnit[id] ?? 0) + amount;
-      const resolved = resolveWave(started.data, result, balance); if (!resolved.ok) { row.invalid++; break; }
+      const resolved = resolveWave(started.data, result, balance);
+      if (!resolved.ok) { row.invalid++; row.failure = { wave, stage: 'resolve', code: resolved.errorCode }; break; }
       state = resolved.data; row.balance = state.supplies ?? 0;
       if (state.phase === 'defeat') { row.firstDefeat = wave; break; }
       row.income += plan.reward; row.reached = wave;
       if (wave % 10 === 0) row.deciles.push(row.balance);
       if (state.phase === 'clear') { row.cleared = true; break; }
-      const advanced = advanceCampaign(state, balance); if (!advanced.ok) { row.invalid++; break; } state = advanced.data;
+      const advanced = advanceCampaign(state, balance);
+      if (!advanced.ok) { row.invalid++; row.failure = { wave, stage: 'advance', code: advanced.errorCode }; break; } state = advanced.data;
     }
     rows.push(row);
     if ((seed - offset + 1) % 100 === 0) { await writeReport(); console.log(`${policy}: ${seed - offset + 1}/${samples}`); }

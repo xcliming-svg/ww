@@ -1,0 +1,827 @@
+{
+  "candidate": "candidate-v12-tech-tree",
+  "configHash": "e6d3cd34330bbbc69791d581083f664f00cb563d1dad3a280ee39c29237fcf79",
+  "engineHash": "da14ac2e76b9442aa77073b019a02c46643c11e64b91cde89b16e804a56767ce",
+  "policyHash": "a257ac76e222961c5e624e42a4c27902b80e434fe4b5b8de3f2577ba56248051",
+  "contentHash": "27d569c7c6ed8b4c3732e4144e18864c07d13ceaffe27f8fcf0c340e7f832c96",
+  "configVersion": "candidate-v12-tech-tree",
+  "contentVersion": "defense-100-v1",
+  "policyVersion": "policies-v4-paid-opening",
+  "options": {
+    "paired": false
+  },
+  "samples": 2,
+  "offset": 0,
+  "policies": [
+    "infantry",
+    "antiArmor",
+    "armor",
+    "air",
+    "mixed",
+    "recon",
+    "random",
+    "wrong",
+    "respec"
+  ],
+  "status": "complete",
+  "generatedAt": "2026-10-27T03:18:46.623Z",
+  "summary": [
+    {
+      "policy": "infantry",
+      "n": 2,
+      "cleared": 0,
+      "completionRate": 0,
+      "wilson95": [
+        0,
+        0.6576280471103807
+      ],
+      "averageReached": 12,
+      "maxReached": 12,
+      "invalid": 0,
+      "minimumBalance": 3308,
+      "decileSurvivors": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "policy": "antiArmor",
+      "n": 2,
+      "cleared": 0,
+      "completionRate": 0,
+      "wilson95": [
+        0,
+        0.6576280471103807
+      ],
+      "averageReached": 28,
+      "maxReached": 30,
+      "invalid": 0,
+      "minimumBalance": 12888,
+      "decileSurvivors": [
+        2,
+        2,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "policy": "armor",
+      "n": 2,
+      "cleared": 0,
+      "completionRate": 0,
+      "wilson95": [
+        0,
+        0.6576280471103807
+      ],
+      "averageReached": 12,
+      "maxReached": 13,
+      "invalid": 0,
+      "minimumBalance": 2198,
+      "decileSurvivors": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "policy": "air",
+      "n": 2,
+      "cleared": 0,
+      "completionRate": 0,
+      "wilson95": [
+        0,
+        0.6576280471103807
+      ],
+      "averageReached": 12,
+      "maxReached": 12,
+      "invalid": 0,
+      "minimumBalance": 2988,
+      "decileSurvivors": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "policy": "mixed",
+      "n": 2,
+      "cleared": 0,
+      "completionRate": 0,
+      "wilson95": [
+        0,
+        0.6576280471103807
+      ],
+      "averageReached": 12,
+      "maxReached": 12,
+      "invalid": 0,
+      "minimumBalance": 2888,
+      "decileSurvivors": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "policy": "recon",
+      "n": 2,
+      "cleared": 0,
+      "completionRate": 0,
+      "wilson95": [
+        0,
+        0.6576280471103807
+      ],
+      "averageReached": 12,
+      "maxReached": 12,
+      "invalid": 0,
+      "minimumBalance": 2888,
+      "decileSurvivors": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "policy": "random",
+      "n": 2,
+      "cleared": 0,
+      "completionRate": 0,
+      "wilson95": [
+        0,
+        0.6576280471103807
+      ],
+      "averageReached": 29,
+      "maxReached": 37,
+      "invalid": 0,
+      "minimumBalance": 4971,
+      "decileSurvivors": [
+        2,
+        2,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "policy": "wrong",
+      "n": 2,
+      "cleared": 0,
+      "completionRate": 0,
+      "wilson95": [
+        0,
+        0.6576280471103807
+      ],
+      "averageReached": 4,
+      "maxReached": 5,
+      "invalid": 0,
+      "minimumBalance": 460,
+      "decileSurvivors": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "policy": "respec",
+      "n": 2,
+      "cleared": 0,
+      "completionRate": 0,
+      "wilson95": [
+        0,
+        0.6576280471103807
+      ],
+      "averageReached": 11.5,
+      "maxReached": 12,
+      "invalid": 0,
+      "minimumBalance": 2670,
+      "decileSurvivors": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "pairs": [],
+  "rows": [
+    {
+      "policy": "infantry",
+      "seed": 0,
+      "reached": 12,
+      "cleared": false,
+      "firstDefeat": 13,
+      "hqHp": 0,
+      "balance": 3308,
+      "spent": 3002,
+      "grossSpent": 3002,
+      "refunded": 0,
+      "income": 6310,
+      "invalid": 0,
+      "failure": null,
+      "opening": {
+        "supplies": 20,
+        "units": 2
+      },
+      "deciles": [
+        2588
+      ],
+      "unitCounts": {
+        "rifle": 4,
+        "mg": 66
+      },
+      "damageByUnit": {
+        "rifle": 240.24,
+        "mg": 1635.02
+      }
+    },
+    {
+      "policy": "infantry",
+      "seed": 1,
+      "reached": 12,
+      "cleared": false,
+      "firstDefeat": 13,
+      "hqHp": 0,
+      "balance": 3308,
+      "spent": 3002,
+      "grossSpent": 3002,
+      "refunded": 0,
+      "income": 6310,
+      "invalid": 0,
+      "failure": null,
+      "opening": {
+        "supplies": 20,
+        "units": 2
+      },
+      "deciles": [
+        2588
+      ],
+      "unitCounts": {
+        "rifle": 4,
+        "mg": 66
+      },
+      "damageByUnit": {
+        "rifle": 240.24,
+        "mg": 1692.2999999999993
+      }
+    },
+    {
+      "policy": "antiArmor",
+      "seed": 0,
+      "reached": 26,
+      "cleared": false,
+      "firstDefeat": 27,
+      "hqHp": 0,
+      "balance": 12888,
+      "spent": 9202,
+      "grossSpent": 9202,
+      "refunded": 0,
+      "income": 22090,
+      "invalid": 0,
+      "failure": null,
+      "opening": {
+        "supplies": 20,
+        "units": 2
+      },
+      "deciles": [
+        2308,
+        8118
+      ],
+      "unitCounts": {
+        "rifle": 4,
+        "mg": 122,
+        "at": 96
+      },
+      "damageByUnit": {
+        "rifle": 240.24,
+        "mg": 1312.4700000000003,
+        "at": 6471.68
+      }
+    },
+    {
+      "policy": "antiArmor",
+      "seed": 1,
+      "reached": 30,
+      "cleared": false,
+      "firstDefeat": 31,
+      "hqHp": 0,
+      "balance": 16368,
+      "spent": 11002,
+      "grossSpent": 11002,
+      "refunded": 0,
+      "income": 27370,
+      "invalid": 0,
+      "failure": null,
+      "opening": {
+        "supplies": 20,
+        "units": 2
+      },
+      "deciles": [
+        2308,
+        8118,
+        16818
+      ],
+      "unitCounts": {
+        "rifle": 4,
+        "mg": 146,
+        "at": 120
+      },
+      "damageByUnit": {
+        "rifle": 240.24,
+        "mg": 1627.8200000000006,
+        "at": 8042.089999999998
+      }
+    },
+    {
+      "policy": "armor",
+      "seed": 0,
+      "reached": 11,
+      "cleared": false,
+      "firstDefeat": 12,
+      "hqHp": 0,
+      "balance": 2198,
+      "spent": 3332,
+      "grossSpent": 3332,
+      "refunded": 0,
+      "income": 5530,
+      "invalid": 0,
+      "failure": null,
+      "opening": {
+        "supplies": 20,
+        "units": 2
+      },
+      "deciles": [
+        2508
+      ],
+      "unitCounts": {
+        "rifle": 4,
+        "mg": 50,
+        "car": 8
+      },
+      "damageByUnit": {
+        "rifle": 240.24,
+        "mg": 1316.3600000000004,
+        "car": 73.125
+      }
+    },
+    {
+      "policy": "armor",
+      "seed": 1,
+      "reached": 13,
+      "cleared": false,
+      "firstDefeat": 14,
+      "hqHp": 0,
+      "balance": 2408,
+      "spent": 4682,
+      "grossSpent": 4682,
+      "refunded": 0,
+      "income": 7090,
+      "invalid": 0,
+      "failure": null,
+      "opening": {
+        "supplies": 20,
+        "units": 2
+      },
+      "deciles": [
+        2508
+      ],
+      "unitCounts": {
+        "rifle": 4,
+        "mg": 50,
+        "car": 24
+      },
+      "damageByUnit": {
+        "rifle": 240.24,
+        "mg": 1286.4800000000002,
+        "car": 851.645
+      }
+    },
+    {
+      "policy": "air",
+      "seed": 0,
+      "reached": 12,
+      "cleared": false,
+      "firstDefeat": 13,
+      "hqHp": 0,
+      "balance": 2988,
+      "spent": 3322,
+      "grossSpent": 3322,
+      "refunded": 0,
+      "income": 6310,
+      "invalid": 0,
+      "failure": null,
+      "opening": {
+        "supplies": 20,
+        "units": 2
+      },
+      "deciles": [
+        2508
+      ],
+      "unitCounts": {
+        "rifle": 4,
+        "mg": 66
+      },
+      "damageByUnit": {
+        "rifle": 240.24,
+        "mg": 1635.02
+      }
+    },
+    {
+      "policy": "air",
+      "seed": 1,
+      "reached": 12,
+      "cleared": false,
+      "firstDefeat": 13,
+      "hqHp": 0,
+      "balance": 2988,
+      "spent": 3322,
+      "grossSpent": 3322,
+      "refunded": 0,
+      "income": 6310,
+      "invalid": 0,
+      "failure": null,
+      "opening": {
+        "supplies": 20,
+        "units": 2
+      },
+      "deciles": [
+        2508
+      ],
+      "unitCounts": {
+        "rifle": 4,
+        "mg": 66
+      },
+      "damageByUnit": {
+        "rifle": 240.24,
+        "mg": 1692.2999999999993
+      }
+    },
+    {
+      "policy": "mixed",
+      "seed": 0,
+      "reached": 12,
+      "cleared": false,
+      "firstDefeat": 13,
+      "hqHp": 0,
+      "balance": 2888,
+      "spent": 3422,
+      "grossSpent": 3422,
+      "refunded": 0,
+      "income": 6310,
+      "invalid": 0,
+      "failure": null,
+      "opening": {
+        "supplies": 20,
+        "units": 2
+      },
+      "deciles": [
+        2408
+      ],
+      "unitCounts": {
+        "rifle": 4,
+        "mg": 66
+      },
+      "damageByUnit": {
+        "rifle": 240.24,
+        "mg": 1635.02
+      }
+    },
+    {
+      "policy": "mixed",
+      "seed": 1,
+      "reached": 12,
+      "cleared": false,
+      "firstDefeat": 13,
+      "hqHp": 0,
+      "balance": 2888,
+      "spent": 3422,
+      "grossSpent": 3422,
+      "refunded": 0,
+      "income": 6310,
+      "invalid": 0,
+      "failure": null,
+      "opening": {
+        "supplies": 20,
+        "units": 2
+      },
+      "deciles": [
+        2408
+      ],
+      "unitCounts": {
+        "rifle": 4,
+        "mg": 66
+      },
+      "damageByUnit": {
+        "rifle": 240.24,
+        "mg": 1692.2999999999993
+      }
+    },
+    {
+      "policy": "recon",
+      "seed": 0,
+      "reached": 12,
+      "cleared": false,
+      "firstDefeat": 13,
+      "hqHp": 0,
+      "balance": 2888,
+      "spent": 3422,
+      "grossSpent": 3422,
+      "refunded": 0,
+      "income": 6310,
+      "invalid": 0,
+      "failure": null,
+      "opening": {
+        "supplies": 20,
+        "units": 2
+      },
+      "deciles": [
+        2408
+      ],
+      "unitCounts": {
+        "rifle": 4,
+        "mg": 66
+      },
+      "damageByUnit": {
+        "rifle": 240.24,
+        "mg": 1635.02
+      }
+    },
+    {
+      "policy": "recon",
+      "seed": 1,
+      "reached": 12,
+      "cleared": false,
+      "firstDefeat": 13,
+      "hqHp": 0,
+      "balance": 2888,
+      "spent": 3422,
+      "grossSpent": 3422,
+      "refunded": 0,
+      "income": 6310,
+      "invalid": 0,
+      "failure": null,
+      "opening": {
+        "supplies": 20,
+        "units": 2
+      },
+      "deciles": [
+        2408
+      ],
+      "unitCounts": {
+        "rifle": 4,
+        "mg": 66
+      },
+      "damageByUnit": {
+        "rifle": 240.24,
+        "mg": 1692.2999999999993
+      }
+    },
+    {
+      "policy": "random",
+      "seed": 0,
+      "reached": 21,
+      "cleared": false,
+      "firstDefeat": 22,
+      "hqHp": 0,
+      "balance": 4971,
+      "spent": 10519,
+      "grossSpent": 10519,
+      "refunded": 0,
+      "income": 15490,
+      "invalid": 0,
+      "failure": null,
+      "opening": {
+        "supplies": 20,
+        "units": 2
+      },
+      "deciles": [
+        1641,
+        5061
+      ],
+      "unitCounts": {
+        "rifle": 4,
+        "mg": 55,
+        "mortar": 44,
+        "at": 39,
+        "tank": 20
+      },
+      "damageByUnit": {
+        "rifle": 240.24,
+        "mg": 990.7500000000001,
+        "mortar": 1238.88,
+        "at": 1848.7399999999998,
+        "tank": 1238.56
+      }
+    },
+    {
+      "policy": "random",
+      "seed": 1,
+      "reached": 37,
+      "cleared": false,
+      "firstDefeat": 38,
+      "hqHp": 0,
+      "balance": 13051,
+      "spent": 29559,
+      "grossSpent": 29559,
+      "refunded": 0,
+      "income": 42610,
+      "invalid": 0,
+      "failure": null,
+      "opening": {
+        "supplies": 20,
+        "units": 2
+      },
+      "deciles": [
+        1711,
+        5066,
+        10986
+      ],
+      "unitCounts": {
+        "rifle": 4,
+        "mg": 123,
+        "mortar": 100,
+        "at": 97,
+        "tank": 75,
+        "fighter": 39
+      },
+      "damageByUnit": {
+        "rifle": 240.24,
+        "mg": 1300.7800000000002,
+        "mortar": 2885.42,
+        "at": 4745.13,
+        "tank": 3733.4325000000003,
+        "fighter": 3174.6487499999957
+      }
+    },
+    {
+      "policy": "wrong",
+      "seed": 0,
+      "reached": 5,
+      "cleared": false,
+      "firstDefeat": 6,
+      "hqHp": 0,
+      "balance": 1060,
+      "spent": 630,
+      "grossSpent": 630,
+      "refunded": 0,
+      "income": 1690,
+      "invalid": 0,
+      "failure": null,
+      "opening": {
+        "supplies": 20,
+        "units": 2
+      },
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 15
+      },
+      "damageByUnit": {
+        "rifle": 602.4000000000001
+      }
+    },
+    {
+      "policy": "wrong",
+      "seed": 1,
+      "reached": 3,
+      "cleared": false,
+      "firstDefeat": 4,
+      "hqHp": 0,
+      "balance": 460,
+      "spent": 510,
+      "grossSpent": 510,
+      "refunded": 0,
+      "income": 970,
+      "invalid": 0,
+      "failure": null,
+      "opening": {
+        "supplies": 20,
+        "units": 2
+      },
+      "deciles": [],
+      "unitCounts": {
+        "rifle": 9
+      },
+      "damageByUnit": {
+        "rifle": 421.08000000000004
+      }
+    },
+    {
+      "policy": "respec",
+      "seed": 0,
+      "reached": 12,
+      "cleared": false,
+      "firstDefeat": 13,
+      "hqHp": 0,
+      "balance": 3170,
+      "spent": 3140,
+      "grossSpent": 3902,
+      "refunded": 762,
+      "income": 6310,
+      "invalid": 0,
+      "failure": null,
+      "opening": {
+        "supplies": 20,
+        "units": 2
+      },
+      "deciles": [
+        2408
+      ],
+      "unitCounts": {
+        "rifle": 4,
+        "mg": 66
+      },
+      "damageByUnit": {
+        "rifle": 240.24,
+        "mg": 1588.0400000000004
+      }
+    },
+    {
+      "policy": "respec",
+      "seed": 1,
+      "reached": 11,
+      "cleared": false,
+      "firstDefeat": 12,
+      "hqHp": 0,
+      "balance": 2670,
+      "spent": 2860,
+      "grossSpent": 3622,
+      "refunded": 762,
+      "income": 5530,
+      "invalid": 0,
+      "failure": null,
+      "opening": {
+        "supplies": 20,
+        "units": 2
+      },
+      "deciles": [
+        2408
+      ],
+      "unitCounts": {
+        "rifle": 4,
+        "mg": 58
+      },
+      "damageByUnit": {
+        "rifle": 240.24,
+        "mg": 1419.8600000000001
+      }
+    }
+  ]
+}

@@ -24,7 +24,7 @@
 - [x] **화면/입력:** 정사각 노드·잠금/신규/완료·팬/줌·공통 정보창·ESC 메뉴·좌/우 분리·정찰 방향. 수용: 타입·구문·locale 정적 검사.
 - [x] **연출:** 유형별 타이머(건물 3000ms/연구 2000ms/유닛 50ms), 버튼 fill·재고 tween·reducedMotion. 수용: 정적 검사.
 - [x] **저장 호환:** v1/v2 체크섬 검증 → 명시적 v3 마이그레이션, 영구 이력·투자 원장·체크포인트. 수용: 스키마 정적 검사. 실제 로드 검증 미실행.
-- [ ] **Windows 정식 정적 검사:** 수정 후 `npm.cmd run check:all` 합격 로그가 아직 확보되지 않음.
+- [x] **Windows 정식 정적 검사:** 2026-10-27 리뷰 수정 브랜치에서 `npm.cmd run check:all` 통과. 아래 후속 검증 기록 참조.
 - [ ] **완전 기능 검증/100웨이브 승률 인증:** 사용자 지시 및 `AGENTS.md`에 따라 이번 구현 단계 미실행(합격 미표기).
 - [ ] **승인:** HQ 환불 예외(현 구현: 환불 불가), 자금 고갈 복구 정책, 정의되지 않은 연구/시설 강화 수치·효과.
 
@@ -32,7 +32,7 @@
 
 - **구현 전 Windows 기준선**: 사용자 제공 `node v24.13.1`, `npm 11.10.0`, `npm.cmd run check:all` 7개 정적 하위 검사 PASS. **변경 이후의 결과가 아님.**
 - **구현 중 별도 정적 검토**: 원격 파일의 JSON 계약/선행 DAG/160 시작 수치/v11 유닛·보상 동일성 검사 PASS. JS 소스는 import/export 제거 후의 제한적 구문 검사 수행. 공식 ESM 구문·타입·ESLint를 대신하지 않음.
-- **미실행**: 새 상태·환불·저장에 대한 실행형 도메인 테스트, `npm.cmd run build`, 게임 실행, Phaser 플레이, 브라우저 QA, 성능 검사, 장기 밸런스 시뮬레이션.
+- **구현 당시 미실행**: 새 상태·환불·저장에 대한 실행형 도메인 테스트, `npm.cmd run build`, 게임 실행, Phaser 플레이, 브라우저 QA, 성능 검사, 장기 밸런스 시뮬레이션. 후속 실제 실행 결과는 아래 기록 참조.
 - **라이선스/에셋**: 새 바이너리 에셋 없음. 기존 매니페스트/폰트 보존.
 
 정적 검사 또는 기타 검증이 실측되지 않은 기능을 “검증 완료”로 해석하지 않는다.
@@ -42,4 +42,13 @@
 - 원인: 브라우저용 `src/infrastructure/schema-validators.js`가 `new Ajv(...).compile(...)`를 실행하면서 `new Function`에 도달하여 기존 `script-src 'self'` 정책 위반.
 - 조치: `tools/generate-validators.mjs`를 v1/v2/v3 포함 standalone 검증기 생성기로 복구. `package.json`에 `generate:validators`, `predev`, `prebuild`, `precheck:all` 연결. `tools/check.mjs package`에 동적 Ajv 컴파일 회귀 차단 정적 검사 추가.
 - 기존 CSP 완화 없음(`unsafe-eval` 미허용 유지). 브라우저용 검증기에는 사전 생성된 JS만 포함되어야 함.
-- 검증 상태: 생성기 소스 구문 및 npm hook의 제한적 정적 검사 PASS. **실제 Windows Node 생성 명령/정식 check:all 아직 미실행**. 현재 추적 중인 검증기 파일에는 기존 런타임 Ajv 코드가 남아 있으므로, 반드시 `npm.cmd run generate:validators` (또는 새 `npm.cmd run dev`/ `npm.cmd run check:all`)를 실행해 파일을 재생성해야 함.
+- 당시 검증 상태: 생성기 소스 구문 및 npm hook의 제한적 정적 검사 PASS, 실제 Windows Node 생성 명령/정식 check:all 미실행. 이후 생성된 standalone 검증기가 `6edc545`에 포함되었고 아래 Windows 후속 검증에서 재생성·검사했다.
+
+## 2026-10-27 리뷰 수정 후 Windows 검증
+
+- 브랜치 `fix/tech-tree-review-20261027`, 기준 `feat/tech-tree-battle-ui-clean-20261027`의 `6edc545`.
+- 유료 초기 진행의 자동 편성 정책, 계산 대기 중 ESC 메뉴 정지, 동서 정찰 카드 공간, 자동저장 중 진행 효과 재시작을 수정.
+- `npm.cmd run check:all` / `npm.cmd run build` / 변경 도구의 `node --check` 통과. 빌드의 기존 큰 청크 경고는 남음.
+- 허용된 오프라인 소규모 측정: 2 seed × 9정책. 무효 결과 18→0, 초기 2명/잔액 20 확인 18/18, 회계 불일치 0. 완주 0/18이므로 새 100웨이브 밸런스 합격을 뜻하지 않음.
+- 브라우저·Phaser 플레이·UI 실행형 회귀·성능·패키징 및 장기 밸런스 인증은 미실행. 기존 승인 대기 규칙과 v11/v12 게임 수치는 유지.
+- 상세 영향도·파일·검증 근거: [리뷰 수정 기록](superpowers/plans/2026-10-27-tech-tree-review-fixes.md).

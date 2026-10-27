@@ -31,9 +31,19 @@ export function buildForWave(initial, policy, config, plan, recordTransaction = 
     for (const parent of node.parentIds) unlock(parent);
     if (node.producerId) unlock(node.producerId);
     if (node.kind === 'research' && !state.researchIds.includes(id)) execute({ type: 'research', nodeId: id });
-    if (node.kind === 'building' && !state.buildingIds.includes(id)) execute({ type: 'build', nodeId: id });
+    if (['hq', 'building'].includes(node.kind) && !state.buildingIds.includes(id)) execute({ type: 'build', nodeId: id });
   }
   const cells = (config.layouts[state.formationStage] ?? []).filter(c => c.row !== 2 || c.col !== 2);
+  // Every policy pays the same opening path, including after a respec refunds it.
+  unlock(profiles.starterUnit);
+  if (state.wave === 1) {
+    for (const cell of cells) {
+      if (!state.placements.some(p => p.cell.row === cell.row && p.cell.col === cell.col)) {
+        execute({ type: 'place', nodeId: profiles.starterUnit, cell });
+      }
+    }
+    return state;
+  }
   // Reserve a complete low-cost formation before irreversible growth spending.
   const reserve = cells.length * (config.costs.rifle ?? 0);
   if (policy !== 'wrong') {

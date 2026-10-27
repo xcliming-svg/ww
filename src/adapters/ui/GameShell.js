@@ -31,7 +31,7 @@ export class GameShell {
   /** @type {ReturnType<typeof setTimeout>|undefined} */ actionTimer;
   /** @type {ReturnType<typeof setTimeout>|undefined} */ toastTimer;
   lastMessage = '';
-  /** @type {{nodeId:string,type:string,ms:number}|null} */ progress = null;
+  /** @type {{nodeId:string,type:string,ms:number,start:number}|null} */ progress = null;
   /** @type {{from:number,to:number,start:number,duration:number}|null} */ moneyTween = null;
   /** @type {number|undefined} */ moneyFrame;
   /** @param {HTMLElement} root @param {import('../../application/GameCoordinator.js').GameCoordinator} app
@@ -114,7 +114,7 @@ export class GameShell {
     const after = this.app.state?.supplies ?? before;
     const ms = this.reducedMotion() ? 0 : (kind === 'research' ? layout.actionMs.research : kind === 'unit' ? layout.actionMs.unit : layout.actionMs.building);
     if (!ms) { this.animateSupplies(before, after, 0); this.refreshInfo(); return; }
-    this.app.animationLock = true; this.progress = { nodeId, type: command.type, ms };
+    this.app.animationLock = true; this.progress = { nodeId, type: command.type, ms, start: performance.now() };
     this.animateSupplies(before, after, ms);
     this.refreshInfo(); this.app.emit();
     clearTimeout(this.actionTimer);
@@ -126,6 +126,9 @@ export class GameShell {
   styleProgress(target, type, nodeId) {
     if (this.progress && this.progress.type === type && this.progress.nodeId === nodeId) {
       target.classList.add('progress-action'); target.style.setProperty('--progress-ms', `${this.progress.ms}ms`);
+      // Rebuilt buttons resume the original timeline after autosave/settings renders.
+      const elapsed = Math.max(0, Math.min(this.progress.ms, performance.now() - this.progress.start));
+      target.style.setProperty('--progress-delay', `${-elapsed}ms`);
     }
   }
   startOrPause() {
@@ -141,13 +144,14 @@ export class GameShell {
     body.append(button(this.t('ui.confirm'), () => { dialog.close(); void this.app.beginCombat(); }, !this.app.startResult().ok));
   }
   openMenu() {
-    if (this.app.screen !== 'game') return;
-    const wasPaused = this.app.paused;
-    if (this.app.state?.phase === 'combat') { this.app.paused = true; this.app.emit(); }
+    if (this.app.screen !== 'game' || this.app.menuPaused) return;
+    // Hold playback even when combat is still waiting for its save or worker.
+    // The user's manual pause is independent and survives closing this menu.
+    this.app.menuPaused = true; this.app.emit();
     const body = el('div', '', 'menu-actions');
     const dialog = openModal(this.modalHost, this.t('menu.options'), body, this.t);
     dialog.addEventListener('close', () => {
-      if (this.app.state?.phase === 'combat') { this.app.paused = wasPaused; this.app.emit(); }
+      this.app.menuPaused = false; this.app.emit();
     }, { once: true });
     body.append(button(this.t('menu.resume'), () => dialog.close()),
       button(this.t('ui.save'), () => { void this.app.flushSave(); dialog.close(); }, this.app.state?.phase === 'combat' || this.app.calculating),
@@ -349,6 +353,7 @@ export class GameShell {
   }
   dispose() {
     clearTimeout(this.actionTimer); clearTimeout(this.toastTimer);
+    this.app.menuPaused = false;
     if (this.moneyFrame !== undefined) cancelAnimationFrame(this.moneyFrame);
     this.abort.abort(); this.unlisten(); this.tree.dispose();
     this.app.frameListeners.delete(this.updateTimer); this.host.remove();
