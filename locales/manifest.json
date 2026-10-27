@@ -2,9 +2,11 @@
   "defaultLocale": "ko-KR",
   "fallbackLocale": "ko-KR",
   "supportedLocales": [
-    "ko-KR"
+    "ko-KR",
+    "en-US"
   ],
   "fontAssetIds": {
-    "ko-KR": "font.ui.koKR"
+    "ko-KR": "font.ui.koKR",
+    "en-US": "font.ui.koKR"
   }
 }

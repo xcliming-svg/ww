@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "levels": [
+    {
+      "outlineWidthPx": 0,
+      "outlineAlpha": 0,
+      "reinforcedHatch": false
+    },
+    {
+      "outlineWidthPx": 1,
+      "outlineAlpha": 0.55,
+      "reinforcedHatch": false
+    },
+    {
+      "outlineWidthPx": 2,
+      "outlineAlpha": 0.75,
+      "reinforcedHatch": false
+    },
+    {
+      "outlineWidthPx": 2,
+      "outlineAlpha": 1,
+      "reinforcedHatch": true
+    }
+  ]
+}

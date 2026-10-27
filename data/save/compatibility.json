@@ -29,6 +29,36 @@
       "fromConfig": "candidate-v11",
       "toConfig": "candidate-v12-tech-tree",
       "costSource": "candidate-v10"
+    },
+    {
+      "schemaVersion": 3,
+      "fromConfig": "candidate-v12-tech-tree",
+      "toConfig": "candidate-v13-robot-defense",
+      "costSource": "candidate-v12-tech-tree"
+    },
+    {
+      "schemaVersion": 2,
+      "fromConfig": "candidate-v12-tech-tree",
+      "toConfig": "candidate-v13-robot-defense",
+      "costSource": "candidate-v12-tech-tree"
+    },
+    {
+      "schemaVersion": 2,
+      "fromConfig": "candidate-v11-refund1",
+      "toConfig": "candidate-v13-robot-defense",
+      "costSource": "candidate-v11"
+    },
+    {
+      "schemaVersion": 1,
+      "fromConfig": "candidate-v10",
+      "toConfig": "candidate-v13-robot-defense",
+      "costSource": "candidate-v10"
+    },
+    {
+      "schemaVersion": 1,
+      "fromConfig": "candidate-v11",
+      "toConfig": "candidate-v13-robot-defense",
+      "costSource": "candidate-v10"
     }
   ]
 }

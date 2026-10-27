@@ -4,6 +4,7 @@ import { revealChildren } from '../domain/tech/TechGraph.js';
 import compatibility from '../../data/save/compatibility.json';
 import legacyCosts from '../../data/balance/candidate-v10.json';
 import v11 from '../../data/balance/candidate-v11.json';
+import v12 from '../../data/balance/candidate-v12-tech-tree.json';
 /** Validate original schema and checksum before migrating fields.
  * @param {unknown} raw @returns {import('../domain/model/contracts.js').Result<Record<string,unknown>>} */
 export function migrateEnvelope(raw) {
@@ -17,7 +18,7 @@ export function compatibleConfig(envelope, config) {
   if (envelope.schemaVersion === config.rules.schemaVersion && envelope.configVersion === config.rules.configVersion) return true;
   const entry = compatibility.migrations.find(m => m.schemaVersion === envelope.schemaVersion && m.fromConfig === envelope.configVersion && m.toConfig === config.rules.configVersion);
   if (!entry) return false;
-  const source = entry.costSource === legacyCosts.id ? legacyCosts : entry.costSource === v11.id ? v11 : null;
+  const source = entry.costSource === legacyCosts.id ? legacyCosts : entry.costSource === v11.id ? v11 : entry.costSource === v12.id ? v12 : null;
   return source !== null && Object.keys(config.costs).length === Object.keys(source.costs).length &&
     Object.entries(source.costs).every(([id, cost]) => ['hq', 'barracks'].includes(id) || config.costs[id] === cost) &&
     config.upgrades.every(p => JSON.stringify(p.costs) === JSON.stringify(source.upgradeCostFactors));
