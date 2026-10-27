@@ -1,5 +1,5 @@
 import { success, failure, isAmount } from '../util/Result.js';
-import { isDone, isUnlocked } from '../tech/TechGraph.js';
+import { isDone, isUnlocked, revealChildren } from '../tech/TechGraph.js';
 import { sameCell, usableCell } from '../waves/FormationService.js';
 import { validateState } from '../model/GameState.js';
 import { quoteRefund, applyRefund } from './RefundService.js';
@@ -31,28 +31,30 @@ export function dispatchPreparationCommand(state, command, config) {
     }
     case 'acknowledge':
       if (!node) return failure('UNKNOWN_NODE');
+      if (!next.revealedNodeIds.includes(node.id) || !isUnlocked(node, state, config.nodes)) return failure('LOCKED');
       if (!next.acknowledgedNodeIds.includes(node.id)) next.acknowledgedNodeIds.push(node.id);
       break;
     case 'build': case 'research': case 'place': case 'upgrade': {
       if (!node) return failure('UNKNOWN_NODE');
-      if (!isUnlocked(node, state, config.nodes)) return failure('LOCKED');
+      if (!next.revealedNodeIds.includes(node.id) || !isUnlocked(node, state, config.nodes)) return failure('LOCKED');
       if (command.type === 'build' || command.type === 'research') {
-        if (node.kind !== (command.type === 'build' ? 'building' : 'research')) return failure('INVALID_COMMAND');
+        if (!(command.type === 'build' ? ['hq', 'building'].includes(node.kind) : node.kind === 'research')) return failure('INVALID_COMMAND');
         if (isDone(node, state)) return failure('ALREADY_DONE');
         const debit = spend(config.costs[node.id]); if (!debit.ok) return debit;
         (command.type === 'build' ? next.buildingIds : next.researchIds).push(node.id);
+        revealChildren(next, node.id, config.nodes);
         const kind = command.type === 'build' ? 'building' : 'research';
         next.investments.push({ id: `${kind}:${node.id}`, kind, nodeId: node.id, profileId: null, level: 0, paidCost: debit.data });
       } else if (command.type === 'place') {
         if (node.kind !== 'unit') return failure('INVALID_COMMAND');
-        if (!command.cell || !usableCell(config, state.formationStage, command.cell)) return failure('INVALID_CELL');
-        const cell = command.cell;
+        const cell = command.cell ?? config.layouts[state.formationStage]?.find(c => !sameCell(c, config.rules.hq) && !state.placements.some(p => sameCell(p.cell, c)));
+        if (!cell || !usableCell(config, state.formationStage, cell)) return failure('INVALID_CELL');
         if (state.placements.some(p => sameCell(p.cell, cell))) return failure('OCCUPIED');
         const debit = spend(config.costs[node.id]); if (!debit.ok) return debit;
         next.placements.push({ instanceId: command.commandId, unitId: node.id, cell: { ...cell }, paidCost: debit.data });
       } else {
-        if (node.kind !== 'unit') return failure('INVALID_COMMAND');
-        const profile = config.upgrades.find(p => p.id === command.profileId);
+        if (node.kind !== 'unit' && !isDone(node, state)) return failure('LOCKED');
+        const profile = config.upgrades.find(p => p.id === command.profileId && (p.nodeKinds ?? ['unit']).includes(node.kind));
         if (!profile) return failure('INVALID_COMMAND');
         if (!profile.costs || !profile.multipliers) return failure('BALANCE_UNRESOLVED');
         const levels = next.upgradeLevels[node.id] ?? {}; const level = levels[profile.id] ?? 0;

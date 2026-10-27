@@ -39,7 +39,8 @@
     "data/simulation/probes.json",
     "data/balance/candidate-v11.json",
     "data/save/compatibility.json",
-    "data/ui/unit-filters.json"
+    "data/ui/unit-filters.json",
+    "data/balance/candidate-v12-tech-tree.json"
   ],
   "properties": {
     "data/tech/nodes.json": {
@@ -59,7 +60,9 @@
           "descriptionKey",
           "assetId",
           "roleTags",
-          "startsUnlocked"
+          "startsUnlocked",
+          "minWave",
+          "revealParentIds"
         ],
         "properties": {
           "id": {
@@ -122,6 +125,20 @@
           },
           "startsUnlocked": {
             "type": "boolean"
+          },
+          "minWave": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 100
+          },
+          "revealParentIds": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 128
+            },
+            "uniqueItems": true
           }
         }
       }
@@ -1892,7 +1909,10 @@
         "saveMaxBytes",
         "speeds",
         "defaultSpeed",
-        "unitLabelSize"
+        "unitLabelSize",
+        "actionMs",
+        "dragThresholdPx",
+        "toastMs"
       ],
       "properties": {
         "treeRatio": {
@@ -1980,6 +2000,37 @@
         },
         "unitLabelSize": {
           "type": "number"
+        },
+        "actionMs": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "building",
+            "research",
+            "unit"
+          ],
+          "properties": {
+            "building": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "research": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "unit": {
+              "type": "integer",
+              "minimum": 0
+            }
+          }
+        },
+        "dragThresholdPx": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "toastMs": {
+          "type": "integer",
+          "minimum": 0
         }
       }
     },
@@ -16073,7 +16124,10 @@
             ],
             "properties": {
               "schemaVersion": {
-                "const": 1
+                "enum": [
+                  1,
+                  2
+                ]
               },
               "fromConfig": {
                 "type": "string"
@@ -16120,6 +16174,9 @@
           }
         }
       }
+    },
+    "data/balance/candidate-v12-tech-tree.json": {
+      "$ref": "#/properties/data~1balance~1candidate-v11.json"
     }
   }
 }

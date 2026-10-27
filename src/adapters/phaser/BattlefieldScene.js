@@ -4,14 +4,47 @@ import theme from '../../../data/ui/theme.json';
 import templates from '../../../data/units/templates.json';
 import { drawUnit } from './PixelUnitRenderer.js';
 import { drawEffects } from './FxLayer.js';
+import { sameCell, usableCell } from '../../domain/waves/FormationService.js';
 export class BattlefieldScene extends Phaser.Scene {
   /** @type {Phaser.GameObjects.Graphics|null} */ graphics = null;
   /** @type {Map<string,Phaser.GameObjects.Image>} */ images = new Map();
   /** @type {Map<string,Phaser.GameObjects.Text>} */ labels = new Map();
   /** @param {import('../../application/GameCoordinator.js').GameCoordinator} app @param {(key:string)=>string} t */
   constructor(app, t) { super('Battlefield'); this.app = app; this.t = t; }
+  /** @type {{pointerId:number,instanceId:string|null,x:number,y:number}|null} */
+  dragging = null;
+  /** @param {Phaser.Input.Pointer} pointer */
+  cellAt(pointer) {
+    const center = layout.worldSize / 2, scale = layout.cellSize;
+    return { row: Math.floor((pointer.y - center) / scale + 2.5), col: Math.floor((pointer.x - center) / scale + 2.5) };
+  }
   create() {
     this.graphics = this.add.graphics();
+    this.input.on('pointerdown', (/** @type {Phaser.Input.Pointer} */ pointer) => {
+      const state = this.app.state; if (!state || state.phase !== 'preparation' || this.app.animationLock) return;
+      const cell = this.cellAt(pointer);
+      if (!usableCell(this.app.config, state.formationStage, cell)) return;
+      const instance = state.placements.find(p => sameCell(p.cell, cell));
+      this.dragging = { pointerId: pointer.id, instanceId: instance?.instanceId ?? null, x: pointer.x, y: pointer.y };
+    });
+    this.input.on('pointerup', (/** @type {Phaser.Input.Pointer} */ pointer) => {
+      const drag = this.dragging; this.dragging = null;
+      const state = this.app.state;
+      if (!drag || pointer.id !== drag.pointerId || !state || state.phase !== 'preparation' || this.app.animationLock) return;
+      const cell = this.cellAt(pointer);
+      if (!usableCell(this.app.config, state.formationStage, cell)) return;
+      if (Math.hypot(pointer.x - drag.x, pointer.y - drag.y) <= layout.dragThresholdPx) {
+        this.app.selectCell(cell); return;
+      }
+      if (!drag.instanceId) return;
+      const origin = state.placements.find(p => p.instanceId === drag.instanceId);
+      if (!origin || sameCell(origin.cell, cell)) return;
+      const occupied = state.placements.find(p => sameCell(p.cell, cell));
+      this.app.command(occupied ? { type: 'swap', instanceId: drag.instanceId, otherId: occupied.instanceId } :
+        { type: 'move', instanceId: drag.instanceId, cell });
+    });
+    this.input.on('gameout', () => { this.dragging = null; });
+
     const sync = () => {
       if (this.app.screen === 'title') this.scene.start('Title');
       else if (this.app.state && ['victory', 'defeat', 'clear'].includes(this.app.state.phase)) this.scene.start('Outcome');
@@ -28,7 +61,11 @@ export class BattlefieldScene extends Phaser.Scene {
     if (state.formationStage !== '3') g.fillRect(0, center - scale / 2, layout.worldSize, scale);
     g.lineStyle(1, theme.grid);
     for (const cell of this.app.config.layouts[state.formationStage] ?? []) g.strokeRect(center + (cell.col - 2.5) * scale, center + (cell.row - 2.5) * scale, scale, scale);
-    g.fillStyle(theme.hq); g.fillRect(center - scale / 3, center - scale / 3, scale * 2 / 3, scale * 2 / 3); g.lineStyle(2, theme.ground); g.lineBetween(center, center - scale / 4, center, center + scale / 4); g.lineBetween(center - scale / 4, center, center + scale / 4, center);
+    if (state.buildingIds.includes('hq')) {
+      g.fillStyle(theme.hq); g.fillRect(center - scale / 3, center - scale / 3, scale * 2 / 3, scale * 2 / 3);
+      g.lineStyle(2, theme.ground); g.lineBetween(center, center - scale / 4, center, center + scale / 4);
+      g.lineBetween(center - scale / 4, center, center + scale / 4, center);
+    }
     const frame = state.phase === 'combat' ? this.app.frame : null;
     const entities = frame?.entities ?? state.placements.map(p => ({ id: p.instanceId, unitId: p.unitId, x: p.cell.col - 2, y: p.cell.row - 2, heading: Math.atan2(p.cell.row - 2, p.cell.col - 2), side: 'ally', hp: 1, maxHp: 1, category: templates.find(t => t.id === p.unitId)?.category ?? 'infantry' }));
     const seen = new Set();

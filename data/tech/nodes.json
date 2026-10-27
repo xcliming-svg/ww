@@ -9,7 +9,9 @@
     "descriptionKey": "tech.hq.description",
     "assetId": "building.hq.idle",
     "roleTags": [],
-    "startsUnlocked": true
+    "startsUnlocked": true,
+    "minWave": 1,
+    "revealParentIds": []
   },
   {
     "id": "rifleR",
@@ -23,7 +25,11 @@
     "descriptionKey": "tech.rifleR.description",
     "assetId": "tech.research",
     "roleTags": [],
-    "startsUnlocked": true
+    "startsUnlocked": true,
+    "minWave": 1,
+    "revealParentIds": [
+      "barracks"
+    ]
   },
   {
     "id": "rifle",
@@ -37,19 +43,29 @@
     "descriptionKey": "tech.rifle.description",
     "assetId": "unit.rifle.idle",
     "roleTags": [],
-    "startsUnlocked": false
+    "startsUnlocked": false,
+    "minWave": 1,
+    "revealParentIds": [
+      "rifleR"
+    ]
   },
   {
     "id": "barracks",
     "kind": "building",
-    "parentIds": [],
+    "parentIds": [
+      "hq"
+    ],
     "producerId": null,
     "unlocksUnitId": null,
     "labelKey": "tech.barracks.name",
     "descriptionKey": "tech.barracks.description",
     "assetId": "tech.building",
     "roleTags": [],
-    "startsUnlocked": true
+    "startsUnlocked": true,
+    "minWave": 1,
+    "revealParentIds": [
+      "hq"
+    ]
   },
   {
     "id": "mgR",
@@ -63,7 +79,11 @@
     "descriptionKey": "tech.mgR.description",
     "assetId": "tech.research",
     "roleTags": [],
-    "startsUnlocked": false
+    "startsUnlocked": false,
+    "minWave": 3,
+    "revealParentIds": [
+      "barracks"
+    ]
   },
   {
     "id": "mg",
@@ -77,7 +97,11 @@
     "descriptionKey": "tech.mg.description",
     "assetId": "unit.mg.idle",
     "roleTags": [],
-    "startsUnlocked": false
+    "startsUnlocked": false,
+    "minWave": 1,
+    "revealParentIds": [
+      "mgR"
+    ]
   },
   {
     "id": "mortarR",
@@ -91,7 +115,11 @@
     "descriptionKey": "tech.mortarR.description",
     "assetId": "tech.research",
     "roleTags": [],
-    "startsUnlocked": false
+    "startsUnlocked": false,
+    "minWave": 6,
+    "revealParentIds": [
+      "barracks"
+    ]
   },
   {
     "id": "mortar",
@@ -105,7 +133,11 @@
     "descriptionKey": "tech.mortar.description",
     "assetId": "unit.mortar.idle",
     "roleTags": [],
-    "startsUnlocked": false
+    "startsUnlocked": false,
+    "minWave": 1,
+    "revealParentIds": [
+      "mortarR"
+    ]
   },
   {
     "id": "gunR",
@@ -119,7 +151,11 @@
     "descriptionKey": "tech.gunR.description",
     "assetId": "tech.research",
     "roleTags": [],
-    "startsUnlocked": false
+    "startsUnlocked": false,
+    "minWave": 14,
+    "revealParentIds": [
+      "mortarR"
+    ]
   },
   {
     "id": "gun",
@@ -133,7 +169,11 @@
     "descriptionKey": "tech.gun.description",
     "assetId": "unit.gun.idle",
     "roleTags": [],
-    "startsUnlocked": false
+    "startsUnlocked": false,
+    "minWave": 1,
+    "revealParentIds": [
+      "gunR"
+    ]
   },
   {
     "id": "atR",
@@ -147,7 +187,11 @@
     "descriptionKey": "tech.atR.description",
     "assetId": "tech.research",
     "roleTags": [],
-    "startsUnlocked": false
+    "startsUnlocked": false,
+    "minWave": 9,
+    "revealParentIds": [
+      "barracks"
+    ]
   },
   {
     "id": "at",
@@ -161,19 +205,29 @@
     "descriptionKey": "tech.at.description",
     "assetId": "unit.at.idle",
     "roleTags": [],
-    "startsUnlocked": false
+    "startsUnlocked": false,
+    "minWave": 1,
+    "revealParentIds": [
+      "atR"
+    ]
   },
   {
     "id": "factory",
     "kind": "building",
-    "parentIds": [],
+    "parentIds": [
+      "atR"
+    ],
     "producerId": null,
     "unlocksUnitId": null,
     "labelKey": "tech.factory.name",
     "descriptionKey": "tech.factory.description",
     "assetId": "tech.building",
     "roleTags": [],
-    "startsUnlocked": false
+    "startsUnlocked": false,
+    "minWave": 12,
+    "revealParentIds": [
+      "hq"
+    ]
   },
   {
     "id": "carR",
@@ -187,7 +241,11 @@
     "descriptionKey": "tech.carR.description",
     "assetId": "tech.research",
     "roleTags": [],
-    "startsUnlocked": false
+    "startsUnlocked": false,
+    "minWave": 12,
+    "revealParentIds": [
+      "factory"
+    ]
   },
   {
     "id": "car",
@@ -201,7 +259,11 @@
     "descriptionKey": "tech.car.description",
     "assetId": "unit.car.idle",
     "roleTags": [],
-    "startsUnlocked": false
+    "startsUnlocked": false,
+    "minWave": 1,
+    "revealParentIds": [
+      "carR"
+    ]
   },
   {
     "id": "tankR",
@@ -215,7 +277,11 @@
     "descriptionKey": "tech.tankR.description",
     "assetId": "tech.research",
     "roleTags": [],
-    "startsUnlocked": false
+    "startsUnlocked": false,
+    "minWave": 18,
+    "revealParentIds": [
+      "carR"
+    ]
   },
   {
     "id": "tank",
@@ -229,7 +295,11 @@
     "descriptionKey": "tech.tank.description",
     "assetId": "unit.tank.idle",
     "roleTags": [],
-    "startsUnlocked": false
+    "startsUnlocked": false,
+    "minWave": 1,
+    "revealParentIds": [
+      "tankR"
+    ]
   },
   {
     "id": "heavyR",
@@ -243,7 +313,11 @@
     "descriptionKey": "tech.heavyR.description",
     "assetId": "tech.research",
     "roleTags": [],
-    "startsUnlocked": false
+    "startsUnlocked": false,
+    "minWave": 40,
+    "revealParentIds": [
+      "tankR"
+    ]
   },
   {
     "id": "heavy",
@@ -257,7 +331,11 @@
     "descriptionKey": "tech.heavy.description",
     "assetId": "unit.heavy.idle",
     "roleTags": [],
-    "startsUnlocked": false
+    "startsUnlocked": false,
+    "minWave": 1,
+    "revealParentIds": [
+      "heavyR"
+    ]
   },
   {
     "id": "destroyerR",
@@ -271,7 +349,11 @@
     "descriptionKey": "tech.destroyerR.description",
     "assetId": "tech.research",
     "roleTags": [],
-    "startsUnlocked": false
+    "startsUnlocked": false,
+    "minWave": 34,
+    "revealParentIds": [
+      "tankR"
+    ]
   },
   {
     "id": "destroyer",
@@ -285,19 +367,29 @@
     "descriptionKey": "tech.destroyer.description",
     "assetId": "unit.destroyer.idle",
     "roleTags": [],
-    "startsUnlocked": false
+    "startsUnlocked": false,
+    "minWave": 1,
+    "revealParentIds": [
+      "destroyerR"
+    ]
   },
   {
     "id": "airfield",
     "kind": "building",
-    "parentIds": [],
+    "parentIds": [
+      "carR"
+    ],
     "producerId": null,
     "unlocksUnitId": null,
     "labelKey": "tech.airfield.name",
     "descriptionKey": "tech.airfield.description",
     "assetId": "tech.building",
     "roleTags": [],
-    "startsUnlocked": false
+    "startsUnlocked": false,
+    "minWave": 30,
+    "revealParentIds": [
+      "hq"
+    ]
   },
   {
     "id": "fighterR",
@@ -311,7 +403,11 @@
     "descriptionKey": "tech.fighterR.description",
     "assetId": "tech.research",
     "roleTags": [],
-    "startsUnlocked": false
+    "startsUnlocked": false,
+    "minWave": 30,
+    "revealParentIds": [
+      "airfield"
+    ]
   },
   {
     "id": "fighter",
@@ -325,7 +421,11 @@
     "descriptionKey": "tech.fighter.description",
     "assetId": "unit.fighter.idle",
     "roleTags": [],
-    "startsUnlocked": false
+    "startsUnlocked": false,
+    "minWave": 1,
+    "revealParentIds": [
+      "fighterR"
+    ]
   },
   {
     "id": "attackerR",
@@ -339,7 +439,11 @@
     "descriptionKey": "tech.attackerR.description",
     "assetId": "tech.research",
     "roleTags": [],
-    "startsUnlocked": false
+    "startsUnlocked": false,
+    "minWave": 32,
+    "revealParentIds": [
+      "airfield"
+    ]
   },
   {
     "id": "attacker",
@@ -353,7 +457,11 @@
     "descriptionKey": "tech.attacker.description",
     "assetId": "unit.attacker.idle",
     "roleTags": [],
-    "startsUnlocked": false
+    "startsUnlocked": false,
+    "minWave": 1,
+    "revealParentIds": [
+      "attackerR"
+    ]
   },
   {
     "id": "bomberR",
@@ -367,7 +475,11 @@
     "descriptionKey": "tech.bomberR.description",
     "assetId": "tech.research",
     "roleTags": [],
-    "startsUnlocked": false
+    "startsUnlocked": false,
+    "minWave": 46,
+    "revealParentIds": [
+      "attackerR"
+    ]
   },
   {
     "id": "bomber",
@@ -381,6 +493,10 @@
     "descriptionKey": "tech.bomber.description",
     "assetId": "unit.bomber.idle",
     "roleTags": [],
-    "startsUnlocked": false
+    "startsUnlocked": false,
+    "minWave": 1,
+    "revealParentIds": [
+      "bomberR"
+    ]
   }
 ]

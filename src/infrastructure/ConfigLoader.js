@@ -1,7 +1,7 @@
 import { validateContent } from './schema-validators.js';
 import { validateTechGraph } from '../domain/tech/TechGraph.js';
 import { makeDomainConfig } from '../domain/model/ContentConfig.js';
-import balance from './BalanceConfig.js';
+import balance from './ImplementationBalanceConfig.js';
 const modules = import.meta.glob('/data/**/*.json', { eager: true, import: 'default' });
 const translations = import.meta.glob('/locales/*.json', { eager: true, import: 'default' });
 import desktop from '../../desktop/builder.json';

@@ -13,7 +13,8 @@ export function startWave(state, config) {
   if (!validateState(state, config)) return failure('INVALID_STATE');
   if (state.phase !== 'preparation') return failure('PHASE_LOCKED');
   if (state.mode !== 'campaign') return failure('RULES_UNRESOLVED');
-  if (state.wave === 1 && state.placements.filter(p => p.unitId === 'rifle').length < 2) return failure('TUTORIAL_REQUIRED');
+  if (!state.buildingIds.includes('hq')) return failure('HQ_REQUIRED');
+  if (state.wave === 1 && !['1,2', '3,2'].every(cell => state.placements.some(p => p.unitId === 'rifle' && `${p.cell.row},${p.cell.col}` === cell))) return failure('TUTORIAL_REQUIRED');
   const next = structuredClone(state); next.checkpoint = structuredClone({ ...state, checkpoint: null }); next.phase = 'combat';
   return success(next);
 }

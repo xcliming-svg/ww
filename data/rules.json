@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 2,
-  "configVersion": "candidate-v11-refund1",
+  "schemaVersion": 3,
+  "configVersion": "candidate-v12-tech-tree",
   "contentVersion": "defense-100-v1",
   "maxWave": 100,
   "combatSeconds": 30,
@@ -10,13 +10,8 @@
     "col": 2
   },
   "preview": {
-    "buildingIds": [
-      "hq",
-      "barracks"
-    ],
-    "researchIds": [
-      "rifleR"
-    ],
+    "buildingIds": [],
+    "researchIds": [],
     "formationStage": "3"
   },
   "decisions": {

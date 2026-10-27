@@ -35,5 +35,6 @@
   "data/simulation/probes.json",
   "data/balance/candidate-v11.json",
   "data/save/compatibility.json",
-  "data/ui/unit-filters.json"
+  "data/ui/unit-filters.json",
+  "data/balance/candidate-v12-tech-tree.json"
 ]

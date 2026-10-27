@@ -19,5 +19,12 @@
     2
   ],
   "defaultSpeed": 1,
-  "unitLabelSize": 8
+  "unitLabelSize": 8,
+  "actionMs": {
+    "building": 3000,
+    "research": 2000,
+    "unit": 50
+  },
+  "dragThresholdPx": 8,
+  "toastMs": 2200
 }

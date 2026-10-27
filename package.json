@@ -11,6 +11,10 @@
     "node": ">=24.0.0"
   },
   "scripts": {
+    "generate:validators": "node tools/generate-validators.mjs",
+    "predev": "npm run generate:validators",
+    "prebuild": "npm run generate:validators",
+    "precheck:all": "npm run generate:validators",
     "dev": "vite --host 127.0.0.1",
     "build": "vite build",
     "desktop": "electron .",
@@ -27,7 +31,9 @@
     "check:all": "node tools/check-all.mjs",
     "balance:simulate": "node tools/balance-sim.mjs",
     "balance:report": "node tools/balance-report.mjs",
-    "balance:compare": "node tools/balance-compare.mjs"
+    "balance:compare": "node tools/balance-compare.mjs",
+    "precheck:schemas": "npm run generate:validators",
+    "precheck:package": "npm run generate:validators"
   },
   "dependencies": {
     "phaser": "4.2.1",

@@ -1,9 +1,10 @@
+import { isUnlocked } from '../domain/tech/TechGraph.js';
 import { createCampaign, startWave, resolveWave, advanceCampaign, retryWave } from '../domain/model/Campaign.js';
 import { dispatchPreparationCommand } from '../domain/economy/EconomyService.js';
 import { planWave, getRecon } from '../domain/waves/WavePlanner.js';
 import { failure } from '../domain/util/Result.js';
 import { getDesktop } from '../infrastructure/DesktopBridge.js';
-import balance from '../infrastructure/BalanceConfig.js';
+import balance from '../infrastructure/ImplementationBalanceConfig.js';
 import content from '../../data/waves/content.json';
 import layout from '../../data/ui/layout.json';
 import localeManifest from '../../locales/manifest.json';
@@ -12,7 +13,7 @@ export class GameCoordinator {
   /** @type {Set<()=>void>} */ frameListeners = new Set();
   /** @type {import('../domain/model/contracts.js').GameState|null} */ state = null;
   screen = 'title'; selectedId = 'hq'; selectedInstance = ''; selectedUnit = ''; errorKey = ''; noticeKey = ''; noticeNameKey = ''; saveStatus = 'hud.unsaved';
-  calculating = false; loading = false; quitting = false; paused = false; elapsedMs = 0;
+  calculating = false; loading = false; quitting = false; animationLock = false; paused = false; elapsedMs = 0;
   /** @type {ReturnType<import('../domain/systems/StepSimulation.js').simulateBattle>|null} */ playback = null;
   /** @type {import('../domain/systems/StepSimulation.js').CombatFrame|null} */ frame = null;
   /** @type {Worker|null} */ worker = null;
@@ -39,13 +40,13 @@ export class GameCoordinator {
   get plan() { return this.state ? planWave(this.state.wave, this.state.seed, balance, content) : null; }
   get recon() { return this.plan ? getRecon(this.plan) : []; }
   newGame() {
-    if (this.calculating || this.loading || this.quitting || this.state?.phase === 'combat') return;
+    if (this.calculating || this.loading || this.quitting || this.state?.phase === 'combat' || this.animationLock) return;
     this.worker?.terminate(); this.worker = null; this.playback = null; this.frame = null; this.calculating = false;
     const seed = crypto.getRandomValues(new Uint32Array(1))[0]; this.state = createCampaign(this.config, balance, seed, crypto.randomUUID());
-    this.screen = 'game'; this.elapsedMs = 0; this.selectedId = 'rifle'; this.selectedUnit = 'rifle'; this.selectedInstance = ''; this.errorKey = ''; this.noticeKey = ''; this.scheduleSave(); this.emit();
+    this.screen = 'game'; this.elapsedMs = 0; this.selectedId = 'hq'; this.selectedUnit = ''; this.selectedInstance = ''; this.errorKey = ''; this.noticeKey = ''; this.scheduleSave(); this.emit();
   }
   /** @param {boolean} [backup] */ async load(backup = false) {
-    if (this.state?.phase === 'combat' || this.calculating || this.loading || this.quitting) return;
+    if (this.state?.phase === 'combat' || this.calculating || this.loading || this.quitting || this.animationLock) return;
     this.loading = true;
     if (!backup && this.state && this.saveStatus !== 'hud.saved' && !await this.flushSave()) { this.loading = false; this.emit(); return; }
     clearTimeout(this.saveTimer); await this.saves.flush(); const result = await this.saves.load(backup); this.loading = false;
@@ -56,7 +57,7 @@ export class GameCoordinator {
   /** @param {Omit<import('../domain/model/contracts.js').PreparationCommand,'commandId'>} command */
   command(command) {
     if (!this.state) return false;
-    if (this.calculating || this.loading || this.quitting) { this.errorKey = 'error.PHASE_LOCKED'; this.emit(); return false; }
+    if (this.calculating || this.loading || this.quitting || this.animationLock) { this.errorKey = 'error.PHASE_LOCKED'; this.emit(); return false; }
     const result = dispatchPreparationCommand(this.state, { ...command, commandId: crypto.randomUUID() }, this.config);
     if (result.ok) {
       this.state = result.data; this.errorKey = ''; this.noticeKey = '';
@@ -69,7 +70,10 @@ export class GameCoordinator {
   }
   /** @param {string} id */ selectNode(id) {
     this.selectedId = id; this.selectedUnit = ''; this.selectedInstance = '';
-    if (this.state?.phase === 'preparation') this.command({ type: 'acknowledge', nodeId: id }); else this.emit();
+    if (this.state?.phase === 'preparation' && !this.animationLock) {
+      const node = this.config.nodes.find(n => n.id === id);
+      if (node && this.state.revealedNodeIds.includes(id) && isUnlocked(node, this.state, this.config.nodes) && !this.state.acknowledgedNodeIds.includes(id)) this.command({ type: 'acknowledge', nodeId: id }); else this.emit();
+    } else this.emit();
   }
   /** @param {import('../domain/model/contracts.js').Cell} cell */ selectCell(cell) {
     if (!this.state || this.state.phase !== 'preparation') return;
@@ -82,7 +86,7 @@ export class GameCoordinator {
   }
   cancelTool() { this.selectedUnit = ''; this.selectedInstance = ''; this.emit(); }
   async beginCombat() {
-    if (!this.state || this.calculating || this.loading || this.quitting) return;
+    if (!this.state || this.calculating || this.loading || this.quitting || this.animationLock) return;
     const started = startWave(this.state, this.config);
     if (!started.ok) { this.errorKey = started.messageKey; this.emit(); return; }
     this.calculating = true; this.emit();
@@ -115,7 +119,7 @@ export class GameCoordinator {
     this.emit();
   }
   next() {
-    if (!this.state || this.loading || this.calculating || this.quitting) return;
+    if (!this.state || this.loading || this.calculating || this.quitting || this.animationLock) return;
     const result = this.state.phase === 'defeat' ? retryWave(this.state) : advanceCampaign(this.state, balance);
     if (result.ok) { this.state = result.data; this.frame = null; this.elapsedMs = 0; this.errorKey = ''; this.noticeKey = ''; this.scheduleSave(); } else this.errorKey = result.messageKey;
     this.emit();

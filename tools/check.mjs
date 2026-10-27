@@ -4,7 +4,7 @@ import { createHash } from 'node:crypto';
 import { spawnSync } from 'node:child_process';
 import ts from 'typescript';
 import Ajv from 'ajv';
-import { validateContent, validateSave, validateSaveV1 } from '../src/infrastructure/schema-validators.js';
+import { validateContent, validateSave, validateSaveV1, validateSaveV2 } from '../src/infrastructure/schema-validators.js';
 import { validateTechGraph } from '../src/domain/tech/TechGraph.js';
 /** @param {string} file */ const read = async file => JSON.parse(await fs.readFile(file, 'utf8'));
 /** @param {string} dir @returns {Promise<string[]>} */
@@ -25,7 +25,7 @@ if (mode === 'schemas') {
   const ajv = new Ajv({ allErrors: true, strict: true });
   const contentSchema = await read('data/schemas/content.schema.json');
   const validate = ajv.compile(contentSchema); check(validate(data), JSON.stringify(validate.errors));
-  const saveSchemas = [await read('data/schemas/save-v1.schema.json'), await read('data/schemas/save.schema.json')];
+  const saveSchemas = [await read('data/schemas/save-v1.schema.json'), await read('data/schemas/save-v2.schema.json'), await read('data/schemas/save.schema.json')];
   /** JSON Schema checks only: no app, DOM, Phaser, storage, or game commands.
    * @param {string} name @param {import('ajv').ValidateFunction} reference
    * @param {(value:any)=>boolean} generated @param {any} value @param {boolean} expected */
@@ -46,9 +46,9 @@ if (mode === 'schemas') {
     supplies: 100, formationStage: '3', buildingIds: ['hq', 'barracks'], researchIds: ['rifleR'], upgradeLevels: {}, placements: [],
     commandIds: [], acknowledgedNodeIds: [], tutorialStep: 0, clearedWaveCount: 0, resolutionIds: [], hqHp: 450, checkpoint: null };
   for (const [index, schema] of saveSchemas.entries()) {
-    const reference = ajv.compile(schema); const generated = index === 0 ? validateSaveV1 : validateSave;
+    const reference = ajv.compile(schema); const generated = index === 0 ? validateSaveV1 : index === 1 ? validateSaveV2 : validateSave;
     const envelope = { schemaVersion: index + 1, configVersion: 'schema-fixture', contentVersion: 'schema-fixture', savedAt: '2026-10-26T00:00:00.000Z',
-      state: index === 0 ? state : { ...state, investments: [] }, checksum: '0'.repeat(64) };
+      state: index === 0 ? state : index === 1 ? { ...state, investments: [] } : { ...state, investments: [], revealedNodeIds: ['hq','barracks','rifleR'], legacyFreeNodeIds: [] }, checksum: '0'.repeat(64) };
     checkGenerated(`save-v${index + 1}/valid`, reference, generated, envelope, true);
     checkGenerated(`save-v${index + 1}/invalid`, reference, generated, { ...envelope, checksum: 'invalid' }, false);
     for (const extra of [0, 1]) {
@@ -58,7 +58,7 @@ if (mode === 'schemas') {
   }
   const allData = [...await walk('data'), ...await walk('locales')].filter(p => p.endsWith('.json') && !p.includes('/schemas/'));
   for (const p of allData) check(registry.includes(p), `Unregistered JSON: ${p}`);
-  const candidate = data[`data/balance/${data['data/balance/active.json'].candidate}.json`];
+  const candidate = data['data/balance/candidate-v12-tech-tree.json'];
   if (candidate.rewards) check(candidate.rewards.length === 100 && candidate.rewards.every((/** @type {number} */ r) => Number.isSafeInteger(r) && r >= 0), 'Reward coverage/range');
   check(candidate.fixedStepSeconds > 0 && candidate.maxTicks > 0 && candidate.spawnInterval >= 0, 'Invalid simulation boundaries');
   check(candidate.upgradeMultipliers.length === candidate.upgradeCostFactors.length, 'Upgrade length mismatch');
@@ -87,7 +87,28 @@ if (mode === 'schemas') {
 if (mode === 'graph') {
   const nodes = /** @type {import('../src/domain/model/contracts.js').TechNode[]} */ (data['data/tech/nodes.json']); errors.push(...validateTechGraph(nodes));
   check(nodes.length === 28 && nodes.filter(n => n.kind === 'research').length === 12 && nodes.filter(n => n.kind === 'unit').length === 12, '28/12/12 tree counts');
-  const stats = data[`data/balance/${data['data/balance/active.json'].candidate}.json`].units;
+  const required = {
+    hq: [1, []], barracks: [1, ['hq']], rifleR: [1, ['barracks']], rifle: [1, ['rifleR']],
+    mgR: [3, ['barracks']], mortarR: [6, ['barracks']], atR: [9, ['barracks']],
+    gunR: [14, ['mortarR']], factory: [12, ['atR']], carR: [12, ['factory']],
+    tankR: [18, ['carR']], airfield: [30, ['carR']], fighterR: [30, ['airfield']],
+    attackerR: [32, ['airfield']], destroyerR: [34, ['tankR']],
+    heavyR: [40, ['tankR']], bomberR: [46, ['attackerR']]
+  };
+  for (const [id, [wave, parents]] of Object.entries(required)) {
+    const n = nodes.find(node => node.id === id);
+    check(n && n.minWave === wave && JSON.stringify(n.parentIds) === JSON.stringify(parents), `Tech gate:${id}`);
+  }
+  const hq = nodes.find(n => n.id === 'hq');
+  check(hq?.revealParentIds.length === 0 && nodes.filter(n => n.revealParentIds.length === 0).length === 1, 'HQ-only starting reveal');
+  check(JSON.stringify(nodes.filter(n => n.revealParentIds.includes('hq')).map(n => n.id).sort()) === JSON.stringify(['airfield','barracks','factory']), 'HQ reveal frontier');
+  check(nodes.filter(n => n.kind === 'unit').every(n => n.minWave === 1 && n.revealParentIds.length === 1 && n.revealParentIds[0] === n.parentIds[0]), 'Unit unlock/reveal contract');
+  const hint = data['data/tech/layout-hints.json'];
+  check(hint.nodeWidth === hint.nodeHeight && hint.nodeWidth > 0, 'Square node dimensions');
+  const startup = data['data/balance/candidate-v12-tech-tree.json'];
+  check(startup.initialSupplies === 160 && startup.costs.hq === 30 && startup.costs.barracks === 30, 'Opening costs');
+  check(startup.initialSupplies - startup.costs.hq - startup.costs.barracks - startup.costs.rifleR - startup.costs.rifle * 2 === 20, 'Opening two rifle balance');
+  const stats = data['data/balance/candidate-v12-tech-tree.json'].units;
   for (const p of data['data/tech/progression.json']) {
     check(stats[p.from] && stats[p.to], `Missing progression unit:${p.to}`);
     check(stats[p.to].damage * stats[p.to].modifiers[p.focus] / stats[p.to].cooldown > stats[p.from].damage * stats[p.from].modifiers[p.focus] / stats[p.from].cooldown || stats[p.to].hp > stats[p.from].hp || stats[p.to].range > stats[p.from].range, `No progression benefit:${p.to}`);
@@ -158,6 +179,11 @@ if (mode === 'deps') {
   for (const file of files) visit(file);
 }
 if (mode === 'package') {
+  // Offline renderer must never use Ajv.compile / Function-constructor under CSP.
+  const staticValidators = await fs.readFile('src/infrastructure/schema-validators.js', 'utf8');
+  check(staticValidators.includes('Generated by tools/generate-validators.mjs'), 'Schema validators must be precompiled');
+  check(!/\bnew\s+Ajv\s*\(|\bnew\s+Function\s*\(/.test(staticValidators), 'CSP-unsafe runtime schema compilation');
+  check(!/\bfrom\s+['"]ajv['"]/.test(staticValidators), 'Bundled Ajv compiler in runtime validator');
   const pkg = await read('package.json'), lock = await read('package-lock.json');
   check(pkg.dependencies.phaser === '4.2.1', 'Phaser version'); check(lock.packages[''].dependencies.phaser === pkg.dependencies.phaser, 'Lockfile dependency mismatch');
   for (const version of Object.values({ ...pkg.dependencies, ...pkg.devDependencies })) check(/^\d+\.\d+\.\d+$/.test(String(version)), `Unpinned dependency:${version}`);

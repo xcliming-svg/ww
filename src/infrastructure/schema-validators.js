@@ -4,9 +4,9 @@ import ucs2lengthModule from "ajv/dist/runtime/ucs2length.js";
 const ucs2length = typeof ucs2lengthModule === "function" ? ucs2lengthModule : ucs2lengthModule.default;
 "use strict";
 export const validateContent = validate21;
-const schema6 = {"$schema":"http://json-schema.org/draft-07/schema#","type":"object","additionalProperties":false,"required":["data/tech/nodes.json","data/tech/layout-hints.json","data/tech/progression.json","data/formation/layouts.json","data/formation/unlocks.json","data/balance/economy.json","data/balance/prototypeReference.json","data/units/upgrade-profiles.json","data/units/templates.json","data/rules.json","data/simulation/criteria.json","data/ui/layout.json","data/ui/input.json","data/ui/tutorial.json","data/ui/theme.json","data/assets/slots.json","data/assets/licenses.json","locales/ko-KR.json","locales/manifest.json","desktop/builder.json","data/balance/candidate-v1.json","data/waves/content.json","data/simulation/policy-profiles.json","data/balance/candidate-v2.json","data/balance/candidate-v3.json","data/balance/candidate-v4.json","data/balance/candidate-v5.json","data/balance/candidate-v6.json","data/balance/candidate-v7.json","data/balance/candidate-v8.json","data/balance/candidate-v9.json","data/balance/candidate-v10.json","data/balance/active.json","data/simulation/probes.json","data/balance/candidate-v11.json","data/save/compatibility.json","data/ui/unit-filters.json"],"properties":{"data/tech/nodes.json":{"$ref":"#/definitions/file0"},"data/tech/layout-hints.json":{"$ref":"#/definitions/file1"},"data/tech/progression.json":{"$ref":"#/definitions/file2"},"data/formation/layouts.json":{"$ref":"#/definitions/file3"},"data/formation/unlocks.json":{"$ref":"#/definitions/file4"},"data/balance/economy.json":{"$ref":"#/definitions/file5"},"data/balance/prototypeReference.json":{"$ref":"#/definitions/file6"},"data/units/upgrade-profiles.json":{"$ref":"#/definitions/file7"},"data/units/templates.json":{"$ref":"#/definitions/file8"},"data/rules.json":{"$ref":"#/definitions/file9"},"data/simulation/criteria.json":{"$ref":"#/definitions/file10"},"data/ui/layout.json":{"$ref":"#/definitions/file11"},"data/ui/input.json":{"$ref":"#/definitions/file12"},"data/ui/tutorial.json":{"$ref":"#/definitions/file13"},"data/ui/theme.json":{"$ref":"#/definitions/file14"},"data/assets/slots.json":{"$ref":"#/definitions/file15"},"data/assets/licenses.json":{"$ref":"#/definitions/file16"},"locales/ko-KR.json":{"$ref":"#/definitions/file17"},"locales/manifest.json":{"$ref":"#/definitions/file18"},"desktop/builder.json":{"$ref":"#/definitions/file19"},"data/balance/candidate-v1.json":{"$ref":"#/definitions/file20"},"data/waves/content.json":{"$ref":"#/definitions/file21"},"data/simulation/policy-profiles.json":{"$ref":"#/definitions/file22"},"data/balance/candidate-v2.json":{"$ref":"#/definitions/file20"},"data/balance/candidate-v3.json":{"$ref":"#/definitions/file20"},"data/balance/candidate-v4.json":{"$ref":"#/definitions/file20"},"data/balance/candidate-v5.json":{"$ref":"#/definitions/file20"},"data/balance/candidate-v6.json":{"$ref":"#/definitions/file20"},"data/balance/candidate-v7.json":{"$ref":"#/definitions/file20"},"data/balance/candidate-v8.json":{"$ref":"#/definitions/file20"},"data/balance/candidate-v9.json":{"$ref":"#/definitions/file20"},"data/balance/candidate-v10.json":{"$ref":"#/definitions/file31"},"data/balance/active.json":{"$ref":"#/definitions/file32"},"data/simulation/probes.json":{"$ref":"#/definitions/file33"},"data/balance/candidate-v11.json":{"$ref":"#/definitions/file34"},"data/save/compatibility.json":{"$ref":"#/definitions/file35"},"data/ui/unit-filters.json":{"$ref":"#/definitions/file36"}},"definitions":{"file0":{"type":"array","minItems":28,"maxItems":28,"items":{"type":"object","additionalProperties":false,"required":["id","kind","parentIds","producerId","unlocksUnitId","labelKey","descriptionKey","assetId","roleTags","startsUnlocked"],"properties":{"id":{"type":"string","minLength":1,"maxLength":128},"kind":{"enum":["hq","building","research","unit"]},"parentIds":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true},"producerId":{"type":["string","null"]},"unlocksUnitId":{"type":["string","null"]},"labelKey":{"type":"string","minLength":1,"maxLength":128},"descriptionKey":{"type":"string","minLength":1,"maxLength":128},"assetId":{"type":"string","minLength":1,"maxLength":128},"roleTags":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true},"startsUnlocked":{"type":"boolean"}}}},"file1":{"type":"object","additionalProperties":false,"required":["width","height","nodeWidth","nodeHeight","positions","rootLinks"],"properties":{"width":{"type":"integer","minimum":0,"maximum":9007199254740991},"height":{"type":"integer","minimum":0,"maximum":9007199254740991},"nodeWidth":{"type":"integer","minimum":0,"maximum":9007199254740991},"nodeHeight":{"type":"integer","minimum":0,"maximum":9007199254740991},"positions":{"type":"object","additionalProperties":false,"required":["hq","rifleR","rifle","barracks","mgR","mg","mortarR","mortar","gunR","gun","atR","at","factory","carR","car","tankR","tank","heavyR","heavy","destroyerR","destroyer","airfield","fighterR","fighter","attackerR","attacker","bomberR","bomber"],"properties":{"hq":{"type":"object","additionalProperties":false,"required":["x","y"],"properties":{"x":{"type":"integer","minimum":0,"maximum":9007199254740991},"y":{"type":"integer","minimum":0,"maximum":9007199254740991}}},"rifleR":{"type":"object","additionalProperties":false,"required":["x","y"],"properties":{"x":{"type":"integer","minimum":0,"maximum":9007199254740991},"y":{"type":"integer","minimum":0,"maximum":9007199254740991}}},"rifle":{"type":"object","additionalProperties":false,"required":["x","y"],"properties":{"x":{"type":"integer","minimum":0,"maximum":9007199254740991},"y":{"type":"integer","minimum":0,"maximum":9007199254740991}}},"barracks":{"type":"object","additionalProperties":false,"required":["x","y"],"properties":{"x":{"type":"integer","minimum":0,"maximum":9007199254740991},"y":{"type":"integer","minimum":0,"maximum":9007199254740991}}},"mgR":{"type":"object","additionalProperties":false,"required":["x","y"],"properties":{"x":{"type":"integer","minimum":0,"maximum":9007199254740991},"y":{"type":"integer","minimum":0,"maximum":9007199254740991}}},"mg":{"type":"object","additionalProperties":false,"required":["x","y"],"properties":{"x":{"type":"integer","minimum":0,"maximum":9007199254740991},"y":{"type":"integer","minimum":0,"maximum":9007199254740991}}},"mortarR":{"type":"object","additionalProperties":false,"required":["x","y"],"properties":{"x":{"type":"integer","minimum":0,"maximum":9007199254740991},"y":{"type":"integer","minimum":0,"maximum":9007199254740991}}},"mortar":{"type":"object","additionalProperties":false,"required":["x","y"],"properties":{"x":{"type":"integer","minimum":0,"maximum":9007199254740991},"y":{"type":"integer","minimum":0,"maximum":9007199254740991}}},"gunR":{"type":"object","additionalProperties":false,"required":["x","y"],"properties":{"x":{"type":"integer","minimum":0,"maximum":9007199254740991},"y":{"type":"integer","minimum":0,"maximum":9007199254740991}}},"gun":{"type":"object","additionalProperties":false,"required":["x","y"],"properties":{"x":{"type":"integer","minimum":0,"maximum":9007199254740991},"y":{"type":"integer","minimum":0,"maximum":9007199254740991}}},"atR":{"type":"object","additionalProperties":false,"required":["x","y"],"properties":{"x":{"type":"integer","minimum":0,"maximum":9007199254740991},"y":{"type":"integer","minimum":0,"maximum":9007199254740991}}},"at":{"type":"object","additionalProperties":false,"required":["x","y"],"properties":{"x":{"type":"integer","minimum":0,"maximum":9007199254740991},"y":{"type":"integer","minimum":0,"maximum":9007199254740991}}},"factory":{"type":"object","additionalProperties":false,"required":["x","y"],"properties":{"x":{"type":"integer","minimum":0,"maximum":9007199254740991},"y":{"type":"integer","minimum":0,"maximum":9007199254740991}}},"carR":{"type":"object","additionalProperties":false,"required":["x","y"],"properties":{"x":{"type":"integer","minimum":0,"maximum":9007199254740991},"y":{"type":"integer","minimum":0,"maximum":9007199254740991}}},"car":{"type":"object","additionalProperties":false,"required":["x","y"],"properties":{"x":{"type":"integer","minimum":0,"maximum":9007199254740991},"y":{"type":"integer","minimum":0,"maximum":9007199254740991}}},"tankR":{"type":"object","additionalProperties":false,"required":["x","y"],"properties":{"x":{"type":"integer","minimum":0,"maximum":9007199254740991},"y":{"type":"integer","minimum":0,"maximum":9007199254740991}}},"tank":{"type":"object","additionalProperties":false,"required":["x","y"],"properties":{"x":{"type":"integer","minimum":0,"maximum":9007199254740991},"y":{"type":"integer","minimum":0,"maximum":9007199254740991}}},"heavyR":{"type":"object","additionalProperties":false,"required":["x","y"],"properties":{"x":{"type":"integer","minimum":0,"maximum":9007199254740991},"y":{"type":"integer","minimum":0,"maximum":9007199254740991}}},"heavy":{"type":"object","additionalProperties":false,"required":["x","y"],"properties":{"x":{"type":"integer","minimum":0,"maximum":9007199254740991},"y":{"type":"integer","minimum":0,"maximum":9007199254740991}}},"destroyerR":{"type":"object","additionalProperties":false,"required":["x","y"],"properties":{"x":{"type":"integer","minimum":0,"maximum":9007199254740991},"y":{"type":"integer","minimum":0,"maximum":9007199254740991}}},"destroyer":{"type":"object","additionalProperties":false,"required":["x","y"],"properties":{"x":{"type":"integer","minimum":0,"maximum":9007199254740991},"y":{"type":"integer","minimum":0,"maximum":9007199254740991}}},"airfield":{"type":"object","additionalProperties":false,"required":["x","y"],"properties":{"x":{"type":"integer","minimum":0,"maximum":9007199254740991},"y":{"type":"integer","minimum":0,"maximum":9007199254740991}}},"fighterR":{"type":"object","additionalProperties":false,"required":["x","y"],"properties":{"x":{"type":"integer","minimum":0,"maximum":9007199254740991},"y":{"type":"integer","minimum":0,"maximum":9007199254740991}}},"fighter":{"type":"object","additionalProperties":false,"required":["x","y"],"properties":{"x":{"type":"integer","minimum":0,"maximum":9007199254740991},"y":{"type":"integer","minimum":0,"maximum":9007199254740991}}},"attackerR":{"type":"object","additionalProperties":false,"required":["x","y"],"properties":{"x":{"type":"integer","minimum":0,"maximum":9007199254740991},"y":{"type":"integer","minimum":0,"maximum":9007199254740991}}},"attacker":{"type":"object","additionalProperties":false,"required":["x","y"],"properties":{"x":{"type":"integer","minimum":0,"maximum":9007199254740991},"y":{"type":"integer","minimum":0,"maximum":9007199254740991}}},"bomberR":{"type":"object","additionalProperties":false,"required":["x","y"],"properties":{"x":{"type":"integer","minimum":0,"maximum":9007199254740991},"y":{"type":"integer","minimum":0,"maximum":9007199254740991}}},"bomber":{"type":"object","additionalProperties":false,"required":["x","y"],"properties":{"x":{"type":"integer","minimum":0,"maximum":9007199254740991},"y":{"type":"integer","minimum":0,"maximum":9007199254740991}}}}},"rootLinks":{"type":"array","items":{"type":"string"}}}},"file2":{"type":"array","items":{"type":"object","additionalProperties":false,"required":["from","to","focus"],"properties":{"from":{"type":"string"},"to":{"type":"string"},"focus":{"type":"string"}}}},"file3":{"type":"object","required":["3","5","9","13","25"],"additionalProperties":false,"properties":{"3":{"type":"array","items":{"type":"object","required":["row","col"],"additionalProperties":false,"properties":{"row":{"type":"integer","minimum":0},"col":{"type":"integer","minimum":0}}}},"5":{"type":"array","items":{"type":"object","required":["row","col"],"additionalProperties":false,"properties":{"row":{"type":"integer","minimum":0},"col":{"type":"integer","minimum":0}}}},"9":{"type":"array","items":{"type":"object","required":["row","col"],"additionalProperties":false,"properties":{"row":{"type":"integer","minimum":0},"col":{"type":"integer","minimum":0}}}},"13":{"type":"array","items":{"type":"object","required":["row","col"],"additionalProperties":false,"properties":{"row":{"type":"integer","minimum":0},"col":{"type":"integer","minimum":0}}}},"25":{"type":"array","items":{"type":"object","required":["row","col"],"additionalProperties":false,"properties":{"row":{"type":"integer","minimum":0},"col":{"type":"integer","minimum":0}}}}}},"file4":{"type":"object","additionalProperties":false,"required":["status","waves"],"properties":{"status":{"type":"string"},"waves":{"type":"object","additionalProperties":false,"required":["3","5","9","13","25"],"properties":{"3":{"type":"integer","minimum":1,"maximum":100},"5":{"type":"integer","minimum":1,"maximum":100},"9":{"type":"integer","minimum":1,"maximum":100},"13":{"type":"integer","minimum":1,"maximum":100},"25":{"type":"integer","minimum":1,"maximum":100}}}}},"file5":{"type":"object","additionalProperties":false,"required":["status","initialSupplies","hqHp","costs","rewards"],"properties":{"status":{"enum":["unresolved","candidate","approved"]},"initialSupplies":{"anyOf":[{"type":"integer","minimum":0,"maximum":9007199254740991},{"type":"null"}]},"hqHp":{"anyOf":[{"type":"integer","minimum":1},{"type":"null"}]},"costs":{"type":"object","required":["hq","rifleR","rifle","barracks","mgR","mg","mortarR","mortar","gunR","gun","atR","at","factory","carR","car","tankR","tank","heavyR","heavy","destroyerR","destroyer","airfield","fighterR","fighter","attackerR","attacker","bomberR","bomber"],"additionalProperties":false,"properties":{"hq":{"anyOf":[{"type":"integer","minimum":0,"maximum":9007199254740991},{"type":"null"}]},"rifleR":{"anyOf":[{"type":"integer","minimum":0,"maximum":9007199254740991},{"type":"null"}]},"rifle":{"anyOf":[{"type":"integer","minimum":0,"maximum":9007199254740991},{"type":"null"}]},"barracks":{"anyOf":[{"type":"integer","minimum":0,"maximum":9007199254740991},{"type":"null"}]},"mgR":{"anyOf":[{"type":"integer","minimum":0,"maximum":9007199254740991},{"type":"null"}]},"mg":{"anyOf":[{"type":"integer","minimum":0,"maximum":9007199254740991},{"type":"null"}]},"mortarR":{"anyOf":[{"type":"integer","minimum":0,"maximum":9007199254740991},{"type":"null"}]},"mortar":{"anyOf":[{"type":"integer","minimum":0,"maximum":9007199254740991},{"type":"null"}]},"gunR":{"anyOf":[{"type":"integer","minimum":0,"maximum":9007199254740991},{"type":"null"}]},"gun":{"anyOf":[{"type":"integer","minimum":0,"maximum":9007199254740991},{"type":"null"}]},"atR":{"anyOf":[{"type":"integer","minimum":0,"maximum":9007199254740991},{"type":"null"}]},"at":{"anyOf":[{"type":"integer","minimum":0,"maximum":9007199254740991},{"type":"null"}]},"factory":{"anyOf":[{"type":"integer","minimum":0,"maximum":9007199254740991},{"type":"null"}]},"carR":{"anyOf":[{"type":"integer","minimum":0,"maximum":9007199254740991},{"type":"null"}]},"car":{"anyOf":[{"type":"integer","minimum":0,"maximum":9007199254740991},{"type":"null"}]},"tankR":{"anyOf":[{"type":"integer","minimum":0,"maximum":9007199254740991},{"type":"null"}]},"tank":{"anyOf":[{"type":"integer","minimum":0,"maximum":9007199254740991},{"type":"null"}]},"heavyR":{"anyOf":[{"type":"integer","minimum":0,"maximum":9007199254740991},{"type":"null"}]},"heavy":{"anyOf":[{"type":"integer","minimum":0,"maximum":9007199254740991},{"type":"null"}]},"destroyerR":{"anyOf":[{"type":"integer","minimum":0,"maximum":9007199254740991},{"type":"null"}]},"destroyer":{"anyOf":[{"type":"integer","minimum":0,"maximum":9007199254740991},{"type":"null"}]},"airfield":{"anyOf":[{"type":"integer","minimum":0,"maximum":9007199254740991},{"type":"null"}]},"fighterR":{"anyOf":[{"type":"integer","minimum":0,"maximum":9007199254740991},{"type":"null"}]},"fighter":{"anyOf":[{"type":"integer","minimum":0,"maximum":9007199254740991},{"type":"null"}]},"attackerR":{"anyOf":[{"type":"integer","minimum":0,"maximum":9007199254740991},{"type":"null"}]},"attacker":{"anyOf":[{"type":"integer","minimum":0,"maximum":9007199254740991},{"type":"null"}]},"bomberR":{"anyOf":[{"type":"integer","minimum":0,"maximum":9007199254740991},{"type":"null"}]},"bomber":{"anyOf":[{"type":"integer","minimum":0,"maximum":9007199254740991},{"type":"null"}]}}},"rewards":{"type":["object","null"]}}},"file6":{"type":"object","additionalProperties":false,"required":["source","status","costs"],"properties":{"source":{"type":"string"},"status":{"type":"string"},"costs":{"type":"object","additionalProperties":false,"required":["rifle","mgR","mg","mortarR","mortar","gunR","gun","atR","at","factory","carR","car","tankR","tank","heavyR","heavy","destroyerR","destroyer","airfield","fighterR","fighter","attackerR","attacker","bomberR","bomber"],"properties":{"rifle":{"type":"integer","minimum":0,"maximum":9007199254740991},"mgR":{"type":"integer","minimum":0,"maximum":9007199254740991},"mg":{"type":"integer","minimum":0,"maximum":9007199254740991},"mortarR":{"type":"integer","minimum":0,"maximum":9007199254740991},"mortar":{"type":"integer","minimum":0,"maximum":9007199254740991},"gunR":{"type":"integer","minimum":0,"maximum":9007199254740991},"gun":{"type":"integer","minimum":0,"maximum":9007199254740991},"atR":{"type":"integer","minimum":0,"maximum":9007199254740991},"at":{"type":"integer","minimum":0,"maximum":9007199254740991},"factory":{"type":"integer","minimum":0,"maximum":9007199254740991},"carR":{"type":"integer","minimum":0,"maximum":9007199254740991},"car":{"type":"integer","minimum":0,"maximum":9007199254740991},"tankR":{"type":"integer","minimum":0,"maximum":9007199254740991},"tank":{"type":"integer","minimum":0,"maximum":9007199254740991},"heavyR":{"type":"integer","minimum":0,"maximum":9007199254740991},"heavy":{"type":"integer","minimum":0,"maximum":9007199254740991},"destroyerR":{"type":"integer","minimum":0,"maximum":9007199254740991},"destroyer":{"type":"integer","minimum":0,"maximum":9007199254740991},"airfield":{"type":"integer","minimum":0,"maximum":9007199254740991},"fighterR":{"type":"integer","minimum":0,"maximum":9007199254740991},"fighter":{"type":"integer","minimum":0,"maximum":9007199254740991},"attackerR":{"type":"integer","minimum":0,"maximum":9007199254740991},"attacker":{"type":"integer","minimum":0,"maximum":9007199254740991},"bomberR":{"type":"integer","minimum":0,"maximum":9007199254740991},"bomber":{"type":"integer","minimum":0,"maximum":9007199254740991}}}}},"file7":{"type":"array","items":{"type":"object","additionalProperties":false,"required":["id","labelKey","costs","multipliers"],"properties":{"id":{"type":"string","minLength":1,"maxLength":128},"labelKey":{"type":"string","minLength":1,"maxLength":128},"costs":{"anyOf":[{"type":"null"},{"type":"array","minItems":1,"maxItems":100,"items":{"type":"integer","minimum":0,"maximum":9007199254740991}}]},"multipliers":{"anyOf":[{"type":"null"},{"type":"array","minItems":1,"maxItems":100,"items":{"type":"number","exclusiveMinimum":0}}]}}}},"file8":{"type":"array","items":{"type":"object","additionalProperties":false,"required":["id","assetId","baseStatKey","costKey","category"],"properties":{"id":{"type":"string"},"assetId":{"type":"string"},"baseStatKey":{"type":"string"},"costKey":{"type":"string"},"category":{"type":"string"}}}},"file9":{"type":"object","required":["schemaVersion","configVersion","contentVersion","maxWave","combatSeconds","gridSize","hq","preview","decisions"],"additionalProperties":false,"properties":{"schemaVersion":{"type":"integer","minimum":0},"configVersion":{"type":"string","minLength":1},"contentVersion":{"type":"string","minLength":1},"maxWave":{"type":"integer","minimum":0},"combatSeconds":{"type":"integer","minimum":0},"gridSize":{"type":"integer","minimum":0},"hq":{"type":"object","required":["row","col"],"additionalProperties":false,"properties":{"row":{"type":"integer","minimum":0},"col":{"type":"integer","minimum":0}}},"preview":{"type":"object","required":["buildingIds","researchIds","formationStage"],"additionalProperties":false,"properties":{"buildingIds":{"type":"array","items":{"type":"string","minLength":1}},"researchIds":{"type":"array","items":{"type":"string","minLength":1}},"formationStage":{"type":"string","minLength":1}}},"decisions":{"type":"object","required":["D-01","D-02","D-03","D-04","D-05","D-06","D-07","D-08","D-09","D-10","D-11","D-12","D-13"],"additionalProperties":false,"properties":{"D-01":{"type":"string","minLength":1},"D-02":{"type":"string","minLength":1},"D-03":{"type":"string","minLength":1},"D-04":{"type":"string","minLength":1},"D-05":{"type":"string","minLength":1},"D-06":{"type":"string","minLength":1},"D-07":{"type":"string","minLength":1},"D-08":{"type":"string","minLength":1},"D-09":{"type":"string","minLength":1},"D-10":{"type":"string","minLength":1},"D-11":{"type":"string","minLength":1},"D-12":{"type":"string","minLength":1},"D-13":{"type":"string"}}}}},"file10":{"type":"object","required":["status","source","minimumSeeds","maximumSeeds","completionRate","wrongMaximumRate","maximumInvalid","maximumAccountingErrors","minimumPositionDifferences","minimumUpgradeDifferences"],"additionalProperties":false,"properties":{"status":{"type":"string","minLength":1},"source":{"type":"string","minLength":1},"minimumSeeds":{"type":"integer","minimum":0},"maximumSeeds":{"type":"integer","minimum":0},"completionRate":{"type":"object","required":["recon","mixed"],"additionalProperties":false,"properties":{"recon":{"type":"number","minimum":0},"mixed":{"type":"number","minimum":0}}},"wrongMaximumRate":{"type":"number","minimum":0},"maximumInvalid":{"type":"integer","minimum":0},"maximumAccountingErrors":{"type":"integer","minimum":0},"minimumPositionDifferences":{"type":"integer","minimum":0},"minimumUpgradeDifferences":{"type":"integer","minimum":0}}},"file11":{"type":"object","additionalProperties":false,"required":["treeRatio","battleRatio","minWidth","minHeight","worldSize","cellSize","gridOrigin","zoomMin","zoomMax","zoomStep","zoomInitial","minClickSize","fontSize","saveDelayMs","saveMaxBytes","speeds","defaultSpeed","unitLabelSize"],"properties":{"treeRatio":{"type":"integer","minimum":0,"maximum":9007199254740991},"battleRatio":{"type":"integer","minimum":0,"maximum":9007199254740991},"minWidth":{"type":"integer","minimum":0,"maximum":9007199254740991},"minHeight":{"type":"integer","minimum":0,"maximum":9007199254740991},"worldSize":{"type":"integer","minimum":1},"cellSize":{"type":"integer","minimum":0,"maximum":9007199254740991},"gridOrigin":{"type":"integer","minimum":0,"maximum":9007199254740991},"zoomMin":{"type":"number","minimum":0},"zoomMax":{"type":"number","minimum":0},"zoomStep":{"type":"number","minimum":0},"zoomInitial":{"type":"number","minimum":0},"minClickSize":{"type":"integer","minimum":0,"maximum":9007199254740991},"fontSize":{"type":"integer","minimum":0,"maximum":9007199254740991},"saveDelayMs":{"type":"integer","minimum":0,"maximum":9007199254740991},"saveMaxBytes":{"type":"integer","minimum":0,"maximum":9007199254740991},"speeds":{"type":"array","items":{"type":"integer","minimum":0,"maximum":9007199254740991}},"defaultSpeed":{"type":"integer","minimum":0,"maximum":9007199254740991},"unitLabelSize":{"type":"number"}}},"file12":{"type":"object","additionalProperties":false,"required":["cancel","help","zoomIn","zoomOut","start"],"properties":{"cancel":{"type":"array","items":{"type":"string"}},"help":{"type":"array","items":{"type":"string"}},"zoomIn":{"type":"array","items":{"type":"string"}},"zoomOut":{"type":"array","items":{"type":"string"}},"start":{"type":"array","items":{"type":"string"}}}},"file13":{"type":"object","additionalProperties":false,"required":["steps"],"properties":{"steps":{"type":"array","items":{"type":"string"}}}},"file14":{"type":"object","additionalProperties":false,"required":["ground","road","grid","hq","friendly","enemy","locked","text","default","unitLabel","unitLabelBackground"],"properties":{"ground":{"type":"integer","minimum":0,"maximum":9007199254740991},"road":{"type":"integer","minimum":0,"maximum":9007199254740991},"grid":{"type":"integer","minimum":0,"maximum":9007199254740991},"hq":{"type":"integer","minimum":0,"maximum":9007199254740991},"friendly":{"type":"integer","minimum":0,"maximum":9007199254740991},"enemy":{"type":"integer","minimum":0,"maximum":9007199254740991},"locked":{"type":"integer","minimum":0,"maximum":9007199254740991},"text":{"type":"integer","minimum":0,"maximum":9007199254740991},"default":{"type":"integer","minimum":0,"maximum":9007199254740991},"unitLabel":{"type":"string"},"unitLabelBackground":{"type":"string"}}},"file15":{"type":"array","minItems":95,"items":{"type":"object","additionalProperties":false,"required":["assetId","category","relativePath","fallbackKind","designSize","pivot","animationFrames","fpsKey","paletteKey","attributionId","status"],"properties":{"assetId":{"type":"string","minLength":1,"maxLength":128},"category":{"type":"string","minLength":1,"maxLength":128},"relativePath":{"type":["string","null"]},"fallbackKind":{"enum":["silent","system-font","pixel-shape"]},"designSize":{"type":"array","minItems":2,"maxItems":2,"items":{"type":"integer","minimum":1}},"pivot":{"type":"array","minItems":2,"maxItems":2,"items":{"type":"number","minimum":0,"maximum":1}},"animationFrames":{"type":"array","items":{"type":"integer","minimum":0,"maximum":9007199254740991}},"fpsKey":{"type":["string","null"]},"paletteKey":{"type":"string","minLength":1,"maxLength":128},"attributionId":{"type":"string","minLength":1,"maxLength":128},"status":{"enum":["placeholder","ready"]}}}},"file16":{"type":"object","additionalProperties":false,"required":["items"],"properties":{"items":{"type":"array","items":{"anyOf":[{"type":"object","additionalProperties":false,"required":["id","license","author","source","files"],"properties":{"id":{"type":"string"},"license":{"type":"string"},"author":{"type":"string"},"source":{"type":"string"},"files":{"type":"array","items":{"type":"object","additionalProperties":false,"required":["path","sha256"],"properties":{"path":{"type":"string"},"sha256":{"type":"string"}}}}}},{"type":"object","additionalProperties":false,"required":["id","license","author","source","files"],"properties":{"id":{"type":"string"},"license":{"type":"string"},"author":{"type":"string"},"source":{"type":"null"},"files":{"type":"array"}}}]}}}},"file17":{"type":"object","minProperties":1,"additionalProperties":{"type":"string","minLength":1}},"file18":{"type":"object","additionalProperties":false,"required":["defaultLocale","fallbackLocale","supportedLocales","fontAssetIds"],"properties":{"defaultLocale":{"type":"string"},"fallbackLocale":{"type":"string"},"supportedLocales":{"type":"array","items":{"type":"string"}},"fontAssetIds":{"type":"object","additionalProperties":false,"required":["ko-KR"],"properties":{"ko-KR":{"type":"string"}}}}},"file19":{"type":"object","additionalProperties":false,"required":["appId","productName","asar","directories","files","extraResources","win","npmRebuild"],"properties":{"appId":{"type":"string"},"productName":{"type":"string"},"asar":{"type":"boolean"},"directories":{"type":"object","additionalProperties":false,"required":["output"],"properties":{"output":{"type":"string"}}},"files":{"type":"array","items":{"type":"string"}},"extraResources":{"type":"array","items":{"type":"object","additionalProperties":false,"required":["from","to"],"properties":{"from":{"type":"string"},"to":{"type":"string"}}}},"win":{"type":"object","additionalProperties":false,"required":["target"],"properties":{"target":{"type":"array","items":{"type":"string"}}}},"npmRebuild":{"type":"boolean"}}},"file20":{"type":"object","required":["id","status","version","initialSupplies","hqHp","costs","units","rewardBase","rewardPerWave","upgradeMultipliers","upgradeCostFactors","fixedStepSeconds","maxTicks","frameStride","spawnDistance","spawnInterval","contactRange","enemyPowerPerWave","enemyCountBase","enemyCountWaveInterval","enemyCountGrowth","expansionWaves"],"additionalProperties":false,"properties":{"id":{"type":"string","minLength":1},"status":{"type":"string","minLength":1},"version":{"type":"integer","minimum":0},"initialSupplies":{"type":"integer","minimum":0},"hqHp":{"type":"integer","minimum":0},"costs":{"type":"object","required":["hq","rifleR","rifle","barracks","mgR","mg","mortarR","mortar","gunR","gun","atR","at","factory","carR","car","tankR","tank","heavyR","heavy","destroyerR","destroyer","airfield","fighterR","fighter","attackerR","attacker","bomberR","bomber"],"additionalProperties":false,"properties":{"hq":{"type":"integer","minimum":0},"rifleR":{"type":"integer","minimum":0},"rifle":{"type":"integer","minimum":0},"barracks":{"type":"integer","minimum":0},"mgR":{"type":"integer","minimum":0},"mg":{"type":"integer","minimum":0},"mortarR":{"type":"integer","minimum":0},"mortar":{"type":"integer","minimum":0},"gunR":{"type":"integer","minimum":0},"gun":{"type":"integer","minimum":0},"atR":{"type":"integer","minimum":0},"at":{"type":"integer","minimum":0},"factory":{"type":"integer","minimum":0},"carR":{"type":"integer","minimum":0},"car":{"type":"integer","minimum":0},"tankR":{"type":"integer","minimum":0},"tank":{"type":"integer","minimum":0},"heavyR":{"type":"integer","minimum":0},"heavy":{"type":"integer","minimum":0},"destroyerR":{"type":"integer","minimum":0},"destroyer":{"type":"integer","minimum":0},"airfield":{"type":"integer","minimum":0},"fighterR":{"type":"integer","minimum":0},"fighter":{"type":"integer","minimum":0},"attackerR":{"type":"integer","minimum":0},"attacker":{"type":"integer","minimum":0},"bomberR":{"type":"integer","minimum":0},"bomber":{"type":"integer","minimum":0}}},"units":{"type":"object","required":["rifle","mg","mortar","gun","at","car","tank","heavy","destroyer","fighter","attacker","bomber"],"additionalProperties":false,"properties":{"rifle":{"type":"object","required":["hp","damage","cooldown","range","arc","speed","cost","splash","modifiers","category"],"additionalProperties":false,"properties":{"hp":{"type":"integer","minimum":0},"damage":{"type":"integer","minimum":0},"cooldown":{"type":"number","minimum":0},"range":{"type":"integer","minimum":0},"arc":{"type":"integer","minimum":0},"speed":{"type":"number","minimum":0},"cost":{"type":"integer","minimum":0},"splash":{"type":"integer","minimum":0},"modifiers":{"type":"object","required":["infantry","armor","aircraft"],"additionalProperties":false,"properties":{"infantry":{"type":"integer","minimum":0},"armor":{"type":"number","minimum":0},"aircraft":{"type":"number","minimum":0}}},"category":{"type":"string","minLength":1}}},"mg":{"type":"object","required":["hp","damage","cooldown","range","arc","speed","cost","splash","modifiers","category"],"additionalProperties":false,"properties":{"hp":{"type":"integer","minimum":0},"damage":{"type":"integer","minimum":0},"cooldown":{"type":"number","minimum":0},"range":{"type":"number","minimum":0},"arc":{"type":"integer","minimum":0},"speed":{"type":"number","minimum":0},"cost":{"type":"integer","minimum":0},"splash":{"type":"integer","minimum":0},"modifiers":{"type":"object","required":["infantry","armor","aircraft"],"additionalProperties":false,"properties":{"infantry":{"type":"number","minimum":0},"armor":{"type":"number","minimum":0},"aircraft":{"type":"number","minimum":0}}},"category":{"type":"string","minLength":1}}},"mortar":{"type":"object","required":["hp","damage","cooldown","range","arc","speed","cost","splash","modifiers","category"],"additionalProperties":false,"properties":{"hp":{"type":"integer","minimum":0},"damage":{"type":"integer","minimum":0},"cooldown":{"type":"number","minimum":0},"range":{"type":"number","minimum":0},"arc":{"type":"integer","minimum":0},"speed":{"type":"number","minimum":0},"cost":{"type":"integer","minimum":0},"splash":{"type":"number","minimum":0},"modifiers":{"type":"object","required":["infantry","armor","aircraft"],"additionalProperties":false,"properties":{"infantry":{"type":"integer","minimum":0},"armor":{"type":"number","minimum":0},"aircraft":{"type":"number","minimum":0}}},"category":{"type":"string","minLength":1}}},"gun":{"type":"object","required":["hp","damage","cooldown","range","arc","speed","cost","splash","modifiers","category"],"additionalProperties":false,"properties":{"hp":{"type":"integer","minimum":0},"damage":{"type":"integer","minimum":0},"cooldown":{"type":"number","minimum":0},"range":{"type":"number","minimum":0},"arc":{"type":"integer","minimum":0},"speed":{"type":"number","minimum":0},"cost":{"type":"integer","minimum":0},"splash":{"type":"number","minimum":0},"modifiers":{"type":"object","required":["infantry","armor","aircraft"],"additionalProperties":false,"properties":{"infantry":{"type":"integer","minimum":0},"armor":{"type":"number","minimum":0},"aircraft":{"type":"number","minimum":0}}},"category":{"type":"string","minLength":1}}},"at":{"type":"object","required":["hp","damage","cooldown","range","arc","speed","cost","splash","modifiers","category"],"additionalProperties":false,"properties":{"hp":{"type":"integer","minimum":0},"damage":{"type":"integer","minimum":0},"cooldown":{"type":"number","minimum":0},"range":{"type":"number","minimum":0},"arc":{"type":"integer","minimum":0},"speed":{"type":"number","minimum":0},"cost":{"type":"integer","minimum":0},"splash":{"type":"integer","minimum":0},"modifiers":{"type":"object","required":["infantry","armor","aircraft"],"additionalProperties":false,"properties":{"infantry":{"type":"number","minimum":0},"armor":{"type":"number","minimum":0},"aircraft":{"type":"number","minimum":0}}},"category":{"type":"string","minLength":1}}},"car":{"type":"object","required":["hp","damage","cooldown","range","arc","speed","cost","splash","modifiers","category"],"additionalProperties":false,"properties":{"hp":{"type":"integer","minimum":0},"damage":{"type":"integer","minimum":0},"cooldown":{"type":"number","minimum":0},"range":{"type":"number","minimum":0},"arc":{"type":"integer","minimum":0},"speed":{"type":"number","minimum":0},"cost":{"type":"integer","minimum":0},"splash":{"type":"integer","minimum":0},"modifiers":{"type":"object","required":["infantry","armor","aircraft"],"additionalProperties":false,"properties":{"infantry":{"type":"number","minimum":0},"armor":{"type":"number","minimum":0},"aircraft":{"type":"number","minimum":0}}},"category":{"type":"string","minLength":1}}},"tank":{"type":"object","required":["hp","damage","cooldown","range","arc","speed","cost","splash","modifiers","category"],"additionalProperties":false,"properties":{"hp":{"type":"integer","minimum":0},"damage":{"type":"integer","minimum":0},"cooldown":{"type":"number","minimum":0},"range":{"type":"number","minimum":0},"arc":{"type":"integer","minimum":0},"speed":{"type":"number","minimum":0},"cost":{"type":"integer","minimum":0},"splash":{"type":"number","minimum":0},"modifiers":{"type":"object","required":["infantry","armor","aircraft"],"additionalProperties":false,"properties":{"infantry":{"type":"integer","minimum":0},"armor":{"type":"number","minimum":0},"aircraft":{"type":"number","minimum":0}}},"category":{"type":"string","minLength":1}}},"heavy":{"type":"object","required":["hp","damage","cooldown","range","arc","speed","cost","splash","modifiers","category"],"additionalProperties":false,"properties":{"hp":{"type":"integer","minimum":0},"damage":{"type":"integer","minimum":0},"cooldown":{"type":"number","minimum":0},"range":{"type":"number","minimum":0},"arc":{"type":"integer","minimum":0},"speed":{"type":"number","minimum":0},"cost":{"type":"integer","minimum":0},"splash":{"type":"number","minimum":0},"modifiers":{"type":"object","required":["infantry","armor","aircraft"],"additionalProperties":false,"properties":{"infantry":{"type":"integer","minimum":0},"armor":{"type":"number","minimum":0},"aircraft":{"type":"number","minimum":0}}},"category":{"type":"string","minLength":1}}},"destroyer":{"type":"object","required":["hp","damage","cooldown","range","arc","speed","cost","splash","modifiers","category"],"additionalProperties":false,"properties":{"hp":{"type":"integer","minimum":0},"damage":{"type":"integer","minimum":0},"cooldown":{"type":"number","minimum":0},"range":{"type":"number","minimum":0},"arc":{"type":"integer","minimum":0},"speed":{"type":"number","minimum":0},"cost":{"type":"integer","minimum":0},"splash":{"type":"integer","minimum":0},"modifiers":{"type":"object","required":["infantry","armor","aircraft"],"additionalProperties":false,"properties":{"infantry":{"type":"number","minimum":0},"armor":{"type":"integer","minimum":0},"aircraft":{"type":"number","minimum":0}}},"category":{"type":"string","minLength":1}}},"fighter":{"type":"object","required":["hp","damage","cooldown","range","arc","speed","cost","splash","modifiers","category"],"additionalProperties":false,"properties":{"hp":{"type":"integer","minimum":0},"damage":{"type":"integer","minimum":0},"cooldown":{"type":"number","minimum":0},"range":{"type":"number","minimum":0},"arc":{"type":"integer","minimum":0},"speed":{"type":"number","minimum":0},"cost":{"type":"integer","minimum":0},"splash":{"type":"integer","minimum":0},"modifiers":{"type":"object","required":["infantry","armor","aircraft"],"additionalProperties":false,"properties":{"infantry":{"type":"number","minimum":0},"armor":{"type":"number","minimum":0},"aircraft":{"type":"number","minimum":0}}},"category":{"type":"string","minLength":1}}},"attacker":{"type":"object","required":["hp","damage","cooldown","range","arc","speed","cost","splash","modifiers","category"],"additionalProperties":false,"properties":{"hp":{"type":"integer","minimum":0},"damage":{"type":"integer","minimum":0},"cooldown":{"type":"number","minimum":0},"range":{"type":"integer","minimum":0},"arc":{"type":"integer","minimum":0},"speed":{"type":"number","minimum":0},"cost":{"type":"integer","minimum":0},"splash":{"type":"number","minimum":0},"modifiers":{"type":"object","required":["infantry","armor","aircraft"],"additionalProperties":false,"properties":{"infantry":{"type":"integer","minimum":0},"armor":{"type":"number","minimum":0},"aircraft":{"type":"number","minimum":0}}},"category":{"type":"string","minLength":1}}},"bomber":{"type":"object","required":["hp","damage","cooldown","range","arc","speed","cost","splash","modifiers","category"],"additionalProperties":false,"properties":{"hp":{"type":"integer","minimum":0},"damage":{"type":"integer","minimum":0},"cooldown":{"type":"number","minimum":0},"range":{"type":"integer","minimum":0},"arc":{"type":"integer","minimum":0},"speed":{"type":"number","minimum":0},"cost":{"type":"integer","minimum":0},"splash":{"type":"integer","minimum":0},"modifiers":{"type":"object","required":["infantry","armor","aircraft"],"additionalProperties":false,"properties":{"infantry":{"type":"number","minimum":0},"armor":{"type":"number","minimum":0},"aircraft":{"type":"number","minimum":0}}},"category":{"type":"string","minLength":1}}}}},"rewardBase":{"type":"integer","minimum":0},"rewardPerWave":{"type":"integer","minimum":0},"upgradeMultipliers":{"type":"array","items":{"type":"number","minimum":0}},"upgradeCostFactors":{"type":"array","items":{"type":"number","minimum":0}},"fixedStepSeconds":{"type":"number","minimum":0,"exclusiveMinimum":0},"maxTicks":{"type":"integer","minimum":1},"frameStride":{"type":"integer","minimum":1},"spawnDistance":{"type":"integer","minimum":0},"spawnInterval":{"type":"number","minimum":0},"contactRange":{"type":"number","minimum":0},"enemyPowerPerWave":{"type":"number","minimum":0},"enemyCountBase":{"type":"integer","minimum":1},"enemyCountWaveInterval":{"type":"integer","minimum":1},"enemyCountGrowth":{"type":"integer","minimum":0},"expansionWaves":{"type":"array","items":{"type":"integer","minimum":0}}}},"file21":{"type":"object","required":["maxWave","directions","unlockEnemies","seedPolicy"],"additionalProperties":false,"properties":{"maxWave":{"type":"integer","minimum":0},"directions":{"type":"array","items":{"type":"string","minLength":1}},"unlockEnemies":{"type":"array","items":{"type":"object","required":["wave","ids"],"additionalProperties":false,"properties":{"wave":{"type":"integer","minimum":0},"ids":{"type":"array","items":{"type":"string","minLength":1}}}}},"seedPolicy":{"type":"string","minLength":1}}},"file22":{"type":"object","required":["policies","minimumSeeds","maximumSeeds","version","holdoutSeedOffset","warmupThroughWave","airResponseWave","growthBudgetFraction","reserveTriggerMultiplier","starterUnit","earlyPriorityUnit","profiles","reallocationPolicies","reallocationInterval"],"additionalProperties":false,"properties":{"policies":{"type":"array","items":{"type":"string","minLength":1}},"minimumSeeds":{"type":"integer","minimum":0},"maximumSeeds":{"type":"integer","minimum":0},"version":{"type":"string","minLength":1},"holdoutSeedOffset":{"type":"integer","minimum":0},"warmupThroughWave":{"type":"integer","minimum":0},"airResponseWave":{"type":"integer","minimum":0},"growthBudgetFraction":{"type":"number","minimum":0},"reserveTriggerMultiplier":{"type":"integer","minimum":0},"starterUnit":{"type":"string","minLength":1},"earlyPriorityUnit":{"type":"string","minLength":1},"profiles":{"type":"object","required":["infantry","antiArmor","armor","air","mixed","recon","random","wrong"],"additionalProperties":false,"properties":{"infantry":{"type":"array","items":{"type":"string","minLength":1}},"antiArmor":{"type":"array","items":{"type":"string","minLength":1}},"armor":{"type":"array","items":{"type":"string","minLength":1}},"air":{"type":"array","items":{"type":"string","minLength":1}},"mixed":{"type":"array","items":{"type":"string","minLength":1}},"recon":{"type":"array","items":{"type":"string","minLength":1}},"random":{"type":"array","items":{"type":"string","minLength":1}},"wrong":{"type":"array","items":{"type":"string","minLength":1}}}},"reallocationPolicies":{"type":"array","minItems":1,"items":{"type":"string"}},"reallocationInterval":{"type":"integer","minimum":1,"maximum":100}}},"file31":{"type":"object","required":["id","status","version","initialSupplies","hqHp","costs","units","rewardBase","rewardPerWave","upgradeMultipliers","upgradeCostFactors","fixedStepSeconds","maxTicks","frameStride","spawnDistance","spawnInterval","contactRange","enemyPowerPerWave","enemyCountBase","enemyCountWaveInterval","enemyCountGrowth","expansionWaves","rewards"],"additionalProperties":false,"properties":{"id":{"type":"string","minLength":1},"status":{"type":"string","minLength":1},"version":{"type":"integer","minimum":0},"initialSupplies":{"type":"integer","minimum":0},"hqHp":{"type":"integer","minimum":0},"costs":{"type":"object","required":["hq","rifleR","rifle","barracks","mgR","mg","mortarR","mortar","gunR","gun","atR","at","factory","carR","car","tankR","tank","heavyR","heavy","destroyerR","destroyer","airfield","fighterR","fighter","attackerR","attacker","bomberR","bomber"],"additionalProperties":false,"properties":{"hq":{"type":"integer","minimum":0},"rifleR":{"type":"integer","minimum":0},"rifle":{"type":"integer","minimum":0},"barracks":{"type":"integer","minimum":0},"mgR":{"type":"integer","minimum":0},"mg":{"type":"integer","minimum":0},"mortarR":{"type":"integer","minimum":0},"mortar":{"type":"integer","minimum":0},"gunR":{"type":"integer","minimum":0},"gun":{"type":"integer","minimum":0},"atR":{"type":"integer","minimum":0},"at":{"type":"integer","minimum":0},"factory":{"type":"integer","minimum":0},"carR":{"type":"integer","minimum":0},"car":{"type":"integer","minimum":0},"tankR":{"type":"integer","minimum":0},"tank":{"type":"integer","minimum":0},"heavyR":{"type":"integer","minimum":0},"heavy":{"type":"integer","minimum":0},"destroyerR":{"type":"integer","minimum":0},"destroyer":{"type":"integer","minimum":0},"airfield":{"type":"integer","minimum":0},"fighterR":{"type":"integer","minimum":0},"fighter":{"type":"integer","minimum":0},"attackerR":{"type":"integer","minimum":0},"attacker":{"type":"integer","minimum":0},"bomberR":{"type":"integer","minimum":0},"bomber":{"type":"integer","minimum":0}}},"units":{"type":"object","required":["rifle","mg","mortar","gun","at","car","tank","heavy","destroyer","fighter","attacker","bomber"],"additionalProperties":false,"properties":{"rifle":{"type":"object","required":["hp","damage","cooldown","range","arc","speed","cost","splash","modifiers","category"],"additionalProperties":false,"properties":{"hp":{"type":"integer","minimum":0},"damage":{"type":"integer","minimum":0},"cooldown":{"type":"number","minimum":0},"range":{"type":"integer","minimum":0},"arc":{"type":"integer","minimum":0},"speed":{"type":"number","minimum":0},"cost":{"type":"integer","minimum":0},"splash":{"type":"integer","minimum":0},"modifiers":{"type":"object","required":["infantry","armor","aircraft"],"additionalProperties":false,"properties":{"infantry":{"type":"integer","minimum":0},"armor":{"type":"number","minimum":0},"aircraft":{"type":"number","minimum":0}}},"category":{"type":"string","minLength":1}}},"mg":{"type":"object","required":["hp","damage","cooldown","range","arc","speed","cost","splash","modifiers","category"],"additionalProperties":false,"properties":{"hp":{"type":"integer","minimum":0},"damage":{"type":"integer","minimum":0},"cooldown":{"type":"number","minimum":0},"range":{"type":"number","minimum":0},"arc":{"type":"integer","minimum":0},"speed":{"type":"number","minimum":0},"cost":{"type":"integer","minimum":0},"splash":{"type":"integer","minimum":0},"modifiers":{"type":"object","required":["infantry","armor","aircraft"],"additionalProperties":false,"properties":{"infantry":{"type":"number","minimum":0},"armor":{"type":"number","minimum":0},"aircraft":{"type":"number","minimum":0}}},"category":{"type":"string","minLength":1}}},"mortar":{"type":"object","required":["hp","damage","cooldown","range","arc","speed","cost","splash","modifiers","category"],"additionalProperties":false,"properties":{"hp":{"type":"integer","minimum":0},"damage":{"type":"integer","minimum":0},"cooldown":{"type":"number","minimum":0},"range":{"type":"number","minimum":0},"arc":{"type":"integer","minimum":0},"speed":{"type":"number","minimum":0},"cost":{"type":"integer","minimum":0},"splash":{"type":"number","minimum":0},"modifiers":{"type":"object","required":["infantry","armor","aircraft"],"additionalProperties":false,"properties":{"infantry":{"type":"integer","minimum":0},"armor":{"type":"number","minimum":0},"aircraft":{"type":"number","minimum":0}}},"category":{"type":"string","minLength":1}}},"gun":{"type":"object","required":["hp","damage","cooldown","range","arc","speed","cost","splash","modifiers","category"],"additionalProperties":false,"properties":{"hp":{"type":"integer","minimum":0},"damage":{"type":"integer","minimum":0},"cooldown":{"type":"number","minimum":0},"range":{"type":"number","minimum":0},"arc":{"type":"integer","minimum":0},"speed":{"type":"number","minimum":0},"cost":{"type":"integer","minimum":0},"splash":{"type":"number","minimum":0},"modifiers":{"type":"object","required":["infantry","armor","aircraft"],"additionalProperties":false,"properties":{"infantry":{"type":"integer","minimum":0},"armor":{"type":"number","minimum":0},"aircraft":{"type":"number","minimum":0}}},"category":{"type":"string","minLength":1}}},"at":{"type":"object","required":["hp","damage","cooldown","range","arc","speed","cost","splash","modifiers","category"],"additionalProperties":false,"properties":{"hp":{"type":"integer","minimum":0},"damage":{"type":"integer","minimum":0},"cooldown":{"type":"number","minimum":0},"range":{"type":"number","minimum":0},"arc":{"type":"integer","minimum":0},"speed":{"type":"number","minimum":0},"cost":{"type":"integer","minimum":0},"splash":{"type":"integer","minimum":0},"modifiers":{"type":"object","required":["infantry","armor","aircraft"],"additionalProperties":false,"properties":{"infantry":{"type":"number","minimum":0},"armor":{"type":"number","minimum":0},"aircraft":{"type":"number","minimum":0}}},"category":{"type":"string","minLength":1}}},"car":{"type":"object","required":["hp","damage","cooldown","range","arc","speed","cost","splash","modifiers","category"],"additionalProperties":false,"properties":{"hp":{"type":"integer","minimum":0},"damage":{"type":"integer","minimum":0},"cooldown":{"type":"number","minimum":0},"range":{"type":"number","minimum":0},"arc":{"type":"integer","minimum":0},"speed":{"type":"number","minimum":0},"cost":{"type":"integer","minimum":0},"splash":{"type":"integer","minimum":0},"modifiers":{"type":"object","required":["infantry","armor","aircraft"],"additionalProperties":false,"properties":{"infantry":{"type":"number","minimum":0},"armor":{"type":"number","minimum":0},"aircraft":{"type":"number","minimum":0}}},"category":{"type":"string","minLength":1}}},"tank":{"type":"object","required":["hp","damage","cooldown","range","arc","speed","cost","splash","modifiers","category"],"additionalProperties":false,"properties":{"hp":{"type":"integer","minimum":0},"damage":{"type":"integer","minimum":0},"cooldown":{"type":"number","minimum":0},"range":{"type":"number","minimum":0},"arc":{"type":"integer","minimum":0},"speed":{"type":"number","minimum":0},"cost":{"type":"integer","minimum":0},"splash":{"type":"number","minimum":0},"modifiers":{"type":"object","required":["infantry","armor","aircraft"],"additionalProperties":false,"properties":{"infantry":{"type":"integer","minimum":0},"armor":{"type":"number","minimum":0},"aircraft":{"type":"number","minimum":0}}},"category":{"type":"string","minLength":1}}},"heavy":{"type":"object","required":["hp","damage","cooldown","range","arc","speed","cost","splash","modifiers","category"],"additionalProperties":false,"properties":{"hp":{"type":"integer","minimum":0},"damage":{"type":"integer","minimum":0},"cooldown":{"type":"number","minimum":0},"range":{"type":"number","minimum":0},"arc":{"type":"integer","minimum":0},"speed":{"type":"number","minimum":0},"cost":{"type":"integer","minimum":0},"splash":{"type":"number","minimum":0},"modifiers":{"type":"object","required":["infantry","armor","aircraft"],"additionalProperties":false,"properties":{"infantry":{"type":"integer","minimum":0},"armor":{"type":"number","minimum":0},"aircraft":{"type":"number","minimum":0}}},"category":{"type":"string","minLength":1}}},"destroyer":{"type":"object","required":["hp","damage","cooldown","range","arc","speed","cost","splash","modifiers","category"],"additionalProperties":false,"properties":{"hp":{"type":"integer","minimum":0},"damage":{"type":"integer","minimum":0},"cooldown":{"type":"number","minimum":0},"range":{"type":"number","minimum":0},"arc":{"type":"integer","minimum":0},"speed":{"type":"number","minimum":0},"cost":{"type":"integer","minimum":0},"splash":{"type":"integer","minimum":0},"modifiers":{"type":"object","required":["infantry","armor","aircraft"],"additionalProperties":false,"properties":{"infantry":{"type":"number","minimum":0},"armor":{"type":"integer","minimum":0},"aircraft":{"type":"number","minimum":0}}},"category":{"type":"string","minLength":1}}},"fighter":{"type":"object","required":["hp","damage","cooldown","range","arc","speed","cost","splash","modifiers","category"],"additionalProperties":false,"properties":{"hp":{"type":"integer","minimum":0},"damage":{"type":"integer","minimum":0},"cooldown":{"type":"number","minimum":0},"range":{"type":"number","minimum":0},"arc":{"type":"integer","minimum":0},"speed":{"type":"number","minimum":0},"cost":{"type":"integer","minimum":0},"splash":{"type":"integer","minimum":0},"modifiers":{"type":"object","required":["infantry","armor","aircraft"],"additionalProperties":false,"properties":{"infantry":{"type":"number","minimum":0},"armor":{"type":"number","minimum":0},"aircraft":{"type":"number","minimum":0}}},"category":{"type":"string","minLength":1}}},"attacker":{"type":"object","required":["hp","damage","cooldown","range","arc","speed","cost","splash","modifiers","category"],"additionalProperties":false,"properties":{"hp":{"type":"integer","minimum":0},"damage":{"type":"integer","minimum":0},"cooldown":{"type":"number","minimum":0},"range":{"type":"integer","minimum":0},"arc":{"type":"integer","minimum":0},"speed":{"type":"number","minimum":0},"cost":{"type":"integer","minimum":0},"splash":{"type":"number","minimum":0},"modifiers":{"type":"object","required":["infantry","armor","aircraft"],"additionalProperties":false,"properties":{"infantry":{"type":"integer","minimum":0},"armor":{"type":"number","minimum":0},"aircraft":{"type":"number","minimum":0}}},"category":{"type":"string","minLength":1}}},"bomber":{"type":"object","required":["hp","damage","cooldown","range","arc","speed","cost","splash","modifiers","category"],"additionalProperties":false,"properties":{"hp":{"type":"integer","minimum":0},"damage":{"type":"integer","minimum":0},"cooldown":{"type":"number","minimum":0},"range":{"type":"integer","minimum":0},"arc":{"type":"integer","minimum":0},"speed":{"type":"number","minimum":0},"cost":{"type":"integer","minimum":0},"splash":{"type":"integer","minimum":0},"modifiers":{"type":"object","required":["infantry","armor","aircraft"],"additionalProperties":false,"properties":{"infantry":{"type":"number","minimum":0},"armor":{"type":"number","minimum":0},"aircraft":{"type":"number","minimum":0}}},"category":{"type":"string","minLength":1}}}}},"rewardBase":{"type":"integer","minimum":0},"rewardPerWave":{"type":"integer","minimum":0},"upgradeMultipliers":{"type":"array","items":{"type":"number","minimum":0}},"upgradeCostFactors":{"type":"array","items":{"type":"number","minimum":0}},"fixedStepSeconds":{"type":"number","minimum":0,"exclusiveMinimum":0},"maxTicks":{"type":"integer","minimum":1},"frameStride":{"type":"integer","minimum":1},"spawnDistance":{"type":"integer","minimum":0},"spawnInterval":{"type":"number","minimum":0},"contactRange":{"type":"number","minimum":0},"enemyPowerPerWave":{"type":"number","minimum":0},"enemyCountBase":{"type":"integer","minimum":1},"enemyCountWaveInterval":{"type":"integer","minimum":1},"enemyCountGrowth":{"type":"integer","minimum":0},"expansionWaves":{"type":"array","items":{"type":"integer","minimum":0}},"rewards":{"type":"array","minItems":100,"maxItems":100,"items":{"type":"integer","minimum":0}}}},"file32":{"type":"object","required":["candidate"],"additionalProperties":false,"properties":{"candidate":{"type":"string","minLength":1}}},"file33":{"type":"object","additionalProperties":false,"required":["version","seeds","startSeed","wave","cells","directions","enemyUnits","enemyCount","spawnGroups"],"properties":{"version":{"type":"string"},"seeds":{"type":"number"},"startSeed":{"type":"number"},"wave":{"type":"number"},"cells":{"type":"array","items":{"type":"object","additionalProperties":false,"required":["row","col"],"properties":{"row":{"type":"number"},"col":{"type":"number"}}}},"directions":{"type":"array","items":{"type":"string"}},"enemyUnits":{"type":"array","items":{"type":"string"}},"enemyCount":{"type":"number"},"spawnGroups":{"type":"number"}}},"file34":{"type":"object","required":["id","status","version","initialSupplies","hqHp","costs","units","rewardBase","rewardPerWave","upgradeMultipliers","upgradeCostFactors","fixedStepSeconds","maxTicks","frameStride","spawnDistance","spawnInterval","contactRange","enemyPowerPerWave","enemyCountBase","enemyCountWaveInterval","enemyCountGrowth","expansionWaves","rewards"],"additionalProperties":false,"properties":{"id":{"type":"string","minLength":1},"status":{"type":"string","minLength":1},"version":{"type":"integer","minimum":0},"initialSupplies":{"type":"integer","minimum":0},"hqHp":{"type":"integer","minimum":0},"costs":{"type":"object","required":["hq","rifleR","rifle","barracks","mgR","mg","mortarR","mortar","gunR","gun","atR","at","factory","carR","car","tankR","tank","heavyR","heavy","destroyerR","destroyer","airfield","fighterR","fighter","attackerR","attacker","bomberR","bomber"],"additionalProperties":false,"properties":{"hq":{"type":"integer","minimum":0},"rifleR":{"type":"integer","minimum":0},"rifle":{"type":"integer","minimum":0},"barracks":{"type":"integer","minimum":0},"mgR":{"type":"integer","minimum":0},"mg":{"type":"integer","minimum":0},"mortarR":{"type":"integer","minimum":0},"mortar":{"type":"integer","minimum":0},"gunR":{"type":"integer","minimum":0},"gun":{"type":"integer","minimum":0},"atR":{"type":"integer","minimum":0},"at":{"type":"integer","minimum":0},"factory":{"type":"integer","minimum":0},"carR":{"type":"integer","minimum":0},"car":{"type":"integer","minimum":0},"tankR":{"type":"integer","minimum":0},"tank":{"type":"integer","minimum":0},"heavyR":{"type":"integer","minimum":0},"heavy":{"type":"integer","minimum":0},"destroyerR":{"type":"integer","minimum":0},"destroyer":{"type":"integer","minimum":0},"airfield":{"type":"integer","minimum":0},"fighterR":{"type":"integer","minimum":0},"fighter":{"type":"integer","minimum":0},"attackerR":{"type":"integer","minimum":0},"attacker":{"type":"integer","minimum":0},"bomberR":{"type":"integer","minimum":0},"bomber":{"type":"integer","minimum":0}}},"units":{"type":"object","required":["rifle","mg","mortar","gun","at","car","tank","heavy","destroyer","fighter","attacker","bomber"],"additionalProperties":false,"properties":{"rifle":{"type":"object","required":["hp","damage","cooldown","range","arc","speed","cost","splash","modifiers","category"],"additionalProperties":false,"properties":{"hp":{"type":"integer","minimum":0},"damage":{"type":"integer","minimum":0},"cooldown":{"type":"number","minimum":0},"range":{"type":"integer","minimum":0},"arc":{"type":"integer","minimum":0},"speed":{"type":"number","minimum":0},"cost":{"type":"integer","minimum":0},"splash":{"type":"integer","minimum":0},"modifiers":{"type":"object","required":["infantry","armor","aircraft"],"additionalProperties":false,"properties":{"infantry":{"type":"integer","minimum":0},"armor":{"type":"number","minimum":0},"aircraft":{"type":"number","minimum":0}}},"category":{"type":"string","minLength":1}}},"mg":{"type":"object","required":["hp","damage","cooldown","range","arc","speed","cost","splash","modifiers","category"],"additionalProperties":false,"properties":{"hp":{"type":"integer","minimum":0},"damage":{"type":"integer","minimum":0},"cooldown":{"type":"number","minimum":0},"range":{"type":"number","minimum":0},"arc":{"type":"integer","minimum":0},"speed":{"type":"number","minimum":0},"cost":{"type":"integer","minimum":0},"splash":{"type":"integer","minimum":0},"modifiers":{"type":"object","required":["infantry","armor","aircraft"],"additionalProperties":false,"properties":{"infantry":{"type":"number","minimum":0},"armor":{"type":"number","minimum":0},"aircraft":{"type":"number","minimum":0}}},"category":{"type":"string","minLength":1}}},"mortar":{"type":"object","required":["hp","damage","cooldown","range","arc","speed","cost","splash","modifiers","category"],"additionalProperties":false,"properties":{"hp":{"type":"integer","minimum":0},"damage":{"type":"integer","minimum":0},"cooldown":{"type":"number","minimum":0},"range":{"type":"number","minimum":0},"arc":{"type":"integer","minimum":0},"speed":{"type":"number","minimum":0},"cost":{"type":"integer","minimum":0},"splash":{"type":"number","minimum":0},"modifiers":{"type":"object","required":["infantry","armor","aircraft"],"additionalProperties":false,"properties":{"infantry":{"type":"integer","minimum":0},"armor":{"type":"number","minimum":0},"aircraft":{"type":"number","minimum":0}}},"category":{"type":"string","minLength":1}}},"gun":{"type":"object","required":["hp","damage","cooldown","range","arc","speed","cost","splash","modifiers","category"],"additionalProperties":false,"properties":{"hp":{"type":"integer","minimum":0},"damage":{"type":"integer","minimum":0},"cooldown":{"type":"number","minimum":0},"range":{"type":"number","minimum":0},"arc":{"type":"integer","minimum":0},"speed":{"type":"number","minimum":0},"cost":{"type":"integer","minimum":0},"splash":{"type":"number","minimum":0},"modifiers":{"type":"object","required":["infantry","armor","aircraft"],"additionalProperties":false,"properties":{"infantry":{"type":"integer","minimum":0},"armor":{"type":"number","minimum":0},"aircraft":{"type":"number","minimum":0}}},"category":{"type":"string","minLength":1}}},"at":{"type":"object","required":["hp","damage","cooldown","range","arc","speed","cost","splash","modifiers","category"],"additionalProperties":false,"properties":{"hp":{"type":"integer","minimum":0},"damage":{"type":"integer","minimum":0},"cooldown":{"type":"number","minimum":0},"range":{"type":"number","minimum":0},"arc":{"type":"integer","minimum":0},"speed":{"type":"number","minimum":0},"cost":{"type":"integer","minimum":0},"splash":{"type":"integer","minimum":0},"modifiers":{"type":"object","required":["infantry","armor","aircraft"],"additionalProperties":false,"properties":{"infantry":{"type":"number","minimum":0},"armor":{"type":"number","minimum":0},"aircraft":{"type":"number","minimum":0}}},"category":{"type":"string","minLength":1}}},"car":{"type":"object","required":["hp","damage","cooldown","range","arc","speed","cost","splash","modifiers","category"],"additionalProperties":false,"properties":{"hp":{"type":"integer","minimum":0},"damage":{"type":"integer","minimum":0},"cooldown":{"type":"number","minimum":0},"range":{"type":"number","minimum":0},"arc":{"type":"integer","minimum":0},"speed":{"type":"number","minimum":0},"cost":{"type":"integer","minimum":0},"splash":{"type":"integer","minimum":0},"modifiers":{"type":"object","required":["infantry","armor","aircraft"],"additionalProperties":false,"properties":{"infantry":{"type":"number","minimum":0},"armor":{"type":"number","minimum":0},"aircraft":{"type":"number","minimum":0}}},"category":{"type":"string","minLength":1}}},"tank":{"type":"object","required":["hp","damage","cooldown","range","arc","speed","cost","splash","modifiers","category"],"additionalProperties":false,"properties":{"hp":{"type":"integer","minimum":0},"damage":{"type":"integer","minimum":0},"cooldown":{"type":"number","minimum":0},"range":{"type":"number","minimum":0},"arc":{"type":"integer","minimum":0},"speed":{"type":"number","minimum":0},"cost":{"type":"integer","minimum":0},"splash":{"type":"number","minimum":0},"modifiers":{"type":"object","required":["infantry","armor","aircraft"],"additionalProperties":false,"properties":{"infantry":{"type":"integer","minimum":0},"armor":{"type":"number","minimum":0},"aircraft":{"type":"number","minimum":0}}},"category":{"type":"string","minLength":1}}},"heavy":{"type":"object","required":["hp","damage","cooldown","range","arc","speed","cost","splash","modifiers","category"],"additionalProperties":false,"properties":{"hp":{"type":"integer","minimum":0},"damage":{"type":"integer","minimum":0},"cooldown":{"type":"number","minimum":0},"range":{"type":"number","minimum":0},"arc":{"type":"integer","minimum":0},"speed":{"type":"number","minimum":0},"cost":{"type":"integer","minimum":0},"splash":{"type":"number","minimum":0},"modifiers":{"type":"object","required":["infantry","armor","aircraft"],"additionalProperties":false,"properties":{"infantry":{"type":"integer","minimum":0},"armor":{"type":"number","minimum":0},"aircraft":{"type":"number","minimum":0}}},"category":{"type":"string","minLength":1}}},"destroyer":{"type":"object","required":["hp","damage","cooldown","range","arc","speed","cost","splash","modifiers","category"],"additionalProperties":false,"properties":{"hp":{"type":"integer","minimum":0},"damage":{"type":"integer","minimum":0},"cooldown":{"type":"number","minimum":0},"range":{"type":"number","minimum":0},"arc":{"type":"integer","minimum":0},"speed":{"type":"number","minimum":0},"cost":{"type":"integer","minimum":0},"splash":{"type":"integer","minimum":0},"modifiers":{"type":"object","required":["infantry","armor","aircraft"],"additionalProperties":false,"properties":{"infantry":{"type":"number","minimum":0},"armor":{"type":"integer","minimum":0},"aircraft":{"type":"number","minimum":0}}},"category":{"type":"string","minLength":1}}},"fighter":{"type":"object","required":["hp","damage","cooldown","range","arc","speed","cost","splash","modifiers","category"],"additionalProperties":false,"properties":{"hp":{"type":"integer","minimum":0},"damage":{"type":"integer","minimum":0},"cooldown":{"type":"number","minimum":0},"range":{"type":"number","minimum":0},"arc":{"type":"integer","minimum":0},"speed":{"type":"number","minimum":0},"cost":{"type":"integer","minimum":0},"splash":{"type":"integer","minimum":0},"modifiers":{"type":"object","required":["infantry","armor","aircraft"],"additionalProperties":false,"properties":{"infantry":{"type":"number","minimum":0},"armor":{"type":"number","minimum":0},"aircraft":{"type":"number","minimum":0}}},"category":{"type":"string","minLength":1}}},"attacker":{"type":"object","required":["hp","damage","cooldown","range","arc","speed","cost","splash","modifiers","category"],"additionalProperties":false,"properties":{"hp":{"type":"integer","minimum":0},"damage":{"type":"integer","minimum":0},"cooldown":{"type":"number","minimum":0},"range":{"type":"number","minimum":0},"arc":{"type":"integer","minimum":0},"speed":{"type":"number","minimum":0},"cost":{"type":"integer","minimum":0},"splash":{"type":"number","minimum":0},"modifiers":{"type":"object","required":["infantry","armor","aircraft"],"additionalProperties":false,"properties":{"infantry":{"type":"integer","minimum":0},"armor":{"type":"number","minimum":0},"aircraft":{"type":"number","minimum":0}}},"category":{"type":"string","minLength":1}}},"bomber":{"type":"object","required":["hp","damage","cooldown","range","arc","speed","cost","splash","modifiers","category"],"additionalProperties":false,"properties":{"hp":{"type":"integer","minimum":0},"damage":{"type":"integer","minimum":0},"cooldown":{"type":"number","minimum":0},"range":{"type":"integer","minimum":0},"arc":{"type":"integer","minimum":0},"speed":{"type":"number","minimum":0},"cost":{"type":"integer","minimum":0},"splash":{"type":"integer","minimum":0},"modifiers":{"type":"object","required":["infantry","armor","aircraft"],"additionalProperties":false,"properties":{"infantry":{"type":"number","minimum":0},"armor":{"type":"number","minimum":0},"aircraft":{"type":"number","minimum":0}}},"category":{"type":"string","minLength":1}}}}},"rewardBase":{"type":"integer","minimum":0},"rewardPerWave":{"type":"integer","minimum":0},"upgradeMultipliers":{"type":"array","items":{"type":"number","minimum":0}},"upgradeCostFactors":{"type":"array","items":{"type":"number","minimum":0}},"fixedStepSeconds":{"type":"number","minimum":0,"exclusiveMinimum":0},"maxTicks":{"type":"integer","minimum":1},"frameStride":{"type":"integer","minimum":1},"spawnDistance":{"type":"integer","minimum":0},"spawnInterval":{"type":"number","minimum":0},"contactRange":{"type":"number","minimum":0},"enemyPowerPerWave":{"type":"number","minimum":0},"enemyCountBase":{"type":"integer","minimum":1},"enemyCountWaveInterval":{"type":"integer","minimum":1},"enemyCountGrowth":{"type":"integer","minimum":0},"expansionWaves":{"type":"array","items":{"type":"integer","minimum":0}},"rewards":{"type":"array","minItems":100,"maxItems":100,"items":{"type":"integer","minimum":0}}}},"file35":{"type":"object","additionalProperties":false,"required":["migrations"],"properties":{"migrations":{"type":"array","items":{"type":"object","additionalProperties":false,"required":["schemaVersion","fromConfig","toConfig","costSource"],"properties":{"schemaVersion":{"const":1},"fromConfig":{"type":"string"},"toConfig":{"type":"string"},"costSource":{"type":"string"}}}}}},"file36":{"type":"array","minItems":1,"items":{"type":"object","additionalProperties":false,"required":["id","labelKey","targetClass","minimumModifier"],"properties":{"id":{"type":"string"},"labelKey":{"type":"string"},"targetClass":{"type":["string","null"]},"minimumModifier":{"type":"number","minimum":0}}}}}};
+const schema6 = {"$schema":"http://json-schema.org/draft-07/schema#","type":"object","additionalProperties":false,"required":["data/tech/nodes.json","data/tech/layout-hints.json","data/tech/progression.json","data/formation/layouts.json","data/formation/unlocks.json","data/balance/economy.json","data/balance/prototypeReference.json","data/units/upgrade-profiles.json","data/units/templates.json","data/rules.json","data/simulation/criteria.json","data/ui/layout.json","data/ui/input.json","data/ui/tutorial.json","data/ui/theme.json","data/assets/slots.json","data/assets/licenses.json","locales/ko-KR.json","locales/manifest.json","desktop/builder.json","data/balance/candidate-v1.json","data/waves/content.json","data/simulation/policy-profiles.json","data/balance/candidate-v2.json","data/balance/candidate-v3.json","data/balance/candidate-v4.json","data/balance/candidate-v5.json","data/balance/candidate-v6.json","data/balance/candidate-v7.json","data/balance/candidate-v8.json","data/balance/candidate-v9.json","data/balance/candidate-v10.json","data/balance/active.json","data/simulation/probes.json","data/balance/candidate-v11.json","data/save/compatibility.json","data/ui/unit-filters.json","data/balance/candidate-v12-tech-tree.json"],"properties":{"data/tech/nodes.json":{"$ref":"#/definitions/file0"},"data/tech/layout-hints.json":{"$ref":"#/definitions/file1"},"data/tech/progression.json":{"$ref":"#/definitions/file2"},"data/formation/layouts.json":{"$ref":"#/definitions/file3"},"data/formation/unlocks.json":{"$ref":"#/definitions/file4"},"data/balance/economy.json":{"$ref":"#/definitions/file5"},"data/balance/prototypeReference.json":{"$ref":"#/definitions/file6"},"data/units/upgrade-profiles.json":{"$ref":"#/definitions/file7"},"data/units/templates.json":{"$ref":"#/definitions/file8"},"data/rules.json":{"$ref":"#/definitions/file9"},"data/simulation/criteria.json":{"$ref":"#/definitions/file10"},"data/ui/layout.json":{"$ref":"#/definitions/file11"},"data/ui/input.json":{"$ref":"#/definitions/file12"},"data/ui/tutorial.json":{"$ref":"#/definitions/file13"},"data/ui/theme.json":{"$ref":"#/definitions/file14"},"data/assets/slots.json":{"$ref":"#/definitions/file15"},"data/assets/licenses.json":{"$ref":"#/definitions/file16"},"locales/ko-KR.json":{"$ref":"#/definitions/file17"},"locales/manifest.json":{"$ref":"#/definitions/file18"},"desktop/builder.json":{"$ref":"#/definitions/file19"},"data/balance/candidate-v1.json":{"$ref":"#/definitions/file20"},"data/waves/content.json":{"$ref":"#/definitions/file21"},"data/simulation/policy-profiles.json":{"$ref":"#/definitions/file22"},"data/balance/candidate-v2.json":{"$ref":"#/definitions/file20"},"data/balance/candidate-v3.json":{"$ref":"#/definitions/file20"},"data/balance/candidate-v4.json":{"$ref":"#/definitions/file20"},"data/balance/candidate-v5.json":{"$ref":"#/definitions/file20"},"data/balance/candidate-v6.json":{"$ref":"#/definitions/file20"},"data/balance/candidate-v7.json":{"$ref":"#/definitions/file20"},"data/balance/candidate-v8.json":{"$ref":"#/definitions/file20"},"data/balance/candidate-v9.json":{"$ref":"#/definitions/file20"},"data/balance/candidate-v10.json":{"$ref":"#/definitions/file31"},"data/balance/active.json":{"$ref":"#/definitions/file32"},"data/simulation/probes.json":{"$ref":"#/definitions/file33"},"data/balance/candidate-v11.json":{"$ref":"#/definitions/file34"},"data/save/compatibility.json":{"$ref":"#/definitions/file35"},"data/ui/unit-filters.json":{"$ref":"#/definitions/file36"},"data/balance/candidate-v12-tech-tree.json":{"$ref":"#/definitions/file37"}},"definitions":{"file0":{"type":"array","minItems":28,"maxItems":28,"items":{"type":"object","additionalProperties":false,"required":["id","kind","parentIds","producerId","unlocksUnitId","labelKey","descriptionKey","assetId","roleTags","startsUnlocked","minWave","revealParentIds"],"properties":{"id":{"type":"string","minLength":1,"maxLength":128},"kind":{"enum":["hq","building","research","unit"]},"parentIds":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true},"producerId":{"type":["string","null"]},"unlocksUnitId":{"type":["string","null"]},"labelKey":{"type":"string","minLength":1,"maxLength":128},"descriptionKey":{"type":"string","minLength":1,"maxLength":128},"assetId":{"type":"string","minLength":1,"maxLength":128},"roleTags":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true},"startsUnlocked":{"type":"boolean"},"minWave":{"type":"integer","minimum":1,"maximum":100},"revealParentIds":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true}}}},"file1":{"type":"object","additionalProperties":false,"required":["width","height","nodeWidth","nodeHeight","positions","rootLinks"],"properties":{"width":{"type":"integer","minimum":0,"maximum":9007199254740991},"height":{"type":"integer","minimum":0,"maximum":9007199254740991},"nodeWidth":{"type":"integer","minimum":0,"maximum":9007199254740991},"nodeHeight":{"type":"integer","minimum":0,"maximum":9007199254740991},"positions":{"type":"object","additionalProperties":false,"required":["hq","rifleR","rifle","barracks","mgR","mg","mortarR","mortar","gunR","gun","atR","at","factory","carR","car","tankR","tank","heavyR","heavy","destroyerR","destroyer","airfield","fighterR","fighter","attackerR","attacker","bomberR","bomber"],"properties":{"hq":{"type":"object","additionalProperties":false,"required":["x","y"],"properties":{"x":{"type":"integer","minimum":0,"maximum":9007199254740991},"y":{"type":"integer","minimum":0,"maximum":9007199254740991}}},"rifleR":{"type":"object","additionalProperties":false,"required":["x","y"],"properties":{"x":{"type":"integer","minimum":0,"maximum":9007199254740991},"y":{"type":"integer","minimum":0,"maximum":9007199254740991}}},"rifle":{"type":"object","additionalProperties":false,"required":["x","y"],"properties":{"x":{"type":"integer","minimum":0,"maximum":9007199254740991},"y":{"type":"integer","minimum":0,"maximum":9007199254740991}}},"barracks":{"type":"object","additionalProperties":false,"required":["x","y"],"properties":{"x":{"type":"integer","minimum":0,"maximum":9007199254740991},"y":{"type":"integer","minimum":0,"maximum":9007199254740991}}},"mgR":{"type":"object","additionalProperties":false,"required":["x","y"],"properties":{"x":{"type":"integer","minimum":0,"maximum":9007199254740991},"y":{"type":"integer","minimum":0,"maximum":9007199254740991}}},"mg":{"type":"object","additionalProperties":false,"required":["x","y"],"properties":{"x":{"type":"integer","minimum":0,"maximum":9007199254740991},"y":{"type":"integer","minimum":0,"maximum":9007199254740991}}},"mortarR":{"type":"object","additionalProperties":false,"required":["x","y"],"properties":{"x":{"type":"integer","minimum":0,"maximum":9007199254740991},"y":{"type":"integer","minimum":0,"maximum":9007199254740991}}},"mortar":{"type":"object","additionalProperties":false,"required":["x","y"],"properties":{"x":{"type":"integer","minimum":0,"maximum":9007199254740991},"y":{"type":"integer","minimum":0,"maximum":9007199254740991}}},"gunR":{"type":"object","additionalProperties":false,"required":["x","y"],"properties":{"x":{"type":"integer","minimum":0,"maximum":9007199254740991},"y":{"type":"integer","minimum":0,"maximum":9007199254740991}}},"gun":{"type":"object","additionalProperties":false,"required":["x","y"],"properties":{"x":{"type":"integer","minimum":0,"maximum":9007199254740991},"y":{"type":"integer","minimum":0,"maximum":9007199254740991}}},"atR":{"type":"object","additionalProperties":false,"required":["x","y"],"properties":{"x":{"type":"integer","minimum":0,"maximum":9007199254740991},"y":{"type":"integer","minimum":0,"maximum":9007199254740991}}},"at":{"type":"object","additionalProperties":false,"required":["x","y"],"properties":{"x":{"type":"integer","minimum":0,"maximum":9007199254740991},"y":{"type":"integer","minimum":0,"maximum":9007199254740991}}},"factory":{"type":"object","additionalProperties":false,"required":["x","y"],"properties":{"x":{"type":"integer","minimum":0,"maximum":9007199254740991},"y":{"type":"integer","minimum":0,"maximum":9007199254740991}}},"carR":{"type":"object","additionalProperties":false,"required":["x","y"],"properties":{"x":{"type":"integer","minimum":0,"maximum":9007199254740991},"y":{"type":"integer","minimum":0,"maximum":9007199254740991}}},"car":{"type":"object","additionalProperties":false,"required":["x","y"],"properties":{"x":{"type":"integer","minimum":0,"maximum":9007199254740991},"y":{"type":"integer","minimum":0,"maximum":9007199254740991}}},"tankR":{"type":"object","additionalProperties":false,"required":["x","y"],"properties":{"x":{"type":"integer","minimum":0,"maximum":9007199254740991},"y":{"type":"integer","minimum":0,"maximum":9007199254740991}}},"tank":{"type":"object","additionalProperties":false,"required":["x","y"],"properties":{"x":{"type":"integer","minimum":0,"maximum":9007199254740991},"y":{"type":"integer","minimum":0,"maximum":9007199254740991}}},"heavyR":{"type":"object","additionalProperties":false,"required":["x","y"],"properties":{"x":{"type":"integer","minimum":0,"maximum":9007199254740991},"y":{"type":"integer","minimum":0,"maximum":9007199254740991}}},"heavy":{"type":"object","additionalProperties":false,"required":["x","y"],"properties":{"x":{"type":"integer","minimum":0,"maximum":9007199254740991},"y":{"type":"integer","minimum":0,"maximum":9007199254740991}}},"destroyerR":{"type":"object","additionalProperties":false,"required":["x","y"],"properties":{"x":{"type":"integer","minimum":0,"maximum":9007199254740991},"y":{"type":"integer","minimum":0,"maximum":9007199254740991}}},"destroyer":{"type":"object","additionalProperties":false,"required":["x","y"],"properties":{"x":{"type":"integer","minimum":0,"maximum":9007199254740991},"y":{"type":"integer","minimum":0,"maximum":9007199254740991}}},"airfield":{"type":"object","additionalProperties":false,"required":["x","y"],"properties":{"x":{"type":"integer","minimum":0,"maximum":9007199254740991},"y":{"type":"integer","minimum":0,"maximum":9007199254740991}}},"fighterR":{"type":"object","additionalProperties":false,"required":["x","y"],"properties":{"x":{"type":"integer","minimum":0,"maximum":9007199254740991},"y":{"type":"integer","minimum":0,"maximum":9007199254740991}}},"fighter":{"type":"object","additionalProperties":false,"required":["x","y"],"properties":{"x":{"type":"integer","minimum":0,"maximum":9007199254740991},"y":{"type":"integer","minimum":0,"maximum":9007199254740991}}},"attackerR":{"type":"object","additionalProperties":false,"required":["x","y"],"properties":{"x":{"type":"integer","minimum":0,"maximum":9007199254740991},"y":{"type":"integer","minimum":0,"maximum":9007199254740991}}},"attacker":{"type":"object","additionalProperties":false,"required":["x","y"],"properties":{"x":{"type":"integer","minimum":0,"maximum":9007199254740991},"y":{"type":"integer","minimum":0,"maximum":9007199254740991}}},"bomberR":{"type":"object","additionalProperties":false,"required":["x","y"],"properties":{"x":{"type":"integer","minimum":0,"maximum":9007199254740991},"y":{"type":"integer","minimum":0,"maximum":9007199254740991}}},"bomber":{"type":"object","additionalProperties":false,"required":["x","y"],"properties":{"x":{"type":"integer","minimum":0,"maximum":9007199254740991},"y":{"type":"integer","minimum":0,"maximum":9007199254740991}}}}},"rootLinks":{"type":"array","items":{"type":"string"}}}},"file2":{"type":"array","items":{"type":"object","additionalProperties":false,"required":["from","to","focus"],"properties":{"from":{"type":"string"},"to":{"type":"string"},"focus":{"type":"string"}}}},"file3":{"type":"object","required":["3","5","9","13","25"],"additionalProperties":false,"properties":{"3":{"type":"array","items":{"type":"object","required":["row","col"],"additionalProperties":false,"properties":{"row":{"type":"integer","minimum":0},"col":{"type":"integer","minimum":0}}}},"5":{"type":"array","items":{"type":"object","required":["row","col"],"additionalProperties":false,"properties":{"row":{"type":"integer","minimum":0},"col":{"type":"integer","minimum":0}}}},"9":{"type":"array","items":{"type":"object","required":["row","col"],"additionalProperties":false,"properties":{"row":{"type":"integer","minimum":0},"col":{"type":"integer","minimum":0}}}},"13":{"type":"array","items":{"type":"object","required":["row","col"],"additionalProperties":false,"properties":{"row":{"type":"integer","minimum":0},"col":{"type":"integer","minimum":0}}}},"25":{"type":"array","items":{"type":"object","required":["row","col"],"additionalProperties":false,"properties":{"row":{"type":"integer","minimum":0},"col":{"type":"integer","minimum":0}}}}}},"file4":{"type":"object","additionalProperties":false,"required":["status","waves"],"properties":{"status":{"type":"string"},"waves":{"type":"object","additionalProperties":false,"required":["3","5","9","13","25"],"properties":{"3":{"type":"integer","minimum":1,"maximum":100},"5":{"type":"integer","minimum":1,"maximum":100},"9":{"type":"integer","minimum":1,"maximum":100},"13":{"type":"integer","minimum":1,"maximum":100},"25":{"type":"integer","minimum":1,"maximum":100}}}}},"file5":{"type":"object","additionalProperties":false,"required":["status","initialSupplies","hqHp","costs","rewards"],"properties":{"status":{"enum":["unresolved","candidate","approved"]},"initialSupplies":{"anyOf":[{"type":"integer","minimum":0,"maximum":9007199254740991},{"type":"null"}]},"hqHp":{"anyOf":[{"type":"integer","minimum":1},{"type":"null"}]},"costs":{"type":"object","required":["hq","rifleR","rifle","barracks","mgR","mg","mortarR","mortar","gunR","gun","atR","at","factory","carR","car","tankR","tank","heavyR","heavy","destroyerR","destroyer","airfield","fighterR","fighter","attackerR","attacker","bomberR","bomber"],"additionalProperties":false,"properties":{"hq":{"anyOf":[{"type":"integer","minimum":0,"maximum":9007199254740991},{"type":"null"}]},"rifleR":{"anyOf":[{"type":"integer","minimum":0,"maximum":9007199254740991},{"type":"null"}]},"rifle":{"anyOf":[{"type":"integer","minimum":0,"maximum":9007199254740991},{"type":"null"}]},"barracks":{"anyOf":[{"type":"integer","minimum":0,"maximum":9007199254740991},{"type":"null"}]},"mgR":{"anyOf":[{"type":"integer","minimum":0,"maximum":9007199254740991},{"type":"null"}]},"mg":{"anyOf":[{"type":"integer","minimum":0,"maximum":9007199254740991},{"type":"null"}]},"mortarR":{"anyOf":[{"type":"integer","minimum":0,"maximum":9007199254740991},{"type":"null"}]},"mortar":{"anyOf":[{"type":"integer","minimum":0,"maximum":9007199254740991},{"type":"null"}]},"gunR":{"anyOf":[{"type":"integer","minimum":0,"maximum":9007199254740991},{"type":"null"}]},"gun":{"anyOf":[{"type":"integer","minimum":0,"maximum":9007199254740991},{"type":"null"}]},"atR":{"anyOf":[{"type":"integer","minimum":0,"maximum":9007199254740991},{"type":"null"}]},"at":{"anyOf":[{"type":"integer","minimum":0,"maximum":9007199254740991},{"type":"null"}]},"factory":{"anyOf":[{"type":"integer","minimum":0,"maximum":9007199254740991},{"type":"null"}]},"carR":{"anyOf":[{"type":"integer","minimum":0,"maximum":9007199254740991},{"type":"null"}]},"car":{"anyOf":[{"type":"integer","minimum":0,"maximum":9007199254740991},{"type":"null"}]},"tankR":{"anyOf":[{"type":"integer","minimum":0,"maximum":9007199254740991},{"type":"null"}]},"tank":{"anyOf":[{"type":"integer","minimum":0,"maximum":9007199254740991},{"type":"null"}]},"heavyR":{"anyOf":[{"type":"integer","minimum":0,"maximum":9007199254740991},{"type":"null"}]},"heavy":{"anyOf":[{"type":"integer","minimum":0,"maximum":9007199254740991},{"type":"null"}]},"destroyerR":{"anyOf":[{"type":"integer","minimum":0,"maximum":9007199254740991},{"type":"null"}]},"destroyer":{"anyOf":[{"type":"integer","minimum":0,"maximum":9007199254740991},{"type":"null"}]},"airfield":{"anyOf":[{"type":"integer","minimum":0,"maximum":9007199254740991},{"type":"null"}]},"fighterR":{"anyOf":[{"type":"integer","minimum":0,"maximum":9007199254740991},{"type":"null"}]},"fighter":{"anyOf":[{"type":"integer","minimum":0,"maximum":9007199254740991},{"type":"null"}]},"attackerR":{"anyOf":[{"type":"integer","minimum":0,"maximum":9007199254740991},{"type":"null"}]},"attacker":{"anyOf":[{"type":"integer","minimum":0,"maximum":9007199254740991},{"type":"null"}]},"bomberR":{"anyOf":[{"type":"integer","minimum":0,"maximum":9007199254740991},{"type":"null"}]},"bomber":{"anyOf":[{"type":"integer","minimum":0,"maximum":9007199254740991},{"type":"null"}]}}},"rewards":{"type":["object","null"]}}},"file6":{"type":"object","additionalProperties":false,"required":["source","status","costs"],"properties":{"source":{"type":"string"},"status":{"type":"string"},"costs":{"type":"object","additionalProperties":false,"required":["rifle","mgR","mg","mortarR","mortar","gunR","gun","atR","at","factory","carR","car","tankR","tank","heavyR","heavy","destroyerR","destroyer","airfield","fighterR","fighter","attackerR","attacker","bomberR","bomber"],"properties":{"rifle":{"type":"integer","minimum":0,"maximum":9007199254740991},"mgR":{"type":"integer","minimum":0,"maximum":9007199254740991},"mg":{"type":"integer","minimum":0,"maximum":9007199254740991},"mortarR":{"type":"integer","minimum":0,"maximum":9007199254740991},"mortar":{"type":"integer","minimum":0,"maximum":9007199254740991},"gunR":{"type":"integer","minimum":0,"maximum":9007199254740991},"gun":{"type":"integer","minimum":0,"maximum":9007199254740991},"atR":{"type":"integer","minimum":0,"maximum":9007199254740991},"at":{"type":"integer","minimum":0,"maximum":9007199254740991},"factory":{"type":"integer","minimum":0,"maximum":9007199254740991},"carR":{"type":"integer","minimum":0,"maximum":9007199254740991},"car":{"type":"integer","minimum":0,"maximum":9007199254740991},"tankR":{"type":"integer","minimum":0,"maximum":9007199254740991},"tank":{"type":"integer","minimum":0,"maximum":9007199254740991},"heavyR":{"type":"integer","minimum":0,"maximum":9007199254740991},"heavy":{"type":"integer","minimum":0,"maximum":9007199254740991},"destroyerR":{"type":"integer","minimum":0,"maximum":9007199254740991},"destroyer":{"type":"integer","minimum":0,"maximum":9007199254740991},"airfield":{"type":"integer","minimum":0,"maximum":9007199254740991},"fighterR":{"type":"integer","minimum":0,"maximum":9007199254740991},"fighter":{"type":"integer","minimum":0,"maximum":9007199254740991},"attackerR":{"type":"integer","minimum":0,"maximum":9007199254740991},"attacker":{"type":"integer","minimum":0,"maximum":9007199254740991},"bomberR":{"type":"integer","minimum":0,"maximum":9007199254740991},"bomber":{"type":"integer","minimum":0,"maximum":9007199254740991}}}}},"file7":{"type":"array","items":{"type":"object","additionalProperties":false,"required":["id","labelKey","costs","multipliers"],"properties":{"id":{"type":"string","minLength":1,"maxLength":128},"labelKey":{"type":"string","minLength":1,"maxLength":128},"costs":{"anyOf":[{"type":"null"},{"type":"array","minItems":1,"maxItems":100,"items":{"type":"integer","minimum":0,"maximum":9007199254740991}}]},"multipliers":{"anyOf":[{"type":"null"},{"type":"array","minItems":1,"maxItems":100,"items":{"type":"number","exclusiveMinimum":0}}]}}}},"file8":{"type":"array","items":{"type":"object","additionalProperties":false,"required":["id","assetId","baseStatKey","costKey","category"],"properties":{"id":{"type":"string"},"assetId":{"type":"string"},"baseStatKey":{"type":"string"},"costKey":{"type":"string"},"category":{"type":"string"}}}},"file9":{"type":"object","required":["schemaVersion","configVersion","contentVersion","maxWave","combatSeconds","gridSize","hq","preview","decisions"],"additionalProperties":false,"properties":{"schemaVersion":{"type":"integer","minimum":0},"configVersion":{"type":"string","minLength":1},"contentVersion":{"type":"string","minLength":1},"maxWave":{"type":"integer","minimum":0},"combatSeconds":{"type":"integer","minimum":0},"gridSize":{"type":"integer","minimum":0},"hq":{"type":"object","required":["row","col"],"additionalProperties":false,"properties":{"row":{"type":"integer","minimum":0},"col":{"type":"integer","minimum":0}}},"preview":{"type":"object","required":["buildingIds","researchIds","formationStage"],"additionalProperties":false,"properties":{"buildingIds":{"type":"array","items":{"type":"string","minLength":1}},"researchIds":{"type":"array","items":{"type":"string","minLength":1}},"formationStage":{"type":"string","minLength":1}}},"decisions":{"type":"object","required":["D-01","D-02","D-03","D-04","D-05","D-06","D-07","D-08","D-09","D-10","D-11","D-12","D-13"],"additionalProperties":false,"properties":{"D-01":{"type":"string","minLength":1},"D-02":{"type":"string","minLength":1},"D-03":{"type":"string","minLength":1},"D-04":{"type":"string","minLength":1},"D-05":{"type":"string","minLength":1},"D-06":{"type":"string","minLength":1},"D-07":{"type":"string","minLength":1},"D-08":{"type":"string","minLength":1},"D-09":{"type":"string","minLength":1},"D-10":{"type":"string","minLength":1},"D-11":{"type":"string","minLength":1},"D-12":{"type":"string","minLength":1},"D-13":{"type":"string"}}}}},"file10":{"type":"object","required":["status","source","minimumSeeds","maximumSeeds","completionRate","wrongMaximumRate","maximumInvalid","maximumAccountingErrors","minimumPositionDifferences","minimumUpgradeDifferences"],"additionalProperties":false,"properties":{"status":{"type":"string","minLength":1},"source":{"type":"string","minLength":1},"minimumSeeds":{"type":"integer","minimum":0},"maximumSeeds":{"type":"integer","minimum":0},"completionRate":{"type":"object","required":["recon","mixed"],"additionalProperties":false,"properties":{"recon":{"type":"number","minimum":0},"mixed":{"type":"number","minimum":0}}},"wrongMaximumRate":{"type":"number","minimum":0},"maximumInvalid":{"type":"integer","minimum":0},"maximumAccountingErrors":{"type":"integer","minimum":0},"minimumPositionDifferences":{"type":"integer","minimum":0},"minimumUpgradeDifferences":{"type":"integer","minimum":0}}},"file11":{"type":"object","additionalProperties":false,"required":["treeRatio","battleRatio","minWidth","minHeight","worldSize","cellSize","gridOrigin","zoomMin","zoomMax","zoomStep","zoomInitial","minClickSize","fontSize","saveDelayMs","saveMaxBytes","speeds","defaultSpeed","unitLabelSize","actionMs","dragThresholdPx","toastMs"],"properties":{"treeRatio":{"type":"integer","minimum":0,"maximum":9007199254740991},"battleRatio":{"type":"integer","minimum":0,"maximum":9007199254740991},"minWidth":{"type":"integer","minimum":0,"maximum":9007199254740991},"minHeight":{"type":"integer","minimum":0,"maximum":9007199254740991},"worldSize":{"type":"integer","minimum":1},"cellSize":{"type":"integer","minimum":0,"maximum":9007199254740991},"gridOrigin":{"type":"integer","minimum":0,"maximum":9007199254740991},"zoomMin":{"type":"number","minimum":0},"zoomMax":{"type":"number","minimum":0},"zoomStep":{"type":"number","minimum":0},"zoomInitial":{"type":"number","minimum":0},"minClickSize":{"type":"integer","minimum":0,"maximum":9007199254740991},"fontSize":{"type":"integer","minimum":0,"maximum":9007199254740991},"saveDelayMs":{"type":"integer","minimum":0,"maximum":9007199254740991},"saveMaxBytes":{"type":"integer","minimum":0,"maximum":9007199254740991},"speeds":{"type":"array","items":{"type":"integer","minimum":0,"maximum":9007199254740991}},"defaultSpeed":{"type":"integer","minimum":0,"maximum":9007199254740991},"unitLabelSize":{"type":"number"},"actionMs":{"type":"object","additionalProperties":false,"required":["building","research","unit"],"properties":{"building":{"type":"integer","minimum":0},"research":{"type":"integer","minimum":0},"unit":{"type":"integer","minimum":0}}},"dragThresholdPx":{"type":"integer","minimum":1},"toastMs":{"type":"integer","minimum":0}}},"file12":{"type":"object","additionalProperties":false,"required":["cancel","help","zoomIn","zoomOut","start"],"properties":{"cancel":{"type":"array","items":{"type":"string"}},"help":{"type":"array","items":{"type":"string"}},"zoomIn":{"type":"array","items":{"type":"string"}},"zoomOut":{"type":"array","items":{"type":"string"}},"start":{"type":"array","items":{"type":"string"}}}},"file13":{"type":"object","additionalProperties":false,"required":["steps"],"properties":{"steps":{"type":"array","items":{"type":"string"}}}},"file14":{"type":"object","additionalProperties":false,"required":["ground","road","grid","hq","friendly","enemy","locked","text","default","unitLabel","unitLabelBackground"],"properties":{"ground":{"type":"integer","minimum":0,"maximum":9007199254740991},"road":{"type":"integer","minimum":0,"maximum":9007199254740991},"grid":{"type":"integer","minimum":0,"maximum":9007199254740991},"hq":{"type":"integer","minimum":0,"maximum":9007199254740991},"friendly":{"type":"integer","minimum":0,"maximum":9007199254740991},"enemy":{"type":"integer","minimum":0,"maximum":9007199254740991},"locked":{"type":"integer","minimum":0,"maximum":9007199254740991},"text":{"type":"integer","minimum":0,"maximum":9007199254740991},"default":{"type":"integer","minimum":0,"maximum":9007199254740991},"unitLabel":{"type":"string"},"unitLabelBackground":{"type":"string"}}},"file15":{"type":"array","minItems":95,"items":{"type":"object","additionalProperties":false,"required":["assetId","category","relativePath","fallbackKind","designSize","pivot","animationFrames","fpsKey","paletteKey","attributionId","status"],"properties":{"assetId":{"type":"string","minLength":1,"maxLength":128},"category":{"type":"string","minLength":1,"maxLength":128},"relativePath":{"type":["string","null"]},"fallbackKind":{"enum":["silent","system-font","pixel-shape"]},"designSize":{"type":"array","minItems":2,"maxItems":2,"items":{"type":"integer","minimum":1}},"pivot":{"type":"array","minItems":2,"maxItems":2,"items":{"type":"number","minimum":0,"maximum":1}},"animationFrames":{"type":"array","items":{"type":"integer","minimum":0,"maximum":9007199254740991}},"fpsKey":{"type":["string","null"]},"paletteKey":{"type":"string","minLength":1,"maxLength":128},"attributionId":{"type":"string","minLength":1,"maxLength":128},"status":{"enum":["placeholder","ready"]}}}},"file16":{"type":"object","additionalProperties":false,"required":["items"],"properties":{"items":{"type":"array","items":{"anyOf":[{"type":"object","additionalProperties":false,"required":["id","license","author","source","files"],"properties":{"id":{"type":"string"},"license":{"type":"string"},"author":{"type":"string"},"source":{"type":"string"},"files":{"type":"array","items":{"type":"object","additionalProperties":false,"required":["path","sha256"],"properties":{"path":{"type":"string"},"sha256":{"type":"string"}}}}}},{"type":"object","additionalProperties":false,"required":["id","license","author","source","files"],"properties":{"id":{"type":"string"},"license":{"type":"string"},"author":{"type":"string"},"source":{"type":"null"},"files":{"type":"array"}}}]}}}},"file17":{"type":"object","minProperties":1,"additionalProperties":{"type":"string","minLength":1}},"file18":{"type":"object","additionalProperties":false,"required":["defaultLocale","fallbackLocale","supportedLocales","fontAssetIds"],"properties":{"defaultLocale":{"type":"string"},"fallbackLocale":{"type":"string"},"supportedLocales":{"type":"array","items":{"type":"string"}},"fontAssetIds":{"type":"object","additionalProperties":false,"required":["ko-KR"],"properties":{"ko-KR":{"type":"string"}}}}},"file19":{"type":"object","additionalProperties":false,"required":["appId","productName","asar","directories","files","extraResources","win","npmRebuild"],"properties":{"appId":{"type":"string"},"productName":{"type":"string"},"asar":{"type":"boolean"},"directories":{"type":"object","additionalProperties":false,"required":["output"],"properties":{"output":{"type":"string"}}},"files":{"type":"array","items":{"type":"string"}},"extraResources":{"type":"array","items":{"type":"object","additionalProperties":false,"required":["from","to"],"properties":{"from":{"type":"string"},"to":{"type":"string"}}}},"win":{"type":"object","additionalProperties":false,"required":["target"],"properties":{"target":{"type":"array","items":{"type":"string"}}}},"npmRebuild":{"type":"boolean"}}},"file20":{"type":"object","required":["id","status","version","initialSupplies","hqHp","costs","units","rewardBase","rewardPerWave","upgradeMultipliers","upgradeCostFactors","fixedStepSeconds","maxTicks","frameStride","spawnDistance","spawnInterval","contactRange","enemyPowerPerWave","enemyCountBase","enemyCountWaveInterval","enemyCountGrowth","expansionWaves"],"additionalProperties":false,"properties":{"id":{"type":"string","minLength":1},"status":{"type":"string","minLength":1},"version":{"type":"integer","minimum":0},"initialSupplies":{"type":"integer","minimum":0},"hqHp":{"type":"integer","minimum":0},"costs":{"type":"object","required":["hq","rifleR","rifle","barracks","mgR","mg","mortarR","mortar","gunR","gun","atR","at","factory","carR","car","tankR","tank","heavyR","heavy","destroyerR","destroyer","airfield","fighterR","fighter","attackerR","attacker","bomberR","bomber"],"additionalProperties":false,"properties":{"hq":{"type":"integer","minimum":0},"rifleR":{"type":"integer","minimum":0},"rifle":{"type":"integer","minimum":0},"barracks":{"type":"integer","minimum":0},"mgR":{"type":"integer","minimum":0},"mg":{"type":"integer","minimum":0},"mortarR":{"type":"integer","minimum":0},"mortar":{"type":"integer","minimum":0},"gunR":{"type":"integer","minimum":0},"gun":{"type":"integer","minimum":0},"atR":{"type":"integer","minimum":0},"at":{"type":"integer","minimum":0},"factory":{"type":"integer","minimum":0},"carR":{"type":"integer","minimum":0},"car":{"type":"integer","minimum":0},"tankR":{"type":"integer","minimum":0},"tank":{"type":"integer","minimum":0},"heavyR":{"type":"integer","minimum":0},"heavy":{"type":"integer","minimum":0},"destroyerR":{"type":"integer","minimum":0},"destroyer":{"type":"integer","minimum":0},"airfield":{"type":"integer","minimum":0},"fighterR":{"type":"integer","minimum":0},"fighter":{"type":"integer","minimum":0},"attackerR":{"type":"integer","minimum":0},"attacker":{"type":"integer","minimum":0},"bomberR":{"type":"integer","minimum":0},"bomber":{"type":"integer","minimum":0}}},"units":{"type":"object","required":["rifle","mg","mortar","gun","at","car","tank","heavy","destroyer","fighter","attacker","bomber"],"additionalProperties":false,"properties":{"rifle":{"type":"object","required":["hp","damage","cooldown","range","arc","speed","cost","splash","modifiers","category"],"additionalProperties":false,"properties":{"hp":{"type":"integer","minimum":0},"damage":{"type":"integer","minimum":0},"cooldown":{"type":"number","minimum":0},"range":{"type":"integer","minimum":0},"arc":{"type":"integer","minimum":0},"speed":{"type":"number","minimum":0},"cost":{"type":"integer","minimum":0},"splash":{"type":"integer","minimum":0},"modifiers":{"type":"object","required":["infantry","armor","aircraft"],"additionalProperties":false,"properties":{"infantry":{"type":"integer","minimum":0},"armor":{"type":"number","minimum":0},"aircraft":{"type":"number","minimum":0}}},"category":{"type":"string","minLength":1}}},"mg":{"type":"object","required":["hp","damage","cooldown","range","arc","speed","cost","splash","modifiers","category"],"additionalProperties":false,"properties":{"hp":{"type":"integer","minimum":0},"damage":{"type":"integer","minimum":0},"cooldown":{"type":"number","minimum":0},"range":{"type":"number","minimum":0},"arc":{"type":"integer","minimum":0},"speed":{"type":"number","minimum":0},"cost":{"type":"integer","minimum":0},"splash":{"type":"integer","minimum":0},"modifiers":{"type":"object","required":["infantry","armor","aircraft"],"additionalProperties":false,"properties":{"infantry":{"type":"number","minimum":0},"armor":{"type":"number","minimum":0},"aircraft":{"type":"number","minimum":0}}},"category":{"type":"string","minLength":1}}},"mortar":{"type":"object","required":["hp","damage","cooldown","range","arc","speed","cost","splash","modifiers","category"],"additionalProperties":false,"properties":{"hp":{"type":"integer","minimum":0},"damage":{"type":"integer","minimum":0},"cooldown":{"type":"number","minimum":0},"range":{"type":"number","minimum":0},"arc":{"type":"integer","minimum":0},"speed":{"type":"number","minimum":0},"cost":{"type":"integer","minimum":0},"splash":{"type":"number","minimum":0},"modifiers":{"type":"object","required":["infantry","armor","aircraft"],"additionalProperties":false,"properties":{"infantry":{"type":"integer","minimum":0},"armor":{"type":"number","minimum":0},"aircraft":{"type":"number","minimum":0}}},"category":{"type":"string","minLength":1}}},"gun":{"type":"object","required":["hp","damage","cooldown","range","arc","speed","cost","splash","modifiers","category"],"additionalProperties":false,"properties":{"hp":{"type":"integer","minimum":0},"damage":{"type":"integer","minimum":0},"cooldown":{"type":"number","minimum":0},"range":{"type":"number","minimum":0},"arc":{"type":"integer","minimum":0},"speed":{"type":"number","minimum":0},"cost":{"type":"integer","minimum":0},"splash":{"type":"number","minimum":0},"modifiers":{"type":"object","required":["infantry","armor","aircraft"],"additionalProperties":false,"properties":{"infantry":{"type":"integer","minimum":0},"armor":{"type":"number","minimum":0},"aircraft":{"type":"number","minimum":0}}},"category":{"type":"string","minLength":1}}},"at":{"type":"object","required":["hp","damage","cooldown","range","arc","speed","cost","splash","modifiers","category"],"additionalProperties":false,"properties":{"hp":{"type":"integer","minimum":0},"damage":{"type":"integer","minimum":0},"cooldown":{"type":"number","minimum":0},"range":{"type":"number","minimum":0},"arc":{"type":"integer","minimum":0},"speed":{"type":"number","minimum":0},"cost":{"type":"integer","minimum":0},"splash":{"type":"integer","minimum":0},"modifiers":{"type":"object","required":["infantry","armor","aircraft"],"additionalProperties":false,"properties":{"infantry":{"type":"number","minimum":0},"armor":{"type":"number","minimum":0},"aircraft":{"type":"number","minimum":0}}},"category":{"type":"string","minLength":1}}},"car":{"type":"object","required":["hp","damage","cooldown","range","arc","speed","cost","splash","modifiers","category"],"additionalProperties":false,"properties":{"hp":{"type":"integer","minimum":0},"damage":{"type":"integer","minimum":0},"cooldown":{"type":"number","minimum":0},"range":{"type":"number","minimum":0},"arc":{"type":"integer","minimum":0},"speed":{"type":"number","minimum":0},"cost":{"type":"integer","minimum":0},"splash":{"type":"integer","minimum":0},"modifiers":{"type":"object","required":["infantry","armor","aircraft"],"additionalProperties":false,"properties":{"infantry":{"type":"number","minimum":0},"armor":{"type":"number","minimum":0},"aircraft":{"type":"number","minimum":0}}},"category":{"type":"string","minLength":1}}},"tank":{"type":"object","required":["hp","damage","cooldown","range","arc","speed","cost","splash","modifiers","category"],"additionalProperties":false,"properties":{"hp":{"type":"integer","minimum":0},"damage":{"type":"integer","minimum":0},"cooldown":{"type":"number","minimum":0},"range":{"type":"number","minimum":0},"arc":{"type":"integer","minimum":0},"speed":{"type":"number","minimum":0},"cost":{"type":"integer","minimum":0},"splash":{"type":"number","minimum":0},"modifiers":{"type":"object","required":["infantry","armor","aircraft"],"additionalProperties":false,"properties":{"infantry":{"type":"integer","minimum":0},"armor":{"type":"number","minimum":0},"aircraft":{"type":"number","minimum":0}}},"category":{"type":"string","minLength":1}}},"heavy":{"type":"object","required":["hp","damage","cooldown","range","arc","speed","cost","splash","modifiers","category"],"additionalProperties":false,"properties":{"hp":{"type":"integer","minimum":0},"damage":{"type":"integer","minimum":0},"cooldown":{"type":"number","minimum":0},"range":{"type":"number","minimum":0},"arc":{"type":"integer","minimum":0},"speed":{"type":"number","minimum":0},"cost":{"type":"integer","minimum":0},"splash":{"type":"number","minimum":0},"modifiers":{"type":"object","required":["infantry","armor","aircraft"],"additionalProperties":false,"properties":{"infantry":{"type":"integer","minimum":0},"armor":{"type":"number","minimum":0},"aircraft":{"type":"number","minimum":0}}},"category":{"type":"string","minLength":1}}},"destroyer":{"type":"object","required":["hp","damage","cooldown","range","arc","speed","cost","splash","modifiers","category"],"additionalProperties":false,"properties":{"hp":{"type":"integer","minimum":0},"damage":{"type":"integer","minimum":0},"cooldown":{"type":"number","minimum":0},"range":{"type":"number","minimum":0},"arc":{"type":"integer","minimum":0},"speed":{"type":"number","minimum":0},"cost":{"type":"integer","minimum":0},"splash":{"type":"integer","minimum":0},"modifiers":{"type":"object","required":["infantry","armor","aircraft"],"additionalProperties":false,"properties":{"infantry":{"type":"number","minimum":0},"armor":{"type":"integer","minimum":0},"aircraft":{"type":"number","minimum":0}}},"category":{"type":"string","minLength":1}}},"fighter":{"type":"object","required":["hp","damage","cooldown","range","arc","speed","cost","splash","modifiers","category"],"additionalProperties":false,"properties":{"hp":{"type":"integer","minimum":0},"damage":{"type":"integer","minimum":0},"cooldown":{"type":"number","minimum":0},"range":{"type":"number","minimum":0},"arc":{"type":"integer","minimum":0},"speed":{"type":"number","minimum":0},"cost":{"type":"integer","minimum":0},"splash":{"type":"integer","minimum":0},"modifiers":{"type":"object","required":["infantry","armor","aircraft"],"additionalProperties":false,"properties":{"infantry":{"type":"number","minimum":0},"armor":{"type":"number","minimum":0},"aircraft":{"type":"number","minimum":0}}},"category":{"type":"string","minLength":1}}},"attacker":{"type":"object","required":["hp","damage","cooldown","range","arc","speed","cost","splash","modifiers","category"],"additionalProperties":false,"properties":{"hp":{"type":"integer","minimum":0},"damage":{"type":"integer","minimum":0},"cooldown":{"type":"number","minimum":0},"range":{"type":"integer","minimum":0},"arc":{"type":"integer","minimum":0},"speed":{"type":"number","minimum":0},"cost":{"type":"integer","minimum":0},"splash":{"type":"number","minimum":0},"modifiers":{"type":"object","required":["infantry","armor","aircraft"],"additionalProperties":false,"properties":{"infantry":{"type":"integer","minimum":0},"armor":{"type":"number","minimum":0},"aircraft":{"type":"number","minimum":0}}},"category":{"type":"string","minLength":1}}},"bomber":{"type":"object","required":["hp","damage","cooldown","range","arc","speed","cost","splash","modifiers","category"],"additionalProperties":false,"properties":{"hp":{"type":"integer","minimum":0},"damage":{"type":"integer","minimum":0},"cooldown":{"type":"number","minimum":0},"range":{"type":"integer","minimum":0},"arc":{"type":"integer","minimum":0},"speed":{"type":"number","minimum":0},"cost":{"type":"integer","minimum":0},"splash":{"type":"integer","minimum":0},"modifiers":{"type":"object","required":["infantry","armor","aircraft"],"additionalProperties":false,"properties":{"infantry":{"type":"number","minimum":0},"armor":{"type":"number","minimum":0},"aircraft":{"type":"number","minimum":0}}},"category":{"type":"string","minLength":1}}}}},"rewardBase":{"type":"integer","minimum":0},"rewardPerWave":{"type":"integer","minimum":0},"upgradeMultipliers":{"type":"array","items":{"type":"number","minimum":0}},"upgradeCostFactors":{"type":"array","items":{"type":"number","minimum":0}},"fixedStepSeconds":{"type":"number","minimum":0,"exclusiveMinimum":0},"maxTicks":{"type":"integer","minimum":1},"frameStride":{"type":"integer","minimum":1},"spawnDistance":{"type":"integer","minimum":0},"spawnInterval":{"type":"number","minimum":0},"contactRange":{"type":"number","minimum":0},"enemyPowerPerWave":{"type":"number","minimum":0},"enemyCountBase":{"type":"integer","minimum":1},"enemyCountWaveInterval":{"type":"integer","minimum":1},"enemyCountGrowth":{"type":"integer","minimum":0},"expansionWaves":{"type":"array","items":{"type":"integer","minimum":0}}}},"file21":{"type":"object","required":["maxWave","directions","unlockEnemies","seedPolicy"],"additionalProperties":false,"properties":{"maxWave":{"type":"integer","minimum":0},"directions":{"type":"array","items":{"type":"string","minLength":1}},"unlockEnemies":{"type":"array","items":{"type":"object","required":["wave","ids"],"additionalProperties":false,"properties":{"wave":{"type":"integer","minimum":0},"ids":{"type":"array","items":{"type":"string","minLength":1}}}}},"seedPolicy":{"type":"string","minLength":1}}},"file22":{"type":"object","required":["policies","minimumSeeds","maximumSeeds","version","holdoutSeedOffset","warmupThroughWave","airResponseWave","growthBudgetFraction","reserveTriggerMultiplier","starterUnit","earlyPriorityUnit","profiles","reallocationPolicies","reallocationInterval"],"additionalProperties":false,"properties":{"policies":{"type":"array","items":{"type":"string","minLength":1}},"minimumSeeds":{"type":"integer","minimum":0},"maximumSeeds":{"type":"integer","minimum":0},"version":{"type":"string","minLength":1},"holdoutSeedOffset":{"type":"integer","minimum":0},"warmupThroughWave":{"type":"integer","minimum":0},"airResponseWave":{"type":"integer","minimum":0},"growthBudgetFraction":{"type":"number","minimum":0},"reserveTriggerMultiplier":{"type":"integer","minimum":0},"starterUnit":{"type":"string","minLength":1},"earlyPriorityUnit":{"type":"string","minLength":1},"profiles":{"type":"object","required":["infantry","antiArmor","armor","air","mixed","recon","random","wrong"],"additionalProperties":false,"properties":{"infantry":{"type":"array","items":{"type":"string","minLength":1}},"antiArmor":{"type":"array","items":{"type":"string","minLength":1}},"armor":{"type":"array","items":{"type":"string","minLength":1}},"air":{"type":"array","items":{"type":"string","minLength":1}},"mixed":{"type":"array","items":{"type":"string","minLength":1}},"recon":{"type":"array","items":{"type":"string","minLength":1}},"random":{"type":"array","items":{"type":"string","minLength":1}},"wrong":{"type":"array","items":{"type":"string","minLength":1}}}},"reallocationPolicies":{"type":"array","minItems":1,"items":{"type":"string"}},"reallocationInterval":{"type":"integer","minimum":1,"maximum":100}}},"file31":{"type":"object","required":["id","status","version","initialSupplies","hqHp","costs","units","rewardBase","rewardPerWave","upgradeMultipliers","upgradeCostFactors","fixedStepSeconds","maxTicks","frameStride","spawnDistance","spawnInterval","contactRange","enemyPowerPerWave","enemyCountBase","enemyCountWaveInterval","enemyCountGrowth","expansionWaves","rewards"],"additionalProperties":false,"properties":{"id":{"type":"string","minLength":1},"status":{"type":"string","minLength":1},"version":{"type":"integer","minimum":0},"initialSupplies":{"type":"integer","minimum":0},"hqHp":{"type":"integer","minimum":0},"costs":{"type":"object","required":["hq","rifleR","rifle","barracks","mgR","mg","mortarR","mortar","gunR","gun","atR","at","factory","carR","car","tankR","tank","heavyR","heavy","destroyerR","destroyer","airfield","fighterR","fighter","attackerR","attacker","bomberR","bomber"],"additionalProperties":false,"properties":{"hq":{"type":"integer","minimum":0},"rifleR":{"type":"integer","minimum":0},"rifle":{"type":"integer","minimum":0},"barracks":{"type":"integer","minimum":0},"mgR":{"type":"integer","minimum":0},"mg":{"type":"integer","minimum":0},"mortarR":{"type":"integer","minimum":0},"mortar":{"type":"integer","minimum":0},"gunR":{"type":"integer","minimum":0},"gun":{"type":"integer","minimum":0},"atR":{"type":"integer","minimum":0},"at":{"type":"integer","minimum":0},"factory":{"type":"integer","minimum":0},"carR":{"type":"integer","minimum":0},"car":{"type":"integer","minimum":0},"tankR":{"type":"integer","minimum":0},"tank":{"type":"integer","minimum":0},"heavyR":{"type":"integer","minimum":0},"heavy":{"type":"integer","minimum":0},"destroyerR":{"type":"integer","minimum":0},"destroyer":{"type":"integer","minimum":0},"airfield":{"type":"integer","minimum":0},"fighterR":{"type":"integer","minimum":0},"fighter":{"type":"integer","minimum":0},"attackerR":{"type":"integer","minimum":0},"attacker":{"type":"integer","minimum":0},"bomberR":{"type":"integer","minimum":0},"bomber":{"type":"integer","minimum":0}}},"units":{"type":"object","required":["rifle","mg","mortar","gun","at","car","tank","heavy","destroyer","fighter","attacker","bomber"],"additionalProperties":false,"properties":{"rifle":{"type":"object","required":["hp","damage","cooldown","range","arc","speed","cost","splash","modifiers","category"],"additionalProperties":false,"properties":{"hp":{"type":"integer","minimum":0},"damage":{"type":"integer","minimum":0},"cooldown":{"type":"number","minimum":0},"range":{"type":"integer","minimum":0},"arc":{"type":"integer","minimum":0},"speed":{"type":"number","minimum":0},"cost":{"type":"integer","minimum":0},"splash":{"type":"integer","minimum":0},"modifiers":{"type":"object","required":["infantry","armor","aircraft"],"additionalProperties":false,"properties":{"infantry":{"type":"integer","minimum":0},"armor":{"type":"number","minimum":0},"aircraft":{"type":"number","minimum":0}}},"category":{"type":"string","minLength":1}}},"mg":{"type":"object","required":["hp","damage","cooldown","range","arc","speed","cost","splash","modifiers","category"],"additionalProperties":false,"properties":{"hp":{"type":"integer","minimum":0},"damage":{"type":"integer","minimum":0},"cooldown":{"type":"number","minimum":0},"range":{"type":"number","minimum":0},"arc":{"type":"integer","minimum":0},"speed":{"type":"number","minimum":0},"cost":{"type":"integer","minimum":0},"splash":{"type":"integer","minimum":0},"modifiers":{"type":"object","required":["infantry","armor","aircraft"],"additionalProperties":false,"properties":{"infantry":{"type":"number","minimum":0},"armor":{"type":"number","minimum":0},"aircraft":{"type":"number","minimum":0}}},"category":{"type":"string","minLength":1}}},"mortar":{"type":"object","required":["hp","damage","cooldown","range","arc","speed","cost","splash","modifiers","category"],"additionalProperties":false,"properties":{"hp":{"type":"integer","minimum":0},"damage":{"type":"integer","minimum":0},"cooldown":{"type":"number","minimum":0},"range":{"type":"number","minimum":0},"arc":{"type":"integer","minimum":0},"speed":{"type":"number","minimum":0},"cost":{"type":"integer","minimum":0},"splash":{"type":"number","minimum":0},"modifiers":{"type":"object","required":["infantry","armor","aircraft"],"additionalProperties":false,"properties":{"infantry":{"type":"integer","minimum":0},"armor":{"type":"number","minimum":0},"aircraft":{"type":"number","minimum":0}}},"category":{"type":"string","minLength":1}}},"gun":{"type":"object","required":["hp","damage","cooldown","range","arc","speed","cost","splash","modifiers","category"],"additionalProperties":false,"properties":{"hp":{"type":"integer","minimum":0},"damage":{"type":"integer","minimum":0},"cooldown":{"type":"number","minimum":0},"range":{"type":"number","minimum":0},"arc":{"type":"integer","minimum":0},"speed":{"type":"number","minimum":0},"cost":{"type":"integer","minimum":0},"splash":{"type":"number","minimum":0},"modifiers":{"type":"object","required":["infantry","armor","aircraft"],"additionalProperties":false,"properties":{"infantry":{"type":"integer","minimum":0},"armor":{"type":"number","minimum":0},"aircraft":{"type":"number","minimum":0}}},"category":{"type":"string","minLength":1}}},"at":{"type":"object","required":["hp","damage","cooldown","range","arc","speed","cost","splash","modifiers","category"],"additionalProperties":false,"properties":{"hp":{"type":"integer","minimum":0},"damage":{"type":"integer","minimum":0},"cooldown":{"type":"number","minimum":0},"range":{"type":"number","minimum":0},"arc":{"type":"integer","minimum":0},"speed":{"type":"number","minimum":0},"cost":{"type":"integer","minimum":0},"splash":{"type":"integer","minimum":0},"modifiers":{"type":"object","required":["infantry","armor","aircraft"],"additionalProperties":false,"properties":{"infantry":{"type":"number","minimum":0},"armor":{"type":"number","minimum":0},"aircraft":{"type":"number","minimum":0}}},"category":{"type":"string","minLength":1}}},"car":{"type":"object","required":["hp","damage","cooldown","range","arc","speed","cost","splash","modifiers","category"],"additionalProperties":false,"properties":{"hp":{"type":"integer","minimum":0},"damage":{"type":"integer","minimum":0},"cooldown":{"type":"number","minimum":0},"range":{"type":"number","minimum":0},"arc":{"type":"integer","minimum":0},"speed":{"type":"number","minimum":0},"cost":{"type":"integer","minimum":0},"splash":{"type":"integer","minimum":0},"modifiers":{"type":"object","required":["infantry","armor","aircraft"],"additionalProperties":false,"properties":{"infantry":{"type":"number","minimum":0},"armor":{"type":"number","minimum":0},"aircraft":{"type":"number","minimum":0}}},"category":{"type":"string","minLength":1}}},"tank":{"type":"object","required":["hp","damage","cooldown","range","arc","speed","cost","splash","modifiers","category"],"additionalProperties":false,"properties":{"hp":{"type":"integer","minimum":0},"damage":{"type":"integer","minimum":0},"cooldown":{"type":"number","minimum":0},"range":{"type":"number","minimum":0},"arc":{"type":"integer","minimum":0},"speed":{"type":"number","minimum":0},"cost":{"type":"integer","minimum":0},"splash":{"type":"number","minimum":0},"modifiers":{"type":"object","required":["infantry","armor","aircraft"],"additionalProperties":false,"properties":{"infantry":{"type":"integer","minimum":0},"armor":{"type":"number","minimum":0},"aircraft":{"type":"number","minimum":0}}},"category":{"type":"string","minLength":1}}},"heavy":{"type":"object","required":["hp","damage","cooldown","range","arc","speed","cost","splash","modifiers","category"],"additionalProperties":false,"properties":{"hp":{"type":"integer","minimum":0},"damage":{"type":"integer","minimum":0},"cooldown":{"type":"number","minimum":0},"range":{"type":"number","minimum":0},"arc":{"type":"integer","minimum":0},"speed":{"type":"number","minimum":0},"cost":{"type":"integer","minimum":0},"splash":{"type":"number","minimum":0},"modifiers":{"type":"object","required":["infantry","armor","aircraft"],"additionalProperties":false,"properties":{"infantry":{"type":"integer","minimum":0},"armor":{"type":"number","minimum":0},"aircraft":{"type":"number","minimum":0}}},"category":{"type":"string","minLength":1}}},"destroyer":{"type":"object","required":["hp","damage","cooldown","range","arc","speed","cost","splash","modifiers","category"],"additionalProperties":false,"properties":{"hp":{"type":"integer","minimum":0},"damage":{"type":"integer","minimum":0},"cooldown":{"type":"number","minimum":0},"range":{"type":"number","minimum":0},"arc":{"type":"integer","minimum":0},"speed":{"type":"number","minimum":0},"cost":{"type":"integer","minimum":0},"splash":{"type":"integer","minimum":0},"modifiers":{"type":"object","required":["infantry","armor","aircraft"],"additionalProperties":false,"properties":{"infantry":{"type":"number","minimum":0},"armor":{"type":"integer","minimum":0},"aircraft":{"type":"number","minimum":0}}},"category":{"type":"string","minLength":1}}},"fighter":{"type":"object","required":["hp","damage","cooldown","range","arc","speed","cost","splash","modifiers","category"],"additionalProperties":false,"properties":{"hp":{"type":"integer","minimum":0},"damage":{"type":"integer","minimum":0},"cooldown":{"type":"number","minimum":0},"range":{"type":"number","minimum":0},"arc":{"type":"integer","minimum":0},"speed":{"type":"number","minimum":0},"cost":{"type":"integer","minimum":0},"splash":{"type":"integer","minimum":0},"modifiers":{"type":"object","required":["infantry","armor","aircraft"],"additionalProperties":false,"properties":{"infantry":{"type":"number","minimum":0},"armor":{"type":"number","minimum":0},"aircraft":{"type":"number","minimum":0}}},"category":{"type":"string","minLength":1}}},"attacker":{"type":"object","required":["hp","damage","cooldown","range","arc","speed","cost","splash","modifiers","category"],"additionalProperties":false,"properties":{"hp":{"type":"integer","minimum":0},"damage":{"type":"integer","minimum":0},"cooldown":{"type":"number","minimum":0},"range":{"type":"integer","minimum":0},"arc":{"type":"integer","minimum":0},"speed":{"type":"number","minimum":0},"cost":{"type":"integer","minimum":0},"splash":{"type":"number","minimum":0},"modifiers":{"type":"object","required":["infantry","armor","aircraft"],"additionalProperties":false,"properties":{"infantry":{"type":"integer","minimum":0},"armor":{"type":"number","minimum":0},"aircraft":{"type":"number","minimum":0}}},"category":{"type":"string","minLength":1}}},"bomber":{"type":"object","required":["hp","damage","cooldown","range","arc","speed","cost","splash","modifiers","category"],"additionalProperties":false,"properties":{"hp":{"type":"integer","minimum":0},"damage":{"type":"integer","minimum":0},"cooldown":{"type":"number","minimum":0},"range":{"type":"integer","minimum":0},"arc":{"type":"integer","minimum":0},"speed":{"type":"number","minimum":0},"cost":{"type":"integer","minimum":0},"splash":{"type":"integer","minimum":0},"modifiers":{"type":"object","required":["infantry","armor","aircraft"],"additionalProperties":false,"properties":{"infantry":{"type":"number","minimum":0},"armor":{"type":"number","minimum":0},"aircraft":{"type":"number","minimum":0}}},"category":{"type":"string","minLength":1}}}}},"rewardBase":{"type":"integer","minimum":0},"rewardPerWave":{"type":"integer","minimum":0},"upgradeMultipliers":{"type":"array","items":{"type":"number","minimum":0}},"upgradeCostFactors":{"type":"array","items":{"type":"number","minimum":0}},"fixedStepSeconds":{"type":"number","minimum":0,"exclusiveMinimum":0},"maxTicks":{"type":"integer","minimum":1},"frameStride":{"type":"integer","minimum":1},"spawnDistance":{"type":"integer","minimum":0},"spawnInterval":{"type":"number","minimum":0},"contactRange":{"type":"number","minimum":0},"enemyPowerPerWave":{"type":"number","minimum":0},"enemyCountBase":{"type":"integer","minimum":1},"enemyCountWaveInterval":{"type":"integer","minimum":1},"enemyCountGrowth":{"type":"integer","minimum":0},"expansionWaves":{"type":"array","items":{"type":"integer","minimum":0}},"rewards":{"type":"array","minItems":100,"maxItems":100,"items":{"type":"integer","minimum":0}}}},"file32":{"type":"object","required":["candidate"],"additionalProperties":false,"properties":{"candidate":{"type":"string","minLength":1}}},"file33":{"type":"object","additionalProperties":false,"required":["version","seeds","startSeed","wave","cells","directions","enemyUnits","enemyCount","spawnGroups"],"properties":{"version":{"type":"string"},"seeds":{"type":"number"},"startSeed":{"type":"number"},"wave":{"type":"number"},"cells":{"type":"array","items":{"type":"object","additionalProperties":false,"required":["row","col"],"properties":{"row":{"type":"number"},"col":{"type":"number"}}}},"directions":{"type":"array","items":{"type":"string"}},"enemyUnits":{"type":"array","items":{"type":"string"}},"enemyCount":{"type":"number"},"spawnGroups":{"type":"number"}}},"file34":{"type":"object","required":["id","status","version","initialSupplies","hqHp","costs","units","rewardBase","rewardPerWave","upgradeMultipliers","upgradeCostFactors","fixedStepSeconds","maxTicks","frameStride","spawnDistance","spawnInterval","contactRange","enemyPowerPerWave","enemyCountBase","enemyCountWaveInterval","enemyCountGrowth","expansionWaves","rewards"],"additionalProperties":false,"properties":{"id":{"type":"string","minLength":1},"status":{"type":"string","minLength":1},"version":{"type":"integer","minimum":0},"initialSupplies":{"type":"integer","minimum":0},"hqHp":{"type":"integer","minimum":0},"costs":{"type":"object","required":["hq","rifleR","rifle","barracks","mgR","mg","mortarR","mortar","gunR","gun","atR","at","factory","carR","car","tankR","tank","heavyR","heavy","destroyerR","destroyer","airfield","fighterR","fighter","attackerR","attacker","bomberR","bomber"],"additionalProperties":false,"properties":{"hq":{"type":"integer","minimum":0},"rifleR":{"type":"integer","minimum":0},"rifle":{"type":"integer","minimum":0},"barracks":{"type":"integer","minimum":0},"mgR":{"type":"integer","minimum":0},"mg":{"type":"integer","minimum":0},"mortarR":{"type":"integer","minimum":0},"mortar":{"type":"integer","minimum":0},"gunR":{"type":"integer","minimum":0},"gun":{"type":"integer","minimum":0},"atR":{"type":"integer","minimum":0},"at":{"type":"integer","minimum":0},"factory":{"type":"integer","minimum":0},"carR":{"type":"integer","minimum":0},"car":{"type":"integer","minimum":0},"tankR":{"type":"integer","minimum":0},"tank":{"type":"integer","minimum":0},"heavyR":{"type":"integer","minimum":0},"heavy":{"type":"integer","minimum":0},"destroyerR":{"type":"integer","minimum":0},"destroyer":{"type":"integer","minimum":0},"airfield":{"type":"integer","minimum":0},"fighterR":{"type":"integer","minimum":0},"fighter":{"type":"integer","minimum":0},"attackerR":{"type":"integer","minimum":0},"attacker":{"type":"integer","minimum":0},"bomberR":{"type":"integer","minimum":0},"bomber":{"type":"integer","minimum":0}}},"units":{"type":"object","required":["rifle","mg","mortar","gun","at","car","tank","heavy","destroyer","fighter","attacker","bomber"],"additionalProperties":false,"properties":{"rifle":{"type":"object","required":["hp","damage","cooldown","range","arc","speed","cost","splash","modifiers","category"],"additionalProperties":false,"properties":{"hp":{"type":"integer","minimum":0},"damage":{"type":"integer","minimum":0},"cooldown":{"type":"number","minimum":0},"range":{"type":"integer","minimum":0},"arc":{"type":"integer","minimum":0},"speed":{"type":"number","minimum":0},"cost":{"type":"integer","minimum":0},"splash":{"type":"integer","minimum":0},"modifiers":{"type":"object","required":["infantry","armor","aircraft"],"additionalProperties":false,"properties":{"infantry":{"type":"integer","minimum":0},"armor":{"type":"number","minimum":0},"aircraft":{"type":"number","minimum":0}}},"category":{"type":"string","minLength":1}}},"mg":{"type":"object","required":["hp","damage","cooldown","range","arc","speed","cost","splash","modifiers","category"],"additionalProperties":false,"properties":{"hp":{"type":"integer","minimum":0},"damage":{"type":"integer","minimum":0},"cooldown":{"type":"number","minimum":0},"range":{"type":"number","minimum":0},"arc":{"type":"integer","minimum":0},"speed":{"type":"number","minimum":0},"cost":{"type":"integer","minimum":0},"splash":{"type":"integer","minimum":0},"modifiers":{"type":"object","required":["infantry","armor","aircraft"],"additionalProperties":false,"properties":{"infantry":{"type":"number","minimum":0},"armor":{"type":"number","minimum":0},"aircraft":{"type":"number","minimum":0}}},"category":{"type":"string","minLength":1}}},"mortar":{"type":"object","required":["hp","damage","cooldown","range","arc","speed","cost","splash","modifiers","category"],"additionalProperties":false,"properties":{"hp":{"type":"integer","minimum":0},"damage":{"type":"integer","minimum":0},"cooldown":{"type":"number","minimum":0},"range":{"type":"number","minimum":0},"arc":{"type":"integer","minimum":0},"speed":{"type":"number","minimum":0},"cost":{"type":"integer","minimum":0},"splash":{"type":"number","minimum":0},"modifiers":{"type":"object","required":["infantry","armor","aircraft"],"additionalProperties":false,"properties":{"infantry":{"type":"integer","minimum":0},"armor":{"type":"number","minimum":0},"aircraft":{"type":"number","minimum":0}}},"category":{"type":"string","minLength":1}}},"gun":{"type":"object","required":["hp","damage","cooldown","range","arc","speed","cost","splash","modifiers","category"],"additionalProperties":false,"properties":{"hp":{"type":"integer","minimum":0},"damage":{"type":"integer","minimum":0},"cooldown":{"type":"number","minimum":0},"range":{"type":"number","minimum":0},"arc":{"type":"integer","minimum":0},"speed":{"type":"number","minimum":0},"cost":{"type":"integer","minimum":0},"splash":{"type":"number","minimum":0},"modifiers":{"type":"object","required":["infantry","armor","aircraft"],"additionalProperties":false,"properties":{"infantry":{"type":"integer","minimum":0},"armor":{"type":"number","minimum":0},"aircraft":{"type":"number","minimum":0}}},"category":{"type":"string","minLength":1}}},"at":{"type":"object","required":["hp","damage","cooldown","range","arc","speed","cost","splash","modifiers","category"],"additionalProperties":false,"properties":{"hp":{"type":"integer","minimum":0},"damage":{"type":"integer","minimum":0},"cooldown":{"type":"number","minimum":0},"range":{"type":"number","minimum":0},"arc":{"type":"integer","minimum":0},"speed":{"type":"number","minimum":0},"cost":{"type":"integer","minimum":0},"splash":{"type":"integer","minimum":0},"modifiers":{"type":"object","required":["infantry","armor","aircraft"],"additionalProperties":false,"properties":{"infantry":{"type":"number","minimum":0},"armor":{"type":"number","minimum":0},"aircraft":{"type":"number","minimum":0}}},"category":{"type":"string","minLength":1}}},"car":{"type":"object","required":["hp","damage","cooldown","range","arc","speed","cost","splash","modifiers","category"],"additionalProperties":false,"properties":{"hp":{"type":"integer","minimum":0},"damage":{"type":"integer","minimum":0},"cooldown":{"type":"number","minimum":0},"range":{"type":"number","minimum":0},"arc":{"type":"integer","minimum":0},"speed":{"type":"number","minimum":0},"cost":{"type":"integer","minimum":0},"splash":{"type":"integer","minimum":0},"modifiers":{"type":"object","required":["infantry","armor","aircraft"],"additionalProperties":false,"properties":{"infantry":{"type":"number","minimum":0},"armor":{"type":"number","minimum":0},"aircraft":{"type":"number","minimum":0}}},"category":{"type":"string","minLength":1}}},"tank":{"type":"object","required":["hp","damage","cooldown","range","arc","speed","cost","splash","modifiers","category"],"additionalProperties":false,"properties":{"hp":{"type":"integer","minimum":0},"damage":{"type":"integer","minimum":0},"cooldown":{"type":"number","minimum":0},"range":{"type":"number","minimum":0},"arc":{"type":"integer","minimum":0},"speed":{"type":"number","minimum":0},"cost":{"type":"integer","minimum":0},"splash":{"type":"number","minimum":0},"modifiers":{"type":"object","required":["infantry","armor","aircraft"],"additionalProperties":false,"properties":{"infantry":{"type":"integer","minimum":0},"armor":{"type":"number","minimum":0},"aircraft":{"type":"number","minimum":0}}},"category":{"type":"string","minLength":1}}},"heavy":{"type":"object","required":["hp","damage","cooldown","range","arc","speed","cost","splash","modifiers","category"],"additionalProperties":false,"properties":{"hp":{"type":"integer","minimum":0},"damage":{"type":"integer","minimum":0},"cooldown":{"type":"number","minimum":0},"range":{"type":"number","minimum":0},"arc":{"type":"integer","minimum":0},"speed":{"type":"number","minimum":0},"cost":{"type":"integer","minimum":0},"splash":{"type":"number","minimum":0},"modifiers":{"type":"object","required":["infantry","armor","aircraft"],"additionalProperties":false,"properties":{"infantry":{"type":"integer","minimum":0},"armor":{"type":"number","minimum":0},"aircraft":{"type":"number","minimum":0}}},"category":{"type":"string","minLength":1}}},"destroyer":{"type":"object","required":["hp","damage","cooldown","range","arc","speed","cost","splash","modifiers","category"],"additionalProperties":false,"properties":{"hp":{"type":"integer","minimum":0},"damage":{"type":"integer","minimum":0},"cooldown":{"type":"number","minimum":0},"range":{"type":"number","minimum":0},"arc":{"type":"integer","minimum":0},"speed":{"type":"number","minimum":0},"cost":{"type":"integer","minimum":0},"splash":{"type":"integer","minimum":0},"modifiers":{"type":"object","required":["infantry","armor","aircraft"],"additionalProperties":false,"properties":{"infantry":{"type":"number","minimum":0},"armor":{"type":"integer","minimum":0},"aircraft":{"type":"number","minimum":0}}},"category":{"type":"string","minLength":1}}},"fighter":{"type":"object","required":["hp","damage","cooldown","range","arc","speed","cost","splash","modifiers","category"],"additionalProperties":false,"properties":{"hp":{"type":"integer","minimum":0},"damage":{"type":"integer","minimum":0},"cooldown":{"type":"number","minimum":0},"range":{"type":"number","minimum":0},"arc":{"type":"integer","minimum":0},"speed":{"type":"number","minimum":0},"cost":{"type":"integer","minimum":0},"splash":{"type":"integer","minimum":0},"modifiers":{"type":"object","required":["infantry","armor","aircraft"],"additionalProperties":false,"properties":{"infantry":{"type":"number","minimum":0},"armor":{"type":"number","minimum":0},"aircraft":{"type":"number","minimum":0}}},"category":{"type":"string","minLength":1}}},"attacker":{"type":"object","required":["hp","damage","cooldown","range","arc","speed","cost","splash","modifiers","category"],"additionalProperties":false,"properties":{"hp":{"type":"integer","minimum":0},"damage":{"type":"integer","minimum":0},"cooldown":{"type":"number","minimum":0},"range":{"type":"number","minimum":0},"arc":{"type":"integer","minimum":0},"speed":{"type":"number","minimum":0},"cost":{"type":"integer","minimum":0},"splash":{"type":"number","minimum":0},"modifiers":{"type":"object","required":["infantry","armor","aircraft"],"additionalProperties":false,"properties":{"infantry":{"type":"integer","minimum":0},"armor":{"type":"number","minimum":0},"aircraft":{"type":"number","minimum":0}}},"category":{"type":"string","minLength":1}}},"bomber":{"type":"object","required":["hp","damage","cooldown","range","arc","speed","cost","splash","modifiers","category"],"additionalProperties":false,"properties":{"hp":{"type":"integer","minimum":0},"damage":{"type":"integer","minimum":0},"cooldown":{"type":"number","minimum":0},"range":{"type":"integer","minimum":0},"arc":{"type":"integer","minimum":0},"speed":{"type":"number","minimum":0},"cost":{"type":"integer","minimum":0},"splash":{"type":"integer","minimum":0},"modifiers":{"type":"object","required":["infantry","armor","aircraft"],"additionalProperties":false,"properties":{"infantry":{"type":"number","minimum":0},"armor":{"type":"number","minimum":0},"aircraft":{"type":"number","minimum":0}}},"category":{"type":"string","minLength":1}}}}},"rewardBase":{"type":"integer","minimum":0},"rewardPerWave":{"type":"integer","minimum":0},"upgradeMultipliers":{"type":"array","items":{"type":"number","minimum":0}},"upgradeCostFactors":{"type":"array","items":{"type":"number","minimum":0}},"fixedStepSeconds":{"type":"number","minimum":0,"exclusiveMinimum":0},"maxTicks":{"type":"integer","minimum":1},"frameStride":{"type":"integer","minimum":1},"spawnDistance":{"type":"integer","minimum":0},"spawnInterval":{"type":"number","minimum":0},"contactRange":{"type":"number","minimum":0},"enemyPowerPerWave":{"type":"number","minimum":0},"enemyCountBase":{"type":"integer","minimum":1},"enemyCountWaveInterval":{"type":"integer","minimum":1},"enemyCountGrowth":{"type":"integer","minimum":0},"expansionWaves":{"type":"array","items":{"type":"integer","minimum":0}},"rewards":{"type":"array","minItems":100,"maxItems":100,"items":{"type":"integer","minimum":0}}}},"file35":{"type":"object","additionalProperties":false,"required":["migrations"],"properties":{"migrations":{"type":"array","items":{"type":"object","additionalProperties":false,"required":["schemaVersion","fromConfig","toConfig","costSource"],"properties":{"schemaVersion":{"enum":[1,2]},"fromConfig":{"type":"string"},"toConfig":{"type":"string"},"costSource":{"type":"string"}}}}}},"file36":{"type":"array","minItems":1,"items":{"type":"object","additionalProperties":false,"required":["id","labelKey","targetClass","minimumModifier"],"properties":{"id":{"type":"string"},"labelKey":{"type":"string"},"targetClass":{"type":["string","null"]},"minimumModifier":{"type":"number","minimum":0}}}},"file37":{"$ref":"#/properties/data~1balance~1candidate-v11.json"}}};
 const func2 = Object.prototype.hasOwnProperty;
-const schema7 = {"type":"array","minItems":28,"maxItems":28,"items":{"type":"object","additionalProperties":false,"required":["id","kind","parentIds","producerId","unlocksUnitId","labelKey","descriptionKey","assetId","roleTags","startsUnlocked"],"properties":{"id":{"type":"string","minLength":1,"maxLength":128},"kind":{"enum":["hq","building","research","unit"]},"parentIds":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true},"producerId":{"type":["string","null"]},"unlocksUnitId":{"type":["string","null"]},"labelKey":{"type":"string","minLength":1,"maxLength":128},"descriptionKey":{"type":"string","minLength":1,"maxLength":128},"assetId":{"type":"string","minLength":1,"maxLength":128},"roleTags":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true},"startsUnlocked":{"type":"boolean"}}}};
+const schema7 = {"type":"array","minItems":28,"maxItems":28,"items":{"type":"object","additionalProperties":false,"required":["id","kind","parentIds","producerId","unlocksUnitId","labelKey","descriptionKey","assetId","roleTags","startsUnlocked","minWave","revealParentIds"],"properties":{"id":{"type":"string","minLength":1,"maxLength":128},"kind":{"enum":["hq","building","research","unit"]},"parentIds":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true},"producerId":{"type":["string","null"]},"unlocksUnitId":{"type":["string","null"]},"labelKey":{"type":"string","minLength":1,"maxLength":128},"descriptionKey":{"type":"string","minLength":1,"maxLength":128},"assetId":{"type":"string","minLength":1,"maxLength":128},"roleTags":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true},"startsUnlocked":{"type":"boolean"},"minWave":{"type":"integer","minimum":1,"maximum":100},"revealParentIds":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true}}}};
 const func4 = ucs2length;
 
 function validate22(data, {instancePath="", parentData, parentDataProperty, rootData=data}={}){
@@ -137,9 +137,8 @@ vErrors.push(err11);
 }
 errors++;
 }
-for(const key0 in data0){
-if(!(func2.call(schema7.items.properties, key0))){
-const err12 = {instancePath:instancePath+"/" + i0,schemaPath:"#/items/additionalProperties",keyword:"additionalProperties",params:{additionalProperty: key0},message:"must NOT have additional properties"};
+if(data0.minWave === undefined){
+const err12 = {instancePath:instancePath+"/" + i0,schemaPath:"#/items/required",keyword:"required",params:{missingProperty: "minWave"},message:"must have required property '"+"minWave"+"'"};
 if(vErrors === null){
 vErrors = [err12];
 }
@@ -148,12 +147,8 @@ vErrors.push(err12);
 }
 errors++;
 }
-}
-if(data0.id !== undefined){
-let data1 = data0.id;
-if(typeof data1 === "string"){
-if(func4(data1) > 128){
-const err13 = {instancePath:instancePath+"/" + i0+"/id",schemaPath:"#/items/properties/id/maxLength",keyword:"maxLength",params:{limit: 128},message:"must NOT have more than 128 characters"};
+if(data0.revealParentIds === undefined){
+const err13 = {instancePath:instancePath+"/" + i0,schemaPath:"#/items/required",keyword:"required",params:{missingProperty: "revealParentIds"},message:"must have required property '"+"revealParentIds"+"'"};
 if(vErrors === null){
 vErrors = [err13];
 }
@@ -162,8 +157,9 @@ vErrors.push(err13);
 }
 errors++;
 }
-if(func4(data1) < 1){
-const err14 = {instancePath:instancePath+"/" + i0+"/id",schemaPath:"#/items/properties/id/minLength",keyword:"minLength",params:{limit: 1},message:"must NOT have fewer than 1 characters"};
+for(const key0 in data0){
+if(!(func2.call(schema7.items.properties, key0))){
+const err14 = {instancePath:instancePath+"/" + i0,schemaPath:"#/items/additionalProperties",keyword:"additionalProperties",params:{additionalProperty: key0},message:"must NOT have additional properties"};
 if(vErrors === null){
 vErrors = [err14];
 }
@@ -173,8 +169,11 @@ vErrors.push(err14);
 errors++;
 }
 }
-else {
-const err15 = {instancePath:instancePath+"/" + i0+"/id",schemaPath:"#/items/properties/id/type",keyword:"type",params:{type: "string"},message:"must be string"};
+if(data0.id !== undefined){
+let data1 = data0.id;
+if(typeof data1 === "string"){
+if(func4(data1) > 128){
+const err15 = {instancePath:instancePath+"/" + i0+"/id",schemaPath:"#/items/properties/id/maxLength",keyword:"maxLength",params:{limit: 128},message:"must NOT have more than 128 characters"};
 if(vErrors === null){
 vErrors = [err15];
 }
@@ -183,16 +182,37 @@ vErrors.push(err15);
 }
 errors++;
 }
-}
-if(data0.kind !== undefined){
-let data2 = data0.kind;
-if(!((((data2 === "hq") || (data2 === "building")) || (data2 === "research")) || (data2 === "unit"))){
-const err16 = {instancePath:instancePath+"/" + i0+"/kind",schemaPath:"#/items/properties/kind/enum",keyword:"enum",params:{allowedValues: schema7.items.properties.kind.enum},message:"must be equal to one of the allowed values"};
+if(func4(data1) < 1){
+const err16 = {instancePath:instancePath+"/" + i0+"/id",schemaPath:"#/items/properties/id/minLength",keyword:"minLength",params:{limit: 1},message:"must NOT have fewer than 1 characters"};
 if(vErrors === null){
 vErrors = [err16];
 }
 else {
 vErrors.push(err16);
+}
+errors++;
+}
+}
+else {
+const err17 = {instancePath:instancePath+"/" + i0+"/id",schemaPath:"#/items/properties/id/type",keyword:"type",params:{type: "string"},message:"must be string"};
+if(vErrors === null){
+vErrors = [err17];
+}
+else {
+vErrors.push(err17);
+}
+errors++;
+}
+}
+if(data0.kind !== undefined){
+let data2 = data0.kind;
+if(!((((data2 === "hq") || (data2 === "building")) || (data2 === "research")) || (data2 === "unit"))){
+const err18 = {instancePath:instancePath+"/" + i0+"/kind",schemaPath:"#/items/properties/kind/enum",keyword:"enum",params:{allowedValues: schema7.items.properties.kind.enum},message:"must be equal to one of the allowed values"};
+if(vErrors === null){
+vErrors = [err18];
+}
+else {
+vErrors.push(err18);
 }
 errors++;
 }
@@ -205,33 +225,33 @@ for(let i1=0; i1<len1; i1++){
 let data4 = data3[i1];
 if(typeof data4 === "string"){
 if(func4(data4) > 128){
-const err17 = {instancePath:instancePath+"/" + i0+"/parentIds/" + i1,schemaPath:"#/items/properties/parentIds/items/maxLength",keyword:"maxLength",params:{limit: 128},message:"must NOT have more than 128 characters"};
-if(vErrors === null){
-vErrors = [err17];
-}
-else {
-vErrors.push(err17);
-}
-errors++;
-}
-if(func4(data4) < 1){
-const err18 = {instancePath:instancePath+"/" + i0+"/parentIds/" + i1,schemaPath:"#/items/properties/parentIds/items/minLength",keyword:"minLength",params:{limit: 1},message:"must NOT have fewer than 1 characters"};
-if(vErrors === null){
-vErrors = [err18];
-}
-else {
-vErrors.push(err18);
-}
-errors++;
-}
-}
-else {
-const err19 = {instancePath:instancePath+"/" + i0+"/parentIds/" + i1,schemaPath:"#/items/properties/parentIds/items/type",keyword:"type",params:{type: "string"},message:"must be string"};
+const err19 = {instancePath:instancePath+"/" + i0+"/parentIds/" + i1,schemaPath:"#/items/properties/parentIds/items/maxLength",keyword:"maxLength",params:{limit: 128},message:"must NOT have more than 128 characters"};
 if(vErrors === null){
 vErrors = [err19];
 }
 else {
 vErrors.push(err19);
+}
+errors++;
+}
+if(func4(data4) < 1){
+const err20 = {instancePath:instancePath+"/" + i0+"/parentIds/" + i1,schemaPath:"#/items/properties/parentIds/items/minLength",keyword:"minLength",params:{limit: 1},message:"must NOT have fewer than 1 characters"};
+if(vErrors === null){
+vErrors = [err20];
+}
+else {
+vErrors.push(err20);
+}
+errors++;
+}
+}
+else {
+const err21 = {instancePath:instancePath+"/" + i0+"/parentIds/" + i1,schemaPath:"#/items/properties/parentIds/items/type",keyword:"type",params:{type: "string"},message:"must be string"};
+if(vErrors === null){
+vErrors = [err21];
+}
+else {
+vErrors.push(err21);
 }
 errors++;
 }
@@ -247,12 +267,12 @@ continue;
 }
 if(typeof indices0[item0] == "number"){
 j0 = indices0[item0];
-const err20 = {instancePath:instancePath+"/" + i0+"/parentIds",schemaPath:"#/items/properties/parentIds/uniqueItems",keyword:"uniqueItems",params:{i: i2, j: j0},message:"must NOT have duplicate items (items ## "+j0+" and "+i2+" are identical)"};
+const err22 = {instancePath:instancePath+"/" + i0+"/parentIds",schemaPath:"#/items/properties/parentIds/uniqueItems",keyword:"uniqueItems",params:{i: i2, j: j0},message:"must NOT have duplicate items (items ## "+j0+" and "+i2+" are identical)"};
 if(vErrors === null){
-vErrors = [err20];
+vErrors = [err22];
 }
 else {
-vErrors.push(err20);
+vErrors.push(err22);
 }
 errors++;
 break;
@@ -262,33 +282,7 @@ indices0[item0] = i2;
 }
 }
 else {
-const err21 = {instancePath:instancePath+"/" + i0+"/parentIds",schemaPath:"#/items/properties/parentIds/type",keyword:"type",params:{type: "array"},message:"must be array"};
-if(vErrors === null){
-vErrors = [err21];
-}
-else {
-vErrors.push(err21);
-}
-errors++;
-}
-}
-if(data0.producerId !== undefined){
-let data5 = data0.producerId;
-if((typeof data5 !== "string") && (data5 !== null)){
-const err22 = {instancePath:instancePath+"/" + i0+"/producerId",schemaPath:"#/items/properties/producerId/type",keyword:"type",params:{type: schema7.items.properties.producerId.type},message:"must be string,null"};
-if(vErrors === null){
-vErrors = [err22];
-}
-else {
-vErrors.push(err22);
-}
-errors++;
-}
-}
-if(data0.unlocksUnitId !== undefined){
-let data6 = data0.unlocksUnitId;
-if((typeof data6 !== "string") && (data6 !== null)){
-const err23 = {instancePath:instancePath+"/" + i0+"/unlocksUnitId",schemaPath:"#/items/properties/unlocksUnitId/type",keyword:"type",params:{type: schema7.items.properties.unlocksUnitId.type},message:"must be string,null"};
+const err23 = {instancePath:instancePath+"/" + i0+"/parentIds",schemaPath:"#/items/properties/parentIds/type",keyword:"type",params:{type: "array"},message:"must be array"};
 if(vErrors === null){
 vErrors = [err23];
 }
@@ -298,11 +292,10 @@ vErrors.push(err23);
 errors++;
 }
 }
-if(data0.labelKey !== undefined){
-let data7 = data0.labelKey;
-if(typeof data7 === "string"){
-if(func4(data7) > 128){
-const err24 = {instancePath:instancePath+"/" + i0+"/labelKey",schemaPath:"#/items/properties/labelKey/maxLength",keyword:"maxLength",params:{limit: 128},message:"must NOT have more than 128 characters"};
+if(data0.producerId !== undefined){
+let data5 = data0.producerId;
+if((typeof data5 !== "string") && (data5 !== null)){
+const err24 = {instancePath:instancePath+"/" + i0+"/producerId",schemaPath:"#/items/properties/producerId/type",keyword:"type",params:{type: schema7.items.properties.producerId.type},message:"must be string,null"};
 if(vErrors === null){
 vErrors = [err24];
 }
@@ -311,8 +304,11 @@ vErrors.push(err24);
 }
 errors++;
 }
-if(func4(data7) < 1){
-const err25 = {instancePath:instancePath+"/" + i0+"/labelKey",schemaPath:"#/items/properties/labelKey/minLength",keyword:"minLength",params:{limit: 1},message:"must NOT have fewer than 1 characters"};
+}
+if(data0.unlocksUnitId !== undefined){
+let data6 = data0.unlocksUnitId;
+if((typeof data6 !== "string") && (data6 !== null)){
+const err25 = {instancePath:instancePath+"/" + i0+"/unlocksUnitId",schemaPath:"#/items/properties/unlocksUnitId/type",keyword:"type",params:{type: schema7.items.properties.unlocksUnitId.type},message:"must be string,null"};
 if(vErrors === null){
 vErrors = [err25];
 }
@@ -322,8 +318,11 @@ vErrors.push(err25);
 errors++;
 }
 }
-else {
-const err26 = {instancePath:instancePath+"/" + i0+"/labelKey",schemaPath:"#/items/properties/labelKey/type",keyword:"type",params:{type: "string"},message:"must be string"};
+if(data0.labelKey !== undefined){
+let data7 = data0.labelKey;
+if(typeof data7 === "string"){
+if(func4(data7) > 128){
+const err26 = {instancePath:instancePath+"/" + i0+"/labelKey",schemaPath:"#/items/properties/labelKey/maxLength",keyword:"maxLength",params:{limit: 128},message:"must NOT have more than 128 characters"};
 if(vErrors === null){
 vErrors = [err26];
 }
@@ -332,12 +331,8 @@ vErrors.push(err26);
 }
 errors++;
 }
-}
-if(data0.descriptionKey !== undefined){
-let data8 = data0.descriptionKey;
-if(typeof data8 === "string"){
-if(func4(data8) > 128){
-const err27 = {instancePath:instancePath+"/" + i0+"/descriptionKey",schemaPath:"#/items/properties/descriptionKey/maxLength",keyword:"maxLength",params:{limit: 128},message:"must NOT have more than 128 characters"};
+if(func4(data7) < 1){
+const err27 = {instancePath:instancePath+"/" + i0+"/labelKey",schemaPath:"#/items/properties/labelKey/minLength",keyword:"minLength",params:{limit: 1},message:"must NOT have fewer than 1 characters"};
 if(vErrors === null){
 vErrors = [err27];
 }
@@ -346,8 +341,9 @@ vErrors.push(err27);
 }
 errors++;
 }
-if(func4(data8) < 1){
-const err28 = {instancePath:instancePath+"/" + i0+"/descriptionKey",schemaPath:"#/items/properties/descriptionKey/minLength",keyword:"minLength",params:{limit: 1},message:"must NOT have fewer than 1 characters"};
+}
+else {
+const err28 = {instancePath:instancePath+"/" + i0+"/labelKey",schemaPath:"#/items/properties/labelKey/type",keyword:"type",params:{type: "string"},message:"must be string"};
 if(vErrors === null){
 vErrors = [err28];
 }
@@ -357,8 +353,11 @@ vErrors.push(err28);
 errors++;
 }
 }
-else {
-const err29 = {instancePath:instancePath+"/" + i0+"/descriptionKey",schemaPath:"#/items/properties/descriptionKey/type",keyword:"type",params:{type: "string"},message:"must be string"};
+if(data0.descriptionKey !== undefined){
+let data8 = data0.descriptionKey;
+if(typeof data8 === "string"){
+if(func4(data8) > 128){
+const err29 = {instancePath:instancePath+"/" + i0+"/descriptionKey",schemaPath:"#/items/properties/descriptionKey/maxLength",keyword:"maxLength",params:{limit: 128},message:"must NOT have more than 128 characters"};
 if(vErrors === null){
 vErrors = [err29];
 }
@@ -367,12 +366,8 @@ vErrors.push(err29);
 }
 errors++;
 }
-}
-if(data0.assetId !== undefined){
-let data9 = data0.assetId;
-if(typeof data9 === "string"){
-if(func4(data9) > 128){
-const err30 = {instancePath:instancePath+"/" + i0+"/assetId",schemaPath:"#/items/properties/assetId/maxLength",keyword:"maxLength",params:{limit: 128},message:"must NOT have more than 128 characters"};
+if(func4(data8) < 1){
+const err30 = {instancePath:instancePath+"/" + i0+"/descriptionKey",schemaPath:"#/items/properties/descriptionKey/minLength",keyword:"minLength",params:{limit: 1},message:"must NOT have fewer than 1 characters"};
 if(vErrors === null){
 vErrors = [err30];
 }
@@ -381,8 +376,9 @@ vErrors.push(err30);
 }
 errors++;
 }
-if(func4(data9) < 1){
-const err31 = {instancePath:instancePath+"/" + i0+"/assetId",schemaPath:"#/items/properties/assetId/minLength",keyword:"minLength",params:{limit: 1},message:"must NOT have fewer than 1 characters"};
+}
+else {
+const err31 = {instancePath:instancePath+"/" + i0+"/descriptionKey",schemaPath:"#/items/properties/descriptionKey/type",keyword:"type",params:{type: "string"},message:"must be string"};
 if(vErrors === null){
 vErrors = [err31];
 }
@@ -392,13 +388,37 @@ vErrors.push(err31);
 errors++;
 }
 }
-else {
-const err32 = {instancePath:instancePath+"/" + i0+"/assetId",schemaPath:"#/items/properties/assetId/type",keyword:"type",params:{type: "string"},message:"must be string"};
+if(data0.assetId !== undefined){
+let data9 = data0.assetId;
+if(typeof data9 === "string"){
+if(func4(data9) > 128){
+const err32 = {instancePath:instancePath+"/" + i0+"/assetId",schemaPath:"#/items/properties/assetId/maxLength",keyword:"maxLength",params:{limit: 128},message:"must NOT have more than 128 characters"};
 if(vErrors === null){
 vErrors = [err32];
 }
 else {
 vErrors.push(err32);
+}
+errors++;
+}
+if(func4(data9) < 1){
+const err33 = {instancePath:instancePath+"/" + i0+"/assetId",schemaPath:"#/items/properties/assetId/minLength",keyword:"minLength",params:{limit: 1},message:"must NOT have fewer than 1 characters"};
+if(vErrors === null){
+vErrors = [err33];
+}
+else {
+vErrors.push(err33);
+}
+errors++;
+}
+}
+else {
+const err34 = {instancePath:instancePath+"/" + i0+"/assetId",schemaPath:"#/items/properties/assetId/type",keyword:"type",params:{type: "string"},message:"must be string"};
+if(vErrors === null){
+vErrors = [err34];
+}
+else {
+vErrors.push(err34);
 }
 errors++;
 }
@@ -411,33 +431,33 @@ for(let i3=0; i3<len2; i3++){
 let data11 = data10[i3];
 if(typeof data11 === "string"){
 if(func4(data11) > 128){
-const err33 = {instancePath:instancePath+"/" + i0+"/roleTags/" + i3,schemaPath:"#/items/properties/roleTags/items/maxLength",keyword:"maxLength",params:{limit: 128},message:"must NOT have more than 128 characters"};
-if(vErrors === null){
-vErrors = [err33];
-}
-else {
-vErrors.push(err33);
-}
-errors++;
-}
-if(func4(data11) < 1){
-const err34 = {instancePath:instancePath+"/" + i0+"/roleTags/" + i3,schemaPath:"#/items/properties/roleTags/items/minLength",keyword:"minLength",params:{limit: 1},message:"must NOT have fewer than 1 characters"};
-if(vErrors === null){
-vErrors = [err34];
-}
-else {
-vErrors.push(err34);
-}
-errors++;
-}
-}
-else {
-const err35 = {instancePath:instancePath+"/" + i0+"/roleTags/" + i3,schemaPath:"#/items/properties/roleTags/items/type",keyword:"type",params:{type: "string"},message:"must be string"};
+const err35 = {instancePath:instancePath+"/" + i0+"/roleTags/" + i3,schemaPath:"#/items/properties/roleTags/items/maxLength",keyword:"maxLength",params:{limit: 128},message:"must NOT have more than 128 characters"};
 if(vErrors === null){
 vErrors = [err35];
 }
 else {
 vErrors.push(err35);
+}
+errors++;
+}
+if(func4(data11) < 1){
+const err36 = {instancePath:instancePath+"/" + i0+"/roleTags/" + i3,schemaPath:"#/items/properties/roleTags/items/minLength",keyword:"minLength",params:{limit: 1},message:"must NOT have fewer than 1 characters"};
+if(vErrors === null){
+vErrors = [err36];
+}
+else {
+vErrors.push(err36);
+}
+errors++;
+}
+}
+else {
+const err37 = {instancePath:instancePath+"/" + i0+"/roleTags/" + i3,schemaPath:"#/items/properties/roleTags/items/type",keyword:"type",params:{type: "string"},message:"must be string"};
+if(vErrors === null){
+vErrors = [err37];
+}
+else {
+vErrors.push(err37);
 }
 errors++;
 }
@@ -453,12 +473,12 @@ continue;
 }
 if(typeof indices1[item1] == "number"){
 j1 = indices1[item1];
-const err36 = {instancePath:instancePath+"/" + i0+"/roleTags",schemaPath:"#/items/properties/roleTags/uniqueItems",keyword:"uniqueItems",params:{i: i4, j: j1},message:"must NOT have duplicate items (items ## "+j1+" and "+i4+" are identical)"};
+const err38 = {instancePath:instancePath+"/" + i0+"/roleTags",schemaPath:"#/items/properties/roleTags/uniqueItems",keyword:"uniqueItems",params:{i: i4, j: j1},message:"must NOT have duplicate items (items ## "+j1+" and "+i4+" are identical)"};
 if(vErrors === null){
-vErrors = [err36];
+vErrors = [err38];
 }
 else {
-vErrors.push(err36);
+vErrors.push(err38);
 }
 errors++;
 break;
@@ -468,31 +488,7 @@ indices1[item1] = i4;
 }
 }
 else {
-const err37 = {instancePath:instancePath+"/" + i0+"/roleTags",schemaPath:"#/items/properties/roleTags/type",keyword:"type",params:{type: "array"},message:"must be array"};
-if(vErrors === null){
-vErrors = [err37];
-}
-else {
-vErrors.push(err37);
-}
-errors++;
-}
-}
-if(data0.startsUnlocked !== undefined){
-if(typeof data0.startsUnlocked !== "boolean"){
-const err38 = {instancePath:instancePath+"/" + i0+"/startsUnlocked",schemaPath:"#/items/properties/startsUnlocked/type",keyword:"type",params:{type: "boolean"},message:"must be boolean"};
-if(vErrors === null){
-vErrors = [err38];
-}
-else {
-vErrors.push(err38);
-}
-errors++;
-}
-}
-}
-else {
-const err39 = {instancePath:instancePath+"/" + i0,schemaPath:"#/items/type",keyword:"type",params:{type: "object"},message:"must be object"};
+const err39 = {instancePath:instancePath+"/" + i0+"/roleTags",schemaPath:"#/items/properties/roleTags/type",keyword:"type",params:{type: "array"},message:"must be array"};
 if(vErrors === null){
 vErrors = [err39];
 }
@@ -502,14 +498,148 @@ vErrors.push(err39);
 errors++;
 }
 }
-}
-else {
-const err40 = {instancePath,schemaPath:"#/type",keyword:"type",params:{type: "array"},message:"must be array"};
+if(data0.startsUnlocked !== undefined){
+if(typeof data0.startsUnlocked !== "boolean"){
+const err40 = {instancePath:instancePath+"/" + i0+"/startsUnlocked",schemaPath:"#/items/properties/startsUnlocked/type",keyword:"type",params:{type: "boolean"},message:"must be boolean"};
 if(vErrors === null){
 vErrors = [err40];
 }
 else {
 vErrors.push(err40);
+}
+errors++;
+}
+}
+if(data0.minWave !== undefined){
+let data13 = data0.minWave;
+if(!(((typeof data13 == "number") && (!(data13 % 1) && !isNaN(data13))) && (isFinite(data13)))){
+const err41 = {instancePath:instancePath+"/" + i0+"/minWave",schemaPath:"#/items/properties/minWave/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err41];
+}
+else {
+vErrors.push(err41);
+}
+errors++;
+}
+if((typeof data13 == "number") && (isFinite(data13))){
+if(data13 > 100 || isNaN(data13)){
+const err42 = {instancePath:instancePath+"/" + i0+"/minWave",schemaPath:"#/items/properties/minWave/maximum",keyword:"maximum",params:{comparison: "<=", limit: 100},message:"must be <= 100"};
+if(vErrors === null){
+vErrors = [err42];
+}
+else {
+vErrors.push(err42);
+}
+errors++;
+}
+if(data13 < 1 || isNaN(data13)){
+const err43 = {instancePath:instancePath+"/" + i0+"/minWave",schemaPath:"#/items/properties/minWave/minimum",keyword:"minimum",params:{comparison: ">=", limit: 1},message:"must be >= 1"};
+if(vErrors === null){
+vErrors = [err43];
+}
+else {
+vErrors.push(err43);
+}
+errors++;
+}
+}
+}
+if(data0.revealParentIds !== undefined){
+let data14 = data0.revealParentIds;
+if(Array.isArray(data14)){
+const len3 = data14.length;
+for(let i5=0; i5<len3; i5++){
+let data15 = data14[i5];
+if(typeof data15 === "string"){
+if(func4(data15) > 128){
+const err44 = {instancePath:instancePath+"/" + i0+"/revealParentIds/" + i5,schemaPath:"#/items/properties/revealParentIds/items/maxLength",keyword:"maxLength",params:{limit: 128},message:"must NOT have more than 128 characters"};
+if(vErrors === null){
+vErrors = [err44];
+}
+else {
+vErrors.push(err44);
+}
+errors++;
+}
+if(func4(data15) < 1){
+const err45 = {instancePath:instancePath+"/" + i0+"/revealParentIds/" + i5,schemaPath:"#/items/properties/revealParentIds/items/minLength",keyword:"minLength",params:{limit: 1},message:"must NOT have fewer than 1 characters"};
+if(vErrors === null){
+vErrors = [err45];
+}
+else {
+vErrors.push(err45);
+}
+errors++;
+}
+}
+else {
+const err46 = {instancePath:instancePath+"/" + i0+"/revealParentIds/" + i5,schemaPath:"#/items/properties/revealParentIds/items/type",keyword:"type",params:{type: "string"},message:"must be string"};
+if(vErrors === null){
+vErrors = [err46];
+}
+else {
+vErrors.push(err46);
+}
+errors++;
+}
+}
+let i6 = data14.length;
+let j2;
+if(i6 > 1){
+const indices2 = {};
+for(;i6--;){
+let item2 = data14[i6];
+if(typeof item2 !== "string"){
+continue;
+}
+if(typeof indices2[item2] == "number"){
+j2 = indices2[item2];
+const err47 = {instancePath:instancePath+"/" + i0+"/revealParentIds",schemaPath:"#/items/properties/revealParentIds/uniqueItems",keyword:"uniqueItems",params:{i: i6, j: j2},message:"must NOT have duplicate items (items ## "+j2+" and "+i6+" are identical)"};
+if(vErrors === null){
+vErrors = [err47];
+}
+else {
+vErrors.push(err47);
+}
+errors++;
+break;
+}
+indices2[item2] = i6;
+}
+}
+}
+else {
+const err48 = {instancePath:instancePath+"/" + i0+"/revealParentIds",schemaPath:"#/items/properties/revealParentIds/type",keyword:"type",params:{type: "array"},message:"must be array"};
+if(vErrors === null){
+vErrors = [err48];
+}
+else {
+vErrors.push(err48);
+}
+errors++;
+}
+}
+}
+else {
+const err49 = {instancePath:instancePath+"/" + i0,schemaPath:"#/items/type",keyword:"type",params:{type: "object"},message:"must be object"};
+if(vErrors === null){
+vErrors = [err49];
+}
+else {
+vErrors.push(err49);
+}
+errors++;
+}
+}
+}
+else {
+const err50 = {instancePath,schemaPath:"#/type",keyword:"type",params:{type: "array"},message:"must be array"};
+if(vErrors === null){
+vErrors = [err50];
+}
+else {
+vErrors.push(err50);
 }
 errors++;
 }
@@ -11356,7 +11486,7 @@ validate42.errors = vErrors;
 return errors === 0;
 }
 
-const schema18 = {"type":"object","additionalProperties":false,"required":["treeRatio","battleRatio","minWidth","minHeight","worldSize","cellSize","gridOrigin","zoomMin","zoomMax","zoomStep","zoomInitial","minClickSize","fontSize","saveDelayMs","saveMaxBytes","speeds","defaultSpeed","unitLabelSize"],"properties":{"treeRatio":{"type":"integer","minimum":0,"maximum":9007199254740991},"battleRatio":{"type":"integer","minimum":0,"maximum":9007199254740991},"minWidth":{"type":"integer","minimum":0,"maximum":9007199254740991},"minHeight":{"type":"integer","minimum":0,"maximum":9007199254740991},"worldSize":{"type":"integer","minimum":1},"cellSize":{"type":"integer","minimum":0,"maximum":9007199254740991},"gridOrigin":{"type":"integer","minimum":0,"maximum":9007199254740991},"zoomMin":{"type":"number","minimum":0},"zoomMax":{"type":"number","minimum":0},"zoomStep":{"type":"number","minimum":0},"zoomInitial":{"type":"number","minimum":0},"minClickSize":{"type":"integer","minimum":0,"maximum":9007199254740991},"fontSize":{"type":"integer","minimum":0,"maximum":9007199254740991},"saveDelayMs":{"type":"integer","minimum":0,"maximum":9007199254740991},"saveMaxBytes":{"type":"integer","minimum":0,"maximum":9007199254740991},"speeds":{"type":"array","items":{"type":"integer","minimum":0,"maximum":9007199254740991}},"defaultSpeed":{"type":"integer","minimum":0,"maximum":9007199254740991},"unitLabelSize":{"type":"number"}}};
+const schema18 = {"type":"object","additionalProperties":false,"required":["treeRatio","battleRatio","minWidth","minHeight","worldSize","cellSize","gridOrigin","zoomMin","zoomMax","zoomStep","zoomInitial","minClickSize","fontSize","saveDelayMs","saveMaxBytes","speeds","defaultSpeed","unitLabelSize","actionMs","dragThresholdPx","toastMs"],"properties":{"treeRatio":{"type":"integer","minimum":0,"maximum":9007199254740991},"battleRatio":{"type":"integer","minimum":0,"maximum":9007199254740991},"minWidth":{"type":"integer","minimum":0,"maximum":9007199254740991},"minHeight":{"type":"integer","minimum":0,"maximum":9007199254740991},"worldSize":{"type":"integer","minimum":1},"cellSize":{"type":"integer","minimum":0,"maximum":9007199254740991},"gridOrigin":{"type":"integer","minimum":0,"maximum":9007199254740991},"zoomMin":{"type":"number","minimum":0},"zoomMax":{"type":"number","minimum":0},"zoomStep":{"type":"number","minimum":0},"zoomInitial":{"type":"number","minimum":0},"minClickSize":{"type":"integer","minimum":0,"maximum":9007199254740991},"fontSize":{"type":"integer","minimum":0,"maximum":9007199254740991},"saveDelayMs":{"type":"integer","minimum":0,"maximum":9007199254740991},"saveMaxBytes":{"type":"integer","minimum":0,"maximum":9007199254740991},"speeds":{"type":"array","items":{"type":"integer","minimum":0,"maximum":9007199254740991}},"defaultSpeed":{"type":"integer","minimum":0,"maximum":9007199254740991},"unitLabelSize":{"type":"number"},"actionMs":{"type":"object","additionalProperties":false,"required":["building","research","unit"],"properties":{"building":{"type":"integer","minimum":0},"research":{"type":"integer","minimum":0},"unit":{"type":"integer","minimum":0}}},"dragThresholdPx":{"type":"integer","minimum":1},"toastMs":{"type":"integer","minimum":0}}};
 
 function validate44(data, {instancePath="", parentData, parentDataProperty, rootData=data}={}){
 let vErrors = null;
@@ -11542,9 +11672,8 @@ vErrors.push(err17);
 }
 errors++;
 }
-for(const key0 in data){
-if(!(func2.call(schema18.properties, key0))){
-const err18 = {instancePath,schemaPath:"#/additionalProperties",keyword:"additionalProperties",params:{additionalProperty: key0},message:"must NOT have additional properties"};
+if(data.actionMs === undefined){
+const err18 = {instancePath,schemaPath:"#/required",keyword:"required",params:{missingProperty: "actionMs"},message:"must have required property '"+"actionMs"+"'"};
 if(vErrors === null){
 vErrors = [err18];
 }
@@ -11553,11 +11682,8 @@ vErrors.push(err18);
 }
 errors++;
 }
-}
-if(data.treeRatio !== undefined){
-let data0 = data.treeRatio;
-if(!(((typeof data0 == "number") && (!(data0 % 1) && !isNaN(data0))) && (isFinite(data0)))){
-const err19 = {instancePath:instancePath+"/treeRatio",schemaPath:"#/properties/treeRatio/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(data.dragThresholdPx === undefined){
+const err19 = {instancePath,schemaPath:"#/required",keyword:"required",params:{missingProperty: "dragThresholdPx"},message:"must have required property '"+"dragThresholdPx"+"'"};
 if(vErrors === null){
 vErrors = [err19];
 }
@@ -11566,9 +11692,8 @@ vErrors.push(err19);
 }
 errors++;
 }
-if((typeof data0 == "number") && (isFinite(data0))){
-if(data0 > 9007199254740991 || isNaN(data0)){
-const err20 = {instancePath:instancePath+"/treeRatio",schemaPath:"#/properties/treeRatio/maximum",keyword:"maximum",params:{comparison: "<=", limit: 9007199254740991},message:"must be <= 9007199254740991"};
+if(data.toastMs === undefined){
+const err20 = {instancePath,schemaPath:"#/required",keyword:"required",params:{missingProperty: "toastMs"},message:"must have required property '"+"toastMs"+"'"};
 if(vErrors === null){
 vErrors = [err20];
 }
@@ -11577,8 +11702,9 @@ vErrors.push(err20);
 }
 errors++;
 }
-if(data0 < 0 || isNaN(data0)){
-const err21 = {instancePath:instancePath+"/treeRatio",schemaPath:"#/properties/treeRatio/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+for(const key0 in data){
+if(!(func2.call(schema18.properties, key0))){
+const err21 = {instancePath,schemaPath:"#/additionalProperties",keyword:"additionalProperties",params:{additionalProperty: key0},message:"must NOT have additional properties"};
 if(vErrors === null){
 vErrors = [err21];
 }
@@ -11588,11 +11714,10 @@ vErrors.push(err21);
 errors++;
 }
 }
-}
-if(data.battleRatio !== undefined){
-let data1 = data.battleRatio;
-if(!(((typeof data1 == "number") && (!(data1 % 1) && !isNaN(data1))) && (isFinite(data1)))){
-const err22 = {instancePath:instancePath+"/battleRatio",schemaPath:"#/properties/battleRatio/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(data.treeRatio !== undefined){
+let data0 = data.treeRatio;
+if(!(((typeof data0 == "number") && (!(data0 % 1) && !isNaN(data0))) && (isFinite(data0)))){
+const err22 = {instancePath:instancePath+"/treeRatio",schemaPath:"#/properties/treeRatio/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
 if(vErrors === null){
 vErrors = [err22];
 }
@@ -11601,9 +11726,9 @@ vErrors.push(err22);
 }
 errors++;
 }
-if((typeof data1 == "number") && (isFinite(data1))){
-if(data1 > 9007199254740991 || isNaN(data1)){
-const err23 = {instancePath:instancePath+"/battleRatio",schemaPath:"#/properties/battleRatio/maximum",keyword:"maximum",params:{comparison: "<=", limit: 9007199254740991},message:"must be <= 9007199254740991"};
+if((typeof data0 == "number") && (isFinite(data0))){
+if(data0 > 9007199254740991 || isNaN(data0)){
+const err23 = {instancePath:instancePath+"/treeRatio",schemaPath:"#/properties/treeRatio/maximum",keyword:"maximum",params:{comparison: "<=", limit: 9007199254740991},message:"must be <= 9007199254740991"};
 if(vErrors === null){
 vErrors = [err23];
 }
@@ -11612,8 +11737,8 @@ vErrors.push(err23);
 }
 errors++;
 }
-if(data1 < 0 || isNaN(data1)){
-const err24 = {instancePath:instancePath+"/battleRatio",schemaPath:"#/properties/battleRatio/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(data0 < 0 || isNaN(data0)){
+const err24 = {instancePath:instancePath+"/treeRatio",schemaPath:"#/properties/treeRatio/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
 if(vErrors === null){
 vErrors = [err24];
 }
@@ -11624,10 +11749,10 @@ errors++;
 }
 }
 }
-if(data.minWidth !== undefined){
-let data2 = data.minWidth;
-if(!(((typeof data2 == "number") && (!(data2 % 1) && !isNaN(data2))) && (isFinite(data2)))){
-const err25 = {instancePath:instancePath+"/minWidth",schemaPath:"#/properties/minWidth/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(data.battleRatio !== undefined){
+let data1 = data.battleRatio;
+if(!(((typeof data1 == "number") && (!(data1 % 1) && !isNaN(data1))) && (isFinite(data1)))){
+const err25 = {instancePath:instancePath+"/battleRatio",schemaPath:"#/properties/battleRatio/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
 if(vErrors === null){
 vErrors = [err25];
 }
@@ -11636,9 +11761,9 @@ vErrors.push(err25);
 }
 errors++;
 }
-if((typeof data2 == "number") && (isFinite(data2))){
-if(data2 > 9007199254740991 || isNaN(data2)){
-const err26 = {instancePath:instancePath+"/minWidth",schemaPath:"#/properties/minWidth/maximum",keyword:"maximum",params:{comparison: "<=", limit: 9007199254740991},message:"must be <= 9007199254740991"};
+if((typeof data1 == "number") && (isFinite(data1))){
+if(data1 > 9007199254740991 || isNaN(data1)){
+const err26 = {instancePath:instancePath+"/battleRatio",schemaPath:"#/properties/battleRatio/maximum",keyword:"maximum",params:{comparison: "<=", limit: 9007199254740991},message:"must be <= 9007199254740991"};
 if(vErrors === null){
 vErrors = [err26];
 }
@@ -11647,8 +11772,8 @@ vErrors.push(err26);
 }
 errors++;
 }
-if(data2 < 0 || isNaN(data2)){
-const err27 = {instancePath:instancePath+"/minWidth",schemaPath:"#/properties/minWidth/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(data1 < 0 || isNaN(data1)){
+const err27 = {instancePath:instancePath+"/battleRatio",schemaPath:"#/properties/battleRatio/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
 if(vErrors === null){
 vErrors = [err27];
 }
@@ -11659,10 +11784,10 @@ errors++;
 }
 }
 }
-if(data.minHeight !== undefined){
-let data3 = data.minHeight;
-if(!(((typeof data3 == "number") && (!(data3 % 1) && !isNaN(data3))) && (isFinite(data3)))){
-const err28 = {instancePath:instancePath+"/minHeight",schemaPath:"#/properties/minHeight/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(data.minWidth !== undefined){
+let data2 = data.minWidth;
+if(!(((typeof data2 == "number") && (!(data2 % 1) && !isNaN(data2))) && (isFinite(data2)))){
+const err28 = {instancePath:instancePath+"/minWidth",schemaPath:"#/properties/minWidth/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
 if(vErrors === null){
 vErrors = [err28];
 }
@@ -11671,9 +11796,9 @@ vErrors.push(err28);
 }
 errors++;
 }
-if((typeof data3 == "number") && (isFinite(data3))){
-if(data3 > 9007199254740991 || isNaN(data3)){
-const err29 = {instancePath:instancePath+"/minHeight",schemaPath:"#/properties/minHeight/maximum",keyword:"maximum",params:{comparison: "<=", limit: 9007199254740991},message:"must be <= 9007199254740991"};
+if((typeof data2 == "number") && (isFinite(data2))){
+if(data2 > 9007199254740991 || isNaN(data2)){
+const err29 = {instancePath:instancePath+"/minWidth",schemaPath:"#/properties/minWidth/maximum",keyword:"maximum",params:{comparison: "<=", limit: 9007199254740991},message:"must be <= 9007199254740991"};
 if(vErrors === null){
 vErrors = [err29];
 }
@@ -11682,8 +11807,8 @@ vErrors.push(err29);
 }
 errors++;
 }
-if(data3 < 0 || isNaN(data3)){
-const err30 = {instancePath:instancePath+"/minHeight",schemaPath:"#/properties/minHeight/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(data2 < 0 || isNaN(data2)){
+const err30 = {instancePath:instancePath+"/minWidth",schemaPath:"#/properties/minWidth/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
 if(vErrors === null){
 vErrors = [err30];
 }
@@ -11694,10 +11819,10 @@ errors++;
 }
 }
 }
-if(data.worldSize !== undefined){
-let data4 = data.worldSize;
-if(!(((typeof data4 == "number") && (!(data4 % 1) && !isNaN(data4))) && (isFinite(data4)))){
-const err31 = {instancePath:instancePath+"/worldSize",schemaPath:"#/properties/worldSize/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(data.minHeight !== undefined){
+let data3 = data.minHeight;
+if(!(((typeof data3 == "number") && (!(data3 % 1) && !isNaN(data3))) && (isFinite(data3)))){
+const err31 = {instancePath:instancePath+"/minHeight",schemaPath:"#/properties/minHeight/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
 if(vErrors === null){
 vErrors = [err31];
 }
@@ -11706,9 +11831,9 @@ vErrors.push(err31);
 }
 errors++;
 }
-if((typeof data4 == "number") && (isFinite(data4))){
-if(data4 < 1 || isNaN(data4)){
-const err32 = {instancePath:instancePath+"/worldSize",schemaPath:"#/properties/worldSize/minimum",keyword:"minimum",params:{comparison: ">=", limit: 1},message:"must be >= 1"};
+if((typeof data3 == "number") && (isFinite(data3))){
+if(data3 > 9007199254740991 || isNaN(data3)){
+const err32 = {instancePath:instancePath+"/minHeight",schemaPath:"#/properties/minHeight/maximum",keyword:"maximum",params:{comparison: "<=", limit: 9007199254740991},message:"must be <= 9007199254740991"};
 if(vErrors === null){
 vErrors = [err32];
 }
@@ -11717,12 +11842,8 @@ vErrors.push(err32);
 }
 errors++;
 }
-}
-}
-if(data.cellSize !== undefined){
-let data5 = data.cellSize;
-if(!(((typeof data5 == "number") && (!(data5 % 1) && !isNaN(data5))) && (isFinite(data5)))){
-const err33 = {instancePath:instancePath+"/cellSize",schemaPath:"#/properties/cellSize/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(data3 < 0 || isNaN(data3)){
+const err33 = {instancePath:instancePath+"/minHeight",schemaPath:"#/properties/minHeight/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
 if(vErrors === null){
 vErrors = [err33];
 }
@@ -11731,9 +11852,12 @@ vErrors.push(err33);
 }
 errors++;
 }
-if((typeof data5 == "number") && (isFinite(data5))){
-if(data5 > 9007199254740991 || isNaN(data5)){
-const err34 = {instancePath:instancePath+"/cellSize",schemaPath:"#/properties/cellSize/maximum",keyword:"maximum",params:{comparison: "<=", limit: 9007199254740991},message:"must be <= 9007199254740991"};
+}
+}
+if(data.worldSize !== undefined){
+let data4 = data.worldSize;
+if(!(((typeof data4 == "number") && (!(data4 % 1) && !isNaN(data4))) && (isFinite(data4)))){
+const err34 = {instancePath:instancePath+"/worldSize",schemaPath:"#/properties/worldSize/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
 if(vErrors === null){
 vErrors = [err34];
 }
@@ -11742,8 +11866,9 @@ vErrors.push(err34);
 }
 errors++;
 }
-if(data5 < 0 || isNaN(data5)){
-const err35 = {instancePath:instancePath+"/cellSize",schemaPath:"#/properties/cellSize/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if((typeof data4 == "number") && (isFinite(data4))){
+if(data4 < 1 || isNaN(data4)){
+const err35 = {instancePath:instancePath+"/worldSize",schemaPath:"#/properties/worldSize/minimum",keyword:"minimum",params:{comparison: ">=", limit: 1},message:"must be >= 1"};
 if(vErrors === null){
 vErrors = [err35];
 }
@@ -11754,10 +11879,10 @@ errors++;
 }
 }
 }
-if(data.gridOrigin !== undefined){
-let data6 = data.gridOrigin;
-if(!(((typeof data6 == "number") && (!(data6 % 1) && !isNaN(data6))) && (isFinite(data6)))){
-const err36 = {instancePath:instancePath+"/gridOrigin",schemaPath:"#/properties/gridOrigin/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(data.cellSize !== undefined){
+let data5 = data.cellSize;
+if(!(((typeof data5 == "number") && (!(data5 % 1) && !isNaN(data5))) && (isFinite(data5)))){
+const err36 = {instancePath:instancePath+"/cellSize",schemaPath:"#/properties/cellSize/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
 if(vErrors === null){
 vErrors = [err36];
 }
@@ -11766,9 +11891,9 @@ vErrors.push(err36);
 }
 errors++;
 }
-if((typeof data6 == "number") && (isFinite(data6))){
-if(data6 > 9007199254740991 || isNaN(data6)){
-const err37 = {instancePath:instancePath+"/gridOrigin",schemaPath:"#/properties/gridOrigin/maximum",keyword:"maximum",params:{comparison: "<=", limit: 9007199254740991},message:"must be <= 9007199254740991"};
+if((typeof data5 == "number") && (isFinite(data5))){
+if(data5 > 9007199254740991 || isNaN(data5)){
+const err37 = {instancePath:instancePath+"/cellSize",schemaPath:"#/properties/cellSize/maximum",keyword:"maximum",params:{comparison: "<=", limit: 9007199254740991},message:"must be <= 9007199254740991"};
 if(vErrors === null){
 vErrors = [err37];
 }
@@ -11777,8 +11902,8 @@ vErrors.push(err37);
 }
 errors++;
 }
-if(data6 < 0 || isNaN(data6)){
-const err38 = {instancePath:instancePath+"/gridOrigin",schemaPath:"#/properties/gridOrigin/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(data5 < 0 || isNaN(data5)){
+const err38 = {instancePath:instancePath+"/cellSize",schemaPath:"#/properties/cellSize/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
 if(vErrors === null){
 vErrors = [err38];
 }
@@ -11789,11 +11914,10 @@ errors++;
 }
 }
 }
-if(data.zoomMin !== undefined){
-let data7 = data.zoomMin;
-if((typeof data7 == "number") && (isFinite(data7))){
-if(data7 < 0 || isNaN(data7)){
-const err39 = {instancePath:instancePath+"/zoomMin",schemaPath:"#/properties/zoomMin/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(data.gridOrigin !== undefined){
+let data6 = data.gridOrigin;
+if(!(((typeof data6 == "number") && (!(data6 % 1) && !isNaN(data6))) && (isFinite(data6)))){
+const err39 = {instancePath:instancePath+"/gridOrigin",schemaPath:"#/properties/gridOrigin/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
 if(vErrors === null){
 vErrors = [err39];
 }
@@ -11802,9 +11926,9 @@ vErrors.push(err39);
 }
 errors++;
 }
-}
-else {
-const err40 = {instancePath:instancePath+"/zoomMin",schemaPath:"#/properties/zoomMin/type",keyword:"type",params:{type: "number"},message:"must be number"};
+if((typeof data6 == "number") && (isFinite(data6))){
+if(data6 > 9007199254740991 || isNaN(data6)){
+const err40 = {instancePath:instancePath+"/gridOrigin",schemaPath:"#/properties/gridOrigin/maximum",keyword:"maximum",params:{comparison: "<=", limit: 9007199254740991},message:"must be <= 9007199254740991"};
 if(vErrors === null){
 vErrors = [err40];
 }
@@ -11813,12 +11937,8 @@ vErrors.push(err40);
 }
 errors++;
 }
-}
-if(data.zoomMax !== undefined){
-let data8 = data.zoomMax;
-if((typeof data8 == "number") && (isFinite(data8))){
-if(data8 < 0 || isNaN(data8)){
-const err41 = {instancePath:instancePath+"/zoomMax",schemaPath:"#/properties/zoomMax/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(data6 < 0 || isNaN(data6)){
+const err41 = {instancePath:instancePath+"/gridOrigin",schemaPath:"#/properties/gridOrigin/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
 if(vErrors === null){
 vErrors = [err41];
 }
@@ -11828,8 +11948,12 @@ vErrors.push(err41);
 errors++;
 }
 }
-else {
-const err42 = {instancePath:instancePath+"/zoomMax",schemaPath:"#/properties/zoomMax/type",keyword:"type",params:{type: "number"},message:"must be number"};
+}
+if(data.zoomMin !== undefined){
+let data7 = data.zoomMin;
+if((typeof data7 == "number") && (isFinite(data7))){
+if(data7 < 0 || isNaN(data7)){
+const err42 = {instancePath:instancePath+"/zoomMin",schemaPath:"#/properties/zoomMin/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
 if(vErrors === null){
 vErrors = [err42];
 }
@@ -11839,11 +11963,8 @@ vErrors.push(err42);
 errors++;
 }
 }
-if(data.zoomStep !== undefined){
-let data9 = data.zoomStep;
-if((typeof data9 == "number") && (isFinite(data9))){
-if(data9 < 0 || isNaN(data9)){
-const err43 = {instancePath:instancePath+"/zoomStep",schemaPath:"#/properties/zoomStep/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+else {
+const err43 = {instancePath:instancePath+"/zoomMin",schemaPath:"#/properties/zoomMin/type",keyword:"type",params:{type: "number"},message:"must be number"};
 if(vErrors === null){
 vErrors = [err43];
 }
@@ -11853,8 +11974,11 @@ vErrors.push(err43);
 errors++;
 }
 }
-else {
-const err44 = {instancePath:instancePath+"/zoomStep",schemaPath:"#/properties/zoomStep/type",keyword:"type",params:{type: "number"},message:"must be number"};
+if(data.zoomMax !== undefined){
+let data8 = data.zoomMax;
+if((typeof data8 == "number") && (isFinite(data8))){
+if(data8 < 0 || isNaN(data8)){
+const err44 = {instancePath:instancePath+"/zoomMax",schemaPath:"#/properties/zoomMax/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
 if(vErrors === null){
 vErrors = [err44];
 }
@@ -11864,11 +11988,8 @@ vErrors.push(err44);
 errors++;
 }
 }
-if(data.zoomInitial !== undefined){
-let data10 = data.zoomInitial;
-if((typeof data10 == "number") && (isFinite(data10))){
-if(data10 < 0 || isNaN(data10)){
-const err45 = {instancePath:instancePath+"/zoomInitial",schemaPath:"#/properties/zoomInitial/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+else {
+const err45 = {instancePath:instancePath+"/zoomMax",schemaPath:"#/properties/zoomMax/type",keyword:"type",params:{type: "number"},message:"must be number"};
 if(vErrors === null){
 vErrors = [err45];
 }
@@ -11878,8 +11999,11 @@ vErrors.push(err45);
 errors++;
 }
 }
-else {
-const err46 = {instancePath:instancePath+"/zoomInitial",schemaPath:"#/properties/zoomInitial/type",keyword:"type",params:{type: "number"},message:"must be number"};
+if(data.zoomStep !== undefined){
+let data9 = data.zoomStep;
+if((typeof data9 == "number") && (isFinite(data9))){
+if(data9 < 0 || isNaN(data9)){
+const err46 = {instancePath:instancePath+"/zoomStep",schemaPath:"#/properties/zoomStep/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
 if(vErrors === null){
 vErrors = [err46];
 }
@@ -11889,10 +12013,8 @@ vErrors.push(err46);
 errors++;
 }
 }
-if(data.minClickSize !== undefined){
-let data11 = data.minClickSize;
-if(!(((typeof data11 == "number") && (!(data11 % 1) && !isNaN(data11))) && (isFinite(data11)))){
-const err47 = {instancePath:instancePath+"/minClickSize",schemaPath:"#/properties/minClickSize/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+else {
+const err47 = {instancePath:instancePath+"/zoomStep",schemaPath:"#/properties/zoomStep/type",keyword:"type",params:{type: "number"},message:"must be number"};
 if(vErrors === null){
 vErrors = [err47];
 }
@@ -11901,9 +12023,12 @@ vErrors.push(err47);
 }
 errors++;
 }
-if((typeof data11 == "number") && (isFinite(data11))){
-if(data11 > 9007199254740991 || isNaN(data11)){
-const err48 = {instancePath:instancePath+"/minClickSize",schemaPath:"#/properties/minClickSize/maximum",keyword:"maximum",params:{comparison: "<=", limit: 9007199254740991},message:"must be <= 9007199254740991"};
+}
+if(data.zoomInitial !== undefined){
+let data10 = data.zoomInitial;
+if((typeof data10 == "number") && (isFinite(data10))){
+if(data10 < 0 || isNaN(data10)){
+const err48 = {instancePath:instancePath+"/zoomInitial",schemaPath:"#/properties/zoomInitial/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
 if(vErrors === null){
 vErrors = [err48];
 }
@@ -11912,8 +12037,9 @@ vErrors.push(err48);
 }
 errors++;
 }
-if(data11 < 0 || isNaN(data11)){
-const err49 = {instancePath:instancePath+"/minClickSize",schemaPath:"#/properties/minClickSize/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+}
+else {
+const err49 = {instancePath:instancePath+"/zoomInitial",schemaPath:"#/properties/zoomInitial/type",keyword:"type",params:{type: "number"},message:"must be number"};
 if(vErrors === null){
 vErrors = [err49];
 }
@@ -11923,11 +12049,10 @@ vErrors.push(err49);
 errors++;
 }
 }
-}
-if(data.fontSize !== undefined){
-let data12 = data.fontSize;
-if(!(((typeof data12 == "number") && (!(data12 % 1) && !isNaN(data12))) && (isFinite(data12)))){
-const err50 = {instancePath:instancePath+"/fontSize",schemaPath:"#/properties/fontSize/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(data.minClickSize !== undefined){
+let data11 = data.minClickSize;
+if(!(((typeof data11 == "number") && (!(data11 % 1) && !isNaN(data11))) && (isFinite(data11)))){
+const err50 = {instancePath:instancePath+"/minClickSize",schemaPath:"#/properties/minClickSize/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
 if(vErrors === null){
 vErrors = [err50];
 }
@@ -11936,9 +12061,9 @@ vErrors.push(err50);
 }
 errors++;
 }
-if((typeof data12 == "number") && (isFinite(data12))){
-if(data12 > 9007199254740991 || isNaN(data12)){
-const err51 = {instancePath:instancePath+"/fontSize",schemaPath:"#/properties/fontSize/maximum",keyword:"maximum",params:{comparison: "<=", limit: 9007199254740991},message:"must be <= 9007199254740991"};
+if((typeof data11 == "number") && (isFinite(data11))){
+if(data11 > 9007199254740991 || isNaN(data11)){
+const err51 = {instancePath:instancePath+"/minClickSize",schemaPath:"#/properties/minClickSize/maximum",keyword:"maximum",params:{comparison: "<=", limit: 9007199254740991},message:"must be <= 9007199254740991"};
 if(vErrors === null){
 vErrors = [err51];
 }
@@ -11947,8 +12072,8 @@ vErrors.push(err51);
 }
 errors++;
 }
-if(data12 < 0 || isNaN(data12)){
-const err52 = {instancePath:instancePath+"/fontSize",schemaPath:"#/properties/fontSize/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(data11 < 0 || isNaN(data11)){
+const err52 = {instancePath:instancePath+"/minClickSize",schemaPath:"#/properties/minClickSize/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
 if(vErrors === null){
 vErrors = [err52];
 }
@@ -11959,10 +12084,10 @@ errors++;
 }
 }
 }
-if(data.saveDelayMs !== undefined){
-let data13 = data.saveDelayMs;
-if(!(((typeof data13 == "number") && (!(data13 % 1) && !isNaN(data13))) && (isFinite(data13)))){
-const err53 = {instancePath:instancePath+"/saveDelayMs",schemaPath:"#/properties/saveDelayMs/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(data.fontSize !== undefined){
+let data12 = data.fontSize;
+if(!(((typeof data12 == "number") && (!(data12 % 1) && !isNaN(data12))) && (isFinite(data12)))){
+const err53 = {instancePath:instancePath+"/fontSize",schemaPath:"#/properties/fontSize/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
 if(vErrors === null){
 vErrors = [err53];
 }
@@ -11971,9 +12096,9 @@ vErrors.push(err53);
 }
 errors++;
 }
-if((typeof data13 == "number") && (isFinite(data13))){
-if(data13 > 9007199254740991 || isNaN(data13)){
-const err54 = {instancePath:instancePath+"/saveDelayMs",schemaPath:"#/properties/saveDelayMs/maximum",keyword:"maximum",params:{comparison: "<=", limit: 9007199254740991},message:"must be <= 9007199254740991"};
+if((typeof data12 == "number") && (isFinite(data12))){
+if(data12 > 9007199254740991 || isNaN(data12)){
+const err54 = {instancePath:instancePath+"/fontSize",schemaPath:"#/properties/fontSize/maximum",keyword:"maximum",params:{comparison: "<=", limit: 9007199254740991},message:"must be <= 9007199254740991"};
 if(vErrors === null){
 vErrors = [err54];
 }
@@ -11982,8 +12107,8 @@ vErrors.push(err54);
 }
 errors++;
 }
-if(data13 < 0 || isNaN(data13)){
-const err55 = {instancePath:instancePath+"/saveDelayMs",schemaPath:"#/properties/saveDelayMs/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(data12 < 0 || isNaN(data12)){
+const err55 = {instancePath:instancePath+"/fontSize",schemaPath:"#/properties/fontSize/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
 if(vErrors === null){
 vErrors = [err55];
 }
@@ -11994,10 +12119,10 @@ errors++;
 }
 }
 }
-if(data.saveMaxBytes !== undefined){
-let data14 = data.saveMaxBytes;
-if(!(((typeof data14 == "number") && (!(data14 % 1) && !isNaN(data14))) && (isFinite(data14)))){
-const err56 = {instancePath:instancePath+"/saveMaxBytes",schemaPath:"#/properties/saveMaxBytes/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(data.saveDelayMs !== undefined){
+let data13 = data.saveDelayMs;
+if(!(((typeof data13 == "number") && (!(data13 % 1) && !isNaN(data13))) && (isFinite(data13)))){
+const err56 = {instancePath:instancePath+"/saveDelayMs",schemaPath:"#/properties/saveDelayMs/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
 if(vErrors === null){
 vErrors = [err56];
 }
@@ -12006,9 +12131,9 @@ vErrors.push(err56);
 }
 errors++;
 }
-if((typeof data14 == "number") && (isFinite(data14))){
-if(data14 > 9007199254740991 || isNaN(data14)){
-const err57 = {instancePath:instancePath+"/saveMaxBytes",schemaPath:"#/properties/saveMaxBytes/maximum",keyword:"maximum",params:{comparison: "<=", limit: 9007199254740991},message:"must be <= 9007199254740991"};
+if((typeof data13 == "number") && (isFinite(data13))){
+if(data13 > 9007199254740991 || isNaN(data13)){
+const err57 = {instancePath:instancePath+"/saveDelayMs",schemaPath:"#/properties/saveDelayMs/maximum",keyword:"maximum",params:{comparison: "<=", limit: 9007199254740991},message:"must be <= 9007199254740991"};
 if(vErrors === null){
 vErrors = [err57];
 }
@@ -12017,13 +12142,48 @@ vErrors.push(err57);
 }
 errors++;
 }
-if(data14 < 0 || isNaN(data14)){
-const err58 = {instancePath:instancePath+"/saveMaxBytes",schemaPath:"#/properties/saveMaxBytes/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(data13 < 0 || isNaN(data13)){
+const err58 = {instancePath:instancePath+"/saveDelayMs",schemaPath:"#/properties/saveDelayMs/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
 if(vErrors === null){
 vErrors = [err58];
 }
 else {
 vErrors.push(err58);
+}
+errors++;
+}
+}
+}
+if(data.saveMaxBytes !== undefined){
+let data14 = data.saveMaxBytes;
+if(!(((typeof data14 == "number") && (!(data14 % 1) && !isNaN(data14))) && (isFinite(data14)))){
+const err59 = {instancePath:instancePath+"/saveMaxBytes",schemaPath:"#/properties/saveMaxBytes/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err59];
+}
+else {
+vErrors.push(err59);
+}
+errors++;
+}
+if((typeof data14 == "number") && (isFinite(data14))){
+if(data14 > 9007199254740991 || isNaN(data14)){
+const err60 = {instancePath:instancePath+"/saveMaxBytes",schemaPath:"#/properties/saveMaxBytes/maximum",keyword:"maximum",params:{comparison: "<=", limit: 9007199254740991},message:"must be <= 9007199254740991"};
+if(vErrors === null){
+vErrors = [err60];
+}
+else {
+vErrors.push(err60);
+}
+errors++;
+}
+if(data14 < 0 || isNaN(data14)){
+const err61 = {instancePath:instancePath+"/saveMaxBytes",schemaPath:"#/properties/saveMaxBytes/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err61];
+}
+else {
+vErrors.push(err61);
 }
 errors++;
 }
@@ -12036,41 +12196,7 @@ const len0 = data15.length;
 for(let i0=0; i0<len0; i0++){
 let data16 = data15[i0];
 if(!(((typeof data16 == "number") && (!(data16 % 1) && !isNaN(data16))) && (isFinite(data16)))){
-const err59 = {instancePath:instancePath+"/speeds/" + i0,schemaPath:"#/properties/speeds/items/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
-if(vErrors === null){
-vErrors = [err59];
-}
-else {
-vErrors.push(err59);
-}
-errors++;
-}
-if((typeof data16 == "number") && (isFinite(data16))){
-if(data16 > 9007199254740991 || isNaN(data16)){
-const err60 = {instancePath:instancePath+"/speeds/" + i0,schemaPath:"#/properties/speeds/items/maximum",keyword:"maximum",params:{comparison: "<=", limit: 9007199254740991},message:"must be <= 9007199254740991"};
-if(vErrors === null){
-vErrors = [err60];
-}
-else {
-vErrors.push(err60);
-}
-errors++;
-}
-if(data16 < 0 || isNaN(data16)){
-const err61 = {instancePath:instancePath+"/speeds/" + i0,schemaPath:"#/properties/speeds/items/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
-if(vErrors === null){
-vErrors = [err61];
-}
-else {
-vErrors.push(err61);
-}
-errors++;
-}
-}
-}
-}
-else {
-const err62 = {instancePath:instancePath+"/speeds",schemaPath:"#/properties/speeds/type",keyword:"type",params:{type: "array"},message:"must be array"};
+const err62 = {instancePath:instancePath+"/speeds/" + i0,schemaPath:"#/properties/speeds/items/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
 if(vErrors === null){
 vErrors = [err62];
 }
@@ -12079,11 +12205,9 @@ vErrors.push(err62);
 }
 errors++;
 }
-}
-if(data.defaultSpeed !== undefined){
-let data17 = data.defaultSpeed;
-if(!(((typeof data17 == "number") && (!(data17 % 1) && !isNaN(data17))) && (isFinite(data17)))){
-const err63 = {instancePath:instancePath+"/defaultSpeed",schemaPath:"#/properties/defaultSpeed/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if((typeof data16 == "number") && (isFinite(data16))){
+if(data16 > 9007199254740991 || isNaN(data16)){
+const err63 = {instancePath:instancePath+"/speeds/" + i0,schemaPath:"#/properties/speeds/items/maximum",keyword:"maximum",params:{comparison: "<=", limit: 9007199254740991},message:"must be <= 9007199254740991"};
 if(vErrors === null){
 vErrors = [err63];
 }
@@ -12092,9 +12216,8 @@ vErrors.push(err63);
 }
 errors++;
 }
-if((typeof data17 == "number") && (isFinite(data17))){
-if(data17 > 9007199254740991 || isNaN(data17)){
-const err64 = {instancePath:instancePath+"/defaultSpeed",schemaPath:"#/properties/defaultSpeed/maximum",keyword:"maximum",params:{comparison: "<=", limit: 9007199254740991},message:"must be <= 9007199254740991"};
+if(data16 < 0 || isNaN(data16)){
+const err64 = {instancePath:instancePath+"/speeds/" + i0,schemaPath:"#/properties/speeds/items/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
 if(vErrors === null){
 vErrors = [err64];
 }
@@ -12103,8 +12226,11 @@ vErrors.push(err64);
 }
 errors++;
 }
-if(data17 < 0 || isNaN(data17)){
-const err65 = {instancePath:instancePath+"/defaultSpeed",schemaPath:"#/properties/defaultSpeed/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+}
+}
+}
+else {
+const err65 = {instancePath:instancePath+"/speeds",schemaPath:"#/properties/speeds/type",keyword:"type",params:{type: "array"},message:"must be array"};
 if(vErrors === null){
 vErrors = [err65];
 }
@@ -12114,11 +12240,10 @@ vErrors.push(err65);
 errors++;
 }
 }
-}
-if(data.unitLabelSize !== undefined){
-let data18 = data.unitLabelSize;
-if(!((typeof data18 == "number") && (isFinite(data18)))){
-const err66 = {instancePath:instancePath+"/unitLabelSize",schemaPath:"#/properties/unitLabelSize/type",keyword:"type",params:{type: "number"},message:"must be number"};
+if(data.defaultSpeed !== undefined){
+let data17 = data.defaultSpeed;
+if(!(((typeof data17 == "number") && (!(data17 % 1) && !isNaN(data17))) && (isFinite(data17)))){
+const err66 = {instancePath:instancePath+"/defaultSpeed",schemaPath:"#/properties/defaultSpeed/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
 if(vErrors === null){
 vErrors = [err66];
 }
@@ -12127,15 +12252,232 @@ vErrors.push(err66);
 }
 errors++;
 }
-}
-}
-else {
-const err67 = {instancePath,schemaPath:"#/type",keyword:"type",params:{type: "object"},message:"must be object"};
+if((typeof data17 == "number") && (isFinite(data17))){
+if(data17 > 9007199254740991 || isNaN(data17)){
+const err67 = {instancePath:instancePath+"/defaultSpeed",schemaPath:"#/properties/defaultSpeed/maximum",keyword:"maximum",params:{comparison: "<=", limit: 9007199254740991},message:"must be <= 9007199254740991"};
 if(vErrors === null){
 vErrors = [err67];
 }
 else {
 vErrors.push(err67);
+}
+errors++;
+}
+if(data17 < 0 || isNaN(data17)){
+const err68 = {instancePath:instancePath+"/defaultSpeed",schemaPath:"#/properties/defaultSpeed/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err68];
+}
+else {
+vErrors.push(err68);
+}
+errors++;
+}
+}
+}
+if(data.unitLabelSize !== undefined){
+let data18 = data.unitLabelSize;
+if(!((typeof data18 == "number") && (isFinite(data18)))){
+const err69 = {instancePath:instancePath+"/unitLabelSize",schemaPath:"#/properties/unitLabelSize/type",keyword:"type",params:{type: "number"},message:"must be number"};
+if(vErrors === null){
+vErrors = [err69];
+}
+else {
+vErrors.push(err69);
+}
+errors++;
+}
+}
+if(data.actionMs !== undefined){
+let data19 = data.actionMs;
+if(data19 && typeof data19 == "object" && !Array.isArray(data19)){
+if(data19.building === undefined){
+const err70 = {instancePath:instancePath+"/actionMs",schemaPath:"#/properties/actionMs/required",keyword:"required",params:{missingProperty: "building"},message:"must have required property '"+"building"+"'"};
+if(vErrors === null){
+vErrors = [err70];
+}
+else {
+vErrors.push(err70);
+}
+errors++;
+}
+if(data19.research === undefined){
+const err71 = {instancePath:instancePath+"/actionMs",schemaPath:"#/properties/actionMs/required",keyword:"required",params:{missingProperty: "research"},message:"must have required property '"+"research"+"'"};
+if(vErrors === null){
+vErrors = [err71];
+}
+else {
+vErrors.push(err71);
+}
+errors++;
+}
+if(data19.unit === undefined){
+const err72 = {instancePath:instancePath+"/actionMs",schemaPath:"#/properties/actionMs/required",keyword:"required",params:{missingProperty: "unit"},message:"must have required property '"+"unit"+"'"};
+if(vErrors === null){
+vErrors = [err72];
+}
+else {
+vErrors.push(err72);
+}
+errors++;
+}
+for(const key1 in data19){
+if(!(((key1 === "building") || (key1 === "research")) || (key1 === "unit"))){
+const err73 = {instancePath:instancePath+"/actionMs",schemaPath:"#/properties/actionMs/additionalProperties",keyword:"additionalProperties",params:{additionalProperty: key1},message:"must NOT have additional properties"};
+if(vErrors === null){
+vErrors = [err73];
+}
+else {
+vErrors.push(err73);
+}
+errors++;
+}
+}
+if(data19.building !== undefined){
+let data20 = data19.building;
+if(!(((typeof data20 == "number") && (!(data20 % 1) && !isNaN(data20))) && (isFinite(data20)))){
+const err74 = {instancePath:instancePath+"/actionMs/building",schemaPath:"#/properties/actionMs/properties/building/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err74];
+}
+else {
+vErrors.push(err74);
+}
+errors++;
+}
+if((typeof data20 == "number") && (isFinite(data20))){
+if(data20 < 0 || isNaN(data20)){
+const err75 = {instancePath:instancePath+"/actionMs/building",schemaPath:"#/properties/actionMs/properties/building/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err75];
+}
+else {
+vErrors.push(err75);
+}
+errors++;
+}
+}
+}
+if(data19.research !== undefined){
+let data21 = data19.research;
+if(!(((typeof data21 == "number") && (!(data21 % 1) && !isNaN(data21))) && (isFinite(data21)))){
+const err76 = {instancePath:instancePath+"/actionMs/research",schemaPath:"#/properties/actionMs/properties/research/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err76];
+}
+else {
+vErrors.push(err76);
+}
+errors++;
+}
+if((typeof data21 == "number") && (isFinite(data21))){
+if(data21 < 0 || isNaN(data21)){
+const err77 = {instancePath:instancePath+"/actionMs/research",schemaPath:"#/properties/actionMs/properties/research/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err77];
+}
+else {
+vErrors.push(err77);
+}
+errors++;
+}
+}
+}
+if(data19.unit !== undefined){
+let data22 = data19.unit;
+if(!(((typeof data22 == "number") && (!(data22 % 1) && !isNaN(data22))) && (isFinite(data22)))){
+const err78 = {instancePath:instancePath+"/actionMs/unit",schemaPath:"#/properties/actionMs/properties/unit/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err78];
+}
+else {
+vErrors.push(err78);
+}
+errors++;
+}
+if((typeof data22 == "number") && (isFinite(data22))){
+if(data22 < 0 || isNaN(data22)){
+const err79 = {instancePath:instancePath+"/actionMs/unit",schemaPath:"#/properties/actionMs/properties/unit/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err79];
+}
+else {
+vErrors.push(err79);
+}
+errors++;
+}
+}
+}
+}
+else {
+const err80 = {instancePath:instancePath+"/actionMs",schemaPath:"#/properties/actionMs/type",keyword:"type",params:{type: "object"},message:"must be object"};
+if(vErrors === null){
+vErrors = [err80];
+}
+else {
+vErrors.push(err80);
+}
+errors++;
+}
+}
+if(data.dragThresholdPx !== undefined){
+let data23 = data.dragThresholdPx;
+if(!(((typeof data23 == "number") && (!(data23 % 1) && !isNaN(data23))) && (isFinite(data23)))){
+const err81 = {instancePath:instancePath+"/dragThresholdPx",schemaPath:"#/properties/dragThresholdPx/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err81];
+}
+else {
+vErrors.push(err81);
+}
+errors++;
+}
+if((typeof data23 == "number") && (isFinite(data23))){
+if(data23 < 1 || isNaN(data23)){
+const err82 = {instancePath:instancePath+"/dragThresholdPx",schemaPath:"#/properties/dragThresholdPx/minimum",keyword:"minimum",params:{comparison: ">=", limit: 1},message:"must be >= 1"};
+if(vErrors === null){
+vErrors = [err82];
+}
+else {
+vErrors.push(err82);
+}
+errors++;
+}
+}
+}
+if(data.toastMs !== undefined){
+let data24 = data.toastMs;
+if(!(((typeof data24 == "number") && (!(data24 % 1) && !isNaN(data24))) && (isFinite(data24)))){
+const err83 = {instancePath:instancePath+"/toastMs",schemaPath:"#/properties/toastMs/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err83];
+}
+else {
+vErrors.push(err83);
+}
+errors++;
+}
+if((typeof data24 == "number") && (isFinite(data24))){
+if(data24 < 0 || isNaN(data24)){
+const err84 = {instancePath:instancePath+"/toastMs",schemaPath:"#/properties/toastMs/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err84];
+}
+else {
+vErrors.push(err84);
+}
+errors++;
+}
+}
+}
+}
+else {
+const err85 = {instancePath,schemaPath:"#/type",keyword:"type",params:{type: "object"},message:"must be object"};
+if(vErrors === null){
+vErrors = [err85];
+}
+else {
+vErrors.push(err85);
 }
 errors++;
 }
@@ -39658,7 +40000,7 @@ validate82.errors = vErrors;
 return errors === 0;
 }
 
-const schema34 = {"type":"object","additionalProperties":false,"required":["migrations"],"properties":{"migrations":{"type":"array","items":{"type":"object","additionalProperties":false,"required":["schemaVersion","fromConfig","toConfig","costSource"],"properties":{"schemaVersion":{"const":1},"fromConfig":{"type":"string"},"toConfig":{"type":"string"},"costSource":{"type":"string"}}}}}};
+const schema34 = {"type":"object","additionalProperties":false,"required":["migrations"],"properties":{"migrations":{"type":"array","items":{"type":"object","additionalProperties":false,"required":["schemaVersion","fromConfig","toConfig","costSource"],"properties":{"schemaVersion":{"enum":[1,2]},"fromConfig":{"type":"string"},"toConfig":{"type":"string"},"costSource":{"type":"string"}}}}}};
 
 function validate84(data, {instancePath="", parentData, parentDataProperty, rootData=data}={}){
 let vErrors = null;
@@ -39746,8 +40088,9 @@ errors++;
 }
 }
 if(data1.schemaVersion !== undefined){
-if(1 !== data1.schemaVersion){
-const err7 = {instancePath:instancePath+"/migrations/" + i0+"/schemaVersion",schemaPath:"#/properties/migrations/items/properties/schemaVersion/const",keyword:"const",params:{allowedValue: 1},message:"must be equal to constant"};
+let data2 = data1.schemaVersion;
+if(!((data2 === 1) || (data2 === 2))){
+const err7 = {instancePath:instancePath+"/migrations/" + i0+"/schemaVersion",schemaPath:"#/properties/migrations/items/properties/schemaVersion/enum",keyword:"enum",params:{allowedValues: schema34.properties.migrations.items.properties.schemaVersion.enum},message:"must be equal to one of the allowed values"};
 if(vErrors === null){
 vErrors = [err7];
 }
@@ -39990,6 +40333,7849 @@ vErrors.push(err12);
 errors++;
 }
 validate86.errors = vErrors;
+return errors === 0;
+}
+
+
+function validate88(data, {instancePath="", parentData, parentDataProperty, rootData=data}={}){
+let vErrors = null;
+let errors = 0;
+if(data && typeof data == "object" && !Array.isArray(data)){
+if(data.id === undefined){
+const err0 = {instancePath,schemaPath:"#/required",keyword:"required",params:{missingProperty: "id"},message:"must have required property '"+"id"+"'"};
+if(vErrors === null){
+vErrors = [err0];
+}
+else {
+vErrors.push(err0);
+}
+errors++;
+}
+if(data.status === undefined){
+const err1 = {instancePath,schemaPath:"#/required",keyword:"required",params:{missingProperty: "status"},message:"must have required property '"+"status"+"'"};
+if(vErrors === null){
+vErrors = [err1];
+}
+else {
+vErrors.push(err1);
+}
+errors++;
+}
+if(data.version === undefined){
+const err2 = {instancePath,schemaPath:"#/required",keyword:"required",params:{missingProperty: "version"},message:"must have required property '"+"version"+"'"};
+if(vErrors === null){
+vErrors = [err2];
+}
+else {
+vErrors.push(err2);
+}
+errors++;
+}
+if(data.initialSupplies === undefined){
+const err3 = {instancePath,schemaPath:"#/required",keyword:"required",params:{missingProperty: "initialSupplies"},message:"must have required property '"+"initialSupplies"+"'"};
+if(vErrors === null){
+vErrors = [err3];
+}
+else {
+vErrors.push(err3);
+}
+errors++;
+}
+if(data.hqHp === undefined){
+const err4 = {instancePath,schemaPath:"#/required",keyword:"required",params:{missingProperty: "hqHp"},message:"must have required property '"+"hqHp"+"'"};
+if(vErrors === null){
+vErrors = [err4];
+}
+else {
+vErrors.push(err4);
+}
+errors++;
+}
+if(data.costs === undefined){
+const err5 = {instancePath,schemaPath:"#/required",keyword:"required",params:{missingProperty: "costs"},message:"must have required property '"+"costs"+"'"};
+if(vErrors === null){
+vErrors = [err5];
+}
+else {
+vErrors.push(err5);
+}
+errors++;
+}
+if(data.units === undefined){
+const err6 = {instancePath,schemaPath:"#/required",keyword:"required",params:{missingProperty: "units"},message:"must have required property '"+"units"+"'"};
+if(vErrors === null){
+vErrors = [err6];
+}
+else {
+vErrors.push(err6);
+}
+errors++;
+}
+if(data.rewardBase === undefined){
+const err7 = {instancePath,schemaPath:"#/required",keyword:"required",params:{missingProperty: "rewardBase"},message:"must have required property '"+"rewardBase"+"'"};
+if(vErrors === null){
+vErrors = [err7];
+}
+else {
+vErrors.push(err7);
+}
+errors++;
+}
+if(data.rewardPerWave === undefined){
+const err8 = {instancePath,schemaPath:"#/required",keyword:"required",params:{missingProperty: "rewardPerWave"},message:"must have required property '"+"rewardPerWave"+"'"};
+if(vErrors === null){
+vErrors = [err8];
+}
+else {
+vErrors.push(err8);
+}
+errors++;
+}
+if(data.upgradeMultipliers === undefined){
+const err9 = {instancePath,schemaPath:"#/required",keyword:"required",params:{missingProperty: "upgradeMultipliers"},message:"must have required property '"+"upgradeMultipliers"+"'"};
+if(vErrors === null){
+vErrors = [err9];
+}
+else {
+vErrors.push(err9);
+}
+errors++;
+}
+if(data.upgradeCostFactors === undefined){
+const err10 = {instancePath,schemaPath:"#/required",keyword:"required",params:{missingProperty: "upgradeCostFactors"},message:"must have required property '"+"upgradeCostFactors"+"'"};
+if(vErrors === null){
+vErrors = [err10];
+}
+else {
+vErrors.push(err10);
+}
+errors++;
+}
+if(data.fixedStepSeconds === undefined){
+const err11 = {instancePath,schemaPath:"#/required",keyword:"required",params:{missingProperty: "fixedStepSeconds"},message:"must have required property '"+"fixedStepSeconds"+"'"};
+if(vErrors === null){
+vErrors = [err11];
+}
+else {
+vErrors.push(err11);
+}
+errors++;
+}
+if(data.maxTicks === undefined){
+const err12 = {instancePath,schemaPath:"#/required",keyword:"required",params:{missingProperty: "maxTicks"},message:"must have required property '"+"maxTicks"+"'"};
+if(vErrors === null){
+vErrors = [err12];
+}
+else {
+vErrors.push(err12);
+}
+errors++;
+}
+if(data.frameStride === undefined){
+const err13 = {instancePath,schemaPath:"#/required",keyword:"required",params:{missingProperty: "frameStride"},message:"must have required property '"+"frameStride"+"'"};
+if(vErrors === null){
+vErrors = [err13];
+}
+else {
+vErrors.push(err13);
+}
+errors++;
+}
+if(data.spawnDistance === undefined){
+const err14 = {instancePath,schemaPath:"#/required",keyword:"required",params:{missingProperty: "spawnDistance"},message:"must have required property '"+"spawnDistance"+"'"};
+if(vErrors === null){
+vErrors = [err14];
+}
+else {
+vErrors.push(err14);
+}
+errors++;
+}
+if(data.spawnInterval === undefined){
+const err15 = {instancePath,schemaPath:"#/required",keyword:"required",params:{missingProperty: "spawnInterval"},message:"must have required property '"+"spawnInterval"+"'"};
+if(vErrors === null){
+vErrors = [err15];
+}
+else {
+vErrors.push(err15);
+}
+errors++;
+}
+if(data.contactRange === undefined){
+const err16 = {instancePath,schemaPath:"#/required",keyword:"required",params:{missingProperty: "contactRange"},message:"must have required property '"+"contactRange"+"'"};
+if(vErrors === null){
+vErrors = [err16];
+}
+else {
+vErrors.push(err16);
+}
+errors++;
+}
+if(data.enemyPowerPerWave === undefined){
+const err17 = {instancePath,schemaPath:"#/required",keyword:"required",params:{missingProperty: "enemyPowerPerWave"},message:"must have required property '"+"enemyPowerPerWave"+"'"};
+if(vErrors === null){
+vErrors = [err17];
+}
+else {
+vErrors.push(err17);
+}
+errors++;
+}
+if(data.enemyCountBase === undefined){
+const err18 = {instancePath,schemaPath:"#/required",keyword:"required",params:{missingProperty: "enemyCountBase"},message:"must have required property '"+"enemyCountBase"+"'"};
+if(vErrors === null){
+vErrors = [err18];
+}
+else {
+vErrors.push(err18);
+}
+errors++;
+}
+if(data.enemyCountWaveInterval === undefined){
+const err19 = {instancePath,schemaPath:"#/required",keyword:"required",params:{missingProperty: "enemyCountWaveInterval"},message:"must have required property '"+"enemyCountWaveInterval"+"'"};
+if(vErrors === null){
+vErrors = [err19];
+}
+else {
+vErrors.push(err19);
+}
+errors++;
+}
+if(data.enemyCountGrowth === undefined){
+const err20 = {instancePath,schemaPath:"#/required",keyword:"required",params:{missingProperty: "enemyCountGrowth"},message:"must have required property '"+"enemyCountGrowth"+"'"};
+if(vErrors === null){
+vErrors = [err20];
+}
+else {
+vErrors.push(err20);
+}
+errors++;
+}
+if(data.expansionWaves === undefined){
+const err21 = {instancePath,schemaPath:"#/required",keyword:"required",params:{missingProperty: "expansionWaves"},message:"must have required property '"+"expansionWaves"+"'"};
+if(vErrors === null){
+vErrors = [err21];
+}
+else {
+vErrors.push(err21);
+}
+errors++;
+}
+if(data.rewards === undefined){
+const err22 = {instancePath,schemaPath:"#/required",keyword:"required",params:{missingProperty: "rewards"},message:"must have required property '"+"rewards"+"'"};
+if(vErrors === null){
+vErrors = [err22];
+}
+else {
+vErrors.push(err22);
+}
+errors++;
+}
+for(const key0 in data){
+if(!(func2.call(schema33.properties, key0))){
+const err23 = {instancePath,schemaPath:"#/additionalProperties",keyword:"additionalProperties",params:{additionalProperty: key0},message:"must NOT have additional properties"};
+if(vErrors === null){
+vErrors = [err23];
+}
+else {
+vErrors.push(err23);
+}
+errors++;
+}
+}
+if(data.id !== undefined){
+let data0 = data.id;
+if(typeof data0 === "string"){
+if(func4(data0) < 1){
+const err24 = {instancePath:instancePath+"/id",schemaPath:"#/properties/id/minLength",keyword:"minLength",params:{limit: 1},message:"must NOT have fewer than 1 characters"};
+if(vErrors === null){
+vErrors = [err24];
+}
+else {
+vErrors.push(err24);
+}
+errors++;
+}
+}
+else {
+const err25 = {instancePath:instancePath+"/id",schemaPath:"#/properties/id/type",keyword:"type",params:{type: "string"},message:"must be string"};
+if(vErrors === null){
+vErrors = [err25];
+}
+else {
+vErrors.push(err25);
+}
+errors++;
+}
+}
+if(data.status !== undefined){
+let data1 = data.status;
+if(typeof data1 === "string"){
+if(func4(data1) < 1){
+const err26 = {instancePath:instancePath+"/status",schemaPath:"#/properties/status/minLength",keyword:"minLength",params:{limit: 1},message:"must NOT have fewer than 1 characters"};
+if(vErrors === null){
+vErrors = [err26];
+}
+else {
+vErrors.push(err26);
+}
+errors++;
+}
+}
+else {
+const err27 = {instancePath:instancePath+"/status",schemaPath:"#/properties/status/type",keyword:"type",params:{type: "string"},message:"must be string"};
+if(vErrors === null){
+vErrors = [err27];
+}
+else {
+vErrors.push(err27);
+}
+errors++;
+}
+}
+if(data.version !== undefined){
+let data2 = data.version;
+if(!(((typeof data2 == "number") && (!(data2 % 1) && !isNaN(data2))) && (isFinite(data2)))){
+const err28 = {instancePath:instancePath+"/version",schemaPath:"#/properties/version/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err28];
+}
+else {
+vErrors.push(err28);
+}
+errors++;
+}
+if((typeof data2 == "number") && (isFinite(data2))){
+if(data2 < 0 || isNaN(data2)){
+const err29 = {instancePath:instancePath+"/version",schemaPath:"#/properties/version/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err29];
+}
+else {
+vErrors.push(err29);
+}
+errors++;
+}
+}
+}
+if(data.initialSupplies !== undefined){
+let data3 = data.initialSupplies;
+if(!(((typeof data3 == "number") && (!(data3 % 1) && !isNaN(data3))) && (isFinite(data3)))){
+const err30 = {instancePath:instancePath+"/initialSupplies",schemaPath:"#/properties/initialSupplies/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err30];
+}
+else {
+vErrors.push(err30);
+}
+errors++;
+}
+if((typeof data3 == "number") && (isFinite(data3))){
+if(data3 < 0 || isNaN(data3)){
+const err31 = {instancePath:instancePath+"/initialSupplies",schemaPath:"#/properties/initialSupplies/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err31];
+}
+else {
+vErrors.push(err31);
+}
+errors++;
+}
+}
+}
+if(data.hqHp !== undefined){
+let data4 = data.hqHp;
+if(!(((typeof data4 == "number") && (!(data4 % 1) && !isNaN(data4))) && (isFinite(data4)))){
+const err32 = {instancePath:instancePath+"/hqHp",schemaPath:"#/properties/hqHp/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err32];
+}
+else {
+vErrors.push(err32);
+}
+errors++;
+}
+if((typeof data4 == "number") && (isFinite(data4))){
+if(data4 < 0 || isNaN(data4)){
+const err33 = {instancePath:instancePath+"/hqHp",schemaPath:"#/properties/hqHp/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err33];
+}
+else {
+vErrors.push(err33);
+}
+errors++;
+}
+}
+}
+if(data.costs !== undefined){
+let data5 = data.costs;
+if(data5 && typeof data5 == "object" && !Array.isArray(data5)){
+if(data5.hq === undefined){
+const err34 = {instancePath:instancePath+"/costs",schemaPath:"#/properties/costs/required",keyword:"required",params:{missingProperty: "hq"},message:"must have required property '"+"hq"+"'"};
+if(vErrors === null){
+vErrors = [err34];
+}
+else {
+vErrors.push(err34);
+}
+errors++;
+}
+if(data5.rifleR === undefined){
+const err35 = {instancePath:instancePath+"/costs",schemaPath:"#/properties/costs/required",keyword:"required",params:{missingProperty: "rifleR"},message:"must have required property '"+"rifleR"+"'"};
+if(vErrors === null){
+vErrors = [err35];
+}
+else {
+vErrors.push(err35);
+}
+errors++;
+}
+if(data5.rifle === undefined){
+const err36 = {instancePath:instancePath+"/costs",schemaPath:"#/properties/costs/required",keyword:"required",params:{missingProperty: "rifle"},message:"must have required property '"+"rifle"+"'"};
+if(vErrors === null){
+vErrors = [err36];
+}
+else {
+vErrors.push(err36);
+}
+errors++;
+}
+if(data5.barracks === undefined){
+const err37 = {instancePath:instancePath+"/costs",schemaPath:"#/properties/costs/required",keyword:"required",params:{missingProperty: "barracks"},message:"must have required property '"+"barracks"+"'"};
+if(vErrors === null){
+vErrors = [err37];
+}
+else {
+vErrors.push(err37);
+}
+errors++;
+}
+if(data5.mgR === undefined){
+const err38 = {instancePath:instancePath+"/costs",schemaPath:"#/properties/costs/required",keyword:"required",params:{missingProperty: "mgR"},message:"must have required property '"+"mgR"+"'"};
+if(vErrors === null){
+vErrors = [err38];
+}
+else {
+vErrors.push(err38);
+}
+errors++;
+}
+if(data5.mg === undefined){
+const err39 = {instancePath:instancePath+"/costs",schemaPath:"#/properties/costs/required",keyword:"required",params:{missingProperty: "mg"},message:"must have required property '"+"mg"+"'"};
+if(vErrors === null){
+vErrors = [err39];
+}
+else {
+vErrors.push(err39);
+}
+errors++;
+}
+if(data5.mortarR === undefined){
+const err40 = {instancePath:instancePath+"/costs",schemaPath:"#/properties/costs/required",keyword:"required",params:{missingProperty: "mortarR"},message:"must have required property '"+"mortarR"+"'"};
+if(vErrors === null){
+vErrors = [err40];
+}
+else {
+vErrors.push(err40);
+}
+errors++;
+}
+if(data5.mortar === undefined){
+const err41 = {instancePath:instancePath+"/costs",schemaPath:"#/properties/costs/required",keyword:"required",params:{missingProperty: "mortar"},message:"must have required property '"+"mortar"+"'"};
+if(vErrors === null){
+vErrors = [err41];
+}
+else {
+vErrors.push(err41);
+}
+errors++;
+}
+if(data5.gunR === undefined){
+const err42 = {instancePath:instancePath+"/costs",schemaPath:"#/properties/costs/required",keyword:"required",params:{missingProperty: "gunR"},message:"must have required property '"+"gunR"+"'"};
+if(vErrors === null){
+vErrors = [err42];
+}
+else {
+vErrors.push(err42);
+}
+errors++;
+}
+if(data5.gun === undefined){
+const err43 = {instancePath:instancePath+"/costs",schemaPath:"#/properties/costs/required",keyword:"required",params:{missingProperty: "gun"},message:"must have required property '"+"gun"+"'"};
+if(vErrors === null){
+vErrors = [err43];
+}
+else {
+vErrors.push(err43);
+}
+errors++;
+}
+if(data5.atR === undefined){
+const err44 = {instancePath:instancePath+"/costs",schemaPath:"#/properties/costs/required",keyword:"required",params:{missingProperty: "atR"},message:"must have required property '"+"atR"+"'"};
+if(vErrors === null){
+vErrors = [err44];
+}
+else {
+vErrors.push(err44);
+}
+errors++;
+}
+if(data5.at === undefined){
+const err45 = {instancePath:instancePath+"/costs",schemaPath:"#/properties/costs/required",keyword:"required",params:{missingProperty: "at"},message:"must have required property '"+"at"+"'"};
+if(vErrors === null){
+vErrors = [err45];
+}
+else {
+vErrors.push(err45);
+}
+errors++;
+}
+if(data5.factory === undefined){
+const err46 = {instancePath:instancePath+"/costs",schemaPath:"#/properties/costs/required",keyword:"required",params:{missingProperty: "factory"},message:"must have required property '"+"factory"+"'"};
+if(vErrors === null){
+vErrors = [err46];
+}
+else {
+vErrors.push(err46);
+}
+errors++;
+}
+if(data5.carR === undefined){
+const err47 = {instancePath:instancePath+"/costs",schemaPath:"#/properties/costs/required",keyword:"required",params:{missingProperty: "carR"},message:"must have required property '"+"carR"+"'"};
+if(vErrors === null){
+vErrors = [err47];
+}
+else {
+vErrors.push(err47);
+}
+errors++;
+}
+if(data5.car === undefined){
+const err48 = {instancePath:instancePath+"/costs",schemaPath:"#/properties/costs/required",keyword:"required",params:{missingProperty: "car"},message:"must have required property '"+"car"+"'"};
+if(vErrors === null){
+vErrors = [err48];
+}
+else {
+vErrors.push(err48);
+}
+errors++;
+}
+if(data5.tankR === undefined){
+const err49 = {instancePath:instancePath+"/costs",schemaPath:"#/properties/costs/required",keyword:"required",params:{missingProperty: "tankR"},message:"must have required property '"+"tankR"+"'"};
+if(vErrors === null){
+vErrors = [err49];
+}
+else {
+vErrors.push(err49);
+}
+errors++;
+}
+if(data5.tank === undefined){
+const err50 = {instancePath:instancePath+"/costs",schemaPath:"#/properties/costs/required",keyword:"required",params:{missingProperty: "tank"},message:"must have required property '"+"tank"+"'"};
+if(vErrors === null){
+vErrors = [err50];
+}
+else {
+vErrors.push(err50);
+}
+errors++;
+}
+if(data5.heavyR === undefined){
+const err51 = {instancePath:instancePath+"/costs",schemaPath:"#/properties/costs/required",keyword:"required",params:{missingProperty: "heavyR"},message:"must have required property '"+"heavyR"+"'"};
+if(vErrors === null){
+vErrors = [err51];
+}
+else {
+vErrors.push(err51);
+}
+errors++;
+}
+if(data5.heavy === undefined){
+const err52 = {instancePath:instancePath+"/costs",schemaPath:"#/properties/costs/required",keyword:"required",params:{missingProperty: "heavy"},message:"must have required property '"+"heavy"+"'"};
+if(vErrors === null){
+vErrors = [err52];
+}
+else {
+vErrors.push(err52);
+}
+errors++;
+}
+if(data5.destroyerR === undefined){
+const err53 = {instancePath:instancePath+"/costs",schemaPath:"#/properties/costs/required",keyword:"required",params:{missingProperty: "destroyerR"},message:"must have required property '"+"destroyerR"+"'"};
+if(vErrors === null){
+vErrors = [err53];
+}
+else {
+vErrors.push(err53);
+}
+errors++;
+}
+if(data5.destroyer === undefined){
+const err54 = {instancePath:instancePath+"/costs",schemaPath:"#/properties/costs/required",keyword:"required",params:{missingProperty: "destroyer"},message:"must have required property '"+"destroyer"+"'"};
+if(vErrors === null){
+vErrors = [err54];
+}
+else {
+vErrors.push(err54);
+}
+errors++;
+}
+if(data5.airfield === undefined){
+const err55 = {instancePath:instancePath+"/costs",schemaPath:"#/properties/costs/required",keyword:"required",params:{missingProperty: "airfield"},message:"must have required property '"+"airfield"+"'"};
+if(vErrors === null){
+vErrors = [err55];
+}
+else {
+vErrors.push(err55);
+}
+errors++;
+}
+if(data5.fighterR === undefined){
+const err56 = {instancePath:instancePath+"/costs",schemaPath:"#/properties/costs/required",keyword:"required",params:{missingProperty: "fighterR"},message:"must have required property '"+"fighterR"+"'"};
+if(vErrors === null){
+vErrors = [err56];
+}
+else {
+vErrors.push(err56);
+}
+errors++;
+}
+if(data5.fighter === undefined){
+const err57 = {instancePath:instancePath+"/costs",schemaPath:"#/properties/costs/required",keyword:"required",params:{missingProperty: "fighter"},message:"must have required property '"+"fighter"+"'"};
+if(vErrors === null){
+vErrors = [err57];
+}
+else {
+vErrors.push(err57);
+}
+errors++;
+}
+if(data5.attackerR === undefined){
+const err58 = {instancePath:instancePath+"/costs",schemaPath:"#/properties/costs/required",keyword:"required",params:{missingProperty: "attackerR"},message:"must have required property '"+"attackerR"+"'"};
+if(vErrors === null){
+vErrors = [err58];
+}
+else {
+vErrors.push(err58);
+}
+errors++;
+}
+if(data5.attacker === undefined){
+const err59 = {instancePath:instancePath+"/costs",schemaPath:"#/properties/costs/required",keyword:"required",params:{missingProperty: "attacker"},message:"must have required property '"+"attacker"+"'"};
+if(vErrors === null){
+vErrors = [err59];
+}
+else {
+vErrors.push(err59);
+}
+errors++;
+}
+if(data5.bomberR === undefined){
+const err60 = {instancePath:instancePath+"/costs",schemaPath:"#/properties/costs/required",keyword:"required",params:{missingProperty: "bomberR"},message:"must have required property '"+"bomberR"+"'"};
+if(vErrors === null){
+vErrors = [err60];
+}
+else {
+vErrors.push(err60);
+}
+errors++;
+}
+if(data5.bomber === undefined){
+const err61 = {instancePath:instancePath+"/costs",schemaPath:"#/properties/costs/required",keyword:"required",params:{missingProperty: "bomber"},message:"must have required property '"+"bomber"+"'"};
+if(vErrors === null){
+vErrors = [err61];
+}
+else {
+vErrors.push(err61);
+}
+errors++;
+}
+for(const key1 in data5){
+if(!(func2.call(schema33.properties.costs.properties, key1))){
+const err62 = {instancePath:instancePath+"/costs",schemaPath:"#/properties/costs/additionalProperties",keyword:"additionalProperties",params:{additionalProperty: key1},message:"must NOT have additional properties"};
+if(vErrors === null){
+vErrors = [err62];
+}
+else {
+vErrors.push(err62);
+}
+errors++;
+}
+}
+if(data5.hq !== undefined){
+let data6 = data5.hq;
+if(!(((typeof data6 == "number") && (!(data6 % 1) && !isNaN(data6))) && (isFinite(data6)))){
+const err63 = {instancePath:instancePath+"/costs/hq",schemaPath:"#/properties/costs/properties/hq/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err63];
+}
+else {
+vErrors.push(err63);
+}
+errors++;
+}
+if((typeof data6 == "number") && (isFinite(data6))){
+if(data6 < 0 || isNaN(data6)){
+const err64 = {instancePath:instancePath+"/costs/hq",schemaPath:"#/properties/costs/properties/hq/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err64];
+}
+else {
+vErrors.push(err64);
+}
+errors++;
+}
+}
+}
+if(data5.rifleR !== undefined){
+let data7 = data5.rifleR;
+if(!(((typeof data7 == "number") && (!(data7 % 1) && !isNaN(data7))) && (isFinite(data7)))){
+const err65 = {instancePath:instancePath+"/costs/rifleR",schemaPath:"#/properties/costs/properties/rifleR/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err65];
+}
+else {
+vErrors.push(err65);
+}
+errors++;
+}
+if((typeof data7 == "number") && (isFinite(data7))){
+if(data7 < 0 || isNaN(data7)){
+const err66 = {instancePath:instancePath+"/costs/rifleR",schemaPath:"#/properties/costs/properties/rifleR/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err66];
+}
+else {
+vErrors.push(err66);
+}
+errors++;
+}
+}
+}
+if(data5.rifle !== undefined){
+let data8 = data5.rifle;
+if(!(((typeof data8 == "number") && (!(data8 % 1) && !isNaN(data8))) && (isFinite(data8)))){
+const err67 = {instancePath:instancePath+"/costs/rifle",schemaPath:"#/properties/costs/properties/rifle/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err67];
+}
+else {
+vErrors.push(err67);
+}
+errors++;
+}
+if((typeof data8 == "number") && (isFinite(data8))){
+if(data8 < 0 || isNaN(data8)){
+const err68 = {instancePath:instancePath+"/costs/rifle",schemaPath:"#/properties/costs/properties/rifle/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err68];
+}
+else {
+vErrors.push(err68);
+}
+errors++;
+}
+}
+}
+if(data5.barracks !== undefined){
+let data9 = data5.barracks;
+if(!(((typeof data9 == "number") && (!(data9 % 1) && !isNaN(data9))) && (isFinite(data9)))){
+const err69 = {instancePath:instancePath+"/costs/barracks",schemaPath:"#/properties/costs/properties/barracks/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err69];
+}
+else {
+vErrors.push(err69);
+}
+errors++;
+}
+if((typeof data9 == "number") && (isFinite(data9))){
+if(data9 < 0 || isNaN(data9)){
+const err70 = {instancePath:instancePath+"/costs/barracks",schemaPath:"#/properties/costs/properties/barracks/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err70];
+}
+else {
+vErrors.push(err70);
+}
+errors++;
+}
+}
+}
+if(data5.mgR !== undefined){
+let data10 = data5.mgR;
+if(!(((typeof data10 == "number") && (!(data10 % 1) && !isNaN(data10))) && (isFinite(data10)))){
+const err71 = {instancePath:instancePath+"/costs/mgR",schemaPath:"#/properties/costs/properties/mgR/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err71];
+}
+else {
+vErrors.push(err71);
+}
+errors++;
+}
+if((typeof data10 == "number") && (isFinite(data10))){
+if(data10 < 0 || isNaN(data10)){
+const err72 = {instancePath:instancePath+"/costs/mgR",schemaPath:"#/properties/costs/properties/mgR/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err72];
+}
+else {
+vErrors.push(err72);
+}
+errors++;
+}
+}
+}
+if(data5.mg !== undefined){
+let data11 = data5.mg;
+if(!(((typeof data11 == "number") && (!(data11 % 1) && !isNaN(data11))) && (isFinite(data11)))){
+const err73 = {instancePath:instancePath+"/costs/mg",schemaPath:"#/properties/costs/properties/mg/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err73];
+}
+else {
+vErrors.push(err73);
+}
+errors++;
+}
+if((typeof data11 == "number") && (isFinite(data11))){
+if(data11 < 0 || isNaN(data11)){
+const err74 = {instancePath:instancePath+"/costs/mg",schemaPath:"#/properties/costs/properties/mg/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err74];
+}
+else {
+vErrors.push(err74);
+}
+errors++;
+}
+}
+}
+if(data5.mortarR !== undefined){
+let data12 = data5.mortarR;
+if(!(((typeof data12 == "number") && (!(data12 % 1) && !isNaN(data12))) && (isFinite(data12)))){
+const err75 = {instancePath:instancePath+"/costs/mortarR",schemaPath:"#/properties/costs/properties/mortarR/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err75];
+}
+else {
+vErrors.push(err75);
+}
+errors++;
+}
+if((typeof data12 == "number") && (isFinite(data12))){
+if(data12 < 0 || isNaN(data12)){
+const err76 = {instancePath:instancePath+"/costs/mortarR",schemaPath:"#/properties/costs/properties/mortarR/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err76];
+}
+else {
+vErrors.push(err76);
+}
+errors++;
+}
+}
+}
+if(data5.mortar !== undefined){
+let data13 = data5.mortar;
+if(!(((typeof data13 == "number") && (!(data13 % 1) && !isNaN(data13))) && (isFinite(data13)))){
+const err77 = {instancePath:instancePath+"/costs/mortar",schemaPath:"#/properties/costs/properties/mortar/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err77];
+}
+else {
+vErrors.push(err77);
+}
+errors++;
+}
+if((typeof data13 == "number") && (isFinite(data13))){
+if(data13 < 0 || isNaN(data13)){
+const err78 = {instancePath:instancePath+"/costs/mortar",schemaPath:"#/properties/costs/properties/mortar/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err78];
+}
+else {
+vErrors.push(err78);
+}
+errors++;
+}
+}
+}
+if(data5.gunR !== undefined){
+let data14 = data5.gunR;
+if(!(((typeof data14 == "number") && (!(data14 % 1) && !isNaN(data14))) && (isFinite(data14)))){
+const err79 = {instancePath:instancePath+"/costs/gunR",schemaPath:"#/properties/costs/properties/gunR/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err79];
+}
+else {
+vErrors.push(err79);
+}
+errors++;
+}
+if((typeof data14 == "number") && (isFinite(data14))){
+if(data14 < 0 || isNaN(data14)){
+const err80 = {instancePath:instancePath+"/costs/gunR",schemaPath:"#/properties/costs/properties/gunR/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err80];
+}
+else {
+vErrors.push(err80);
+}
+errors++;
+}
+}
+}
+if(data5.gun !== undefined){
+let data15 = data5.gun;
+if(!(((typeof data15 == "number") && (!(data15 % 1) && !isNaN(data15))) && (isFinite(data15)))){
+const err81 = {instancePath:instancePath+"/costs/gun",schemaPath:"#/properties/costs/properties/gun/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err81];
+}
+else {
+vErrors.push(err81);
+}
+errors++;
+}
+if((typeof data15 == "number") && (isFinite(data15))){
+if(data15 < 0 || isNaN(data15)){
+const err82 = {instancePath:instancePath+"/costs/gun",schemaPath:"#/properties/costs/properties/gun/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err82];
+}
+else {
+vErrors.push(err82);
+}
+errors++;
+}
+}
+}
+if(data5.atR !== undefined){
+let data16 = data5.atR;
+if(!(((typeof data16 == "number") && (!(data16 % 1) && !isNaN(data16))) && (isFinite(data16)))){
+const err83 = {instancePath:instancePath+"/costs/atR",schemaPath:"#/properties/costs/properties/atR/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err83];
+}
+else {
+vErrors.push(err83);
+}
+errors++;
+}
+if((typeof data16 == "number") && (isFinite(data16))){
+if(data16 < 0 || isNaN(data16)){
+const err84 = {instancePath:instancePath+"/costs/atR",schemaPath:"#/properties/costs/properties/atR/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err84];
+}
+else {
+vErrors.push(err84);
+}
+errors++;
+}
+}
+}
+if(data5.at !== undefined){
+let data17 = data5.at;
+if(!(((typeof data17 == "number") && (!(data17 % 1) && !isNaN(data17))) && (isFinite(data17)))){
+const err85 = {instancePath:instancePath+"/costs/at",schemaPath:"#/properties/costs/properties/at/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err85];
+}
+else {
+vErrors.push(err85);
+}
+errors++;
+}
+if((typeof data17 == "number") && (isFinite(data17))){
+if(data17 < 0 || isNaN(data17)){
+const err86 = {instancePath:instancePath+"/costs/at",schemaPath:"#/properties/costs/properties/at/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err86];
+}
+else {
+vErrors.push(err86);
+}
+errors++;
+}
+}
+}
+if(data5.factory !== undefined){
+let data18 = data5.factory;
+if(!(((typeof data18 == "number") && (!(data18 % 1) && !isNaN(data18))) && (isFinite(data18)))){
+const err87 = {instancePath:instancePath+"/costs/factory",schemaPath:"#/properties/costs/properties/factory/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err87];
+}
+else {
+vErrors.push(err87);
+}
+errors++;
+}
+if((typeof data18 == "number") && (isFinite(data18))){
+if(data18 < 0 || isNaN(data18)){
+const err88 = {instancePath:instancePath+"/costs/factory",schemaPath:"#/properties/costs/properties/factory/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err88];
+}
+else {
+vErrors.push(err88);
+}
+errors++;
+}
+}
+}
+if(data5.carR !== undefined){
+let data19 = data5.carR;
+if(!(((typeof data19 == "number") && (!(data19 % 1) && !isNaN(data19))) && (isFinite(data19)))){
+const err89 = {instancePath:instancePath+"/costs/carR",schemaPath:"#/properties/costs/properties/carR/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err89];
+}
+else {
+vErrors.push(err89);
+}
+errors++;
+}
+if((typeof data19 == "number") && (isFinite(data19))){
+if(data19 < 0 || isNaN(data19)){
+const err90 = {instancePath:instancePath+"/costs/carR",schemaPath:"#/properties/costs/properties/carR/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err90];
+}
+else {
+vErrors.push(err90);
+}
+errors++;
+}
+}
+}
+if(data5.car !== undefined){
+let data20 = data5.car;
+if(!(((typeof data20 == "number") && (!(data20 % 1) && !isNaN(data20))) && (isFinite(data20)))){
+const err91 = {instancePath:instancePath+"/costs/car",schemaPath:"#/properties/costs/properties/car/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err91];
+}
+else {
+vErrors.push(err91);
+}
+errors++;
+}
+if((typeof data20 == "number") && (isFinite(data20))){
+if(data20 < 0 || isNaN(data20)){
+const err92 = {instancePath:instancePath+"/costs/car",schemaPath:"#/properties/costs/properties/car/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err92];
+}
+else {
+vErrors.push(err92);
+}
+errors++;
+}
+}
+}
+if(data5.tankR !== undefined){
+let data21 = data5.tankR;
+if(!(((typeof data21 == "number") && (!(data21 % 1) && !isNaN(data21))) && (isFinite(data21)))){
+const err93 = {instancePath:instancePath+"/costs/tankR",schemaPath:"#/properties/costs/properties/tankR/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err93];
+}
+else {
+vErrors.push(err93);
+}
+errors++;
+}
+if((typeof data21 == "number") && (isFinite(data21))){
+if(data21 < 0 || isNaN(data21)){
+const err94 = {instancePath:instancePath+"/costs/tankR",schemaPath:"#/properties/costs/properties/tankR/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err94];
+}
+else {
+vErrors.push(err94);
+}
+errors++;
+}
+}
+}
+if(data5.tank !== undefined){
+let data22 = data5.tank;
+if(!(((typeof data22 == "number") && (!(data22 % 1) && !isNaN(data22))) && (isFinite(data22)))){
+const err95 = {instancePath:instancePath+"/costs/tank",schemaPath:"#/properties/costs/properties/tank/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err95];
+}
+else {
+vErrors.push(err95);
+}
+errors++;
+}
+if((typeof data22 == "number") && (isFinite(data22))){
+if(data22 < 0 || isNaN(data22)){
+const err96 = {instancePath:instancePath+"/costs/tank",schemaPath:"#/properties/costs/properties/tank/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err96];
+}
+else {
+vErrors.push(err96);
+}
+errors++;
+}
+}
+}
+if(data5.heavyR !== undefined){
+let data23 = data5.heavyR;
+if(!(((typeof data23 == "number") && (!(data23 % 1) && !isNaN(data23))) && (isFinite(data23)))){
+const err97 = {instancePath:instancePath+"/costs/heavyR",schemaPath:"#/properties/costs/properties/heavyR/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err97];
+}
+else {
+vErrors.push(err97);
+}
+errors++;
+}
+if((typeof data23 == "number") && (isFinite(data23))){
+if(data23 < 0 || isNaN(data23)){
+const err98 = {instancePath:instancePath+"/costs/heavyR",schemaPath:"#/properties/costs/properties/heavyR/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err98];
+}
+else {
+vErrors.push(err98);
+}
+errors++;
+}
+}
+}
+if(data5.heavy !== undefined){
+let data24 = data5.heavy;
+if(!(((typeof data24 == "number") && (!(data24 % 1) && !isNaN(data24))) && (isFinite(data24)))){
+const err99 = {instancePath:instancePath+"/costs/heavy",schemaPath:"#/properties/costs/properties/heavy/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err99];
+}
+else {
+vErrors.push(err99);
+}
+errors++;
+}
+if((typeof data24 == "number") && (isFinite(data24))){
+if(data24 < 0 || isNaN(data24)){
+const err100 = {instancePath:instancePath+"/costs/heavy",schemaPath:"#/properties/costs/properties/heavy/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err100];
+}
+else {
+vErrors.push(err100);
+}
+errors++;
+}
+}
+}
+if(data5.destroyerR !== undefined){
+let data25 = data5.destroyerR;
+if(!(((typeof data25 == "number") && (!(data25 % 1) && !isNaN(data25))) && (isFinite(data25)))){
+const err101 = {instancePath:instancePath+"/costs/destroyerR",schemaPath:"#/properties/costs/properties/destroyerR/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err101];
+}
+else {
+vErrors.push(err101);
+}
+errors++;
+}
+if((typeof data25 == "number") && (isFinite(data25))){
+if(data25 < 0 || isNaN(data25)){
+const err102 = {instancePath:instancePath+"/costs/destroyerR",schemaPath:"#/properties/costs/properties/destroyerR/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err102];
+}
+else {
+vErrors.push(err102);
+}
+errors++;
+}
+}
+}
+if(data5.destroyer !== undefined){
+let data26 = data5.destroyer;
+if(!(((typeof data26 == "number") && (!(data26 % 1) && !isNaN(data26))) && (isFinite(data26)))){
+const err103 = {instancePath:instancePath+"/costs/destroyer",schemaPath:"#/properties/costs/properties/destroyer/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err103];
+}
+else {
+vErrors.push(err103);
+}
+errors++;
+}
+if((typeof data26 == "number") && (isFinite(data26))){
+if(data26 < 0 || isNaN(data26)){
+const err104 = {instancePath:instancePath+"/costs/destroyer",schemaPath:"#/properties/costs/properties/destroyer/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err104];
+}
+else {
+vErrors.push(err104);
+}
+errors++;
+}
+}
+}
+if(data5.airfield !== undefined){
+let data27 = data5.airfield;
+if(!(((typeof data27 == "number") && (!(data27 % 1) && !isNaN(data27))) && (isFinite(data27)))){
+const err105 = {instancePath:instancePath+"/costs/airfield",schemaPath:"#/properties/costs/properties/airfield/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err105];
+}
+else {
+vErrors.push(err105);
+}
+errors++;
+}
+if((typeof data27 == "number") && (isFinite(data27))){
+if(data27 < 0 || isNaN(data27)){
+const err106 = {instancePath:instancePath+"/costs/airfield",schemaPath:"#/properties/costs/properties/airfield/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err106];
+}
+else {
+vErrors.push(err106);
+}
+errors++;
+}
+}
+}
+if(data5.fighterR !== undefined){
+let data28 = data5.fighterR;
+if(!(((typeof data28 == "number") && (!(data28 % 1) && !isNaN(data28))) && (isFinite(data28)))){
+const err107 = {instancePath:instancePath+"/costs/fighterR",schemaPath:"#/properties/costs/properties/fighterR/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err107];
+}
+else {
+vErrors.push(err107);
+}
+errors++;
+}
+if((typeof data28 == "number") && (isFinite(data28))){
+if(data28 < 0 || isNaN(data28)){
+const err108 = {instancePath:instancePath+"/costs/fighterR",schemaPath:"#/properties/costs/properties/fighterR/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err108];
+}
+else {
+vErrors.push(err108);
+}
+errors++;
+}
+}
+}
+if(data5.fighter !== undefined){
+let data29 = data5.fighter;
+if(!(((typeof data29 == "number") && (!(data29 % 1) && !isNaN(data29))) && (isFinite(data29)))){
+const err109 = {instancePath:instancePath+"/costs/fighter",schemaPath:"#/properties/costs/properties/fighter/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err109];
+}
+else {
+vErrors.push(err109);
+}
+errors++;
+}
+if((typeof data29 == "number") && (isFinite(data29))){
+if(data29 < 0 || isNaN(data29)){
+const err110 = {instancePath:instancePath+"/costs/fighter",schemaPath:"#/properties/costs/properties/fighter/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err110];
+}
+else {
+vErrors.push(err110);
+}
+errors++;
+}
+}
+}
+if(data5.attackerR !== undefined){
+let data30 = data5.attackerR;
+if(!(((typeof data30 == "number") && (!(data30 % 1) && !isNaN(data30))) && (isFinite(data30)))){
+const err111 = {instancePath:instancePath+"/costs/attackerR",schemaPath:"#/properties/costs/properties/attackerR/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err111];
+}
+else {
+vErrors.push(err111);
+}
+errors++;
+}
+if((typeof data30 == "number") && (isFinite(data30))){
+if(data30 < 0 || isNaN(data30)){
+const err112 = {instancePath:instancePath+"/costs/attackerR",schemaPath:"#/properties/costs/properties/attackerR/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err112];
+}
+else {
+vErrors.push(err112);
+}
+errors++;
+}
+}
+}
+if(data5.attacker !== undefined){
+let data31 = data5.attacker;
+if(!(((typeof data31 == "number") && (!(data31 % 1) && !isNaN(data31))) && (isFinite(data31)))){
+const err113 = {instancePath:instancePath+"/costs/attacker",schemaPath:"#/properties/costs/properties/attacker/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err113];
+}
+else {
+vErrors.push(err113);
+}
+errors++;
+}
+if((typeof data31 == "number") && (isFinite(data31))){
+if(data31 < 0 || isNaN(data31)){
+const err114 = {instancePath:instancePath+"/costs/attacker",schemaPath:"#/properties/costs/properties/attacker/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err114];
+}
+else {
+vErrors.push(err114);
+}
+errors++;
+}
+}
+}
+if(data5.bomberR !== undefined){
+let data32 = data5.bomberR;
+if(!(((typeof data32 == "number") && (!(data32 % 1) && !isNaN(data32))) && (isFinite(data32)))){
+const err115 = {instancePath:instancePath+"/costs/bomberR",schemaPath:"#/properties/costs/properties/bomberR/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err115];
+}
+else {
+vErrors.push(err115);
+}
+errors++;
+}
+if((typeof data32 == "number") && (isFinite(data32))){
+if(data32 < 0 || isNaN(data32)){
+const err116 = {instancePath:instancePath+"/costs/bomberR",schemaPath:"#/properties/costs/properties/bomberR/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err116];
+}
+else {
+vErrors.push(err116);
+}
+errors++;
+}
+}
+}
+if(data5.bomber !== undefined){
+let data33 = data5.bomber;
+if(!(((typeof data33 == "number") && (!(data33 % 1) && !isNaN(data33))) && (isFinite(data33)))){
+const err117 = {instancePath:instancePath+"/costs/bomber",schemaPath:"#/properties/costs/properties/bomber/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err117];
+}
+else {
+vErrors.push(err117);
+}
+errors++;
+}
+if((typeof data33 == "number") && (isFinite(data33))){
+if(data33 < 0 || isNaN(data33)){
+const err118 = {instancePath:instancePath+"/costs/bomber",schemaPath:"#/properties/costs/properties/bomber/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err118];
+}
+else {
+vErrors.push(err118);
+}
+errors++;
+}
+}
+}
+}
+else {
+const err119 = {instancePath:instancePath+"/costs",schemaPath:"#/properties/costs/type",keyword:"type",params:{type: "object"},message:"must be object"};
+if(vErrors === null){
+vErrors = [err119];
+}
+else {
+vErrors.push(err119);
+}
+errors++;
+}
+}
+if(data.units !== undefined){
+let data34 = data.units;
+if(data34 && typeof data34 == "object" && !Array.isArray(data34)){
+if(data34.rifle === undefined){
+const err120 = {instancePath:instancePath+"/units",schemaPath:"#/properties/units/required",keyword:"required",params:{missingProperty: "rifle"},message:"must have required property '"+"rifle"+"'"};
+if(vErrors === null){
+vErrors = [err120];
+}
+else {
+vErrors.push(err120);
+}
+errors++;
+}
+if(data34.mg === undefined){
+const err121 = {instancePath:instancePath+"/units",schemaPath:"#/properties/units/required",keyword:"required",params:{missingProperty: "mg"},message:"must have required property '"+"mg"+"'"};
+if(vErrors === null){
+vErrors = [err121];
+}
+else {
+vErrors.push(err121);
+}
+errors++;
+}
+if(data34.mortar === undefined){
+const err122 = {instancePath:instancePath+"/units",schemaPath:"#/properties/units/required",keyword:"required",params:{missingProperty: "mortar"},message:"must have required property '"+"mortar"+"'"};
+if(vErrors === null){
+vErrors = [err122];
+}
+else {
+vErrors.push(err122);
+}
+errors++;
+}
+if(data34.gun === undefined){
+const err123 = {instancePath:instancePath+"/units",schemaPath:"#/properties/units/required",keyword:"required",params:{missingProperty: "gun"},message:"must have required property '"+"gun"+"'"};
+if(vErrors === null){
+vErrors = [err123];
+}
+else {
+vErrors.push(err123);
+}
+errors++;
+}
+if(data34.at === undefined){
+const err124 = {instancePath:instancePath+"/units",schemaPath:"#/properties/units/required",keyword:"required",params:{missingProperty: "at"},message:"must have required property '"+"at"+"'"};
+if(vErrors === null){
+vErrors = [err124];
+}
+else {
+vErrors.push(err124);
+}
+errors++;
+}
+if(data34.car === undefined){
+const err125 = {instancePath:instancePath+"/units",schemaPath:"#/properties/units/required",keyword:"required",params:{missingProperty: "car"},message:"must have required property '"+"car"+"'"};
+if(vErrors === null){
+vErrors = [err125];
+}
+else {
+vErrors.push(err125);
+}
+errors++;
+}
+if(data34.tank === undefined){
+const err126 = {instancePath:instancePath+"/units",schemaPath:"#/properties/units/required",keyword:"required",params:{missingProperty: "tank"},message:"must have required property '"+"tank"+"'"};
+if(vErrors === null){
+vErrors = [err126];
+}
+else {
+vErrors.push(err126);
+}
+errors++;
+}
+if(data34.heavy === undefined){
+const err127 = {instancePath:instancePath+"/units",schemaPath:"#/properties/units/required",keyword:"required",params:{missingProperty: "heavy"},message:"must have required property '"+"heavy"+"'"};
+if(vErrors === null){
+vErrors = [err127];
+}
+else {
+vErrors.push(err127);
+}
+errors++;
+}
+if(data34.destroyer === undefined){
+const err128 = {instancePath:instancePath+"/units",schemaPath:"#/properties/units/required",keyword:"required",params:{missingProperty: "destroyer"},message:"must have required property '"+"destroyer"+"'"};
+if(vErrors === null){
+vErrors = [err128];
+}
+else {
+vErrors.push(err128);
+}
+errors++;
+}
+if(data34.fighter === undefined){
+const err129 = {instancePath:instancePath+"/units",schemaPath:"#/properties/units/required",keyword:"required",params:{missingProperty: "fighter"},message:"must have required property '"+"fighter"+"'"};
+if(vErrors === null){
+vErrors = [err129];
+}
+else {
+vErrors.push(err129);
+}
+errors++;
+}
+if(data34.attacker === undefined){
+const err130 = {instancePath:instancePath+"/units",schemaPath:"#/properties/units/required",keyword:"required",params:{missingProperty: "attacker"},message:"must have required property '"+"attacker"+"'"};
+if(vErrors === null){
+vErrors = [err130];
+}
+else {
+vErrors.push(err130);
+}
+errors++;
+}
+if(data34.bomber === undefined){
+const err131 = {instancePath:instancePath+"/units",schemaPath:"#/properties/units/required",keyword:"required",params:{missingProperty: "bomber"},message:"must have required property '"+"bomber"+"'"};
+if(vErrors === null){
+vErrors = [err131];
+}
+else {
+vErrors.push(err131);
+}
+errors++;
+}
+for(const key2 in data34){
+if(!(func2.call(schema33.properties.units.properties, key2))){
+const err132 = {instancePath:instancePath+"/units",schemaPath:"#/properties/units/additionalProperties",keyword:"additionalProperties",params:{additionalProperty: key2},message:"must NOT have additional properties"};
+if(vErrors === null){
+vErrors = [err132];
+}
+else {
+vErrors.push(err132);
+}
+errors++;
+}
+}
+if(data34.rifle !== undefined){
+let data35 = data34.rifle;
+if(data35 && typeof data35 == "object" && !Array.isArray(data35)){
+if(data35.hp === undefined){
+const err133 = {instancePath:instancePath+"/units/rifle",schemaPath:"#/properties/units/properties/rifle/required",keyword:"required",params:{missingProperty: "hp"},message:"must have required property '"+"hp"+"'"};
+if(vErrors === null){
+vErrors = [err133];
+}
+else {
+vErrors.push(err133);
+}
+errors++;
+}
+if(data35.damage === undefined){
+const err134 = {instancePath:instancePath+"/units/rifle",schemaPath:"#/properties/units/properties/rifle/required",keyword:"required",params:{missingProperty: "damage"},message:"must have required property '"+"damage"+"'"};
+if(vErrors === null){
+vErrors = [err134];
+}
+else {
+vErrors.push(err134);
+}
+errors++;
+}
+if(data35.cooldown === undefined){
+const err135 = {instancePath:instancePath+"/units/rifle",schemaPath:"#/properties/units/properties/rifle/required",keyword:"required",params:{missingProperty: "cooldown"},message:"must have required property '"+"cooldown"+"'"};
+if(vErrors === null){
+vErrors = [err135];
+}
+else {
+vErrors.push(err135);
+}
+errors++;
+}
+if(data35.range === undefined){
+const err136 = {instancePath:instancePath+"/units/rifle",schemaPath:"#/properties/units/properties/rifle/required",keyword:"required",params:{missingProperty: "range"},message:"must have required property '"+"range"+"'"};
+if(vErrors === null){
+vErrors = [err136];
+}
+else {
+vErrors.push(err136);
+}
+errors++;
+}
+if(data35.arc === undefined){
+const err137 = {instancePath:instancePath+"/units/rifle",schemaPath:"#/properties/units/properties/rifle/required",keyword:"required",params:{missingProperty: "arc"},message:"must have required property '"+"arc"+"'"};
+if(vErrors === null){
+vErrors = [err137];
+}
+else {
+vErrors.push(err137);
+}
+errors++;
+}
+if(data35.speed === undefined){
+const err138 = {instancePath:instancePath+"/units/rifle",schemaPath:"#/properties/units/properties/rifle/required",keyword:"required",params:{missingProperty: "speed"},message:"must have required property '"+"speed"+"'"};
+if(vErrors === null){
+vErrors = [err138];
+}
+else {
+vErrors.push(err138);
+}
+errors++;
+}
+if(data35.cost === undefined){
+const err139 = {instancePath:instancePath+"/units/rifle",schemaPath:"#/properties/units/properties/rifle/required",keyword:"required",params:{missingProperty: "cost"},message:"must have required property '"+"cost"+"'"};
+if(vErrors === null){
+vErrors = [err139];
+}
+else {
+vErrors.push(err139);
+}
+errors++;
+}
+if(data35.splash === undefined){
+const err140 = {instancePath:instancePath+"/units/rifle",schemaPath:"#/properties/units/properties/rifle/required",keyword:"required",params:{missingProperty: "splash"},message:"must have required property '"+"splash"+"'"};
+if(vErrors === null){
+vErrors = [err140];
+}
+else {
+vErrors.push(err140);
+}
+errors++;
+}
+if(data35.modifiers === undefined){
+const err141 = {instancePath:instancePath+"/units/rifle",schemaPath:"#/properties/units/properties/rifle/required",keyword:"required",params:{missingProperty: "modifiers"},message:"must have required property '"+"modifiers"+"'"};
+if(vErrors === null){
+vErrors = [err141];
+}
+else {
+vErrors.push(err141);
+}
+errors++;
+}
+if(data35.category === undefined){
+const err142 = {instancePath:instancePath+"/units/rifle",schemaPath:"#/properties/units/properties/rifle/required",keyword:"required",params:{missingProperty: "category"},message:"must have required property '"+"category"+"'"};
+if(vErrors === null){
+vErrors = [err142];
+}
+else {
+vErrors.push(err142);
+}
+errors++;
+}
+for(const key3 in data35){
+if(!(func2.call(schema33.properties.units.properties.rifle.properties, key3))){
+const err143 = {instancePath:instancePath+"/units/rifle",schemaPath:"#/properties/units/properties/rifle/additionalProperties",keyword:"additionalProperties",params:{additionalProperty: key3},message:"must NOT have additional properties"};
+if(vErrors === null){
+vErrors = [err143];
+}
+else {
+vErrors.push(err143);
+}
+errors++;
+}
+}
+if(data35.hp !== undefined){
+let data36 = data35.hp;
+if(!(((typeof data36 == "number") && (!(data36 % 1) && !isNaN(data36))) && (isFinite(data36)))){
+const err144 = {instancePath:instancePath+"/units/rifle/hp",schemaPath:"#/properties/units/properties/rifle/properties/hp/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err144];
+}
+else {
+vErrors.push(err144);
+}
+errors++;
+}
+if((typeof data36 == "number") && (isFinite(data36))){
+if(data36 < 0 || isNaN(data36)){
+const err145 = {instancePath:instancePath+"/units/rifle/hp",schemaPath:"#/properties/units/properties/rifle/properties/hp/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err145];
+}
+else {
+vErrors.push(err145);
+}
+errors++;
+}
+}
+}
+if(data35.damage !== undefined){
+let data37 = data35.damage;
+if(!(((typeof data37 == "number") && (!(data37 % 1) && !isNaN(data37))) && (isFinite(data37)))){
+const err146 = {instancePath:instancePath+"/units/rifle/damage",schemaPath:"#/properties/units/properties/rifle/properties/damage/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err146];
+}
+else {
+vErrors.push(err146);
+}
+errors++;
+}
+if((typeof data37 == "number") && (isFinite(data37))){
+if(data37 < 0 || isNaN(data37)){
+const err147 = {instancePath:instancePath+"/units/rifle/damage",schemaPath:"#/properties/units/properties/rifle/properties/damage/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err147];
+}
+else {
+vErrors.push(err147);
+}
+errors++;
+}
+}
+}
+if(data35.cooldown !== undefined){
+let data38 = data35.cooldown;
+if((typeof data38 == "number") && (isFinite(data38))){
+if(data38 < 0 || isNaN(data38)){
+const err148 = {instancePath:instancePath+"/units/rifle/cooldown",schemaPath:"#/properties/units/properties/rifle/properties/cooldown/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err148];
+}
+else {
+vErrors.push(err148);
+}
+errors++;
+}
+}
+else {
+const err149 = {instancePath:instancePath+"/units/rifle/cooldown",schemaPath:"#/properties/units/properties/rifle/properties/cooldown/type",keyword:"type",params:{type: "number"},message:"must be number"};
+if(vErrors === null){
+vErrors = [err149];
+}
+else {
+vErrors.push(err149);
+}
+errors++;
+}
+}
+if(data35.range !== undefined){
+let data39 = data35.range;
+if(!(((typeof data39 == "number") && (!(data39 % 1) && !isNaN(data39))) && (isFinite(data39)))){
+const err150 = {instancePath:instancePath+"/units/rifle/range",schemaPath:"#/properties/units/properties/rifle/properties/range/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err150];
+}
+else {
+vErrors.push(err150);
+}
+errors++;
+}
+if((typeof data39 == "number") && (isFinite(data39))){
+if(data39 < 0 || isNaN(data39)){
+const err151 = {instancePath:instancePath+"/units/rifle/range",schemaPath:"#/properties/units/properties/rifle/properties/range/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err151];
+}
+else {
+vErrors.push(err151);
+}
+errors++;
+}
+}
+}
+if(data35.arc !== undefined){
+let data40 = data35.arc;
+if(!(((typeof data40 == "number") && (!(data40 % 1) && !isNaN(data40))) && (isFinite(data40)))){
+const err152 = {instancePath:instancePath+"/units/rifle/arc",schemaPath:"#/properties/units/properties/rifle/properties/arc/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err152];
+}
+else {
+vErrors.push(err152);
+}
+errors++;
+}
+if((typeof data40 == "number") && (isFinite(data40))){
+if(data40 < 0 || isNaN(data40)){
+const err153 = {instancePath:instancePath+"/units/rifle/arc",schemaPath:"#/properties/units/properties/rifle/properties/arc/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err153];
+}
+else {
+vErrors.push(err153);
+}
+errors++;
+}
+}
+}
+if(data35.speed !== undefined){
+let data41 = data35.speed;
+if((typeof data41 == "number") && (isFinite(data41))){
+if(data41 < 0 || isNaN(data41)){
+const err154 = {instancePath:instancePath+"/units/rifle/speed",schemaPath:"#/properties/units/properties/rifle/properties/speed/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err154];
+}
+else {
+vErrors.push(err154);
+}
+errors++;
+}
+}
+else {
+const err155 = {instancePath:instancePath+"/units/rifle/speed",schemaPath:"#/properties/units/properties/rifle/properties/speed/type",keyword:"type",params:{type: "number"},message:"must be number"};
+if(vErrors === null){
+vErrors = [err155];
+}
+else {
+vErrors.push(err155);
+}
+errors++;
+}
+}
+if(data35.cost !== undefined){
+let data42 = data35.cost;
+if(!(((typeof data42 == "number") && (!(data42 % 1) && !isNaN(data42))) && (isFinite(data42)))){
+const err156 = {instancePath:instancePath+"/units/rifle/cost",schemaPath:"#/properties/units/properties/rifle/properties/cost/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err156];
+}
+else {
+vErrors.push(err156);
+}
+errors++;
+}
+if((typeof data42 == "number") && (isFinite(data42))){
+if(data42 < 0 || isNaN(data42)){
+const err157 = {instancePath:instancePath+"/units/rifle/cost",schemaPath:"#/properties/units/properties/rifle/properties/cost/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err157];
+}
+else {
+vErrors.push(err157);
+}
+errors++;
+}
+}
+}
+if(data35.splash !== undefined){
+let data43 = data35.splash;
+if(!(((typeof data43 == "number") && (!(data43 % 1) && !isNaN(data43))) && (isFinite(data43)))){
+const err158 = {instancePath:instancePath+"/units/rifle/splash",schemaPath:"#/properties/units/properties/rifle/properties/splash/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err158];
+}
+else {
+vErrors.push(err158);
+}
+errors++;
+}
+if((typeof data43 == "number") && (isFinite(data43))){
+if(data43 < 0 || isNaN(data43)){
+const err159 = {instancePath:instancePath+"/units/rifle/splash",schemaPath:"#/properties/units/properties/rifle/properties/splash/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err159];
+}
+else {
+vErrors.push(err159);
+}
+errors++;
+}
+}
+}
+if(data35.modifiers !== undefined){
+let data44 = data35.modifiers;
+if(data44 && typeof data44 == "object" && !Array.isArray(data44)){
+if(data44.infantry === undefined){
+const err160 = {instancePath:instancePath+"/units/rifle/modifiers",schemaPath:"#/properties/units/properties/rifle/properties/modifiers/required",keyword:"required",params:{missingProperty: "infantry"},message:"must have required property '"+"infantry"+"'"};
+if(vErrors === null){
+vErrors = [err160];
+}
+else {
+vErrors.push(err160);
+}
+errors++;
+}
+if(data44.armor === undefined){
+const err161 = {instancePath:instancePath+"/units/rifle/modifiers",schemaPath:"#/properties/units/properties/rifle/properties/modifiers/required",keyword:"required",params:{missingProperty: "armor"},message:"must have required property '"+"armor"+"'"};
+if(vErrors === null){
+vErrors = [err161];
+}
+else {
+vErrors.push(err161);
+}
+errors++;
+}
+if(data44.aircraft === undefined){
+const err162 = {instancePath:instancePath+"/units/rifle/modifiers",schemaPath:"#/properties/units/properties/rifle/properties/modifiers/required",keyword:"required",params:{missingProperty: "aircraft"},message:"must have required property '"+"aircraft"+"'"};
+if(vErrors === null){
+vErrors = [err162];
+}
+else {
+vErrors.push(err162);
+}
+errors++;
+}
+for(const key4 in data44){
+if(!(((key4 === "infantry") || (key4 === "armor")) || (key4 === "aircraft"))){
+const err163 = {instancePath:instancePath+"/units/rifle/modifiers",schemaPath:"#/properties/units/properties/rifle/properties/modifiers/additionalProperties",keyword:"additionalProperties",params:{additionalProperty: key4},message:"must NOT have additional properties"};
+if(vErrors === null){
+vErrors = [err163];
+}
+else {
+vErrors.push(err163);
+}
+errors++;
+}
+}
+if(data44.infantry !== undefined){
+let data45 = data44.infantry;
+if(!(((typeof data45 == "number") && (!(data45 % 1) && !isNaN(data45))) && (isFinite(data45)))){
+const err164 = {instancePath:instancePath+"/units/rifle/modifiers/infantry",schemaPath:"#/properties/units/properties/rifle/properties/modifiers/properties/infantry/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err164];
+}
+else {
+vErrors.push(err164);
+}
+errors++;
+}
+if((typeof data45 == "number") && (isFinite(data45))){
+if(data45 < 0 || isNaN(data45)){
+const err165 = {instancePath:instancePath+"/units/rifle/modifiers/infantry",schemaPath:"#/properties/units/properties/rifle/properties/modifiers/properties/infantry/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err165];
+}
+else {
+vErrors.push(err165);
+}
+errors++;
+}
+}
+}
+if(data44.armor !== undefined){
+let data46 = data44.armor;
+if((typeof data46 == "number") && (isFinite(data46))){
+if(data46 < 0 || isNaN(data46)){
+const err166 = {instancePath:instancePath+"/units/rifle/modifiers/armor",schemaPath:"#/properties/units/properties/rifle/properties/modifiers/properties/armor/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err166];
+}
+else {
+vErrors.push(err166);
+}
+errors++;
+}
+}
+else {
+const err167 = {instancePath:instancePath+"/units/rifle/modifiers/armor",schemaPath:"#/properties/units/properties/rifle/properties/modifiers/properties/armor/type",keyword:"type",params:{type: "number"},message:"must be number"};
+if(vErrors === null){
+vErrors = [err167];
+}
+else {
+vErrors.push(err167);
+}
+errors++;
+}
+}
+if(data44.aircraft !== undefined){
+let data47 = data44.aircraft;
+if((typeof data47 == "number") && (isFinite(data47))){
+if(data47 < 0 || isNaN(data47)){
+const err168 = {instancePath:instancePath+"/units/rifle/modifiers/aircraft",schemaPath:"#/properties/units/properties/rifle/properties/modifiers/properties/aircraft/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err168];
+}
+else {
+vErrors.push(err168);
+}
+errors++;
+}
+}
+else {
+const err169 = {instancePath:instancePath+"/units/rifle/modifiers/aircraft",schemaPath:"#/properties/units/properties/rifle/properties/modifiers/properties/aircraft/type",keyword:"type",params:{type: "number"},message:"must be number"};
+if(vErrors === null){
+vErrors = [err169];
+}
+else {
+vErrors.push(err169);
+}
+errors++;
+}
+}
+}
+else {
+const err170 = {instancePath:instancePath+"/units/rifle/modifiers",schemaPath:"#/properties/units/properties/rifle/properties/modifiers/type",keyword:"type",params:{type: "object"},message:"must be object"};
+if(vErrors === null){
+vErrors = [err170];
+}
+else {
+vErrors.push(err170);
+}
+errors++;
+}
+}
+if(data35.category !== undefined){
+let data48 = data35.category;
+if(typeof data48 === "string"){
+if(func4(data48) < 1){
+const err171 = {instancePath:instancePath+"/units/rifle/category",schemaPath:"#/properties/units/properties/rifle/properties/category/minLength",keyword:"minLength",params:{limit: 1},message:"must NOT have fewer than 1 characters"};
+if(vErrors === null){
+vErrors = [err171];
+}
+else {
+vErrors.push(err171);
+}
+errors++;
+}
+}
+else {
+const err172 = {instancePath:instancePath+"/units/rifle/category",schemaPath:"#/properties/units/properties/rifle/properties/category/type",keyword:"type",params:{type: "string"},message:"must be string"};
+if(vErrors === null){
+vErrors = [err172];
+}
+else {
+vErrors.push(err172);
+}
+errors++;
+}
+}
+}
+else {
+const err173 = {instancePath:instancePath+"/units/rifle",schemaPath:"#/properties/units/properties/rifle/type",keyword:"type",params:{type: "object"},message:"must be object"};
+if(vErrors === null){
+vErrors = [err173];
+}
+else {
+vErrors.push(err173);
+}
+errors++;
+}
+}
+if(data34.mg !== undefined){
+let data49 = data34.mg;
+if(data49 && typeof data49 == "object" && !Array.isArray(data49)){
+if(data49.hp === undefined){
+const err174 = {instancePath:instancePath+"/units/mg",schemaPath:"#/properties/units/properties/mg/required",keyword:"required",params:{missingProperty: "hp"},message:"must have required property '"+"hp"+"'"};
+if(vErrors === null){
+vErrors = [err174];
+}
+else {
+vErrors.push(err174);
+}
+errors++;
+}
+if(data49.damage === undefined){
+const err175 = {instancePath:instancePath+"/units/mg",schemaPath:"#/properties/units/properties/mg/required",keyword:"required",params:{missingProperty: "damage"},message:"must have required property '"+"damage"+"'"};
+if(vErrors === null){
+vErrors = [err175];
+}
+else {
+vErrors.push(err175);
+}
+errors++;
+}
+if(data49.cooldown === undefined){
+const err176 = {instancePath:instancePath+"/units/mg",schemaPath:"#/properties/units/properties/mg/required",keyword:"required",params:{missingProperty: "cooldown"},message:"must have required property '"+"cooldown"+"'"};
+if(vErrors === null){
+vErrors = [err176];
+}
+else {
+vErrors.push(err176);
+}
+errors++;
+}
+if(data49.range === undefined){
+const err177 = {instancePath:instancePath+"/units/mg",schemaPath:"#/properties/units/properties/mg/required",keyword:"required",params:{missingProperty: "range"},message:"must have required property '"+"range"+"'"};
+if(vErrors === null){
+vErrors = [err177];
+}
+else {
+vErrors.push(err177);
+}
+errors++;
+}
+if(data49.arc === undefined){
+const err178 = {instancePath:instancePath+"/units/mg",schemaPath:"#/properties/units/properties/mg/required",keyword:"required",params:{missingProperty: "arc"},message:"must have required property '"+"arc"+"'"};
+if(vErrors === null){
+vErrors = [err178];
+}
+else {
+vErrors.push(err178);
+}
+errors++;
+}
+if(data49.speed === undefined){
+const err179 = {instancePath:instancePath+"/units/mg",schemaPath:"#/properties/units/properties/mg/required",keyword:"required",params:{missingProperty: "speed"},message:"must have required property '"+"speed"+"'"};
+if(vErrors === null){
+vErrors = [err179];
+}
+else {
+vErrors.push(err179);
+}
+errors++;
+}
+if(data49.cost === undefined){
+const err180 = {instancePath:instancePath+"/units/mg",schemaPath:"#/properties/units/properties/mg/required",keyword:"required",params:{missingProperty: "cost"},message:"must have required property '"+"cost"+"'"};
+if(vErrors === null){
+vErrors = [err180];
+}
+else {
+vErrors.push(err180);
+}
+errors++;
+}
+if(data49.splash === undefined){
+const err181 = {instancePath:instancePath+"/units/mg",schemaPath:"#/properties/units/properties/mg/required",keyword:"required",params:{missingProperty: "splash"},message:"must have required property '"+"splash"+"'"};
+if(vErrors === null){
+vErrors = [err181];
+}
+else {
+vErrors.push(err181);
+}
+errors++;
+}
+if(data49.modifiers === undefined){
+const err182 = {instancePath:instancePath+"/units/mg",schemaPath:"#/properties/units/properties/mg/required",keyword:"required",params:{missingProperty: "modifiers"},message:"must have required property '"+"modifiers"+"'"};
+if(vErrors === null){
+vErrors = [err182];
+}
+else {
+vErrors.push(err182);
+}
+errors++;
+}
+if(data49.category === undefined){
+const err183 = {instancePath:instancePath+"/units/mg",schemaPath:"#/properties/units/properties/mg/required",keyword:"required",params:{missingProperty: "category"},message:"must have required property '"+"category"+"'"};
+if(vErrors === null){
+vErrors = [err183];
+}
+else {
+vErrors.push(err183);
+}
+errors++;
+}
+for(const key5 in data49){
+if(!(func2.call(schema33.properties.units.properties.mg.properties, key5))){
+const err184 = {instancePath:instancePath+"/units/mg",schemaPath:"#/properties/units/properties/mg/additionalProperties",keyword:"additionalProperties",params:{additionalProperty: key5},message:"must NOT have additional properties"};
+if(vErrors === null){
+vErrors = [err184];
+}
+else {
+vErrors.push(err184);
+}
+errors++;
+}
+}
+if(data49.hp !== undefined){
+let data50 = data49.hp;
+if(!(((typeof data50 == "number") && (!(data50 % 1) && !isNaN(data50))) && (isFinite(data50)))){
+const err185 = {instancePath:instancePath+"/units/mg/hp",schemaPath:"#/properties/units/properties/mg/properties/hp/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err185];
+}
+else {
+vErrors.push(err185);
+}
+errors++;
+}
+if((typeof data50 == "number") && (isFinite(data50))){
+if(data50 < 0 || isNaN(data50)){
+const err186 = {instancePath:instancePath+"/units/mg/hp",schemaPath:"#/properties/units/properties/mg/properties/hp/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err186];
+}
+else {
+vErrors.push(err186);
+}
+errors++;
+}
+}
+}
+if(data49.damage !== undefined){
+let data51 = data49.damage;
+if(!(((typeof data51 == "number") && (!(data51 % 1) && !isNaN(data51))) && (isFinite(data51)))){
+const err187 = {instancePath:instancePath+"/units/mg/damage",schemaPath:"#/properties/units/properties/mg/properties/damage/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err187];
+}
+else {
+vErrors.push(err187);
+}
+errors++;
+}
+if((typeof data51 == "number") && (isFinite(data51))){
+if(data51 < 0 || isNaN(data51)){
+const err188 = {instancePath:instancePath+"/units/mg/damage",schemaPath:"#/properties/units/properties/mg/properties/damage/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err188];
+}
+else {
+vErrors.push(err188);
+}
+errors++;
+}
+}
+}
+if(data49.cooldown !== undefined){
+let data52 = data49.cooldown;
+if((typeof data52 == "number") && (isFinite(data52))){
+if(data52 < 0 || isNaN(data52)){
+const err189 = {instancePath:instancePath+"/units/mg/cooldown",schemaPath:"#/properties/units/properties/mg/properties/cooldown/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err189];
+}
+else {
+vErrors.push(err189);
+}
+errors++;
+}
+}
+else {
+const err190 = {instancePath:instancePath+"/units/mg/cooldown",schemaPath:"#/properties/units/properties/mg/properties/cooldown/type",keyword:"type",params:{type: "number"},message:"must be number"};
+if(vErrors === null){
+vErrors = [err190];
+}
+else {
+vErrors.push(err190);
+}
+errors++;
+}
+}
+if(data49.range !== undefined){
+let data53 = data49.range;
+if((typeof data53 == "number") && (isFinite(data53))){
+if(data53 < 0 || isNaN(data53)){
+const err191 = {instancePath:instancePath+"/units/mg/range",schemaPath:"#/properties/units/properties/mg/properties/range/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err191];
+}
+else {
+vErrors.push(err191);
+}
+errors++;
+}
+}
+else {
+const err192 = {instancePath:instancePath+"/units/mg/range",schemaPath:"#/properties/units/properties/mg/properties/range/type",keyword:"type",params:{type: "number"},message:"must be number"};
+if(vErrors === null){
+vErrors = [err192];
+}
+else {
+vErrors.push(err192);
+}
+errors++;
+}
+}
+if(data49.arc !== undefined){
+let data54 = data49.arc;
+if(!(((typeof data54 == "number") && (!(data54 % 1) && !isNaN(data54))) && (isFinite(data54)))){
+const err193 = {instancePath:instancePath+"/units/mg/arc",schemaPath:"#/properties/units/properties/mg/properties/arc/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err193];
+}
+else {
+vErrors.push(err193);
+}
+errors++;
+}
+if((typeof data54 == "number") && (isFinite(data54))){
+if(data54 < 0 || isNaN(data54)){
+const err194 = {instancePath:instancePath+"/units/mg/arc",schemaPath:"#/properties/units/properties/mg/properties/arc/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err194];
+}
+else {
+vErrors.push(err194);
+}
+errors++;
+}
+}
+}
+if(data49.speed !== undefined){
+let data55 = data49.speed;
+if((typeof data55 == "number") && (isFinite(data55))){
+if(data55 < 0 || isNaN(data55)){
+const err195 = {instancePath:instancePath+"/units/mg/speed",schemaPath:"#/properties/units/properties/mg/properties/speed/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err195];
+}
+else {
+vErrors.push(err195);
+}
+errors++;
+}
+}
+else {
+const err196 = {instancePath:instancePath+"/units/mg/speed",schemaPath:"#/properties/units/properties/mg/properties/speed/type",keyword:"type",params:{type: "number"},message:"must be number"};
+if(vErrors === null){
+vErrors = [err196];
+}
+else {
+vErrors.push(err196);
+}
+errors++;
+}
+}
+if(data49.cost !== undefined){
+let data56 = data49.cost;
+if(!(((typeof data56 == "number") && (!(data56 % 1) && !isNaN(data56))) && (isFinite(data56)))){
+const err197 = {instancePath:instancePath+"/units/mg/cost",schemaPath:"#/properties/units/properties/mg/properties/cost/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err197];
+}
+else {
+vErrors.push(err197);
+}
+errors++;
+}
+if((typeof data56 == "number") && (isFinite(data56))){
+if(data56 < 0 || isNaN(data56)){
+const err198 = {instancePath:instancePath+"/units/mg/cost",schemaPath:"#/properties/units/properties/mg/properties/cost/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err198];
+}
+else {
+vErrors.push(err198);
+}
+errors++;
+}
+}
+}
+if(data49.splash !== undefined){
+let data57 = data49.splash;
+if(!(((typeof data57 == "number") && (!(data57 % 1) && !isNaN(data57))) && (isFinite(data57)))){
+const err199 = {instancePath:instancePath+"/units/mg/splash",schemaPath:"#/properties/units/properties/mg/properties/splash/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err199];
+}
+else {
+vErrors.push(err199);
+}
+errors++;
+}
+if((typeof data57 == "number") && (isFinite(data57))){
+if(data57 < 0 || isNaN(data57)){
+const err200 = {instancePath:instancePath+"/units/mg/splash",schemaPath:"#/properties/units/properties/mg/properties/splash/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err200];
+}
+else {
+vErrors.push(err200);
+}
+errors++;
+}
+}
+}
+if(data49.modifiers !== undefined){
+let data58 = data49.modifiers;
+if(data58 && typeof data58 == "object" && !Array.isArray(data58)){
+if(data58.infantry === undefined){
+const err201 = {instancePath:instancePath+"/units/mg/modifiers",schemaPath:"#/properties/units/properties/mg/properties/modifiers/required",keyword:"required",params:{missingProperty: "infantry"},message:"must have required property '"+"infantry"+"'"};
+if(vErrors === null){
+vErrors = [err201];
+}
+else {
+vErrors.push(err201);
+}
+errors++;
+}
+if(data58.armor === undefined){
+const err202 = {instancePath:instancePath+"/units/mg/modifiers",schemaPath:"#/properties/units/properties/mg/properties/modifiers/required",keyword:"required",params:{missingProperty: "armor"},message:"must have required property '"+"armor"+"'"};
+if(vErrors === null){
+vErrors = [err202];
+}
+else {
+vErrors.push(err202);
+}
+errors++;
+}
+if(data58.aircraft === undefined){
+const err203 = {instancePath:instancePath+"/units/mg/modifiers",schemaPath:"#/properties/units/properties/mg/properties/modifiers/required",keyword:"required",params:{missingProperty: "aircraft"},message:"must have required property '"+"aircraft"+"'"};
+if(vErrors === null){
+vErrors = [err203];
+}
+else {
+vErrors.push(err203);
+}
+errors++;
+}
+for(const key6 in data58){
+if(!(((key6 === "infantry") || (key6 === "armor")) || (key6 === "aircraft"))){
+const err204 = {instancePath:instancePath+"/units/mg/modifiers",schemaPath:"#/properties/units/properties/mg/properties/modifiers/additionalProperties",keyword:"additionalProperties",params:{additionalProperty: key6},message:"must NOT have additional properties"};
+if(vErrors === null){
+vErrors = [err204];
+}
+else {
+vErrors.push(err204);
+}
+errors++;
+}
+}
+if(data58.infantry !== undefined){
+let data59 = data58.infantry;
+if((typeof data59 == "number") && (isFinite(data59))){
+if(data59 < 0 || isNaN(data59)){
+const err205 = {instancePath:instancePath+"/units/mg/modifiers/infantry",schemaPath:"#/properties/units/properties/mg/properties/modifiers/properties/infantry/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err205];
+}
+else {
+vErrors.push(err205);
+}
+errors++;
+}
+}
+else {
+const err206 = {instancePath:instancePath+"/units/mg/modifiers/infantry",schemaPath:"#/properties/units/properties/mg/properties/modifiers/properties/infantry/type",keyword:"type",params:{type: "number"},message:"must be number"};
+if(vErrors === null){
+vErrors = [err206];
+}
+else {
+vErrors.push(err206);
+}
+errors++;
+}
+}
+if(data58.armor !== undefined){
+let data60 = data58.armor;
+if((typeof data60 == "number") && (isFinite(data60))){
+if(data60 < 0 || isNaN(data60)){
+const err207 = {instancePath:instancePath+"/units/mg/modifiers/armor",schemaPath:"#/properties/units/properties/mg/properties/modifiers/properties/armor/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err207];
+}
+else {
+vErrors.push(err207);
+}
+errors++;
+}
+}
+else {
+const err208 = {instancePath:instancePath+"/units/mg/modifiers/armor",schemaPath:"#/properties/units/properties/mg/properties/modifiers/properties/armor/type",keyword:"type",params:{type: "number"},message:"must be number"};
+if(vErrors === null){
+vErrors = [err208];
+}
+else {
+vErrors.push(err208);
+}
+errors++;
+}
+}
+if(data58.aircraft !== undefined){
+let data61 = data58.aircraft;
+if((typeof data61 == "number") && (isFinite(data61))){
+if(data61 < 0 || isNaN(data61)){
+const err209 = {instancePath:instancePath+"/units/mg/modifiers/aircraft",schemaPath:"#/properties/units/properties/mg/properties/modifiers/properties/aircraft/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err209];
+}
+else {
+vErrors.push(err209);
+}
+errors++;
+}
+}
+else {
+const err210 = {instancePath:instancePath+"/units/mg/modifiers/aircraft",schemaPath:"#/properties/units/properties/mg/properties/modifiers/properties/aircraft/type",keyword:"type",params:{type: "number"},message:"must be number"};
+if(vErrors === null){
+vErrors = [err210];
+}
+else {
+vErrors.push(err210);
+}
+errors++;
+}
+}
+}
+else {
+const err211 = {instancePath:instancePath+"/units/mg/modifiers",schemaPath:"#/properties/units/properties/mg/properties/modifiers/type",keyword:"type",params:{type: "object"},message:"must be object"};
+if(vErrors === null){
+vErrors = [err211];
+}
+else {
+vErrors.push(err211);
+}
+errors++;
+}
+}
+if(data49.category !== undefined){
+let data62 = data49.category;
+if(typeof data62 === "string"){
+if(func4(data62) < 1){
+const err212 = {instancePath:instancePath+"/units/mg/category",schemaPath:"#/properties/units/properties/mg/properties/category/minLength",keyword:"minLength",params:{limit: 1},message:"must NOT have fewer than 1 characters"};
+if(vErrors === null){
+vErrors = [err212];
+}
+else {
+vErrors.push(err212);
+}
+errors++;
+}
+}
+else {
+const err213 = {instancePath:instancePath+"/units/mg/category",schemaPath:"#/properties/units/properties/mg/properties/category/type",keyword:"type",params:{type: "string"},message:"must be string"};
+if(vErrors === null){
+vErrors = [err213];
+}
+else {
+vErrors.push(err213);
+}
+errors++;
+}
+}
+}
+else {
+const err214 = {instancePath:instancePath+"/units/mg",schemaPath:"#/properties/units/properties/mg/type",keyword:"type",params:{type: "object"},message:"must be object"};
+if(vErrors === null){
+vErrors = [err214];
+}
+else {
+vErrors.push(err214);
+}
+errors++;
+}
+}
+if(data34.mortar !== undefined){
+let data63 = data34.mortar;
+if(data63 && typeof data63 == "object" && !Array.isArray(data63)){
+if(data63.hp === undefined){
+const err215 = {instancePath:instancePath+"/units/mortar",schemaPath:"#/properties/units/properties/mortar/required",keyword:"required",params:{missingProperty: "hp"},message:"must have required property '"+"hp"+"'"};
+if(vErrors === null){
+vErrors = [err215];
+}
+else {
+vErrors.push(err215);
+}
+errors++;
+}
+if(data63.damage === undefined){
+const err216 = {instancePath:instancePath+"/units/mortar",schemaPath:"#/properties/units/properties/mortar/required",keyword:"required",params:{missingProperty: "damage"},message:"must have required property '"+"damage"+"'"};
+if(vErrors === null){
+vErrors = [err216];
+}
+else {
+vErrors.push(err216);
+}
+errors++;
+}
+if(data63.cooldown === undefined){
+const err217 = {instancePath:instancePath+"/units/mortar",schemaPath:"#/properties/units/properties/mortar/required",keyword:"required",params:{missingProperty: "cooldown"},message:"must have required property '"+"cooldown"+"'"};
+if(vErrors === null){
+vErrors = [err217];
+}
+else {
+vErrors.push(err217);
+}
+errors++;
+}
+if(data63.range === undefined){
+const err218 = {instancePath:instancePath+"/units/mortar",schemaPath:"#/properties/units/properties/mortar/required",keyword:"required",params:{missingProperty: "range"},message:"must have required property '"+"range"+"'"};
+if(vErrors === null){
+vErrors = [err218];
+}
+else {
+vErrors.push(err218);
+}
+errors++;
+}
+if(data63.arc === undefined){
+const err219 = {instancePath:instancePath+"/units/mortar",schemaPath:"#/properties/units/properties/mortar/required",keyword:"required",params:{missingProperty: "arc"},message:"must have required property '"+"arc"+"'"};
+if(vErrors === null){
+vErrors = [err219];
+}
+else {
+vErrors.push(err219);
+}
+errors++;
+}
+if(data63.speed === undefined){
+const err220 = {instancePath:instancePath+"/units/mortar",schemaPath:"#/properties/units/properties/mortar/required",keyword:"required",params:{missingProperty: "speed"},message:"must have required property '"+"speed"+"'"};
+if(vErrors === null){
+vErrors = [err220];
+}
+else {
+vErrors.push(err220);
+}
+errors++;
+}
+if(data63.cost === undefined){
+const err221 = {instancePath:instancePath+"/units/mortar",schemaPath:"#/properties/units/properties/mortar/required",keyword:"required",params:{missingProperty: "cost"},message:"must have required property '"+"cost"+"'"};
+if(vErrors === null){
+vErrors = [err221];
+}
+else {
+vErrors.push(err221);
+}
+errors++;
+}
+if(data63.splash === undefined){
+const err222 = {instancePath:instancePath+"/units/mortar",schemaPath:"#/properties/units/properties/mortar/required",keyword:"required",params:{missingProperty: "splash"},message:"must have required property '"+"splash"+"'"};
+if(vErrors === null){
+vErrors = [err222];
+}
+else {
+vErrors.push(err222);
+}
+errors++;
+}
+if(data63.modifiers === undefined){
+const err223 = {instancePath:instancePath+"/units/mortar",schemaPath:"#/properties/units/properties/mortar/required",keyword:"required",params:{missingProperty: "modifiers"},message:"must have required property '"+"modifiers"+"'"};
+if(vErrors === null){
+vErrors = [err223];
+}
+else {
+vErrors.push(err223);
+}
+errors++;
+}
+if(data63.category === undefined){
+const err224 = {instancePath:instancePath+"/units/mortar",schemaPath:"#/properties/units/properties/mortar/required",keyword:"required",params:{missingProperty: "category"},message:"must have required property '"+"category"+"'"};
+if(vErrors === null){
+vErrors = [err224];
+}
+else {
+vErrors.push(err224);
+}
+errors++;
+}
+for(const key7 in data63){
+if(!(func2.call(schema33.properties.units.properties.mortar.properties, key7))){
+const err225 = {instancePath:instancePath+"/units/mortar",schemaPath:"#/properties/units/properties/mortar/additionalProperties",keyword:"additionalProperties",params:{additionalProperty: key7},message:"must NOT have additional properties"};
+if(vErrors === null){
+vErrors = [err225];
+}
+else {
+vErrors.push(err225);
+}
+errors++;
+}
+}
+if(data63.hp !== undefined){
+let data64 = data63.hp;
+if(!(((typeof data64 == "number") && (!(data64 % 1) && !isNaN(data64))) && (isFinite(data64)))){
+const err226 = {instancePath:instancePath+"/units/mortar/hp",schemaPath:"#/properties/units/properties/mortar/properties/hp/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err226];
+}
+else {
+vErrors.push(err226);
+}
+errors++;
+}
+if((typeof data64 == "number") && (isFinite(data64))){
+if(data64 < 0 || isNaN(data64)){
+const err227 = {instancePath:instancePath+"/units/mortar/hp",schemaPath:"#/properties/units/properties/mortar/properties/hp/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err227];
+}
+else {
+vErrors.push(err227);
+}
+errors++;
+}
+}
+}
+if(data63.damage !== undefined){
+let data65 = data63.damage;
+if(!(((typeof data65 == "number") && (!(data65 % 1) && !isNaN(data65))) && (isFinite(data65)))){
+const err228 = {instancePath:instancePath+"/units/mortar/damage",schemaPath:"#/properties/units/properties/mortar/properties/damage/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err228];
+}
+else {
+vErrors.push(err228);
+}
+errors++;
+}
+if((typeof data65 == "number") && (isFinite(data65))){
+if(data65 < 0 || isNaN(data65)){
+const err229 = {instancePath:instancePath+"/units/mortar/damage",schemaPath:"#/properties/units/properties/mortar/properties/damage/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err229];
+}
+else {
+vErrors.push(err229);
+}
+errors++;
+}
+}
+}
+if(data63.cooldown !== undefined){
+let data66 = data63.cooldown;
+if((typeof data66 == "number") && (isFinite(data66))){
+if(data66 < 0 || isNaN(data66)){
+const err230 = {instancePath:instancePath+"/units/mortar/cooldown",schemaPath:"#/properties/units/properties/mortar/properties/cooldown/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err230];
+}
+else {
+vErrors.push(err230);
+}
+errors++;
+}
+}
+else {
+const err231 = {instancePath:instancePath+"/units/mortar/cooldown",schemaPath:"#/properties/units/properties/mortar/properties/cooldown/type",keyword:"type",params:{type: "number"},message:"must be number"};
+if(vErrors === null){
+vErrors = [err231];
+}
+else {
+vErrors.push(err231);
+}
+errors++;
+}
+}
+if(data63.range !== undefined){
+let data67 = data63.range;
+if((typeof data67 == "number") && (isFinite(data67))){
+if(data67 < 0 || isNaN(data67)){
+const err232 = {instancePath:instancePath+"/units/mortar/range",schemaPath:"#/properties/units/properties/mortar/properties/range/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err232];
+}
+else {
+vErrors.push(err232);
+}
+errors++;
+}
+}
+else {
+const err233 = {instancePath:instancePath+"/units/mortar/range",schemaPath:"#/properties/units/properties/mortar/properties/range/type",keyword:"type",params:{type: "number"},message:"must be number"};
+if(vErrors === null){
+vErrors = [err233];
+}
+else {
+vErrors.push(err233);
+}
+errors++;
+}
+}
+if(data63.arc !== undefined){
+let data68 = data63.arc;
+if(!(((typeof data68 == "number") && (!(data68 % 1) && !isNaN(data68))) && (isFinite(data68)))){
+const err234 = {instancePath:instancePath+"/units/mortar/arc",schemaPath:"#/properties/units/properties/mortar/properties/arc/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err234];
+}
+else {
+vErrors.push(err234);
+}
+errors++;
+}
+if((typeof data68 == "number") && (isFinite(data68))){
+if(data68 < 0 || isNaN(data68)){
+const err235 = {instancePath:instancePath+"/units/mortar/arc",schemaPath:"#/properties/units/properties/mortar/properties/arc/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err235];
+}
+else {
+vErrors.push(err235);
+}
+errors++;
+}
+}
+}
+if(data63.speed !== undefined){
+let data69 = data63.speed;
+if((typeof data69 == "number") && (isFinite(data69))){
+if(data69 < 0 || isNaN(data69)){
+const err236 = {instancePath:instancePath+"/units/mortar/speed",schemaPath:"#/properties/units/properties/mortar/properties/speed/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err236];
+}
+else {
+vErrors.push(err236);
+}
+errors++;
+}
+}
+else {
+const err237 = {instancePath:instancePath+"/units/mortar/speed",schemaPath:"#/properties/units/properties/mortar/properties/speed/type",keyword:"type",params:{type: "number"},message:"must be number"};
+if(vErrors === null){
+vErrors = [err237];
+}
+else {
+vErrors.push(err237);
+}
+errors++;
+}
+}
+if(data63.cost !== undefined){
+let data70 = data63.cost;
+if(!(((typeof data70 == "number") && (!(data70 % 1) && !isNaN(data70))) && (isFinite(data70)))){
+const err238 = {instancePath:instancePath+"/units/mortar/cost",schemaPath:"#/properties/units/properties/mortar/properties/cost/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err238];
+}
+else {
+vErrors.push(err238);
+}
+errors++;
+}
+if((typeof data70 == "number") && (isFinite(data70))){
+if(data70 < 0 || isNaN(data70)){
+const err239 = {instancePath:instancePath+"/units/mortar/cost",schemaPath:"#/properties/units/properties/mortar/properties/cost/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err239];
+}
+else {
+vErrors.push(err239);
+}
+errors++;
+}
+}
+}
+if(data63.splash !== undefined){
+let data71 = data63.splash;
+if((typeof data71 == "number") && (isFinite(data71))){
+if(data71 < 0 || isNaN(data71)){
+const err240 = {instancePath:instancePath+"/units/mortar/splash",schemaPath:"#/properties/units/properties/mortar/properties/splash/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err240];
+}
+else {
+vErrors.push(err240);
+}
+errors++;
+}
+}
+else {
+const err241 = {instancePath:instancePath+"/units/mortar/splash",schemaPath:"#/properties/units/properties/mortar/properties/splash/type",keyword:"type",params:{type: "number"},message:"must be number"};
+if(vErrors === null){
+vErrors = [err241];
+}
+else {
+vErrors.push(err241);
+}
+errors++;
+}
+}
+if(data63.modifiers !== undefined){
+let data72 = data63.modifiers;
+if(data72 && typeof data72 == "object" && !Array.isArray(data72)){
+if(data72.infantry === undefined){
+const err242 = {instancePath:instancePath+"/units/mortar/modifiers",schemaPath:"#/properties/units/properties/mortar/properties/modifiers/required",keyword:"required",params:{missingProperty: "infantry"},message:"must have required property '"+"infantry"+"'"};
+if(vErrors === null){
+vErrors = [err242];
+}
+else {
+vErrors.push(err242);
+}
+errors++;
+}
+if(data72.armor === undefined){
+const err243 = {instancePath:instancePath+"/units/mortar/modifiers",schemaPath:"#/properties/units/properties/mortar/properties/modifiers/required",keyword:"required",params:{missingProperty: "armor"},message:"must have required property '"+"armor"+"'"};
+if(vErrors === null){
+vErrors = [err243];
+}
+else {
+vErrors.push(err243);
+}
+errors++;
+}
+if(data72.aircraft === undefined){
+const err244 = {instancePath:instancePath+"/units/mortar/modifiers",schemaPath:"#/properties/units/properties/mortar/properties/modifiers/required",keyword:"required",params:{missingProperty: "aircraft"},message:"must have required property '"+"aircraft"+"'"};
+if(vErrors === null){
+vErrors = [err244];
+}
+else {
+vErrors.push(err244);
+}
+errors++;
+}
+for(const key8 in data72){
+if(!(((key8 === "infantry") || (key8 === "armor")) || (key8 === "aircraft"))){
+const err245 = {instancePath:instancePath+"/units/mortar/modifiers",schemaPath:"#/properties/units/properties/mortar/properties/modifiers/additionalProperties",keyword:"additionalProperties",params:{additionalProperty: key8},message:"must NOT have additional properties"};
+if(vErrors === null){
+vErrors = [err245];
+}
+else {
+vErrors.push(err245);
+}
+errors++;
+}
+}
+if(data72.infantry !== undefined){
+let data73 = data72.infantry;
+if(!(((typeof data73 == "number") && (!(data73 % 1) && !isNaN(data73))) && (isFinite(data73)))){
+const err246 = {instancePath:instancePath+"/units/mortar/modifiers/infantry",schemaPath:"#/properties/units/properties/mortar/properties/modifiers/properties/infantry/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err246];
+}
+else {
+vErrors.push(err246);
+}
+errors++;
+}
+if((typeof data73 == "number") && (isFinite(data73))){
+if(data73 < 0 || isNaN(data73)){
+const err247 = {instancePath:instancePath+"/units/mortar/modifiers/infantry",schemaPath:"#/properties/units/properties/mortar/properties/modifiers/properties/infantry/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err247];
+}
+else {
+vErrors.push(err247);
+}
+errors++;
+}
+}
+}
+if(data72.armor !== undefined){
+let data74 = data72.armor;
+if((typeof data74 == "number") && (isFinite(data74))){
+if(data74 < 0 || isNaN(data74)){
+const err248 = {instancePath:instancePath+"/units/mortar/modifiers/armor",schemaPath:"#/properties/units/properties/mortar/properties/modifiers/properties/armor/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err248];
+}
+else {
+vErrors.push(err248);
+}
+errors++;
+}
+}
+else {
+const err249 = {instancePath:instancePath+"/units/mortar/modifiers/armor",schemaPath:"#/properties/units/properties/mortar/properties/modifiers/properties/armor/type",keyword:"type",params:{type: "number"},message:"must be number"};
+if(vErrors === null){
+vErrors = [err249];
+}
+else {
+vErrors.push(err249);
+}
+errors++;
+}
+}
+if(data72.aircraft !== undefined){
+let data75 = data72.aircraft;
+if((typeof data75 == "number") && (isFinite(data75))){
+if(data75 < 0 || isNaN(data75)){
+const err250 = {instancePath:instancePath+"/units/mortar/modifiers/aircraft",schemaPath:"#/properties/units/properties/mortar/properties/modifiers/properties/aircraft/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err250];
+}
+else {
+vErrors.push(err250);
+}
+errors++;
+}
+}
+else {
+const err251 = {instancePath:instancePath+"/units/mortar/modifiers/aircraft",schemaPath:"#/properties/units/properties/mortar/properties/modifiers/properties/aircraft/type",keyword:"type",params:{type: "number"},message:"must be number"};
+if(vErrors === null){
+vErrors = [err251];
+}
+else {
+vErrors.push(err251);
+}
+errors++;
+}
+}
+}
+else {
+const err252 = {instancePath:instancePath+"/units/mortar/modifiers",schemaPath:"#/properties/units/properties/mortar/properties/modifiers/type",keyword:"type",params:{type: "object"},message:"must be object"};
+if(vErrors === null){
+vErrors = [err252];
+}
+else {
+vErrors.push(err252);
+}
+errors++;
+}
+}
+if(data63.category !== undefined){
+let data76 = data63.category;
+if(typeof data76 === "string"){
+if(func4(data76) < 1){
+const err253 = {instancePath:instancePath+"/units/mortar/category",schemaPath:"#/properties/units/properties/mortar/properties/category/minLength",keyword:"minLength",params:{limit: 1},message:"must NOT have fewer than 1 characters"};
+if(vErrors === null){
+vErrors = [err253];
+}
+else {
+vErrors.push(err253);
+}
+errors++;
+}
+}
+else {
+const err254 = {instancePath:instancePath+"/units/mortar/category",schemaPath:"#/properties/units/properties/mortar/properties/category/type",keyword:"type",params:{type: "string"},message:"must be string"};
+if(vErrors === null){
+vErrors = [err254];
+}
+else {
+vErrors.push(err254);
+}
+errors++;
+}
+}
+}
+else {
+const err255 = {instancePath:instancePath+"/units/mortar",schemaPath:"#/properties/units/properties/mortar/type",keyword:"type",params:{type: "object"},message:"must be object"};
+if(vErrors === null){
+vErrors = [err255];
+}
+else {
+vErrors.push(err255);
+}
+errors++;
+}
+}
+if(data34.gun !== undefined){
+let data77 = data34.gun;
+if(data77 && typeof data77 == "object" && !Array.isArray(data77)){
+if(data77.hp === undefined){
+const err256 = {instancePath:instancePath+"/units/gun",schemaPath:"#/properties/units/properties/gun/required",keyword:"required",params:{missingProperty: "hp"},message:"must have required property '"+"hp"+"'"};
+if(vErrors === null){
+vErrors = [err256];
+}
+else {
+vErrors.push(err256);
+}
+errors++;
+}
+if(data77.damage === undefined){
+const err257 = {instancePath:instancePath+"/units/gun",schemaPath:"#/properties/units/properties/gun/required",keyword:"required",params:{missingProperty: "damage"},message:"must have required property '"+"damage"+"'"};
+if(vErrors === null){
+vErrors = [err257];
+}
+else {
+vErrors.push(err257);
+}
+errors++;
+}
+if(data77.cooldown === undefined){
+const err258 = {instancePath:instancePath+"/units/gun",schemaPath:"#/properties/units/properties/gun/required",keyword:"required",params:{missingProperty: "cooldown"},message:"must have required property '"+"cooldown"+"'"};
+if(vErrors === null){
+vErrors = [err258];
+}
+else {
+vErrors.push(err258);
+}
+errors++;
+}
+if(data77.range === undefined){
+const err259 = {instancePath:instancePath+"/units/gun",schemaPath:"#/properties/units/properties/gun/required",keyword:"required",params:{missingProperty: "range"},message:"must have required property '"+"range"+"'"};
+if(vErrors === null){
+vErrors = [err259];
+}
+else {
+vErrors.push(err259);
+}
+errors++;
+}
+if(data77.arc === undefined){
+const err260 = {instancePath:instancePath+"/units/gun",schemaPath:"#/properties/units/properties/gun/required",keyword:"required",params:{missingProperty: "arc"},message:"must have required property '"+"arc"+"'"};
+if(vErrors === null){
+vErrors = [err260];
+}
+else {
+vErrors.push(err260);
+}
+errors++;
+}
+if(data77.speed === undefined){
+const err261 = {instancePath:instancePath+"/units/gun",schemaPath:"#/properties/units/properties/gun/required",keyword:"required",params:{missingProperty: "speed"},message:"must have required property '"+"speed"+"'"};
+if(vErrors === null){
+vErrors = [err261];
+}
+else {
+vErrors.push(err261);
+}
+errors++;
+}
+if(data77.cost === undefined){
+const err262 = {instancePath:instancePath+"/units/gun",schemaPath:"#/properties/units/properties/gun/required",keyword:"required",params:{missingProperty: "cost"},message:"must have required property '"+"cost"+"'"};
+if(vErrors === null){
+vErrors = [err262];
+}
+else {
+vErrors.push(err262);
+}
+errors++;
+}
+if(data77.splash === undefined){
+const err263 = {instancePath:instancePath+"/units/gun",schemaPath:"#/properties/units/properties/gun/required",keyword:"required",params:{missingProperty: "splash"},message:"must have required property '"+"splash"+"'"};
+if(vErrors === null){
+vErrors = [err263];
+}
+else {
+vErrors.push(err263);
+}
+errors++;
+}
+if(data77.modifiers === undefined){
+const err264 = {instancePath:instancePath+"/units/gun",schemaPath:"#/properties/units/properties/gun/required",keyword:"required",params:{missingProperty: "modifiers"},message:"must have required property '"+"modifiers"+"'"};
+if(vErrors === null){
+vErrors = [err264];
+}
+else {
+vErrors.push(err264);
+}
+errors++;
+}
+if(data77.category === undefined){
+const err265 = {instancePath:instancePath+"/units/gun",schemaPath:"#/properties/units/properties/gun/required",keyword:"required",params:{missingProperty: "category"},message:"must have required property '"+"category"+"'"};
+if(vErrors === null){
+vErrors = [err265];
+}
+else {
+vErrors.push(err265);
+}
+errors++;
+}
+for(const key9 in data77){
+if(!(func2.call(schema33.properties.units.properties.gun.properties, key9))){
+const err266 = {instancePath:instancePath+"/units/gun",schemaPath:"#/properties/units/properties/gun/additionalProperties",keyword:"additionalProperties",params:{additionalProperty: key9},message:"must NOT have additional properties"};
+if(vErrors === null){
+vErrors = [err266];
+}
+else {
+vErrors.push(err266);
+}
+errors++;
+}
+}
+if(data77.hp !== undefined){
+let data78 = data77.hp;
+if(!(((typeof data78 == "number") && (!(data78 % 1) && !isNaN(data78))) && (isFinite(data78)))){
+const err267 = {instancePath:instancePath+"/units/gun/hp",schemaPath:"#/properties/units/properties/gun/properties/hp/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err267];
+}
+else {
+vErrors.push(err267);
+}
+errors++;
+}
+if((typeof data78 == "number") && (isFinite(data78))){
+if(data78 < 0 || isNaN(data78)){
+const err268 = {instancePath:instancePath+"/units/gun/hp",schemaPath:"#/properties/units/properties/gun/properties/hp/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err268];
+}
+else {
+vErrors.push(err268);
+}
+errors++;
+}
+}
+}
+if(data77.damage !== undefined){
+let data79 = data77.damage;
+if(!(((typeof data79 == "number") && (!(data79 % 1) && !isNaN(data79))) && (isFinite(data79)))){
+const err269 = {instancePath:instancePath+"/units/gun/damage",schemaPath:"#/properties/units/properties/gun/properties/damage/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err269];
+}
+else {
+vErrors.push(err269);
+}
+errors++;
+}
+if((typeof data79 == "number") && (isFinite(data79))){
+if(data79 < 0 || isNaN(data79)){
+const err270 = {instancePath:instancePath+"/units/gun/damage",schemaPath:"#/properties/units/properties/gun/properties/damage/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err270];
+}
+else {
+vErrors.push(err270);
+}
+errors++;
+}
+}
+}
+if(data77.cooldown !== undefined){
+let data80 = data77.cooldown;
+if((typeof data80 == "number") && (isFinite(data80))){
+if(data80 < 0 || isNaN(data80)){
+const err271 = {instancePath:instancePath+"/units/gun/cooldown",schemaPath:"#/properties/units/properties/gun/properties/cooldown/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err271];
+}
+else {
+vErrors.push(err271);
+}
+errors++;
+}
+}
+else {
+const err272 = {instancePath:instancePath+"/units/gun/cooldown",schemaPath:"#/properties/units/properties/gun/properties/cooldown/type",keyword:"type",params:{type: "number"},message:"must be number"};
+if(vErrors === null){
+vErrors = [err272];
+}
+else {
+vErrors.push(err272);
+}
+errors++;
+}
+}
+if(data77.range !== undefined){
+let data81 = data77.range;
+if((typeof data81 == "number") && (isFinite(data81))){
+if(data81 < 0 || isNaN(data81)){
+const err273 = {instancePath:instancePath+"/units/gun/range",schemaPath:"#/properties/units/properties/gun/properties/range/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err273];
+}
+else {
+vErrors.push(err273);
+}
+errors++;
+}
+}
+else {
+const err274 = {instancePath:instancePath+"/units/gun/range",schemaPath:"#/properties/units/properties/gun/properties/range/type",keyword:"type",params:{type: "number"},message:"must be number"};
+if(vErrors === null){
+vErrors = [err274];
+}
+else {
+vErrors.push(err274);
+}
+errors++;
+}
+}
+if(data77.arc !== undefined){
+let data82 = data77.arc;
+if(!(((typeof data82 == "number") && (!(data82 % 1) && !isNaN(data82))) && (isFinite(data82)))){
+const err275 = {instancePath:instancePath+"/units/gun/arc",schemaPath:"#/properties/units/properties/gun/properties/arc/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err275];
+}
+else {
+vErrors.push(err275);
+}
+errors++;
+}
+if((typeof data82 == "number") && (isFinite(data82))){
+if(data82 < 0 || isNaN(data82)){
+const err276 = {instancePath:instancePath+"/units/gun/arc",schemaPath:"#/properties/units/properties/gun/properties/arc/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err276];
+}
+else {
+vErrors.push(err276);
+}
+errors++;
+}
+}
+}
+if(data77.speed !== undefined){
+let data83 = data77.speed;
+if((typeof data83 == "number") && (isFinite(data83))){
+if(data83 < 0 || isNaN(data83)){
+const err277 = {instancePath:instancePath+"/units/gun/speed",schemaPath:"#/properties/units/properties/gun/properties/speed/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err277];
+}
+else {
+vErrors.push(err277);
+}
+errors++;
+}
+}
+else {
+const err278 = {instancePath:instancePath+"/units/gun/speed",schemaPath:"#/properties/units/properties/gun/properties/speed/type",keyword:"type",params:{type: "number"},message:"must be number"};
+if(vErrors === null){
+vErrors = [err278];
+}
+else {
+vErrors.push(err278);
+}
+errors++;
+}
+}
+if(data77.cost !== undefined){
+let data84 = data77.cost;
+if(!(((typeof data84 == "number") && (!(data84 % 1) && !isNaN(data84))) && (isFinite(data84)))){
+const err279 = {instancePath:instancePath+"/units/gun/cost",schemaPath:"#/properties/units/properties/gun/properties/cost/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err279];
+}
+else {
+vErrors.push(err279);
+}
+errors++;
+}
+if((typeof data84 == "number") && (isFinite(data84))){
+if(data84 < 0 || isNaN(data84)){
+const err280 = {instancePath:instancePath+"/units/gun/cost",schemaPath:"#/properties/units/properties/gun/properties/cost/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err280];
+}
+else {
+vErrors.push(err280);
+}
+errors++;
+}
+}
+}
+if(data77.splash !== undefined){
+let data85 = data77.splash;
+if((typeof data85 == "number") && (isFinite(data85))){
+if(data85 < 0 || isNaN(data85)){
+const err281 = {instancePath:instancePath+"/units/gun/splash",schemaPath:"#/properties/units/properties/gun/properties/splash/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err281];
+}
+else {
+vErrors.push(err281);
+}
+errors++;
+}
+}
+else {
+const err282 = {instancePath:instancePath+"/units/gun/splash",schemaPath:"#/properties/units/properties/gun/properties/splash/type",keyword:"type",params:{type: "number"},message:"must be number"};
+if(vErrors === null){
+vErrors = [err282];
+}
+else {
+vErrors.push(err282);
+}
+errors++;
+}
+}
+if(data77.modifiers !== undefined){
+let data86 = data77.modifiers;
+if(data86 && typeof data86 == "object" && !Array.isArray(data86)){
+if(data86.infantry === undefined){
+const err283 = {instancePath:instancePath+"/units/gun/modifiers",schemaPath:"#/properties/units/properties/gun/properties/modifiers/required",keyword:"required",params:{missingProperty: "infantry"},message:"must have required property '"+"infantry"+"'"};
+if(vErrors === null){
+vErrors = [err283];
+}
+else {
+vErrors.push(err283);
+}
+errors++;
+}
+if(data86.armor === undefined){
+const err284 = {instancePath:instancePath+"/units/gun/modifiers",schemaPath:"#/properties/units/properties/gun/properties/modifiers/required",keyword:"required",params:{missingProperty: "armor"},message:"must have required property '"+"armor"+"'"};
+if(vErrors === null){
+vErrors = [err284];
+}
+else {
+vErrors.push(err284);
+}
+errors++;
+}
+if(data86.aircraft === undefined){
+const err285 = {instancePath:instancePath+"/units/gun/modifiers",schemaPath:"#/properties/units/properties/gun/properties/modifiers/required",keyword:"required",params:{missingProperty: "aircraft"},message:"must have required property '"+"aircraft"+"'"};
+if(vErrors === null){
+vErrors = [err285];
+}
+else {
+vErrors.push(err285);
+}
+errors++;
+}
+for(const key10 in data86){
+if(!(((key10 === "infantry") || (key10 === "armor")) || (key10 === "aircraft"))){
+const err286 = {instancePath:instancePath+"/units/gun/modifiers",schemaPath:"#/properties/units/properties/gun/properties/modifiers/additionalProperties",keyword:"additionalProperties",params:{additionalProperty: key10},message:"must NOT have additional properties"};
+if(vErrors === null){
+vErrors = [err286];
+}
+else {
+vErrors.push(err286);
+}
+errors++;
+}
+}
+if(data86.infantry !== undefined){
+let data87 = data86.infantry;
+if(!(((typeof data87 == "number") && (!(data87 % 1) && !isNaN(data87))) && (isFinite(data87)))){
+const err287 = {instancePath:instancePath+"/units/gun/modifiers/infantry",schemaPath:"#/properties/units/properties/gun/properties/modifiers/properties/infantry/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err287];
+}
+else {
+vErrors.push(err287);
+}
+errors++;
+}
+if((typeof data87 == "number") && (isFinite(data87))){
+if(data87 < 0 || isNaN(data87)){
+const err288 = {instancePath:instancePath+"/units/gun/modifiers/infantry",schemaPath:"#/properties/units/properties/gun/properties/modifiers/properties/infantry/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err288];
+}
+else {
+vErrors.push(err288);
+}
+errors++;
+}
+}
+}
+if(data86.armor !== undefined){
+let data88 = data86.armor;
+if((typeof data88 == "number") && (isFinite(data88))){
+if(data88 < 0 || isNaN(data88)){
+const err289 = {instancePath:instancePath+"/units/gun/modifiers/armor",schemaPath:"#/properties/units/properties/gun/properties/modifiers/properties/armor/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err289];
+}
+else {
+vErrors.push(err289);
+}
+errors++;
+}
+}
+else {
+const err290 = {instancePath:instancePath+"/units/gun/modifiers/armor",schemaPath:"#/properties/units/properties/gun/properties/modifiers/properties/armor/type",keyword:"type",params:{type: "number"},message:"must be number"};
+if(vErrors === null){
+vErrors = [err290];
+}
+else {
+vErrors.push(err290);
+}
+errors++;
+}
+}
+if(data86.aircraft !== undefined){
+let data89 = data86.aircraft;
+if((typeof data89 == "number") && (isFinite(data89))){
+if(data89 < 0 || isNaN(data89)){
+const err291 = {instancePath:instancePath+"/units/gun/modifiers/aircraft",schemaPath:"#/properties/units/properties/gun/properties/modifiers/properties/aircraft/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err291];
+}
+else {
+vErrors.push(err291);
+}
+errors++;
+}
+}
+else {
+const err292 = {instancePath:instancePath+"/units/gun/modifiers/aircraft",schemaPath:"#/properties/units/properties/gun/properties/modifiers/properties/aircraft/type",keyword:"type",params:{type: "number"},message:"must be number"};
+if(vErrors === null){
+vErrors = [err292];
+}
+else {
+vErrors.push(err292);
+}
+errors++;
+}
+}
+}
+else {
+const err293 = {instancePath:instancePath+"/units/gun/modifiers",schemaPath:"#/properties/units/properties/gun/properties/modifiers/type",keyword:"type",params:{type: "object"},message:"must be object"};
+if(vErrors === null){
+vErrors = [err293];
+}
+else {
+vErrors.push(err293);
+}
+errors++;
+}
+}
+if(data77.category !== undefined){
+let data90 = data77.category;
+if(typeof data90 === "string"){
+if(func4(data90) < 1){
+const err294 = {instancePath:instancePath+"/units/gun/category",schemaPath:"#/properties/units/properties/gun/properties/category/minLength",keyword:"minLength",params:{limit: 1},message:"must NOT have fewer than 1 characters"};
+if(vErrors === null){
+vErrors = [err294];
+}
+else {
+vErrors.push(err294);
+}
+errors++;
+}
+}
+else {
+const err295 = {instancePath:instancePath+"/units/gun/category",schemaPath:"#/properties/units/properties/gun/properties/category/type",keyword:"type",params:{type: "string"},message:"must be string"};
+if(vErrors === null){
+vErrors = [err295];
+}
+else {
+vErrors.push(err295);
+}
+errors++;
+}
+}
+}
+else {
+const err296 = {instancePath:instancePath+"/units/gun",schemaPath:"#/properties/units/properties/gun/type",keyword:"type",params:{type: "object"},message:"must be object"};
+if(vErrors === null){
+vErrors = [err296];
+}
+else {
+vErrors.push(err296);
+}
+errors++;
+}
+}
+if(data34.at !== undefined){
+let data91 = data34.at;
+if(data91 && typeof data91 == "object" && !Array.isArray(data91)){
+if(data91.hp === undefined){
+const err297 = {instancePath:instancePath+"/units/at",schemaPath:"#/properties/units/properties/at/required",keyword:"required",params:{missingProperty: "hp"},message:"must have required property '"+"hp"+"'"};
+if(vErrors === null){
+vErrors = [err297];
+}
+else {
+vErrors.push(err297);
+}
+errors++;
+}
+if(data91.damage === undefined){
+const err298 = {instancePath:instancePath+"/units/at",schemaPath:"#/properties/units/properties/at/required",keyword:"required",params:{missingProperty: "damage"},message:"must have required property '"+"damage"+"'"};
+if(vErrors === null){
+vErrors = [err298];
+}
+else {
+vErrors.push(err298);
+}
+errors++;
+}
+if(data91.cooldown === undefined){
+const err299 = {instancePath:instancePath+"/units/at",schemaPath:"#/properties/units/properties/at/required",keyword:"required",params:{missingProperty: "cooldown"},message:"must have required property '"+"cooldown"+"'"};
+if(vErrors === null){
+vErrors = [err299];
+}
+else {
+vErrors.push(err299);
+}
+errors++;
+}
+if(data91.range === undefined){
+const err300 = {instancePath:instancePath+"/units/at",schemaPath:"#/properties/units/properties/at/required",keyword:"required",params:{missingProperty: "range"},message:"must have required property '"+"range"+"'"};
+if(vErrors === null){
+vErrors = [err300];
+}
+else {
+vErrors.push(err300);
+}
+errors++;
+}
+if(data91.arc === undefined){
+const err301 = {instancePath:instancePath+"/units/at",schemaPath:"#/properties/units/properties/at/required",keyword:"required",params:{missingProperty: "arc"},message:"must have required property '"+"arc"+"'"};
+if(vErrors === null){
+vErrors = [err301];
+}
+else {
+vErrors.push(err301);
+}
+errors++;
+}
+if(data91.speed === undefined){
+const err302 = {instancePath:instancePath+"/units/at",schemaPath:"#/properties/units/properties/at/required",keyword:"required",params:{missingProperty: "speed"},message:"must have required property '"+"speed"+"'"};
+if(vErrors === null){
+vErrors = [err302];
+}
+else {
+vErrors.push(err302);
+}
+errors++;
+}
+if(data91.cost === undefined){
+const err303 = {instancePath:instancePath+"/units/at",schemaPath:"#/properties/units/properties/at/required",keyword:"required",params:{missingProperty: "cost"},message:"must have required property '"+"cost"+"'"};
+if(vErrors === null){
+vErrors = [err303];
+}
+else {
+vErrors.push(err303);
+}
+errors++;
+}
+if(data91.splash === undefined){
+const err304 = {instancePath:instancePath+"/units/at",schemaPath:"#/properties/units/properties/at/required",keyword:"required",params:{missingProperty: "splash"},message:"must have required property '"+"splash"+"'"};
+if(vErrors === null){
+vErrors = [err304];
+}
+else {
+vErrors.push(err304);
+}
+errors++;
+}
+if(data91.modifiers === undefined){
+const err305 = {instancePath:instancePath+"/units/at",schemaPath:"#/properties/units/properties/at/required",keyword:"required",params:{missingProperty: "modifiers"},message:"must have required property '"+"modifiers"+"'"};
+if(vErrors === null){
+vErrors = [err305];
+}
+else {
+vErrors.push(err305);
+}
+errors++;
+}
+if(data91.category === undefined){
+const err306 = {instancePath:instancePath+"/units/at",schemaPath:"#/properties/units/properties/at/required",keyword:"required",params:{missingProperty: "category"},message:"must have required property '"+"category"+"'"};
+if(vErrors === null){
+vErrors = [err306];
+}
+else {
+vErrors.push(err306);
+}
+errors++;
+}
+for(const key11 in data91){
+if(!(func2.call(schema33.properties.units.properties.at.properties, key11))){
+const err307 = {instancePath:instancePath+"/units/at",schemaPath:"#/properties/units/properties/at/additionalProperties",keyword:"additionalProperties",params:{additionalProperty: key11},message:"must NOT have additional properties"};
+if(vErrors === null){
+vErrors = [err307];
+}
+else {
+vErrors.push(err307);
+}
+errors++;
+}
+}
+if(data91.hp !== undefined){
+let data92 = data91.hp;
+if(!(((typeof data92 == "number") && (!(data92 % 1) && !isNaN(data92))) && (isFinite(data92)))){
+const err308 = {instancePath:instancePath+"/units/at/hp",schemaPath:"#/properties/units/properties/at/properties/hp/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err308];
+}
+else {
+vErrors.push(err308);
+}
+errors++;
+}
+if((typeof data92 == "number") && (isFinite(data92))){
+if(data92 < 0 || isNaN(data92)){
+const err309 = {instancePath:instancePath+"/units/at/hp",schemaPath:"#/properties/units/properties/at/properties/hp/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err309];
+}
+else {
+vErrors.push(err309);
+}
+errors++;
+}
+}
+}
+if(data91.damage !== undefined){
+let data93 = data91.damage;
+if(!(((typeof data93 == "number") && (!(data93 % 1) && !isNaN(data93))) && (isFinite(data93)))){
+const err310 = {instancePath:instancePath+"/units/at/damage",schemaPath:"#/properties/units/properties/at/properties/damage/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err310];
+}
+else {
+vErrors.push(err310);
+}
+errors++;
+}
+if((typeof data93 == "number") && (isFinite(data93))){
+if(data93 < 0 || isNaN(data93)){
+const err311 = {instancePath:instancePath+"/units/at/damage",schemaPath:"#/properties/units/properties/at/properties/damage/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err311];
+}
+else {
+vErrors.push(err311);
+}
+errors++;
+}
+}
+}
+if(data91.cooldown !== undefined){
+let data94 = data91.cooldown;
+if((typeof data94 == "number") && (isFinite(data94))){
+if(data94 < 0 || isNaN(data94)){
+const err312 = {instancePath:instancePath+"/units/at/cooldown",schemaPath:"#/properties/units/properties/at/properties/cooldown/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err312];
+}
+else {
+vErrors.push(err312);
+}
+errors++;
+}
+}
+else {
+const err313 = {instancePath:instancePath+"/units/at/cooldown",schemaPath:"#/properties/units/properties/at/properties/cooldown/type",keyword:"type",params:{type: "number"},message:"must be number"};
+if(vErrors === null){
+vErrors = [err313];
+}
+else {
+vErrors.push(err313);
+}
+errors++;
+}
+}
+if(data91.range !== undefined){
+let data95 = data91.range;
+if((typeof data95 == "number") && (isFinite(data95))){
+if(data95 < 0 || isNaN(data95)){
+const err314 = {instancePath:instancePath+"/units/at/range",schemaPath:"#/properties/units/properties/at/properties/range/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err314];
+}
+else {
+vErrors.push(err314);
+}
+errors++;
+}
+}
+else {
+const err315 = {instancePath:instancePath+"/units/at/range",schemaPath:"#/properties/units/properties/at/properties/range/type",keyword:"type",params:{type: "number"},message:"must be number"};
+if(vErrors === null){
+vErrors = [err315];
+}
+else {
+vErrors.push(err315);
+}
+errors++;
+}
+}
+if(data91.arc !== undefined){
+let data96 = data91.arc;
+if(!(((typeof data96 == "number") && (!(data96 % 1) && !isNaN(data96))) && (isFinite(data96)))){
+const err316 = {instancePath:instancePath+"/units/at/arc",schemaPath:"#/properties/units/properties/at/properties/arc/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err316];
+}
+else {
+vErrors.push(err316);
+}
+errors++;
+}
+if((typeof data96 == "number") && (isFinite(data96))){
+if(data96 < 0 || isNaN(data96)){
+const err317 = {instancePath:instancePath+"/units/at/arc",schemaPath:"#/properties/units/properties/at/properties/arc/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err317];
+}
+else {
+vErrors.push(err317);
+}
+errors++;
+}
+}
+}
+if(data91.speed !== undefined){
+let data97 = data91.speed;
+if((typeof data97 == "number") && (isFinite(data97))){
+if(data97 < 0 || isNaN(data97)){
+const err318 = {instancePath:instancePath+"/units/at/speed",schemaPath:"#/properties/units/properties/at/properties/speed/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err318];
+}
+else {
+vErrors.push(err318);
+}
+errors++;
+}
+}
+else {
+const err319 = {instancePath:instancePath+"/units/at/speed",schemaPath:"#/properties/units/properties/at/properties/speed/type",keyword:"type",params:{type: "number"},message:"must be number"};
+if(vErrors === null){
+vErrors = [err319];
+}
+else {
+vErrors.push(err319);
+}
+errors++;
+}
+}
+if(data91.cost !== undefined){
+let data98 = data91.cost;
+if(!(((typeof data98 == "number") && (!(data98 % 1) && !isNaN(data98))) && (isFinite(data98)))){
+const err320 = {instancePath:instancePath+"/units/at/cost",schemaPath:"#/properties/units/properties/at/properties/cost/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err320];
+}
+else {
+vErrors.push(err320);
+}
+errors++;
+}
+if((typeof data98 == "number") && (isFinite(data98))){
+if(data98 < 0 || isNaN(data98)){
+const err321 = {instancePath:instancePath+"/units/at/cost",schemaPath:"#/properties/units/properties/at/properties/cost/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err321];
+}
+else {
+vErrors.push(err321);
+}
+errors++;
+}
+}
+}
+if(data91.splash !== undefined){
+let data99 = data91.splash;
+if(!(((typeof data99 == "number") && (!(data99 % 1) && !isNaN(data99))) && (isFinite(data99)))){
+const err322 = {instancePath:instancePath+"/units/at/splash",schemaPath:"#/properties/units/properties/at/properties/splash/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err322];
+}
+else {
+vErrors.push(err322);
+}
+errors++;
+}
+if((typeof data99 == "number") && (isFinite(data99))){
+if(data99 < 0 || isNaN(data99)){
+const err323 = {instancePath:instancePath+"/units/at/splash",schemaPath:"#/properties/units/properties/at/properties/splash/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err323];
+}
+else {
+vErrors.push(err323);
+}
+errors++;
+}
+}
+}
+if(data91.modifiers !== undefined){
+let data100 = data91.modifiers;
+if(data100 && typeof data100 == "object" && !Array.isArray(data100)){
+if(data100.infantry === undefined){
+const err324 = {instancePath:instancePath+"/units/at/modifiers",schemaPath:"#/properties/units/properties/at/properties/modifiers/required",keyword:"required",params:{missingProperty: "infantry"},message:"must have required property '"+"infantry"+"'"};
+if(vErrors === null){
+vErrors = [err324];
+}
+else {
+vErrors.push(err324);
+}
+errors++;
+}
+if(data100.armor === undefined){
+const err325 = {instancePath:instancePath+"/units/at/modifiers",schemaPath:"#/properties/units/properties/at/properties/modifiers/required",keyword:"required",params:{missingProperty: "armor"},message:"must have required property '"+"armor"+"'"};
+if(vErrors === null){
+vErrors = [err325];
+}
+else {
+vErrors.push(err325);
+}
+errors++;
+}
+if(data100.aircraft === undefined){
+const err326 = {instancePath:instancePath+"/units/at/modifiers",schemaPath:"#/properties/units/properties/at/properties/modifiers/required",keyword:"required",params:{missingProperty: "aircraft"},message:"must have required property '"+"aircraft"+"'"};
+if(vErrors === null){
+vErrors = [err326];
+}
+else {
+vErrors.push(err326);
+}
+errors++;
+}
+for(const key12 in data100){
+if(!(((key12 === "infantry") || (key12 === "armor")) || (key12 === "aircraft"))){
+const err327 = {instancePath:instancePath+"/units/at/modifiers",schemaPath:"#/properties/units/properties/at/properties/modifiers/additionalProperties",keyword:"additionalProperties",params:{additionalProperty: key12},message:"must NOT have additional properties"};
+if(vErrors === null){
+vErrors = [err327];
+}
+else {
+vErrors.push(err327);
+}
+errors++;
+}
+}
+if(data100.infantry !== undefined){
+let data101 = data100.infantry;
+if((typeof data101 == "number") && (isFinite(data101))){
+if(data101 < 0 || isNaN(data101)){
+const err328 = {instancePath:instancePath+"/units/at/modifiers/infantry",schemaPath:"#/properties/units/properties/at/properties/modifiers/properties/infantry/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err328];
+}
+else {
+vErrors.push(err328);
+}
+errors++;
+}
+}
+else {
+const err329 = {instancePath:instancePath+"/units/at/modifiers/infantry",schemaPath:"#/properties/units/properties/at/properties/modifiers/properties/infantry/type",keyword:"type",params:{type: "number"},message:"must be number"};
+if(vErrors === null){
+vErrors = [err329];
+}
+else {
+vErrors.push(err329);
+}
+errors++;
+}
+}
+if(data100.armor !== undefined){
+let data102 = data100.armor;
+if((typeof data102 == "number") && (isFinite(data102))){
+if(data102 < 0 || isNaN(data102)){
+const err330 = {instancePath:instancePath+"/units/at/modifiers/armor",schemaPath:"#/properties/units/properties/at/properties/modifiers/properties/armor/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err330];
+}
+else {
+vErrors.push(err330);
+}
+errors++;
+}
+}
+else {
+const err331 = {instancePath:instancePath+"/units/at/modifiers/armor",schemaPath:"#/properties/units/properties/at/properties/modifiers/properties/armor/type",keyword:"type",params:{type: "number"},message:"must be number"};
+if(vErrors === null){
+vErrors = [err331];
+}
+else {
+vErrors.push(err331);
+}
+errors++;
+}
+}
+if(data100.aircraft !== undefined){
+let data103 = data100.aircraft;
+if((typeof data103 == "number") && (isFinite(data103))){
+if(data103 < 0 || isNaN(data103)){
+const err332 = {instancePath:instancePath+"/units/at/modifiers/aircraft",schemaPath:"#/properties/units/properties/at/properties/modifiers/properties/aircraft/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err332];
+}
+else {
+vErrors.push(err332);
+}
+errors++;
+}
+}
+else {
+const err333 = {instancePath:instancePath+"/units/at/modifiers/aircraft",schemaPath:"#/properties/units/properties/at/properties/modifiers/properties/aircraft/type",keyword:"type",params:{type: "number"},message:"must be number"};
+if(vErrors === null){
+vErrors = [err333];
+}
+else {
+vErrors.push(err333);
+}
+errors++;
+}
+}
+}
+else {
+const err334 = {instancePath:instancePath+"/units/at/modifiers",schemaPath:"#/properties/units/properties/at/properties/modifiers/type",keyword:"type",params:{type: "object"},message:"must be object"};
+if(vErrors === null){
+vErrors = [err334];
+}
+else {
+vErrors.push(err334);
+}
+errors++;
+}
+}
+if(data91.category !== undefined){
+let data104 = data91.category;
+if(typeof data104 === "string"){
+if(func4(data104) < 1){
+const err335 = {instancePath:instancePath+"/units/at/category",schemaPath:"#/properties/units/properties/at/properties/category/minLength",keyword:"minLength",params:{limit: 1},message:"must NOT have fewer than 1 characters"};
+if(vErrors === null){
+vErrors = [err335];
+}
+else {
+vErrors.push(err335);
+}
+errors++;
+}
+}
+else {
+const err336 = {instancePath:instancePath+"/units/at/category",schemaPath:"#/properties/units/properties/at/properties/category/type",keyword:"type",params:{type: "string"},message:"must be string"};
+if(vErrors === null){
+vErrors = [err336];
+}
+else {
+vErrors.push(err336);
+}
+errors++;
+}
+}
+}
+else {
+const err337 = {instancePath:instancePath+"/units/at",schemaPath:"#/properties/units/properties/at/type",keyword:"type",params:{type: "object"},message:"must be object"};
+if(vErrors === null){
+vErrors = [err337];
+}
+else {
+vErrors.push(err337);
+}
+errors++;
+}
+}
+if(data34.car !== undefined){
+let data105 = data34.car;
+if(data105 && typeof data105 == "object" && !Array.isArray(data105)){
+if(data105.hp === undefined){
+const err338 = {instancePath:instancePath+"/units/car",schemaPath:"#/properties/units/properties/car/required",keyword:"required",params:{missingProperty: "hp"},message:"must have required property '"+"hp"+"'"};
+if(vErrors === null){
+vErrors = [err338];
+}
+else {
+vErrors.push(err338);
+}
+errors++;
+}
+if(data105.damage === undefined){
+const err339 = {instancePath:instancePath+"/units/car",schemaPath:"#/properties/units/properties/car/required",keyword:"required",params:{missingProperty: "damage"},message:"must have required property '"+"damage"+"'"};
+if(vErrors === null){
+vErrors = [err339];
+}
+else {
+vErrors.push(err339);
+}
+errors++;
+}
+if(data105.cooldown === undefined){
+const err340 = {instancePath:instancePath+"/units/car",schemaPath:"#/properties/units/properties/car/required",keyword:"required",params:{missingProperty: "cooldown"},message:"must have required property '"+"cooldown"+"'"};
+if(vErrors === null){
+vErrors = [err340];
+}
+else {
+vErrors.push(err340);
+}
+errors++;
+}
+if(data105.range === undefined){
+const err341 = {instancePath:instancePath+"/units/car",schemaPath:"#/properties/units/properties/car/required",keyword:"required",params:{missingProperty: "range"},message:"must have required property '"+"range"+"'"};
+if(vErrors === null){
+vErrors = [err341];
+}
+else {
+vErrors.push(err341);
+}
+errors++;
+}
+if(data105.arc === undefined){
+const err342 = {instancePath:instancePath+"/units/car",schemaPath:"#/properties/units/properties/car/required",keyword:"required",params:{missingProperty: "arc"},message:"must have required property '"+"arc"+"'"};
+if(vErrors === null){
+vErrors = [err342];
+}
+else {
+vErrors.push(err342);
+}
+errors++;
+}
+if(data105.speed === undefined){
+const err343 = {instancePath:instancePath+"/units/car",schemaPath:"#/properties/units/properties/car/required",keyword:"required",params:{missingProperty: "speed"},message:"must have required property '"+"speed"+"'"};
+if(vErrors === null){
+vErrors = [err343];
+}
+else {
+vErrors.push(err343);
+}
+errors++;
+}
+if(data105.cost === undefined){
+const err344 = {instancePath:instancePath+"/units/car",schemaPath:"#/properties/units/properties/car/required",keyword:"required",params:{missingProperty: "cost"},message:"must have required property '"+"cost"+"'"};
+if(vErrors === null){
+vErrors = [err344];
+}
+else {
+vErrors.push(err344);
+}
+errors++;
+}
+if(data105.splash === undefined){
+const err345 = {instancePath:instancePath+"/units/car",schemaPath:"#/properties/units/properties/car/required",keyword:"required",params:{missingProperty: "splash"},message:"must have required property '"+"splash"+"'"};
+if(vErrors === null){
+vErrors = [err345];
+}
+else {
+vErrors.push(err345);
+}
+errors++;
+}
+if(data105.modifiers === undefined){
+const err346 = {instancePath:instancePath+"/units/car",schemaPath:"#/properties/units/properties/car/required",keyword:"required",params:{missingProperty: "modifiers"},message:"must have required property '"+"modifiers"+"'"};
+if(vErrors === null){
+vErrors = [err346];
+}
+else {
+vErrors.push(err346);
+}
+errors++;
+}
+if(data105.category === undefined){
+const err347 = {instancePath:instancePath+"/units/car",schemaPath:"#/properties/units/properties/car/required",keyword:"required",params:{missingProperty: "category"},message:"must have required property '"+"category"+"'"};
+if(vErrors === null){
+vErrors = [err347];
+}
+else {
+vErrors.push(err347);
+}
+errors++;
+}
+for(const key13 in data105){
+if(!(func2.call(schema33.properties.units.properties.car.properties, key13))){
+const err348 = {instancePath:instancePath+"/units/car",schemaPath:"#/properties/units/properties/car/additionalProperties",keyword:"additionalProperties",params:{additionalProperty: key13},message:"must NOT have additional properties"};
+if(vErrors === null){
+vErrors = [err348];
+}
+else {
+vErrors.push(err348);
+}
+errors++;
+}
+}
+if(data105.hp !== undefined){
+let data106 = data105.hp;
+if(!(((typeof data106 == "number") && (!(data106 % 1) && !isNaN(data106))) && (isFinite(data106)))){
+const err349 = {instancePath:instancePath+"/units/car/hp",schemaPath:"#/properties/units/properties/car/properties/hp/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err349];
+}
+else {
+vErrors.push(err349);
+}
+errors++;
+}
+if((typeof data106 == "number") && (isFinite(data106))){
+if(data106 < 0 || isNaN(data106)){
+const err350 = {instancePath:instancePath+"/units/car/hp",schemaPath:"#/properties/units/properties/car/properties/hp/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err350];
+}
+else {
+vErrors.push(err350);
+}
+errors++;
+}
+}
+}
+if(data105.damage !== undefined){
+let data107 = data105.damage;
+if(!(((typeof data107 == "number") && (!(data107 % 1) && !isNaN(data107))) && (isFinite(data107)))){
+const err351 = {instancePath:instancePath+"/units/car/damage",schemaPath:"#/properties/units/properties/car/properties/damage/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err351];
+}
+else {
+vErrors.push(err351);
+}
+errors++;
+}
+if((typeof data107 == "number") && (isFinite(data107))){
+if(data107 < 0 || isNaN(data107)){
+const err352 = {instancePath:instancePath+"/units/car/damage",schemaPath:"#/properties/units/properties/car/properties/damage/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err352];
+}
+else {
+vErrors.push(err352);
+}
+errors++;
+}
+}
+}
+if(data105.cooldown !== undefined){
+let data108 = data105.cooldown;
+if((typeof data108 == "number") && (isFinite(data108))){
+if(data108 < 0 || isNaN(data108)){
+const err353 = {instancePath:instancePath+"/units/car/cooldown",schemaPath:"#/properties/units/properties/car/properties/cooldown/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err353];
+}
+else {
+vErrors.push(err353);
+}
+errors++;
+}
+}
+else {
+const err354 = {instancePath:instancePath+"/units/car/cooldown",schemaPath:"#/properties/units/properties/car/properties/cooldown/type",keyword:"type",params:{type: "number"},message:"must be number"};
+if(vErrors === null){
+vErrors = [err354];
+}
+else {
+vErrors.push(err354);
+}
+errors++;
+}
+}
+if(data105.range !== undefined){
+let data109 = data105.range;
+if((typeof data109 == "number") && (isFinite(data109))){
+if(data109 < 0 || isNaN(data109)){
+const err355 = {instancePath:instancePath+"/units/car/range",schemaPath:"#/properties/units/properties/car/properties/range/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err355];
+}
+else {
+vErrors.push(err355);
+}
+errors++;
+}
+}
+else {
+const err356 = {instancePath:instancePath+"/units/car/range",schemaPath:"#/properties/units/properties/car/properties/range/type",keyword:"type",params:{type: "number"},message:"must be number"};
+if(vErrors === null){
+vErrors = [err356];
+}
+else {
+vErrors.push(err356);
+}
+errors++;
+}
+}
+if(data105.arc !== undefined){
+let data110 = data105.arc;
+if(!(((typeof data110 == "number") && (!(data110 % 1) && !isNaN(data110))) && (isFinite(data110)))){
+const err357 = {instancePath:instancePath+"/units/car/arc",schemaPath:"#/properties/units/properties/car/properties/arc/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err357];
+}
+else {
+vErrors.push(err357);
+}
+errors++;
+}
+if((typeof data110 == "number") && (isFinite(data110))){
+if(data110 < 0 || isNaN(data110)){
+const err358 = {instancePath:instancePath+"/units/car/arc",schemaPath:"#/properties/units/properties/car/properties/arc/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err358];
+}
+else {
+vErrors.push(err358);
+}
+errors++;
+}
+}
+}
+if(data105.speed !== undefined){
+let data111 = data105.speed;
+if((typeof data111 == "number") && (isFinite(data111))){
+if(data111 < 0 || isNaN(data111)){
+const err359 = {instancePath:instancePath+"/units/car/speed",schemaPath:"#/properties/units/properties/car/properties/speed/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err359];
+}
+else {
+vErrors.push(err359);
+}
+errors++;
+}
+}
+else {
+const err360 = {instancePath:instancePath+"/units/car/speed",schemaPath:"#/properties/units/properties/car/properties/speed/type",keyword:"type",params:{type: "number"},message:"must be number"};
+if(vErrors === null){
+vErrors = [err360];
+}
+else {
+vErrors.push(err360);
+}
+errors++;
+}
+}
+if(data105.cost !== undefined){
+let data112 = data105.cost;
+if(!(((typeof data112 == "number") && (!(data112 % 1) && !isNaN(data112))) && (isFinite(data112)))){
+const err361 = {instancePath:instancePath+"/units/car/cost",schemaPath:"#/properties/units/properties/car/properties/cost/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err361];
+}
+else {
+vErrors.push(err361);
+}
+errors++;
+}
+if((typeof data112 == "number") && (isFinite(data112))){
+if(data112 < 0 || isNaN(data112)){
+const err362 = {instancePath:instancePath+"/units/car/cost",schemaPath:"#/properties/units/properties/car/properties/cost/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err362];
+}
+else {
+vErrors.push(err362);
+}
+errors++;
+}
+}
+}
+if(data105.splash !== undefined){
+let data113 = data105.splash;
+if(!(((typeof data113 == "number") && (!(data113 % 1) && !isNaN(data113))) && (isFinite(data113)))){
+const err363 = {instancePath:instancePath+"/units/car/splash",schemaPath:"#/properties/units/properties/car/properties/splash/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err363];
+}
+else {
+vErrors.push(err363);
+}
+errors++;
+}
+if((typeof data113 == "number") && (isFinite(data113))){
+if(data113 < 0 || isNaN(data113)){
+const err364 = {instancePath:instancePath+"/units/car/splash",schemaPath:"#/properties/units/properties/car/properties/splash/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err364];
+}
+else {
+vErrors.push(err364);
+}
+errors++;
+}
+}
+}
+if(data105.modifiers !== undefined){
+let data114 = data105.modifiers;
+if(data114 && typeof data114 == "object" && !Array.isArray(data114)){
+if(data114.infantry === undefined){
+const err365 = {instancePath:instancePath+"/units/car/modifiers",schemaPath:"#/properties/units/properties/car/properties/modifiers/required",keyword:"required",params:{missingProperty: "infantry"},message:"must have required property '"+"infantry"+"'"};
+if(vErrors === null){
+vErrors = [err365];
+}
+else {
+vErrors.push(err365);
+}
+errors++;
+}
+if(data114.armor === undefined){
+const err366 = {instancePath:instancePath+"/units/car/modifiers",schemaPath:"#/properties/units/properties/car/properties/modifiers/required",keyword:"required",params:{missingProperty: "armor"},message:"must have required property '"+"armor"+"'"};
+if(vErrors === null){
+vErrors = [err366];
+}
+else {
+vErrors.push(err366);
+}
+errors++;
+}
+if(data114.aircraft === undefined){
+const err367 = {instancePath:instancePath+"/units/car/modifiers",schemaPath:"#/properties/units/properties/car/properties/modifiers/required",keyword:"required",params:{missingProperty: "aircraft"},message:"must have required property '"+"aircraft"+"'"};
+if(vErrors === null){
+vErrors = [err367];
+}
+else {
+vErrors.push(err367);
+}
+errors++;
+}
+for(const key14 in data114){
+if(!(((key14 === "infantry") || (key14 === "armor")) || (key14 === "aircraft"))){
+const err368 = {instancePath:instancePath+"/units/car/modifiers",schemaPath:"#/properties/units/properties/car/properties/modifiers/additionalProperties",keyword:"additionalProperties",params:{additionalProperty: key14},message:"must NOT have additional properties"};
+if(vErrors === null){
+vErrors = [err368];
+}
+else {
+vErrors.push(err368);
+}
+errors++;
+}
+}
+if(data114.infantry !== undefined){
+let data115 = data114.infantry;
+if((typeof data115 == "number") && (isFinite(data115))){
+if(data115 < 0 || isNaN(data115)){
+const err369 = {instancePath:instancePath+"/units/car/modifiers/infantry",schemaPath:"#/properties/units/properties/car/properties/modifiers/properties/infantry/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err369];
+}
+else {
+vErrors.push(err369);
+}
+errors++;
+}
+}
+else {
+const err370 = {instancePath:instancePath+"/units/car/modifiers/infantry",schemaPath:"#/properties/units/properties/car/properties/modifiers/properties/infantry/type",keyword:"type",params:{type: "number"},message:"must be number"};
+if(vErrors === null){
+vErrors = [err370];
+}
+else {
+vErrors.push(err370);
+}
+errors++;
+}
+}
+if(data114.armor !== undefined){
+let data116 = data114.armor;
+if((typeof data116 == "number") && (isFinite(data116))){
+if(data116 < 0 || isNaN(data116)){
+const err371 = {instancePath:instancePath+"/units/car/modifiers/armor",schemaPath:"#/properties/units/properties/car/properties/modifiers/properties/armor/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err371];
+}
+else {
+vErrors.push(err371);
+}
+errors++;
+}
+}
+else {
+const err372 = {instancePath:instancePath+"/units/car/modifiers/armor",schemaPath:"#/properties/units/properties/car/properties/modifiers/properties/armor/type",keyword:"type",params:{type: "number"},message:"must be number"};
+if(vErrors === null){
+vErrors = [err372];
+}
+else {
+vErrors.push(err372);
+}
+errors++;
+}
+}
+if(data114.aircraft !== undefined){
+let data117 = data114.aircraft;
+if((typeof data117 == "number") && (isFinite(data117))){
+if(data117 < 0 || isNaN(data117)){
+const err373 = {instancePath:instancePath+"/units/car/modifiers/aircraft",schemaPath:"#/properties/units/properties/car/properties/modifiers/properties/aircraft/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err373];
+}
+else {
+vErrors.push(err373);
+}
+errors++;
+}
+}
+else {
+const err374 = {instancePath:instancePath+"/units/car/modifiers/aircraft",schemaPath:"#/properties/units/properties/car/properties/modifiers/properties/aircraft/type",keyword:"type",params:{type: "number"},message:"must be number"};
+if(vErrors === null){
+vErrors = [err374];
+}
+else {
+vErrors.push(err374);
+}
+errors++;
+}
+}
+}
+else {
+const err375 = {instancePath:instancePath+"/units/car/modifiers",schemaPath:"#/properties/units/properties/car/properties/modifiers/type",keyword:"type",params:{type: "object"},message:"must be object"};
+if(vErrors === null){
+vErrors = [err375];
+}
+else {
+vErrors.push(err375);
+}
+errors++;
+}
+}
+if(data105.category !== undefined){
+let data118 = data105.category;
+if(typeof data118 === "string"){
+if(func4(data118) < 1){
+const err376 = {instancePath:instancePath+"/units/car/category",schemaPath:"#/properties/units/properties/car/properties/category/minLength",keyword:"minLength",params:{limit: 1},message:"must NOT have fewer than 1 characters"};
+if(vErrors === null){
+vErrors = [err376];
+}
+else {
+vErrors.push(err376);
+}
+errors++;
+}
+}
+else {
+const err377 = {instancePath:instancePath+"/units/car/category",schemaPath:"#/properties/units/properties/car/properties/category/type",keyword:"type",params:{type: "string"},message:"must be string"};
+if(vErrors === null){
+vErrors = [err377];
+}
+else {
+vErrors.push(err377);
+}
+errors++;
+}
+}
+}
+else {
+const err378 = {instancePath:instancePath+"/units/car",schemaPath:"#/properties/units/properties/car/type",keyword:"type",params:{type: "object"},message:"must be object"};
+if(vErrors === null){
+vErrors = [err378];
+}
+else {
+vErrors.push(err378);
+}
+errors++;
+}
+}
+if(data34.tank !== undefined){
+let data119 = data34.tank;
+if(data119 && typeof data119 == "object" && !Array.isArray(data119)){
+if(data119.hp === undefined){
+const err379 = {instancePath:instancePath+"/units/tank",schemaPath:"#/properties/units/properties/tank/required",keyword:"required",params:{missingProperty: "hp"},message:"must have required property '"+"hp"+"'"};
+if(vErrors === null){
+vErrors = [err379];
+}
+else {
+vErrors.push(err379);
+}
+errors++;
+}
+if(data119.damage === undefined){
+const err380 = {instancePath:instancePath+"/units/tank",schemaPath:"#/properties/units/properties/tank/required",keyword:"required",params:{missingProperty: "damage"},message:"must have required property '"+"damage"+"'"};
+if(vErrors === null){
+vErrors = [err380];
+}
+else {
+vErrors.push(err380);
+}
+errors++;
+}
+if(data119.cooldown === undefined){
+const err381 = {instancePath:instancePath+"/units/tank",schemaPath:"#/properties/units/properties/tank/required",keyword:"required",params:{missingProperty: "cooldown"},message:"must have required property '"+"cooldown"+"'"};
+if(vErrors === null){
+vErrors = [err381];
+}
+else {
+vErrors.push(err381);
+}
+errors++;
+}
+if(data119.range === undefined){
+const err382 = {instancePath:instancePath+"/units/tank",schemaPath:"#/properties/units/properties/tank/required",keyword:"required",params:{missingProperty: "range"},message:"must have required property '"+"range"+"'"};
+if(vErrors === null){
+vErrors = [err382];
+}
+else {
+vErrors.push(err382);
+}
+errors++;
+}
+if(data119.arc === undefined){
+const err383 = {instancePath:instancePath+"/units/tank",schemaPath:"#/properties/units/properties/tank/required",keyword:"required",params:{missingProperty: "arc"},message:"must have required property '"+"arc"+"'"};
+if(vErrors === null){
+vErrors = [err383];
+}
+else {
+vErrors.push(err383);
+}
+errors++;
+}
+if(data119.speed === undefined){
+const err384 = {instancePath:instancePath+"/units/tank",schemaPath:"#/properties/units/properties/tank/required",keyword:"required",params:{missingProperty: "speed"},message:"must have required property '"+"speed"+"'"};
+if(vErrors === null){
+vErrors = [err384];
+}
+else {
+vErrors.push(err384);
+}
+errors++;
+}
+if(data119.cost === undefined){
+const err385 = {instancePath:instancePath+"/units/tank",schemaPath:"#/properties/units/properties/tank/required",keyword:"required",params:{missingProperty: "cost"},message:"must have required property '"+"cost"+"'"};
+if(vErrors === null){
+vErrors = [err385];
+}
+else {
+vErrors.push(err385);
+}
+errors++;
+}
+if(data119.splash === undefined){
+const err386 = {instancePath:instancePath+"/units/tank",schemaPath:"#/properties/units/properties/tank/required",keyword:"required",params:{missingProperty: "splash"},message:"must have required property '"+"splash"+"'"};
+if(vErrors === null){
+vErrors = [err386];
+}
+else {
+vErrors.push(err386);
+}
+errors++;
+}
+if(data119.modifiers === undefined){
+const err387 = {instancePath:instancePath+"/units/tank",schemaPath:"#/properties/units/properties/tank/required",keyword:"required",params:{missingProperty: "modifiers"},message:"must have required property '"+"modifiers"+"'"};
+if(vErrors === null){
+vErrors = [err387];
+}
+else {
+vErrors.push(err387);
+}
+errors++;
+}
+if(data119.category === undefined){
+const err388 = {instancePath:instancePath+"/units/tank",schemaPath:"#/properties/units/properties/tank/required",keyword:"required",params:{missingProperty: "category"},message:"must have required property '"+"category"+"'"};
+if(vErrors === null){
+vErrors = [err388];
+}
+else {
+vErrors.push(err388);
+}
+errors++;
+}
+for(const key15 in data119){
+if(!(func2.call(schema33.properties.units.properties.tank.properties, key15))){
+const err389 = {instancePath:instancePath+"/units/tank",schemaPath:"#/properties/units/properties/tank/additionalProperties",keyword:"additionalProperties",params:{additionalProperty: key15},message:"must NOT have additional properties"};
+if(vErrors === null){
+vErrors = [err389];
+}
+else {
+vErrors.push(err389);
+}
+errors++;
+}
+}
+if(data119.hp !== undefined){
+let data120 = data119.hp;
+if(!(((typeof data120 == "number") && (!(data120 % 1) && !isNaN(data120))) && (isFinite(data120)))){
+const err390 = {instancePath:instancePath+"/units/tank/hp",schemaPath:"#/properties/units/properties/tank/properties/hp/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err390];
+}
+else {
+vErrors.push(err390);
+}
+errors++;
+}
+if((typeof data120 == "number") && (isFinite(data120))){
+if(data120 < 0 || isNaN(data120)){
+const err391 = {instancePath:instancePath+"/units/tank/hp",schemaPath:"#/properties/units/properties/tank/properties/hp/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err391];
+}
+else {
+vErrors.push(err391);
+}
+errors++;
+}
+}
+}
+if(data119.damage !== undefined){
+let data121 = data119.damage;
+if(!(((typeof data121 == "number") && (!(data121 % 1) && !isNaN(data121))) && (isFinite(data121)))){
+const err392 = {instancePath:instancePath+"/units/tank/damage",schemaPath:"#/properties/units/properties/tank/properties/damage/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err392];
+}
+else {
+vErrors.push(err392);
+}
+errors++;
+}
+if((typeof data121 == "number") && (isFinite(data121))){
+if(data121 < 0 || isNaN(data121)){
+const err393 = {instancePath:instancePath+"/units/tank/damage",schemaPath:"#/properties/units/properties/tank/properties/damage/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err393];
+}
+else {
+vErrors.push(err393);
+}
+errors++;
+}
+}
+}
+if(data119.cooldown !== undefined){
+let data122 = data119.cooldown;
+if((typeof data122 == "number") && (isFinite(data122))){
+if(data122 < 0 || isNaN(data122)){
+const err394 = {instancePath:instancePath+"/units/tank/cooldown",schemaPath:"#/properties/units/properties/tank/properties/cooldown/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err394];
+}
+else {
+vErrors.push(err394);
+}
+errors++;
+}
+}
+else {
+const err395 = {instancePath:instancePath+"/units/tank/cooldown",schemaPath:"#/properties/units/properties/tank/properties/cooldown/type",keyword:"type",params:{type: "number"},message:"must be number"};
+if(vErrors === null){
+vErrors = [err395];
+}
+else {
+vErrors.push(err395);
+}
+errors++;
+}
+}
+if(data119.range !== undefined){
+let data123 = data119.range;
+if((typeof data123 == "number") && (isFinite(data123))){
+if(data123 < 0 || isNaN(data123)){
+const err396 = {instancePath:instancePath+"/units/tank/range",schemaPath:"#/properties/units/properties/tank/properties/range/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err396];
+}
+else {
+vErrors.push(err396);
+}
+errors++;
+}
+}
+else {
+const err397 = {instancePath:instancePath+"/units/tank/range",schemaPath:"#/properties/units/properties/tank/properties/range/type",keyword:"type",params:{type: "number"},message:"must be number"};
+if(vErrors === null){
+vErrors = [err397];
+}
+else {
+vErrors.push(err397);
+}
+errors++;
+}
+}
+if(data119.arc !== undefined){
+let data124 = data119.arc;
+if(!(((typeof data124 == "number") && (!(data124 % 1) && !isNaN(data124))) && (isFinite(data124)))){
+const err398 = {instancePath:instancePath+"/units/tank/arc",schemaPath:"#/properties/units/properties/tank/properties/arc/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err398];
+}
+else {
+vErrors.push(err398);
+}
+errors++;
+}
+if((typeof data124 == "number") && (isFinite(data124))){
+if(data124 < 0 || isNaN(data124)){
+const err399 = {instancePath:instancePath+"/units/tank/arc",schemaPath:"#/properties/units/properties/tank/properties/arc/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err399];
+}
+else {
+vErrors.push(err399);
+}
+errors++;
+}
+}
+}
+if(data119.speed !== undefined){
+let data125 = data119.speed;
+if((typeof data125 == "number") && (isFinite(data125))){
+if(data125 < 0 || isNaN(data125)){
+const err400 = {instancePath:instancePath+"/units/tank/speed",schemaPath:"#/properties/units/properties/tank/properties/speed/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err400];
+}
+else {
+vErrors.push(err400);
+}
+errors++;
+}
+}
+else {
+const err401 = {instancePath:instancePath+"/units/tank/speed",schemaPath:"#/properties/units/properties/tank/properties/speed/type",keyword:"type",params:{type: "number"},message:"must be number"};
+if(vErrors === null){
+vErrors = [err401];
+}
+else {
+vErrors.push(err401);
+}
+errors++;
+}
+}
+if(data119.cost !== undefined){
+let data126 = data119.cost;
+if(!(((typeof data126 == "number") && (!(data126 % 1) && !isNaN(data126))) && (isFinite(data126)))){
+const err402 = {instancePath:instancePath+"/units/tank/cost",schemaPath:"#/properties/units/properties/tank/properties/cost/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err402];
+}
+else {
+vErrors.push(err402);
+}
+errors++;
+}
+if((typeof data126 == "number") && (isFinite(data126))){
+if(data126 < 0 || isNaN(data126)){
+const err403 = {instancePath:instancePath+"/units/tank/cost",schemaPath:"#/properties/units/properties/tank/properties/cost/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err403];
+}
+else {
+vErrors.push(err403);
+}
+errors++;
+}
+}
+}
+if(data119.splash !== undefined){
+let data127 = data119.splash;
+if((typeof data127 == "number") && (isFinite(data127))){
+if(data127 < 0 || isNaN(data127)){
+const err404 = {instancePath:instancePath+"/units/tank/splash",schemaPath:"#/properties/units/properties/tank/properties/splash/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err404];
+}
+else {
+vErrors.push(err404);
+}
+errors++;
+}
+}
+else {
+const err405 = {instancePath:instancePath+"/units/tank/splash",schemaPath:"#/properties/units/properties/tank/properties/splash/type",keyword:"type",params:{type: "number"},message:"must be number"};
+if(vErrors === null){
+vErrors = [err405];
+}
+else {
+vErrors.push(err405);
+}
+errors++;
+}
+}
+if(data119.modifiers !== undefined){
+let data128 = data119.modifiers;
+if(data128 && typeof data128 == "object" && !Array.isArray(data128)){
+if(data128.infantry === undefined){
+const err406 = {instancePath:instancePath+"/units/tank/modifiers",schemaPath:"#/properties/units/properties/tank/properties/modifiers/required",keyword:"required",params:{missingProperty: "infantry"},message:"must have required property '"+"infantry"+"'"};
+if(vErrors === null){
+vErrors = [err406];
+}
+else {
+vErrors.push(err406);
+}
+errors++;
+}
+if(data128.armor === undefined){
+const err407 = {instancePath:instancePath+"/units/tank/modifiers",schemaPath:"#/properties/units/properties/tank/properties/modifiers/required",keyword:"required",params:{missingProperty: "armor"},message:"must have required property '"+"armor"+"'"};
+if(vErrors === null){
+vErrors = [err407];
+}
+else {
+vErrors.push(err407);
+}
+errors++;
+}
+if(data128.aircraft === undefined){
+const err408 = {instancePath:instancePath+"/units/tank/modifiers",schemaPath:"#/properties/units/properties/tank/properties/modifiers/required",keyword:"required",params:{missingProperty: "aircraft"},message:"must have required property '"+"aircraft"+"'"};
+if(vErrors === null){
+vErrors = [err408];
+}
+else {
+vErrors.push(err408);
+}
+errors++;
+}
+for(const key16 in data128){
+if(!(((key16 === "infantry") || (key16 === "armor")) || (key16 === "aircraft"))){
+const err409 = {instancePath:instancePath+"/units/tank/modifiers",schemaPath:"#/properties/units/properties/tank/properties/modifiers/additionalProperties",keyword:"additionalProperties",params:{additionalProperty: key16},message:"must NOT have additional properties"};
+if(vErrors === null){
+vErrors = [err409];
+}
+else {
+vErrors.push(err409);
+}
+errors++;
+}
+}
+if(data128.infantry !== undefined){
+let data129 = data128.infantry;
+if(!(((typeof data129 == "number") && (!(data129 % 1) && !isNaN(data129))) && (isFinite(data129)))){
+const err410 = {instancePath:instancePath+"/units/tank/modifiers/infantry",schemaPath:"#/properties/units/properties/tank/properties/modifiers/properties/infantry/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err410];
+}
+else {
+vErrors.push(err410);
+}
+errors++;
+}
+if((typeof data129 == "number") && (isFinite(data129))){
+if(data129 < 0 || isNaN(data129)){
+const err411 = {instancePath:instancePath+"/units/tank/modifiers/infantry",schemaPath:"#/properties/units/properties/tank/properties/modifiers/properties/infantry/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err411];
+}
+else {
+vErrors.push(err411);
+}
+errors++;
+}
+}
+}
+if(data128.armor !== undefined){
+let data130 = data128.armor;
+if((typeof data130 == "number") && (isFinite(data130))){
+if(data130 < 0 || isNaN(data130)){
+const err412 = {instancePath:instancePath+"/units/tank/modifiers/armor",schemaPath:"#/properties/units/properties/tank/properties/modifiers/properties/armor/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err412];
+}
+else {
+vErrors.push(err412);
+}
+errors++;
+}
+}
+else {
+const err413 = {instancePath:instancePath+"/units/tank/modifiers/armor",schemaPath:"#/properties/units/properties/tank/properties/modifiers/properties/armor/type",keyword:"type",params:{type: "number"},message:"must be number"};
+if(vErrors === null){
+vErrors = [err413];
+}
+else {
+vErrors.push(err413);
+}
+errors++;
+}
+}
+if(data128.aircraft !== undefined){
+let data131 = data128.aircraft;
+if((typeof data131 == "number") && (isFinite(data131))){
+if(data131 < 0 || isNaN(data131)){
+const err414 = {instancePath:instancePath+"/units/tank/modifiers/aircraft",schemaPath:"#/properties/units/properties/tank/properties/modifiers/properties/aircraft/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err414];
+}
+else {
+vErrors.push(err414);
+}
+errors++;
+}
+}
+else {
+const err415 = {instancePath:instancePath+"/units/tank/modifiers/aircraft",schemaPath:"#/properties/units/properties/tank/properties/modifiers/properties/aircraft/type",keyword:"type",params:{type: "number"},message:"must be number"};
+if(vErrors === null){
+vErrors = [err415];
+}
+else {
+vErrors.push(err415);
+}
+errors++;
+}
+}
+}
+else {
+const err416 = {instancePath:instancePath+"/units/tank/modifiers",schemaPath:"#/properties/units/properties/tank/properties/modifiers/type",keyword:"type",params:{type: "object"},message:"must be object"};
+if(vErrors === null){
+vErrors = [err416];
+}
+else {
+vErrors.push(err416);
+}
+errors++;
+}
+}
+if(data119.category !== undefined){
+let data132 = data119.category;
+if(typeof data132 === "string"){
+if(func4(data132) < 1){
+const err417 = {instancePath:instancePath+"/units/tank/category",schemaPath:"#/properties/units/properties/tank/properties/category/minLength",keyword:"minLength",params:{limit: 1},message:"must NOT have fewer than 1 characters"};
+if(vErrors === null){
+vErrors = [err417];
+}
+else {
+vErrors.push(err417);
+}
+errors++;
+}
+}
+else {
+const err418 = {instancePath:instancePath+"/units/tank/category",schemaPath:"#/properties/units/properties/tank/properties/category/type",keyword:"type",params:{type: "string"},message:"must be string"};
+if(vErrors === null){
+vErrors = [err418];
+}
+else {
+vErrors.push(err418);
+}
+errors++;
+}
+}
+}
+else {
+const err419 = {instancePath:instancePath+"/units/tank",schemaPath:"#/properties/units/properties/tank/type",keyword:"type",params:{type: "object"},message:"must be object"};
+if(vErrors === null){
+vErrors = [err419];
+}
+else {
+vErrors.push(err419);
+}
+errors++;
+}
+}
+if(data34.heavy !== undefined){
+let data133 = data34.heavy;
+if(data133 && typeof data133 == "object" && !Array.isArray(data133)){
+if(data133.hp === undefined){
+const err420 = {instancePath:instancePath+"/units/heavy",schemaPath:"#/properties/units/properties/heavy/required",keyword:"required",params:{missingProperty: "hp"},message:"must have required property '"+"hp"+"'"};
+if(vErrors === null){
+vErrors = [err420];
+}
+else {
+vErrors.push(err420);
+}
+errors++;
+}
+if(data133.damage === undefined){
+const err421 = {instancePath:instancePath+"/units/heavy",schemaPath:"#/properties/units/properties/heavy/required",keyword:"required",params:{missingProperty: "damage"},message:"must have required property '"+"damage"+"'"};
+if(vErrors === null){
+vErrors = [err421];
+}
+else {
+vErrors.push(err421);
+}
+errors++;
+}
+if(data133.cooldown === undefined){
+const err422 = {instancePath:instancePath+"/units/heavy",schemaPath:"#/properties/units/properties/heavy/required",keyword:"required",params:{missingProperty: "cooldown"},message:"must have required property '"+"cooldown"+"'"};
+if(vErrors === null){
+vErrors = [err422];
+}
+else {
+vErrors.push(err422);
+}
+errors++;
+}
+if(data133.range === undefined){
+const err423 = {instancePath:instancePath+"/units/heavy",schemaPath:"#/properties/units/properties/heavy/required",keyword:"required",params:{missingProperty: "range"},message:"must have required property '"+"range"+"'"};
+if(vErrors === null){
+vErrors = [err423];
+}
+else {
+vErrors.push(err423);
+}
+errors++;
+}
+if(data133.arc === undefined){
+const err424 = {instancePath:instancePath+"/units/heavy",schemaPath:"#/properties/units/properties/heavy/required",keyword:"required",params:{missingProperty: "arc"},message:"must have required property '"+"arc"+"'"};
+if(vErrors === null){
+vErrors = [err424];
+}
+else {
+vErrors.push(err424);
+}
+errors++;
+}
+if(data133.speed === undefined){
+const err425 = {instancePath:instancePath+"/units/heavy",schemaPath:"#/properties/units/properties/heavy/required",keyword:"required",params:{missingProperty: "speed"},message:"must have required property '"+"speed"+"'"};
+if(vErrors === null){
+vErrors = [err425];
+}
+else {
+vErrors.push(err425);
+}
+errors++;
+}
+if(data133.cost === undefined){
+const err426 = {instancePath:instancePath+"/units/heavy",schemaPath:"#/properties/units/properties/heavy/required",keyword:"required",params:{missingProperty: "cost"},message:"must have required property '"+"cost"+"'"};
+if(vErrors === null){
+vErrors = [err426];
+}
+else {
+vErrors.push(err426);
+}
+errors++;
+}
+if(data133.splash === undefined){
+const err427 = {instancePath:instancePath+"/units/heavy",schemaPath:"#/properties/units/properties/heavy/required",keyword:"required",params:{missingProperty: "splash"},message:"must have required property '"+"splash"+"'"};
+if(vErrors === null){
+vErrors = [err427];
+}
+else {
+vErrors.push(err427);
+}
+errors++;
+}
+if(data133.modifiers === undefined){
+const err428 = {instancePath:instancePath+"/units/heavy",schemaPath:"#/properties/units/properties/heavy/required",keyword:"required",params:{missingProperty: "modifiers"},message:"must have required property '"+"modifiers"+"'"};
+if(vErrors === null){
+vErrors = [err428];
+}
+else {
+vErrors.push(err428);
+}
+errors++;
+}
+if(data133.category === undefined){
+const err429 = {instancePath:instancePath+"/units/heavy",schemaPath:"#/properties/units/properties/heavy/required",keyword:"required",params:{missingProperty: "category"},message:"must have required property '"+"category"+"'"};
+if(vErrors === null){
+vErrors = [err429];
+}
+else {
+vErrors.push(err429);
+}
+errors++;
+}
+for(const key17 in data133){
+if(!(func2.call(schema33.properties.units.properties.heavy.properties, key17))){
+const err430 = {instancePath:instancePath+"/units/heavy",schemaPath:"#/properties/units/properties/heavy/additionalProperties",keyword:"additionalProperties",params:{additionalProperty: key17},message:"must NOT have additional properties"};
+if(vErrors === null){
+vErrors = [err430];
+}
+else {
+vErrors.push(err430);
+}
+errors++;
+}
+}
+if(data133.hp !== undefined){
+let data134 = data133.hp;
+if(!(((typeof data134 == "number") && (!(data134 % 1) && !isNaN(data134))) && (isFinite(data134)))){
+const err431 = {instancePath:instancePath+"/units/heavy/hp",schemaPath:"#/properties/units/properties/heavy/properties/hp/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err431];
+}
+else {
+vErrors.push(err431);
+}
+errors++;
+}
+if((typeof data134 == "number") && (isFinite(data134))){
+if(data134 < 0 || isNaN(data134)){
+const err432 = {instancePath:instancePath+"/units/heavy/hp",schemaPath:"#/properties/units/properties/heavy/properties/hp/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err432];
+}
+else {
+vErrors.push(err432);
+}
+errors++;
+}
+}
+}
+if(data133.damage !== undefined){
+let data135 = data133.damage;
+if(!(((typeof data135 == "number") && (!(data135 % 1) && !isNaN(data135))) && (isFinite(data135)))){
+const err433 = {instancePath:instancePath+"/units/heavy/damage",schemaPath:"#/properties/units/properties/heavy/properties/damage/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err433];
+}
+else {
+vErrors.push(err433);
+}
+errors++;
+}
+if((typeof data135 == "number") && (isFinite(data135))){
+if(data135 < 0 || isNaN(data135)){
+const err434 = {instancePath:instancePath+"/units/heavy/damage",schemaPath:"#/properties/units/properties/heavy/properties/damage/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err434];
+}
+else {
+vErrors.push(err434);
+}
+errors++;
+}
+}
+}
+if(data133.cooldown !== undefined){
+let data136 = data133.cooldown;
+if((typeof data136 == "number") && (isFinite(data136))){
+if(data136 < 0 || isNaN(data136)){
+const err435 = {instancePath:instancePath+"/units/heavy/cooldown",schemaPath:"#/properties/units/properties/heavy/properties/cooldown/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err435];
+}
+else {
+vErrors.push(err435);
+}
+errors++;
+}
+}
+else {
+const err436 = {instancePath:instancePath+"/units/heavy/cooldown",schemaPath:"#/properties/units/properties/heavy/properties/cooldown/type",keyword:"type",params:{type: "number"},message:"must be number"};
+if(vErrors === null){
+vErrors = [err436];
+}
+else {
+vErrors.push(err436);
+}
+errors++;
+}
+}
+if(data133.range !== undefined){
+let data137 = data133.range;
+if((typeof data137 == "number") && (isFinite(data137))){
+if(data137 < 0 || isNaN(data137)){
+const err437 = {instancePath:instancePath+"/units/heavy/range",schemaPath:"#/properties/units/properties/heavy/properties/range/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err437];
+}
+else {
+vErrors.push(err437);
+}
+errors++;
+}
+}
+else {
+const err438 = {instancePath:instancePath+"/units/heavy/range",schemaPath:"#/properties/units/properties/heavy/properties/range/type",keyword:"type",params:{type: "number"},message:"must be number"};
+if(vErrors === null){
+vErrors = [err438];
+}
+else {
+vErrors.push(err438);
+}
+errors++;
+}
+}
+if(data133.arc !== undefined){
+let data138 = data133.arc;
+if(!(((typeof data138 == "number") && (!(data138 % 1) && !isNaN(data138))) && (isFinite(data138)))){
+const err439 = {instancePath:instancePath+"/units/heavy/arc",schemaPath:"#/properties/units/properties/heavy/properties/arc/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err439];
+}
+else {
+vErrors.push(err439);
+}
+errors++;
+}
+if((typeof data138 == "number") && (isFinite(data138))){
+if(data138 < 0 || isNaN(data138)){
+const err440 = {instancePath:instancePath+"/units/heavy/arc",schemaPath:"#/properties/units/properties/heavy/properties/arc/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err440];
+}
+else {
+vErrors.push(err440);
+}
+errors++;
+}
+}
+}
+if(data133.speed !== undefined){
+let data139 = data133.speed;
+if((typeof data139 == "number") && (isFinite(data139))){
+if(data139 < 0 || isNaN(data139)){
+const err441 = {instancePath:instancePath+"/units/heavy/speed",schemaPath:"#/properties/units/properties/heavy/properties/speed/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err441];
+}
+else {
+vErrors.push(err441);
+}
+errors++;
+}
+}
+else {
+const err442 = {instancePath:instancePath+"/units/heavy/speed",schemaPath:"#/properties/units/properties/heavy/properties/speed/type",keyword:"type",params:{type: "number"},message:"must be number"};
+if(vErrors === null){
+vErrors = [err442];
+}
+else {
+vErrors.push(err442);
+}
+errors++;
+}
+}
+if(data133.cost !== undefined){
+let data140 = data133.cost;
+if(!(((typeof data140 == "number") && (!(data140 % 1) && !isNaN(data140))) && (isFinite(data140)))){
+const err443 = {instancePath:instancePath+"/units/heavy/cost",schemaPath:"#/properties/units/properties/heavy/properties/cost/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err443];
+}
+else {
+vErrors.push(err443);
+}
+errors++;
+}
+if((typeof data140 == "number") && (isFinite(data140))){
+if(data140 < 0 || isNaN(data140)){
+const err444 = {instancePath:instancePath+"/units/heavy/cost",schemaPath:"#/properties/units/properties/heavy/properties/cost/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err444];
+}
+else {
+vErrors.push(err444);
+}
+errors++;
+}
+}
+}
+if(data133.splash !== undefined){
+let data141 = data133.splash;
+if((typeof data141 == "number") && (isFinite(data141))){
+if(data141 < 0 || isNaN(data141)){
+const err445 = {instancePath:instancePath+"/units/heavy/splash",schemaPath:"#/properties/units/properties/heavy/properties/splash/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err445];
+}
+else {
+vErrors.push(err445);
+}
+errors++;
+}
+}
+else {
+const err446 = {instancePath:instancePath+"/units/heavy/splash",schemaPath:"#/properties/units/properties/heavy/properties/splash/type",keyword:"type",params:{type: "number"},message:"must be number"};
+if(vErrors === null){
+vErrors = [err446];
+}
+else {
+vErrors.push(err446);
+}
+errors++;
+}
+}
+if(data133.modifiers !== undefined){
+let data142 = data133.modifiers;
+if(data142 && typeof data142 == "object" && !Array.isArray(data142)){
+if(data142.infantry === undefined){
+const err447 = {instancePath:instancePath+"/units/heavy/modifiers",schemaPath:"#/properties/units/properties/heavy/properties/modifiers/required",keyword:"required",params:{missingProperty: "infantry"},message:"must have required property '"+"infantry"+"'"};
+if(vErrors === null){
+vErrors = [err447];
+}
+else {
+vErrors.push(err447);
+}
+errors++;
+}
+if(data142.armor === undefined){
+const err448 = {instancePath:instancePath+"/units/heavy/modifiers",schemaPath:"#/properties/units/properties/heavy/properties/modifiers/required",keyword:"required",params:{missingProperty: "armor"},message:"must have required property '"+"armor"+"'"};
+if(vErrors === null){
+vErrors = [err448];
+}
+else {
+vErrors.push(err448);
+}
+errors++;
+}
+if(data142.aircraft === undefined){
+const err449 = {instancePath:instancePath+"/units/heavy/modifiers",schemaPath:"#/properties/units/properties/heavy/properties/modifiers/required",keyword:"required",params:{missingProperty: "aircraft"},message:"must have required property '"+"aircraft"+"'"};
+if(vErrors === null){
+vErrors = [err449];
+}
+else {
+vErrors.push(err449);
+}
+errors++;
+}
+for(const key18 in data142){
+if(!(((key18 === "infantry") || (key18 === "armor")) || (key18 === "aircraft"))){
+const err450 = {instancePath:instancePath+"/units/heavy/modifiers",schemaPath:"#/properties/units/properties/heavy/properties/modifiers/additionalProperties",keyword:"additionalProperties",params:{additionalProperty: key18},message:"must NOT have additional properties"};
+if(vErrors === null){
+vErrors = [err450];
+}
+else {
+vErrors.push(err450);
+}
+errors++;
+}
+}
+if(data142.infantry !== undefined){
+let data143 = data142.infantry;
+if(!(((typeof data143 == "number") && (!(data143 % 1) && !isNaN(data143))) && (isFinite(data143)))){
+const err451 = {instancePath:instancePath+"/units/heavy/modifiers/infantry",schemaPath:"#/properties/units/properties/heavy/properties/modifiers/properties/infantry/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err451];
+}
+else {
+vErrors.push(err451);
+}
+errors++;
+}
+if((typeof data143 == "number") && (isFinite(data143))){
+if(data143 < 0 || isNaN(data143)){
+const err452 = {instancePath:instancePath+"/units/heavy/modifiers/infantry",schemaPath:"#/properties/units/properties/heavy/properties/modifiers/properties/infantry/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err452];
+}
+else {
+vErrors.push(err452);
+}
+errors++;
+}
+}
+}
+if(data142.armor !== undefined){
+let data144 = data142.armor;
+if((typeof data144 == "number") && (isFinite(data144))){
+if(data144 < 0 || isNaN(data144)){
+const err453 = {instancePath:instancePath+"/units/heavy/modifiers/armor",schemaPath:"#/properties/units/properties/heavy/properties/modifiers/properties/armor/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err453];
+}
+else {
+vErrors.push(err453);
+}
+errors++;
+}
+}
+else {
+const err454 = {instancePath:instancePath+"/units/heavy/modifiers/armor",schemaPath:"#/properties/units/properties/heavy/properties/modifiers/properties/armor/type",keyword:"type",params:{type: "number"},message:"must be number"};
+if(vErrors === null){
+vErrors = [err454];
+}
+else {
+vErrors.push(err454);
+}
+errors++;
+}
+}
+if(data142.aircraft !== undefined){
+let data145 = data142.aircraft;
+if((typeof data145 == "number") && (isFinite(data145))){
+if(data145 < 0 || isNaN(data145)){
+const err455 = {instancePath:instancePath+"/units/heavy/modifiers/aircraft",schemaPath:"#/properties/units/properties/heavy/properties/modifiers/properties/aircraft/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err455];
+}
+else {
+vErrors.push(err455);
+}
+errors++;
+}
+}
+else {
+const err456 = {instancePath:instancePath+"/units/heavy/modifiers/aircraft",schemaPath:"#/properties/units/properties/heavy/properties/modifiers/properties/aircraft/type",keyword:"type",params:{type: "number"},message:"must be number"};
+if(vErrors === null){
+vErrors = [err456];
+}
+else {
+vErrors.push(err456);
+}
+errors++;
+}
+}
+}
+else {
+const err457 = {instancePath:instancePath+"/units/heavy/modifiers",schemaPath:"#/properties/units/properties/heavy/properties/modifiers/type",keyword:"type",params:{type: "object"},message:"must be object"};
+if(vErrors === null){
+vErrors = [err457];
+}
+else {
+vErrors.push(err457);
+}
+errors++;
+}
+}
+if(data133.category !== undefined){
+let data146 = data133.category;
+if(typeof data146 === "string"){
+if(func4(data146) < 1){
+const err458 = {instancePath:instancePath+"/units/heavy/category",schemaPath:"#/properties/units/properties/heavy/properties/category/minLength",keyword:"minLength",params:{limit: 1},message:"must NOT have fewer than 1 characters"};
+if(vErrors === null){
+vErrors = [err458];
+}
+else {
+vErrors.push(err458);
+}
+errors++;
+}
+}
+else {
+const err459 = {instancePath:instancePath+"/units/heavy/category",schemaPath:"#/properties/units/properties/heavy/properties/category/type",keyword:"type",params:{type: "string"},message:"must be string"};
+if(vErrors === null){
+vErrors = [err459];
+}
+else {
+vErrors.push(err459);
+}
+errors++;
+}
+}
+}
+else {
+const err460 = {instancePath:instancePath+"/units/heavy",schemaPath:"#/properties/units/properties/heavy/type",keyword:"type",params:{type: "object"},message:"must be object"};
+if(vErrors === null){
+vErrors = [err460];
+}
+else {
+vErrors.push(err460);
+}
+errors++;
+}
+}
+if(data34.destroyer !== undefined){
+let data147 = data34.destroyer;
+if(data147 && typeof data147 == "object" && !Array.isArray(data147)){
+if(data147.hp === undefined){
+const err461 = {instancePath:instancePath+"/units/destroyer",schemaPath:"#/properties/units/properties/destroyer/required",keyword:"required",params:{missingProperty: "hp"},message:"must have required property '"+"hp"+"'"};
+if(vErrors === null){
+vErrors = [err461];
+}
+else {
+vErrors.push(err461);
+}
+errors++;
+}
+if(data147.damage === undefined){
+const err462 = {instancePath:instancePath+"/units/destroyer",schemaPath:"#/properties/units/properties/destroyer/required",keyword:"required",params:{missingProperty: "damage"},message:"must have required property '"+"damage"+"'"};
+if(vErrors === null){
+vErrors = [err462];
+}
+else {
+vErrors.push(err462);
+}
+errors++;
+}
+if(data147.cooldown === undefined){
+const err463 = {instancePath:instancePath+"/units/destroyer",schemaPath:"#/properties/units/properties/destroyer/required",keyword:"required",params:{missingProperty: "cooldown"},message:"must have required property '"+"cooldown"+"'"};
+if(vErrors === null){
+vErrors = [err463];
+}
+else {
+vErrors.push(err463);
+}
+errors++;
+}
+if(data147.range === undefined){
+const err464 = {instancePath:instancePath+"/units/destroyer",schemaPath:"#/properties/units/properties/destroyer/required",keyword:"required",params:{missingProperty: "range"},message:"must have required property '"+"range"+"'"};
+if(vErrors === null){
+vErrors = [err464];
+}
+else {
+vErrors.push(err464);
+}
+errors++;
+}
+if(data147.arc === undefined){
+const err465 = {instancePath:instancePath+"/units/destroyer",schemaPath:"#/properties/units/properties/destroyer/required",keyword:"required",params:{missingProperty: "arc"},message:"must have required property '"+"arc"+"'"};
+if(vErrors === null){
+vErrors = [err465];
+}
+else {
+vErrors.push(err465);
+}
+errors++;
+}
+if(data147.speed === undefined){
+const err466 = {instancePath:instancePath+"/units/destroyer",schemaPath:"#/properties/units/properties/destroyer/required",keyword:"required",params:{missingProperty: "speed"},message:"must have required property '"+"speed"+"'"};
+if(vErrors === null){
+vErrors = [err466];
+}
+else {
+vErrors.push(err466);
+}
+errors++;
+}
+if(data147.cost === undefined){
+const err467 = {instancePath:instancePath+"/units/destroyer",schemaPath:"#/properties/units/properties/destroyer/required",keyword:"required",params:{missingProperty: "cost"},message:"must have required property '"+"cost"+"'"};
+if(vErrors === null){
+vErrors = [err467];
+}
+else {
+vErrors.push(err467);
+}
+errors++;
+}
+if(data147.splash === undefined){
+const err468 = {instancePath:instancePath+"/units/destroyer",schemaPath:"#/properties/units/properties/destroyer/required",keyword:"required",params:{missingProperty: "splash"},message:"must have required property '"+"splash"+"'"};
+if(vErrors === null){
+vErrors = [err468];
+}
+else {
+vErrors.push(err468);
+}
+errors++;
+}
+if(data147.modifiers === undefined){
+const err469 = {instancePath:instancePath+"/units/destroyer",schemaPath:"#/properties/units/properties/destroyer/required",keyword:"required",params:{missingProperty: "modifiers"},message:"must have required property '"+"modifiers"+"'"};
+if(vErrors === null){
+vErrors = [err469];
+}
+else {
+vErrors.push(err469);
+}
+errors++;
+}
+if(data147.category === undefined){
+const err470 = {instancePath:instancePath+"/units/destroyer",schemaPath:"#/properties/units/properties/destroyer/required",keyword:"required",params:{missingProperty: "category"},message:"must have required property '"+"category"+"'"};
+if(vErrors === null){
+vErrors = [err470];
+}
+else {
+vErrors.push(err470);
+}
+errors++;
+}
+for(const key19 in data147){
+if(!(func2.call(schema33.properties.units.properties.destroyer.properties, key19))){
+const err471 = {instancePath:instancePath+"/units/destroyer",schemaPath:"#/properties/units/properties/destroyer/additionalProperties",keyword:"additionalProperties",params:{additionalProperty: key19},message:"must NOT have additional properties"};
+if(vErrors === null){
+vErrors = [err471];
+}
+else {
+vErrors.push(err471);
+}
+errors++;
+}
+}
+if(data147.hp !== undefined){
+let data148 = data147.hp;
+if(!(((typeof data148 == "number") && (!(data148 % 1) && !isNaN(data148))) && (isFinite(data148)))){
+const err472 = {instancePath:instancePath+"/units/destroyer/hp",schemaPath:"#/properties/units/properties/destroyer/properties/hp/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err472];
+}
+else {
+vErrors.push(err472);
+}
+errors++;
+}
+if((typeof data148 == "number") && (isFinite(data148))){
+if(data148 < 0 || isNaN(data148)){
+const err473 = {instancePath:instancePath+"/units/destroyer/hp",schemaPath:"#/properties/units/properties/destroyer/properties/hp/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err473];
+}
+else {
+vErrors.push(err473);
+}
+errors++;
+}
+}
+}
+if(data147.damage !== undefined){
+let data149 = data147.damage;
+if(!(((typeof data149 == "number") && (!(data149 % 1) && !isNaN(data149))) && (isFinite(data149)))){
+const err474 = {instancePath:instancePath+"/units/destroyer/damage",schemaPath:"#/properties/units/properties/destroyer/properties/damage/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err474];
+}
+else {
+vErrors.push(err474);
+}
+errors++;
+}
+if((typeof data149 == "number") && (isFinite(data149))){
+if(data149 < 0 || isNaN(data149)){
+const err475 = {instancePath:instancePath+"/units/destroyer/damage",schemaPath:"#/properties/units/properties/destroyer/properties/damage/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err475];
+}
+else {
+vErrors.push(err475);
+}
+errors++;
+}
+}
+}
+if(data147.cooldown !== undefined){
+let data150 = data147.cooldown;
+if((typeof data150 == "number") && (isFinite(data150))){
+if(data150 < 0 || isNaN(data150)){
+const err476 = {instancePath:instancePath+"/units/destroyer/cooldown",schemaPath:"#/properties/units/properties/destroyer/properties/cooldown/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err476];
+}
+else {
+vErrors.push(err476);
+}
+errors++;
+}
+}
+else {
+const err477 = {instancePath:instancePath+"/units/destroyer/cooldown",schemaPath:"#/properties/units/properties/destroyer/properties/cooldown/type",keyword:"type",params:{type: "number"},message:"must be number"};
+if(vErrors === null){
+vErrors = [err477];
+}
+else {
+vErrors.push(err477);
+}
+errors++;
+}
+}
+if(data147.range !== undefined){
+let data151 = data147.range;
+if((typeof data151 == "number") && (isFinite(data151))){
+if(data151 < 0 || isNaN(data151)){
+const err478 = {instancePath:instancePath+"/units/destroyer/range",schemaPath:"#/properties/units/properties/destroyer/properties/range/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err478];
+}
+else {
+vErrors.push(err478);
+}
+errors++;
+}
+}
+else {
+const err479 = {instancePath:instancePath+"/units/destroyer/range",schemaPath:"#/properties/units/properties/destroyer/properties/range/type",keyword:"type",params:{type: "number"},message:"must be number"};
+if(vErrors === null){
+vErrors = [err479];
+}
+else {
+vErrors.push(err479);
+}
+errors++;
+}
+}
+if(data147.arc !== undefined){
+let data152 = data147.arc;
+if(!(((typeof data152 == "number") && (!(data152 % 1) && !isNaN(data152))) && (isFinite(data152)))){
+const err480 = {instancePath:instancePath+"/units/destroyer/arc",schemaPath:"#/properties/units/properties/destroyer/properties/arc/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err480];
+}
+else {
+vErrors.push(err480);
+}
+errors++;
+}
+if((typeof data152 == "number") && (isFinite(data152))){
+if(data152 < 0 || isNaN(data152)){
+const err481 = {instancePath:instancePath+"/units/destroyer/arc",schemaPath:"#/properties/units/properties/destroyer/properties/arc/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err481];
+}
+else {
+vErrors.push(err481);
+}
+errors++;
+}
+}
+}
+if(data147.speed !== undefined){
+let data153 = data147.speed;
+if((typeof data153 == "number") && (isFinite(data153))){
+if(data153 < 0 || isNaN(data153)){
+const err482 = {instancePath:instancePath+"/units/destroyer/speed",schemaPath:"#/properties/units/properties/destroyer/properties/speed/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err482];
+}
+else {
+vErrors.push(err482);
+}
+errors++;
+}
+}
+else {
+const err483 = {instancePath:instancePath+"/units/destroyer/speed",schemaPath:"#/properties/units/properties/destroyer/properties/speed/type",keyword:"type",params:{type: "number"},message:"must be number"};
+if(vErrors === null){
+vErrors = [err483];
+}
+else {
+vErrors.push(err483);
+}
+errors++;
+}
+}
+if(data147.cost !== undefined){
+let data154 = data147.cost;
+if(!(((typeof data154 == "number") && (!(data154 % 1) && !isNaN(data154))) && (isFinite(data154)))){
+const err484 = {instancePath:instancePath+"/units/destroyer/cost",schemaPath:"#/properties/units/properties/destroyer/properties/cost/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err484];
+}
+else {
+vErrors.push(err484);
+}
+errors++;
+}
+if((typeof data154 == "number") && (isFinite(data154))){
+if(data154 < 0 || isNaN(data154)){
+const err485 = {instancePath:instancePath+"/units/destroyer/cost",schemaPath:"#/properties/units/properties/destroyer/properties/cost/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err485];
+}
+else {
+vErrors.push(err485);
+}
+errors++;
+}
+}
+}
+if(data147.splash !== undefined){
+let data155 = data147.splash;
+if(!(((typeof data155 == "number") && (!(data155 % 1) && !isNaN(data155))) && (isFinite(data155)))){
+const err486 = {instancePath:instancePath+"/units/destroyer/splash",schemaPath:"#/properties/units/properties/destroyer/properties/splash/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err486];
+}
+else {
+vErrors.push(err486);
+}
+errors++;
+}
+if((typeof data155 == "number") && (isFinite(data155))){
+if(data155 < 0 || isNaN(data155)){
+const err487 = {instancePath:instancePath+"/units/destroyer/splash",schemaPath:"#/properties/units/properties/destroyer/properties/splash/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err487];
+}
+else {
+vErrors.push(err487);
+}
+errors++;
+}
+}
+}
+if(data147.modifiers !== undefined){
+let data156 = data147.modifiers;
+if(data156 && typeof data156 == "object" && !Array.isArray(data156)){
+if(data156.infantry === undefined){
+const err488 = {instancePath:instancePath+"/units/destroyer/modifiers",schemaPath:"#/properties/units/properties/destroyer/properties/modifiers/required",keyword:"required",params:{missingProperty: "infantry"},message:"must have required property '"+"infantry"+"'"};
+if(vErrors === null){
+vErrors = [err488];
+}
+else {
+vErrors.push(err488);
+}
+errors++;
+}
+if(data156.armor === undefined){
+const err489 = {instancePath:instancePath+"/units/destroyer/modifiers",schemaPath:"#/properties/units/properties/destroyer/properties/modifiers/required",keyword:"required",params:{missingProperty: "armor"},message:"must have required property '"+"armor"+"'"};
+if(vErrors === null){
+vErrors = [err489];
+}
+else {
+vErrors.push(err489);
+}
+errors++;
+}
+if(data156.aircraft === undefined){
+const err490 = {instancePath:instancePath+"/units/destroyer/modifiers",schemaPath:"#/properties/units/properties/destroyer/properties/modifiers/required",keyword:"required",params:{missingProperty: "aircraft"},message:"must have required property '"+"aircraft"+"'"};
+if(vErrors === null){
+vErrors = [err490];
+}
+else {
+vErrors.push(err490);
+}
+errors++;
+}
+for(const key20 in data156){
+if(!(((key20 === "infantry") || (key20 === "armor")) || (key20 === "aircraft"))){
+const err491 = {instancePath:instancePath+"/units/destroyer/modifiers",schemaPath:"#/properties/units/properties/destroyer/properties/modifiers/additionalProperties",keyword:"additionalProperties",params:{additionalProperty: key20},message:"must NOT have additional properties"};
+if(vErrors === null){
+vErrors = [err491];
+}
+else {
+vErrors.push(err491);
+}
+errors++;
+}
+}
+if(data156.infantry !== undefined){
+let data157 = data156.infantry;
+if((typeof data157 == "number") && (isFinite(data157))){
+if(data157 < 0 || isNaN(data157)){
+const err492 = {instancePath:instancePath+"/units/destroyer/modifiers/infantry",schemaPath:"#/properties/units/properties/destroyer/properties/modifiers/properties/infantry/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err492];
+}
+else {
+vErrors.push(err492);
+}
+errors++;
+}
+}
+else {
+const err493 = {instancePath:instancePath+"/units/destroyer/modifiers/infantry",schemaPath:"#/properties/units/properties/destroyer/properties/modifiers/properties/infantry/type",keyword:"type",params:{type: "number"},message:"must be number"};
+if(vErrors === null){
+vErrors = [err493];
+}
+else {
+vErrors.push(err493);
+}
+errors++;
+}
+}
+if(data156.armor !== undefined){
+let data158 = data156.armor;
+if(!(((typeof data158 == "number") && (!(data158 % 1) && !isNaN(data158))) && (isFinite(data158)))){
+const err494 = {instancePath:instancePath+"/units/destroyer/modifiers/armor",schemaPath:"#/properties/units/properties/destroyer/properties/modifiers/properties/armor/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err494];
+}
+else {
+vErrors.push(err494);
+}
+errors++;
+}
+if((typeof data158 == "number") && (isFinite(data158))){
+if(data158 < 0 || isNaN(data158)){
+const err495 = {instancePath:instancePath+"/units/destroyer/modifiers/armor",schemaPath:"#/properties/units/properties/destroyer/properties/modifiers/properties/armor/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err495];
+}
+else {
+vErrors.push(err495);
+}
+errors++;
+}
+}
+}
+if(data156.aircraft !== undefined){
+let data159 = data156.aircraft;
+if((typeof data159 == "number") && (isFinite(data159))){
+if(data159 < 0 || isNaN(data159)){
+const err496 = {instancePath:instancePath+"/units/destroyer/modifiers/aircraft",schemaPath:"#/properties/units/properties/destroyer/properties/modifiers/properties/aircraft/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err496];
+}
+else {
+vErrors.push(err496);
+}
+errors++;
+}
+}
+else {
+const err497 = {instancePath:instancePath+"/units/destroyer/modifiers/aircraft",schemaPath:"#/properties/units/properties/destroyer/properties/modifiers/properties/aircraft/type",keyword:"type",params:{type: "number"},message:"must be number"};
+if(vErrors === null){
+vErrors = [err497];
+}
+else {
+vErrors.push(err497);
+}
+errors++;
+}
+}
+}
+else {
+const err498 = {instancePath:instancePath+"/units/destroyer/modifiers",schemaPath:"#/properties/units/properties/destroyer/properties/modifiers/type",keyword:"type",params:{type: "object"},message:"must be object"};
+if(vErrors === null){
+vErrors = [err498];
+}
+else {
+vErrors.push(err498);
+}
+errors++;
+}
+}
+if(data147.category !== undefined){
+let data160 = data147.category;
+if(typeof data160 === "string"){
+if(func4(data160) < 1){
+const err499 = {instancePath:instancePath+"/units/destroyer/category",schemaPath:"#/properties/units/properties/destroyer/properties/category/minLength",keyword:"minLength",params:{limit: 1},message:"must NOT have fewer than 1 characters"};
+if(vErrors === null){
+vErrors = [err499];
+}
+else {
+vErrors.push(err499);
+}
+errors++;
+}
+}
+else {
+const err500 = {instancePath:instancePath+"/units/destroyer/category",schemaPath:"#/properties/units/properties/destroyer/properties/category/type",keyword:"type",params:{type: "string"},message:"must be string"};
+if(vErrors === null){
+vErrors = [err500];
+}
+else {
+vErrors.push(err500);
+}
+errors++;
+}
+}
+}
+else {
+const err501 = {instancePath:instancePath+"/units/destroyer",schemaPath:"#/properties/units/properties/destroyer/type",keyword:"type",params:{type: "object"},message:"must be object"};
+if(vErrors === null){
+vErrors = [err501];
+}
+else {
+vErrors.push(err501);
+}
+errors++;
+}
+}
+if(data34.fighter !== undefined){
+let data161 = data34.fighter;
+if(data161 && typeof data161 == "object" && !Array.isArray(data161)){
+if(data161.hp === undefined){
+const err502 = {instancePath:instancePath+"/units/fighter",schemaPath:"#/properties/units/properties/fighter/required",keyword:"required",params:{missingProperty: "hp"},message:"must have required property '"+"hp"+"'"};
+if(vErrors === null){
+vErrors = [err502];
+}
+else {
+vErrors.push(err502);
+}
+errors++;
+}
+if(data161.damage === undefined){
+const err503 = {instancePath:instancePath+"/units/fighter",schemaPath:"#/properties/units/properties/fighter/required",keyword:"required",params:{missingProperty: "damage"},message:"must have required property '"+"damage"+"'"};
+if(vErrors === null){
+vErrors = [err503];
+}
+else {
+vErrors.push(err503);
+}
+errors++;
+}
+if(data161.cooldown === undefined){
+const err504 = {instancePath:instancePath+"/units/fighter",schemaPath:"#/properties/units/properties/fighter/required",keyword:"required",params:{missingProperty: "cooldown"},message:"must have required property '"+"cooldown"+"'"};
+if(vErrors === null){
+vErrors = [err504];
+}
+else {
+vErrors.push(err504);
+}
+errors++;
+}
+if(data161.range === undefined){
+const err505 = {instancePath:instancePath+"/units/fighter",schemaPath:"#/properties/units/properties/fighter/required",keyword:"required",params:{missingProperty: "range"},message:"must have required property '"+"range"+"'"};
+if(vErrors === null){
+vErrors = [err505];
+}
+else {
+vErrors.push(err505);
+}
+errors++;
+}
+if(data161.arc === undefined){
+const err506 = {instancePath:instancePath+"/units/fighter",schemaPath:"#/properties/units/properties/fighter/required",keyword:"required",params:{missingProperty: "arc"},message:"must have required property '"+"arc"+"'"};
+if(vErrors === null){
+vErrors = [err506];
+}
+else {
+vErrors.push(err506);
+}
+errors++;
+}
+if(data161.speed === undefined){
+const err507 = {instancePath:instancePath+"/units/fighter",schemaPath:"#/properties/units/properties/fighter/required",keyword:"required",params:{missingProperty: "speed"},message:"must have required property '"+"speed"+"'"};
+if(vErrors === null){
+vErrors = [err507];
+}
+else {
+vErrors.push(err507);
+}
+errors++;
+}
+if(data161.cost === undefined){
+const err508 = {instancePath:instancePath+"/units/fighter",schemaPath:"#/properties/units/properties/fighter/required",keyword:"required",params:{missingProperty: "cost"},message:"must have required property '"+"cost"+"'"};
+if(vErrors === null){
+vErrors = [err508];
+}
+else {
+vErrors.push(err508);
+}
+errors++;
+}
+if(data161.splash === undefined){
+const err509 = {instancePath:instancePath+"/units/fighter",schemaPath:"#/properties/units/properties/fighter/required",keyword:"required",params:{missingProperty: "splash"},message:"must have required property '"+"splash"+"'"};
+if(vErrors === null){
+vErrors = [err509];
+}
+else {
+vErrors.push(err509);
+}
+errors++;
+}
+if(data161.modifiers === undefined){
+const err510 = {instancePath:instancePath+"/units/fighter",schemaPath:"#/properties/units/properties/fighter/required",keyword:"required",params:{missingProperty: "modifiers"},message:"must have required property '"+"modifiers"+"'"};
+if(vErrors === null){
+vErrors = [err510];
+}
+else {
+vErrors.push(err510);
+}
+errors++;
+}
+if(data161.category === undefined){
+const err511 = {instancePath:instancePath+"/units/fighter",schemaPath:"#/properties/units/properties/fighter/required",keyword:"required",params:{missingProperty: "category"},message:"must have required property '"+"category"+"'"};
+if(vErrors === null){
+vErrors = [err511];
+}
+else {
+vErrors.push(err511);
+}
+errors++;
+}
+for(const key21 in data161){
+if(!(func2.call(schema33.properties.units.properties.fighter.properties, key21))){
+const err512 = {instancePath:instancePath+"/units/fighter",schemaPath:"#/properties/units/properties/fighter/additionalProperties",keyword:"additionalProperties",params:{additionalProperty: key21},message:"must NOT have additional properties"};
+if(vErrors === null){
+vErrors = [err512];
+}
+else {
+vErrors.push(err512);
+}
+errors++;
+}
+}
+if(data161.hp !== undefined){
+let data162 = data161.hp;
+if(!(((typeof data162 == "number") && (!(data162 % 1) && !isNaN(data162))) && (isFinite(data162)))){
+const err513 = {instancePath:instancePath+"/units/fighter/hp",schemaPath:"#/properties/units/properties/fighter/properties/hp/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err513];
+}
+else {
+vErrors.push(err513);
+}
+errors++;
+}
+if((typeof data162 == "number") && (isFinite(data162))){
+if(data162 < 0 || isNaN(data162)){
+const err514 = {instancePath:instancePath+"/units/fighter/hp",schemaPath:"#/properties/units/properties/fighter/properties/hp/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err514];
+}
+else {
+vErrors.push(err514);
+}
+errors++;
+}
+}
+}
+if(data161.damage !== undefined){
+let data163 = data161.damage;
+if(!(((typeof data163 == "number") && (!(data163 % 1) && !isNaN(data163))) && (isFinite(data163)))){
+const err515 = {instancePath:instancePath+"/units/fighter/damage",schemaPath:"#/properties/units/properties/fighter/properties/damage/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err515];
+}
+else {
+vErrors.push(err515);
+}
+errors++;
+}
+if((typeof data163 == "number") && (isFinite(data163))){
+if(data163 < 0 || isNaN(data163)){
+const err516 = {instancePath:instancePath+"/units/fighter/damage",schemaPath:"#/properties/units/properties/fighter/properties/damage/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err516];
+}
+else {
+vErrors.push(err516);
+}
+errors++;
+}
+}
+}
+if(data161.cooldown !== undefined){
+let data164 = data161.cooldown;
+if((typeof data164 == "number") && (isFinite(data164))){
+if(data164 < 0 || isNaN(data164)){
+const err517 = {instancePath:instancePath+"/units/fighter/cooldown",schemaPath:"#/properties/units/properties/fighter/properties/cooldown/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err517];
+}
+else {
+vErrors.push(err517);
+}
+errors++;
+}
+}
+else {
+const err518 = {instancePath:instancePath+"/units/fighter/cooldown",schemaPath:"#/properties/units/properties/fighter/properties/cooldown/type",keyword:"type",params:{type: "number"},message:"must be number"};
+if(vErrors === null){
+vErrors = [err518];
+}
+else {
+vErrors.push(err518);
+}
+errors++;
+}
+}
+if(data161.range !== undefined){
+let data165 = data161.range;
+if((typeof data165 == "number") && (isFinite(data165))){
+if(data165 < 0 || isNaN(data165)){
+const err519 = {instancePath:instancePath+"/units/fighter/range",schemaPath:"#/properties/units/properties/fighter/properties/range/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err519];
+}
+else {
+vErrors.push(err519);
+}
+errors++;
+}
+}
+else {
+const err520 = {instancePath:instancePath+"/units/fighter/range",schemaPath:"#/properties/units/properties/fighter/properties/range/type",keyword:"type",params:{type: "number"},message:"must be number"};
+if(vErrors === null){
+vErrors = [err520];
+}
+else {
+vErrors.push(err520);
+}
+errors++;
+}
+}
+if(data161.arc !== undefined){
+let data166 = data161.arc;
+if(!(((typeof data166 == "number") && (!(data166 % 1) && !isNaN(data166))) && (isFinite(data166)))){
+const err521 = {instancePath:instancePath+"/units/fighter/arc",schemaPath:"#/properties/units/properties/fighter/properties/arc/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err521];
+}
+else {
+vErrors.push(err521);
+}
+errors++;
+}
+if((typeof data166 == "number") && (isFinite(data166))){
+if(data166 < 0 || isNaN(data166)){
+const err522 = {instancePath:instancePath+"/units/fighter/arc",schemaPath:"#/properties/units/properties/fighter/properties/arc/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err522];
+}
+else {
+vErrors.push(err522);
+}
+errors++;
+}
+}
+}
+if(data161.speed !== undefined){
+let data167 = data161.speed;
+if((typeof data167 == "number") && (isFinite(data167))){
+if(data167 < 0 || isNaN(data167)){
+const err523 = {instancePath:instancePath+"/units/fighter/speed",schemaPath:"#/properties/units/properties/fighter/properties/speed/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err523];
+}
+else {
+vErrors.push(err523);
+}
+errors++;
+}
+}
+else {
+const err524 = {instancePath:instancePath+"/units/fighter/speed",schemaPath:"#/properties/units/properties/fighter/properties/speed/type",keyword:"type",params:{type: "number"},message:"must be number"};
+if(vErrors === null){
+vErrors = [err524];
+}
+else {
+vErrors.push(err524);
+}
+errors++;
+}
+}
+if(data161.cost !== undefined){
+let data168 = data161.cost;
+if(!(((typeof data168 == "number") && (!(data168 % 1) && !isNaN(data168))) && (isFinite(data168)))){
+const err525 = {instancePath:instancePath+"/units/fighter/cost",schemaPath:"#/properties/units/properties/fighter/properties/cost/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err525];
+}
+else {
+vErrors.push(err525);
+}
+errors++;
+}
+if((typeof data168 == "number") && (isFinite(data168))){
+if(data168 < 0 || isNaN(data168)){
+const err526 = {instancePath:instancePath+"/units/fighter/cost",schemaPath:"#/properties/units/properties/fighter/properties/cost/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err526];
+}
+else {
+vErrors.push(err526);
+}
+errors++;
+}
+}
+}
+if(data161.splash !== undefined){
+let data169 = data161.splash;
+if(!(((typeof data169 == "number") && (!(data169 % 1) && !isNaN(data169))) && (isFinite(data169)))){
+const err527 = {instancePath:instancePath+"/units/fighter/splash",schemaPath:"#/properties/units/properties/fighter/properties/splash/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err527];
+}
+else {
+vErrors.push(err527);
+}
+errors++;
+}
+if((typeof data169 == "number") && (isFinite(data169))){
+if(data169 < 0 || isNaN(data169)){
+const err528 = {instancePath:instancePath+"/units/fighter/splash",schemaPath:"#/properties/units/properties/fighter/properties/splash/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err528];
+}
+else {
+vErrors.push(err528);
+}
+errors++;
+}
+}
+}
+if(data161.modifiers !== undefined){
+let data170 = data161.modifiers;
+if(data170 && typeof data170 == "object" && !Array.isArray(data170)){
+if(data170.infantry === undefined){
+const err529 = {instancePath:instancePath+"/units/fighter/modifiers",schemaPath:"#/properties/units/properties/fighter/properties/modifiers/required",keyword:"required",params:{missingProperty: "infantry"},message:"must have required property '"+"infantry"+"'"};
+if(vErrors === null){
+vErrors = [err529];
+}
+else {
+vErrors.push(err529);
+}
+errors++;
+}
+if(data170.armor === undefined){
+const err530 = {instancePath:instancePath+"/units/fighter/modifiers",schemaPath:"#/properties/units/properties/fighter/properties/modifiers/required",keyword:"required",params:{missingProperty: "armor"},message:"must have required property '"+"armor"+"'"};
+if(vErrors === null){
+vErrors = [err530];
+}
+else {
+vErrors.push(err530);
+}
+errors++;
+}
+if(data170.aircraft === undefined){
+const err531 = {instancePath:instancePath+"/units/fighter/modifiers",schemaPath:"#/properties/units/properties/fighter/properties/modifiers/required",keyword:"required",params:{missingProperty: "aircraft"},message:"must have required property '"+"aircraft"+"'"};
+if(vErrors === null){
+vErrors = [err531];
+}
+else {
+vErrors.push(err531);
+}
+errors++;
+}
+for(const key22 in data170){
+if(!(((key22 === "infantry") || (key22 === "armor")) || (key22 === "aircraft"))){
+const err532 = {instancePath:instancePath+"/units/fighter/modifiers",schemaPath:"#/properties/units/properties/fighter/properties/modifiers/additionalProperties",keyword:"additionalProperties",params:{additionalProperty: key22},message:"must NOT have additional properties"};
+if(vErrors === null){
+vErrors = [err532];
+}
+else {
+vErrors.push(err532);
+}
+errors++;
+}
+}
+if(data170.infantry !== undefined){
+let data171 = data170.infantry;
+if((typeof data171 == "number") && (isFinite(data171))){
+if(data171 < 0 || isNaN(data171)){
+const err533 = {instancePath:instancePath+"/units/fighter/modifiers/infantry",schemaPath:"#/properties/units/properties/fighter/properties/modifiers/properties/infantry/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err533];
+}
+else {
+vErrors.push(err533);
+}
+errors++;
+}
+}
+else {
+const err534 = {instancePath:instancePath+"/units/fighter/modifiers/infantry",schemaPath:"#/properties/units/properties/fighter/properties/modifiers/properties/infantry/type",keyword:"type",params:{type: "number"},message:"must be number"};
+if(vErrors === null){
+vErrors = [err534];
+}
+else {
+vErrors.push(err534);
+}
+errors++;
+}
+}
+if(data170.armor !== undefined){
+let data172 = data170.armor;
+if((typeof data172 == "number") && (isFinite(data172))){
+if(data172 < 0 || isNaN(data172)){
+const err535 = {instancePath:instancePath+"/units/fighter/modifiers/armor",schemaPath:"#/properties/units/properties/fighter/properties/modifiers/properties/armor/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err535];
+}
+else {
+vErrors.push(err535);
+}
+errors++;
+}
+}
+else {
+const err536 = {instancePath:instancePath+"/units/fighter/modifiers/armor",schemaPath:"#/properties/units/properties/fighter/properties/modifiers/properties/armor/type",keyword:"type",params:{type: "number"},message:"must be number"};
+if(vErrors === null){
+vErrors = [err536];
+}
+else {
+vErrors.push(err536);
+}
+errors++;
+}
+}
+if(data170.aircraft !== undefined){
+let data173 = data170.aircraft;
+if((typeof data173 == "number") && (isFinite(data173))){
+if(data173 < 0 || isNaN(data173)){
+const err537 = {instancePath:instancePath+"/units/fighter/modifiers/aircraft",schemaPath:"#/properties/units/properties/fighter/properties/modifiers/properties/aircraft/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err537];
+}
+else {
+vErrors.push(err537);
+}
+errors++;
+}
+}
+else {
+const err538 = {instancePath:instancePath+"/units/fighter/modifiers/aircraft",schemaPath:"#/properties/units/properties/fighter/properties/modifiers/properties/aircraft/type",keyword:"type",params:{type: "number"},message:"must be number"};
+if(vErrors === null){
+vErrors = [err538];
+}
+else {
+vErrors.push(err538);
+}
+errors++;
+}
+}
+}
+else {
+const err539 = {instancePath:instancePath+"/units/fighter/modifiers",schemaPath:"#/properties/units/properties/fighter/properties/modifiers/type",keyword:"type",params:{type: "object"},message:"must be object"};
+if(vErrors === null){
+vErrors = [err539];
+}
+else {
+vErrors.push(err539);
+}
+errors++;
+}
+}
+if(data161.category !== undefined){
+let data174 = data161.category;
+if(typeof data174 === "string"){
+if(func4(data174) < 1){
+const err540 = {instancePath:instancePath+"/units/fighter/category",schemaPath:"#/properties/units/properties/fighter/properties/category/minLength",keyword:"minLength",params:{limit: 1},message:"must NOT have fewer than 1 characters"};
+if(vErrors === null){
+vErrors = [err540];
+}
+else {
+vErrors.push(err540);
+}
+errors++;
+}
+}
+else {
+const err541 = {instancePath:instancePath+"/units/fighter/category",schemaPath:"#/properties/units/properties/fighter/properties/category/type",keyword:"type",params:{type: "string"},message:"must be string"};
+if(vErrors === null){
+vErrors = [err541];
+}
+else {
+vErrors.push(err541);
+}
+errors++;
+}
+}
+}
+else {
+const err542 = {instancePath:instancePath+"/units/fighter",schemaPath:"#/properties/units/properties/fighter/type",keyword:"type",params:{type: "object"},message:"must be object"};
+if(vErrors === null){
+vErrors = [err542];
+}
+else {
+vErrors.push(err542);
+}
+errors++;
+}
+}
+if(data34.attacker !== undefined){
+let data175 = data34.attacker;
+if(data175 && typeof data175 == "object" && !Array.isArray(data175)){
+if(data175.hp === undefined){
+const err543 = {instancePath:instancePath+"/units/attacker",schemaPath:"#/properties/units/properties/attacker/required",keyword:"required",params:{missingProperty: "hp"},message:"must have required property '"+"hp"+"'"};
+if(vErrors === null){
+vErrors = [err543];
+}
+else {
+vErrors.push(err543);
+}
+errors++;
+}
+if(data175.damage === undefined){
+const err544 = {instancePath:instancePath+"/units/attacker",schemaPath:"#/properties/units/properties/attacker/required",keyword:"required",params:{missingProperty: "damage"},message:"must have required property '"+"damage"+"'"};
+if(vErrors === null){
+vErrors = [err544];
+}
+else {
+vErrors.push(err544);
+}
+errors++;
+}
+if(data175.cooldown === undefined){
+const err545 = {instancePath:instancePath+"/units/attacker",schemaPath:"#/properties/units/properties/attacker/required",keyword:"required",params:{missingProperty: "cooldown"},message:"must have required property '"+"cooldown"+"'"};
+if(vErrors === null){
+vErrors = [err545];
+}
+else {
+vErrors.push(err545);
+}
+errors++;
+}
+if(data175.range === undefined){
+const err546 = {instancePath:instancePath+"/units/attacker",schemaPath:"#/properties/units/properties/attacker/required",keyword:"required",params:{missingProperty: "range"},message:"must have required property '"+"range"+"'"};
+if(vErrors === null){
+vErrors = [err546];
+}
+else {
+vErrors.push(err546);
+}
+errors++;
+}
+if(data175.arc === undefined){
+const err547 = {instancePath:instancePath+"/units/attacker",schemaPath:"#/properties/units/properties/attacker/required",keyword:"required",params:{missingProperty: "arc"},message:"must have required property '"+"arc"+"'"};
+if(vErrors === null){
+vErrors = [err547];
+}
+else {
+vErrors.push(err547);
+}
+errors++;
+}
+if(data175.speed === undefined){
+const err548 = {instancePath:instancePath+"/units/attacker",schemaPath:"#/properties/units/properties/attacker/required",keyword:"required",params:{missingProperty: "speed"},message:"must have required property '"+"speed"+"'"};
+if(vErrors === null){
+vErrors = [err548];
+}
+else {
+vErrors.push(err548);
+}
+errors++;
+}
+if(data175.cost === undefined){
+const err549 = {instancePath:instancePath+"/units/attacker",schemaPath:"#/properties/units/properties/attacker/required",keyword:"required",params:{missingProperty: "cost"},message:"must have required property '"+"cost"+"'"};
+if(vErrors === null){
+vErrors = [err549];
+}
+else {
+vErrors.push(err549);
+}
+errors++;
+}
+if(data175.splash === undefined){
+const err550 = {instancePath:instancePath+"/units/attacker",schemaPath:"#/properties/units/properties/attacker/required",keyword:"required",params:{missingProperty: "splash"},message:"must have required property '"+"splash"+"'"};
+if(vErrors === null){
+vErrors = [err550];
+}
+else {
+vErrors.push(err550);
+}
+errors++;
+}
+if(data175.modifiers === undefined){
+const err551 = {instancePath:instancePath+"/units/attacker",schemaPath:"#/properties/units/properties/attacker/required",keyword:"required",params:{missingProperty: "modifiers"},message:"must have required property '"+"modifiers"+"'"};
+if(vErrors === null){
+vErrors = [err551];
+}
+else {
+vErrors.push(err551);
+}
+errors++;
+}
+if(data175.category === undefined){
+const err552 = {instancePath:instancePath+"/units/attacker",schemaPath:"#/properties/units/properties/attacker/required",keyword:"required",params:{missingProperty: "category"},message:"must have required property '"+"category"+"'"};
+if(vErrors === null){
+vErrors = [err552];
+}
+else {
+vErrors.push(err552);
+}
+errors++;
+}
+for(const key23 in data175){
+if(!(func2.call(schema33.properties.units.properties.attacker.properties, key23))){
+const err553 = {instancePath:instancePath+"/units/attacker",schemaPath:"#/properties/units/properties/attacker/additionalProperties",keyword:"additionalProperties",params:{additionalProperty: key23},message:"must NOT have additional properties"};
+if(vErrors === null){
+vErrors = [err553];
+}
+else {
+vErrors.push(err553);
+}
+errors++;
+}
+}
+if(data175.hp !== undefined){
+let data176 = data175.hp;
+if(!(((typeof data176 == "number") && (!(data176 % 1) && !isNaN(data176))) && (isFinite(data176)))){
+const err554 = {instancePath:instancePath+"/units/attacker/hp",schemaPath:"#/properties/units/properties/attacker/properties/hp/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err554];
+}
+else {
+vErrors.push(err554);
+}
+errors++;
+}
+if((typeof data176 == "number") && (isFinite(data176))){
+if(data176 < 0 || isNaN(data176)){
+const err555 = {instancePath:instancePath+"/units/attacker/hp",schemaPath:"#/properties/units/properties/attacker/properties/hp/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err555];
+}
+else {
+vErrors.push(err555);
+}
+errors++;
+}
+}
+}
+if(data175.damage !== undefined){
+let data177 = data175.damage;
+if(!(((typeof data177 == "number") && (!(data177 % 1) && !isNaN(data177))) && (isFinite(data177)))){
+const err556 = {instancePath:instancePath+"/units/attacker/damage",schemaPath:"#/properties/units/properties/attacker/properties/damage/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err556];
+}
+else {
+vErrors.push(err556);
+}
+errors++;
+}
+if((typeof data177 == "number") && (isFinite(data177))){
+if(data177 < 0 || isNaN(data177)){
+const err557 = {instancePath:instancePath+"/units/attacker/damage",schemaPath:"#/properties/units/properties/attacker/properties/damage/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err557];
+}
+else {
+vErrors.push(err557);
+}
+errors++;
+}
+}
+}
+if(data175.cooldown !== undefined){
+let data178 = data175.cooldown;
+if((typeof data178 == "number") && (isFinite(data178))){
+if(data178 < 0 || isNaN(data178)){
+const err558 = {instancePath:instancePath+"/units/attacker/cooldown",schemaPath:"#/properties/units/properties/attacker/properties/cooldown/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err558];
+}
+else {
+vErrors.push(err558);
+}
+errors++;
+}
+}
+else {
+const err559 = {instancePath:instancePath+"/units/attacker/cooldown",schemaPath:"#/properties/units/properties/attacker/properties/cooldown/type",keyword:"type",params:{type: "number"},message:"must be number"};
+if(vErrors === null){
+vErrors = [err559];
+}
+else {
+vErrors.push(err559);
+}
+errors++;
+}
+}
+if(data175.range !== undefined){
+let data179 = data175.range;
+if((typeof data179 == "number") && (isFinite(data179))){
+if(data179 < 0 || isNaN(data179)){
+const err560 = {instancePath:instancePath+"/units/attacker/range",schemaPath:"#/properties/units/properties/attacker/properties/range/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err560];
+}
+else {
+vErrors.push(err560);
+}
+errors++;
+}
+}
+else {
+const err561 = {instancePath:instancePath+"/units/attacker/range",schemaPath:"#/properties/units/properties/attacker/properties/range/type",keyword:"type",params:{type: "number"},message:"must be number"};
+if(vErrors === null){
+vErrors = [err561];
+}
+else {
+vErrors.push(err561);
+}
+errors++;
+}
+}
+if(data175.arc !== undefined){
+let data180 = data175.arc;
+if(!(((typeof data180 == "number") && (!(data180 % 1) && !isNaN(data180))) && (isFinite(data180)))){
+const err562 = {instancePath:instancePath+"/units/attacker/arc",schemaPath:"#/properties/units/properties/attacker/properties/arc/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err562];
+}
+else {
+vErrors.push(err562);
+}
+errors++;
+}
+if((typeof data180 == "number") && (isFinite(data180))){
+if(data180 < 0 || isNaN(data180)){
+const err563 = {instancePath:instancePath+"/units/attacker/arc",schemaPath:"#/properties/units/properties/attacker/properties/arc/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err563];
+}
+else {
+vErrors.push(err563);
+}
+errors++;
+}
+}
+}
+if(data175.speed !== undefined){
+let data181 = data175.speed;
+if((typeof data181 == "number") && (isFinite(data181))){
+if(data181 < 0 || isNaN(data181)){
+const err564 = {instancePath:instancePath+"/units/attacker/speed",schemaPath:"#/properties/units/properties/attacker/properties/speed/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err564];
+}
+else {
+vErrors.push(err564);
+}
+errors++;
+}
+}
+else {
+const err565 = {instancePath:instancePath+"/units/attacker/speed",schemaPath:"#/properties/units/properties/attacker/properties/speed/type",keyword:"type",params:{type: "number"},message:"must be number"};
+if(vErrors === null){
+vErrors = [err565];
+}
+else {
+vErrors.push(err565);
+}
+errors++;
+}
+}
+if(data175.cost !== undefined){
+let data182 = data175.cost;
+if(!(((typeof data182 == "number") && (!(data182 % 1) && !isNaN(data182))) && (isFinite(data182)))){
+const err566 = {instancePath:instancePath+"/units/attacker/cost",schemaPath:"#/properties/units/properties/attacker/properties/cost/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err566];
+}
+else {
+vErrors.push(err566);
+}
+errors++;
+}
+if((typeof data182 == "number") && (isFinite(data182))){
+if(data182 < 0 || isNaN(data182)){
+const err567 = {instancePath:instancePath+"/units/attacker/cost",schemaPath:"#/properties/units/properties/attacker/properties/cost/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err567];
+}
+else {
+vErrors.push(err567);
+}
+errors++;
+}
+}
+}
+if(data175.splash !== undefined){
+let data183 = data175.splash;
+if((typeof data183 == "number") && (isFinite(data183))){
+if(data183 < 0 || isNaN(data183)){
+const err568 = {instancePath:instancePath+"/units/attacker/splash",schemaPath:"#/properties/units/properties/attacker/properties/splash/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err568];
+}
+else {
+vErrors.push(err568);
+}
+errors++;
+}
+}
+else {
+const err569 = {instancePath:instancePath+"/units/attacker/splash",schemaPath:"#/properties/units/properties/attacker/properties/splash/type",keyword:"type",params:{type: "number"},message:"must be number"};
+if(vErrors === null){
+vErrors = [err569];
+}
+else {
+vErrors.push(err569);
+}
+errors++;
+}
+}
+if(data175.modifiers !== undefined){
+let data184 = data175.modifiers;
+if(data184 && typeof data184 == "object" && !Array.isArray(data184)){
+if(data184.infantry === undefined){
+const err570 = {instancePath:instancePath+"/units/attacker/modifiers",schemaPath:"#/properties/units/properties/attacker/properties/modifiers/required",keyword:"required",params:{missingProperty: "infantry"},message:"must have required property '"+"infantry"+"'"};
+if(vErrors === null){
+vErrors = [err570];
+}
+else {
+vErrors.push(err570);
+}
+errors++;
+}
+if(data184.armor === undefined){
+const err571 = {instancePath:instancePath+"/units/attacker/modifiers",schemaPath:"#/properties/units/properties/attacker/properties/modifiers/required",keyword:"required",params:{missingProperty: "armor"},message:"must have required property '"+"armor"+"'"};
+if(vErrors === null){
+vErrors = [err571];
+}
+else {
+vErrors.push(err571);
+}
+errors++;
+}
+if(data184.aircraft === undefined){
+const err572 = {instancePath:instancePath+"/units/attacker/modifiers",schemaPath:"#/properties/units/properties/attacker/properties/modifiers/required",keyword:"required",params:{missingProperty: "aircraft"},message:"must have required property '"+"aircraft"+"'"};
+if(vErrors === null){
+vErrors = [err572];
+}
+else {
+vErrors.push(err572);
+}
+errors++;
+}
+for(const key24 in data184){
+if(!(((key24 === "infantry") || (key24 === "armor")) || (key24 === "aircraft"))){
+const err573 = {instancePath:instancePath+"/units/attacker/modifiers",schemaPath:"#/properties/units/properties/attacker/properties/modifiers/additionalProperties",keyword:"additionalProperties",params:{additionalProperty: key24},message:"must NOT have additional properties"};
+if(vErrors === null){
+vErrors = [err573];
+}
+else {
+vErrors.push(err573);
+}
+errors++;
+}
+}
+if(data184.infantry !== undefined){
+let data185 = data184.infantry;
+if(!(((typeof data185 == "number") && (!(data185 % 1) && !isNaN(data185))) && (isFinite(data185)))){
+const err574 = {instancePath:instancePath+"/units/attacker/modifiers/infantry",schemaPath:"#/properties/units/properties/attacker/properties/modifiers/properties/infantry/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err574];
+}
+else {
+vErrors.push(err574);
+}
+errors++;
+}
+if((typeof data185 == "number") && (isFinite(data185))){
+if(data185 < 0 || isNaN(data185)){
+const err575 = {instancePath:instancePath+"/units/attacker/modifiers/infantry",schemaPath:"#/properties/units/properties/attacker/properties/modifiers/properties/infantry/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err575];
+}
+else {
+vErrors.push(err575);
+}
+errors++;
+}
+}
+}
+if(data184.armor !== undefined){
+let data186 = data184.armor;
+if((typeof data186 == "number") && (isFinite(data186))){
+if(data186 < 0 || isNaN(data186)){
+const err576 = {instancePath:instancePath+"/units/attacker/modifiers/armor",schemaPath:"#/properties/units/properties/attacker/properties/modifiers/properties/armor/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err576];
+}
+else {
+vErrors.push(err576);
+}
+errors++;
+}
+}
+else {
+const err577 = {instancePath:instancePath+"/units/attacker/modifiers/armor",schemaPath:"#/properties/units/properties/attacker/properties/modifiers/properties/armor/type",keyword:"type",params:{type: "number"},message:"must be number"};
+if(vErrors === null){
+vErrors = [err577];
+}
+else {
+vErrors.push(err577);
+}
+errors++;
+}
+}
+if(data184.aircraft !== undefined){
+let data187 = data184.aircraft;
+if((typeof data187 == "number") && (isFinite(data187))){
+if(data187 < 0 || isNaN(data187)){
+const err578 = {instancePath:instancePath+"/units/attacker/modifiers/aircraft",schemaPath:"#/properties/units/properties/attacker/properties/modifiers/properties/aircraft/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err578];
+}
+else {
+vErrors.push(err578);
+}
+errors++;
+}
+}
+else {
+const err579 = {instancePath:instancePath+"/units/attacker/modifiers/aircraft",schemaPath:"#/properties/units/properties/attacker/properties/modifiers/properties/aircraft/type",keyword:"type",params:{type: "number"},message:"must be number"};
+if(vErrors === null){
+vErrors = [err579];
+}
+else {
+vErrors.push(err579);
+}
+errors++;
+}
+}
+}
+else {
+const err580 = {instancePath:instancePath+"/units/attacker/modifiers",schemaPath:"#/properties/units/properties/attacker/properties/modifiers/type",keyword:"type",params:{type: "object"},message:"must be object"};
+if(vErrors === null){
+vErrors = [err580];
+}
+else {
+vErrors.push(err580);
+}
+errors++;
+}
+}
+if(data175.category !== undefined){
+let data188 = data175.category;
+if(typeof data188 === "string"){
+if(func4(data188) < 1){
+const err581 = {instancePath:instancePath+"/units/attacker/category",schemaPath:"#/properties/units/properties/attacker/properties/category/minLength",keyword:"minLength",params:{limit: 1},message:"must NOT have fewer than 1 characters"};
+if(vErrors === null){
+vErrors = [err581];
+}
+else {
+vErrors.push(err581);
+}
+errors++;
+}
+}
+else {
+const err582 = {instancePath:instancePath+"/units/attacker/category",schemaPath:"#/properties/units/properties/attacker/properties/category/type",keyword:"type",params:{type: "string"},message:"must be string"};
+if(vErrors === null){
+vErrors = [err582];
+}
+else {
+vErrors.push(err582);
+}
+errors++;
+}
+}
+}
+else {
+const err583 = {instancePath:instancePath+"/units/attacker",schemaPath:"#/properties/units/properties/attacker/type",keyword:"type",params:{type: "object"},message:"must be object"};
+if(vErrors === null){
+vErrors = [err583];
+}
+else {
+vErrors.push(err583);
+}
+errors++;
+}
+}
+if(data34.bomber !== undefined){
+let data189 = data34.bomber;
+if(data189 && typeof data189 == "object" && !Array.isArray(data189)){
+if(data189.hp === undefined){
+const err584 = {instancePath:instancePath+"/units/bomber",schemaPath:"#/properties/units/properties/bomber/required",keyword:"required",params:{missingProperty: "hp"},message:"must have required property '"+"hp"+"'"};
+if(vErrors === null){
+vErrors = [err584];
+}
+else {
+vErrors.push(err584);
+}
+errors++;
+}
+if(data189.damage === undefined){
+const err585 = {instancePath:instancePath+"/units/bomber",schemaPath:"#/properties/units/properties/bomber/required",keyword:"required",params:{missingProperty: "damage"},message:"must have required property '"+"damage"+"'"};
+if(vErrors === null){
+vErrors = [err585];
+}
+else {
+vErrors.push(err585);
+}
+errors++;
+}
+if(data189.cooldown === undefined){
+const err586 = {instancePath:instancePath+"/units/bomber",schemaPath:"#/properties/units/properties/bomber/required",keyword:"required",params:{missingProperty: "cooldown"},message:"must have required property '"+"cooldown"+"'"};
+if(vErrors === null){
+vErrors = [err586];
+}
+else {
+vErrors.push(err586);
+}
+errors++;
+}
+if(data189.range === undefined){
+const err587 = {instancePath:instancePath+"/units/bomber",schemaPath:"#/properties/units/properties/bomber/required",keyword:"required",params:{missingProperty: "range"},message:"must have required property '"+"range"+"'"};
+if(vErrors === null){
+vErrors = [err587];
+}
+else {
+vErrors.push(err587);
+}
+errors++;
+}
+if(data189.arc === undefined){
+const err588 = {instancePath:instancePath+"/units/bomber",schemaPath:"#/properties/units/properties/bomber/required",keyword:"required",params:{missingProperty: "arc"},message:"must have required property '"+"arc"+"'"};
+if(vErrors === null){
+vErrors = [err588];
+}
+else {
+vErrors.push(err588);
+}
+errors++;
+}
+if(data189.speed === undefined){
+const err589 = {instancePath:instancePath+"/units/bomber",schemaPath:"#/properties/units/properties/bomber/required",keyword:"required",params:{missingProperty: "speed"},message:"must have required property '"+"speed"+"'"};
+if(vErrors === null){
+vErrors = [err589];
+}
+else {
+vErrors.push(err589);
+}
+errors++;
+}
+if(data189.cost === undefined){
+const err590 = {instancePath:instancePath+"/units/bomber",schemaPath:"#/properties/units/properties/bomber/required",keyword:"required",params:{missingProperty: "cost"},message:"must have required property '"+"cost"+"'"};
+if(vErrors === null){
+vErrors = [err590];
+}
+else {
+vErrors.push(err590);
+}
+errors++;
+}
+if(data189.splash === undefined){
+const err591 = {instancePath:instancePath+"/units/bomber",schemaPath:"#/properties/units/properties/bomber/required",keyword:"required",params:{missingProperty: "splash"},message:"must have required property '"+"splash"+"'"};
+if(vErrors === null){
+vErrors = [err591];
+}
+else {
+vErrors.push(err591);
+}
+errors++;
+}
+if(data189.modifiers === undefined){
+const err592 = {instancePath:instancePath+"/units/bomber",schemaPath:"#/properties/units/properties/bomber/required",keyword:"required",params:{missingProperty: "modifiers"},message:"must have required property '"+"modifiers"+"'"};
+if(vErrors === null){
+vErrors = [err592];
+}
+else {
+vErrors.push(err592);
+}
+errors++;
+}
+if(data189.category === undefined){
+const err593 = {instancePath:instancePath+"/units/bomber",schemaPath:"#/properties/units/properties/bomber/required",keyword:"required",params:{missingProperty: "category"},message:"must have required property '"+"category"+"'"};
+if(vErrors === null){
+vErrors = [err593];
+}
+else {
+vErrors.push(err593);
+}
+errors++;
+}
+for(const key25 in data189){
+if(!(func2.call(schema33.properties.units.properties.bomber.properties, key25))){
+const err594 = {instancePath:instancePath+"/units/bomber",schemaPath:"#/properties/units/properties/bomber/additionalProperties",keyword:"additionalProperties",params:{additionalProperty: key25},message:"must NOT have additional properties"};
+if(vErrors === null){
+vErrors = [err594];
+}
+else {
+vErrors.push(err594);
+}
+errors++;
+}
+}
+if(data189.hp !== undefined){
+let data190 = data189.hp;
+if(!(((typeof data190 == "number") && (!(data190 % 1) && !isNaN(data190))) && (isFinite(data190)))){
+const err595 = {instancePath:instancePath+"/units/bomber/hp",schemaPath:"#/properties/units/properties/bomber/properties/hp/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err595];
+}
+else {
+vErrors.push(err595);
+}
+errors++;
+}
+if((typeof data190 == "number") && (isFinite(data190))){
+if(data190 < 0 || isNaN(data190)){
+const err596 = {instancePath:instancePath+"/units/bomber/hp",schemaPath:"#/properties/units/properties/bomber/properties/hp/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err596];
+}
+else {
+vErrors.push(err596);
+}
+errors++;
+}
+}
+}
+if(data189.damage !== undefined){
+let data191 = data189.damage;
+if(!(((typeof data191 == "number") && (!(data191 % 1) && !isNaN(data191))) && (isFinite(data191)))){
+const err597 = {instancePath:instancePath+"/units/bomber/damage",schemaPath:"#/properties/units/properties/bomber/properties/damage/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err597];
+}
+else {
+vErrors.push(err597);
+}
+errors++;
+}
+if((typeof data191 == "number") && (isFinite(data191))){
+if(data191 < 0 || isNaN(data191)){
+const err598 = {instancePath:instancePath+"/units/bomber/damage",schemaPath:"#/properties/units/properties/bomber/properties/damage/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err598];
+}
+else {
+vErrors.push(err598);
+}
+errors++;
+}
+}
+}
+if(data189.cooldown !== undefined){
+let data192 = data189.cooldown;
+if((typeof data192 == "number") && (isFinite(data192))){
+if(data192 < 0 || isNaN(data192)){
+const err599 = {instancePath:instancePath+"/units/bomber/cooldown",schemaPath:"#/properties/units/properties/bomber/properties/cooldown/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err599];
+}
+else {
+vErrors.push(err599);
+}
+errors++;
+}
+}
+else {
+const err600 = {instancePath:instancePath+"/units/bomber/cooldown",schemaPath:"#/properties/units/properties/bomber/properties/cooldown/type",keyword:"type",params:{type: "number"},message:"must be number"};
+if(vErrors === null){
+vErrors = [err600];
+}
+else {
+vErrors.push(err600);
+}
+errors++;
+}
+}
+if(data189.range !== undefined){
+let data193 = data189.range;
+if(!(((typeof data193 == "number") && (!(data193 % 1) && !isNaN(data193))) && (isFinite(data193)))){
+const err601 = {instancePath:instancePath+"/units/bomber/range",schemaPath:"#/properties/units/properties/bomber/properties/range/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err601];
+}
+else {
+vErrors.push(err601);
+}
+errors++;
+}
+if((typeof data193 == "number") && (isFinite(data193))){
+if(data193 < 0 || isNaN(data193)){
+const err602 = {instancePath:instancePath+"/units/bomber/range",schemaPath:"#/properties/units/properties/bomber/properties/range/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err602];
+}
+else {
+vErrors.push(err602);
+}
+errors++;
+}
+}
+}
+if(data189.arc !== undefined){
+let data194 = data189.arc;
+if(!(((typeof data194 == "number") && (!(data194 % 1) && !isNaN(data194))) && (isFinite(data194)))){
+const err603 = {instancePath:instancePath+"/units/bomber/arc",schemaPath:"#/properties/units/properties/bomber/properties/arc/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err603];
+}
+else {
+vErrors.push(err603);
+}
+errors++;
+}
+if((typeof data194 == "number") && (isFinite(data194))){
+if(data194 < 0 || isNaN(data194)){
+const err604 = {instancePath:instancePath+"/units/bomber/arc",schemaPath:"#/properties/units/properties/bomber/properties/arc/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err604];
+}
+else {
+vErrors.push(err604);
+}
+errors++;
+}
+}
+}
+if(data189.speed !== undefined){
+let data195 = data189.speed;
+if((typeof data195 == "number") && (isFinite(data195))){
+if(data195 < 0 || isNaN(data195)){
+const err605 = {instancePath:instancePath+"/units/bomber/speed",schemaPath:"#/properties/units/properties/bomber/properties/speed/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err605];
+}
+else {
+vErrors.push(err605);
+}
+errors++;
+}
+}
+else {
+const err606 = {instancePath:instancePath+"/units/bomber/speed",schemaPath:"#/properties/units/properties/bomber/properties/speed/type",keyword:"type",params:{type: "number"},message:"must be number"};
+if(vErrors === null){
+vErrors = [err606];
+}
+else {
+vErrors.push(err606);
+}
+errors++;
+}
+}
+if(data189.cost !== undefined){
+let data196 = data189.cost;
+if(!(((typeof data196 == "number") && (!(data196 % 1) && !isNaN(data196))) && (isFinite(data196)))){
+const err607 = {instancePath:instancePath+"/units/bomber/cost",schemaPath:"#/properties/units/properties/bomber/properties/cost/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err607];
+}
+else {
+vErrors.push(err607);
+}
+errors++;
+}
+if((typeof data196 == "number") && (isFinite(data196))){
+if(data196 < 0 || isNaN(data196)){
+const err608 = {instancePath:instancePath+"/units/bomber/cost",schemaPath:"#/properties/units/properties/bomber/properties/cost/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err608];
+}
+else {
+vErrors.push(err608);
+}
+errors++;
+}
+}
+}
+if(data189.splash !== undefined){
+let data197 = data189.splash;
+if(!(((typeof data197 == "number") && (!(data197 % 1) && !isNaN(data197))) && (isFinite(data197)))){
+const err609 = {instancePath:instancePath+"/units/bomber/splash",schemaPath:"#/properties/units/properties/bomber/properties/splash/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err609];
+}
+else {
+vErrors.push(err609);
+}
+errors++;
+}
+if((typeof data197 == "number") && (isFinite(data197))){
+if(data197 < 0 || isNaN(data197)){
+const err610 = {instancePath:instancePath+"/units/bomber/splash",schemaPath:"#/properties/units/properties/bomber/properties/splash/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err610];
+}
+else {
+vErrors.push(err610);
+}
+errors++;
+}
+}
+}
+if(data189.modifiers !== undefined){
+let data198 = data189.modifiers;
+if(data198 && typeof data198 == "object" && !Array.isArray(data198)){
+if(data198.infantry === undefined){
+const err611 = {instancePath:instancePath+"/units/bomber/modifiers",schemaPath:"#/properties/units/properties/bomber/properties/modifiers/required",keyword:"required",params:{missingProperty: "infantry"},message:"must have required property '"+"infantry"+"'"};
+if(vErrors === null){
+vErrors = [err611];
+}
+else {
+vErrors.push(err611);
+}
+errors++;
+}
+if(data198.armor === undefined){
+const err612 = {instancePath:instancePath+"/units/bomber/modifiers",schemaPath:"#/properties/units/properties/bomber/properties/modifiers/required",keyword:"required",params:{missingProperty: "armor"},message:"must have required property '"+"armor"+"'"};
+if(vErrors === null){
+vErrors = [err612];
+}
+else {
+vErrors.push(err612);
+}
+errors++;
+}
+if(data198.aircraft === undefined){
+const err613 = {instancePath:instancePath+"/units/bomber/modifiers",schemaPath:"#/properties/units/properties/bomber/properties/modifiers/required",keyword:"required",params:{missingProperty: "aircraft"},message:"must have required property '"+"aircraft"+"'"};
+if(vErrors === null){
+vErrors = [err613];
+}
+else {
+vErrors.push(err613);
+}
+errors++;
+}
+for(const key26 in data198){
+if(!(((key26 === "infantry") || (key26 === "armor")) || (key26 === "aircraft"))){
+const err614 = {instancePath:instancePath+"/units/bomber/modifiers",schemaPath:"#/properties/units/properties/bomber/properties/modifiers/additionalProperties",keyword:"additionalProperties",params:{additionalProperty: key26},message:"must NOT have additional properties"};
+if(vErrors === null){
+vErrors = [err614];
+}
+else {
+vErrors.push(err614);
+}
+errors++;
+}
+}
+if(data198.infantry !== undefined){
+let data199 = data198.infantry;
+if((typeof data199 == "number") && (isFinite(data199))){
+if(data199 < 0 || isNaN(data199)){
+const err615 = {instancePath:instancePath+"/units/bomber/modifiers/infantry",schemaPath:"#/properties/units/properties/bomber/properties/modifiers/properties/infantry/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err615];
+}
+else {
+vErrors.push(err615);
+}
+errors++;
+}
+}
+else {
+const err616 = {instancePath:instancePath+"/units/bomber/modifiers/infantry",schemaPath:"#/properties/units/properties/bomber/properties/modifiers/properties/infantry/type",keyword:"type",params:{type: "number"},message:"must be number"};
+if(vErrors === null){
+vErrors = [err616];
+}
+else {
+vErrors.push(err616);
+}
+errors++;
+}
+}
+if(data198.armor !== undefined){
+let data200 = data198.armor;
+if((typeof data200 == "number") && (isFinite(data200))){
+if(data200 < 0 || isNaN(data200)){
+const err617 = {instancePath:instancePath+"/units/bomber/modifiers/armor",schemaPath:"#/properties/units/properties/bomber/properties/modifiers/properties/armor/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err617];
+}
+else {
+vErrors.push(err617);
+}
+errors++;
+}
+}
+else {
+const err618 = {instancePath:instancePath+"/units/bomber/modifiers/armor",schemaPath:"#/properties/units/properties/bomber/properties/modifiers/properties/armor/type",keyword:"type",params:{type: "number"},message:"must be number"};
+if(vErrors === null){
+vErrors = [err618];
+}
+else {
+vErrors.push(err618);
+}
+errors++;
+}
+}
+if(data198.aircraft !== undefined){
+let data201 = data198.aircraft;
+if((typeof data201 == "number") && (isFinite(data201))){
+if(data201 < 0 || isNaN(data201)){
+const err619 = {instancePath:instancePath+"/units/bomber/modifiers/aircraft",schemaPath:"#/properties/units/properties/bomber/properties/modifiers/properties/aircraft/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err619];
+}
+else {
+vErrors.push(err619);
+}
+errors++;
+}
+}
+else {
+const err620 = {instancePath:instancePath+"/units/bomber/modifiers/aircraft",schemaPath:"#/properties/units/properties/bomber/properties/modifiers/properties/aircraft/type",keyword:"type",params:{type: "number"},message:"must be number"};
+if(vErrors === null){
+vErrors = [err620];
+}
+else {
+vErrors.push(err620);
+}
+errors++;
+}
+}
+}
+else {
+const err621 = {instancePath:instancePath+"/units/bomber/modifiers",schemaPath:"#/properties/units/properties/bomber/properties/modifiers/type",keyword:"type",params:{type: "object"},message:"must be object"};
+if(vErrors === null){
+vErrors = [err621];
+}
+else {
+vErrors.push(err621);
+}
+errors++;
+}
+}
+if(data189.category !== undefined){
+let data202 = data189.category;
+if(typeof data202 === "string"){
+if(func4(data202) < 1){
+const err622 = {instancePath:instancePath+"/units/bomber/category",schemaPath:"#/properties/units/properties/bomber/properties/category/minLength",keyword:"minLength",params:{limit: 1},message:"must NOT have fewer than 1 characters"};
+if(vErrors === null){
+vErrors = [err622];
+}
+else {
+vErrors.push(err622);
+}
+errors++;
+}
+}
+else {
+const err623 = {instancePath:instancePath+"/units/bomber/category",schemaPath:"#/properties/units/properties/bomber/properties/category/type",keyword:"type",params:{type: "string"},message:"must be string"};
+if(vErrors === null){
+vErrors = [err623];
+}
+else {
+vErrors.push(err623);
+}
+errors++;
+}
+}
+}
+else {
+const err624 = {instancePath:instancePath+"/units/bomber",schemaPath:"#/properties/units/properties/bomber/type",keyword:"type",params:{type: "object"},message:"must be object"};
+if(vErrors === null){
+vErrors = [err624];
+}
+else {
+vErrors.push(err624);
+}
+errors++;
+}
+}
+}
+else {
+const err625 = {instancePath:instancePath+"/units",schemaPath:"#/properties/units/type",keyword:"type",params:{type: "object"},message:"must be object"};
+if(vErrors === null){
+vErrors = [err625];
+}
+else {
+vErrors.push(err625);
+}
+errors++;
+}
+}
+if(data.rewardBase !== undefined){
+let data203 = data.rewardBase;
+if(!(((typeof data203 == "number") && (!(data203 % 1) && !isNaN(data203))) && (isFinite(data203)))){
+const err626 = {instancePath:instancePath+"/rewardBase",schemaPath:"#/properties/rewardBase/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err626];
+}
+else {
+vErrors.push(err626);
+}
+errors++;
+}
+if((typeof data203 == "number") && (isFinite(data203))){
+if(data203 < 0 || isNaN(data203)){
+const err627 = {instancePath:instancePath+"/rewardBase",schemaPath:"#/properties/rewardBase/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err627];
+}
+else {
+vErrors.push(err627);
+}
+errors++;
+}
+}
+}
+if(data.rewardPerWave !== undefined){
+let data204 = data.rewardPerWave;
+if(!(((typeof data204 == "number") && (!(data204 % 1) && !isNaN(data204))) && (isFinite(data204)))){
+const err628 = {instancePath:instancePath+"/rewardPerWave",schemaPath:"#/properties/rewardPerWave/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err628];
+}
+else {
+vErrors.push(err628);
+}
+errors++;
+}
+if((typeof data204 == "number") && (isFinite(data204))){
+if(data204 < 0 || isNaN(data204)){
+const err629 = {instancePath:instancePath+"/rewardPerWave",schemaPath:"#/properties/rewardPerWave/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err629];
+}
+else {
+vErrors.push(err629);
+}
+errors++;
+}
+}
+}
+if(data.upgradeMultipliers !== undefined){
+let data205 = data.upgradeMultipliers;
+if(Array.isArray(data205)){
+const len0 = data205.length;
+for(let i0=0; i0<len0; i0++){
+let data206 = data205[i0];
+if((typeof data206 == "number") && (isFinite(data206))){
+if(data206 < 0 || isNaN(data206)){
+const err630 = {instancePath:instancePath+"/upgradeMultipliers/" + i0,schemaPath:"#/properties/upgradeMultipliers/items/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err630];
+}
+else {
+vErrors.push(err630);
+}
+errors++;
+}
+}
+else {
+const err631 = {instancePath:instancePath+"/upgradeMultipliers/" + i0,schemaPath:"#/properties/upgradeMultipliers/items/type",keyword:"type",params:{type: "number"},message:"must be number"};
+if(vErrors === null){
+vErrors = [err631];
+}
+else {
+vErrors.push(err631);
+}
+errors++;
+}
+}
+}
+else {
+const err632 = {instancePath:instancePath+"/upgradeMultipliers",schemaPath:"#/properties/upgradeMultipliers/type",keyword:"type",params:{type: "array"},message:"must be array"};
+if(vErrors === null){
+vErrors = [err632];
+}
+else {
+vErrors.push(err632);
+}
+errors++;
+}
+}
+if(data.upgradeCostFactors !== undefined){
+let data207 = data.upgradeCostFactors;
+if(Array.isArray(data207)){
+const len1 = data207.length;
+for(let i1=0; i1<len1; i1++){
+let data208 = data207[i1];
+if((typeof data208 == "number") && (isFinite(data208))){
+if(data208 < 0 || isNaN(data208)){
+const err633 = {instancePath:instancePath+"/upgradeCostFactors/" + i1,schemaPath:"#/properties/upgradeCostFactors/items/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err633];
+}
+else {
+vErrors.push(err633);
+}
+errors++;
+}
+}
+else {
+const err634 = {instancePath:instancePath+"/upgradeCostFactors/" + i1,schemaPath:"#/properties/upgradeCostFactors/items/type",keyword:"type",params:{type: "number"},message:"must be number"};
+if(vErrors === null){
+vErrors = [err634];
+}
+else {
+vErrors.push(err634);
+}
+errors++;
+}
+}
+}
+else {
+const err635 = {instancePath:instancePath+"/upgradeCostFactors",schemaPath:"#/properties/upgradeCostFactors/type",keyword:"type",params:{type: "array"},message:"must be array"};
+if(vErrors === null){
+vErrors = [err635];
+}
+else {
+vErrors.push(err635);
+}
+errors++;
+}
+}
+if(data.fixedStepSeconds !== undefined){
+let data209 = data.fixedStepSeconds;
+if((typeof data209 == "number") && (isFinite(data209))){
+if(data209 < 0 || isNaN(data209)){
+const err636 = {instancePath:instancePath+"/fixedStepSeconds",schemaPath:"#/properties/fixedStepSeconds/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err636];
+}
+else {
+vErrors.push(err636);
+}
+errors++;
+}
+if(data209 <= 0 || isNaN(data209)){
+const err637 = {instancePath:instancePath+"/fixedStepSeconds",schemaPath:"#/properties/fixedStepSeconds/exclusiveMinimum",keyword:"exclusiveMinimum",params:{comparison: ">", limit: 0},message:"must be > 0"};
+if(vErrors === null){
+vErrors = [err637];
+}
+else {
+vErrors.push(err637);
+}
+errors++;
+}
+}
+else {
+const err638 = {instancePath:instancePath+"/fixedStepSeconds",schemaPath:"#/properties/fixedStepSeconds/type",keyword:"type",params:{type: "number"},message:"must be number"};
+if(vErrors === null){
+vErrors = [err638];
+}
+else {
+vErrors.push(err638);
+}
+errors++;
+}
+}
+if(data.maxTicks !== undefined){
+let data210 = data.maxTicks;
+if(!(((typeof data210 == "number") && (!(data210 % 1) && !isNaN(data210))) && (isFinite(data210)))){
+const err639 = {instancePath:instancePath+"/maxTicks",schemaPath:"#/properties/maxTicks/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err639];
+}
+else {
+vErrors.push(err639);
+}
+errors++;
+}
+if((typeof data210 == "number") && (isFinite(data210))){
+if(data210 < 1 || isNaN(data210)){
+const err640 = {instancePath:instancePath+"/maxTicks",schemaPath:"#/properties/maxTicks/minimum",keyword:"minimum",params:{comparison: ">=", limit: 1},message:"must be >= 1"};
+if(vErrors === null){
+vErrors = [err640];
+}
+else {
+vErrors.push(err640);
+}
+errors++;
+}
+}
+}
+if(data.frameStride !== undefined){
+let data211 = data.frameStride;
+if(!(((typeof data211 == "number") && (!(data211 % 1) && !isNaN(data211))) && (isFinite(data211)))){
+const err641 = {instancePath:instancePath+"/frameStride",schemaPath:"#/properties/frameStride/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err641];
+}
+else {
+vErrors.push(err641);
+}
+errors++;
+}
+if((typeof data211 == "number") && (isFinite(data211))){
+if(data211 < 1 || isNaN(data211)){
+const err642 = {instancePath:instancePath+"/frameStride",schemaPath:"#/properties/frameStride/minimum",keyword:"minimum",params:{comparison: ">=", limit: 1},message:"must be >= 1"};
+if(vErrors === null){
+vErrors = [err642];
+}
+else {
+vErrors.push(err642);
+}
+errors++;
+}
+}
+}
+if(data.spawnDistance !== undefined){
+let data212 = data.spawnDistance;
+if(!(((typeof data212 == "number") && (!(data212 % 1) && !isNaN(data212))) && (isFinite(data212)))){
+const err643 = {instancePath:instancePath+"/spawnDistance",schemaPath:"#/properties/spawnDistance/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err643];
+}
+else {
+vErrors.push(err643);
+}
+errors++;
+}
+if((typeof data212 == "number") && (isFinite(data212))){
+if(data212 < 0 || isNaN(data212)){
+const err644 = {instancePath:instancePath+"/spawnDistance",schemaPath:"#/properties/spawnDistance/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err644];
+}
+else {
+vErrors.push(err644);
+}
+errors++;
+}
+}
+}
+if(data.spawnInterval !== undefined){
+let data213 = data.spawnInterval;
+if((typeof data213 == "number") && (isFinite(data213))){
+if(data213 < 0 || isNaN(data213)){
+const err645 = {instancePath:instancePath+"/spawnInterval",schemaPath:"#/properties/spawnInterval/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err645];
+}
+else {
+vErrors.push(err645);
+}
+errors++;
+}
+}
+else {
+const err646 = {instancePath:instancePath+"/spawnInterval",schemaPath:"#/properties/spawnInterval/type",keyword:"type",params:{type: "number"},message:"must be number"};
+if(vErrors === null){
+vErrors = [err646];
+}
+else {
+vErrors.push(err646);
+}
+errors++;
+}
+}
+if(data.contactRange !== undefined){
+let data214 = data.contactRange;
+if((typeof data214 == "number") && (isFinite(data214))){
+if(data214 < 0 || isNaN(data214)){
+const err647 = {instancePath:instancePath+"/contactRange",schemaPath:"#/properties/contactRange/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err647];
+}
+else {
+vErrors.push(err647);
+}
+errors++;
+}
+}
+else {
+const err648 = {instancePath:instancePath+"/contactRange",schemaPath:"#/properties/contactRange/type",keyword:"type",params:{type: "number"},message:"must be number"};
+if(vErrors === null){
+vErrors = [err648];
+}
+else {
+vErrors.push(err648);
+}
+errors++;
+}
+}
+if(data.enemyPowerPerWave !== undefined){
+let data215 = data.enemyPowerPerWave;
+if((typeof data215 == "number") && (isFinite(data215))){
+if(data215 < 0 || isNaN(data215)){
+const err649 = {instancePath:instancePath+"/enemyPowerPerWave",schemaPath:"#/properties/enemyPowerPerWave/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err649];
+}
+else {
+vErrors.push(err649);
+}
+errors++;
+}
+}
+else {
+const err650 = {instancePath:instancePath+"/enemyPowerPerWave",schemaPath:"#/properties/enemyPowerPerWave/type",keyword:"type",params:{type: "number"},message:"must be number"};
+if(vErrors === null){
+vErrors = [err650];
+}
+else {
+vErrors.push(err650);
+}
+errors++;
+}
+}
+if(data.enemyCountBase !== undefined){
+let data216 = data.enemyCountBase;
+if(!(((typeof data216 == "number") && (!(data216 % 1) && !isNaN(data216))) && (isFinite(data216)))){
+const err651 = {instancePath:instancePath+"/enemyCountBase",schemaPath:"#/properties/enemyCountBase/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err651];
+}
+else {
+vErrors.push(err651);
+}
+errors++;
+}
+if((typeof data216 == "number") && (isFinite(data216))){
+if(data216 < 1 || isNaN(data216)){
+const err652 = {instancePath:instancePath+"/enemyCountBase",schemaPath:"#/properties/enemyCountBase/minimum",keyword:"minimum",params:{comparison: ">=", limit: 1},message:"must be >= 1"};
+if(vErrors === null){
+vErrors = [err652];
+}
+else {
+vErrors.push(err652);
+}
+errors++;
+}
+}
+}
+if(data.enemyCountWaveInterval !== undefined){
+let data217 = data.enemyCountWaveInterval;
+if(!(((typeof data217 == "number") && (!(data217 % 1) && !isNaN(data217))) && (isFinite(data217)))){
+const err653 = {instancePath:instancePath+"/enemyCountWaveInterval",schemaPath:"#/properties/enemyCountWaveInterval/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err653];
+}
+else {
+vErrors.push(err653);
+}
+errors++;
+}
+if((typeof data217 == "number") && (isFinite(data217))){
+if(data217 < 1 || isNaN(data217)){
+const err654 = {instancePath:instancePath+"/enemyCountWaveInterval",schemaPath:"#/properties/enemyCountWaveInterval/minimum",keyword:"minimum",params:{comparison: ">=", limit: 1},message:"must be >= 1"};
+if(vErrors === null){
+vErrors = [err654];
+}
+else {
+vErrors.push(err654);
+}
+errors++;
+}
+}
+}
+if(data.enemyCountGrowth !== undefined){
+let data218 = data.enemyCountGrowth;
+if(!(((typeof data218 == "number") && (!(data218 % 1) && !isNaN(data218))) && (isFinite(data218)))){
+const err655 = {instancePath:instancePath+"/enemyCountGrowth",schemaPath:"#/properties/enemyCountGrowth/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err655];
+}
+else {
+vErrors.push(err655);
+}
+errors++;
+}
+if((typeof data218 == "number") && (isFinite(data218))){
+if(data218 < 0 || isNaN(data218)){
+const err656 = {instancePath:instancePath+"/enemyCountGrowth",schemaPath:"#/properties/enemyCountGrowth/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err656];
+}
+else {
+vErrors.push(err656);
+}
+errors++;
+}
+}
+}
+if(data.expansionWaves !== undefined){
+let data219 = data.expansionWaves;
+if(Array.isArray(data219)){
+const len2 = data219.length;
+for(let i2=0; i2<len2; i2++){
+let data220 = data219[i2];
+if(!(((typeof data220 == "number") && (!(data220 % 1) && !isNaN(data220))) && (isFinite(data220)))){
+const err657 = {instancePath:instancePath+"/expansionWaves/" + i2,schemaPath:"#/properties/expansionWaves/items/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err657];
+}
+else {
+vErrors.push(err657);
+}
+errors++;
+}
+if((typeof data220 == "number") && (isFinite(data220))){
+if(data220 < 0 || isNaN(data220)){
+const err658 = {instancePath:instancePath+"/expansionWaves/" + i2,schemaPath:"#/properties/expansionWaves/items/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err658];
+}
+else {
+vErrors.push(err658);
+}
+errors++;
+}
+}
+}
+}
+else {
+const err659 = {instancePath:instancePath+"/expansionWaves",schemaPath:"#/properties/expansionWaves/type",keyword:"type",params:{type: "array"},message:"must be array"};
+if(vErrors === null){
+vErrors = [err659];
+}
+else {
+vErrors.push(err659);
+}
+errors++;
+}
+}
+if(data.rewards !== undefined){
+let data221 = data.rewards;
+if(Array.isArray(data221)){
+if(data221.length > 100){
+const err660 = {instancePath:instancePath+"/rewards",schemaPath:"#/properties/rewards/maxItems",keyword:"maxItems",params:{limit: 100},message:"must NOT have more than 100 items"};
+if(vErrors === null){
+vErrors = [err660];
+}
+else {
+vErrors.push(err660);
+}
+errors++;
+}
+if(data221.length < 100){
+const err661 = {instancePath:instancePath+"/rewards",schemaPath:"#/properties/rewards/minItems",keyword:"minItems",params:{limit: 100},message:"must NOT have fewer than 100 items"};
+if(vErrors === null){
+vErrors = [err661];
+}
+else {
+vErrors.push(err661);
+}
+errors++;
+}
+const len3 = data221.length;
+for(let i3=0; i3<len3; i3++){
+let data222 = data221[i3];
+if(!(((typeof data222 == "number") && (!(data222 % 1) && !isNaN(data222))) && (isFinite(data222)))){
+const err662 = {instancePath:instancePath+"/rewards/" + i3,schemaPath:"#/properties/rewards/items/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err662];
+}
+else {
+vErrors.push(err662);
+}
+errors++;
+}
+if((typeof data222 == "number") && (isFinite(data222))){
+if(data222 < 0 || isNaN(data222)){
+const err663 = {instancePath:instancePath+"/rewards/" + i3,schemaPath:"#/properties/rewards/items/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err663];
+}
+else {
+vErrors.push(err663);
+}
+errors++;
+}
+}
+}
+}
+else {
+const err664 = {instancePath:instancePath+"/rewards",schemaPath:"#/properties/rewards/type",keyword:"type",params:{type: "array"},message:"must be array"};
+if(vErrors === null){
+vErrors = [err664];
+}
+else {
+vErrors.push(err664);
+}
+errors++;
+}
+}
+}
+else {
+const err665 = {instancePath,schemaPath:"#/type",keyword:"type",params:{type: "object"},message:"must be object"};
+if(vErrors === null){
+vErrors = [err665];
+}
+else {
+vErrors.push(err665);
+}
+errors++;
+}
+validate88.errors = vErrors;
 return errors === 0;
 }
 
@@ -40368,14 +48554,24 @@ vErrors.push(err36);
 }
 errors++;
 }
-for(const key0 in data){
-if(!(func2.call(schema6.properties, key0))){
-const err37 = {instancePath,schemaPath:"#/additionalProperties",keyword:"additionalProperties",params:{additionalProperty: key0},message:"must NOT have additional properties"};
+if(data["data/balance/candidate-v12-tech-tree.json"] === undefined){
+const err37 = {instancePath,schemaPath:"#/required",keyword:"required",params:{missingProperty: "data/balance/candidate-v12-tech-tree.json"},message:"must have required property '"+"data/balance/candidate-v12-tech-tree.json"+"'"};
 if(vErrors === null){
 vErrors = [err37];
 }
 else {
 vErrors.push(err37);
+}
+errors++;
+}
+for(const key0 in data){
+if(!(func2.call(schema6.properties, key0))){
+const err38 = {instancePath,schemaPath:"#/additionalProperties",keyword:"additionalProperties",params:{additionalProperty: key0},message:"must NOT have additional properties"};
+if(vErrors === null){
+vErrors = [err38];
+}
+else {
+vErrors.push(err38);
 }
 errors++;
 }
@@ -40602,9 +48798,453 @@ vErrors = vErrors === null ? validate86.errors : vErrors.concat(validate86.error
 errors = vErrors.length;
 }
 }
+if(data["data/balance/candidate-v12-tech-tree.json"] !== undefined){
+if(!(validate88(data["data/balance/candidate-v12-tech-tree.json"], {instancePath:instancePath+"/data~1balance~1candidate-v12-tech-tree.json",parentData:data,parentDataProperty:"data/balance/candidate-v12-tech-tree.json",rootData}))){
+vErrors = vErrors === null ? validate88.errors : vErrors.concat(validate88.errors);
+errors = vErrors.length;
+}
+}
 }
 else {
-const err38 = {instancePath,schemaPath:"#/type",keyword:"type",params:{type: "object"},message:"must be object"};
+const err39 = {instancePath,schemaPath:"#/type",keyword:"type",params:{type: "object"},message:"must be object"};
+if(vErrors === null){
+vErrors = [err39];
+}
+else {
+vErrors.push(err39);
+}
+errors++;
+}
+validate21.errors = vErrors;
+return errors === 0;
+}
+
+export const validateSave = validate90;
+const schema37 = {"type":"object","additionalProperties":false,"required":["schemaVersion","configVersion","contentVersion","savedAt","state","checksum"],"properties":{"schemaVersion":{"const":3},"configVersion":{"type":"string","minLength":1,"maxLength":128},"contentVersion":{"type":"string","minLength":1,"maxLength":128},"savedAt":{"type":"string","pattern":"^\\d{4}-\\d{2}-\\d{2}T"},"state":{"type":"object","additionalProperties":false,"required":["mode","phase","campaignId","wave","seed","rngState","supplies","formationStage","buildingIds","researchIds","upgradeLevels","placements","commandIds","acknowledgedNodeIds","tutorialStep","clearedWaveCount","resolutionIds","hqHp","checkpoint","investments","revealedNodeIds","legacyFreeNodeIds"],"properties":{"mode":{"enum":["preview","campaign"]},"phase":{"enum":["preparation","combat","victory","defeat","clear"]},"campaignId":{"type":"string","minLength":1,"maxLength":128},"wave":{"type":"integer","minimum":1,"maximum":100},"seed":{"type":"integer","minimum":0,"maximum":4294967295},"rngState":{"type":"integer","minimum":0,"maximum":4294967295},"supplies":{"anyOf":[{"type":"integer","minimum":0,"maximum":9007199254740991},{"type":"null"}]},"formationStage":{"enum":["3","5","9","13","25"]},"buildingIds":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true},"researchIds":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true},"upgradeLevels":{"type":"object","additionalProperties":{"type":"object","additionalProperties":{"type":"integer","minimum":0,"maximum":9007199254740991}}},"placements":{"type":"array","maxItems":24,"items":{"type":"object","additionalProperties":false,"required":["instanceId","unitId","cell","paidCost"],"properties":{"instanceId":{"type":"string","minLength":1,"maxLength":128},"unitId":{"type":"string","minLength":1,"maxLength":128},"cell":{"type":"object","additionalProperties":false,"required":["row","col"],"properties":{"row":{"type":"integer","minimum":0,"maximum":4},"col":{"type":"integer","minimum":0,"maximum":4}}},"paidCost":{"type":"integer","minimum":0,"maximum":9007199254740991}}}},"commandIds":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true},"acknowledgedNodeIds":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true},"tutorialStep":{"type":"integer","minimum":0,"maximum":4},"clearedWaveCount":{"type":"integer","minimum":0,"maximum":100},"resolutionIds":{"type":"array","uniqueItems":true,"items":{"type":"string"}},"hqHp":{"type":"number","minimum":0},"checkpoint":{"anyOf":[{"type":"null"},{"$ref":"#/definitions/checkpoint"}]},"investments":{"type":"array","maxItems":10000,"items":{"type":"object","additionalProperties":false,"required":["id","kind","nodeId","profileId","level","paidCost"],"properties":{"id":{"type":"string","minLength":1,"maxLength":128},"kind":{"enum":["building","research","upgrade"]},"nodeId":{"type":"string","minLength":1,"maxLength":64},"profileId":{"type":["string","null"],"maxLength":64},"level":{"type":"integer","minimum":0,"maximum":100},"paidCost":{"type":"integer","minimum":0,"maximum":9007199254740991}}}},"revealedNodeIds":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true},"legacyFreeNodeIds":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true}}},"checksum":{"type":"string","pattern":"^[a-f0-9]{64}$"}},"definitions":{"checkpoint":{"type":"object","additionalProperties":false,"required":["mode","phase","campaignId","wave","seed","rngState","supplies","formationStage","buildingIds","researchIds","upgradeLevels","placements","commandIds","acknowledgedNodeIds","tutorialStep","clearedWaveCount","resolutionIds","hqHp","checkpoint","revealedNodeIds","legacyFreeNodeIds","investments"],"properties":{"mode":{"enum":["preview","campaign"]},"phase":{"enum":["preparation","combat","victory","defeat","clear"]},"campaignId":{"type":"string","minLength":1,"maxLength":128},"wave":{"type":"integer","minimum":1,"maximum":100},"seed":{"type":"integer","minimum":0,"maximum":4294967295},"rngState":{"type":"integer","minimum":0,"maximum":4294967295},"supplies":{"anyOf":[{"type":"integer","minimum":0,"maximum":9007199254740991},{"type":"null"}]},"formationStage":{"enum":["3","5","9","13","25"]},"buildingIds":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true},"researchIds":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true},"upgradeLevels":{"type":"object","additionalProperties":{"type":"object","additionalProperties":{"type":"integer","minimum":0,"maximum":9007199254740991}}},"placements":{"type":"array","maxItems":24,"items":{"type":"object","additionalProperties":false,"required":["instanceId","unitId","cell","paidCost"],"properties":{"instanceId":{"type":"string","minLength":1,"maxLength":128},"unitId":{"type":"string","minLength":1,"maxLength":128},"cell":{"type":"object","additionalProperties":false,"required":["row","col"],"properties":{"row":{"type":"integer","minimum":0,"maximum":4},"col":{"type":"integer","minimum":0,"maximum":4}}},"paidCost":{"type":"integer","minimum":0,"maximum":9007199254740991}}}},"commandIds":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true},"acknowledgedNodeIds":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true},"tutorialStep":{"type":"integer","minimum":0,"maximum":4},"clearedWaveCount":{"type":"integer","minimum":0,"maximum":100},"resolutionIds":{"type":"array","uniqueItems":true,"items":{"type":"string"}},"hqHp":{"type":"number","minimum":0},"checkpoint":{"type":"null"},"revealedNodeIds":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true},"legacyFreeNodeIds":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true},"investments":{"type":"array","maxItems":10000,"items":{"type":"object","additionalProperties":false,"required":["id","kind","nodeId","profileId","level","paidCost"],"properties":{"id":{"type":"string","minLength":1,"maxLength":128},"kind":{"enum":["building","research","upgrade"]},"nodeId":{"type":"string","minLength":1,"maxLength":64},"profileId":{"type":["string","null"],"maxLength":64},"level":{"type":"integer","minimum":0,"maximum":100},"paidCost":{"type":"integer","minimum":0,"maximum":9007199254740991}}}}}}}};
+const pattern0 = new RegExp("^\\d{4}-\\d{2}-\\d{2}T", "u");
+const pattern1 = new RegExp("^[a-f0-9]{64}$", "u");
+const schema38 = {"type":"object","additionalProperties":false,"required":["mode","phase","campaignId","wave","seed","rngState","supplies","formationStage","buildingIds","researchIds","upgradeLevels","placements","commandIds","acknowledgedNodeIds","tutorialStep","clearedWaveCount","resolutionIds","hqHp","checkpoint","revealedNodeIds","legacyFreeNodeIds","investments"],"properties":{"mode":{"enum":["preview","campaign"]},"phase":{"enum":["preparation","combat","victory","defeat","clear"]},"campaignId":{"type":"string","minLength":1,"maxLength":128},"wave":{"type":"integer","minimum":1,"maximum":100},"seed":{"type":"integer","minimum":0,"maximum":4294967295},"rngState":{"type":"integer","minimum":0,"maximum":4294967295},"supplies":{"anyOf":[{"type":"integer","minimum":0,"maximum":9007199254740991},{"type":"null"}]},"formationStage":{"enum":["3","5","9","13","25"]},"buildingIds":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true},"researchIds":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true},"upgradeLevels":{"type":"object","additionalProperties":{"type":"object","additionalProperties":{"type":"integer","minimum":0,"maximum":9007199254740991}}},"placements":{"type":"array","maxItems":24,"items":{"type":"object","additionalProperties":false,"required":["instanceId","unitId","cell","paidCost"],"properties":{"instanceId":{"type":"string","minLength":1,"maxLength":128},"unitId":{"type":"string","minLength":1,"maxLength":128},"cell":{"type":"object","additionalProperties":false,"required":["row","col"],"properties":{"row":{"type":"integer","minimum":0,"maximum":4},"col":{"type":"integer","minimum":0,"maximum":4}}},"paidCost":{"type":"integer","minimum":0,"maximum":9007199254740991}}}},"commandIds":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true},"acknowledgedNodeIds":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true},"tutorialStep":{"type":"integer","minimum":0,"maximum":4},"clearedWaveCount":{"type":"integer","minimum":0,"maximum":100},"resolutionIds":{"type":"array","uniqueItems":true,"items":{"type":"string"}},"hqHp":{"type":"number","minimum":0},"checkpoint":{"type":"null"},"revealedNodeIds":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true},"legacyFreeNodeIds":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true},"investments":{"type":"array","maxItems":10000,"items":{"type":"object","additionalProperties":false,"required":["id","kind","nodeId","profileId","level","paidCost"],"properties":{"id":{"type":"string","minLength":1,"maxLength":128},"kind":{"enum":["building","research","upgrade"]},"nodeId":{"type":"string","minLength":1,"maxLength":64},"profileId":{"type":["string","null"],"maxLength":64},"level":{"type":"integer","minimum":0,"maximum":100},"paidCost":{"type":"integer","minimum":0,"maximum":9007199254740991}}}}}};
+
+function validate91(data, {instancePath="", parentData, parentDataProperty, rootData=data}={}){
+let vErrors = null;
+let errors = 0;
+if(data && typeof data == "object" && !Array.isArray(data)){
+if(data.mode === undefined){
+const err0 = {instancePath,schemaPath:"#/required",keyword:"required",params:{missingProperty: "mode"},message:"must have required property '"+"mode"+"'"};
+if(vErrors === null){
+vErrors = [err0];
+}
+else {
+vErrors.push(err0);
+}
+errors++;
+}
+if(data.phase === undefined){
+const err1 = {instancePath,schemaPath:"#/required",keyword:"required",params:{missingProperty: "phase"},message:"must have required property '"+"phase"+"'"};
+if(vErrors === null){
+vErrors = [err1];
+}
+else {
+vErrors.push(err1);
+}
+errors++;
+}
+if(data.campaignId === undefined){
+const err2 = {instancePath,schemaPath:"#/required",keyword:"required",params:{missingProperty: "campaignId"},message:"must have required property '"+"campaignId"+"'"};
+if(vErrors === null){
+vErrors = [err2];
+}
+else {
+vErrors.push(err2);
+}
+errors++;
+}
+if(data.wave === undefined){
+const err3 = {instancePath,schemaPath:"#/required",keyword:"required",params:{missingProperty: "wave"},message:"must have required property '"+"wave"+"'"};
+if(vErrors === null){
+vErrors = [err3];
+}
+else {
+vErrors.push(err3);
+}
+errors++;
+}
+if(data.seed === undefined){
+const err4 = {instancePath,schemaPath:"#/required",keyword:"required",params:{missingProperty: "seed"},message:"must have required property '"+"seed"+"'"};
+if(vErrors === null){
+vErrors = [err4];
+}
+else {
+vErrors.push(err4);
+}
+errors++;
+}
+if(data.rngState === undefined){
+const err5 = {instancePath,schemaPath:"#/required",keyword:"required",params:{missingProperty: "rngState"},message:"must have required property '"+"rngState"+"'"};
+if(vErrors === null){
+vErrors = [err5];
+}
+else {
+vErrors.push(err5);
+}
+errors++;
+}
+if(data.supplies === undefined){
+const err6 = {instancePath,schemaPath:"#/required",keyword:"required",params:{missingProperty: "supplies"},message:"must have required property '"+"supplies"+"'"};
+if(vErrors === null){
+vErrors = [err6];
+}
+else {
+vErrors.push(err6);
+}
+errors++;
+}
+if(data.formationStage === undefined){
+const err7 = {instancePath,schemaPath:"#/required",keyword:"required",params:{missingProperty: "formationStage"},message:"must have required property '"+"formationStage"+"'"};
+if(vErrors === null){
+vErrors = [err7];
+}
+else {
+vErrors.push(err7);
+}
+errors++;
+}
+if(data.buildingIds === undefined){
+const err8 = {instancePath,schemaPath:"#/required",keyword:"required",params:{missingProperty: "buildingIds"},message:"must have required property '"+"buildingIds"+"'"};
+if(vErrors === null){
+vErrors = [err8];
+}
+else {
+vErrors.push(err8);
+}
+errors++;
+}
+if(data.researchIds === undefined){
+const err9 = {instancePath,schemaPath:"#/required",keyword:"required",params:{missingProperty: "researchIds"},message:"must have required property '"+"researchIds"+"'"};
+if(vErrors === null){
+vErrors = [err9];
+}
+else {
+vErrors.push(err9);
+}
+errors++;
+}
+if(data.upgradeLevels === undefined){
+const err10 = {instancePath,schemaPath:"#/required",keyword:"required",params:{missingProperty: "upgradeLevels"},message:"must have required property '"+"upgradeLevels"+"'"};
+if(vErrors === null){
+vErrors = [err10];
+}
+else {
+vErrors.push(err10);
+}
+errors++;
+}
+if(data.placements === undefined){
+const err11 = {instancePath,schemaPath:"#/required",keyword:"required",params:{missingProperty: "placements"},message:"must have required property '"+"placements"+"'"};
+if(vErrors === null){
+vErrors = [err11];
+}
+else {
+vErrors.push(err11);
+}
+errors++;
+}
+if(data.commandIds === undefined){
+const err12 = {instancePath,schemaPath:"#/required",keyword:"required",params:{missingProperty: "commandIds"},message:"must have required property '"+"commandIds"+"'"};
+if(vErrors === null){
+vErrors = [err12];
+}
+else {
+vErrors.push(err12);
+}
+errors++;
+}
+if(data.acknowledgedNodeIds === undefined){
+const err13 = {instancePath,schemaPath:"#/required",keyword:"required",params:{missingProperty: "acknowledgedNodeIds"},message:"must have required property '"+"acknowledgedNodeIds"+"'"};
+if(vErrors === null){
+vErrors = [err13];
+}
+else {
+vErrors.push(err13);
+}
+errors++;
+}
+if(data.tutorialStep === undefined){
+const err14 = {instancePath,schemaPath:"#/required",keyword:"required",params:{missingProperty: "tutorialStep"},message:"must have required property '"+"tutorialStep"+"'"};
+if(vErrors === null){
+vErrors = [err14];
+}
+else {
+vErrors.push(err14);
+}
+errors++;
+}
+if(data.clearedWaveCount === undefined){
+const err15 = {instancePath,schemaPath:"#/required",keyword:"required",params:{missingProperty: "clearedWaveCount"},message:"must have required property '"+"clearedWaveCount"+"'"};
+if(vErrors === null){
+vErrors = [err15];
+}
+else {
+vErrors.push(err15);
+}
+errors++;
+}
+if(data.resolutionIds === undefined){
+const err16 = {instancePath,schemaPath:"#/required",keyword:"required",params:{missingProperty: "resolutionIds"},message:"must have required property '"+"resolutionIds"+"'"};
+if(vErrors === null){
+vErrors = [err16];
+}
+else {
+vErrors.push(err16);
+}
+errors++;
+}
+if(data.hqHp === undefined){
+const err17 = {instancePath,schemaPath:"#/required",keyword:"required",params:{missingProperty: "hqHp"},message:"must have required property '"+"hqHp"+"'"};
+if(vErrors === null){
+vErrors = [err17];
+}
+else {
+vErrors.push(err17);
+}
+errors++;
+}
+if(data.checkpoint === undefined){
+const err18 = {instancePath,schemaPath:"#/required",keyword:"required",params:{missingProperty: "checkpoint"},message:"must have required property '"+"checkpoint"+"'"};
+if(vErrors === null){
+vErrors = [err18];
+}
+else {
+vErrors.push(err18);
+}
+errors++;
+}
+if(data.revealedNodeIds === undefined){
+const err19 = {instancePath,schemaPath:"#/required",keyword:"required",params:{missingProperty: "revealedNodeIds"},message:"must have required property '"+"revealedNodeIds"+"'"};
+if(vErrors === null){
+vErrors = [err19];
+}
+else {
+vErrors.push(err19);
+}
+errors++;
+}
+if(data.legacyFreeNodeIds === undefined){
+const err20 = {instancePath,schemaPath:"#/required",keyword:"required",params:{missingProperty: "legacyFreeNodeIds"},message:"must have required property '"+"legacyFreeNodeIds"+"'"};
+if(vErrors === null){
+vErrors = [err20];
+}
+else {
+vErrors.push(err20);
+}
+errors++;
+}
+if(data.investments === undefined){
+const err21 = {instancePath,schemaPath:"#/required",keyword:"required",params:{missingProperty: "investments"},message:"must have required property '"+"investments"+"'"};
+if(vErrors === null){
+vErrors = [err21];
+}
+else {
+vErrors.push(err21);
+}
+errors++;
+}
+for(const key0 in data){
+if(!(func2.call(schema38.properties, key0))){
+const err22 = {instancePath,schemaPath:"#/additionalProperties",keyword:"additionalProperties",params:{additionalProperty: key0},message:"must NOT have additional properties"};
+if(vErrors === null){
+vErrors = [err22];
+}
+else {
+vErrors.push(err22);
+}
+errors++;
+}
+}
+if(data.mode !== undefined){
+let data0 = data.mode;
+if(!((data0 === "preview") || (data0 === "campaign"))){
+const err23 = {instancePath:instancePath+"/mode",schemaPath:"#/properties/mode/enum",keyword:"enum",params:{allowedValues: schema38.properties.mode.enum},message:"must be equal to one of the allowed values"};
+if(vErrors === null){
+vErrors = [err23];
+}
+else {
+vErrors.push(err23);
+}
+errors++;
+}
+}
+if(data.phase !== undefined){
+let data1 = data.phase;
+if(!(((((data1 === "preparation") || (data1 === "combat")) || (data1 === "victory")) || (data1 === "defeat")) || (data1 === "clear"))){
+const err24 = {instancePath:instancePath+"/phase",schemaPath:"#/properties/phase/enum",keyword:"enum",params:{allowedValues: schema38.properties.phase.enum},message:"must be equal to one of the allowed values"};
+if(vErrors === null){
+vErrors = [err24];
+}
+else {
+vErrors.push(err24);
+}
+errors++;
+}
+}
+if(data.campaignId !== undefined){
+let data2 = data.campaignId;
+if(typeof data2 === "string"){
+if(func4(data2) > 128){
+const err25 = {instancePath:instancePath+"/campaignId",schemaPath:"#/properties/campaignId/maxLength",keyword:"maxLength",params:{limit: 128},message:"must NOT have more than 128 characters"};
+if(vErrors === null){
+vErrors = [err25];
+}
+else {
+vErrors.push(err25);
+}
+errors++;
+}
+if(func4(data2) < 1){
+const err26 = {instancePath:instancePath+"/campaignId",schemaPath:"#/properties/campaignId/minLength",keyword:"minLength",params:{limit: 1},message:"must NOT have fewer than 1 characters"};
+if(vErrors === null){
+vErrors = [err26];
+}
+else {
+vErrors.push(err26);
+}
+errors++;
+}
+}
+else {
+const err27 = {instancePath:instancePath+"/campaignId",schemaPath:"#/properties/campaignId/type",keyword:"type",params:{type: "string"},message:"must be string"};
+if(vErrors === null){
+vErrors = [err27];
+}
+else {
+vErrors.push(err27);
+}
+errors++;
+}
+}
+if(data.wave !== undefined){
+let data3 = data.wave;
+if(!(((typeof data3 == "number") && (!(data3 % 1) && !isNaN(data3))) && (isFinite(data3)))){
+const err28 = {instancePath:instancePath+"/wave",schemaPath:"#/properties/wave/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err28];
+}
+else {
+vErrors.push(err28);
+}
+errors++;
+}
+if((typeof data3 == "number") && (isFinite(data3))){
+if(data3 > 100 || isNaN(data3)){
+const err29 = {instancePath:instancePath+"/wave",schemaPath:"#/properties/wave/maximum",keyword:"maximum",params:{comparison: "<=", limit: 100},message:"must be <= 100"};
+if(vErrors === null){
+vErrors = [err29];
+}
+else {
+vErrors.push(err29);
+}
+errors++;
+}
+if(data3 < 1 || isNaN(data3)){
+const err30 = {instancePath:instancePath+"/wave",schemaPath:"#/properties/wave/minimum",keyword:"minimum",params:{comparison: ">=", limit: 1},message:"must be >= 1"};
+if(vErrors === null){
+vErrors = [err30];
+}
+else {
+vErrors.push(err30);
+}
+errors++;
+}
+}
+}
+if(data.seed !== undefined){
+let data4 = data.seed;
+if(!(((typeof data4 == "number") && (!(data4 % 1) && !isNaN(data4))) && (isFinite(data4)))){
+const err31 = {instancePath:instancePath+"/seed",schemaPath:"#/properties/seed/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err31];
+}
+else {
+vErrors.push(err31);
+}
+errors++;
+}
+if((typeof data4 == "number") && (isFinite(data4))){
+if(data4 > 4294967295 || isNaN(data4)){
+const err32 = {instancePath:instancePath+"/seed",schemaPath:"#/properties/seed/maximum",keyword:"maximum",params:{comparison: "<=", limit: 4294967295},message:"must be <= 4294967295"};
+if(vErrors === null){
+vErrors = [err32];
+}
+else {
+vErrors.push(err32);
+}
+errors++;
+}
+if(data4 < 0 || isNaN(data4)){
+const err33 = {instancePath:instancePath+"/seed",schemaPath:"#/properties/seed/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err33];
+}
+else {
+vErrors.push(err33);
+}
+errors++;
+}
+}
+}
+if(data.rngState !== undefined){
+let data5 = data.rngState;
+if(!(((typeof data5 == "number") && (!(data5 % 1) && !isNaN(data5))) && (isFinite(data5)))){
+const err34 = {instancePath:instancePath+"/rngState",schemaPath:"#/properties/rngState/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err34];
+}
+else {
+vErrors.push(err34);
+}
+errors++;
+}
+if((typeof data5 == "number") && (isFinite(data5))){
+if(data5 > 4294967295 || isNaN(data5)){
+const err35 = {instancePath:instancePath+"/rngState",schemaPath:"#/properties/rngState/maximum",keyword:"maximum",params:{comparison: "<=", limit: 4294967295},message:"must be <= 4294967295"};
+if(vErrors === null){
+vErrors = [err35];
+}
+else {
+vErrors.push(err35);
+}
+errors++;
+}
+if(data5 < 0 || isNaN(data5)){
+const err36 = {instancePath:instancePath+"/rngState",schemaPath:"#/properties/rngState/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err36];
+}
+else {
+vErrors.push(err36);
+}
+errors++;
+}
+}
+}
+if(data.supplies !== undefined){
+let data6 = data.supplies;
+const _errs13 = errors;
+let valid1 = false;
+const _errs14 = errors;
+if(!(((typeof data6 == "number") && (!(data6 % 1) && !isNaN(data6))) && (isFinite(data6)))){
+const err37 = {instancePath:instancePath+"/supplies",schemaPath:"#/properties/supplies/anyOf/0/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err37];
+}
+else {
+vErrors.push(err37);
+}
+errors++;
+}
+if((typeof data6 == "number") && (isFinite(data6))){
+if(data6 > 9007199254740991 || isNaN(data6)){
+const err38 = {instancePath:instancePath+"/supplies",schemaPath:"#/properties/supplies/anyOf/0/maximum",keyword:"maximum",params:{comparison: "<=", limit: 9007199254740991},message:"must be <= 9007199254740991"};
 if(vErrors === null){
 vErrors = [err38];
 }
@@ -40613,17 +49253,3411 @@ vErrors.push(err38);
 }
 errors++;
 }
-validate21.errors = vErrors;
+if(data6 < 0 || isNaN(data6)){
+const err39 = {instancePath:instancePath+"/supplies",schemaPath:"#/properties/supplies/anyOf/0/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err39];
+}
+else {
+vErrors.push(err39);
+}
+errors++;
+}
+}
+var _valid0 = _errs14 === errors;
+valid1 = valid1 || _valid0;
+if(!valid1){
+const _errs16 = errors;
+if(data6 !== null){
+const err40 = {instancePath:instancePath+"/supplies",schemaPath:"#/properties/supplies/anyOf/1/type",keyword:"type",params:{type: "null"},message:"must be null"};
+if(vErrors === null){
+vErrors = [err40];
+}
+else {
+vErrors.push(err40);
+}
+errors++;
+}
+var _valid0 = _errs16 === errors;
+valid1 = valid1 || _valid0;
+}
+if(!valid1){
+const err41 = {instancePath:instancePath+"/supplies",schemaPath:"#/properties/supplies/anyOf",keyword:"anyOf",params:{},message:"must match a schema in anyOf"};
+if(vErrors === null){
+vErrors = [err41];
+}
+else {
+vErrors.push(err41);
+}
+errors++;
+}
+else {
+errors = _errs13;
+if(vErrors !== null){
+if(_errs13){
+vErrors.length = _errs13;
+}
+else {
+vErrors = null;
+}
+}
+}
+}
+if(data.formationStage !== undefined){
+let data7 = data.formationStage;
+if(!(((((data7 === "3") || (data7 === "5")) || (data7 === "9")) || (data7 === "13")) || (data7 === "25"))){
+const err42 = {instancePath:instancePath+"/formationStage",schemaPath:"#/properties/formationStage/enum",keyword:"enum",params:{allowedValues: schema38.properties.formationStage.enum},message:"must be equal to one of the allowed values"};
+if(vErrors === null){
+vErrors = [err42];
+}
+else {
+vErrors.push(err42);
+}
+errors++;
+}
+}
+if(data.buildingIds !== undefined){
+let data8 = data.buildingIds;
+if(Array.isArray(data8)){
+const len0 = data8.length;
+for(let i0=0; i0<len0; i0++){
+let data9 = data8[i0];
+if(typeof data9 === "string"){
+if(func4(data9) > 128){
+const err43 = {instancePath:instancePath+"/buildingIds/" + i0,schemaPath:"#/properties/buildingIds/items/maxLength",keyword:"maxLength",params:{limit: 128},message:"must NOT have more than 128 characters"};
+if(vErrors === null){
+vErrors = [err43];
+}
+else {
+vErrors.push(err43);
+}
+errors++;
+}
+if(func4(data9) < 1){
+const err44 = {instancePath:instancePath+"/buildingIds/" + i0,schemaPath:"#/properties/buildingIds/items/minLength",keyword:"minLength",params:{limit: 1},message:"must NOT have fewer than 1 characters"};
+if(vErrors === null){
+vErrors = [err44];
+}
+else {
+vErrors.push(err44);
+}
+errors++;
+}
+}
+else {
+const err45 = {instancePath:instancePath+"/buildingIds/" + i0,schemaPath:"#/properties/buildingIds/items/type",keyword:"type",params:{type: "string"},message:"must be string"};
+if(vErrors === null){
+vErrors = [err45];
+}
+else {
+vErrors.push(err45);
+}
+errors++;
+}
+}
+let i1 = data8.length;
+let j0;
+if(i1 > 1){
+const indices0 = {};
+for(;i1--;){
+let item0 = data8[i1];
+if(typeof item0 !== "string"){
+continue;
+}
+if(typeof indices0[item0] == "number"){
+j0 = indices0[item0];
+const err46 = {instancePath:instancePath+"/buildingIds",schemaPath:"#/properties/buildingIds/uniqueItems",keyword:"uniqueItems",params:{i: i1, j: j0},message:"must NOT have duplicate items (items ## "+j0+" and "+i1+" are identical)"};
+if(vErrors === null){
+vErrors = [err46];
+}
+else {
+vErrors.push(err46);
+}
+errors++;
+break;
+}
+indices0[item0] = i1;
+}
+}
+}
+else {
+const err47 = {instancePath:instancePath+"/buildingIds",schemaPath:"#/properties/buildingIds/type",keyword:"type",params:{type: "array"},message:"must be array"};
+if(vErrors === null){
+vErrors = [err47];
+}
+else {
+vErrors.push(err47);
+}
+errors++;
+}
+}
+if(data.researchIds !== undefined){
+let data10 = data.researchIds;
+if(Array.isArray(data10)){
+const len1 = data10.length;
+for(let i2=0; i2<len1; i2++){
+let data11 = data10[i2];
+if(typeof data11 === "string"){
+if(func4(data11) > 128){
+const err48 = {instancePath:instancePath+"/researchIds/" + i2,schemaPath:"#/properties/researchIds/items/maxLength",keyword:"maxLength",params:{limit: 128},message:"must NOT have more than 128 characters"};
+if(vErrors === null){
+vErrors = [err48];
+}
+else {
+vErrors.push(err48);
+}
+errors++;
+}
+if(func4(data11) < 1){
+const err49 = {instancePath:instancePath+"/researchIds/" + i2,schemaPath:"#/properties/researchIds/items/minLength",keyword:"minLength",params:{limit: 1},message:"must NOT have fewer than 1 characters"};
+if(vErrors === null){
+vErrors = [err49];
+}
+else {
+vErrors.push(err49);
+}
+errors++;
+}
+}
+else {
+const err50 = {instancePath:instancePath+"/researchIds/" + i2,schemaPath:"#/properties/researchIds/items/type",keyword:"type",params:{type: "string"},message:"must be string"};
+if(vErrors === null){
+vErrors = [err50];
+}
+else {
+vErrors.push(err50);
+}
+errors++;
+}
+}
+let i3 = data10.length;
+let j1;
+if(i3 > 1){
+const indices1 = {};
+for(;i3--;){
+let item1 = data10[i3];
+if(typeof item1 !== "string"){
+continue;
+}
+if(typeof indices1[item1] == "number"){
+j1 = indices1[item1];
+const err51 = {instancePath:instancePath+"/researchIds",schemaPath:"#/properties/researchIds/uniqueItems",keyword:"uniqueItems",params:{i: i3, j: j1},message:"must NOT have duplicate items (items ## "+j1+" and "+i3+" are identical)"};
+if(vErrors === null){
+vErrors = [err51];
+}
+else {
+vErrors.push(err51);
+}
+errors++;
+break;
+}
+indices1[item1] = i3;
+}
+}
+}
+else {
+const err52 = {instancePath:instancePath+"/researchIds",schemaPath:"#/properties/researchIds/type",keyword:"type",params:{type: "array"},message:"must be array"};
+if(vErrors === null){
+vErrors = [err52];
+}
+else {
+vErrors.push(err52);
+}
+errors++;
+}
+}
+if(data.upgradeLevels !== undefined){
+let data12 = data.upgradeLevels;
+if(data12 && typeof data12 == "object" && !Array.isArray(data12)){
+for(const key1 in data12){
+let data13 = data12[key1];
+if(data13 && typeof data13 == "object" && !Array.isArray(data13)){
+for(const key2 in data13){
+let data14 = data13[key2];
+if(!(((typeof data14 == "number") && (!(data14 % 1) && !isNaN(data14))) && (isFinite(data14)))){
+const err53 = {instancePath:instancePath+"/upgradeLevels/" + key1.replace(/~/g, "~0").replace(/\//g, "~1")+"/" + key2.replace(/~/g, "~0").replace(/\//g, "~1"),schemaPath:"#/properties/upgradeLevels/additionalProperties/additionalProperties/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err53];
+}
+else {
+vErrors.push(err53);
+}
+errors++;
+}
+if((typeof data14 == "number") && (isFinite(data14))){
+if(data14 > 9007199254740991 || isNaN(data14)){
+const err54 = {instancePath:instancePath+"/upgradeLevels/" + key1.replace(/~/g, "~0").replace(/\//g, "~1")+"/" + key2.replace(/~/g, "~0").replace(/\//g, "~1"),schemaPath:"#/properties/upgradeLevels/additionalProperties/additionalProperties/maximum",keyword:"maximum",params:{comparison: "<=", limit: 9007199254740991},message:"must be <= 9007199254740991"};
+if(vErrors === null){
+vErrors = [err54];
+}
+else {
+vErrors.push(err54);
+}
+errors++;
+}
+if(data14 < 0 || isNaN(data14)){
+const err55 = {instancePath:instancePath+"/upgradeLevels/" + key1.replace(/~/g, "~0").replace(/\//g, "~1")+"/" + key2.replace(/~/g, "~0").replace(/\//g, "~1"),schemaPath:"#/properties/upgradeLevels/additionalProperties/additionalProperties/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err55];
+}
+else {
+vErrors.push(err55);
+}
+errors++;
+}
+}
+}
+}
+else {
+const err56 = {instancePath:instancePath+"/upgradeLevels/" + key1.replace(/~/g, "~0").replace(/\//g, "~1"),schemaPath:"#/properties/upgradeLevels/additionalProperties/type",keyword:"type",params:{type: "object"},message:"must be object"};
+if(vErrors === null){
+vErrors = [err56];
+}
+else {
+vErrors.push(err56);
+}
+errors++;
+}
+}
+}
+else {
+const err57 = {instancePath:instancePath+"/upgradeLevels",schemaPath:"#/properties/upgradeLevels/type",keyword:"type",params:{type: "object"},message:"must be object"};
+if(vErrors === null){
+vErrors = [err57];
+}
+else {
+vErrors.push(err57);
+}
+errors++;
+}
+}
+if(data.placements !== undefined){
+let data15 = data.placements;
+if(Array.isArray(data15)){
+if(data15.length > 24){
+const err58 = {instancePath:instancePath+"/placements",schemaPath:"#/properties/placements/maxItems",keyword:"maxItems",params:{limit: 24},message:"must NOT have more than 24 items"};
+if(vErrors === null){
+vErrors = [err58];
+}
+else {
+vErrors.push(err58);
+}
+errors++;
+}
+const len2 = data15.length;
+for(let i4=0; i4<len2; i4++){
+let data16 = data15[i4];
+if(data16 && typeof data16 == "object" && !Array.isArray(data16)){
+if(data16.instanceId === undefined){
+const err59 = {instancePath:instancePath+"/placements/" + i4,schemaPath:"#/properties/placements/items/required",keyword:"required",params:{missingProperty: "instanceId"},message:"must have required property '"+"instanceId"+"'"};
+if(vErrors === null){
+vErrors = [err59];
+}
+else {
+vErrors.push(err59);
+}
+errors++;
+}
+if(data16.unitId === undefined){
+const err60 = {instancePath:instancePath+"/placements/" + i4,schemaPath:"#/properties/placements/items/required",keyword:"required",params:{missingProperty: "unitId"},message:"must have required property '"+"unitId"+"'"};
+if(vErrors === null){
+vErrors = [err60];
+}
+else {
+vErrors.push(err60);
+}
+errors++;
+}
+if(data16.cell === undefined){
+const err61 = {instancePath:instancePath+"/placements/" + i4,schemaPath:"#/properties/placements/items/required",keyword:"required",params:{missingProperty: "cell"},message:"must have required property '"+"cell"+"'"};
+if(vErrors === null){
+vErrors = [err61];
+}
+else {
+vErrors.push(err61);
+}
+errors++;
+}
+if(data16.paidCost === undefined){
+const err62 = {instancePath:instancePath+"/placements/" + i4,schemaPath:"#/properties/placements/items/required",keyword:"required",params:{missingProperty: "paidCost"},message:"must have required property '"+"paidCost"+"'"};
+if(vErrors === null){
+vErrors = [err62];
+}
+else {
+vErrors.push(err62);
+}
+errors++;
+}
+for(const key3 in data16){
+if(!((((key3 === "instanceId") || (key3 === "unitId")) || (key3 === "cell")) || (key3 === "paidCost"))){
+const err63 = {instancePath:instancePath+"/placements/" + i4,schemaPath:"#/properties/placements/items/additionalProperties",keyword:"additionalProperties",params:{additionalProperty: key3},message:"must NOT have additional properties"};
+if(vErrors === null){
+vErrors = [err63];
+}
+else {
+vErrors.push(err63);
+}
+errors++;
+}
+}
+if(data16.instanceId !== undefined){
+let data17 = data16.instanceId;
+if(typeof data17 === "string"){
+if(func4(data17) > 128){
+const err64 = {instancePath:instancePath+"/placements/" + i4+"/instanceId",schemaPath:"#/properties/placements/items/properties/instanceId/maxLength",keyword:"maxLength",params:{limit: 128},message:"must NOT have more than 128 characters"};
+if(vErrors === null){
+vErrors = [err64];
+}
+else {
+vErrors.push(err64);
+}
+errors++;
+}
+if(func4(data17) < 1){
+const err65 = {instancePath:instancePath+"/placements/" + i4+"/instanceId",schemaPath:"#/properties/placements/items/properties/instanceId/minLength",keyword:"minLength",params:{limit: 1},message:"must NOT have fewer than 1 characters"};
+if(vErrors === null){
+vErrors = [err65];
+}
+else {
+vErrors.push(err65);
+}
+errors++;
+}
+}
+else {
+const err66 = {instancePath:instancePath+"/placements/" + i4+"/instanceId",schemaPath:"#/properties/placements/items/properties/instanceId/type",keyword:"type",params:{type: "string"},message:"must be string"};
+if(vErrors === null){
+vErrors = [err66];
+}
+else {
+vErrors.push(err66);
+}
+errors++;
+}
+}
+if(data16.unitId !== undefined){
+let data18 = data16.unitId;
+if(typeof data18 === "string"){
+if(func4(data18) > 128){
+const err67 = {instancePath:instancePath+"/placements/" + i4+"/unitId",schemaPath:"#/properties/placements/items/properties/unitId/maxLength",keyword:"maxLength",params:{limit: 128},message:"must NOT have more than 128 characters"};
+if(vErrors === null){
+vErrors = [err67];
+}
+else {
+vErrors.push(err67);
+}
+errors++;
+}
+if(func4(data18) < 1){
+const err68 = {instancePath:instancePath+"/placements/" + i4+"/unitId",schemaPath:"#/properties/placements/items/properties/unitId/minLength",keyword:"minLength",params:{limit: 1},message:"must NOT have fewer than 1 characters"};
+if(vErrors === null){
+vErrors = [err68];
+}
+else {
+vErrors.push(err68);
+}
+errors++;
+}
+}
+else {
+const err69 = {instancePath:instancePath+"/placements/" + i4+"/unitId",schemaPath:"#/properties/placements/items/properties/unitId/type",keyword:"type",params:{type: "string"},message:"must be string"};
+if(vErrors === null){
+vErrors = [err69];
+}
+else {
+vErrors.push(err69);
+}
+errors++;
+}
+}
+if(data16.cell !== undefined){
+let data19 = data16.cell;
+if(data19 && typeof data19 == "object" && !Array.isArray(data19)){
+if(data19.row === undefined){
+const err70 = {instancePath:instancePath+"/placements/" + i4+"/cell",schemaPath:"#/properties/placements/items/properties/cell/required",keyword:"required",params:{missingProperty: "row"},message:"must have required property '"+"row"+"'"};
+if(vErrors === null){
+vErrors = [err70];
+}
+else {
+vErrors.push(err70);
+}
+errors++;
+}
+if(data19.col === undefined){
+const err71 = {instancePath:instancePath+"/placements/" + i4+"/cell",schemaPath:"#/properties/placements/items/properties/cell/required",keyword:"required",params:{missingProperty: "col"},message:"must have required property '"+"col"+"'"};
+if(vErrors === null){
+vErrors = [err71];
+}
+else {
+vErrors.push(err71);
+}
+errors++;
+}
+for(const key4 in data19){
+if(!((key4 === "row") || (key4 === "col"))){
+const err72 = {instancePath:instancePath+"/placements/" + i4+"/cell",schemaPath:"#/properties/placements/items/properties/cell/additionalProperties",keyword:"additionalProperties",params:{additionalProperty: key4},message:"must NOT have additional properties"};
+if(vErrors === null){
+vErrors = [err72];
+}
+else {
+vErrors.push(err72);
+}
+errors++;
+}
+}
+if(data19.row !== undefined){
+let data20 = data19.row;
+if(!(((typeof data20 == "number") && (!(data20 % 1) && !isNaN(data20))) && (isFinite(data20)))){
+const err73 = {instancePath:instancePath+"/placements/" + i4+"/cell/row",schemaPath:"#/properties/placements/items/properties/cell/properties/row/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err73];
+}
+else {
+vErrors.push(err73);
+}
+errors++;
+}
+if((typeof data20 == "number") && (isFinite(data20))){
+if(data20 > 4 || isNaN(data20)){
+const err74 = {instancePath:instancePath+"/placements/" + i4+"/cell/row",schemaPath:"#/properties/placements/items/properties/cell/properties/row/maximum",keyword:"maximum",params:{comparison: "<=", limit: 4},message:"must be <= 4"};
+if(vErrors === null){
+vErrors = [err74];
+}
+else {
+vErrors.push(err74);
+}
+errors++;
+}
+if(data20 < 0 || isNaN(data20)){
+const err75 = {instancePath:instancePath+"/placements/" + i4+"/cell/row",schemaPath:"#/properties/placements/items/properties/cell/properties/row/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err75];
+}
+else {
+vErrors.push(err75);
+}
+errors++;
+}
+}
+}
+if(data19.col !== undefined){
+let data21 = data19.col;
+if(!(((typeof data21 == "number") && (!(data21 % 1) && !isNaN(data21))) && (isFinite(data21)))){
+const err76 = {instancePath:instancePath+"/placements/" + i4+"/cell/col",schemaPath:"#/properties/placements/items/properties/cell/properties/col/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err76];
+}
+else {
+vErrors.push(err76);
+}
+errors++;
+}
+if((typeof data21 == "number") && (isFinite(data21))){
+if(data21 > 4 || isNaN(data21)){
+const err77 = {instancePath:instancePath+"/placements/" + i4+"/cell/col",schemaPath:"#/properties/placements/items/properties/cell/properties/col/maximum",keyword:"maximum",params:{comparison: "<=", limit: 4},message:"must be <= 4"};
+if(vErrors === null){
+vErrors = [err77];
+}
+else {
+vErrors.push(err77);
+}
+errors++;
+}
+if(data21 < 0 || isNaN(data21)){
+const err78 = {instancePath:instancePath+"/placements/" + i4+"/cell/col",schemaPath:"#/properties/placements/items/properties/cell/properties/col/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err78];
+}
+else {
+vErrors.push(err78);
+}
+errors++;
+}
+}
+}
+}
+else {
+const err79 = {instancePath:instancePath+"/placements/" + i4+"/cell",schemaPath:"#/properties/placements/items/properties/cell/type",keyword:"type",params:{type: "object"},message:"must be object"};
+if(vErrors === null){
+vErrors = [err79];
+}
+else {
+vErrors.push(err79);
+}
+errors++;
+}
+}
+if(data16.paidCost !== undefined){
+let data22 = data16.paidCost;
+if(!(((typeof data22 == "number") && (!(data22 % 1) && !isNaN(data22))) && (isFinite(data22)))){
+const err80 = {instancePath:instancePath+"/placements/" + i4+"/paidCost",schemaPath:"#/properties/placements/items/properties/paidCost/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err80];
+}
+else {
+vErrors.push(err80);
+}
+errors++;
+}
+if((typeof data22 == "number") && (isFinite(data22))){
+if(data22 > 9007199254740991 || isNaN(data22)){
+const err81 = {instancePath:instancePath+"/placements/" + i4+"/paidCost",schemaPath:"#/properties/placements/items/properties/paidCost/maximum",keyword:"maximum",params:{comparison: "<=", limit: 9007199254740991},message:"must be <= 9007199254740991"};
+if(vErrors === null){
+vErrors = [err81];
+}
+else {
+vErrors.push(err81);
+}
+errors++;
+}
+if(data22 < 0 || isNaN(data22)){
+const err82 = {instancePath:instancePath+"/placements/" + i4+"/paidCost",schemaPath:"#/properties/placements/items/properties/paidCost/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err82];
+}
+else {
+vErrors.push(err82);
+}
+errors++;
+}
+}
+}
+}
+else {
+const err83 = {instancePath:instancePath+"/placements/" + i4,schemaPath:"#/properties/placements/items/type",keyword:"type",params:{type: "object"},message:"must be object"};
+if(vErrors === null){
+vErrors = [err83];
+}
+else {
+vErrors.push(err83);
+}
+errors++;
+}
+}
+}
+else {
+const err84 = {instancePath:instancePath+"/placements",schemaPath:"#/properties/placements/type",keyword:"type",params:{type: "array"},message:"must be array"};
+if(vErrors === null){
+vErrors = [err84];
+}
+else {
+vErrors.push(err84);
+}
+errors++;
+}
+}
+if(data.commandIds !== undefined){
+let data23 = data.commandIds;
+if(Array.isArray(data23)){
+const len3 = data23.length;
+for(let i5=0; i5<len3; i5++){
+let data24 = data23[i5];
+if(typeof data24 === "string"){
+if(func4(data24) > 128){
+const err85 = {instancePath:instancePath+"/commandIds/" + i5,schemaPath:"#/properties/commandIds/items/maxLength",keyword:"maxLength",params:{limit: 128},message:"must NOT have more than 128 characters"};
+if(vErrors === null){
+vErrors = [err85];
+}
+else {
+vErrors.push(err85);
+}
+errors++;
+}
+if(func4(data24) < 1){
+const err86 = {instancePath:instancePath+"/commandIds/" + i5,schemaPath:"#/properties/commandIds/items/minLength",keyword:"minLength",params:{limit: 1},message:"must NOT have fewer than 1 characters"};
+if(vErrors === null){
+vErrors = [err86];
+}
+else {
+vErrors.push(err86);
+}
+errors++;
+}
+}
+else {
+const err87 = {instancePath:instancePath+"/commandIds/" + i5,schemaPath:"#/properties/commandIds/items/type",keyword:"type",params:{type: "string"},message:"must be string"};
+if(vErrors === null){
+vErrors = [err87];
+}
+else {
+vErrors.push(err87);
+}
+errors++;
+}
+}
+let i6 = data23.length;
+let j2;
+if(i6 > 1){
+const indices2 = {};
+for(;i6--;){
+let item2 = data23[i6];
+if(typeof item2 !== "string"){
+continue;
+}
+if(typeof indices2[item2] == "number"){
+j2 = indices2[item2];
+const err88 = {instancePath:instancePath+"/commandIds",schemaPath:"#/properties/commandIds/uniqueItems",keyword:"uniqueItems",params:{i: i6, j: j2},message:"must NOT have duplicate items (items ## "+j2+" and "+i6+" are identical)"};
+if(vErrors === null){
+vErrors = [err88];
+}
+else {
+vErrors.push(err88);
+}
+errors++;
+break;
+}
+indices2[item2] = i6;
+}
+}
+}
+else {
+const err89 = {instancePath:instancePath+"/commandIds",schemaPath:"#/properties/commandIds/type",keyword:"type",params:{type: "array"},message:"must be array"};
+if(vErrors === null){
+vErrors = [err89];
+}
+else {
+vErrors.push(err89);
+}
+errors++;
+}
+}
+if(data.acknowledgedNodeIds !== undefined){
+let data25 = data.acknowledgedNodeIds;
+if(Array.isArray(data25)){
+const len4 = data25.length;
+for(let i7=0; i7<len4; i7++){
+let data26 = data25[i7];
+if(typeof data26 === "string"){
+if(func4(data26) > 128){
+const err90 = {instancePath:instancePath+"/acknowledgedNodeIds/" + i7,schemaPath:"#/properties/acknowledgedNodeIds/items/maxLength",keyword:"maxLength",params:{limit: 128},message:"must NOT have more than 128 characters"};
+if(vErrors === null){
+vErrors = [err90];
+}
+else {
+vErrors.push(err90);
+}
+errors++;
+}
+if(func4(data26) < 1){
+const err91 = {instancePath:instancePath+"/acknowledgedNodeIds/" + i7,schemaPath:"#/properties/acknowledgedNodeIds/items/minLength",keyword:"minLength",params:{limit: 1},message:"must NOT have fewer than 1 characters"};
+if(vErrors === null){
+vErrors = [err91];
+}
+else {
+vErrors.push(err91);
+}
+errors++;
+}
+}
+else {
+const err92 = {instancePath:instancePath+"/acknowledgedNodeIds/" + i7,schemaPath:"#/properties/acknowledgedNodeIds/items/type",keyword:"type",params:{type: "string"},message:"must be string"};
+if(vErrors === null){
+vErrors = [err92];
+}
+else {
+vErrors.push(err92);
+}
+errors++;
+}
+}
+let i8 = data25.length;
+let j3;
+if(i8 > 1){
+const indices3 = {};
+for(;i8--;){
+let item3 = data25[i8];
+if(typeof item3 !== "string"){
+continue;
+}
+if(typeof indices3[item3] == "number"){
+j3 = indices3[item3];
+const err93 = {instancePath:instancePath+"/acknowledgedNodeIds",schemaPath:"#/properties/acknowledgedNodeIds/uniqueItems",keyword:"uniqueItems",params:{i: i8, j: j3},message:"must NOT have duplicate items (items ## "+j3+" and "+i8+" are identical)"};
+if(vErrors === null){
+vErrors = [err93];
+}
+else {
+vErrors.push(err93);
+}
+errors++;
+break;
+}
+indices3[item3] = i8;
+}
+}
+}
+else {
+const err94 = {instancePath:instancePath+"/acknowledgedNodeIds",schemaPath:"#/properties/acknowledgedNodeIds/type",keyword:"type",params:{type: "array"},message:"must be array"};
+if(vErrors === null){
+vErrors = [err94];
+}
+else {
+vErrors.push(err94);
+}
+errors++;
+}
+}
+if(data.tutorialStep !== undefined){
+let data27 = data.tutorialStep;
+if(!(((typeof data27 == "number") && (!(data27 % 1) && !isNaN(data27))) && (isFinite(data27)))){
+const err95 = {instancePath:instancePath+"/tutorialStep",schemaPath:"#/properties/tutorialStep/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err95];
+}
+else {
+vErrors.push(err95);
+}
+errors++;
+}
+if((typeof data27 == "number") && (isFinite(data27))){
+if(data27 > 4 || isNaN(data27)){
+const err96 = {instancePath:instancePath+"/tutorialStep",schemaPath:"#/properties/tutorialStep/maximum",keyword:"maximum",params:{comparison: "<=", limit: 4},message:"must be <= 4"};
+if(vErrors === null){
+vErrors = [err96];
+}
+else {
+vErrors.push(err96);
+}
+errors++;
+}
+if(data27 < 0 || isNaN(data27)){
+const err97 = {instancePath:instancePath+"/tutorialStep",schemaPath:"#/properties/tutorialStep/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err97];
+}
+else {
+vErrors.push(err97);
+}
+errors++;
+}
+}
+}
+if(data.clearedWaveCount !== undefined){
+let data28 = data.clearedWaveCount;
+if(!(((typeof data28 == "number") && (!(data28 % 1) && !isNaN(data28))) && (isFinite(data28)))){
+const err98 = {instancePath:instancePath+"/clearedWaveCount",schemaPath:"#/properties/clearedWaveCount/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err98];
+}
+else {
+vErrors.push(err98);
+}
+errors++;
+}
+if((typeof data28 == "number") && (isFinite(data28))){
+if(data28 > 100 || isNaN(data28)){
+const err99 = {instancePath:instancePath+"/clearedWaveCount",schemaPath:"#/properties/clearedWaveCount/maximum",keyword:"maximum",params:{comparison: "<=", limit: 100},message:"must be <= 100"};
+if(vErrors === null){
+vErrors = [err99];
+}
+else {
+vErrors.push(err99);
+}
+errors++;
+}
+if(data28 < 0 || isNaN(data28)){
+const err100 = {instancePath:instancePath+"/clearedWaveCount",schemaPath:"#/properties/clearedWaveCount/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err100];
+}
+else {
+vErrors.push(err100);
+}
+errors++;
+}
+}
+}
+if(data.resolutionIds !== undefined){
+let data29 = data.resolutionIds;
+if(Array.isArray(data29)){
+const len5 = data29.length;
+for(let i9=0; i9<len5; i9++){
+if(typeof data29[i9] !== "string"){
+const err101 = {instancePath:instancePath+"/resolutionIds/" + i9,schemaPath:"#/properties/resolutionIds/items/type",keyword:"type",params:{type: "string"},message:"must be string"};
+if(vErrors === null){
+vErrors = [err101];
+}
+else {
+vErrors.push(err101);
+}
+errors++;
+}
+}
+let i10 = data29.length;
+let j4;
+if(i10 > 1){
+const indices4 = {};
+for(;i10--;){
+let item4 = data29[i10];
+if(typeof item4 !== "string"){
+continue;
+}
+if(typeof indices4[item4] == "number"){
+j4 = indices4[item4];
+const err102 = {instancePath:instancePath+"/resolutionIds",schemaPath:"#/properties/resolutionIds/uniqueItems",keyword:"uniqueItems",params:{i: i10, j: j4},message:"must NOT have duplicate items (items ## "+j4+" and "+i10+" are identical)"};
+if(vErrors === null){
+vErrors = [err102];
+}
+else {
+vErrors.push(err102);
+}
+errors++;
+break;
+}
+indices4[item4] = i10;
+}
+}
+}
+else {
+const err103 = {instancePath:instancePath+"/resolutionIds",schemaPath:"#/properties/resolutionIds/type",keyword:"type",params:{type: "array"},message:"must be array"};
+if(vErrors === null){
+vErrors = [err103];
+}
+else {
+vErrors.push(err103);
+}
+errors++;
+}
+}
+if(data.hqHp !== undefined){
+let data31 = data.hqHp;
+if((typeof data31 == "number") && (isFinite(data31))){
+if(data31 < 0 || isNaN(data31)){
+const err104 = {instancePath:instancePath+"/hqHp",schemaPath:"#/properties/hqHp/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err104];
+}
+else {
+vErrors.push(err104);
+}
+errors++;
+}
+}
+else {
+const err105 = {instancePath:instancePath+"/hqHp",schemaPath:"#/properties/hqHp/type",keyword:"type",params:{type: "number"},message:"must be number"};
+if(vErrors === null){
+vErrors = [err105];
+}
+else {
+vErrors.push(err105);
+}
+errors++;
+}
+}
+if(data.checkpoint !== undefined){
+if(data.checkpoint !== null){
+const err106 = {instancePath:instancePath+"/checkpoint",schemaPath:"#/properties/checkpoint/type",keyword:"type",params:{type: "null"},message:"must be null"};
+if(vErrors === null){
+vErrors = [err106];
+}
+else {
+vErrors.push(err106);
+}
+errors++;
+}
+}
+if(data.revealedNodeIds !== undefined){
+let data33 = data.revealedNodeIds;
+if(Array.isArray(data33)){
+const len6 = data33.length;
+for(let i11=0; i11<len6; i11++){
+let data34 = data33[i11];
+if(typeof data34 === "string"){
+if(func4(data34) > 128){
+const err107 = {instancePath:instancePath+"/revealedNodeIds/" + i11,schemaPath:"#/properties/revealedNodeIds/items/maxLength",keyword:"maxLength",params:{limit: 128},message:"must NOT have more than 128 characters"};
+if(vErrors === null){
+vErrors = [err107];
+}
+else {
+vErrors.push(err107);
+}
+errors++;
+}
+if(func4(data34) < 1){
+const err108 = {instancePath:instancePath+"/revealedNodeIds/" + i11,schemaPath:"#/properties/revealedNodeIds/items/minLength",keyword:"minLength",params:{limit: 1},message:"must NOT have fewer than 1 characters"};
+if(vErrors === null){
+vErrors = [err108];
+}
+else {
+vErrors.push(err108);
+}
+errors++;
+}
+}
+else {
+const err109 = {instancePath:instancePath+"/revealedNodeIds/" + i11,schemaPath:"#/properties/revealedNodeIds/items/type",keyword:"type",params:{type: "string"},message:"must be string"};
+if(vErrors === null){
+vErrors = [err109];
+}
+else {
+vErrors.push(err109);
+}
+errors++;
+}
+}
+let i12 = data33.length;
+let j5;
+if(i12 > 1){
+const indices5 = {};
+for(;i12--;){
+let item5 = data33[i12];
+if(typeof item5 !== "string"){
+continue;
+}
+if(typeof indices5[item5] == "number"){
+j5 = indices5[item5];
+const err110 = {instancePath:instancePath+"/revealedNodeIds",schemaPath:"#/properties/revealedNodeIds/uniqueItems",keyword:"uniqueItems",params:{i: i12, j: j5},message:"must NOT have duplicate items (items ## "+j5+" and "+i12+" are identical)"};
+if(vErrors === null){
+vErrors = [err110];
+}
+else {
+vErrors.push(err110);
+}
+errors++;
+break;
+}
+indices5[item5] = i12;
+}
+}
+}
+else {
+const err111 = {instancePath:instancePath+"/revealedNodeIds",schemaPath:"#/properties/revealedNodeIds/type",keyword:"type",params:{type: "array"},message:"must be array"};
+if(vErrors === null){
+vErrors = [err111];
+}
+else {
+vErrors.push(err111);
+}
+errors++;
+}
+}
+if(data.legacyFreeNodeIds !== undefined){
+let data35 = data.legacyFreeNodeIds;
+if(Array.isArray(data35)){
+const len7 = data35.length;
+for(let i13=0; i13<len7; i13++){
+let data36 = data35[i13];
+if(typeof data36 === "string"){
+if(func4(data36) > 128){
+const err112 = {instancePath:instancePath+"/legacyFreeNodeIds/" + i13,schemaPath:"#/properties/legacyFreeNodeIds/items/maxLength",keyword:"maxLength",params:{limit: 128},message:"must NOT have more than 128 characters"};
+if(vErrors === null){
+vErrors = [err112];
+}
+else {
+vErrors.push(err112);
+}
+errors++;
+}
+if(func4(data36) < 1){
+const err113 = {instancePath:instancePath+"/legacyFreeNodeIds/" + i13,schemaPath:"#/properties/legacyFreeNodeIds/items/minLength",keyword:"minLength",params:{limit: 1},message:"must NOT have fewer than 1 characters"};
+if(vErrors === null){
+vErrors = [err113];
+}
+else {
+vErrors.push(err113);
+}
+errors++;
+}
+}
+else {
+const err114 = {instancePath:instancePath+"/legacyFreeNodeIds/" + i13,schemaPath:"#/properties/legacyFreeNodeIds/items/type",keyword:"type",params:{type: "string"},message:"must be string"};
+if(vErrors === null){
+vErrors = [err114];
+}
+else {
+vErrors.push(err114);
+}
+errors++;
+}
+}
+let i14 = data35.length;
+let j6;
+if(i14 > 1){
+const indices6 = {};
+for(;i14--;){
+let item6 = data35[i14];
+if(typeof item6 !== "string"){
+continue;
+}
+if(typeof indices6[item6] == "number"){
+j6 = indices6[item6];
+const err115 = {instancePath:instancePath+"/legacyFreeNodeIds",schemaPath:"#/properties/legacyFreeNodeIds/uniqueItems",keyword:"uniqueItems",params:{i: i14, j: j6},message:"must NOT have duplicate items (items ## "+j6+" and "+i14+" are identical)"};
+if(vErrors === null){
+vErrors = [err115];
+}
+else {
+vErrors.push(err115);
+}
+errors++;
+break;
+}
+indices6[item6] = i14;
+}
+}
+}
+else {
+const err116 = {instancePath:instancePath+"/legacyFreeNodeIds",schemaPath:"#/properties/legacyFreeNodeIds/type",keyword:"type",params:{type: "array"},message:"must be array"};
+if(vErrors === null){
+vErrors = [err116];
+}
+else {
+vErrors.push(err116);
+}
+errors++;
+}
+}
+if(data.investments !== undefined){
+let data37 = data.investments;
+if(Array.isArray(data37)){
+if(data37.length > 10000){
+const err117 = {instancePath:instancePath+"/investments",schemaPath:"#/properties/investments/maxItems",keyword:"maxItems",params:{limit: 10000},message:"must NOT have more than 10000 items"};
+if(vErrors === null){
+vErrors = [err117];
+}
+else {
+vErrors.push(err117);
+}
+errors++;
+}
+const len8 = data37.length;
+for(let i15=0; i15<len8; i15++){
+let data38 = data37[i15];
+if(data38 && typeof data38 == "object" && !Array.isArray(data38)){
+if(data38.id === undefined){
+const err118 = {instancePath:instancePath+"/investments/" + i15,schemaPath:"#/properties/investments/items/required",keyword:"required",params:{missingProperty: "id"},message:"must have required property '"+"id"+"'"};
+if(vErrors === null){
+vErrors = [err118];
+}
+else {
+vErrors.push(err118);
+}
+errors++;
+}
+if(data38.kind === undefined){
+const err119 = {instancePath:instancePath+"/investments/" + i15,schemaPath:"#/properties/investments/items/required",keyword:"required",params:{missingProperty: "kind"},message:"must have required property '"+"kind"+"'"};
+if(vErrors === null){
+vErrors = [err119];
+}
+else {
+vErrors.push(err119);
+}
+errors++;
+}
+if(data38.nodeId === undefined){
+const err120 = {instancePath:instancePath+"/investments/" + i15,schemaPath:"#/properties/investments/items/required",keyword:"required",params:{missingProperty: "nodeId"},message:"must have required property '"+"nodeId"+"'"};
+if(vErrors === null){
+vErrors = [err120];
+}
+else {
+vErrors.push(err120);
+}
+errors++;
+}
+if(data38.profileId === undefined){
+const err121 = {instancePath:instancePath+"/investments/" + i15,schemaPath:"#/properties/investments/items/required",keyword:"required",params:{missingProperty: "profileId"},message:"must have required property '"+"profileId"+"'"};
+if(vErrors === null){
+vErrors = [err121];
+}
+else {
+vErrors.push(err121);
+}
+errors++;
+}
+if(data38.level === undefined){
+const err122 = {instancePath:instancePath+"/investments/" + i15,schemaPath:"#/properties/investments/items/required",keyword:"required",params:{missingProperty: "level"},message:"must have required property '"+"level"+"'"};
+if(vErrors === null){
+vErrors = [err122];
+}
+else {
+vErrors.push(err122);
+}
+errors++;
+}
+if(data38.paidCost === undefined){
+const err123 = {instancePath:instancePath+"/investments/" + i15,schemaPath:"#/properties/investments/items/required",keyword:"required",params:{missingProperty: "paidCost"},message:"must have required property '"+"paidCost"+"'"};
+if(vErrors === null){
+vErrors = [err123];
+}
+else {
+vErrors.push(err123);
+}
+errors++;
+}
+for(const key5 in data38){
+if(!((((((key5 === "id") || (key5 === "kind")) || (key5 === "nodeId")) || (key5 === "profileId")) || (key5 === "level")) || (key5 === "paidCost"))){
+const err124 = {instancePath:instancePath+"/investments/" + i15,schemaPath:"#/properties/investments/items/additionalProperties",keyword:"additionalProperties",params:{additionalProperty: key5},message:"must NOT have additional properties"};
+if(vErrors === null){
+vErrors = [err124];
+}
+else {
+vErrors.push(err124);
+}
+errors++;
+}
+}
+if(data38.id !== undefined){
+let data39 = data38.id;
+if(typeof data39 === "string"){
+if(func4(data39) > 128){
+const err125 = {instancePath:instancePath+"/investments/" + i15+"/id",schemaPath:"#/properties/investments/items/properties/id/maxLength",keyword:"maxLength",params:{limit: 128},message:"must NOT have more than 128 characters"};
+if(vErrors === null){
+vErrors = [err125];
+}
+else {
+vErrors.push(err125);
+}
+errors++;
+}
+if(func4(data39) < 1){
+const err126 = {instancePath:instancePath+"/investments/" + i15+"/id",schemaPath:"#/properties/investments/items/properties/id/minLength",keyword:"minLength",params:{limit: 1},message:"must NOT have fewer than 1 characters"};
+if(vErrors === null){
+vErrors = [err126];
+}
+else {
+vErrors.push(err126);
+}
+errors++;
+}
+}
+else {
+const err127 = {instancePath:instancePath+"/investments/" + i15+"/id",schemaPath:"#/properties/investments/items/properties/id/type",keyword:"type",params:{type: "string"},message:"must be string"};
+if(vErrors === null){
+vErrors = [err127];
+}
+else {
+vErrors.push(err127);
+}
+errors++;
+}
+}
+if(data38.kind !== undefined){
+let data40 = data38.kind;
+if(!(((data40 === "building") || (data40 === "research")) || (data40 === "upgrade"))){
+const err128 = {instancePath:instancePath+"/investments/" + i15+"/kind",schemaPath:"#/properties/investments/items/properties/kind/enum",keyword:"enum",params:{allowedValues: schema38.properties.investments.items.properties.kind.enum},message:"must be equal to one of the allowed values"};
+if(vErrors === null){
+vErrors = [err128];
+}
+else {
+vErrors.push(err128);
+}
+errors++;
+}
+}
+if(data38.nodeId !== undefined){
+let data41 = data38.nodeId;
+if(typeof data41 === "string"){
+if(func4(data41) > 64){
+const err129 = {instancePath:instancePath+"/investments/" + i15+"/nodeId",schemaPath:"#/properties/investments/items/properties/nodeId/maxLength",keyword:"maxLength",params:{limit: 64},message:"must NOT have more than 64 characters"};
+if(vErrors === null){
+vErrors = [err129];
+}
+else {
+vErrors.push(err129);
+}
+errors++;
+}
+if(func4(data41) < 1){
+const err130 = {instancePath:instancePath+"/investments/" + i15+"/nodeId",schemaPath:"#/properties/investments/items/properties/nodeId/minLength",keyword:"minLength",params:{limit: 1},message:"must NOT have fewer than 1 characters"};
+if(vErrors === null){
+vErrors = [err130];
+}
+else {
+vErrors.push(err130);
+}
+errors++;
+}
+}
+else {
+const err131 = {instancePath:instancePath+"/investments/" + i15+"/nodeId",schemaPath:"#/properties/investments/items/properties/nodeId/type",keyword:"type",params:{type: "string"},message:"must be string"};
+if(vErrors === null){
+vErrors = [err131];
+}
+else {
+vErrors.push(err131);
+}
+errors++;
+}
+}
+if(data38.profileId !== undefined){
+let data42 = data38.profileId;
+if((typeof data42 !== "string") && (data42 !== null)){
+const err132 = {instancePath:instancePath+"/investments/" + i15+"/profileId",schemaPath:"#/properties/investments/items/properties/profileId/type",keyword:"type",params:{type: schema38.properties.investments.items.properties.profileId.type},message:"must be string,null"};
+if(vErrors === null){
+vErrors = [err132];
+}
+else {
+vErrors.push(err132);
+}
+errors++;
+}
+if(typeof data42 === "string"){
+if(func4(data42) > 64){
+const err133 = {instancePath:instancePath+"/investments/" + i15+"/profileId",schemaPath:"#/properties/investments/items/properties/profileId/maxLength",keyword:"maxLength",params:{limit: 64},message:"must NOT have more than 64 characters"};
+if(vErrors === null){
+vErrors = [err133];
+}
+else {
+vErrors.push(err133);
+}
+errors++;
+}
+}
+}
+if(data38.level !== undefined){
+let data43 = data38.level;
+if(!(((typeof data43 == "number") && (!(data43 % 1) && !isNaN(data43))) && (isFinite(data43)))){
+const err134 = {instancePath:instancePath+"/investments/" + i15+"/level",schemaPath:"#/properties/investments/items/properties/level/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err134];
+}
+else {
+vErrors.push(err134);
+}
+errors++;
+}
+if((typeof data43 == "number") && (isFinite(data43))){
+if(data43 > 100 || isNaN(data43)){
+const err135 = {instancePath:instancePath+"/investments/" + i15+"/level",schemaPath:"#/properties/investments/items/properties/level/maximum",keyword:"maximum",params:{comparison: "<=", limit: 100},message:"must be <= 100"};
+if(vErrors === null){
+vErrors = [err135];
+}
+else {
+vErrors.push(err135);
+}
+errors++;
+}
+if(data43 < 0 || isNaN(data43)){
+const err136 = {instancePath:instancePath+"/investments/" + i15+"/level",schemaPath:"#/properties/investments/items/properties/level/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err136];
+}
+else {
+vErrors.push(err136);
+}
+errors++;
+}
+}
+}
+if(data38.paidCost !== undefined){
+let data44 = data38.paidCost;
+if(!(((typeof data44 == "number") && (!(data44 % 1) && !isNaN(data44))) && (isFinite(data44)))){
+const err137 = {instancePath:instancePath+"/investments/" + i15+"/paidCost",schemaPath:"#/properties/investments/items/properties/paidCost/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err137];
+}
+else {
+vErrors.push(err137);
+}
+errors++;
+}
+if((typeof data44 == "number") && (isFinite(data44))){
+if(data44 > 9007199254740991 || isNaN(data44)){
+const err138 = {instancePath:instancePath+"/investments/" + i15+"/paidCost",schemaPath:"#/properties/investments/items/properties/paidCost/maximum",keyword:"maximum",params:{comparison: "<=", limit: 9007199254740991},message:"must be <= 9007199254740991"};
+if(vErrors === null){
+vErrors = [err138];
+}
+else {
+vErrors.push(err138);
+}
+errors++;
+}
+if(data44 < 0 || isNaN(data44)){
+const err139 = {instancePath:instancePath+"/investments/" + i15+"/paidCost",schemaPath:"#/properties/investments/items/properties/paidCost/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err139];
+}
+else {
+vErrors.push(err139);
+}
+errors++;
+}
+}
+}
+}
+else {
+const err140 = {instancePath:instancePath+"/investments/" + i15,schemaPath:"#/properties/investments/items/type",keyword:"type",params:{type: "object"},message:"must be object"};
+if(vErrors === null){
+vErrors = [err140];
+}
+else {
+vErrors.push(err140);
+}
+errors++;
+}
+}
+}
+else {
+const err141 = {instancePath:instancePath+"/investments",schemaPath:"#/properties/investments/type",keyword:"type",params:{type: "array"},message:"must be array"};
+if(vErrors === null){
+vErrors = [err141];
+}
+else {
+vErrors.push(err141);
+}
+errors++;
+}
+}
+}
+else {
+const err142 = {instancePath,schemaPath:"#/type",keyword:"type",params:{type: "object"},message:"must be object"};
+if(vErrors === null){
+vErrors = [err142];
+}
+else {
+vErrors.push(err142);
+}
+errors++;
+}
+validate91.errors = vErrors;
 return errors === 0;
 }
 
-export const validateSave = validate88;
-const schema36 = {"type":"object","additionalProperties":false,"required":["schemaVersion","configVersion","contentVersion","savedAt","state","checksum"],"properties":{"schemaVersion":{"const":2},"configVersion":{"type":"string","minLength":1,"maxLength":128},"contentVersion":{"type":"string","minLength":1,"maxLength":128},"savedAt":{"type":"string","pattern":"^\\d{4}-\\d{2}-\\d{2}T"},"state":{"type":"object","additionalProperties":false,"required":["mode","phase","campaignId","wave","seed","rngState","supplies","formationStage","buildingIds","researchIds","upgradeLevels","placements","commandIds","acknowledgedNodeIds","tutorialStep","clearedWaveCount","resolutionIds","hqHp","checkpoint","investments"],"properties":{"mode":{"enum":["preview","campaign"]},"phase":{"enum":["preparation","combat","victory","defeat","clear"]},"campaignId":{"type":"string","minLength":1,"maxLength":128},"wave":{"type":"integer","minimum":1,"maximum":100},"seed":{"type":"integer","minimum":0,"maximum":4294967295},"rngState":{"type":"integer","minimum":0,"maximum":4294967295},"supplies":{"anyOf":[{"type":"integer","minimum":0,"maximum":9007199254740991},{"type":"null"}]},"formationStage":{"enum":["3","5","9","13","25"]},"buildingIds":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true},"researchIds":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true},"upgradeLevels":{"type":"object","additionalProperties":{"type":"object","additionalProperties":{"type":"integer","minimum":0,"maximum":9007199254740991}}},"placements":{"type":"array","maxItems":24,"items":{"type":"object","additionalProperties":false,"required":["instanceId","unitId","cell","paidCost"],"properties":{"instanceId":{"type":"string","minLength":1,"maxLength":128},"unitId":{"type":"string","minLength":1,"maxLength":128},"cell":{"type":"object","additionalProperties":false,"required":["row","col"],"properties":{"row":{"type":"integer","minimum":0,"maximum":4},"col":{"type":"integer","minimum":0,"maximum":4}}},"paidCost":{"type":"integer","minimum":0,"maximum":9007199254740991}}}},"commandIds":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true},"acknowledgedNodeIds":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true},"tutorialStep":{"type":"integer","minimum":0,"maximum":4},"clearedWaveCount":{"type":"integer","minimum":0,"maximum":100},"resolutionIds":{"type":"array","uniqueItems":true,"items":{"type":"string"}},"hqHp":{"type":"number","minimum":0},"checkpoint":{"anyOf":[{"type":"null"},{"$ref":"#/definitions/checkpoint"}]},"investments":{"type":"array","maxItems":10000,"items":{"type":"object","additionalProperties":false,"required":["id","kind","nodeId","profileId","level","paidCost"],"properties":{"id":{"type":"string","minLength":1,"maxLength":128},"kind":{"enum":["building","research","upgrade"]},"nodeId":{"type":"string","minLength":1,"maxLength":64},"profileId":{"type":["string","null"],"maxLength":64},"level":{"type":"integer","minimum":0,"maximum":100},"paidCost":{"type":"integer","minimum":0,"maximum":9007199254740991}}}}}},"checksum":{"type":"string","pattern":"^[a-f0-9]{64}$"}},"definitions":{"checkpoint":{"type":"object","additionalProperties":false,"required":["mode","phase","campaignId","wave","seed","rngState","supplies","formationStage","buildingIds","researchIds","upgradeLevels","placements","commandIds","acknowledgedNodeIds","tutorialStep","clearedWaveCount","resolutionIds","hqHp","checkpoint"],"properties":{"mode":{"enum":["preview","campaign"]},"phase":{"enum":["preparation","combat","victory","defeat","clear"]},"campaignId":{"type":"string","minLength":1,"maxLength":128},"wave":{"type":"integer","minimum":1,"maximum":100},"seed":{"type":"integer","minimum":0,"maximum":4294967295},"rngState":{"type":"integer","minimum":0,"maximum":4294967295},"supplies":{"anyOf":[{"type":"integer","minimum":0,"maximum":9007199254740991},{"type":"null"}]},"formationStage":{"enum":["3","5","9","13","25"]},"buildingIds":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true},"researchIds":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true},"upgradeLevels":{"type":"object","additionalProperties":{"type":"object","additionalProperties":{"type":"integer","minimum":0,"maximum":9007199254740991}}},"placements":{"type":"array","maxItems":24,"items":{"type":"object","additionalProperties":false,"required":["instanceId","unitId","cell","paidCost"],"properties":{"instanceId":{"type":"string","minLength":1,"maxLength":128},"unitId":{"type":"string","minLength":1,"maxLength":128},"cell":{"type":"object","additionalProperties":false,"required":["row","col"],"properties":{"row":{"type":"integer","minimum":0,"maximum":4},"col":{"type":"integer","minimum":0,"maximum":4}}},"paidCost":{"type":"integer","minimum":0,"maximum":9007199254740991}}}},"commandIds":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true},"acknowledgedNodeIds":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true},"tutorialStep":{"type":"integer","minimum":0,"maximum":4},"clearedWaveCount":{"type":"integer","minimum":0,"maximum":100},"resolutionIds":{"type":"array","uniqueItems":true,"items":{"type":"string"}},"hqHp":{"type":"number","minimum":0},"checkpoint":{"type":"null"}}}}};
-const pattern0 = new RegExp("^\\d{4}-\\d{2}-\\d{2}T", "u");
-const pattern1 = new RegExp("^[a-f0-9]{64}$", "u");
-const schema37 = {"type":"object","additionalProperties":false,"required":["mode","phase","campaignId","wave","seed","rngState","supplies","formationStage","buildingIds","researchIds","upgradeLevels","placements","commandIds","acknowledgedNodeIds","tutorialStep","clearedWaveCount","resolutionIds","hqHp","checkpoint"],"properties":{"mode":{"enum":["preview","campaign"]},"phase":{"enum":["preparation","combat","victory","defeat","clear"]},"campaignId":{"type":"string","minLength":1,"maxLength":128},"wave":{"type":"integer","minimum":1,"maximum":100},"seed":{"type":"integer","minimum":0,"maximum":4294967295},"rngState":{"type":"integer","minimum":0,"maximum":4294967295},"supplies":{"anyOf":[{"type":"integer","minimum":0,"maximum":9007199254740991},{"type":"null"}]},"formationStage":{"enum":["3","5","9","13","25"]},"buildingIds":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true},"researchIds":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true},"upgradeLevels":{"type":"object","additionalProperties":{"type":"object","additionalProperties":{"type":"integer","minimum":0,"maximum":9007199254740991}}},"placements":{"type":"array","maxItems":24,"items":{"type":"object","additionalProperties":false,"required":["instanceId","unitId","cell","paidCost"],"properties":{"instanceId":{"type":"string","minLength":1,"maxLength":128},"unitId":{"type":"string","minLength":1,"maxLength":128},"cell":{"type":"object","additionalProperties":false,"required":["row","col"],"properties":{"row":{"type":"integer","minimum":0,"maximum":4},"col":{"type":"integer","minimum":0,"maximum":4}}},"paidCost":{"type":"integer","minimum":0,"maximum":9007199254740991}}}},"commandIds":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true},"acknowledgedNodeIds":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true},"tutorialStep":{"type":"integer","minimum":0,"maximum":4},"clearedWaveCount":{"type":"integer","minimum":0,"maximum":100},"resolutionIds":{"type":"array","uniqueItems":true,"items":{"type":"string"}},"hqHp":{"type":"number","minimum":0},"checkpoint":{"type":"null"}}};
 
-function validate89(data, {instancePath="", parentData, parentDataProperty, rootData=data}={}){
+function validate90(data, {instancePath="", parentData, parentDataProperty, rootData=data}={}){
+let vErrors = null;
+let errors = 0;
+if(data && typeof data == "object" && !Array.isArray(data)){
+if(data.schemaVersion === undefined){
+const err0 = {instancePath,schemaPath:"#/required",keyword:"required",params:{missingProperty: "schemaVersion"},message:"must have required property '"+"schemaVersion"+"'"};
+if(vErrors === null){
+vErrors = [err0];
+}
+else {
+vErrors.push(err0);
+}
+errors++;
+}
+if(data.configVersion === undefined){
+const err1 = {instancePath,schemaPath:"#/required",keyword:"required",params:{missingProperty: "configVersion"},message:"must have required property '"+"configVersion"+"'"};
+if(vErrors === null){
+vErrors = [err1];
+}
+else {
+vErrors.push(err1);
+}
+errors++;
+}
+if(data.contentVersion === undefined){
+const err2 = {instancePath,schemaPath:"#/required",keyword:"required",params:{missingProperty: "contentVersion"},message:"must have required property '"+"contentVersion"+"'"};
+if(vErrors === null){
+vErrors = [err2];
+}
+else {
+vErrors.push(err2);
+}
+errors++;
+}
+if(data.savedAt === undefined){
+const err3 = {instancePath,schemaPath:"#/required",keyword:"required",params:{missingProperty: "savedAt"},message:"must have required property '"+"savedAt"+"'"};
+if(vErrors === null){
+vErrors = [err3];
+}
+else {
+vErrors.push(err3);
+}
+errors++;
+}
+if(data.state === undefined){
+const err4 = {instancePath,schemaPath:"#/required",keyword:"required",params:{missingProperty: "state"},message:"must have required property '"+"state"+"'"};
+if(vErrors === null){
+vErrors = [err4];
+}
+else {
+vErrors.push(err4);
+}
+errors++;
+}
+if(data.checksum === undefined){
+const err5 = {instancePath,schemaPath:"#/required",keyword:"required",params:{missingProperty: "checksum"},message:"must have required property '"+"checksum"+"'"};
+if(vErrors === null){
+vErrors = [err5];
+}
+else {
+vErrors.push(err5);
+}
+errors++;
+}
+for(const key0 in data){
+if(!((((((key0 === "schemaVersion") || (key0 === "configVersion")) || (key0 === "contentVersion")) || (key0 === "savedAt")) || (key0 === "state")) || (key0 === "checksum"))){
+const err6 = {instancePath,schemaPath:"#/additionalProperties",keyword:"additionalProperties",params:{additionalProperty: key0},message:"must NOT have additional properties"};
+if(vErrors === null){
+vErrors = [err6];
+}
+else {
+vErrors.push(err6);
+}
+errors++;
+}
+}
+if(data.schemaVersion !== undefined){
+if(3 !== data.schemaVersion){
+const err7 = {instancePath:instancePath+"/schemaVersion",schemaPath:"#/properties/schemaVersion/const",keyword:"const",params:{allowedValue: 3},message:"must be equal to constant"};
+if(vErrors === null){
+vErrors = [err7];
+}
+else {
+vErrors.push(err7);
+}
+errors++;
+}
+}
+if(data.configVersion !== undefined){
+let data1 = data.configVersion;
+if(typeof data1 === "string"){
+if(func4(data1) > 128){
+const err8 = {instancePath:instancePath+"/configVersion",schemaPath:"#/properties/configVersion/maxLength",keyword:"maxLength",params:{limit: 128},message:"must NOT have more than 128 characters"};
+if(vErrors === null){
+vErrors = [err8];
+}
+else {
+vErrors.push(err8);
+}
+errors++;
+}
+if(func4(data1) < 1){
+const err9 = {instancePath:instancePath+"/configVersion",schemaPath:"#/properties/configVersion/minLength",keyword:"minLength",params:{limit: 1},message:"must NOT have fewer than 1 characters"};
+if(vErrors === null){
+vErrors = [err9];
+}
+else {
+vErrors.push(err9);
+}
+errors++;
+}
+}
+else {
+const err10 = {instancePath:instancePath+"/configVersion",schemaPath:"#/properties/configVersion/type",keyword:"type",params:{type: "string"},message:"must be string"};
+if(vErrors === null){
+vErrors = [err10];
+}
+else {
+vErrors.push(err10);
+}
+errors++;
+}
+}
+if(data.contentVersion !== undefined){
+let data2 = data.contentVersion;
+if(typeof data2 === "string"){
+if(func4(data2) > 128){
+const err11 = {instancePath:instancePath+"/contentVersion",schemaPath:"#/properties/contentVersion/maxLength",keyword:"maxLength",params:{limit: 128},message:"must NOT have more than 128 characters"};
+if(vErrors === null){
+vErrors = [err11];
+}
+else {
+vErrors.push(err11);
+}
+errors++;
+}
+if(func4(data2) < 1){
+const err12 = {instancePath:instancePath+"/contentVersion",schemaPath:"#/properties/contentVersion/minLength",keyword:"minLength",params:{limit: 1},message:"must NOT have fewer than 1 characters"};
+if(vErrors === null){
+vErrors = [err12];
+}
+else {
+vErrors.push(err12);
+}
+errors++;
+}
+}
+else {
+const err13 = {instancePath:instancePath+"/contentVersion",schemaPath:"#/properties/contentVersion/type",keyword:"type",params:{type: "string"},message:"must be string"};
+if(vErrors === null){
+vErrors = [err13];
+}
+else {
+vErrors.push(err13);
+}
+errors++;
+}
+}
+if(data.savedAt !== undefined){
+let data3 = data.savedAt;
+if(typeof data3 === "string"){
+if(!pattern0.test(data3)){
+const err14 = {instancePath:instancePath+"/savedAt",schemaPath:"#/properties/savedAt/pattern",keyword:"pattern",params:{pattern: "^\\d{4}-\\d{2}-\\d{2}T"},message:"must match pattern \""+"^\\d{4}-\\d{2}-\\d{2}T"+"\""};
+if(vErrors === null){
+vErrors = [err14];
+}
+else {
+vErrors.push(err14);
+}
+errors++;
+}
+}
+else {
+const err15 = {instancePath:instancePath+"/savedAt",schemaPath:"#/properties/savedAt/type",keyword:"type",params:{type: "string"},message:"must be string"};
+if(vErrors === null){
+vErrors = [err15];
+}
+else {
+vErrors.push(err15);
+}
+errors++;
+}
+}
+if(data.state !== undefined){
+let data4 = data.state;
+if(data4 && typeof data4 == "object" && !Array.isArray(data4)){
+if(data4.mode === undefined){
+const err16 = {instancePath:instancePath+"/state",schemaPath:"#/properties/state/required",keyword:"required",params:{missingProperty: "mode"},message:"must have required property '"+"mode"+"'"};
+if(vErrors === null){
+vErrors = [err16];
+}
+else {
+vErrors.push(err16);
+}
+errors++;
+}
+if(data4.phase === undefined){
+const err17 = {instancePath:instancePath+"/state",schemaPath:"#/properties/state/required",keyword:"required",params:{missingProperty: "phase"},message:"must have required property '"+"phase"+"'"};
+if(vErrors === null){
+vErrors = [err17];
+}
+else {
+vErrors.push(err17);
+}
+errors++;
+}
+if(data4.campaignId === undefined){
+const err18 = {instancePath:instancePath+"/state",schemaPath:"#/properties/state/required",keyword:"required",params:{missingProperty: "campaignId"},message:"must have required property '"+"campaignId"+"'"};
+if(vErrors === null){
+vErrors = [err18];
+}
+else {
+vErrors.push(err18);
+}
+errors++;
+}
+if(data4.wave === undefined){
+const err19 = {instancePath:instancePath+"/state",schemaPath:"#/properties/state/required",keyword:"required",params:{missingProperty: "wave"},message:"must have required property '"+"wave"+"'"};
+if(vErrors === null){
+vErrors = [err19];
+}
+else {
+vErrors.push(err19);
+}
+errors++;
+}
+if(data4.seed === undefined){
+const err20 = {instancePath:instancePath+"/state",schemaPath:"#/properties/state/required",keyword:"required",params:{missingProperty: "seed"},message:"must have required property '"+"seed"+"'"};
+if(vErrors === null){
+vErrors = [err20];
+}
+else {
+vErrors.push(err20);
+}
+errors++;
+}
+if(data4.rngState === undefined){
+const err21 = {instancePath:instancePath+"/state",schemaPath:"#/properties/state/required",keyword:"required",params:{missingProperty: "rngState"},message:"must have required property '"+"rngState"+"'"};
+if(vErrors === null){
+vErrors = [err21];
+}
+else {
+vErrors.push(err21);
+}
+errors++;
+}
+if(data4.supplies === undefined){
+const err22 = {instancePath:instancePath+"/state",schemaPath:"#/properties/state/required",keyword:"required",params:{missingProperty: "supplies"},message:"must have required property '"+"supplies"+"'"};
+if(vErrors === null){
+vErrors = [err22];
+}
+else {
+vErrors.push(err22);
+}
+errors++;
+}
+if(data4.formationStage === undefined){
+const err23 = {instancePath:instancePath+"/state",schemaPath:"#/properties/state/required",keyword:"required",params:{missingProperty: "formationStage"},message:"must have required property '"+"formationStage"+"'"};
+if(vErrors === null){
+vErrors = [err23];
+}
+else {
+vErrors.push(err23);
+}
+errors++;
+}
+if(data4.buildingIds === undefined){
+const err24 = {instancePath:instancePath+"/state",schemaPath:"#/properties/state/required",keyword:"required",params:{missingProperty: "buildingIds"},message:"must have required property '"+"buildingIds"+"'"};
+if(vErrors === null){
+vErrors = [err24];
+}
+else {
+vErrors.push(err24);
+}
+errors++;
+}
+if(data4.researchIds === undefined){
+const err25 = {instancePath:instancePath+"/state",schemaPath:"#/properties/state/required",keyword:"required",params:{missingProperty: "researchIds"},message:"must have required property '"+"researchIds"+"'"};
+if(vErrors === null){
+vErrors = [err25];
+}
+else {
+vErrors.push(err25);
+}
+errors++;
+}
+if(data4.upgradeLevels === undefined){
+const err26 = {instancePath:instancePath+"/state",schemaPath:"#/properties/state/required",keyword:"required",params:{missingProperty: "upgradeLevels"},message:"must have required property '"+"upgradeLevels"+"'"};
+if(vErrors === null){
+vErrors = [err26];
+}
+else {
+vErrors.push(err26);
+}
+errors++;
+}
+if(data4.placements === undefined){
+const err27 = {instancePath:instancePath+"/state",schemaPath:"#/properties/state/required",keyword:"required",params:{missingProperty: "placements"},message:"must have required property '"+"placements"+"'"};
+if(vErrors === null){
+vErrors = [err27];
+}
+else {
+vErrors.push(err27);
+}
+errors++;
+}
+if(data4.commandIds === undefined){
+const err28 = {instancePath:instancePath+"/state",schemaPath:"#/properties/state/required",keyword:"required",params:{missingProperty: "commandIds"},message:"must have required property '"+"commandIds"+"'"};
+if(vErrors === null){
+vErrors = [err28];
+}
+else {
+vErrors.push(err28);
+}
+errors++;
+}
+if(data4.acknowledgedNodeIds === undefined){
+const err29 = {instancePath:instancePath+"/state",schemaPath:"#/properties/state/required",keyword:"required",params:{missingProperty: "acknowledgedNodeIds"},message:"must have required property '"+"acknowledgedNodeIds"+"'"};
+if(vErrors === null){
+vErrors = [err29];
+}
+else {
+vErrors.push(err29);
+}
+errors++;
+}
+if(data4.tutorialStep === undefined){
+const err30 = {instancePath:instancePath+"/state",schemaPath:"#/properties/state/required",keyword:"required",params:{missingProperty: "tutorialStep"},message:"must have required property '"+"tutorialStep"+"'"};
+if(vErrors === null){
+vErrors = [err30];
+}
+else {
+vErrors.push(err30);
+}
+errors++;
+}
+if(data4.clearedWaveCount === undefined){
+const err31 = {instancePath:instancePath+"/state",schemaPath:"#/properties/state/required",keyword:"required",params:{missingProperty: "clearedWaveCount"},message:"must have required property '"+"clearedWaveCount"+"'"};
+if(vErrors === null){
+vErrors = [err31];
+}
+else {
+vErrors.push(err31);
+}
+errors++;
+}
+if(data4.resolutionIds === undefined){
+const err32 = {instancePath:instancePath+"/state",schemaPath:"#/properties/state/required",keyword:"required",params:{missingProperty: "resolutionIds"},message:"must have required property '"+"resolutionIds"+"'"};
+if(vErrors === null){
+vErrors = [err32];
+}
+else {
+vErrors.push(err32);
+}
+errors++;
+}
+if(data4.hqHp === undefined){
+const err33 = {instancePath:instancePath+"/state",schemaPath:"#/properties/state/required",keyword:"required",params:{missingProperty: "hqHp"},message:"must have required property '"+"hqHp"+"'"};
+if(vErrors === null){
+vErrors = [err33];
+}
+else {
+vErrors.push(err33);
+}
+errors++;
+}
+if(data4.checkpoint === undefined){
+const err34 = {instancePath:instancePath+"/state",schemaPath:"#/properties/state/required",keyword:"required",params:{missingProperty: "checkpoint"},message:"must have required property '"+"checkpoint"+"'"};
+if(vErrors === null){
+vErrors = [err34];
+}
+else {
+vErrors.push(err34);
+}
+errors++;
+}
+if(data4.investments === undefined){
+const err35 = {instancePath:instancePath+"/state",schemaPath:"#/properties/state/required",keyword:"required",params:{missingProperty: "investments"},message:"must have required property '"+"investments"+"'"};
+if(vErrors === null){
+vErrors = [err35];
+}
+else {
+vErrors.push(err35);
+}
+errors++;
+}
+if(data4.revealedNodeIds === undefined){
+const err36 = {instancePath:instancePath+"/state",schemaPath:"#/properties/state/required",keyword:"required",params:{missingProperty: "revealedNodeIds"},message:"must have required property '"+"revealedNodeIds"+"'"};
+if(vErrors === null){
+vErrors = [err36];
+}
+else {
+vErrors.push(err36);
+}
+errors++;
+}
+if(data4.legacyFreeNodeIds === undefined){
+const err37 = {instancePath:instancePath+"/state",schemaPath:"#/properties/state/required",keyword:"required",params:{missingProperty: "legacyFreeNodeIds"},message:"must have required property '"+"legacyFreeNodeIds"+"'"};
+if(vErrors === null){
+vErrors = [err37];
+}
+else {
+vErrors.push(err37);
+}
+errors++;
+}
+for(const key1 in data4){
+if(!(func2.call(schema37.properties.state.properties, key1))){
+const err38 = {instancePath:instancePath+"/state",schemaPath:"#/properties/state/additionalProperties",keyword:"additionalProperties",params:{additionalProperty: key1},message:"must NOT have additional properties"};
+if(vErrors === null){
+vErrors = [err38];
+}
+else {
+vErrors.push(err38);
+}
+errors++;
+}
+}
+if(data4.mode !== undefined){
+let data5 = data4.mode;
+if(!((data5 === "preview") || (data5 === "campaign"))){
+const err39 = {instancePath:instancePath+"/state/mode",schemaPath:"#/properties/state/properties/mode/enum",keyword:"enum",params:{allowedValues: schema37.properties.state.properties.mode.enum},message:"must be equal to one of the allowed values"};
+if(vErrors === null){
+vErrors = [err39];
+}
+else {
+vErrors.push(err39);
+}
+errors++;
+}
+}
+if(data4.phase !== undefined){
+let data6 = data4.phase;
+if(!(((((data6 === "preparation") || (data6 === "combat")) || (data6 === "victory")) || (data6 === "defeat")) || (data6 === "clear"))){
+const err40 = {instancePath:instancePath+"/state/phase",schemaPath:"#/properties/state/properties/phase/enum",keyword:"enum",params:{allowedValues: schema37.properties.state.properties.phase.enum},message:"must be equal to one of the allowed values"};
+if(vErrors === null){
+vErrors = [err40];
+}
+else {
+vErrors.push(err40);
+}
+errors++;
+}
+}
+if(data4.campaignId !== undefined){
+let data7 = data4.campaignId;
+if(typeof data7 === "string"){
+if(func4(data7) > 128){
+const err41 = {instancePath:instancePath+"/state/campaignId",schemaPath:"#/properties/state/properties/campaignId/maxLength",keyword:"maxLength",params:{limit: 128},message:"must NOT have more than 128 characters"};
+if(vErrors === null){
+vErrors = [err41];
+}
+else {
+vErrors.push(err41);
+}
+errors++;
+}
+if(func4(data7) < 1){
+const err42 = {instancePath:instancePath+"/state/campaignId",schemaPath:"#/properties/state/properties/campaignId/minLength",keyword:"minLength",params:{limit: 1},message:"must NOT have fewer than 1 characters"};
+if(vErrors === null){
+vErrors = [err42];
+}
+else {
+vErrors.push(err42);
+}
+errors++;
+}
+}
+else {
+const err43 = {instancePath:instancePath+"/state/campaignId",schemaPath:"#/properties/state/properties/campaignId/type",keyword:"type",params:{type: "string"},message:"must be string"};
+if(vErrors === null){
+vErrors = [err43];
+}
+else {
+vErrors.push(err43);
+}
+errors++;
+}
+}
+if(data4.wave !== undefined){
+let data8 = data4.wave;
+if(!(((typeof data8 == "number") && (!(data8 % 1) && !isNaN(data8))) && (isFinite(data8)))){
+const err44 = {instancePath:instancePath+"/state/wave",schemaPath:"#/properties/state/properties/wave/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err44];
+}
+else {
+vErrors.push(err44);
+}
+errors++;
+}
+if((typeof data8 == "number") && (isFinite(data8))){
+if(data8 > 100 || isNaN(data8)){
+const err45 = {instancePath:instancePath+"/state/wave",schemaPath:"#/properties/state/properties/wave/maximum",keyword:"maximum",params:{comparison: "<=", limit: 100},message:"must be <= 100"};
+if(vErrors === null){
+vErrors = [err45];
+}
+else {
+vErrors.push(err45);
+}
+errors++;
+}
+if(data8 < 1 || isNaN(data8)){
+const err46 = {instancePath:instancePath+"/state/wave",schemaPath:"#/properties/state/properties/wave/minimum",keyword:"minimum",params:{comparison: ">=", limit: 1},message:"must be >= 1"};
+if(vErrors === null){
+vErrors = [err46];
+}
+else {
+vErrors.push(err46);
+}
+errors++;
+}
+}
+}
+if(data4.seed !== undefined){
+let data9 = data4.seed;
+if(!(((typeof data9 == "number") && (!(data9 % 1) && !isNaN(data9))) && (isFinite(data9)))){
+const err47 = {instancePath:instancePath+"/state/seed",schemaPath:"#/properties/state/properties/seed/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err47];
+}
+else {
+vErrors.push(err47);
+}
+errors++;
+}
+if((typeof data9 == "number") && (isFinite(data9))){
+if(data9 > 4294967295 || isNaN(data9)){
+const err48 = {instancePath:instancePath+"/state/seed",schemaPath:"#/properties/state/properties/seed/maximum",keyword:"maximum",params:{comparison: "<=", limit: 4294967295},message:"must be <= 4294967295"};
+if(vErrors === null){
+vErrors = [err48];
+}
+else {
+vErrors.push(err48);
+}
+errors++;
+}
+if(data9 < 0 || isNaN(data9)){
+const err49 = {instancePath:instancePath+"/state/seed",schemaPath:"#/properties/state/properties/seed/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err49];
+}
+else {
+vErrors.push(err49);
+}
+errors++;
+}
+}
+}
+if(data4.rngState !== undefined){
+let data10 = data4.rngState;
+if(!(((typeof data10 == "number") && (!(data10 % 1) && !isNaN(data10))) && (isFinite(data10)))){
+const err50 = {instancePath:instancePath+"/state/rngState",schemaPath:"#/properties/state/properties/rngState/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err50];
+}
+else {
+vErrors.push(err50);
+}
+errors++;
+}
+if((typeof data10 == "number") && (isFinite(data10))){
+if(data10 > 4294967295 || isNaN(data10)){
+const err51 = {instancePath:instancePath+"/state/rngState",schemaPath:"#/properties/state/properties/rngState/maximum",keyword:"maximum",params:{comparison: "<=", limit: 4294967295},message:"must be <= 4294967295"};
+if(vErrors === null){
+vErrors = [err51];
+}
+else {
+vErrors.push(err51);
+}
+errors++;
+}
+if(data10 < 0 || isNaN(data10)){
+const err52 = {instancePath:instancePath+"/state/rngState",schemaPath:"#/properties/state/properties/rngState/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err52];
+}
+else {
+vErrors.push(err52);
+}
+errors++;
+}
+}
+}
+if(data4.supplies !== undefined){
+let data11 = data4.supplies;
+const _errs23 = errors;
+let valid2 = false;
+const _errs24 = errors;
+if(!(((typeof data11 == "number") && (!(data11 % 1) && !isNaN(data11))) && (isFinite(data11)))){
+const err53 = {instancePath:instancePath+"/state/supplies",schemaPath:"#/properties/state/properties/supplies/anyOf/0/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err53];
+}
+else {
+vErrors.push(err53);
+}
+errors++;
+}
+if((typeof data11 == "number") && (isFinite(data11))){
+if(data11 > 9007199254740991 || isNaN(data11)){
+const err54 = {instancePath:instancePath+"/state/supplies",schemaPath:"#/properties/state/properties/supplies/anyOf/0/maximum",keyword:"maximum",params:{comparison: "<=", limit: 9007199254740991},message:"must be <= 9007199254740991"};
+if(vErrors === null){
+vErrors = [err54];
+}
+else {
+vErrors.push(err54);
+}
+errors++;
+}
+if(data11 < 0 || isNaN(data11)){
+const err55 = {instancePath:instancePath+"/state/supplies",schemaPath:"#/properties/state/properties/supplies/anyOf/0/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err55];
+}
+else {
+vErrors.push(err55);
+}
+errors++;
+}
+}
+var _valid0 = _errs24 === errors;
+valid2 = valid2 || _valid0;
+if(!valid2){
+const _errs26 = errors;
+if(data11 !== null){
+const err56 = {instancePath:instancePath+"/state/supplies",schemaPath:"#/properties/state/properties/supplies/anyOf/1/type",keyword:"type",params:{type: "null"},message:"must be null"};
+if(vErrors === null){
+vErrors = [err56];
+}
+else {
+vErrors.push(err56);
+}
+errors++;
+}
+var _valid0 = _errs26 === errors;
+valid2 = valid2 || _valid0;
+}
+if(!valid2){
+const err57 = {instancePath:instancePath+"/state/supplies",schemaPath:"#/properties/state/properties/supplies/anyOf",keyword:"anyOf",params:{},message:"must match a schema in anyOf"};
+if(vErrors === null){
+vErrors = [err57];
+}
+else {
+vErrors.push(err57);
+}
+errors++;
+}
+else {
+errors = _errs23;
+if(vErrors !== null){
+if(_errs23){
+vErrors.length = _errs23;
+}
+else {
+vErrors = null;
+}
+}
+}
+}
+if(data4.formationStage !== undefined){
+let data12 = data4.formationStage;
+if(!(((((data12 === "3") || (data12 === "5")) || (data12 === "9")) || (data12 === "13")) || (data12 === "25"))){
+const err58 = {instancePath:instancePath+"/state/formationStage",schemaPath:"#/properties/state/properties/formationStage/enum",keyword:"enum",params:{allowedValues: schema37.properties.state.properties.formationStage.enum},message:"must be equal to one of the allowed values"};
+if(vErrors === null){
+vErrors = [err58];
+}
+else {
+vErrors.push(err58);
+}
+errors++;
+}
+}
+if(data4.buildingIds !== undefined){
+let data13 = data4.buildingIds;
+if(Array.isArray(data13)){
+const len0 = data13.length;
+for(let i0=0; i0<len0; i0++){
+let data14 = data13[i0];
+if(typeof data14 === "string"){
+if(func4(data14) > 128){
+const err59 = {instancePath:instancePath+"/state/buildingIds/" + i0,schemaPath:"#/properties/state/properties/buildingIds/items/maxLength",keyword:"maxLength",params:{limit: 128},message:"must NOT have more than 128 characters"};
+if(vErrors === null){
+vErrors = [err59];
+}
+else {
+vErrors.push(err59);
+}
+errors++;
+}
+if(func4(data14) < 1){
+const err60 = {instancePath:instancePath+"/state/buildingIds/" + i0,schemaPath:"#/properties/state/properties/buildingIds/items/minLength",keyword:"minLength",params:{limit: 1},message:"must NOT have fewer than 1 characters"};
+if(vErrors === null){
+vErrors = [err60];
+}
+else {
+vErrors.push(err60);
+}
+errors++;
+}
+}
+else {
+const err61 = {instancePath:instancePath+"/state/buildingIds/" + i0,schemaPath:"#/properties/state/properties/buildingIds/items/type",keyword:"type",params:{type: "string"},message:"must be string"};
+if(vErrors === null){
+vErrors = [err61];
+}
+else {
+vErrors.push(err61);
+}
+errors++;
+}
+}
+let i1 = data13.length;
+let j0;
+if(i1 > 1){
+const indices0 = {};
+for(;i1--;){
+let item0 = data13[i1];
+if(typeof item0 !== "string"){
+continue;
+}
+if(typeof indices0[item0] == "number"){
+j0 = indices0[item0];
+const err62 = {instancePath:instancePath+"/state/buildingIds",schemaPath:"#/properties/state/properties/buildingIds/uniqueItems",keyword:"uniqueItems",params:{i: i1, j: j0},message:"must NOT have duplicate items (items ## "+j0+" and "+i1+" are identical)"};
+if(vErrors === null){
+vErrors = [err62];
+}
+else {
+vErrors.push(err62);
+}
+errors++;
+break;
+}
+indices0[item0] = i1;
+}
+}
+}
+else {
+const err63 = {instancePath:instancePath+"/state/buildingIds",schemaPath:"#/properties/state/properties/buildingIds/type",keyword:"type",params:{type: "array"},message:"must be array"};
+if(vErrors === null){
+vErrors = [err63];
+}
+else {
+vErrors.push(err63);
+}
+errors++;
+}
+}
+if(data4.researchIds !== undefined){
+let data15 = data4.researchIds;
+if(Array.isArray(data15)){
+const len1 = data15.length;
+for(let i2=0; i2<len1; i2++){
+let data16 = data15[i2];
+if(typeof data16 === "string"){
+if(func4(data16) > 128){
+const err64 = {instancePath:instancePath+"/state/researchIds/" + i2,schemaPath:"#/properties/state/properties/researchIds/items/maxLength",keyword:"maxLength",params:{limit: 128},message:"must NOT have more than 128 characters"};
+if(vErrors === null){
+vErrors = [err64];
+}
+else {
+vErrors.push(err64);
+}
+errors++;
+}
+if(func4(data16) < 1){
+const err65 = {instancePath:instancePath+"/state/researchIds/" + i2,schemaPath:"#/properties/state/properties/researchIds/items/minLength",keyword:"minLength",params:{limit: 1},message:"must NOT have fewer than 1 characters"};
+if(vErrors === null){
+vErrors = [err65];
+}
+else {
+vErrors.push(err65);
+}
+errors++;
+}
+}
+else {
+const err66 = {instancePath:instancePath+"/state/researchIds/" + i2,schemaPath:"#/properties/state/properties/researchIds/items/type",keyword:"type",params:{type: "string"},message:"must be string"};
+if(vErrors === null){
+vErrors = [err66];
+}
+else {
+vErrors.push(err66);
+}
+errors++;
+}
+}
+let i3 = data15.length;
+let j1;
+if(i3 > 1){
+const indices1 = {};
+for(;i3--;){
+let item1 = data15[i3];
+if(typeof item1 !== "string"){
+continue;
+}
+if(typeof indices1[item1] == "number"){
+j1 = indices1[item1];
+const err67 = {instancePath:instancePath+"/state/researchIds",schemaPath:"#/properties/state/properties/researchIds/uniqueItems",keyword:"uniqueItems",params:{i: i3, j: j1},message:"must NOT have duplicate items (items ## "+j1+" and "+i3+" are identical)"};
+if(vErrors === null){
+vErrors = [err67];
+}
+else {
+vErrors.push(err67);
+}
+errors++;
+break;
+}
+indices1[item1] = i3;
+}
+}
+}
+else {
+const err68 = {instancePath:instancePath+"/state/researchIds",schemaPath:"#/properties/state/properties/researchIds/type",keyword:"type",params:{type: "array"},message:"must be array"};
+if(vErrors === null){
+vErrors = [err68];
+}
+else {
+vErrors.push(err68);
+}
+errors++;
+}
+}
+if(data4.upgradeLevels !== undefined){
+let data17 = data4.upgradeLevels;
+if(data17 && typeof data17 == "object" && !Array.isArray(data17)){
+for(const key2 in data17){
+let data18 = data17[key2];
+if(data18 && typeof data18 == "object" && !Array.isArray(data18)){
+for(const key3 in data18){
+let data19 = data18[key3];
+if(!(((typeof data19 == "number") && (!(data19 % 1) && !isNaN(data19))) && (isFinite(data19)))){
+const err69 = {instancePath:instancePath+"/state/upgradeLevels/" + key2.replace(/~/g, "~0").replace(/\//g, "~1")+"/" + key3.replace(/~/g, "~0").replace(/\//g, "~1"),schemaPath:"#/properties/state/properties/upgradeLevels/additionalProperties/additionalProperties/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err69];
+}
+else {
+vErrors.push(err69);
+}
+errors++;
+}
+if((typeof data19 == "number") && (isFinite(data19))){
+if(data19 > 9007199254740991 || isNaN(data19)){
+const err70 = {instancePath:instancePath+"/state/upgradeLevels/" + key2.replace(/~/g, "~0").replace(/\//g, "~1")+"/" + key3.replace(/~/g, "~0").replace(/\//g, "~1"),schemaPath:"#/properties/state/properties/upgradeLevels/additionalProperties/additionalProperties/maximum",keyword:"maximum",params:{comparison: "<=", limit: 9007199254740991},message:"must be <= 9007199254740991"};
+if(vErrors === null){
+vErrors = [err70];
+}
+else {
+vErrors.push(err70);
+}
+errors++;
+}
+if(data19 < 0 || isNaN(data19)){
+const err71 = {instancePath:instancePath+"/state/upgradeLevels/" + key2.replace(/~/g, "~0").replace(/\//g, "~1")+"/" + key3.replace(/~/g, "~0").replace(/\//g, "~1"),schemaPath:"#/properties/state/properties/upgradeLevels/additionalProperties/additionalProperties/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err71];
+}
+else {
+vErrors.push(err71);
+}
+errors++;
+}
+}
+}
+}
+else {
+const err72 = {instancePath:instancePath+"/state/upgradeLevels/" + key2.replace(/~/g, "~0").replace(/\//g, "~1"),schemaPath:"#/properties/state/properties/upgradeLevels/additionalProperties/type",keyword:"type",params:{type: "object"},message:"must be object"};
+if(vErrors === null){
+vErrors = [err72];
+}
+else {
+vErrors.push(err72);
+}
+errors++;
+}
+}
+}
+else {
+const err73 = {instancePath:instancePath+"/state/upgradeLevels",schemaPath:"#/properties/state/properties/upgradeLevels/type",keyword:"type",params:{type: "object"},message:"must be object"};
+if(vErrors === null){
+vErrors = [err73];
+}
+else {
+vErrors.push(err73);
+}
+errors++;
+}
+}
+if(data4.placements !== undefined){
+let data20 = data4.placements;
+if(Array.isArray(data20)){
+if(data20.length > 24){
+const err74 = {instancePath:instancePath+"/state/placements",schemaPath:"#/properties/state/properties/placements/maxItems",keyword:"maxItems",params:{limit: 24},message:"must NOT have more than 24 items"};
+if(vErrors === null){
+vErrors = [err74];
+}
+else {
+vErrors.push(err74);
+}
+errors++;
+}
+const len2 = data20.length;
+for(let i4=0; i4<len2; i4++){
+let data21 = data20[i4];
+if(data21 && typeof data21 == "object" && !Array.isArray(data21)){
+if(data21.instanceId === undefined){
+const err75 = {instancePath:instancePath+"/state/placements/" + i4,schemaPath:"#/properties/state/properties/placements/items/required",keyword:"required",params:{missingProperty: "instanceId"},message:"must have required property '"+"instanceId"+"'"};
+if(vErrors === null){
+vErrors = [err75];
+}
+else {
+vErrors.push(err75);
+}
+errors++;
+}
+if(data21.unitId === undefined){
+const err76 = {instancePath:instancePath+"/state/placements/" + i4,schemaPath:"#/properties/state/properties/placements/items/required",keyword:"required",params:{missingProperty: "unitId"},message:"must have required property '"+"unitId"+"'"};
+if(vErrors === null){
+vErrors = [err76];
+}
+else {
+vErrors.push(err76);
+}
+errors++;
+}
+if(data21.cell === undefined){
+const err77 = {instancePath:instancePath+"/state/placements/" + i4,schemaPath:"#/properties/state/properties/placements/items/required",keyword:"required",params:{missingProperty: "cell"},message:"must have required property '"+"cell"+"'"};
+if(vErrors === null){
+vErrors = [err77];
+}
+else {
+vErrors.push(err77);
+}
+errors++;
+}
+if(data21.paidCost === undefined){
+const err78 = {instancePath:instancePath+"/state/placements/" + i4,schemaPath:"#/properties/state/properties/placements/items/required",keyword:"required",params:{missingProperty: "paidCost"},message:"must have required property '"+"paidCost"+"'"};
+if(vErrors === null){
+vErrors = [err78];
+}
+else {
+vErrors.push(err78);
+}
+errors++;
+}
+for(const key4 in data21){
+if(!((((key4 === "instanceId") || (key4 === "unitId")) || (key4 === "cell")) || (key4 === "paidCost"))){
+const err79 = {instancePath:instancePath+"/state/placements/" + i4,schemaPath:"#/properties/state/properties/placements/items/additionalProperties",keyword:"additionalProperties",params:{additionalProperty: key4},message:"must NOT have additional properties"};
+if(vErrors === null){
+vErrors = [err79];
+}
+else {
+vErrors.push(err79);
+}
+errors++;
+}
+}
+if(data21.instanceId !== undefined){
+let data22 = data21.instanceId;
+if(typeof data22 === "string"){
+if(func4(data22) > 128){
+const err80 = {instancePath:instancePath+"/state/placements/" + i4+"/instanceId",schemaPath:"#/properties/state/properties/placements/items/properties/instanceId/maxLength",keyword:"maxLength",params:{limit: 128},message:"must NOT have more than 128 characters"};
+if(vErrors === null){
+vErrors = [err80];
+}
+else {
+vErrors.push(err80);
+}
+errors++;
+}
+if(func4(data22) < 1){
+const err81 = {instancePath:instancePath+"/state/placements/" + i4+"/instanceId",schemaPath:"#/properties/state/properties/placements/items/properties/instanceId/minLength",keyword:"minLength",params:{limit: 1},message:"must NOT have fewer than 1 characters"};
+if(vErrors === null){
+vErrors = [err81];
+}
+else {
+vErrors.push(err81);
+}
+errors++;
+}
+}
+else {
+const err82 = {instancePath:instancePath+"/state/placements/" + i4+"/instanceId",schemaPath:"#/properties/state/properties/placements/items/properties/instanceId/type",keyword:"type",params:{type: "string"},message:"must be string"};
+if(vErrors === null){
+vErrors = [err82];
+}
+else {
+vErrors.push(err82);
+}
+errors++;
+}
+}
+if(data21.unitId !== undefined){
+let data23 = data21.unitId;
+if(typeof data23 === "string"){
+if(func4(data23) > 128){
+const err83 = {instancePath:instancePath+"/state/placements/" + i4+"/unitId",schemaPath:"#/properties/state/properties/placements/items/properties/unitId/maxLength",keyword:"maxLength",params:{limit: 128},message:"must NOT have more than 128 characters"};
+if(vErrors === null){
+vErrors = [err83];
+}
+else {
+vErrors.push(err83);
+}
+errors++;
+}
+if(func4(data23) < 1){
+const err84 = {instancePath:instancePath+"/state/placements/" + i4+"/unitId",schemaPath:"#/properties/state/properties/placements/items/properties/unitId/minLength",keyword:"minLength",params:{limit: 1},message:"must NOT have fewer than 1 characters"};
+if(vErrors === null){
+vErrors = [err84];
+}
+else {
+vErrors.push(err84);
+}
+errors++;
+}
+}
+else {
+const err85 = {instancePath:instancePath+"/state/placements/" + i4+"/unitId",schemaPath:"#/properties/state/properties/placements/items/properties/unitId/type",keyword:"type",params:{type: "string"},message:"must be string"};
+if(vErrors === null){
+vErrors = [err85];
+}
+else {
+vErrors.push(err85);
+}
+errors++;
+}
+}
+if(data21.cell !== undefined){
+let data24 = data21.cell;
+if(data24 && typeof data24 == "object" && !Array.isArray(data24)){
+if(data24.row === undefined){
+const err86 = {instancePath:instancePath+"/state/placements/" + i4+"/cell",schemaPath:"#/properties/state/properties/placements/items/properties/cell/required",keyword:"required",params:{missingProperty: "row"},message:"must have required property '"+"row"+"'"};
+if(vErrors === null){
+vErrors = [err86];
+}
+else {
+vErrors.push(err86);
+}
+errors++;
+}
+if(data24.col === undefined){
+const err87 = {instancePath:instancePath+"/state/placements/" + i4+"/cell",schemaPath:"#/properties/state/properties/placements/items/properties/cell/required",keyword:"required",params:{missingProperty: "col"},message:"must have required property '"+"col"+"'"};
+if(vErrors === null){
+vErrors = [err87];
+}
+else {
+vErrors.push(err87);
+}
+errors++;
+}
+for(const key5 in data24){
+if(!((key5 === "row") || (key5 === "col"))){
+const err88 = {instancePath:instancePath+"/state/placements/" + i4+"/cell",schemaPath:"#/properties/state/properties/placements/items/properties/cell/additionalProperties",keyword:"additionalProperties",params:{additionalProperty: key5},message:"must NOT have additional properties"};
+if(vErrors === null){
+vErrors = [err88];
+}
+else {
+vErrors.push(err88);
+}
+errors++;
+}
+}
+if(data24.row !== undefined){
+let data25 = data24.row;
+if(!(((typeof data25 == "number") && (!(data25 % 1) && !isNaN(data25))) && (isFinite(data25)))){
+const err89 = {instancePath:instancePath+"/state/placements/" + i4+"/cell/row",schemaPath:"#/properties/state/properties/placements/items/properties/cell/properties/row/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err89];
+}
+else {
+vErrors.push(err89);
+}
+errors++;
+}
+if((typeof data25 == "number") && (isFinite(data25))){
+if(data25 > 4 || isNaN(data25)){
+const err90 = {instancePath:instancePath+"/state/placements/" + i4+"/cell/row",schemaPath:"#/properties/state/properties/placements/items/properties/cell/properties/row/maximum",keyword:"maximum",params:{comparison: "<=", limit: 4},message:"must be <= 4"};
+if(vErrors === null){
+vErrors = [err90];
+}
+else {
+vErrors.push(err90);
+}
+errors++;
+}
+if(data25 < 0 || isNaN(data25)){
+const err91 = {instancePath:instancePath+"/state/placements/" + i4+"/cell/row",schemaPath:"#/properties/state/properties/placements/items/properties/cell/properties/row/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err91];
+}
+else {
+vErrors.push(err91);
+}
+errors++;
+}
+}
+}
+if(data24.col !== undefined){
+let data26 = data24.col;
+if(!(((typeof data26 == "number") && (!(data26 % 1) && !isNaN(data26))) && (isFinite(data26)))){
+const err92 = {instancePath:instancePath+"/state/placements/" + i4+"/cell/col",schemaPath:"#/properties/state/properties/placements/items/properties/cell/properties/col/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err92];
+}
+else {
+vErrors.push(err92);
+}
+errors++;
+}
+if((typeof data26 == "number") && (isFinite(data26))){
+if(data26 > 4 || isNaN(data26)){
+const err93 = {instancePath:instancePath+"/state/placements/" + i4+"/cell/col",schemaPath:"#/properties/state/properties/placements/items/properties/cell/properties/col/maximum",keyword:"maximum",params:{comparison: "<=", limit: 4},message:"must be <= 4"};
+if(vErrors === null){
+vErrors = [err93];
+}
+else {
+vErrors.push(err93);
+}
+errors++;
+}
+if(data26 < 0 || isNaN(data26)){
+const err94 = {instancePath:instancePath+"/state/placements/" + i4+"/cell/col",schemaPath:"#/properties/state/properties/placements/items/properties/cell/properties/col/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err94];
+}
+else {
+vErrors.push(err94);
+}
+errors++;
+}
+}
+}
+}
+else {
+const err95 = {instancePath:instancePath+"/state/placements/" + i4+"/cell",schemaPath:"#/properties/state/properties/placements/items/properties/cell/type",keyword:"type",params:{type: "object"},message:"must be object"};
+if(vErrors === null){
+vErrors = [err95];
+}
+else {
+vErrors.push(err95);
+}
+errors++;
+}
+}
+if(data21.paidCost !== undefined){
+let data27 = data21.paidCost;
+if(!(((typeof data27 == "number") && (!(data27 % 1) && !isNaN(data27))) && (isFinite(data27)))){
+const err96 = {instancePath:instancePath+"/state/placements/" + i4+"/paidCost",schemaPath:"#/properties/state/properties/placements/items/properties/paidCost/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err96];
+}
+else {
+vErrors.push(err96);
+}
+errors++;
+}
+if((typeof data27 == "number") && (isFinite(data27))){
+if(data27 > 9007199254740991 || isNaN(data27)){
+const err97 = {instancePath:instancePath+"/state/placements/" + i4+"/paidCost",schemaPath:"#/properties/state/properties/placements/items/properties/paidCost/maximum",keyword:"maximum",params:{comparison: "<=", limit: 9007199254740991},message:"must be <= 9007199254740991"};
+if(vErrors === null){
+vErrors = [err97];
+}
+else {
+vErrors.push(err97);
+}
+errors++;
+}
+if(data27 < 0 || isNaN(data27)){
+const err98 = {instancePath:instancePath+"/state/placements/" + i4+"/paidCost",schemaPath:"#/properties/state/properties/placements/items/properties/paidCost/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err98];
+}
+else {
+vErrors.push(err98);
+}
+errors++;
+}
+}
+}
+}
+else {
+const err99 = {instancePath:instancePath+"/state/placements/" + i4,schemaPath:"#/properties/state/properties/placements/items/type",keyword:"type",params:{type: "object"},message:"must be object"};
+if(vErrors === null){
+vErrors = [err99];
+}
+else {
+vErrors.push(err99);
+}
+errors++;
+}
+}
+}
+else {
+const err100 = {instancePath:instancePath+"/state/placements",schemaPath:"#/properties/state/properties/placements/type",keyword:"type",params:{type: "array"},message:"must be array"};
+if(vErrors === null){
+vErrors = [err100];
+}
+else {
+vErrors.push(err100);
+}
+errors++;
+}
+}
+if(data4.commandIds !== undefined){
+let data28 = data4.commandIds;
+if(Array.isArray(data28)){
+const len3 = data28.length;
+for(let i5=0; i5<len3; i5++){
+let data29 = data28[i5];
+if(typeof data29 === "string"){
+if(func4(data29) > 128){
+const err101 = {instancePath:instancePath+"/state/commandIds/" + i5,schemaPath:"#/properties/state/properties/commandIds/items/maxLength",keyword:"maxLength",params:{limit: 128},message:"must NOT have more than 128 characters"};
+if(vErrors === null){
+vErrors = [err101];
+}
+else {
+vErrors.push(err101);
+}
+errors++;
+}
+if(func4(data29) < 1){
+const err102 = {instancePath:instancePath+"/state/commandIds/" + i5,schemaPath:"#/properties/state/properties/commandIds/items/minLength",keyword:"minLength",params:{limit: 1},message:"must NOT have fewer than 1 characters"};
+if(vErrors === null){
+vErrors = [err102];
+}
+else {
+vErrors.push(err102);
+}
+errors++;
+}
+}
+else {
+const err103 = {instancePath:instancePath+"/state/commandIds/" + i5,schemaPath:"#/properties/state/properties/commandIds/items/type",keyword:"type",params:{type: "string"},message:"must be string"};
+if(vErrors === null){
+vErrors = [err103];
+}
+else {
+vErrors.push(err103);
+}
+errors++;
+}
+}
+let i6 = data28.length;
+let j2;
+if(i6 > 1){
+const indices2 = {};
+for(;i6--;){
+let item2 = data28[i6];
+if(typeof item2 !== "string"){
+continue;
+}
+if(typeof indices2[item2] == "number"){
+j2 = indices2[item2];
+const err104 = {instancePath:instancePath+"/state/commandIds",schemaPath:"#/properties/state/properties/commandIds/uniqueItems",keyword:"uniqueItems",params:{i: i6, j: j2},message:"must NOT have duplicate items (items ## "+j2+" and "+i6+" are identical)"};
+if(vErrors === null){
+vErrors = [err104];
+}
+else {
+vErrors.push(err104);
+}
+errors++;
+break;
+}
+indices2[item2] = i6;
+}
+}
+}
+else {
+const err105 = {instancePath:instancePath+"/state/commandIds",schemaPath:"#/properties/state/properties/commandIds/type",keyword:"type",params:{type: "array"},message:"must be array"};
+if(vErrors === null){
+vErrors = [err105];
+}
+else {
+vErrors.push(err105);
+}
+errors++;
+}
+}
+if(data4.acknowledgedNodeIds !== undefined){
+let data30 = data4.acknowledgedNodeIds;
+if(Array.isArray(data30)){
+const len4 = data30.length;
+for(let i7=0; i7<len4; i7++){
+let data31 = data30[i7];
+if(typeof data31 === "string"){
+if(func4(data31) > 128){
+const err106 = {instancePath:instancePath+"/state/acknowledgedNodeIds/" + i7,schemaPath:"#/properties/state/properties/acknowledgedNodeIds/items/maxLength",keyword:"maxLength",params:{limit: 128},message:"must NOT have more than 128 characters"};
+if(vErrors === null){
+vErrors = [err106];
+}
+else {
+vErrors.push(err106);
+}
+errors++;
+}
+if(func4(data31) < 1){
+const err107 = {instancePath:instancePath+"/state/acknowledgedNodeIds/" + i7,schemaPath:"#/properties/state/properties/acknowledgedNodeIds/items/minLength",keyword:"minLength",params:{limit: 1},message:"must NOT have fewer than 1 characters"};
+if(vErrors === null){
+vErrors = [err107];
+}
+else {
+vErrors.push(err107);
+}
+errors++;
+}
+}
+else {
+const err108 = {instancePath:instancePath+"/state/acknowledgedNodeIds/" + i7,schemaPath:"#/properties/state/properties/acknowledgedNodeIds/items/type",keyword:"type",params:{type: "string"},message:"must be string"};
+if(vErrors === null){
+vErrors = [err108];
+}
+else {
+vErrors.push(err108);
+}
+errors++;
+}
+}
+let i8 = data30.length;
+let j3;
+if(i8 > 1){
+const indices3 = {};
+for(;i8--;){
+let item3 = data30[i8];
+if(typeof item3 !== "string"){
+continue;
+}
+if(typeof indices3[item3] == "number"){
+j3 = indices3[item3];
+const err109 = {instancePath:instancePath+"/state/acknowledgedNodeIds",schemaPath:"#/properties/state/properties/acknowledgedNodeIds/uniqueItems",keyword:"uniqueItems",params:{i: i8, j: j3},message:"must NOT have duplicate items (items ## "+j3+" and "+i8+" are identical)"};
+if(vErrors === null){
+vErrors = [err109];
+}
+else {
+vErrors.push(err109);
+}
+errors++;
+break;
+}
+indices3[item3] = i8;
+}
+}
+}
+else {
+const err110 = {instancePath:instancePath+"/state/acknowledgedNodeIds",schemaPath:"#/properties/state/properties/acknowledgedNodeIds/type",keyword:"type",params:{type: "array"},message:"must be array"};
+if(vErrors === null){
+vErrors = [err110];
+}
+else {
+vErrors.push(err110);
+}
+errors++;
+}
+}
+if(data4.tutorialStep !== undefined){
+let data32 = data4.tutorialStep;
+if(!(((typeof data32 == "number") && (!(data32 % 1) && !isNaN(data32))) && (isFinite(data32)))){
+const err111 = {instancePath:instancePath+"/state/tutorialStep",schemaPath:"#/properties/state/properties/tutorialStep/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err111];
+}
+else {
+vErrors.push(err111);
+}
+errors++;
+}
+if((typeof data32 == "number") && (isFinite(data32))){
+if(data32 > 4 || isNaN(data32)){
+const err112 = {instancePath:instancePath+"/state/tutorialStep",schemaPath:"#/properties/state/properties/tutorialStep/maximum",keyword:"maximum",params:{comparison: "<=", limit: 4},message:"must be <= 4"};
+if(vErrors === null){
+vErrors = [err112];
+}
+else {
+vErrors.push(err112);
+}
+errors++;
+}
+if(data32 < 0 || isNaN(data32)){
+const err113 = {instancePath:instancePath+"/state/tutorialStep",schemaPath:"#/properties/state/properties/tutorialStep/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err113];
+}
+else {
+vErrors.push(err113);
+}
+errors++;
+}
+}
+}
+if(data4.clearedWaveCount !== undefined){
+let data33 = data4.clearedWaveCount;
+if(!(((typeof data33 == "number") && (!(data33 % 1) && !isNaN(data33))) && (isFinite(data33)))){
+const err114 = {instancePath:instancePath+"/state/clearedWaveCount",schemaPath:"#/properties/state/properties/clearedWaveCount/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err114];
+}
+else {
+vErrors.push(err114);
+}
+errors++;
+}
+if((typeof data33 == "number") && (isFinite(data33))){
+if(data33 > 100 || isNaN(data33)){
+const err115 = {instancePath:instancePath+"/state/clearedWaveCount",schemaPath:"#/properties/state/properties/clearedWaveCount/maximum",keyword:"maximum",params:{comparison: "<=", limit: 100},message:"must be <= 100"};
+if(vErrors === null){
+vErrors = [err115];
+}
+else {
+vErrors.push(err115);
+}
+errors++;
+}
+if(data33 < 0 || isNaN(data33)){
+const err116 = {instancePath:instancePath+"/state/clearedWaveCount",schemaPath:"#/properties/state/properties/clearedWaveCount/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err116];
+}
+else {
+vErrors.push(err116);
+}
+errors++;
+}
+}
+}
+if(data4.resolutionIds !== undefined){
+let data34 = data4.resolutionIds;
+if(Array.isArray(data34)){
+const len5 = data34.length;
+for(let i9=0; i9<len5; i9++){
+if(typeof data34[i9] !== "string"){
+const err117 = {instancePath:instancePath+"/state/resolutionIds/" + i9,schemaPath:"#/properties/state/properties/resolutionIds/items/type",keyword:"type",params:{type: "string"},message:"must be string"};
+if(vErrors === null){
+vErrors = [err117];
+}
+else {
+vErrors.push(err117);
+}
+errors++;
+}
+}
+let i10 = data34.length;
+let j4;
+if(i10 > 1){
+const indices4 = {};
+for(;i10--;){
+let item4 = data34[i10];
+if(typeof item4 !== "string"){
+continue;
+}
+if(typeof indices4[item4] == "number"){
+j4 = indices4[item4];
+const err118 = {instancePath:instancePath+"/state/resolutionIds",schemaPath:"#/properties/state/properties/resolutionIds/uniqueItems",keyword:"uniqueItems",params:{i: i10, j: j4},message:"must NOT have duplicate items (items ## "+j4+" and "+i10+" are identical)"};
+if(vErrors === null){
+vErrors = [err118];
+}
+else {
+vErrors.push(err118);
+}
+errors++;
+break;
+}
+indices4[item4] = i10;
+}
+}
+}
+else {
+const err119 = {instancePath:instancePath+"/state/resolutionIds",schemaPath:"#/properties/state/properties/resolutionIds/type",keyword:"type",params:{type: "array"},message:"must be array"};
+if(vErrors === null){
+vErrors = [err119];
+}
+else {
+vErrors.push(err119);
+}
+errors++;
+}
+}
+if(data4.hqHp !== undefined){
+let data36 = data4.hqHp;
+if((typeof data36 == "number") && (isFinite(data36))){
+if(data36 < 0 || isNaN(data36)){
+const err120 = {instancePath:instancePath+"/state/hqHp",schemaPath:"#/properties/state/properties/hqHp/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err120];
+}
+else {
+vErrors.push(err120);
+}
+errors++;
+}
+}
+else {
+const err121 = {instancePath:instancePath+"/state/hqHp",schemaPath:"#/properties/state/properties/hqHp/type",keyword:"type",params:{type: "number"},message:"must be number"};
+if(vErrors === null){
+vErrors = [err121];
+}
+else {
+vErrors.push(err121);
+}
+errors++;
+}
+}
+if(data4.checkpoint !== undefined){
+let data37 = data4.checkpoint;
+const _errs82 = errors;
+let valid24 = false;
+const _errs83 = errors;
+if(data37 !== null){
+const err122 = {instancePath:instancePath+"/state/checkpoint",schemaPath:"#/properties/state/properties/checkpoint/anyOf/0/type",keyword:"type",params:{type: "null"},message:"must be null"};
+if(vErrors === null){
+vErrors = [err122];
+}
+else {
+vErrors.push(err122);
+}
+errors++;
+}
+var _valid1 = _errs83 === errors;
+valid24 = valid24 || _valid1;
+if(!valid24){
+const _errs85 = errors;
+if(!(validate91(data37, {instancePath:instancePath+"/state/checkpoint",parentData:data4,parentDataProperty:"checkpoint",rootData}))){
+vErrors = vErrors === null ? validate91.errors : vErrors.concat(validate91.errors);
+errors = vErrors.length;
+}
+var _valid1 = _errs85 === errors;
+valid24 = valid24 || _valid1;
+}
+if(!valid24){
+const err123 = {instancePath:instancePath+"/state/checkpoint",schemaPath:"#/properties/state/properties/checkpoint/anyOf",keyword:"anyOf",params:{},message:"must match a schema in anyOf"};
+if(vErrors === null){
+vErrors = [err123];
+}
+else {
+vErrors.push(err123);
+}
+errors++;
+}
+else {
+errors = _errs82;
+if(vErrors !== null){
+if(_errs82){
+vErrors.length = _errs82;
+}
+else {
+vErrors = null;
+}
+}
+}
+}
+if(data4.investments !== undefined){
+let data38 = data4.investments;
+if(Array.isArray(data38)){
+if(data38.length > 10000){
+const err124 = {instancePath:instancePath+"/state/investments",schemaPath:"#/properties/state/properties/investments/maxItems",keyword:"maxItems",params:{limit: 10000},message:"must NOT have more than 10000 items"};
+if(vErrors === null){
+vErrors = [err124];
+}
+else {
+vErrors.push(err124);
+}
+errors++;
+}
+const len6 = data38.length;
+for(let i11=0; i11<len6; i11++){
+let data39 = data38[i11];
+if(data39 && typeof data39 == "object" && !Array.isArray(data39)){
+if(data39.id === undefined){
+const err125 = {instancePath:instancePath+"/state/investments/" + i11,schemaPath:"#/properties/state/properties/investments/items/required",keyword:"required",params:{missingProperty: "id"},message:"must have required property '"+"id"+"'"};
+if(vErrors === null){
+vErrors = [err125];
+}
+else {
+vErrors.push(err125);
+}
+errors++;
+}
+if(data39.kind === undefined){
+const err126 = {instancePath:instancePath+"/state/investments/" + i11,schemaPath:"#/properties/state/properties/investments/items/required",keyword:"required",params:{missingProperty: "kind"},message:"must have required property '"+"kind"+"'"};
+if(vErrors === null){
+vErrors = [err126];
+}
+else {
+vErrors.push(err126);
+}
+errors++;
+}
+if(data39.nodeId === undefined){
+const err127 = {instancePath:instancePath+"/state/investments/" + i11,schemaPath:"#/properties/state/properties/investments/items/required",keyword:"required",params:{missingProperty: "nodeId"},message:"must have required property '"+"nodeId"+"'"};
+if(vErrors === null){
+vErrors = [err127];
+}
+else {
+vErrors.push(err127);
+}
+errors++;
+}
+if(data39.profileId === undefined){
+const err128 = {instancePath:instancePath+"/state/investments/" + i11,schemaPath:"#/properties/state/properties/investments/items/required",keyword:"required",params:{missingProperty: "profileId"},message:"must have required property '"+"profileId"+"'"};
+if(vErrors === null){
+vErrors = [err128];
+}
+else {
+vErrors.push(err128);
+}
+errors++;
+}
+if(data39.level === undefined){
+const err129 = {instancePath:instancePath+"/state/investments/" + i11,schemaPath:"#/properties/state/properties/investments/items/required",keyword:"required",params:{missingProperty: "level"},message:"must have required property '"+"level"+"'"};
+if(vErrors === null){
+vErrors = [err129];
+}
+else {
+vErrors.push(err129);
+}
+errors++;
+}
+if(data39.paidCost === undefined){
+const err130 = {instancePath:instancePath+"/state/investments/" + i11,schemaPath:"#/properties/state/properties/investments/items/required",keyword:"required",params:{missingProperty: "paidCost"},message:"must have required property '"+"paidCost"+"'"};
+if(vErrors === null){
+vErrors = [err130];
+}
+else {
+vErrors.push(err130);
+}
+errors++;
+}
+for(const key6 in data39){
+if(!((((((key6 === "id") || (key6 === "kind")) || (key6 === "nodeId")) || (key6 === "profileId")) || (key6 === "level")) || (key6 === "paidCost"))){
+const err131 = {instancePath:instancePath+"/state/investments/" + i11,schemaPath:"#/properties/state/properties/investments/items/additionalProperties",keyword:"additionalProperties",params:{additionalProperty: key6},message:"must NOT have additional properties"};
+if(vErrors === null){
+vErrors = [err131];
+}
+else {
+vErrors.push(err131);
+}
+errors++;
+}
+}
+if(data39.id !== undefined){
+let data40 = data39.id;
+if(typeof data40 === "string"){
+if(func4(data40) > 128){
+const err132 = {instancePath:instancePath+"/state/investments/" + i11+"/id",schemaPath:"#/properties/state/properties/investments/items/properties/id/maxLength",keyword:"maxLength",params:{limit: 128},message:"must NOT have more than 128 characters"};
+if(vErrors === null){
+vErrors = [err132];
+}
+else {
+vErrors.push(err132);
+}
+errors++;
+}
+if(func4(data40) < 1){
+const err133 = {instancePath:instancePath+"/state/investments/" + i11+"/id",schemaPath:"#/properties/state/properties/investments/items/properties/id/minLength",keyword:"minLength",params:{limit: 1},message:"must NOT have fewer than 1 characters"};
+if(vErrors === null){
+vErrors = [err133];
+}
+else {
+vErrors.push(err133);
+}
+errors++;
+}
+}
+else {
+const err134 = {instancePath:instancePath+"/state/investments/" + i11+"/id",schemaPath:"#/properties/state/properties/investments/items/properties/id/type",keyword:"type",params:{type: "string"},message:"must be string"};
+if(vErrors === null){
+vErrors = [err134];
+}
+else {
+vErrors.push(err134);
+}
+errors++;
+}
+}
+if(data39.kind !== undefined){
+let data41 = data39.kind;
+if(!(((data41 === "building") || (data41 === "research")) || (data41 === "upgrade"))){
+const err135 = {instancePath:instancePath+"/state/investments/" + i11+"/kind",schemaPath:"#/properties/state/properties/investments/items/properties/kind/enum",keyword:"enum",params:{allowedValues: schema37.properties.state.properties.investments.items.properties.kind.enum},message:"must be equal to one of the allowed values"};
+if(vErrors === null){
+vErrors = [err135];
+}
+else {
+vErrors.push(err135);
+}
+errors++;
+}
+}
+if(data39.nodeId !== undefined){
+let data42 = data39.nodeId;
+if(typeof data42 === "string"){
+if(func4(data42) > 64){
+const err136 = {instancePath:instancePath+"/state/investments/" + i11+"/nodeId",schemaPath:"#/properties/state/properties/investments/items/properties/nodeId/maxLength",keyword:"maxLength",params:{limit: 64},message:"must NOT have more than 64 characters"};
+if(vErrors === null){
+vErrors = [err136];
+}
+else {
+vErrors.push(err136);
+}
+errors++;
+}
+if(func4(data42) < 1){
+const err137 = {instancePath:instancePath+"/state/investments/" + i11+"/nodeId",schemaPath:"#/properties/state/properties/investments/items/properties/nodeId/minLength",keyword:"minLength",params:{limit: 1},message:"must NOT have fewer than 1 characters"};
+if(vErrors === null){
+vErrors = [err137];
+}
+else {
+vErrors.push(err137);
+}
+errors++;
+}
+}
+else {
+const err138 = {instancePath:instancePath+"/state/investments/" + i11+"/nodeId",schemaPath:"#/properties/state/properties/investments/items/properties/nodeId/type",keyword:"type",params:{type: "string"},message:"must be string"};
+if(vErrors === null){
+vErrors = [err138];
+}
+else {
+vErrors.push(err138);
+}
+errors++;
+}
+}
+if(data39.profileId !== undefined){
+let data43 = data39.profileId;
+if((typeof data43 !== "string") && (data43 !== null)){
+const err139 = {instancePath:instancePath+"/state/investments/" + i11+"/profileId",schemaPath:"#/properties/state/properties/investments/items/properties/profileId/type",keyword:"type",params:{type: schema37.properties.state.properties.investments.items.properties.profileId.type},message:"must be string,null"};
+if(vErrors === null){
+vErrors = [err139];
+}
+else {
+vErrors.push(err139);
+}
+errors++;
+}
+if(typeof data43 === "string"){
+if(func4(data43) > 64){
+const err140 = {instancePath:instancePath+"/state/investments/" + i11+"/profileId",schemaPath:"#/properties/state/properties/investments/items/properties/profileId/maxLength",keyword:"maxLength",params:{limit: 64},message:"must NOT have more than 64 characters"};
+if(vErrors === null){
+vErrors = [err140];
+}
+else {
+vErrors.push(err140);
+}
+errors++;
+}
+}
+}
+if(data39.level !== undefined){
+let data44 = data39.level;
+if(!(((typeof data44 == "number") && (!(data44 % 1) && !isNaN(data44))) && (isFinite(data44)))){
+const err141 = {instancePath:instancePath+"/state/investments/" + i11+"/level",schemaPath:"#/properties/state/properties/investments/items/properties/level/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err141];
+}
+else {
+vErrors.push(err141);
+}
+errors++;
+}
+if((typeof data44 == "number") && (isFinite(data44))){
+if(data44 > 100 || isNaN(data44)){
+const err142 = {instancePath:instancePath+"/state/investments/" + i11+"/level",schemaPath:"#/properties/state/properties/investments/items/properties/level/maximum",keyword:"maximum",params:{comparison: "<=", limit: 100},message:"must be <= 100"};
+if(vErrors === null){
+vErrors = [err142];
+}
+else {
+vErrors.push(err142);
+}
+errors++;
+}
+if(data44 < 0 || isNaN(data44)){
+const err143 = {instancePath:instancePath+"/state/investments/" + i11+"/level",schemaPath:"#/properties/state/properties/investments/items/properties/level/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err143];
+}
+else {
+vErrors.push(err143);
+}
+errors++;
+}
+}
+}
+if(data39.paidCost !== undefined){
+let data45 = data39.paidCost;
+if(!(((typeof data45 == "number") && (!(data45 % 1) && !isNaN(data45))) && (isFinite(data45)))){
+const err144 = {instancePath:instancePath+"/state/investments/" + i11+"/paidCost",schemaPath:"#/properties/state/properties/investments/items/properties/paidCost/type",keyword:"type",params:{type: "integer"},message:"must be integer"};
+if(vErrors === null){
+vErrors = [err144];
+}
+else {
+vErrors.push(err144);
+}
+errors++;
+}
+if((typeof data45 == "number") && (isFinite(data45))){
+if(data45 > 9007199254740991 || isNaN(data45)){
+const err145 = {instancePath:instancePath+"/state/investments/" + i11+"/paidCost",schemaPath:"#/properties/state/properties/investments/items/properties/paidCost/maximum",keyword:"maximum",params:{comparison: "<=", limit: 9007199254740991},message:"must be <= 9007199254740991"};
+if(vErrors === null){
+vErrors = [err145];
+}
+else {
+vErrors.push(err145);
+}
+errors++;
+}
+if(data45 < 0 || isNaN(data45)){
+const err146 = {instancePath:instancePath+"/state/investments/" + i11+"/paidCost",schemaPath:"#/properties/state/properties/investments/items/properties/paidCost/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};
+if(vErrors === null){
+vErrors = [err146];
+}
+else {
+vErrors.push(err146);
+}
+errors++;
+}
+}
+}
+}
+else {
+const err147 = {instancePath:instancePath+"/state/investments/" + i11,schemaPath:"#/properties/state/properties/investments/items/type",keyword:"type",params:{type: "object"},message:"must be object"};
+if(vErrors === null){
+vErrors = [err147];
+}
+else {
+vErrors.push(err147);
+}
+errors++;
+}
+}
+}
+else {
+const err148 = {instancePath:instancePath+"/state/investments",schemaPath:"#/properties/state/properties/investments/type",keyword:"type",params:{type: "array"},message:"must be array"};
+if(vErrors === null){
+vErrors = [err148];
+}
+else {
+vErrors.push(err148);
+}
+errors++;
+}
+}
+if(data4.revealedNodeIds !== undefined){
+let data46 = data4.revealedNodeIds;
+if(Array.isArray(data46)){
+const len7 = data46.length;
+for(let i12=0; i12<len7; i12++){
+let data47 = data46[i12];
+if(typeof data47 === "string"){
+if(func4(data47) > 128){
+const err149 = {instancePath:instancePath+"/state/revealedNodeIds/" + i12,schemaPath:"#/properties/state/properties/revealedNodeIds/items/maxLength",keyword:"maxLength",params:{limit: 128},message:"must NOT have more than 128 characters"};
+if(vErrors === null){
+vErrors = [err149];
+}
+else {
+vErrors.push(err149);
+}
+errors++;
+}
+if(func4(data47) < 1){
+const err150 = {instancePath:instancePath+"/state/revealedNodeIds/" + i12,schemaPath:"#/properties/state/properties/revealedNodeIds/items/minLength",keyword:"minLength",params:{limit: 1},message:"must NOT have fewer than 1 characters"};
+if(vErrors === null){
+vErrors = [err150];
+}
+else {
+vErrors.push(err150);
+}
+errors++;
+}
+}
+else {
+const err151 = {instancePath:instancePath+"/state/revealedNodeIds/" + i12,schemaPath:"#/properties/state/properties/revealedNodeIds/items/type",keyword:"type",params:{type: "string"},message:"must be string"};
+if(vErrors === null){
+vErrors = [err151];
+}
+else {
+vErrors.push(err151);
+}
+errors++;
+}
+}
+let i13 = data46.length;
+let j5;
+if(i13 > 1){
+const indices5 = {};
+for(;i13--;){
+let item5 = data46[i13];
+if(typeof item5 !== "string"){
+continue;
+}
+if(typeof indices5[item5] == "number"){
+j5 = indices5[item5];
+const err152 = {instancePath:instancePath+"/state/revealedNodeIds",schemaPath:"#/properties/state/properties/revealedNodeIds/uniqueItems",keyword:"uniqueItems",params:{i: i13, j: j5},message:"must NOT have duplicate items (items ## "+j5+" and "+i13+" are identical)"};
+if(vErrors === null){
+vErrors = [err152];
+}
+else {
+vErrors.push(err152);
+}
+errors++;
+break;
+}
+indices5[item5] = i13;
+}
+}
+}
+else {
+const err153 = {instancePath:instancePath+"/state/revealedNodeIds",schemaPath:"#/properties/state/properties/revealedNodeIds/type",keyword:"type",params:{type: "array"},message:"must be array"};
+if(vErrors === null){
+vErrors = [err153];
+}
+else {
+vErrors.push(err153);
+}
+errors++;
+}
+}
+if(data4.legacyFreeNodeIds !== undefined){
+let data48 = data4.legacyFreeNodeIds;
+if(Array.isArray(data48)){
+const len8 = data48.length;
+for(let i14=0; i14<len8; i14++){
+let data49 = data48[i14];
+if(typeof data49 === "string"){
+if(func4(data49) > 128){
+const err154 = {instancePath:instancePath+"/state/legacyFreeNodeIds/" + i14,schemaPath:"#/properties/state/properties/legacyFreeNodeIds/items/maxLength",keyword:"maxLength",params:{limit: 128},message:"must NOT have more than 128 characters"};
+if(vErrors === null){
+vErrors = [err154];
+}
+else {
+vErrors.push(err154);
+}
+errors++;
+}
+if(func4(data49) < 1){
+const err155 = {instancePath:instancePath+"/state/legacyFreeNodeIds/" + i14,schemaPath:"#/properties/state/properties/legacyFreeNodeIds/items/minLength",keyword:"minLength",params:{limit: 1},message:"must NOT have fewer than 1 characters"};
+if(vErrors === null){
+vErrors = [err155];
+}
+else {
+vErrors.push(err155);
+}
+errors++;
+}
+}
+else {
+const err156 = {instancePath:instancePath+"/state/legacyFreeNodeIds/" + i14,schemaPath:"#/properties/state/properties/legacyFreeNodeIds/items/type",keyword:"type",params:{type: "string"},message:"must be string"};
+if(vErrors === null){
+vErrors = [err156];
+}
+else {
+vErrors.push(err156);
+}
+errors++;
+}
+}
+let i15 = data48.length;
+let j6;
+if(i15 > 1){
+const indices6 = {};
+for(;i15--;){
+let item6 = data48[i15];
+if(typeof item6 !== "string"){
+continue;
+}
+if(typeof indices6[item6] == "number"){
+j6 = indices6[item6];
+const err157 = {instancePath:instancePath+"/state/legacyFreeNodeIds",schemaPath:"#/properties/state/properties/legacyFreeNodeIds/uniqueItems",keyword:"uniqueItems",params:{i: i15, j: j6},message:"must NOT have duplicate items (items ## "+j6+" and "+i15+" are identical)"};
+if(vErrors === null){
+vErrors = [err157];
+}
+else {
+vErrors.push(err157);
+}
+errors++;
+break;
+}
+indices6[item6] = i15;
+}
+}
+}
+else {
+const err158 = {instancePath:instancePath+"/state/legacyFreeNodeIds",schemaPath:"#/properties/state/properties/legacyFreeNodeIds/type",keyword:"type",params:{type: "array"},message:"must be array"};
+if(vErrors === null){
+vErrors = [err158];
+}
+else {
+vErrors.push(err158);
+}
+errors++;
+}
+}
+}
+else {
+const err159 = {instancePath:instancePath+"/state",schemaPath:"#/properties/state/type",keyword:"type",params:{type: "object"},message:"must be object"};
+if(vErrors === null){
+vErrors = [err159];
+}
+else {
+vErrors.push(err159);
+}
+errors++;
+}
+}
+if(data.checksum !== undefined){
+let data50 = data.checksum;
+if(typeof data50 === "string"){
+if(!pattern1.test(data50)){
+const err160 = {instancePath:instancePath+"/checksum",schemaPath:"#/properties/checksum/pattern",keyword:"pattern",params:{pattern: "^[a-f0-9]{64}$"},message:"must match pattern \""+"^[a-f0-9]{64}$"+"\""};
+if(vErrors === null){
+vErrors = [err160];
+}
+else {
+vErrors.push(err160);
+}
+errors++;
+}
+}
+else {
+const err161 = {instancePath:instancePath+"/checksum",schemaPath:"#/properties/checksum/type",keyword:"type",params:{type: "string"},message:"must be string"};
+if(vErrors === null){
+vErrors = [err161];
+}
+else {
+vErrors.push(err161);
+}
+errors++;
+}
+}
+}
+else {
+const err162 = {instancePath,schemaPath:"#/type",keyword:"type",params:{type: "object"},message:"must be object"};
+if(vErrors === null){
+vErrors = [err162];
+}
+else {
+vErrors.push(err162);
+}
+errors++;
+}
+validate90.errors = vErrors;
+return errors === 0;
+}
+
+export const validateSaveV2 = validate93;
+const schema39 = {"type":"object","additionalProperties":false,"required":["schemaVersion","configVersion","contentVersion","savedAt","state","checksum"],"properties":{"schemaVersion":{"const":2},"configVersion":{"type":"string","minLength":1,"maxLength":128},"contentVersion":{"type":"string","minLength":1,"maxLength":128},"savedAt":{"type":"string","pattern":"^\\d{4}-\\d{2}-\\d{2}T"},"state":{"type":"object","additionalProperties":false,"required":["mode","phase","campaignId","wave","seed","rngState","supplies","formationStage","buildingIds","researchIds","upgradeLevels","placements","commandIds","acknowledgedNodeIds","tutorialStep","clearedWaveCount","resolutionIds","hqHp","checkpoint","investments"],"properties":{"mode":{"enum":["preview","campaign"]},"phase":{"enum":["preparation","combat","victory","defeat","clear"]},"campaignId":{"type":"string","minLength":1,"maxLength":128},"wave":{"type":"integer","minimum":1,"maximum":100},"seed":{"type":"integer","minimum":0,"maximum":4294967295},"rngState":{"type":"integer","minimum":0,"maximum":4294967295},"supplies":{"anyOf":[{"type":"integer","minimum":0,"maximum":9007199254740991},{"type":"null"}]},"formationStage":{"enum":["3","5","9","13","25"]},"buildingIds":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true},"researchIds":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true},"upgradeLevels":{"type":"object","additionalProperties":{"type":"object","additionalProperties":{"type":"integer","minimum":0,"maximum":9007199254740991}}},"placements":{"type":"array","maxItems":24,"items":{"type":"object","additionalProperties":false,"required":["instanceId","unitId","cell","paidCost"],"properties":{"instanceId":{"type":"string","minLength":1,"maxLength":128},"unitId":{"type":"string","minLength":1,"maxLength":128},"cell":{"type":"object","additionalProperties":false,"required":["row","col"],"properties":{"row":{"type":"integer","minimum":0,"maximum":4},"col":{"type":"integer","minimum":0,"maximum":4}}},"paidCost":{"type":"integer","minimum":0,"maximum":9007199254740991}}}},"commandIds":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true},"acknowledgedNodeIds":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true},"tutorialStep":{"type":"integer","minimum":0,"maximum":4},"clearedWaveCount":{"type":"integer","minimum":0,"maximum":100},"resolutionIds":{"type":"array","uniqueItems":true,"items":{"type":"string"}},"hqHp":{"type":"number","minimum":0},"checkpoint":{"anyOf":[{"type":"null"},{"$ref":"#/definitions/checkpoint"}]},"investments":{"type":"array","maxItems":10000,"items":{"type":"object","additionalProperties":false,"required":["id","kind","nodeId","profileId","level","paidCost"],"properties":{"id":{"type":"string","minLength":1,"maxLength":128},"kind":{"enum":["building","research","upgrade"]},"nodeId":{"type":"string","minLength":1,"maxLength":64},"profileId":{"type":["string","null"],"maxLength":64},"level":{"type":"integer","minimum":0,"maximum":100},"paidCost":{"type":"integer","minimum":0,"maximum":9007199254740991}}}}}},"checksum":{"type":"string","pattern":"^[a-f0-9]{64}$"}},"definitions":{"checkpoint":{"type":"object","additionalProperties":false,"required":["mode","phase","campaignId","wave","seed","rngState","supplies","formationStage","buildingIds","researchIds","upgradeLevels","placements","commandIds","acknowledgedNodeIds","tutorialStep","clearedWaveCount","resolutionIds","hqHp","checkpoint"],"properties":{"mode":{"enum":["preview","campaign"]},"phase":{"enum":["preparation","combat","victory","defeat","clear"]},"campaignId":{"type":"string","minLength":1,"maxLength":128},"wave":{"type":"integer","minimum":1,"maximum":100},"seed":{"type":"integer","minimum":0,"maximum":4294967295},"rngState":{"type":"integer","minimum":0,"maximum":4294967295},"supplies":{"anyOf":[{"type":"integer","minimum":0,"maximum":9007199254740991},{"type":"null"}]},"formationStage":{"enum":["3","5","9","13","25"]},"buildingIds":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true},"researchIds":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true},"upgradeLevels":{"type":"object","additionalProperties":{"type":"object","additionalProperties":{"type":"integer","minimum":0,"maximum":9007199254740991}}},"placements":{"type":"array","maxItems":24,"items":{"type":"object","additionalProperties":false,"required":["instanceId","unitId","cell","paidCost"],"properties":{"instanceId":{"type":"string","minLength":1,"maxLength":128},"unitId":{"type":"string","minLength":1,"maxLength":128},"cell":{"type":"object","additionalProperties":false,"required":["row","col"],"properties":{"row":{"type":"integer","minimum":0,"maximum":4},"col":{"type":"integer","minimum":0,"maximum":4}}},"paidCost":{"type":"integer","minimum":0,"maximum":9007199254740991}}}},"commandIds":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true},"acknowledgedNodeIds":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true},"tutorialStep":{"type":"integer","minimum":0,"maximum":4},"clearedWaveCount":{"type":"integer","minimum":0,"maximum":100},"resolutionIds":{"type":"array","uniqueItems":true,"items":{"type":"string"}},"hqHp":{"type":"number","minimum":0},"checkpoint":{"type":"null"}}}}};
+const schema40 = {"type":"object","additionalProperties":false,"required":["mode","phase","campaignId","wave","seed","rngState","supplies","formationStage","buildingIds","researchIds","upgradeLevels","placements","commandIds","acknowledgedNodeIds","tutorialStep","clearedWaveCount","resolutionIds","hqHp","checkpoint"],"properties":{"mode":{"enum":["preview","campaign"]},"phase":{"enum":["preparation","combat","victory","defeat","clear"]},"campaignId":{"type":"string","minLength":1,"maxLength":128},"wave":{"type":"integer","minimum":1,"maximum":100},"seed":{"type":"integer","minimum":0,"maximum":4294967295},"rngState":{"type":"integer","minimum":0,"maximum":4294967295},"supplies":{"anyOf":[{"type":"integer","minimum":0,"maximum":9007199254740991},{"type":"null"}]},"formationStage":{"enum":["3","5","9","13","25"]},"buildingIds":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true},"researchIds":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true},"upgradeLevels":{"type":"object","additionalProperties":{"type":"object","additionalProperties":{"type":"integer","minimum":0,"maximum":9007199254740991}}},"placements":{"type":"array","maxItems":24,"items":{"type":"object","additionalProperties":false,"required":["instanceId","unitId","cell","paidCost"],"properties":{"instanceId":{"type":"string","minLength":1,"maxLength":128},"unitId":{"type":"string","minLength":1,"maxLength":128},"cell":{"type":"object","additionalProperties":false,"required":["row","col"],"properties":{"row":{"type":"integer","minimum":0,"maximum":4},"col":{"type":"integer","minimum":0,"maximum":4}}},"paidCost":{"type":"integer","minimum":0,"maximum":9007199254740991}}}},"commandIds":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true},"acknowledgedNodeIds":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true},"tutorialStep":{"type":"integer","minimum":0,"maximum":4},"clearedWaveCount":{"type":"integer","minimum":0,"maximum":100},"resolutionIds":{"type":"array","uniqueItems":true,"items":{"type":"string"}},"hqHp":{"type":"number","minimum":0},"checkpoint":{"type":"null"}}};
+
+function validate94(data, {instancePath="", parentData, parentDataProperty, rootData=data}={}){
 let vErrors = null;
 let errors = 0;
 if(data && typeof data == "object" && !Array.isArray(data)){
@@ -40818,7 +52852,7 @@ vErrors.push(err18);
 errors++;
 }
 for(const key0 in data){
-if(!(func2.call(schema37.properties, key0))){
+if(!(func2.call(schema40.properties, key0))){
 const err19 = {instancePath,schemaPath:"#/additionalProperties",keyword:"additionalProperties",params:{additionalProperty: key0},message:"must NOT have additional properties"};
 if(vErrors === null){
 vErrors = [err19];
@@ -40832,7 +52866,7 @@ errors++;
 if(data.mode !== undefined){
 let data0 = data.mode;
 if(!((data0 === "preview") || (data0 === "campaign"))){
-const err20 = {instancePath:instancePath+"/mode",schemaPath:"#/properties/mode/enum",keyword:"enum",params:{allowedValues: schema37.properties.mode.enum},message:"must be equal to one of the allowed values"};
+const err20 = {instancePath:instancePath+"/mode",schemaPath:"#/properties/mode/enum",keyword:"enum",params:{allowedValues: schema40.properties.mode.enum},message:"must be equal to one of the allowed values"};
 if(vErrors === null){
 vErrors = [err20];
 }
@@ -40845,7 +52879,7 @@ errors++;
 if(data.phase !== undefined){
 let data1 = data.phase;
 if(!(((((data1 === "preparation") || (data1 === "combat")) || (data1 === "victory")) || (data1 === "defeat")) || (data1 === "clear"))){
-const err21 = {instancePath:instancePath+"/phase",schemaPath:"#/properties/phase/enum",keyword:"enum",params:{allowedValues: schema37.properties.phase.enum},message:"must be equal to one of the allowed values"};
+const err21 = {instancePath:instancePath+"/phase",schemaPath:"#/properties/phase/enum",keyword:"enum",params:{allowedValues: schema40.properties.phase.enum},message:"must be equal to one of the allowed values"};
 if(vErrors === null){
 vErrors = [err21];
 }
@@ -41074,7 +53108,7 @@ vErrors = null;
 if(data.formationStage !== undefined){
 let data7 = data.formationStage;
 if(!(((((data7 === "3") || (data7 === "5")) || (data7 === "9")) || (data7 === "13")) || (data7 === "25"))){
-const err39 = {instancePath:instancePath+"/formationStage",schemaPath:"#/properties/formationStage/enum",keyword:"enum",params:{allowedValues: schema37.properties.formationStage.enum},message:"must be equal to one of the allowed values"};
+const err39 = {instancePath:instancePath+"/formationStage",schemaPath:"#/properties/formationStage/enum",keyword:"enum",params:{allowedValues: schema40.properties.formationStage.enum},message:"must be equal to one of the allowed values"};
 if(vErrors === null){
 vErrors = [err39];
 }
@@ -41934,12 +53968,12 @@ vErrors.push(err104);
 }
 errors++;
 }
-validate89.errors = vErrors;
+validate94.errors = vErrors;
 return errors === 0;
 }
 
 
-function validate88(data, {instancePath="", parentData, parentDataProperty, rootData=data}={}){
+function validate93(data, {instancePath="", parentData, parentDataProperty, rootData=data}={}){
 let vErrors = null;
 let errors = 0;
 if(data && typeof data == "object" && !Array.isArray(data)){
@@ -42326,7 +54360,7 @@ vErrors.push(err35);
 errors++;
 }
 for(const key1 in data4){
-if(!(func2.call(schema36.properties.state.properties, key1))){
+if(!(func2.call(schema39.properties.state.properties, key1))){
 const err36 = {instancePath:instancePath+"/state",schemaPath:"#/properties/state/additionalProperties",keyword:"additionalProperties",params:{additionalProperty: key1},message:"must NOT have additional properties"};
 if(vErrors === null){
 vErrors = [err36];
@@ -42340,7 +54374,7 @@ errors++;
 if(data4.mode !== undefined){
 let data5 = data4.mode;
 if(!((data5 === "preview") || (data5 === "campaign"))){
-const err37 = {instancePath:instancePath+"/state/mode",schemaPath:"#/properties/state/properties/mode/enum",keyword:"enum",params:{allowedValues: schema36.properties.state.properties.mode.enum},message:"must be equal to one of the allowed values"};
+const err37 = {instancePath:instancePath+"/state/mode",schemaPath:"#/properties/state/properties/mode/enum",keyword:"enum",params:{allowedValues: schema39.properties.state.properties.mode.enum},message:"must be equal to one of the allowed values"};
 if(vErrors === null){
 vErrors = [err37];
 }
@@ -42353,7 +54387,7 @@ errors++;
 if(data4.phase !== undefined){
 let data6 = data4.phase;
 if(!(((((data6 === "preparation") || (data6 === "combat")) || (data6 === "victory")) || (data6 === "defeat")) || (data6 === "clear"))){
-const err38 = {instancePath:instancePath+"/state/phase",schemaPath:"#/properties/state/properties/phase/enum",keyword:"enum",params:{allowedValues: schema36.properties.state.properties.phase.enum},message:"must be equal to one of the allowed values"};
+const err38 = {instancePath:instancePath+"/state/phase",schemaPath:"#/properties/state/properties/phase/enum",keyword:"enum",params:{allowedValues: schema39.properties.state.properties.phase.enum},message:"must be equal to one of the allowed values"};
 if(vErrors === null){
 vErrors = [err38];
 }
@@ -42582,7 +54616,7 @@ vErrors = null;
 if(data4.formationStage !== undefined){
 let data12 = data4.formationStage;
 if(!(((((data12 === "3") || (data12 === "5")) || (data12 === "9")) || (data12 === "13")) || (data12 === "25"))){
-const err56 = {instancePath:instancePath+"/state/formationStage",schemaPath:"#/properties/state/properties/formationStage/enum",keyword:"enum",params:{allowedValues: schema36.properties.state.properties.formationStage.enum},message:"must be equal to one of the allowed values"};
+const err56 = {instancePath:instancePath+"/state/formationStage",schemaPath:"#/properties/state/properties/formationStage/enum",keyword:"enum",params:{allowedValues: schema39.properties.state.properties.formationStage.enum},message:"must be equal to one of the allowed values"};
 if(vErrors === null){
 vErrors = [err56];
 }
@@ -43438,8 +55472,8 @@ var _valid1 = _errs83 === errors;
 valid24 = valid24 || _valid1;
 if(!valid24){
 const _errs85 = errors;
-if(!(validate89(data37, {instancePath:instancePath+"/state/checkpoint",parentData:data4,parentDataProperty:"checkpoint",rootData}))){
-vErrors = vErrors === null ? validate89.errors : vErrors.concat(validate89.errors);
+if(!(validate94(data37, {instancePath:instancePath+"/state/checkpoint",parentData:data4,parentDataProperty:"checkpoint",rootData}))){
+vErrors = vErrors === null ? validate94.errors : vErrors.concat(validate94.errors);
 errors = vErrors.length;
 }
 var _valid1 = _errs85 === errors;
@@ -43594,7 +55628,7 @@ errors++;
 if(data39.kind !== undefined){
 let data41 = data39.kind;
 if(!(((data41 === "building") || (data41 === "research")) || (data41 === "upgrade"))){
-const err133 = {instancePath:instancePath+"/state/investments/" + i11+"/kind",schemaPath:"#/properties/state/properties/investments/items/properties/kind/enum",keyword:"enum",params:{allowedValues: schema36.properties.state.properties.investments.items.properties.kind.enum},message:"must be equal to one of the allowed values"};
+const err133 = {instancePath:instancePath+"/state/investments/" + i11+"/kind",schemaPath:"#/properties/state/properties/investments/items/properties/kind/enum",keyword:"enum",params:{allowedValues: schema39.properties.state.properties.investments.items.properties.kind.enum},message:"must be equal to one of the allowed values"};
 if(vErrors === null){
 vErrors = [err133];
 }
@@ -43642,7 +55676,7 @@ errors++;
 if(data39.profileId !== undefined){
 let data43 = data39.profileId;
 if((typeof data43 !== "string") && (data43 !== null)){
-const err137 = {instancePath:instancePath+"/state/investments/" + i11+"/profileId",schemaPath:"#/properties/state/properties/investments/items/properties/profileId/type",keyword:"type",params:{type: schema36.properties.state.properties.investments.items.properties.profileId.type},message:"must be string,null"};
+const err137 = {instancePath:instancePath+"/state/investments/" + i11+"/profileId",schemaPath:"#/properties/state/properties/investments/items/properties/profileId/type",keyword:"type",params:{type: schema39.properties.state.properties.investments.items.properties.profileId.type},message:"must be string,null"};
 if(vErrors === null){
 vErrors = [err137];
 }
@@ -43806,15 +55840,15 @@ vErrors.push(err150);
 }
 errors++;
 }
-validate88.errors = vErrors;
+validate93.errors = vErrors;
 return errors === 0;
 }
 
-export const validateSaveV1 = validate91;
-const schema38 = {"type":"object","additionalProperties":false,"required":["schemaVersion","configVersion","contentVersion","savedAt","state","checksum"],"properties":{"schemaVersion":{"const":1},"configVersion":{"type":"string","minLength":1,"maxLength":128},"contentVersion":{"type":"string","minLength":1,"maxLength":128},"savedAt":{"type":"string","pattern":"^\\d{4}-\\d{2}-\\d{2}T"},"state":{"type":"object","additionalProperties":false,"required":["mode","phase","campaignId","wave","seed","rngState","supplies","formationStage","buildingIds","researchIds","upgradeLevels","placements","commandIds","acknowledgedNodeIds","tutorialStep","clearedWaveCount","resolutionIds","hqHp","checkpoint"],"properties":{"mode":{"enum":["preview","campaign"]},"phase":{"enum":["preparation","combat","victory","defeat","clear"]},"campaignId":{"type":"string","minLength":1,"maxLength":128},"wave":{"type":"integer","minimum":1,"maximum":100},"seed":{"type":"integer","minimum":0,"maximum":4294967295},"rngState":{"type":"integer","minimum":0,"maximum":4294967295},"supplies":{"anyOf":[{"type":"integer","minimum":0,"maximum":9007199254740991},{"type":"null"}]},"formationStage":{"enum":["3","5","9","13","25"]},"buildingIds":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true},"researchIds":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true},"upgradeLevels":{"type":"object","additionalProperties":{"type":"object","additionalProperties":{"type":"integer","minimum":0,"maximum":9007199254740991}}},"placements":{"type":"array","maxItems":24,"items":{"type":"object","additionalProperties":false,"required":["instanceId","unitId","cell","paidCost"],"properties":{"instanceId":{"type":"string","minLength":1,"maxLength":128},"unitId":{"type":"string","minLength":1,"maxLength":128},"cell":{"type":"object","additionalProperties":false,"required":["row","col"],"properties":{"row":{"type":"integer","minimum":0,"maximum":4},"col":{"type":"integer","minimum":0,"maximum":4}}},"paidCost":{"type":"integer","minimum":0,"maximum":9007199254740991}}}},"commandIds":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true},"acknowledgedNodeIds":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true},"tutorialStep":{"type":"integer","minimum":0,"maximum":4},"clearedWaveCount":{"type":"integer","minimum":0,"maximum":100},"resolutionIds":{"type":"array","uniqueItems":true,"items":{"type":"string"}},"hqHp":{"type":"number","minimum":0},"checkpoint":{"anyOf":[{"type":"null"},{"$ref":"#/definitions/checkpoint"}]}}},"checksum":{"type":"string","pattern":"^[a-f0-9]{64}$"}},"definitions":{"checkpoint":{"type":"object","additionalProperties":false,"required":["mode","phase","campaignId","wave","seed","rngState","supplies","formationStage","buildingIds","researchIds","upgradeLevels","placements","commandIds","acknowledgedNodeIds","tutorialStep","clearedWaveCount","resolutionIds","hqHp","checkpoint"],"properties":{"mode":{"enum":["preview","campaign"]},"phase":{"enum":["preparation","combat","victory","defeat","clear"]},"campaignId":{"type":"string","minLength":1,"maxLength":128},"wave":{"type":"integer","minimum":1,"maximum":100},"seed":{"type":"integer","minimum":0,"maximum":4294967295},"rngState":{"type":"integer","minimum":0,"maximum":4294967295},"supplies":{"anyOf":[{"type":"integer","minimum":0,"maximum":9007199254740991},{"type":"null"}]},"formationStage":{"enum":["3","5","9","13","25"]},"buildingIds":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true},"researchIds":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true},"upgradeLevels":{"type":"object","additionalProperties":{"type":"object","additionalProperties":{"type":"integer","minimum":0,"maximum":9007199254740991}}},"placements":{"type":"array","maxItems":24,"items":{"type":"object","additionalProperties":false,"required":["instanceId","unitId","cell","paidCost"],"properties":{"instanceId":{"type":"string","minLength":1,"maxLength":128},"unitId":{"type":"string","minLength":1,"maxLength":128},"cell":{"type":"object","additionalProperties":false,"required":["row","col"],"properties":{"row":{"type":"integer","minimum":0,"maximum":4},"col":{"type":"integer","minimum":0,"maximum":4}}},"paidCost":{"type":"integer","minimum":0,"maximum":9007199254740991}}}},"commandIds":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true},"acknowledgedNodeIds":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true},"tutorialStep":{"type":"integer","minimum":0,"maximum":4},"clearedWaveCount":{"type":"integer","minimum":0,"maximum":100},"resolutionIds":{"type":"array","uniqueItems":true,"items":{"type":"string"}},"hqHp":{"type":"number","minimum":0},"checkpoint":{"type":"null"}}}}};
-const schema39 = {"type":"object","additionalProperties":false,"required":["mode","phase","campaignId","wave","seed","rngState","supplies","formationStage","buildingIds","researchIds","upgradeLevels","placements","commandIds","acknowledgedNodeIds","tutorialStep","clearedWaveCount","resolutionIds","hqHp","checkpoint"],"properties":{"mode":{"enum":["preview","campaign"]},"phase":{"enum":["preparation","combat","victory","defeat","clear"]},"campaignId":{"type":"string","minLength":1,"maxLength":128},"wave":{"type":"integer","minimum":1,"maximum":100},"seed":{"type":"integer","minimum":0,"maximum":4294967295},"rngState":{"type":"integer","minimum":0,"maximum":4294967295},"supplies":{"anyOf":[{"type":"integer","minimum":0,"maximum":9007199254740991},{"type":"null"}]},"formationStage":{"enum":["3","5","9","13","25"]},"buildingIds":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true},"researchIds":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true},"upgradeLevels":{"type":"object","additionalProperties":{"type":"object","additionalProperties":{"type":"integer","minimum":0,"maximum":9007199254740991}}},"placements":{"type":"array","maxItems":24,"items":{"type":"object","additionalProperties":false,"required":["instanceId","unitId","cell","paidCost"],"properties":{"instanceId":{"type":"string","minLength":1,"maxLength":128},"unitId":{"type":"string","minLength":1,"maxLength":128},"cell":{"type":"object","additionalProperties":false,"required":["row","col"],"properties":{"row":{"type":"integer","minimum":0,"maximum":4},"col":{"type":"integer","minimum":0,"maximum":4}}},"paidCost":{"type":"integer","minimum":0,"maximum":9007199254740991}}}},"commandIds":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true},"acknowledgedNodeIds":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true},"tutorialStep":{"type":"integer","minimum":0,"maximum":4},"clearedWaveCount":{"type":"integer","minimum":0,"maximum":100},"resolutionIds":{"type":"array","uniqueItems":true,"items":{"type":"string"}},"hqHp":{"type":"number","minimum":0},"checkpoint":{"type":"null"}}};
+export const validateSaveV1 = validate96;
+const schema41 = {"type":"object","additionalProperties":false,"required":["schemaVersion","configVersion","contentVersion","savedAt","state","checksum"],"properties":{"schemaVersion":{"const":1},"configVersion":{"type":"string","minLength":1,"maxLength":128},"contentVersion":{"type":"string","minLength":1,"maxLength":128},"savedAt":{"type":"string","pattern":"^\\d{4}-\\d{2}-\\d{2}T"},"state":{"type":"object","additionalProperties":false,"required":["mode","phase","campaignId","wave","seed","rngState","supplies","formationStage","buildingIds","researchIds","upgradeLevels","placements","commandIds","acknowledgedNodeIds","tutorialStep","clearedWaveCount","resolutionIds","hqHp","checkpoint"],"properties":{"mode":{"enum":["preview","campaign"]},"phase":{"enum":["preparation","combat","victory","defeat","clear"]},"campaignId":{"type":"string","minLength":1,"maxLength":128},"wave":{"type":"integer","minimum":1,"maximum":100},"seed":{"type":"integer","minimum":0,"maximum":4294967295},"rngState":{"type":"integer","minimum":0,"maximum":4294967295},"supplies":{"anyOf":[{"type":"integer","minimum":0,"maximum":9007199254740991},{"type":"null"}]},"formationStage":{"enum":["3","5","9","13","25"]},"buildingIds":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true},"researchIds":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true},"upgradeLevels":{"type":"object","additionalProperties":{"type":"object","additionalProperties":{"type":"integer","minimum":0,"maximum":9007199254740991}}},"placements":{"type":"array","maxItems":24,"items":{"type":"object","additionalProperties":false,"required":["instanceId","unitId","cell","paidCost"],"properties":{"instanceId":{"type":"string","minLength":1,"maxLength":128},"unitId":{"type":"string","minLength":1,"maxLength":128},"cell":{"type":"object","additionalProperties":false,"required":["row","col"],"properties":{"row":{"type":"integer","minimum":0,"maximum":4},"col":{"type":"integer","minimum":0,"maximum":4}}},"paidCost":{"type":"integer","minimum":0,"maximum":9007199254740991}}}},"commandIds":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true},"acknowledgedNodeIds":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true},"tutorialStep":{"type":"integer","minimum":0,"maximum":4},"clearedWaveCount":{"type":"integer","minimum":0,"maximum":100},"resolutionIds":{"type":"array","uniqueItems":true,"items":{"type":"string"}},"hqHp":{"type":"number","minimum":0},"checkpoint":{"anyOf":[{"type":"null"},{"$ref":"#/definitions/checkpoint"}]}}},"checksum":{"type":"string","pattern":"^[a-f0-9]{64}$"}},"definitions":{"checkpoint":{"type":"object","additionalProperties":false,"required":["mode","phase","campaignId","wave","seed","rngState","supplies","formationStage","buildingIds","researchIds","upgradeLevels","placements","commandIds","acknowledgedNodeIds","tutorialStep","clearedWaveCount","resolutionIds","hqHp","checkpoint"],"properties":{"mode":{"enum":["preview","campaign"]},"phase":{"enum":["preparation","combat","victory","defeat","clear"]},"campaignId":{"type":"string","minLength":1,"maxLength":128},"wave":{"type":"integer","minimum":1,"maximum":100},"seed":{"type":"integer","minimum":0,"maximum":4294967295},"rngState":{"type":"integer","minimum":0,"maximum":4294967295},"supplies":{"anyOf":[{"type":"integer","minimum":0,"maximum":9007199254740991},{"type":"null"}]},"formationStage":{"enum":["3","5","9","13","25"]},"buildingIds":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true},"researchIds":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true},"upgradeLevels":{"type":"object","additionalProperties":{"type":"object","additionalProperties":{"type":"integer","minimum":0,"maximum":9007199254740991}}},"placements":{"type":"array","maxItems":24,"items":{"type":"object","additionalProperties":false,"required":["instanceId","unitId","cell","paidCost"],"properties":{"instanceId":{"type":"string","minLength":1,"maxLength":128},"unitId":{"type":"string","minLength":1,"maxLength":128},"cell":{"type":"object","additionalProperties":false,"required":["row","col"],"properties":{"row":{"type":"integer","minimum":0,"maximum":4},"col":{"type":"integer","minimum":0,"maximum":4}}},"paidCost":{"type":"integer","minimum":0,"maximum":9007199254740991}}}},"commandIds":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true},"acknowledgedNodeIds":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true},"tutorialStep":{"type":"integer","minimum":0,"maximum":4},"clearedWaveCount":{"type":"integer","minimum":0,"maximum":100},"resolutionIds":{"type":"array","uniqueItems":true,"items":{"type":"string"}},"hqHp":{"type":"number","minimum":0},"checkpoint":{"type":"null"}}}}};
+const schema42 = {"type":"object","additionalProperties":false,"required":["mode","phase","campaignId","wave","seed","rngState","supplies","formationStage","buildingIds","researchIds","upgradeLevels","placements","commandIds","acknowledgedNodeIds","tutorialStep","clearedWaveCount","resolutionIds","hqHp","checkpoint"],"properties":{"mode":{"enum":["preview","campaign"]},"phase":{"enum":["preparation","combat","victory","defeat","clear"]},"campaignId":{"type":"string","minLength":1,"maxLength":128},"wave":{"type":"integer","minimum":1,"maximum":100},"seed":{"type":"integer","minimum":0,"maximum":4294967295},"rngState":{"type":"integer","minimum":0,"maximum":4294967295},"supplies":{"anyOf":[{"type":"integer","minimum":0,"maximum":9007199254740991},{"type":"null"}]},"formationStage":{"enum":["3","5","9","13","25"]},"buildingIds":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true},"researchIds":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true},"upgradeLevels":{"type":"object","additionalProperties":{"type":"object","additionalProperties":{"type":"integer","minimum":0,"maximum":9007199254740991}}},"placements":{"type":"array","maxItems":24,"items":{"type":"object","additionalProperties":false,"required":["instanceId","unitId","cell","paidCost"],"properties":{"instanceId":{"type":"string","minLength":1,"maxLength":128},"unitId":{"type":"string","minLength":1,"maxLength":128},"cell":{"type":"object","additionalProperties":false,"required":["row","col"],"properties":{"row":{"type":"integer","minimum":0,"maximum":4},"col":{"type":"integer","minimum":0,"maximum":4}}},"paidCost":{"type":"integer","minimum":0,"maximum":9007199254740991}}}},"commandIds":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true},"acknowledgedNodeIds":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true},"tutorialStep":{"type":"integer","minimum":0,"maximum":4},"clearedWaveCount":{"type":"integer","minimum":0,"maximum":100},"resolutionIds":{"type":"array","uniqueItems":true,"items":{"type":"string"}},"hqHp":{"type":"number","minimum":0},"checkpoint":{"type":"null"}}};
 
-function validate92(data, {instancePath="", parentData, parentDataProperty, rootData=data}={}){
+function validate97(data, {instancePath="", parentData, parentDataProperty, rootData=data}={}){
 let vErrors = null;
 let errors = 0;
 if(data && typeof data == "object" && !Array.isArray(data)){
@@ -44009,7 +56043,7 @@ vErrors.push(err18);
 errors++;
 }
 for(const key0 in data){
-if(!(func2.call(schema39.properties, key0))){
+if(!(func2.call(schema42.properties, key0))){
 const err19 = {instancePath,schemaPath:"#/additionalProperties",keyword:"additionalProperties",params:{additionalProperty: key0},message:"must NOT have additional properties"};
 if(vErrors === null){
 vErrors = [err19];
@@ -44023,7 +56057,7 @@ errors++;
 if(data.mode !== undefined){
 let data0 = data.mode;
 if(!((data0 === "preview") || (data0 === "campaign"))){
-const err20 = {instancePath:instancePath+"/mode",schemaPath:"#/properties/mode/enum",keyword:"enum",params:{allowedValues: schema39.properties.mode.enum},message:"must be equal to one of the allowed values"};
+const err20 = {instancePath:instancePath+"/mode",schemaPath:"#/properties/mode/enum",keyword:"enum",params:{allowedValues: schema42.properties.mode.enum},message:"must be equal to one of the allowed values"};
 if(vErrors === null){
 vErrors = [err20];
 }
@@ -44036,7 +56070,7 @@ errors++;
 if(data.phase !== undefined){
 let data1 = data.phase;
 if(!(((((data1 === "preparation") || (data1 === "combat")) || (data1 === "victory")) || (data1 === "defeat")) || (data1 === "clear"))){
-const err21 = {instancePath:instancePath+"/phase",schemaPath:"#/properties/phase/enum",keyword:"enum",params:{allowedValues: schema39.properties.phase.enum},message:"must be equal to one of the allowed values"};
+const err21 = {instancePath:instancePath+"/phase",schemaPath:"#/properties/phase/enum",keyword:"enum",params:{allowedValues: schema42.properties.phase.enum},message:"must be equal to one of the allowed values"};
 if(vErrors === null){
 vErrors = [err21];
 }
@@ -44265,7 +56299,7 @@ vErrors = null;
 if(data.formationStage !== undefined){
 let data7 = data.formationStage;
 if(!(((((data7 === "3") || (data7 === "5")) || (data7 === "9")) || (data7 === "13")) || (data7 === "25"))){
-const err39 = {instancePath:instancePath+"/formationStage",schemaPath:"#/properties/formationStage/enum",keyword:"enum",params:{allowedValues: schema39.properties.formationStage.enum},message:"must be equal to one of the allowed values"};
+const err39 = {instancePath:instancePath+"/formationStage",schemaPath:"#/properties/formationStage/enum",keyword:"enum",params:{allowedValues: schema42.properties.formationStage.enum},message:"must be equal to one of the allowed values"};
 if(vErrors === null){
 vErrors = [err39];
 }
@@ -45125,12 +57159,12 @@ vErrors.push(err104);
 }
 errors++;
 }
-validate92.errors = vErrors;
+validate97.errors = vErrors;
 return errors === 0;
 }
 
 
-function validate91(data, {instancePath="", parentData, parentDataProperty, rootData=data}={}){
+function validate96(data, {instancePath="", parentData, parentDataProperty, rootData=data}={}){
 let vErrors = null;
 let errors = 0;
 if(data && typeof data == "object" && !Array.isArray(data)){
@@ -45507,7 +57541,7 @@ vErrors.push(err34);
 errors++;
 }
 for(const key1 in data4){
-if(!(func2.call(schema38.properties.state.properties, key1))){
+if(!(func2.call(schema41.properties.state.properties, key1))){
 const err35 = {instancePath:instancePath+"/state",schemaPath:"#/properties/state/additionalProperties",keyword:"additionalProperties",params:{additionalProperty: key1},message:"must NOT have additional properties"};
 if(vErrors === null){
 vErrors = [err35];
@@ -45521,7 +57555,7 @@ errors++;
 if(data4.mode !== undefined){
 let data5 = data4.mode;
 if(!((data5 === "preview") || (data5 === "campaign"))){
-const err36 = {instancePath:instancePath+"/state/mode",schemaPath:"#/properties/state/properties/mode/enum",keyword:"enum",params:{allowedValues: schema38.properties.state.properties.mode.enum},message:"must be equal to one of the allowed values"};
+const err36 = {instancePath:instancePath+"/state/mode",schemaPath:"#/properties/state/properties/mode/enum",keyword:"enum",params:{allowedValues: schema41.properties.state.properties.mode.enum},message:"must be equal to one of the allowed values"};
 if(vErrors === null){
 vErrors = [err36];
 }
@@ -45534,7 +57568,7 @@ errors++;
 if(data4.phase !== undefined){
 let data6 = data4.phase;
 if(!(((((data6 === "preparation") || (data6 === "combat")) || (data6 === "victory")) || (data6 === "defeat")) || (data6 === "clear"))){
-const err37 = {instancePath:instancePath+"/state/phase",schemaPath:"#/properties/state/properties/phase/enum",keyword:"enum",params:{allowedValues: schema38.properties.state.properties.phase.enum},message:"must be equal to one of the allowed values"};
+const err37 = {instancePath:instancePath+"/state/phase",schemaPath:"#/properties/state/properties/phase/enum",keyword:"enum",params:{allowedValues: schema41.properties.state.properties.phase.enum},message:"must be equal to one of the allowed values"};
 if(vErrors === null){
 vErrors = [err37];
 }
@@ -45763,7 +57797,7 @@ vErrors = null;
 if(data4.formationStage !== undefined){
 let data12 = data4.formationStage;
 if(!(((((data12 === "3") || (data12 === "5")) || (data12 === "9")) || (data12 === "13")) || (data12 === "25"))){
-const err55 = {instancePath:instancePath+"/state/formationStage",schemaPath:"#/properties/state/properties/formationStage/enum",keyword:"enum",params:{allowedValues: schema38.properties.state.properties.formationStage.enum},message:"must be equal to one of the allowed values"};
+const err55 = {instancePath:instancePath+"/state/formationStage",schemaPath:"#/properties/state/properties/formationStage/enum",keyword:"enum",params:{allowedValues: schema41.properties.state.properties.formationStage.enum},message:"must be equal to one of the allowed values"};
 if(vErrors === null){
 vErrors = [err55];
 }
@@ -46619,8 +58653,8 @@ var _valid1 = _errs83 === errors;
 valid24 = valid24 || _valid1;
 if(!valid24){
 const _errs85 = errors;
-if(!(validate92(data37, {instancePath:instancePath+"/state/checkpoint",parentData:data4,parentDataProperty:"checkpoint",rootData}))){
-vErrors = vErrors === null ? validate92.errors : vErrors.concat(validate92.errors);
+if(!(validate97(data37, {instancePath:instancePath+"/state/checkpoint",parentData:data4,parentDataProperty:"checkpoint",rootData}))){
+vErrors = vErrors === null ? validate97.errors : vErrors.concat(validate97.errors);
 errors = vErrors.length;
 }
 var _valid1 = _errs85 === errors;
@@ -46696,6 +58730,6 @@ vErrors.push(err124);
 }
 errors++;
 }
-validate91.errors = vErrors;
+validate96.errors = vErrors;
 return errors === 0;
 }
