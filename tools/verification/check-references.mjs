@@ -347,4 +347,108 @@ for (const shape of [saveSchema.properties.state, saveSchema.definitions.checkpo
       `Doctrine schema/source enum:${slot}`,
     );
 }
+// Inspect asynchronous ownership without constructing a coordinator or starting a Worker.
+const coordinator = await parseSource('src/application/GameCoordinator.js');
+/** @type {Map<string,import('typescript').ArrowFunction>} */
+const localCallbacks = new Map();
+/** @type {Map<string,import('typescript').Expression>} */
+const workerCallbacks = new Map();
+let workerSendCatch = false;
+let workerDisposed = false;
+/** @param {import('typescript').Node} node */
+function inspectWorker(node) {
+  if (ts.isVariableDeclaration(node) && node.initializer && ts.isArrowFunction(node.initializer))
+    localCallbacks.set(node.name.getText(coordinator), node.initializer);
+  if (
+    ts.isBinaryExpression(node) &&
+    node.operatorToken.kind === ts.SyntaxKind.EqualsToken &&
+    ['worker.onmessage', 'worker.onerror', 'worker.onmessageerror'].includes(
+      node.left.getText(coordinator),
+    )
+  )
+    workerCallbacks.set(node.left.getText(coordinator), node.right);
+  if (
+    ts.isTryStatement(node) &&
+    node.tryBlock.statements.some(
+      (statement) =>
+        ts.isExpressionStatement(statement) &&
+        ts.isCallExpression(statement.expression) &&
+        statement.expression.expression.getText(coordinator) === 'worker.postMessage',
+    )
+  ) {
+    workerSendCatch =
+      node.catchClause?.block.statements.some(
+        (statement) =>
+          ts.isExpressionStatement(statement) &&
+          ts.isCallExpression(statement.expression) &&
+          statement.expression.expression.getText(coordinator) === 'fail',
+      ) === true;
+  }
+  if (ts.isMethodDeclaration(node) && node.name.getText(coordinator) === 'dispose') {
+    const expressions =
+      node.body?.statements
+        .filter(ts.isExpressionStatement)
+        .map((statement) => statement.expression.getText(coordinator)) ?? [];
+    const termination = expressions.indexOf('this.worker?.terminate()');
+    workerDisposed =
+      termination >= 0 &&
+      expressions[termination + 1] === 'this.worker = null' &&
+      expressions[termination + 2] === 'this.calculating = false';
+  }
+  ts.forEachChild(node, inspectWorker);
+}
+inspectWorker(coordinator);
+check(workerCallbacks.size === 3, 'Worker message/error/messageerror handlers');
+for (const [name, expression] of workerCallbacks) {
+  const callback = ts.isArrowFunction(expression)
+    ? expression
+    : localCallbacks.get(expression.getText(coordinator));
+  const first = callback && ts.isBlock(callback.body) ? callback.body.statements[0] : undefined;
+  check(
+    first &&
+      ts.isIfStatement(first) &&
+      ts.isBinaryExpression(first.expression) &&
+      first.expression.left.getText(coordinator) === 'this.worker' &&
+      first.expression.operatorToken.kind === ts.SyntaxKind.ExclamationEqualsEqualsToken &&
+      first.expression.right.getText(coordinator) === 'worker' &&
+      ts.isReturnStatement(first.thenStatement) &&
+      !first.thenStatement.expression,
+    `Worker callback ownership guard:${name}`,
+  );
+}
+check(
+  workerCallbacks.get('worker.onerror')?.getText(coordinator) === 'fail' &&
+    workerCallbacks.get('worker.onmessageerror')?.getText(coordinator) === 'fail' &&
+    workerSendCatch,
+  'Shared Worker failure path including postMessage exceptions',
+);
+check(workerDisposed, 'Disposed Worker identity/calculating reset');
+const battlefield = await parseSource('src/adapters/phaser/BattlefieldScene.js');
+let dragReset = false;
+/** @param {import('typescript').Node} node */
+function inspectShutdown(node) {
+  if (ts.isCallExpression(node) && node.expression.getText(battlefield) === 'this.events.once') {
+    const [event, callback] = node.arguments;
+    if (
+      event &&
+      ts.isStringLiteral(event) &&
+      event.text === 'shutdown' &&
+      callback &&
+      ts.isArrowFunction(callback) &&
+      ts.isBlock(callback.body)
+    ) {
+      dragReset = callback.body.statements.some(
+        (statement) =>
+          ts.isExpressionStatement(statement) &&
+          ts.isBinaryExpression(statement.expression) &&
+          statement.expression.operatorToken.kind === ts.SyntaxKind.EqualsToken &&
+          statement.expression.left.getText(battlefield) === 'this.dragging' &&
+          statement.expression.right.kind === ts.SyntaxKind.NullKeyword,
+      );
+    }
+  }
+  ts.forEachChild(node, inspectShutdown);
+}
+inspectShutdown(battlefield);
+check(dragReset, 'Scene shutdown resets unfinished drag');
 finish('source references (Scene/Worker/preload/globs/IPC/type boundaries/schema contracts)');

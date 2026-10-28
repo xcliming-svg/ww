@@ -83,6 +83,7 @@ export class BattlefieldScene extends Phaser.Scene {
     const off = this.app.subscribe(sync);
     this.events.once('shutdown', () => {
       off();
+      this.dragging = null;
       this.images.clear();
       this.labels.clear();
       this.graphics = null;

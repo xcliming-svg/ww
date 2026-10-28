@@ -288,13 +288,20 @@ export class GameCoordinator {
       this.frame = this.playback?.frames[0] ?? null;
       this.emit();
     };
-    worker.onerror = () => {
+    const fail = () => {
+      if (this.worker !== worker) return;
       worker.terminate();
       this.worker = null;
       this.calculating = false;
       this.restoreFailedCombat();
     };
-    worker.postMessage({ state: this.state, plan: this.plan, balance });
+    worker.onerror = fail;
+    worker.onmessageerror = fail;
+    try {
+      worker.postMessage({ state: this.state, plan: this.plan, balance });
+    } catch {
+      fail();
+    }
   }
   restoreFailedCombat() {
     if (this.state?.checkpoint) this.state = this.state.checkpoint;
@@ -389,6 +396,8 @@ export class GameCoordinator {
   dispose() {
     clearTimeout(this.saveTimer);
     this.worker?.terminate();
+    this.worker = null;
+    this.calculating = false;
     this.listeners.clear();
     this.frameListeners.clear();
   }
