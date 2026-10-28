@@ -45,10 +45,10 @@
 
 ## S3. 형식·AI 표준·CI
 
-- [ ] Prettier 고정 버전/설정, 전체 작성 JS/MJS/CJS 포맷. 생성물/게임 데이터/CSS/역사 문서 제외 근거 기록.
-- [ ] ESLint 환경별 globals와 domain/application 플랫폼 금지, noInlineConfig 및 suppression 검사 적용.
-- [ ] AGENTS.md의 절차를 static-only로 갱신, 아키텍처/네이밍/재사용/중복/기능 보존/검증 한계 영구 명시.
-- [ ] README/현행 아키텍처 문서/CI 작성. CI는 npm ci --ignore-scripts 후 npm run check, 게임 실행 없음.
+- [x] Prettier 고정 버전/설정, 전체 작성 JS/MJS/CJS 포맷. 생성물/게임 데이터/CSS/역사 문서 제외 근거 기록.
+- [x] ESLint 환경별 globals와 domain/application 플랫폼 금지, noInlineConfig 및 suppression 검사 적용.
+- [x] AGENTS.md의 절차를 static-only로 갱신, 아키텍처/네이밍/재사용/중복/기능 보존/검증 한계 영구 명시.
+- [x] README/현행 아키텍처 문서/CI 작성. CI는 npm ci --ignore-scripts 후 npm run check, 게임 실행 없음.
 - 완료 기준: 전체 check 및 preservation 비교 PASS. check에 검사 누락 없이 CI 동일 명령 연결.
 - Commit: `chore: standardize formatting and enforce AI development rules`.
 
@@ -68,3 +68,5 @@
 - S1 완료: `npm run check` exit 0 (lint/checkJs/generated/schema/graph/locale/assets/deps/package/build). 기존 타입 오류 4건은 선언만 수정. generated validator 바이트 변경 없음. runtime entry/worker/CSS 산출물 이름과 크기 동일. `git diff --check` PASS.
 - S2 완료: Knip 사전 결과 3개 파일/2개 미사용 함수와 내부 전용 export 3개 확인 후 정리. dependency-cruiser 101 modules/195 dependencies 위반 0, Knip 0, Scene/Worker/IPC/타입/스키마 참조 PASS, 전체 `npm run check` PASS. `npm run audit:refactor`는 소스 53개, 이동 함수 1개, 보호 파일 54개 대조 PASS. CSS/Worker 번들 이름 유지. 현재 저장 guard 본문은 유지하고 stripDoctrine만 제거.
 - S2 결정: resolver가 domain 순회에 포함되므로 시뮬 report의 별도 resolver 해시/스냅샷 추가를 제거했다. 중복 포함을 피하며 엔진 변경 감지 계약은 유지한다. 기존 보고서는 재생성/재실행하지 않는다. Prettier 설치는 lockfile 정리와 함께 했고 포맷 적용/검사 강제는 S3에서 수행한다.
+- S3 완료: 전체 `npm run check` exit 0, `audit:refactor` PASS (AST 지문 S2와 동일), `git diff --check` PASS. Prettier/환경별 ESLint/네이밍/억제 방지/lockfile 및 생성 interop 정적 검사를 연결했다. AGENTS/README/ARCHITECTURE 및 CI는 동일한 static-only 절차를 설명한다. 원격 CI는 아직 실행하지 않음.
+- S3 결정: TechTreeView의 인라인 JSDoc 단언에서 Prettier가 첫/둘째 포맷을 다르게 생성했다. 타입 설명을 기존 stats 선언에 옮겨 해결했고 실행 표현식 AST는 동일함을 확인했다. formatter ignore/규칙 완화는 하지 않았다.

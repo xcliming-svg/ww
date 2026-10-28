@@ -10,64 +10,133 @@ const scenes = new Map();
 const transitions = [];
 /** @type {string[]} */
 const registeredScenes = [];
-const handles = new Set(), invokes = new Set(), sends = new Set(), receives = new Set();
+const handles = new Set(),
+  invokes = new Set(),
+  sends = new Set(),
+  receives = new Set();
 let workers = 0;
+const entryNames = new Set(['main.js', 'combat-worker.js', 'contracts.js', 'elements.js']);
 for (const file of files) {
   const ast = await parseSource(file);
   const source = ast.text;
+  if (file.startsWith('src/'))
+    check(
+      entryNames.has(path.posix.basename(file)) ||
+        /^[A-Z][A-Za-z0-9]*[.]js$/.test(path.posix.basename(file)),
+      `Module naming:${file}`,
+    );
   // JSDoc imports are also architectural dependencies even when erased by Vite.
   if (file.startsWith('src/domain/')) {
     for (const match of source.matchAll(/import\(['"]([^'"]+)['"]\)/g)) {
       const resolved = path.posix.normalize(path.posix.join(path.posix.dirname(file), match[1]));
-      check(match[1].startsWith('.') && /^(src\/domain\/|data\/)/.test(resolved), `Domain type boundary:${file}:${match[1]}`);
+      check(
+        match[1].startsWith('.') && /^(src\/domain\/|data\/)/.test(resolved),
+        `Domain type boundary:${file}:${match[1]}`,
+      );
     }
   }
   // The only suppression is the explicitly generated Ajv output (not in files).
   /** @param {import('typescript').Node} node */
   function visit(node) {
-    for (const comment of [...ts.getLeadingCommentRanges(source, node.pos) ?? [], ...ts.getTrailingCommentRanges(source, node.end) ?? []]) {
-      check(!/@ts-(?:ignore|nocheck|expect-error)\b|eslint-disable|prettier-ignore/.test(source.slice(comment.pos, comment.end)), `Suppressed inspection:${file}`);
+    if (file.startsWith('src/') && ts.isClassDeclaration(node) && node.name)
+      check(/^[A-Z][A-Za-z0-9]*$/.test(node.name.text), `Class naming:${file}:${node.name.text}`);
+    if (file.startsWith('src/') && ts.isFunctionDeclaration(node) && node.name)
+      check(
+        /^[a-z][A-Za-z0-9]*$/.test(node.name.text),
+        `Function naming:${file}:${node.name.text}`,
+      );
+    for (const comment of [
+      ...(ts.getLeadingCommentRanges(source, node.pos) ?? []),
+      ...(ts.getTrailingCommentRanges(source, node.end) ?? []),
+    ]) {
+      check(
+        !/@ts-(?:ignore|nocheck|expect-error)\b|eslint-disable|prettier-ignore/.test(
+          source.slice(comment.pos, comment.end),
+        ),
+        `Suppressed inspection:${file}`,
+      );
     }
-    if (ts.isClassDeclaration(node) && node.heritageClauses?.some(clause => clause.types.some(type => type.expression.getText(ast) === 'Phaser.Scene'))) {
+    if (
+      ts.isClassDeclaration(node) &&
+      node.heritageClauses?.some((clause) =>
+        clause.types.some((type) => type.expression.getText(ast) === 'Phaser.Scene'),
+      )
+    ) {
       const ctor = node.members.find(ts.isConstructorDeclaration);
-      const call = ctor?.body?.statements.find(statement => ts.isExpressionStatement(statement) && ts.isCallExpression(statement.expression) && statement.expression.expression.kind === ts.SyntaxKind.SuperKeyword);
-      const key = call && ts.isExpressionStatement(call) && ts.isCallExpression(call.expression) ? call.expression.arguments[0] : undefined;
+      const call = ctor?.body?.statements.find(
+        (statement) =>
+          ts.isExpressionStatement(statement) &&
+          ts.isCallExpression(statement.expression) &&
+          statement.expression.expression.kind === ts.SyntaxKind.SuperKeyword,
+      );
+      const key =
+        call && ts.isExpressionStatement(call) && ts.isCallExpression(call.expression)
+          ? call.expression.arguments[0]
+          : undefined;
       check(!!key && ts.isStringLiteral(key), `Non-literal Scene key:${file}`);
       if (key && ts.isStringLiteral(key)) {
         check(!scenes.has(key.text), `Duplicate Scene:${key.text}`);
         scenes.set(key.text, node.name?.text ?? '');
       }
     }
-    if (file === 'src/bootstrap/main.js' && ts.isPropertyAssignment(node) && node.name.getText(ast) === 'scene') {
+    if (
+      file === 'src/bootstrap/main.js' &&
+      ts.isPropertyAssignment(node) &&
+      node.name.getText(ast) === 'scene'
+    ) {
       check(ts.isArrayLiteralExpression(node.initializer), 'Scene registry must be explicit');
-      if (ts.isArrayLiteralExpression(node.initializer)) for (const item of node.initializer.elements) {
-        check(ts.isNewExpression(item) && ts.isIdentifier(item.expression), 'Scene registry constructor');
-        if (ts.isNewExpression(item)) registeredScenes.push(item.expression.getText(ast));
-      }
+      if (ts.isArrayLiteralExpression(node.initializer))
+        for (const item of node.initializer.elements) {
+          check(
+            ts.isNewExpression(item) && ts.isIdentifier(item.expression),
+            'Scene registry constructor',
+          );
+          if (ts.isNewExpression(item)) registeredScenes.push(item.expression.getText(ast));
+        }
     }
-    if (ts.isNewExpression(node) && ts.isIdentifier(node.expression) && node.expression.text === 'Worker') {
+    if (
+      ts.isNewExpression(node) &&
+      ts.isIdentifier(node.expression) &&
+      node.expression.text === 'Worker'
+    ) {
       workers++;
-      const url = node.arguments?.[0], options = node.arguments?.[1];
-      check(!!url && ts.isNewExpression(url) && url.expression.getText(ast) === 'URL', `Worker URL:${file}`);
+      const url = node.arguments?.[0],
+        options = node.arguments?.[1];
+      check(
+        !!url && ts.isNewExpression(url) && url.expression.getText(ast) === 'URL',
+        `Worker URL:${file}`,
+      );
       if (url && ts.isNewExpression(url)) {
         const target = url.arguments?.[0];
         check(!!target && ts.isStringLiteral(target), `Worker target must be literal:${file}`);
-        if (target && ts.isStringLiteral(target)) check(path.posix.normalize(path.posix.join(path.posix.dirname(file), target.text)) === 'src/application/combat-worker.js', 'Worker entry contract');
+        if (target && ts.isStringLiteral(target))
+          check(
+            path.posix.normalize(path.posix.join(path.posix.dirname(file), target.text)) ===
+              'src/application/combat-worker.js',
+            'Worker entry contract',
+          );
         check(url.arguments?.[1]?.getText(ast) === 'import.meta.url', 'Worker URL base');
       }
       check(!!options && literal(options).type === 'module', 'Worker module type');
     }
     if (ts.isCallExpression(node) && ts.isPropertyAccessExpression(node.expression)) {
-      const receiver = node.expression.expression.getText(ast), method = node.expression.name.text;
+      const receiver = node.expression.expression.getText(ast),
+        method = node.expression.name.text;
       const first = node.arguments[0];
       if (receiver === 'this.scene' && ['start', 'launch', 'switch', 'run'].includes(method)) {
         check(!!first && ts.isStringLiteral(first), `Unresolved Scene transition:${file}`);
         if (first && ts.isStringLiteral(first)) transitions.push(first.text);
       }
-      const channels = receiver === 'ipcMain' && method === 'handle' ? handles
-        : receiver === 'ipcRenderer' && method === 'invoke' ? invokes
-        : receiver === 'ipcRenderer' && ['on', 'removeListener'].includes(method) ? receives
-        : receiver.endsWith('webContents') && method === 'send' ? sends : null;
+      const channels =
+        receiver === 'ipcMain' && method === 'handle'
+          ? handles
+          : receiver === 'ipcRenderer' && method === 'invoke'
+            ? invokes
+            : receiver === 'ipcRenderer' && ['on', 'removeListener'].includes(method)
+              ? receives
+              : receiver.endsWith('webContents') && method === 'send'
+                ? sends
+                : null;
       if (channels) {
         check(!!first && ts.isStringLiteral(first), `Unresolved IPC channel:${file}`);
         if (first && ts.isStringLiteral(first)) channels.add(first.text);
@@ -77,8 +146,16 @@ for (const file of files) {
   }
   visit(ast);
 }
-check(JSON.stringify(registeredScenes) === JSON.stringify(['BootScene', 'PreloadScene', 'TitleScene', 'BattlefieldScene', 'OutcomeScene']), 'Scene registration order');
-check(scenes.size === registeredScenes.length && [...scenes.values()].every(name => registeredScenes.includes(name)), 'Unregistered Scene');
+check(
+  JSON.stringify(registeredScenes) ===
+    JSON.stringify(['BootScene', 'PreloadScene', 'TitleScene', 'BattlefieldScene', 'OutcomeScene']),
+  'Scene registration order',
+);
+check(
+  scenes.size === registeredScenes.length &&
+    [...scenes.values()].every((name) => registeredScenes.includes(name)),
+  'Unregistered Scene',
+);
 for (const target of transitions) check(scenes.has(target), `Missing Scene:${target}`);
 check(workers === 1, 'Single combat Worker creation path');
 await fs.access('src/application/combat-worker.js');
@@ -94,10 +171,19 @@ const saveSchema = await readJson('data/schemas/save.schema.json');
 const choices = await readLiteral('src/domain/model/Doctrine.js', 'doctrineChoices');
 for (const shape of [saveSchema.properties.state, saveSchema.definitions.checkpoint]) {
   const doctrine = shape.properties.doctrines;
-  check(doctrine.type === 'object' && doctrine.additionalProperties === false, 'Doctrine object contract');
-  check(JSON.stringify(doctrine.required) === '["primary","secondary"]', 'Doctrine required fields');
-  for (const slot of ['primary', 'secondary']) check(
-    JSON.stringify(doctrine.properties[slot].enum) === JSON.stringify([...choices[slot].map((/** @type {any} */ choice) => choice.id), null]),
-    `Doctrine schema/source enum:${slot}`);
+  check(
+    doctrine.type === 'object' && doctrine.additionalProperties === false,
+    'Doctrine object contract',
+  );
+  check(
+    JSON.stringify(doctrine.required) === '["primary","secondary"]',
+    'Doctrine required fields',
+  );
+  for (const slot of ['primary', 'secondary'])
+    check(
+      JSON.stringify(doctrine.properties[slot].enum) ===
+        JSON.stringify([...choices[slot].map((/** @type {any} */ choice) => choice.id), null]),
+      `Doctrine schema/source enum:${slot}`,
+    );
 }
 finish('source references (Scene/Worker/IPC/type boundaries/schema contracts)');

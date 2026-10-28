@@ -1,0 +1,3 @@
+# Generated artifacts are validated against their source, not hand-formatted.
+src/infrastructure/schema-validators.js
+src/domain/waves/Annual52Content.js
