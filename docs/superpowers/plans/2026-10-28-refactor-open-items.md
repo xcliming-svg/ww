@@ -34,7 +34,7 @@
 - [x] **2. 저장 수정:** desktop/main.cjs, desktop/builder.json, tools/verification/check-package.mjs, check-references.mjs. 신규 정적 검사가 기존 버전 불일치/패키지 누락을 감지함을 확인 → rules 연결 → npm run check 통과 → 별도 commit.
 - [x] **3. 수명 수정:** src/application/GameCoordinator.js, src/adapters/phaser/BattlefieldScene.js, check-references.mjs. 오류 callback identity 및 dispose/shutdown 계약 검사 → 최소 변경 → npm run check 통과 → 별도 commit.
 - [x] **4. 재검토/문서:** 읽기 전용 최종 리뷰, 필요한 수정, 결과 문서에 해결/비버그/정책 보류/미검증 구분. git diff --check, 명시 파일 commit.
-- [ ] **5. 통합:** origin/main 갱신 확인 → main에 --no-ff merge → npm run check → 일반 push origin main → 원격 HEAD/작업 트리 확인.
+- [x] **5. 통합:** origin/main 갱신 확인 → main에 --no-ff merge → npm run check → 일반 push origin main → 원격 HEAD/작업 트리 확인.
 
 ## 진행 기록
 
@@ -42,3 +42,5 @@
 - 저장 검증: 수정 전 `check:references`는 Desktop save version/Shared save version source로 FAIL. rules require 추가 직후 `check:package`는 Unpackaged desktop JSON:data/rules.json으로 FAIL. builder 포함 후 전체 `npm run check` PASS(102 modules/199 dependencies, Knip 0, Vite 96 modules). 정상/거부 경로의 실제 Electron 실행은 하지 않았다.
 - 수명 검증: 수정 전 `check:references`는 오류 ownership/messageerror/공유 전송 실패 처리/dispose 무효화/drag 초기화 누락 5항목으로 FAIL. 기존 Worker 실패 복구 경로를 공유하고 shutdown/dispose를 수정한 후 전체 `npm run check` PASS(102 modules/199 dependencies, Knip 0, Vite 96 modules). 도메인/게임 데이터/locale/에셋/CSS/Worker 계산 파일 변경 없음. 이벤트 타이밍의 실제 실행 검증은 하지 않았다.
 - 독립 리뷰: 7e78ecd..402a2da를 읽기 전용 검토하여 Critical/Important/Minor 0건, 병합 가능 판정. 실제 저장/이벤트 타이밍/입력/성능·밸런스는 정적 범위 밖으로 판단 보류했고 미검증을 유지한다. 구형 저장 변환 정책도 승인 영역으로 남긴다.
+- 통합 완료: `4a4a82eb16bdd0ed52b9cd89c45de3ef03eb964e`에 기존 표준화와 후속 수정 이력을 --no-ff 병합했다. main에서 전체 `npm run check` PASS 후 일반 `git push origin main` 성공. `git ls-remote`와 로컬 HEAD 일치, main...origin/main 0/0 및 작업 트리 깨끗함 확인. 이 완료 기록은 동일 작업 브랜치에서 문서 후속 커밋으로 남긴다.
+- 원격 검증: GitHub Actions run 40643445706 completed/success. Ubuntu Node 24에서 npm ci --ignore-scripts와 npm run check 성공. 계획 5/5항목 완료; 구형 저장 변환 정책과 금지된 실행 검증은 별도 미결/미검증 범위로 유지한다.

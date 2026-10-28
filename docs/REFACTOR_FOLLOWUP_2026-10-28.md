@@ -54,4 +54,10 @@
 
 7e78ecd..402a2da를 별도 읽기 전용 리뷰로 검토했다. Critical/Important/Minor 모두 0건이며 병합 가능 판정이다. 저장 계약·실패 callback·dispose·Scene shutdown·구형 저장 비호환 처리와 신규 검사 도구를 검토했다. 리뷰가 실행하지 않은 저장/이벤트/입력/성능 범위는 미검증으로 유지한다.
 
-main 통합 결과는 실행 후 기록한다.
+## main 통합 증거
+
+- 코드 병합 커밋: `4a4a82eb16bdd0ed52b9cd89c45de3ef03eb964e`. 기존 표준화 5개 커밋과 이번 수정/결과 문서를 이력을 보존하는 --no-ff merge로 반영했다.
+- main에서 전체 `npm run check` 재실행 PASS. 위와 같은 102 modules/199 dependencies, Knip 0, Vite 96 modules 결과다.
+- 일반 `git push origin main` 성공(86f6a79→4a4a82e), `git ls-remote origin refs/heads/main`이 로컬 SHA와 일치했다. ahead/behind 0/0, 작업 트리 깨끗함을 확인했다.
+- 위 증거를 남기는 후속 커밋은 문서만 변경한다. 실제 게임/브라우저/런타임 검증을 추가로 수행하지 않는다.
+- 원격 [Static verification](https://github.com/xcliming-svg/ww/actions/runs/40643445706)도 completed/success를 확인했다. Ubuntu Node 24에서 `npm ci --ignore-scripts` 및 `npm run check` 단계가 모두 성공했다. 해당 증거는 코드 병합 커밋 4a4a82e 기준이다.
