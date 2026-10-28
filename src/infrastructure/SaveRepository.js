@@ -1,9 +1,11 @@
-import { validateSave, validateSaveV1, validateSaveV2 } from './schema-validators.js';
+import { validateSaveV1, validateSaveV2 } from './schema-validators.js';
 import { migrateEnvelope, migrateState, compatibleConfig } from './SaveMigrations.js';
 import { validateState } from '../domain/model/GameState.js';
 import { success, failure } from '../domain/util/Result.js';
 import balance from './ImplementationBalanceConfig.js';
 import { formationStage } from '../domain/waves/WavePlanner.js';
+import { maxHqHp } from '../domain/model/Doctrine.js';
+import { validateAnnual52Save } from './ValidateAnnual52Save.js';
 /** @param {unknown} value @returns {string} */
 function canonical(value) {
   if (Array.isArray(value)) return '[' + value.map(canonical).join(',') + ']';
@@ -22,12 +24,12 @@ export class SaveRepository {
   constructor(adapter, config, maxBytes) { this.adapter = adapter; this.config = config; this.maxBytes = maxBytes; }
   /** @param {import('../domain/model/contracts.js').GameState} state */
   validSnapshot(state) {
-    if (!validateState(state, this.config) || state.formationStage !== formationStage(state.wave, balance) || state.hqHp > balance.hqHp) return false;
-    if (state.phase === 'preparation' && state.hqHp !== balance.hqHp) return false;
+    if (!validateState(state, this.config) || state.formationStage !== formationStage(state.wave, balance) || state.hqHp > maxHqHp(state.doctrines)) return false;
+    if (state.phase === 'preparation' && state.hqHp !== maxHqHp(state.doctrines)) return false;
     if (state.placements.some(p => p.paidCost !== this.config.costs[p.unitId])) return false;
     if (state.checkpoint) {
       if (!this.validSnapshot(state.checkpoint) || state.seed !== state.checkpoint.seed) return false;
-      for (const key of ['supplies', 'buildingIds', 'researchIds', 'upgradeLevels', 'investments', 'resolutionIds', 'clearedWaveCount', 'revealedNodeIds', 'acknowledgedNodeIds', 'legacyFreeNodeIds']) {
+      for (const key of ['supplies', 'buildingIds', 'researchIds', 'upgradeLevels', 'investments', 'resolutionIds', 'clearedWaveCount', 'revealedNodeIds', 'acknowledgedNodeIds', 'legacyFreeNodeIds', 'doctrines']) {
         if (canonical(state[/** @type {keyof typeof state} */ (key)]) !== canonical(state.checkpoint[/** @type {keyof typeof state} */ (key)])) return false;
       }
     }
@@ -38,7 +40,7 @@ export class SaveRepository {
     try {
       if (new TextEncoder().encode(raw).length > this.maxBytes) return failure('SAVE_CORRUPT');
       const migrated = migrateEnvelope(JSON.parse(raw)); if (!migrated.ok) return migrated;
-      const validator = migrated.data.schemaVersion === 1 ? validateSaveV1 : migrated.data.schemaVersion === 2 ? validateSaveV2 : validateSave;
+      const validator = migrated.data.schemaVersion === 1 ? validateSaveV1 : migrated.data.schemaVersion === 2 ? validateSaveV2 : validateAnnual52Save;
       if (!validator(migrated.data)) return failure('SAVE_CORRUPT');
       const envelope = /** @type {import('../domain/model/contracts.js').SaveEnvelope} */ (migrated.data);
       const { checksum: expected, ...payload } = envelope;
@@ -65,7 +67,7 @@ export class SaveRepository {
         const payload = { schemaVersion: this.config.rules.schemaVersion, configVersion: this.config.rules.configVersion, contentVersion: this.config.rules.contentVersion, savedAt: new Date().toISOString(), state: snapshot };
         const envelope = { ...payload, checksum: await checksum(payload) };
         const raw = JSON.stringify(envelope);
-        if (!validateSave(envelope) || new TextEncoder().encode(raw).length > this.maxBytes) return failure('SAVE_CORRUPT');
+        if (!validateAnnual52Save(envelope) || new TextEncoder().encode(raw).length > this.maxBytes) return failure('SAVE_CORRUPT');
         const previous = await this.adapter.read();
         const preserveOriginal = previous !== null && !(await this.decode(previous)).ok;
         await this.adapter.write(raw, preserveOriginal); return success(undefined);

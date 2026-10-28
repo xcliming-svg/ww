@@ -1,4 +1,5 @@
 import { DeterministicRng } from '../util/DeterministicRng.js';
+import { annual52Waves } from './Annual52Content.js';
 /** @typedef {ReturnType<import('../../infrastructure/ResolveCombatBalance.js').resolveCombatBalance>} Balance */
 /** @typedef {import('../../../data/waves/content.json')} Content */
 /** @param {number} wave @param {Balance} balance */
@@ -22,6 +23,14 @@ export function gradeForEnemyWave(wave, model) {
  * @param {number} wave @param {number} seed @param {Balance} balance @param {Content} content */
 export function planWave(wave, seed, balance, content) {
   if (!Number.isInteger(wave) || wave < 1 || wave > content.maxWave) throw new Error('INVALID_WAVE');
+  if (content.maxWave === 52) {
+    const weekly = annual52Waves[wave - 1];
+    if (!weekly || weekly.wave !== wave || !balance.gradeModel) throw new Error('INVALID_ANNUAL52_CONTENT');
+    const combatGrade = gradeForEnemyWave(wave, balance.gradeModel);
+    const spawns = weekly.spawns.map(s => ({ ...s, combatGrade }));
+    return { wave, seed, formationStage: formationStage(wave, balance), spawns,
+      totalPlanned: spawns.length, reward: rewardForWave(wave, balance) };
+  }
   const rng = new DeterministicRng((seed ^ Math.imul(wave, 2654435761)) >>> 0);
   const stage = formationStage(wave, balance);
   const directions = content.directions.slice(0, stage === '3' ? 2 : 4);

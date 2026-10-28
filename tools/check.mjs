@@ -6,6 +6,10 @@ import ts from 'typescript';
 import Ajv from 'ajv';
 import { validateContent, validateSave, validateSaveV1, validateSaveV2 } from '../src/infrastructure/schema-validators.js';
 import { validateTechGraph } from '../src/domain/tech/TechGraph.js';
+import { annual52Waves } from '../src/domain/waves/Annual52Content.js';
+import { doctrineChoices } from '../src/domain/model/Doctrine.js';
+import { gradeForEnemyWave } from '../src/domain/waves/WavePlanner.js';
+import annualBalance from '../src/infrastructure/ImplementationBalanceConfig.js';
 /** @param {string} file */ const read = async file => JSON.parse(await fs.readFile(file, 'utf8'));
 /** @param {string} dir @returns {Promise<string[]>} */
 async function walk(dir) {
@@ -81,8 +85,19 @@ if (mode === 'schemas') {
     check(list.length === Number(stage), `Formation count:${stage}`); check(new Set(list.map(c => `${c.row},${c.col}`)).size === list.length, `Formation duplicates:${stage}`);
     check(list.some(c => c.row === 2 && c.col === 2), `Missing HQ:${stage}`);
   }
-  const content = data['data/waves/content.json']; check(content.maxWave === 100 && content.unlockEnemies[0].wave === 1, 'Wave coverage');
+  const content = data['data/waves/content.json']; check(content.maxWave === 52 && data['data/rules.json'].maxWave === 52 && content.unlockEnemies[0].wave === 1, 'Annual wave coverage');
   for (const tier of content.unlockEnemies) for (const id of tier.ids) check(candidate.units[id], `Enemy missing:${id}`);
+  check(annual52Waves.length === 52 && annual52Waves.reduce((n,w)=>n+w.spawns.length,0) === 1664, 'Annual spawn coverage');
+  check(JSON.stringify(annualBalance.expansionWaves) === '[1,4,8,20,34]' && annualBalance.enemyPowerPerWave === 0 && annualBalance.rewards.length === 52 && annualBalance.initialSupplies === 160, 'Active annual balance profile');
+  check(annual52Waves.reduce((n,w)=>n+w.reward,0) === 79250 && annual52Waves[51]?.reward === 3300, 'Annual rewards');
+  check(annual52Waves[0]?.spawns.length === 10 && annual52Waves[51]?.spawns.length === 54 && annual52Waves[51]?.spawns.at(-1)?.tick === 1272, 'Annual W1/W52 signatures');
+  check(JSON.stringify(doctrineChoices.primary.map(x=>x.id)) === '["artillery","armor"]' && JSON.stringify(doctrineChoices.secondary.map(x=>x.id)) === '["airDefense","antiArmor","fortification"]', 'Annual doctrine choices');
+  for (const [i, weekly] of annual52Waves.entries()) {
+    check(weekly.wave === i + 1 && weekly.formationStage === (i < 3 ? '3' : i < 7 ? '5' : i < 19 ? '9' : i < 33 ? '13' : '25'), `Annual stage:${i+1}`);
+    check(weekly.spawns.length > 0 && new Set(weekly.spawns.map(s=>s.id)).size === weekly.spawns.length, `Annual spawn identity:${i+1}`);
+    check(weekly.spawns.every((s,j)=>s.tick === j*24 && ['north','south','east','west'].includes(s.direction) && [-1,0,1].includes(s.lane) && /** @type {Record<string,any>} */ (candidate.units)[s.unitId]), `Annual spawn content:${i+1}`);
+    check(gradeForEnemyWave(i + 1, candidate.gradeModel) === Math.floor(i / 9), `Annual main grade:${i+1}`);
+  }
 }
 if (mode === 'graph') {
   const nodes = /** @type {import('../src/domain/model/contracts.js').TechNode[]} */ (data['data/tech/nodes.json']); errors.push(...validateTechGraph(nodes));
@@ -90,10 +105,10 @@ if (mode === 'graph') {
   const required = {
     hq: [1, []], barracks: [1, ['hq']], rifleR: [1, ['barracks']], rifle: [1, ['rifleR']],
     mgR: [3, ['barracks']], mortarR: [6, ['barracks']], atR: [9, ['barracks']],
-    gunR: [14, ['mortarR']], factory: [12, ['atR']], carR: [12, ['factory']],
-    tankR: [18, ['carR']], airfield: [30, ['carR']], fighterR: [30, ['airfield']],
-    attackerR: [32, ['airfield']], destroyerR: [34, ['tankR']],
-    heavyR: [40, ['tankR']], bomberR: [46, ['attackerR']]
+    gunR: [12, ['mortarR']], factory: [15, ['atR']], carR: [16, ['factory']],
+    tankR: [21, ['carR']], airfield: [29, ['carR']], fighterR: [30, ['airfield']],
+    attackerR: [35, ['airfield']], destroyerR: [37, ['tankR']],
+    heavyR: [36, ['tankR']], bomberR: [43, ['attackerR']]
   };
   for (const [id, [wave, parents]] of Object.entries(required)) {
     const n = nodes.find(node => node.id === id);

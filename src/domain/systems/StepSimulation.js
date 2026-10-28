@@ -1,6 +1,7 @@
 import { inAttackSector } from '../util/Geometry.js';
 import { resolveDamageBatch } from './DamageResolver.js';
 import { gradeForEnemyWave } from '../waves/WavePlanner.js';
+import { doctrineMultipliers } from '../model/Doctrine.js';
 /** @typedef {ReturnType<import('../../infrastructure/ResolveCombatBalance.js').resolveCombatBalance>} Balance */
 /** @typedef {{id:string,unitId:string,side:'ally'|'enemy',x:number,y:number,hp:number,maxHp:number,heading:number,cooldown:number,damage:number,range:number,arc:number,speed:number,splash:number,category:string,modifiers:Record<string,number>,combatGrade:number,defenseLevel:number,defenseDivisor:number}} Entity */
 /** @typedef {{type:'fire'|'hit'|'death',tick:number,sequence:number,side:'ally'|'enemy',entityId:string,unitId:string,targetId:string|null,x:number,y:number,tx:number,ty:number}} CombatEvent */
@@ -48,13 +49,18 @@ export function createCombat(state, plan, balance) {
     const grade = balance.gradeModel?.allyVisibleToGrade[powerLevel] ?? 5 + powerLevel;
     if (!Number.isInteger(grade) || grade < 5 || grade > 8) throw new Error('INVALID_ALLY_GRADE');
     const damageFactor = powerLevel === 0 ? 1 : balance.upgradeMultipliers[powerLevel - 1];
-    const hpFactor = 1; // Defense never increases max HP, including legacy campaign states.
-    return entity(p.unitId, p.instanceId, 'ally', p.cell.col - 2, p.cell.row - 2,
-      balance, damageFactor, hpFactor, grade, defenseLevel);
+    const bonuses = doctrineMultipliers(state.doctrines, p.unitId);
+    const ally = entity(p.unitId, p.instanceId, 'ally', p.cell.col - 2, p.cell.row - 2,
+      balance, damageFactor * bonuses.damage, bonuses.hp, grade, defenseLevel);
+    // Doctrine matchups are separate from main grade, logical HP pool and defense divisor.
+    ally.modifiers = { ...ally.modifiers,
+      armor: ally.modifiers.armor * bonuses.armor,
+      aircraft: ally.modifiers.aircraft * bonuses.aircraft };
+    return ally;
   });
   /** @type {Record<string,number>} */
   const actualDamageByUnit = {};
-  return { tick: 0, hqHp: balance.hqHp, entities: allies, spawned: new Set(), plan, balance, ended: false,
+  return { tick: 0, hqHp: state.hqHp, entities: allies, spawned: new Set(), plan, balance, ended: false,
     outcome: /** @type {'victory'|'defeat'|'invalid'|null} */ (null), events: /** @type {CombatEvent[]} */ ([]),
     rawDamageByUnit: /** @type {Record<string,number>} */ ({}),
     actualDamageByUnit,

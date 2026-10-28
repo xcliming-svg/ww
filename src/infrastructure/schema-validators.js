@@ -65515,10 +65515,10 @@ return errors === 0;
 }
 
 export const validateSave = validate101;
-const schema42 = {"type":"object","additionalProperties":false,"required":["schemaVersion","configVersion","contentVersion","savedAt","state","checksum"],"properties":{"schemaVersion":{"const":3},"configVersion":{"type":"string","minLength":1,"maxLength":128},"contentVersion":{"type":"string","minLength":1,"maxLength":128},"savedAt":{"type":"string","pattern":"^\\d{4}-\\d{2}-\\d{2}T"},"state":{"type":"object","additionalProperties":false,"required":["mode","phase","campaignId","wave","seed","rngState","supplies","formationStage","buildingIds","researchIds","upgradeLevels","placements","commandIds","acknowledgedNodeIds","tutorialStep","clearedWaveCount","resolutionIds","hqHp","checkpoint","investments","revealedNodeIds","legacyFreeNodeIds"],"properties":{"mode":{"enum":["preview","campaign"]},"phase":{"enum":["preparation","combat","victory","defeat","clear"]},"campaignId":{"type":"string","minLength":1,"maxLength":128},"wave":{"type":"integer","minimum":1,"maximum":100},"seed":{"type":"integer","minimum":0,"maximum":4294967295},"rngState":{"type":"integer","minimum":0,"maximum":4294967295},"supplies":{"anyOf":[{"type":"integer","minimum":0,"maximum":9007199254740991},{"type":"null"}]},"formationStage":{"enum":["3","5","9","13","25"]},"buildingIds":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true},"researchIds":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true},"upgradeLevels":{"type":"object","additionalProperties":{"type":"object","additionalProperties":{"type":"integer","minimum":0,"maximum":9007199254740991}}},"placements":{"type":"array","maxItems":24,"items":{"type":"object","additionalProperties":false,"required":["instanceId","unitId","cell","paidCost"],"properties":{"instanceId":{"type":"string","minLength":1,"maxLength":128},"unitId":{"type":"string","minLength":1,"maxLength":128},"cell":{"type":"object","additionalProperties":false,"required":["row","col"],"properties":{"row":{"type":"integer","minimum":0,"maximum":4},"col":{"type":"integer","minimum":0,"maximum":4}}},"paidCost":{"type":"integer","minimum":0,"maximum":9007199254740991}}}},"commandIds":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true},"acknowledgedNodeIds":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true},"tutorialStep":{"type":"integer","minimum":0,"maximum":4},"clearedWaveCount":{"type":"integer","minimum":0,"maximum":100},"resolutionIds":{"type":"array","uniqueItems":true,"items":{"type":"string"}},"hqHp":{"type":"number","minimum":0},"checkpoint":{"anyOf":[{"type":"null"},{"$ref":"#/definitions/checkpoint"}]},"investments":{"type":"array","maxItems":10000,"items":{"type":"object","additionalProperties":false,"required":["id","kind","nodeId","profileId","level","paidCost"],"properties":{"id":{"type":"string","minLength":1,"maxLength":128},"kind":{"enum":["building","research","upgrade"]},"nodeId":{"type":"string","minLength":1,"maxLength":64},"profileId":{"type":["string","null"],"maxLength":64},"level":{"type":"integer","minimum":0,"maximum":100},"paidCost":{"type":"integer","minimum":0,"maximum":9007199254740991}}}},"revealedNodeIds":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true},"legacyFreeNodeIds":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true}}},"checksum":{"type":"string","pattern":"^[a-f0-9]{64}$"}},"definitions":{"checkpoint":{"type":"object","additionalProperties":false,"required":["mode","phase","campaignId","wave","seed","rngState","supplies","formationStage","buildingIds","researchIds","upgradeLevels","placements","commandIds","acknowledgedNodeIds","tutorialStep","clearedWaveCount","resolutionIds","hqHp","checkpoint","revealedNodeIds","legacyFreeNodeIds","investments"],"properties":{"mode":{"enum":["preview","campaign"]},"phase":{"enum":["preparation","combat","victory","defeat","clear"]},"campaignId":{"type":"string","minLength":1,"maxLength":128},"wave":{"type":"integer","minimum":1,"maximum":100},"seed":{"type":"integer","minimum":0,"maximum":4294967295},"rngState":{"type":"integer","minimum":0,"maximum":4294967295},"supplies":{"anyOf":[{"type":"integer","minimum":0,"maximum":9007199254740991},{"type":"null"}]},"formationStage":{"enum":["3","5","9","13","25"]},"buildingIds":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true},"researchIds":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true},"upgradeLevels":{"type":"object","additionalProperties":{"type":"object","additionalProperties":{"type":"integer","minimum":0,"maximum":9007199254740991}}},"placements":{"type":"array","maxItems":24,"items":{"type":"object","additionalProperties":false,"required":["instanceId","unitId","cell","paidCost"],"properties":{"instanceId":{"type":"string","minLength":1,"maxLength":128},"unitId":{"type":"string","minLength":1,"maxLength":128},"cell":{"type":"object","additionalProperties":false,"required":["row","col"],"properties":{"row":{"type":"integer","minimum":0,"maximum":4},"col":{"type":"integer","minimum":0,"maximum":4}}},"paidCost":{"type":"integer","minimum":0,"maximum":9007199254740991}}}},"commandIds":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true},"acknowledgedNodeIds":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true},"tutorialStep":{"type":"integer","minimum":0,"maximum":4},"clearedWaveCount":{"type":"integer","minimum":0,"maximum":100},"resolutionIds":{"type":"array","uniqueItems":true,"items":{"type":"string"}},"hqHp":{"type":"number","minimum":0},"checkpoint":{"type":"null"},"revealedNodeIds":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true},"legacyFreeNodeIds":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true},"investments":{"type":"array","maxItems":10000,"items":{"type":"object","additionalProperties":false,"required":["id","kind","nodeId","profileId","level","paidCost"],"properties":{"id":{"type":"string","minLength":1,"maxLength":128},"kind":{"enum":["building","research","upgrade"]},"nodeId":{"type":"string","minLength":1,"maxLength":64},"profileId":{"type":["string","null"],"maxLength":64},"level":{"type":"integer","minimum":0,"maximum":100},"paidCost":{"type":"integer","minimum":0,"maximum":9007199254740991}}}}}}}};
+const schema42 = {"type":"object","additionalProperties":false,"required":["schemaVersion","configVersion","contentVersion","savedAt","state","checksum"],"properties":{"schemaVersion":{"const":3},"configVersion":{"type":"string","minLength":1,"maxLength":128},"contentVersion":{"type":"string","minLength":1,"maxLength":128},"savedAt":{"type":"string","pattern":"^\\d{4}-\\d{2}-\\d{2}T"},"state":{"type":"object","additionalProperties":false,"required":["mode","phase","campaignId","wave","seed","rngState","supplies","formationStage","buildingIds","researchIds","upgradeLevels","placements","commandIds","acknowledgedNodeIds","tutorialStep","clearedWaveCount","resolutionIds","hqHp","checkpoint","investments","revealedNodeIds","legacyFreeNodeIds"],"properties":{"mode":{"enum":["preview","campaign"]},"phase":{"enum":["preparation","combat","victory","defeat","clear"]},"campaignId":{"type":"string","minLength":1,"maxLength":128},"wave":{"type":"integer","minimum":1,"maximum":100},"seed":{"type":"integer","minimum":0,"maximum":4294967295},"rngState":{"type":"integer","minimum":0,"maximum":4294967295},"supplies":{"anyOf":[{"type":"integer","minimum":0,"maximum":9007199254740991},{"type":"null"}]},"formationStage":{"enum":["3","5","9","13","25"]},"buildingIds":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true},"researchIds":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true},"upgradeLevels":{"type":"object","additionalProperties":{"type":"object","additionalProperties":{"type":"integer","minimum":0,"maximum":9007199254740991}}},"placements":{"type":"array","maxItems":24,"items":{"type":"object","additionalProperties":false,"required":["instanceId","unitId","cell","paidCost"],"properties":{"instanceId":{"type":"string","minLength":1,"maxLength":128},"unitId":{"type":"string","minLength":1,"maxLength":128},"cell":{"type":"object","additionalProperties":false,"required":["row","col"],"properties":{"row":{"type":"integer","minimum":0,"maximum":4},"col":{"type":"integer","minimum":0,"maximum":4}}},"paidCost":{"type":"integer","minimum":0,"maximum":9007199254740991}}}},"commandIds":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true},"acknowledgedNodeIds":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true},"tutorialStep":{"type":"integer","minimum":0,"maximum":4},"clearedWaveCount":{"type":"integer","minimum":0,"maximum":100},"resolutionIds":{"type":"array","uniqueItems":true,"items":{"type":"string"}},"hqHp":{"type":"number","minimum":0},"checkpoint":{"anyOf":[{"type":"null"},{"$ref":"#/definitions/checkpoint"}]},"investments":{"type":"array","maxItems":10000,"items":{"type":"object","additionalProperties":false,"required":["id","kind","nodeId","profileId","level","paidCost"],"properties":{"id":{"type":"string","minLength":1,"maxLength":128},"kind":{"enum":["building","research","upgrade"]},"nodeId":{"type":"string","minLength":1,"maxLength":64},"profileId":{"type":["string","null"],"maxLength":64},"level":{"type":"integer","minimum":0,"maximum":100},"paidCost":{"type":"integer","minimum":0,"maximum":9007199254740991}}}},"revealedNodeIds":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true},"legacyFreeNodeIds":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true},"doctrines":{"type":"object","additionalProperties":false,"required":["primary","secondary"],"properties":{"primary":{"type":["string","null"],"enum":["artillery","armor",null]},"secondary":{"type":["string","null"],"enum":["airDefense","antiArmor","fortification",null]}}}}},"checksum":{"type":"string","pattern":"^[a-f0-9]{64}$"}},"definitions":{"checkpoint":{"type":"object","additionalProperties":false,"required":["mode","phase","campaignId","wave","seed","rngState","supplies","formationStage","buildingIds","researchIds","upgradeLevels","placements","commandIds","acknowledgedNodeIds","tutorialStep","clearedWaveCount","resolutionIds","hqHp","checkpoint","revealedNodeIds","legacyFreeNodeIds","investments"],"properties":{"mode":{"enum":["preview","campaign"]},"phase":{"enum":["preparation","combat","victory","defeat","clear"]},"campaignId":{"type":"string","minLength":1,"maxLength":128},"wave":{"type":"integer","minimum":1,"maximum":100},"seed":{"type":"integer","minimum":0,"maximum":4294967295},"rngState":{"type":"integer","minimum":0,"maximum":4294967295},"supplies":{"anyOf":[{"type":"integer","minimum":0,"maximum":9007199254740991},{"type":"null"}]},"formationStage":{"enum":["3","5","9","13","25"]},"buildingIds":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true},"researchIds":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true},"upgradeLevels":{"type":"object","additionalProperties":{"type":"object","additionalProperties":{"type":"integer","minimum":0,"maximum":9007199254740991}}},"placements":{"type":"array","maxItems":24,"items":{"type":"object","additionalProperties":false,"required":["instanceId","unitId","cell","paidCost"],"properties":{"instanceId":{"type":"string","minLength":1,"maxLength":128},"unitId":{"type":"string","minLength":1,"maxLength":128},"cell":{"type":"object","additionalProperties":false,"required":["row","col"],"properties":{"row":{"type":"integer","minimum":0,"maximum":4},"col":{"type":"integer","minimum":0,"maximum":4}}},"paidCost":{"type":"integer","minimum":0,"maximum":9007199254740991}}}},"commandIds":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true},"acknowledgedNodeIds":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true},"tutorialStep":{"type":"integer","minimum":0,"maximum":4},"clearedWaveCount":{"type":"integer","minimum":0,"maximum":100},"resolutionIds":{"type":"array","uniqueItems":true,"items":{"type":"string"}},"hqHp":{"type":"number","minimum":0},"checkpoint":{"type":"null"},"revealedNodeIds":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true},"legacyFreeNodeIds":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true},"investments":{"type":"array","maxItems":10000,"items":{"type":"object","additionalProperties":false,"required":["id","kind","nodeId","profileId","level","paidCost"],"properties":{"id":{"type":"string","minLength":1,"maxLength":128},"kind":{"enum":["building","research","upgrade"]},"nodeId":{"type":"string","minLength":1,"maxLength":64},"profileId":{"type":["string","null"],"maxLength":64},"level":{"type":"integer","minimum":0,"maximum":100},"paidCost":{"type":"integer","minimum":0,"maximum":9007199254740991}}}},"doctrines":{"type":"object","additionalProperties":false,"required":["primary","secondary"],"properties":{"primary":{"type":["string","null"],"enum":["artillery","armor",null]},"secondary":{"type":["string","null"],"enum":["airDefense","antiArmor","fortification",null]}}}}}}};
 const pattern0 = new RegExp("^\\d{4}-\\d{2}-\\d{2}T", "u");
 const pattern1 = new RegExp("^[a-f0-9]{64}$", "u");
-const schema43 = {"type":"object","additionalProperties":false,"required":["mode","phase","campaignId","wave","seed","rngState","supplies","formationStage","buildingIds","researchIds","upgradeLevels","placements","commandIds","acknowledgedNodeIds","tutorialStep","clearedWaveCount","resolutionIds","hqHp","checkpoint","revealedNodeIds","legacyFreeNodeIds","investments"],"properties":{"mode":{"enum":["preview","campaign"]},"phase":{"enum":["preparation","combat","victory","defeat","clear"]},"campaignId":{"type":"string","minLength":1,"maxLength":128},"wave":{"type":"integer","minimum":1,"maximum":100},"seed":{"type":"integer","minimum":0,"maximum":4294967295},"rngState":{"type":"integer","minimum":0,"maximum":4294967295},"supplies":{"anyOf":[{"type":"integer","minimum":0,"maximum":9007199254740991},{"type":"null"}]},"formationStage":{"enum":["3","5","9","13","25"]},"buildingIds":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true},"researchIds":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true},"upgradeLevels":{"type":"object","additionalProperties":{"type":"object","additionalProperties":{"type":"integer","minimum":0,"maximum":9007199254740991}}},"placements":{"type":"array","maxItems":24,"items":{"type":"object","additionalProperties":false,"required":["instanceId","unitId","cell","paidCost"],"properties":{"instanceId":{"type":"string","minLength":1,"maxLength":128},"unitId":{"type":"string","minLength":1,"maxLength":128},"cell":{"type":"object","additionalProperties":false,"required":["row","col"],"properties":{"row":{"type":"integer","minimum":0,"maximum":4},"col":{"type":"integer","minimum":0,"maximum":4}}},"paidCost":{"type":"integer","minimum":0,"maximum":9007199254740991}}}},"commandIds":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true},"acknowledgedNodeIds":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true},"tutorialStep":{"type":"integer","minimum":0,"maximum":4},"clearedWaveCount":{"type":"integer","minimum":0,"maximum":100},"resolutionIds":{"type":"array","uniqueItems":true,"items":{"type":"string"}},"hqHp":{"type":"number","minimum":0},"checkpoint":{"type":"null"},"revealedNodeIds":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true},"legacyFreeNodeIds":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true},"investments":{"type":"array","maxItems":10000,"items":{"type":"object","additionalProperties":false,"required":["id","kind","nodeId","profileId","level","paidCost"],"properties":{"id":{"type":"string","minLength":1,"maxLength":128},"kind":{"enum":["building","research","upgrade"]},"nodeId":{"type":"string","minLength":1,"maxLength":64},"profileId":{"type":["string","null"],"maxLength":64},"level":{"type":"integer","minimum":0,"maximum":100},"paidCost":{"type":"integer","minimum":0,"maximum":9007199254740991}}}}}};
+const schema43 = {"type":"object","additionalProperties":false,"required":["mode","phase","campaignId","wave","seed","rngState","supplies","formationStage","buildingIds","researchIds","upgradeLevels","placements","commandIds","acknowledgedNodeIds","tutorialStep","clearedWaveCount","resolutionIds","hqHp","checkpoint","revealedNodeIds","legacyFreeNodeIds","investments"],"properties":{"mode":{"enum":["preview","campaign"]},"phase":{"enum":["preparation","combat","victory","defeat","clear"]},"campaignId":{"type":"string","minLength":1,"maxLength":128},"wave":{"type":"integer","minimum":1,"maximum":100},"seed":{"type":"integer","minimum":0,"maximum":4294967295},"rngState":{"type":"integer","minimum":0,"maximum":4294967295},"supplies":{"anyOf":[{"type":"integer","minimum":0,"maximum":9007199254740991},{"type":"null"}]},"formationStage":{"enum":["3","5","9","13","25"]},"buildingIds":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true},"researchIds":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true},"upgradeLevels":{"type":"object","additionalProperties":{"type":"object","additionalProperties":{"type":"integer","minimum":0,"maximum":9007199254740991}}},"placements":{"type":"array","maxItems":24,"items":{"type":"object","additionalProperties":false,"required":["instanceId","unitId","cell","paidCost"],"properties":{"instanceId":{"type":"string","minLength":1,"maxLength":128},"unitId":{"type":"string","minLength":1,"maxLength":128},"cell":{"type":"object","additionalProperties":false,"required":["row","col"],"properties":{"row":{"type":"integer","minimum":0,"maximum":4},"col":{"type":"integer","minimum":0,"maximum":4}}},"paidCost":{"type":"integer","minimum":0,"maximum":9007199254740991}}}},"commandIds":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true},"acknowledgedNodeIds":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true},"tutorialStep":{"type":"integer","minimum":0,"maximum":4},"clearedWaveCount":{"type":"integer","minimum":0,"maximum":100},"resolutionIds":{"type":"array","uniqueItems":true,"items":{"type":"string"}},"hqHp":{"type":"number","minimum":0},"checkpoint":{"type":"null"},"revealedNodeIds":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true},"legacyFreeNodeIds":{"type":"array","items":{"type":"string","minLength":1,"maxLength":128},"uniqueItems":true},"investments":{"type":"array","maxItems":10000,"items":{"type":"object","additionalProperties":false,"required":["id","kind","nodeId","profileId","level","paidCost"],"properties":{"id":{"type":"string","minLength":1,"maxLength":128},"kind":{"enum":["building","research","upgrade"]},"nodeId":{"type":"string","minLength":1,"maxLength":64},"profileId":{"type":["string","null"],"maxLength":64},"level":{"type":"integer","minimum":0,"maximum":100},"paidCost":{"type":"integer","minimum":0,"maximum":9007199254740991}}}},"doctrines":{"type":"object","additionalProperties":false,"required":["primary","secondary"],"properties":{"primary":{"type":["string","null"],"enum":["artillery","armor",null]},"secondary":{"type":["string","null"],"enum":["airDefense","antiArmor","fortification",null]}}}}};
 
 function validate102(data, {instancePath="", parentData, parentDataProperty, rootData=data}={}){
 let vErrors = null;
@@ -67291,14 +67291,107 @@ vErrors.push(err141);
 errors++;
 }
 }
-}
-else {
-const err142 = {instancePath,schemaPath:"#/type",keyword:"type",params:{type: "object"},message:"must be object"};
+if(data.doctrines !== undefined){
+let data45 = data.doctrines;
+if(data45 && typeof data45 == "object" && !Array.isArray(data45)){
+if(data45.primary === undefined){
+const err142 = {instancePath:instancePath+"/doctrines",schemaPath:"#/properties/doctrines/required",keyword:"required",params:{missingProperty: "primary"},message:"must have required property '"+"primary"+"'"};
 if(vErrors === null){
 vErrors = [err142];
 }
 else {
 vErrors.push(err142);
+}
+errors++;
+}
+if(data45.secondary === undefined){
+const err143 = {instancePath:instancePath+"/doctrines",schemaPath:"#/properties/doctrines/required",keyword:"required",params:{missingProperty: "secondary"},message:"must have required property '"+"secondary"+"'"};
+if(vErrors === null){
+vErrors = [err143];
+}
+else {
+vErrors.push(err143);
+}
+errors++;
+}
+for(const key6 in data45){
+if(!((key6 === "primary") || (key6 === "secondary"))){
+const err144 = {instancePath:instancePath+"/doctrines",schemaPath:"#/properties/doctrines/additionalProperties",keyword:"additionalProperties",params:{additionalProperty: key6},message:"must NOT have additional properties"};
+if(vErrors === null){
+vErrors = [err144];
+}
+else {
+vErrors.push(err144);
+}
+errors++;
+}
+}
+if(data45.primary !== undefined){
+let data46 = data45.primary;
+if((typeof data46 !== "string") && (data46 !== null)){
+const err145 = {instancePath:instancePath+"/doctrines/primary",schemaPath:"#/properties/doctrines/properties/primary/type",keyword:"type",params:{type: schema43.properties.doctrines.properties.primary.type},message:"must be string,null"};
+if(vErrors === null){
+vErrors = [err145];
+}
+else {
+vErrors.push(err145);
+}
+errors++;
+}
+if(!(((data46 === "artillery") || (data46 === "armor")) || (data46 === null))){
+const err146 = {instancePath:instancePath+"/doctrines/primary",schemaPath:"#/properties/doctrines/properties/primary/enum",keyword:"enum",params:{allowedValues: schema43.properties.doctrines.properties.primary.enum},message:"must be equal to one of the allowed values"};
+if(vErrors === null){
+vErrors = [err146];
+}
+else {
+vErrors.push(err146);
+}
+errors++;
+}
+}
+if(data45.secondary !== undefined){
+let data47 = data45.secondary;
+if((typeof data47 !== "string") && (data47 !== null)){
+const err147 = {instancePath:instancePath+"/doctrines/secondary",schemaPath:"#/properties/doctrines/properties/secondary/type",keyword:"type",params:{type: schema43.properties.doctrines.properties.secondary.type},message:"must be string,null"};
+if(vErrors === null){
+vErrors = [err147];
+}
+else {
+vErrors.push(err147);
+}
+errors++;
+}
+if(!((((data47 === "airDefense") || (data47 === "antiArmor")) || (data47 === "fortification")) || (data47 === null))){
+const err148 = {instancePath:instancePath+"/doctrines/secondary",schemaPath:"#/properties/doctrines/properties/secondary/enum",keyword:"enum",params:{allowedValues: schema43.properties.doctrines.properties.secondary.enum},message:"must be equal to one of the allowed values"};
+if(vErrors === null){
+vErrors = [err148];
+}
+else {
+vErrors.push(err148);
+}
+errors++;
+}
+}
+}
+else {
+const err149 = {instancePath:instancePath+"/doctrines",schemaPath:"#/properties/doctrines/type",keyword:"type",params:{type: "object"},message:"must be object"};
+if(vErrors === null){
+vErrors = [err149];
+}
+else {
+vErrors.push(err149);
+}
+errors++;
+}
+}
+}
+else {
+const err150 = {instancePath,schemaPath:"#/type",keyword:"type",params:{type: "object"},message:"must be object"};
+if(vErrors === null){
+vErrors = [err150];
+}
+else {
+vErrors.push(err150);
 }
 errors++;
 }
@@ -69296,9 +69389,11 @@ vErrors.push(err158);
 errors++;
 }
 }
-}
-else {
-const err159 = {instancePath:instancePath+"/state",schemaPath:"#/properties/state/type",keyword:"type",params:{type: "object"},message:"must be object"};
+if(data4.doctrines !== undefined){
+let data50 = data4.doctrines;
+if(data50 && typeof data50 == "object" && !Array.isArray(data50)){
+if(data50.primary === undefined){
+const err159 = {instancePath:instancePath+"/state/doctrines",schemaPath:"#/properties/state/properties/doctrines/required",keyword:"required",params:{missingProperty: "primary"},message:"must have required property '"+"primary"+"'"};
 if(vErrors === null){
 vErrors = [err159];
 }
@@ -69307,12 +69402,8 @@ vErrors.push(err159);
 }
 errors++;
 }
-}
-if(data.checksum !== undefined){
-let data50 = data.checksum;
-if(typeof data50 === "string"){
-if(!pattern1.test(data50)){
-const err160 = {instancePath:instancePath+"/checksum",schemaPath:"#/properties/checksum/pattern",keyword:"pattern",params:{pattern: "^[a-f0-9]{64}$"},message:"must match pattern \""+"^[a-f0-9]{64}$"+"\""};
+if(data50.secondary === undefined){
+const err160 = {instancePath:instancePath+"/state/doctrines",schemaPath:"#/properties/state/properties/doctrines/required",keyword:"required",params:{missingProperty: "secondary"},message:"must have required property '"+"secondary"+"'"};
 if(vErrors === null){
 vErrors = [err160];
 }
@@ -69321,9 +69412,9 @@ vErrors.push(err160);
 }
 errors++;
 }
-}
-else {
-const err161 = {instancePath:instancePath+"/checksum",schemaPath:"#/properties/checksum/type",keyword:"type",params:{type: "string"},message:"must be string"};
+for(const key7 in data50){
+if(!((key7 === "primary") || (key7 === "secondary"))){
+const err161 = {instancePath:instancePath+"/state/doctrines",schemaPath:"#/properties/state/properties/doctrines/additionalProperties",keyword:"additionalProperties",params:{additionalProperty: key7},message:"must NOT have additional properties"};
 if(vErrors === null){
 vErrors = [err161];
 }
@@ -69333,14 +69424,109 @@ vErrors.push(err161);
 errors++;
 }
 }
-}
-else {
-const err162 = {instancePath,schemaPath:"#/type",keyword:"type",params:{type: "object"},message:"must be object"};
+if(data50.primary !== undefined){
+let data51 = data50.primary;
+if((typeof data51 !== "string") && (data51 !== null)){
+const err162 = {instancePath:instancePath+"/state/doctrines/primary",schemaPath:"#/properties/state/properties/doctrines/properties/primary/type",keyword:"type",params:{type: schema42.properties.state.properties.doctrines.properties.primary.type},message:"must be string,null"};
 if(vErrors === null){
 vErrors = [err162];
 }
 else {
 vErrors.push(err162);
+}
+errors++;
+}
+if(!(((data51 === "artillery") || (data51 === "armor")) || (data51 === null))){
+const err163 = {instancePath:instancePath+"/state/doctrines/primary",schemaPath:"#/properties/state/properties/doctrines/properties/primary/enum",keyword:"enum",params:{allowedValues: schema42.properties.state.properties.doctrines.properties.primary.enum},message:"must be equal to one of the allowed values"};
+if(vErrors === null){
+vErrors = [err163];
+}
+else {
+vErrors.push(err163);
+}
+errors++;
+}
+}
+if(data50.secondary !== undefined){
+let data52 = data50.secondary;
+if((typeof data52 !== "string") && (data52 !== null)){
+const err164 = {instancePath:instancePath+"/state/doctrines/secondary",schemaPath:"#/properties/state/properties/doctrines/properties/secondary/type",keyword:"type",params:{type: schema42.properties.state.properties.doctrines.properties.secondary.type},message:"must be string,null"};
+if(vErrors === null){
+vErrors = [err164];
+}
+else {
+vErrors.push(err164);
+}
+errors++;
+}
+if(!((((data52 === "airDefense") || (data52 === "antiArmor")) || (data52 === "fortification")) || (data52 === null))){
+const err165 = {instancePath:instancePath+"/state/doctrines/secondary",schemaPath:"#/properties/state/properties/doctrines/properties/secondary/enum",keyword:"enum",params:{allowedValues: schema42.properties.state.properties.doctrines.properties.secondary.enum},message:"must be equal to one of the allowed values"};
+if(vErrors === null){
+vErrors = [err165];
+}
+else {
+vErrors.push(err165);
+}
+errors++;
+}
+}
+}
+else {
+const err166 = {instancePath:instancePath+"/state/doctrines",schemaPath:"#/properties/state/properties/doctrines/type",keyword:"type",params:{type: "object"},message:"must be object"};
+if(vErrors === null){
+vErrors = [err166];
+}
+else {
+vErrors.push(err166);
+}
+errors++;
+}
+}
+}
+else {
+const err167 = {instancePath:instancePath+"/state",schemaPath:"#/properties/state/type",keyword:"type",params:{type: "object"},message:"must be object"};
+if(vErrors === null){
+vErrors = [err167];
+}
+else {
+vErrors.push(err167);
+}
+errors++;
+}
+}
+if(data.checksum !== undefined){
+let data53 = data.checksum;
+if(typeof data53 === "string"){
+if(!pattern1.test(data53)){
+const err168 = {instancePath:instancePath+"/checksum",schemaPath:"#/properties/checksum/pattern",keyword:"pattern",params:{pattern: "^[a-f0-9]{64}$"},message:"must match pattern \""+"^[a-f0-9]{64}$"+"\""};
+if(vErrors === null){
+vErrors = [err168];
+}
+else {
+vErrors.push(err168);
+}
+errors++;
+}
+}
+else {
+const err169 = {instancePath:instancePath+"/checksum",schemaPath:"#/properties/checksum/type",keyword:"type",params:{type: "string"},message:"must be string"};
+if(vErrors === null){
+vErrors = [err169];
+}
+else {
+vErrors.push(err169);
+}
+errors++;
+}
+}
+}
+else {
+const err170 = {instancePath,schemaPath:"#/type",keyword:"type",params:{type: "object"},message:"must be object"};
+if(vErrors === null){
+vErrors = [err170];
+}
+else {
+vErrors.push(err170);
 }
 errors++;
 }

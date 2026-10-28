@@ -223,5 +223,17 @@
   "error.HQ_REQUIRED": "Deploy HQ before starting combat.",
   "battle.selectedUnit": "Selected unit: {name}",
   "battle.hqNotBuilt": "HQ not deployed",
-  "locale.en-US": "English"
+  "locale.en-US": "English",
+  "annual.quarter": "Quarter {quarter}",
+  "annual.special": "Special battle",
+  "annual.primary": "First specialization (W10)",
+  "annual.secondary": "Second specialization (W38)",
+  "annual.artillery": "Artillery: boost mortar and gun damage",
+  "annual.armor": "Armor: strengthen AT guns and vehicles",
+  "annual.airDefense": "Air defense: boost MG/fighter vs. aircraft",
+  "annual.antiArmor": "Anti-armor: boost AT/destroyer/gun vs. armor",
+  "annual.fortification": "Fortification: improve allied and HQ health",
+  "annual.selected": "Selected: {name}",
+  "annual.required": "Choose a specialization before starting combat.",
+  "error.DOCTRINE_REQUIRED": "Choose this week's required specialization first."
 }

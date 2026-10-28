@@ -223,5 +223,17 @@
   "error.HQ_REQUIRED": "전투를 시작하려면 먼저 본부를 배치해야 합니다.",
   "battle.selectedUnit": "선택한 부대: {name}",
   "battle.hqNotBuilt": "본부 미배치",
-  "locale.en-US": "영어"
+  "locale.en-US": "영어",
+  "annual.quarter": "{quarter}분기",
+  "annual.special": "특별전",
+  "annual.primary": "1차 전문화 (W10)",
+  "annual.secondary": "2차 전문화 (W38)",
+  "annual.artillery": "포병: 박격포·야포 화력 강화",
+  "annual.armor": "기갑: 대전차포·차량 생존 강화",
+  "annual.airDefense": "방공: 기관총·전투기 대공 강화",
+  "annual.antiArmor": "대장갑: 대전차포·구축전차·야포 강화",
+  "annual.fortification": "진지방어: 아군·사령부 체력 강화",
+  "annual.selected": "선택 완료: {name}",
+  "annual.required": "전투 전에 전문화를 선택해야 합니다.",
+  "error.DOCTRINE_REQUIRED": "이번 주 필수 전문화를 먼저 선택하세요."
 }

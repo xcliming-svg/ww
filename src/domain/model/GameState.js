@@ -2,12 +2,13 @@ import { isAmount } from '../util/Result.js';
 import { isUnlocked, isDone } from '../tech/TechGraph.js';
 import { usableCell } from '../waves/FormationService.js';
 import { validInvestments } from '../economy/InvestmentLedger.js';
+import { isDoctrineChoice, maxHqHp } from './Doctrine.js';
 /** @param {import('./contracts.js').DomainConfig} config @param {string} campaignId @returns {import('./contracts.js').GameState} */
 export function createPreview(config, campaignId) {
   return { mode: 'preview', phase: 'preparation', campaignId, wave: 1, seed: 0, rngState: 0, supplies: null,
     formationStage: config.rules.preview.formationStage, buildingIds: [...config.rules.preview.buildingIds],
     researchIds: [...config.rules.preview.researchIds], upgradeLevels: {}, investments: [], placements: [], commandIds: [], revealedNodeIds: ['hq'], acknowledgedNodeIds: [], legacyFreeNodeIds: [], tutorialStep: 0,
-    clearedWaveCount: 0, resolutionIds: [], hqHp: 0, checkpoint: null };
+    clearedWaveCount: 0, resolutionIds: [], hqHp: 0, doctrines: { primary: null, secondary: null }, checkpoint: null };
 }
 /** Structural + semantic guard. Caller supplies schema validation for unknown JSON first.
  * @param {import('./contracts.js').GameState} state @param {import('./contracts.js').DomainConfig} config */
@@ -19,6 +20,14 @@ export function validateState(state, config) {
   if (![state.buildingIds, state.researchIds, state.placements, state.commandIds, state.revealedNodeIds, state.acknowledgedNodeIds, state.legacyFreeNodeIds].every(Array.isArray)) return false;
   if (!config.layouts[state.formationStage] || !state.upgradeLevels || typeof state.upgradeLevels !== 'object') return false;
   if (!Array.isArray(state.resolutionIds) || new Set(state.resolutionIds).size !== state.resolutionIds.length || !Number.isInteger(state.clearedWaveCount) || state.clearedWaveCount < 0 || state.clearedWaveCount > config.rules.maxWave || !Number.isFinite(state.hqHp) || state.hqHp < 0) return false;
+  const chosen = state.doctrines;
+  if (!chosen || typeof chosen !== 'object' || Array.isArray(chosen) ||
+    Object.keys(chosen).sort().join(',') !== 'primary,secondary' ||
+    !isDoctrineChoice('primary', chosen.primary) || !isDoctrineChoice('secondary', chosen.secondary) ||
+    (state.wave < 10 && chosen.primary !== null) || (state.wave < 38 && chosen.secondary !== null) ||
+    ((state.wave > 10 || (state.wave === 10 && state.phase !== 'preparation')) && chosen.primary === null) ||
+    ((state.wave > 38 || (state.wave === 38 && state.phase !== 'preparation')) && chosen.secondary === null) ||
+    state.hqHp > maxHqHp(chosen)) return false;
   if (state.mode === 'campaign') {
     const resolved = ['victory', 'clear'].includes(state.phase);
     if (state.clearedWaveCount !== state.wave - (resolved ? 0 : 1) || state.resolutionIds.length !== state.clearedWaveCount) return false;

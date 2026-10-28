@@ -11,6 +11,8 @@ import tutorial from '../../../data/ui/tutorial.json';
 import localeManifest from '../../../locales/manifest.json';
 import balance from '../../infrastructure/ImplementationBalanceConfig.js';
 import display from '../../../data/visual/unit-display.json';
+import { doctrineChoices, doctrineWaves, maxHqHp } from '../../domain/model/Doctrine.js';
+import { annual52Waves } from '../../domain/waves/Annual52Content.js';
 
 export class GameShell {
   abort = new AbortController();
@@ -79,7 +81,7 @@ export class GameShell {
   updateTimer = () => {
     const { app, t } = this;
     this.timer.textContent = app.state?.phase === 'combat' ? t('hud.playback', { value: Math.max(0, Math.ceil(app.config.rules.combatSeconds - app.elapsedMs / 1000)) }) : '';
-    this.hqLabel.textContent = app.state?.buildingIds.includes('hq') ? t('battle.hqHealth', { value: Math.ceil(app.frame?.hqHp ?? app.state?.hqHp ?? 0), max: balance.hqHp }) : t('battle.hqNotBuilt');
+    this.hqLabel.textContent = app.state?.buildingIds.includes('hq') ? t('battle.hqHealth', { value: Math.ceil(app.frame?.hqHp ?? app.state?.hqHp ?? 0), max: maxHqHp(app.state?.doctrines) }) : t('battle.hqNotBuilt');
   };
   /** @param {string} content */
   notify(content) {
@@ -287,7 +289,30 @@ export class GameShell {
     }
     this.recon.setAttribute('aria-label', t('battle.reconUnknown'));
     this.controls.replaceChildren();
+    const weekly = annual52Waves[state.wave - 1];
+    if (weekly) {
+      this.controls.append(el('p', t('annual.quarter', { quarter: weekly.quarter })));
+      if (weekly.special) this.controls.append(el('p', t('annual.special'), 'hint'));
+    }
     if (state.phase === 'preparation') {
+      /** @type {Record<string,string>} */
+      const doctrineNames = {
+        artillery: t('annual.artillery'), armor: t('annual.armor'),
+        airDefense: t('annual.airDefense'), antiArmor: t('annual.antiArmor'),
+        fortification: t('annual.fortification')
+      };
+      for (const slot of /** @type {const} */ (['primary', 'secondary'])) {
+        if (state.wave < doctrineWaves[slot]) continue;
+        this.controls.append(el('p', slot === 'primary' ? t('annual.primary') : t('annual.secondary')));
+        const selected = state.doctrines[slot];
+        if (selected) this.controls.append(el('p', t('annual.selected', { name: doctrineNames[selected] }), 'hint'));
+        else {
+          this.controls.append(el('p', t('annual.required'), 'hint'));
+          for (const choice of doctrineChoices[slot]) {
+            this.controls.append(button(doctrineNames[choice.id], () => app.selectDoctrine(slot, choice.id), app.animationLock || app.calculating));
+          }
+        }
+      }
       this.controls.append(el('p', t('battle.move'), 'hint'));
       const selected = !!app.selectedInstance;
       if (selected) {

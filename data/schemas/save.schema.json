@@ -309,6 +309,39 @@
             "maxLength": 128
           },
           "uniqueItems": true
+        },
+        "doctrines": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "primary",
+            "secondary"
+          ],
+          "properties": {
+            "primary": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "enum": [
+                "artillery",
+                "armor",
+                null
+              ]
+            },
+            "secondary": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "enum": [
+                "airDefense",
+                "antiArmor",
+                "fortification",
+                null
+              ]
+            }
+          }
         }
       }
     },
@@ -591,6 +624,39 @@
                 "minimum": 0,
                 "maximum": 9007199254740991
               }
+            }
+          }
+        },
+        "doctrines": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "primary",
+            "secondary"
+          ],
+          "properties": {
+            "primary": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "enum": [
+                "artillery",
+                "armor",
+                null
+              ]
+            },
+            "secondary": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "enum": [
+                "airDefense",
+                "antiArmor",
+                "fortification",
+                null
+              ]
             }
           }
         }

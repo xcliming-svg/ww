@@ -3,6 +3,7 @@ import { createCampaign, startWave, resolveWave, advanceCampaign, retryWave } fr
 import { dispatchPreparationCommand } from '../domain/economy/EconomyService.js';
 import { planWave, getRecon } from '../domain/waves/WavePlanner.js';
 import { failure } from '../domain/util/Result.js';
+import { chooseDoctrine } from '../domain/model/Doctrine.js';
 import { getDesktop } from '../infrastructure/DesktopBridge.js';
 import balance from '../infrastructure/ImplementationBalanceConfig.js';
 import content from '../../data/waves/content.json';
@@ -67,6 +68,13 @@ export class GameCoordinator {
     }
     else this.errorKey = result.messageKey;
     this.emit(); return result.ok;
+  }
+  /** @param {'primary'|'secondary'} slot @param {string} id */
+  selectDoctrine(slot, id) {
+    if (!this.state || this.loading || this.calculating || this.quitting || this.animationLock) return false;
+    const result = chooseDoctrine(this.state, slot, id);
+    if (!result.ok) { this.errorKey = result.messageKey; this.emit(); return false; }
+    this.state = result.data; this.errorKey = ''; this.scheduleSave(); this.emit(); return true;
   }
   /** @param {string} id */ selectNode(id) {
     this.selectedId = id; this.selectedUnit = ''; this.selectedInstance = '';
