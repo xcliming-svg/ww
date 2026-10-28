@@ -1,8 +1,8 @@
 {
   "schemaVersion": 3,
-  "configVersion": "candidate-v13-robot-defense",
-  "contentVersion": "defense-100-v1",
-  "maxWave": 100,
+  "configVersion": "annual52-main-grade-v1",
+  "contentVersion": "annual52-20261028",
+  "maxWave": 52,
   "combatSeconds": 30,
   "gridSize": 5,
   "hq": {

@@ -152,7 +152,7 @@
     "assetId": "tech.research",
     "roleTags": [],
     "startsUnlocked": false,
-    "minWave": 14,
+    "minWave": 12,
     "revealParentIds": [
       "mortarR"
     ]
@@ -224,7 +224,7 @@
     "assetId": "tech.building",
     "roleTags": [],
     "startsUnlocked": false,
-    "minWave": 12,
+    "minWave": 15,
     "revealParentIds": [
       "hq"
     ]
@@ -242,7 +242,7 @@
     "assetId": "tech.research",
     "roleTags": [],
     "startsUnlocked": false,
-    "minWave": 12,
+    "minWave": 16,
     "revealParentIds": [
       "factory"
     ]
@@ -278,7 +278,7 @@
     "assetId": "tech.research",
     "roleTags": [],
     "startsUnlocked": false,
-    "minWave": 18,
+    "minWave": 21,
     "revealParentIds": [
       "carR"
     ]
@@ -314,7 +314,7 @@
     "assetId": "tech.research",
     "roleTags": [],
     "startsUnlocked": false,
-    "minWave": 40,
+    "minWave": 36,
     "revealParentIds": [
       "tankR"
     ]
@@ -350,7 +350,7 @@
     "assetId": "tech.research",
     "roleTags": [],
     "startsUnlocked": false,
-    "minWave": 34,
+    "minWave": 37,
     "revealParentIds": [
       "tankR"
     ]
@@ -386,7 +386,7 @@
     "assetId": "tech.building",
     "roleTags": [],
     "startsUnlocked": false,
-    "minWave": 30,
+    "minWave": 29,
     "revealParentIds": [
       "hq"
     ]
@@ -440,7 +440,7 @@
     "assetId": "tech.research",
     "roleTags": [],
     "startsUnlocked": false,
-    "minWave": 32,
+    "minWave": 35,
     "revealParentIds": [
       "airfield"
     ]
@@ -476,7 +476,7 @@
     "assetId": "tech.research",
     "roleTags": [],
     "startsUnlocked": false,
-    "minWave": 46,
+    "minWave": 43,
     "revealParentIds": [
       "attackerR"
     ]
