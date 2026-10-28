@@ -5,7 +5,7 @@ import { annual52Waves } from './Annual52Content.js';
 /** @param {number} wave @param {Balance} balance */
 export function formationStage(wave, balance) {
   const stages = ['3', '5', '9', '13', '25'];
-  return stages[balance.expansionWaves.filter(w => w <= wave).length - 1];
+  return stages[balance.expansionWaves.filter((/** @type {number} */ w) => w <= wave).length - 1];
 }
 /** @param {number} wave @param {Balance} balance */
 export function rewardForWave(wave, balance) {

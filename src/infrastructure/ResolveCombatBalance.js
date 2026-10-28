@@ -12,9 +12,9 @@ export function resolveCombatBalance(candidate, display) {
     model.enemyHpUsesTroopMass !== true || model.enemyDamageBelowAnchorUsesTroopMass !== true ||
     JSON.stringify(display.allyVisibleToGrade) !== '[5,6,7,8]' ||
     !Array.isArray(model.attackMultipliersG6ToG10) || model.attackMultipliersG6ToG10.length !== 5 ||
-    model.attackMultipliersG6ToG10.some((n) => !Number.isFinite(n) || n <= 0) ||
+    model.attackMultipliersG6ToG10.some((/** @type {number} */ n) => !Number.isFinite(n) || n <= 0) ||
     !Array.isArray(candidate.defenseDivisors) || candidate.defenseDivisors.length !== 4 ||
-    candidate.defenseDivisors[0] !== 1 || candidate.defenseDivisors.some((n) => !Number.isFinite(n) || n <= 0)) throw new Error('INVALID_GRADE_MODEL');
+    candidate.defenseDivisors[0] !== 1 || candidate.defenseDivisors.some((/** @type {number} */ n) => !Number.isFinite(n) || n <= 0)) throw new Error('INVALID_GRADE_MODEL');
   /** @type {Record<string,number[]>} */
   const countsByGrade = {};
   const ids = Object.keys(candidate.units);
