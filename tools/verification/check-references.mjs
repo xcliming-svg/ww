@@ -16,6 +16,9 @@ const handles = new Set(),
   receives = new Set();
 let workers = 0;
 let desktopWindows = 0;
+let desktopRulesImport = false;
+let desktopSaveGuards = 0;
+let rendererSaveVersion = false;
 /** @type {string[]} */
 const preloadTargets = [];
 /** @type {Map<string,string[]>} */
@@ -55,6 +58,38 @@ for (const file of files) {
   // The only suppression is the explicitly generated Ajv output (not in files).
   /** @param {import('typescript').Node} node */
   function visit(node) {
+    if (file === 'desktop/main.cjs') {
+      if (
+        ts.isVariableDeclaration(node) &&
+        node.name.getText(ast) === 'rules' &&
+        node.initializer &&
+        ts.isCallExpression(node.initializer) &&
+        node.initializer.expression.getText(ast) === 'require'
+      ) {
+        const target = node.initializer.arguments[0];
+        desktopRulesImport =
+          !!target && ts.isStringLiteral(target) && target.text === '../data/rules.json';
+      }
+      if (
+        ts.isIfStatement(node) &&
+        ts.isBinaryExpression(node.expression) &&
+        node.expression.left.getText(ast) === 'parsed?.schemaVersion'
+      ) {
+        desktopSaveGuards++;
+        check(
+          node.expression.operatorToken.kind === ts.SyntaxKind.ExclamationEqualsEqualsToken &&
+            node.expression.right.getText(ast) === 'rules.schemaVersion',
+          'Desktop save version must use current rules',
+        );
+      }
+    }
+    if (
+      file === 'src/infrastructure/SaveRepository.js' &&
+      ts.isPropertyAssignment(node) &&
+      node.name.getText(ast) === 'schemaVersion'
+    ) {
+      rendererSaveVersion = node.initializer.getText(ast) === 'this.config.rules.schemaVersion';
+    }
     if (
       file === 'src/infrastructure/ConfigLoader.js' &&
       ts.isImportDeclaration(node) &&
@@ -285,6 +320,15 @@ for (const channel of sends) check(receives.has(channel), `Unreceived IPC event:
 // Removing stripDoctrine preserves JSON acceptance: the original explicit guard
 // remains, and the schema admits precisely the same values and no extra keys.
 const saveSchema = await readJson('data/schemas/save.schema.json');
+const rules = await readJson('data/rules.json');
+check(
+  desktopRulesImport && desktopSaveGuards === 1 && rendererSaveVersion,
+  'Shared save version source',
+);
+check(
+  saveSchema.properties.schemaVersion.const === rules.schemaVersion,
+  'Save schema/rules version',
+);
 const choices = await readLiteral('src/domain/model/Doctrine.js', 'doctrineChoices');
 for (const shape of [saveSchema.properties.state, saveSchema.definitions.checkpoint]) {
   const doctrine = shape.properties.doctrines;

@@ -1,6 +1,9 @@
 import fs from 'node:fs/promises';
 import { spawnSync } from 'node:child_process';
+import path from 'node:path';
+import ts from 'typescript';
 import { check, finish, data, files, readJson as read } from './context.mjs';
+import { parseSource } from './source.mjs';
 // Offline renderer must never use Ajv.compile / Function-constructor under CSP.
 const staticValidators = await fs.readFile('src/infrastructure/schema-validators.js', 'utf8');
 check(
@@ -59,6 +62,29 @@ for (const file of files.filter((p) => p.startsWith('src/'))) {
   check(!/steamworks|greenworks|steam-cloud/i.test(text), `Forbidden service:${file}`);
 }
 const builder = data['desktop/builder.json'];
+// Node loads these JSON files outside the Vite bundle; inspect their actual require paths.
+for (const file of files.filter((name) => name.startsWith('desktop/'))) {
+  const ast = await parseSource(file);
+  /** @param {import('typescript').Node} node */
+  function visit(node) {
+    if (
+      ts.isCallExpression(node) &&
+      ts.isIdentifier(node.expression) &&
+      node.expression.text === 'require'
+    ) {
+      const specifier = node.arguments[0];
+      if (specifier && ts.isStringLiteral(specifier) && specifier.text.endsWith('.json')) {
+        const target = path.posix.normalize(
+          path.posix.join(path.posix.dirname(file), specifier.text),
+        );
+        check(builder.files.includes(target), `Unpackaged desktop JSON:${target}`);
+        check(Object.hasOwn(data, target), `Unregistered desktop JSON:${target}`);
+      }
+    }
+    ts.forEachChild(node, visit);
+  }
+  visit(ast);
+}
 check(
   builder.asar &&
     builder.files.includes('dist/**/*') &&

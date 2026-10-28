@@ -3,6 +3,7 @@ const fs = require('node:fs/promises');
 const path = require('node:path');
 const { pathToFileURL } = require('node:url');
 const layout = require('../data/ui/layout.json');
+const rules = require('../data/rules.json');
 const locale = require('../locales/ko-KR.json');
 /** @type {import('electron').BrowserWindow|null} */
 let windowRef = null;
@@ -69,7 +70,7 @@ app
       )
         throw new Error('INVALID_ARGUMENT');
       const parsed = JSON.parse(raw);
-      if (parsed?.schemaVersion !== 2) throw new Error('INVALID_SAVE');
+      if (parsed?.schemaVersion !== rules.schemaVersion) throw new Error('INVALID_SAVE');
       const task = writeQueue.then(async () => {
         await fs.mkdir(path.dirname(savePath), { recursive: true });
         const temporary = `${savePath}.tmp`;

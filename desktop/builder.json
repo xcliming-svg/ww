@@ -8,6 +8,7 @@
   "files": [
     "dist/**/*",
     "desktop/**/*",
+    "data/rules.json",
     "data/ui/layout.json",
     "locales/ko-KR.json",
     "package.json"
