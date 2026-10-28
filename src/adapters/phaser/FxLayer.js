@@ -4,7 +4,7 @@ import layout from '../../../data/ui/layout.json';
 import balance from '../../infrastructure/ImplementationBalanceConfig.js';
 import display from '../../../data/visual/unit-display.json';
 import renderBudget from '../../../data/visual/render-budget.json';
-import { buildGroupPresentation } from '../../presentation/UnitGroupMath.js';
+import { buildGroupPresentation } from './UnitGroupMath.js';
 /** Rendering only; no collision, projectile travel or damage callback.
  * @param {import('phaser').GameObjects.Graphics} graphics
  * @param {import('../../domain/systems/StepSimulation.js').CombatEvent[]} events

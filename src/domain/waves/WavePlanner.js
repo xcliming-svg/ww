@@ -1,6 +1,6 @@
 import { DeterministicRng } from '../util/DeterministicRng.js';
 import { annual52Waves } from './Annual52Content.js';
-/** @typedef {ReturnType<import('../../infrastructure/ResolveCombatBalance.js').resolveCombatBalance>} Balance */
+/** @typedef {ReturnType<import('../model/ResolveCombatBalance.js').resolveCombatBalance>} Balance */
 /** @typedef {import('../../../data/waves/content.json')} Content */
 /** @param {number} wave @param {Balance} balance */
 export function formationStage(wave, balance) {

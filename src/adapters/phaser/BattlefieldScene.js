@@ -2,7 +2,7 @@ import Phaser from 'phaser';
 import layout from '../../../data/ui/layout.json';
 import theme from '../../../data/ui/theme.json';
 import { drawGlyph } from './PixelUnitRenderer.js';
-import { buildGroupPresentation } from '../../presentation/UnitGroupMath.js';
+import { buildGroupPresentation } from './UnitGroupMath.js';
 import display from '../../../data/visual/unit-display.json';
 import renderBudget from '../../../data/visual/render-budget.json';
 import { drawEffects } from './FxLayer.js';

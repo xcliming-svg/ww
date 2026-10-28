@@ -24,25 +24,32 @@
     "check:graph": "node tools/verification/check-graph.mjs",
     "check:locales": "node tools/verification/check-locales.mjs",
     "check:assets": "node tools/verification/check-assets.mjs",
-    "check:deps": "node tools/verification/check-deps.mjs",
+    "check:deps": "depcruise --config .dependency-cruiser.cjs src tools desktop",
     "check:package": "node tools/verification/check-package.mjs",
     "balance:simulate": "node tools/balance-sim.mjs",
     "balance:report": "node tools/balance-report.mjs",
     "balance:compare": "node tools/balance-compare.mjs",
     "check:generated": "node tools/generate-validators.mjs --check",
-    "check": "npm run lint && npm run typecheck && npm run check:generated && npm run check:schemas && npm run check:graph && npm run check:locales && npm run check:assets && npm run check:deps && npm run check:package && npm run build"
+    "check": "npm run lint && npm run typecheck && npm run check:generated && npm run check:schemas && npm run check:graph && npm run check:locales && npm run check:assets && npm run check:deps && npm run check:unused && npm run check:references && npm run check:package && npm run build",
+    "check:unused": "knip --no-progress",
+    "format": "prettier --write src tools desktop *.js .dependency-cruiser.cjs",
+    "check:references": "node tools/verification/check-references.mjs",
+    "audit:refactor": "node tools/verification/compare-refactor.mjs docs/refactoring/2026-10-28-contract.json"
   },
   "dependencies": {
-    "phaser": "4.2.1",
-    "ajv": "8.20.0"
+    "ajv": "8.20.0",
+    "phaser": "4.2.1"
   },
   "devDependencies": {
-    "vite": "8.3.5",
+    "@types/node": "26.6.5",
+    "dependency-cruiser": "18.7.0",
     "electron": "45.0.0",
     "electron-builder": "26.18.0",
     "eslint": "10.13.0",
-    "typescript": "5.9.3",
     "globals": "17.13.0",
-    "@types/node": "26.6.5"
+    "knip": "6.43.0",
+    "prettier": "3.9.10",
+    "typescript": "5.9.3",
+    "vite": "8.3.5"
   }
 }

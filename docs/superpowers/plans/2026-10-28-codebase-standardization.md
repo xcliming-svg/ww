@@ -35,11 +35,11 @@
 
 ## S2. 책임 경계와 미사용 코드
 
-- [ ] ResolveCombatBalance, validateTechGraph, UnitGroupMath 이동 및 모든 import/타입/소스 해시 경로 전환. 이전 파일/경로 삭제.
-- [ ] 참조 없는 AudioAdapter, BalanceConfig, startWave alias, drawUnit, radialAngle 제거 및 미사용 export 축소.
-- [ ] ValidateAnnual52Save의 불필요한 stripDoctrine 우회 제거. 기존 guard/스키마 수용 조건 정적 비교.
-- [ ] dependency-cruiser/Knip을 고정 버전 도입하고 entry/허용 의존 방향을 설정. UI/Phaser/Worker/CLI 동적 참조 누락 방지.
-- [ ] 변경 전후 AST/불변 콘텐츠 비교 도구와 명시적 이동/삭제 manifest 작성. 공개 계약/Scene/이벤트/설정 비교.
+- [x] ResolveCombatBalance, validateTechGraph, UnitGroupMath 이동 및 모든 import/타입/소스 해시 경로 전환. 이전 파일/경로 삭제.
+- [x] 참조 없는 AudioAdapter, BalanceConfig, startWave alias, drawUnit, radialAngle 제거 및 미사용 export 축소.
+- [x] ValidateAnnual52Save의 불필요한 stripDoctrine 우회 제거. 기존 guard/스키마 수용 조건 정적 비교.
+- [x] dependency-cruiser/Knip을 고정 버전 도입하고 entry/허용 의존 방향을 설정. UI/Phaser/Worker/CLI 동적 참조 누락 방지.
+- [x] 변경 전후 AST/불변 콘텐츠 비교 도구와 명시적 이동/삭제 manifest 작성. 공개 계약/Scene/이벤트/설정 비교.
 - 완료 기준: 전체 check 및 preservation 비교 PASS, 구형 파일 없음, 미해결 의존/순환/미사용 항목 없음.
 - Commit: `refactor: enforce module boundaries and remove unused implementations`.
 
@@ -65,4 +65,6 @@
 
 - 계획 확정 전: 전체 tracked inventory/실행 코드 참조 및 기획·데이터·저장·배포 계약 조사 완료. 기준 lint/build PASS, checkJs 4건 FAIL 기록. 코드 수정 없음.
 
-- S1 ??: `npm run check` exit 0 (lint/checkJs/generated/schema/graph/locale/assets/deps/package/build). ?? ?? ?? 4? ??? ??. generated validator ??? ?? ??. runtime entry/worker/CSS ??? ????? ??. `git diff --check` PASS.
+- S1 완료: `npm run check` exit 0 (lint/checkJs/generated/schema/graph/locale/assets/deps/package/build). 기존 타입 오류 4건은 선언만 수정. generated validator 바이트 변경 없음. runtime entry/worker/CSS 산출물 이름과 크기 동일. `git diff --check` PASS.
+- S2 완료: Knip 사전 결과 3개 파일/2개 미사용 함수와 내부 전용 export 3개 확인 후 정리. dependency-cruiser 101 modules/195 dependencies 위반 0, Knip 0, Scene/Worker/IPC/타입/스키마 참조 PASS, 전체 `npm run check` PASS. `npm run audit:refactor`는 소스 53개, 이동 함수 1개, 보호 파일 54개 대조 PASS. CSS/Worker 번들 이름 유지. 현재 저장 guard 본문은 유지하고 stripDoctrine만 제거.
+- S2 결정: resolver가 domain 순회에 포함되므로 시뮬 report의 별도 resolver 해시/스냅샷 추가를 제거했다. 중복 포함을 피하며 엔진 변경 감지 계약은 유지한다. 기존 보고서는 재생성/재실행하지 않는다. Prettier 설치는 lockfile 정리와 함께 했고 포맷 적용/검사 강제는 S3에서 수행한다.

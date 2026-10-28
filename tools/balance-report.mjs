@@ -55,7 +55,6 @@ if (process.argv.includes('--snapshot')) {
   const v13 = !!JSON.parse(balanceText).gradeModel;
   const displayPath = 'data/visual/unit-display.json';
   const displayText = v13 ? await fs.readFile(displayPath, 'utf8') : null;
-  if (v13) digest.update('src/infrastructure/ResolveCombatBalance.js').update(await fs.readFile('src/infrastructure/ResolveCombatBalance.js'));
   const candidateHash = createHash('sha256').update(balanceText)
     .update(displayText === null ? '' : '\n'+displayPath+'\n'+displayText).digest('hex');
   if (digest.digest('hex') !== report.engineHash ||
@@ -65,7 +64,7 @@ if (process.argv.includes('--snapshot')) {
   const names = [...engineFiles, 'tools/balance-policy.mjs', 'tools/balance-sim.mjs', 'tools/balance-report.mjs',
     'data/simulation/criteria.json', 'data/simulation/policy-profiles.json', `data/balance/${report.candidate}.json`,
     'data/waves/content.json', 'data/tech/nodes.json', 'data/rules.json', 'data/formation/layouts.json',
-    ...(v13 ? [displayPath, 'src/infrastructure/ResolveCombatBalance.js'] : [])];
+    ...(v13 ? [displayPath] : [])];
   const snapshot = Object.fromEntries(await Promise.all(names.map(async p => [p, await fs.readFile(p, 'utf8')])));
   await fs.writeFile(path.join(path.dirname(file), `${path.basename(file, '.json')}-source.json`), JSON.stringify({ engineHash: report.engineHash, policyHash: report.policyHash, files: snapshot }, null, 2));
 }

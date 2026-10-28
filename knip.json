@@ -1,0 +1,21 @@
+{
+  "$schema": "https://unpkg.com/knip@6/schema.json",
+  "entry": [
+    "src/bootstrap/main.js",
+    "src/application/combat-worker.js",
+    "desktop/preload.cjs",
+    "tools/balance-probes.mjs",
+    "tools/balance-extract.mjs",
+    "tools/balance-merge.mjs",
+    "tools/import-annual52.mjs",
+    "tools/generate-notices.mjs"
+  ],
+  "project": [
+    "src/**/*.js",
+    "desktop/**/*.cjs",
+    "tools/**/*.mjs",
+    "*.js"
+  ],
+  "includeEntryExports": true,
+  "treatConfigHintsAsErrors": true
+}

@@ -1,4 +1,4 @@
-import { validateTechGraph } from '../../src/domain/tech/TechGraph.js';
+import { validateTechGraph } from '../../src/infrastructure/ValidateTechGraph.js';
 import { check, finish, data, errors } from './context.mjs';
 const nodes = /** @type {import('../../src/domain/model/contracts.js').TechNode[]} */ (data['data/tech/nodes.json']); errors.push(...validateTechGraph(nodes));
 check(nodes.length === 28 && nodes.filter(n => n.kind === 'research').length === 12 && nodes.filter(n => n.kind === 'unit').length === 12, '28/12/12 tree counts');

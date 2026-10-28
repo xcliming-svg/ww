@@ -7,7 +7,7 @@ export async function walk(dir) {
   return (await Promise.all(entries.map(entry => entry.isDirectory()
     ? walk(`${dir}/${entry.name}`) : [`${dir}/${entry.name}`]))).flat().sort();
 }
-export const sourceFiles = [...await walk('src'), ...await walk('tools'), ...await walk('desktop'),
+const sourceFiles = [...await walk('src'), ...await walk('tools'), ...await walk('desktop'),
   'eslint.config.js', 'vite.config.js'].filter(file => /\.(?:js|mjs|cjs)$/.test(file));
 export const files = sourceFiles.filter(file => !file.endsWith('schema-validators.js'));
 export const registry = /** @type {string[]} */ (await readJson('data/schemas/registry.json'));

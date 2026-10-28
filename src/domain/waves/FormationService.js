@@ -2,7 +2,7 @@
 /** @param {Cell} a @param {Cell} b */
 export const sameCell = (a, b) => a.row === b.row && a.col === b.col;
 /** @param {unknown} cell @param {number} gridSize @returns {cell is Cell} */
-export function validCell(cell, gridSize) {
+function validCell(cell, gridSize) {
   if (!cell || typeof cell !== 'object') return false;
   const c = /** @type {Cell} */ (cell);
   return Number.isInteger(c.row) && Number.isInteger(c.col) && c.row >= 0 && c.col >= 0 && c.row < gridSize && c.col < gridSize;

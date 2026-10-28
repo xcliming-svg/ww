@@ -41,10 +41,3 @@ export function drawGlyph(g, unitId, x, y, size, heading, enemy, alpha, defenseL
     if (armor.reinforcedHatch) g.lineBetween(x-r,y+r,x+r,y-r);
   }
 }
-/** Retained fallback for callers needing the original single glyph.
- * @param {import('phaser').GameObjects.Graphics} g @param {string} category
- * @param {number} x @param {number} y @param {number} heading @param {boolean} enemy */
-export function drawUnit(g, category, x, y, heading, enemy) {
-  const unitId = category === 'armor' ? 'tank' : category === 'aircraft' ? 'fighter' : category === 'artillery' ? 'gun' : 'rifle';
-  drawGlyph(g, unitId, x, y, 8, heading, enemy, 1, 0);
-}

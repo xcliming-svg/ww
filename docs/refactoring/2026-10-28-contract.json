@@ -1,0 +1,37 @@
+{
+  "base": "86f6a79",
+  "fileMoves": {
+    "src/infrastructure/ResolveCombatBalance.js": "src/domain/model/ResolveCombatBalance.js",
+    "src/presentation/UnitGroupMath.js": "src/adapters/phaser/UnitGroupMath.js"
+  },
+  "symbolMoves": {
+    "src/domain/tech/TechGraph.js:validateTechGraph": "src/infrastructure/ValidateTechGraph.js"
+  },
+  "removedFiles": [
+    "src/domain/commands/startWave.js",
+    "src/infrastructure/AudioAdapter.js",
+    "src/infrastructure/BalanceConfig.js"
+  ],
+  "removedDeclarations": {
+    "src/domain/tech/TechGraph.js": ["validateTechGraph"],
+    "src/adapters/phaser/PixelUnitRenderer.js": ["drawUnit"],
+    "src/domain/util/Geometry.js": ["radialAngle"],
+    "src/infrastructure/ValidateAnnual52Save.js": ["stripDoctrine"]
+  },
+  "privateDeclarations": {
+    "src/domain/systems/StepSimulation.js": ["createCombat", "stepCombat"],
+    "src/domain/waves/FormationService.js": ["validCell"]
+  },
+  "replacements": {
+    "src/infrastructure/ValidateAnnual52Save.js": [
+      { "from": "return validateSave({ ...envelope, state: stripDoctrine(state) });", "to": "return validateSave(input);" }
+    ],
+    "tools/balance-sim.mjs": [
+      { "from": "if (displayText !== null) engineDigest.update('src/infrastructure/ResolveCombatBalance.js').update(await fs.readFile('src/infrastructure/ResolveCombatBalance.js'));", "to": "" }
+    ],
+    "tools/balance-report.mjs": [
+      { "from": "if (v13) digest.update('src/infrastructure/ResolveCombatBalance.js').update(await fs.readFile('src/infrastructure/ResolveCombatBalance.js'));", "to": "" },
+      { "from": "[displayPath, 'src/infrastructure/ResolveCombatBalance.js']", "to": "[displayPath]" }
+    ]
+  }
+}

@@ -2,7 +2,7 @@ import { inAttackSector } from '../util/Geometry.js';
 import { resolveDamageBatch } from './DamageResolver.js';
 import { gradeForEnemyWave } from '../waves/WavePlanner.js';
 import { doctrineMultipliers } from '../model/Doctrine.js';
-/** @typedef {ReturnType<import('../../infrastructure/ResolveCombatBalance.js').resolveCombatBalance>} Balance */
+/** @typedef {ReturnType<import('../model/ResolveCombatBalance.js').resolveCombatBalance>} Balance */
 /** @typedef {{id:string,unitId:string,side:'ally'|'enemy',x:number,y:number,hp:number,maxHp:number,heading:number,cooldown:number,damage:number,range:number,arc:number,speed:number,splash:number,category:string,modifiers:Record<string,number>,combatGrade:number,defenseLevel:number,defenseDivisor:number}} Entity */
 /** @typedef {{type:'fire'|'hit'|'death',tick:number,sequence:number,side:'ally'|'enemy',entityId:string,unitId:string,targetId:string|null,x:number,y:number,tx:number,ty:number}} CombatEvent */
 /** @typedef {{tick:number,hqHp:number,entities:Entity[],events:CombatEvent[]}} CombatFrame */
@@ -40,7 +40,7 @@ function enemyGradeFactors(unitId, grade, balance) {
 }
 /** @param {import('../model/contracts.js').GameState} state
  * @param {ReturnType<import('../waves/WavePlanner.js').planWave>} plan @param {Balance} balance */
-export function createCombat(state, plan, balance) {
+function createCombat(state, plan, balance) {
   const allies = state.placements.map(p => {
     const powerLevel = state.upgradeLevels[p.unitId]?.power ?? 0;
     const defenseLevel = state.upgradeLevels[p.unitId]?.survive ?? 0;
@@ -71,7 +71,7 @@ export function createCombat(state, plan, balance) {
 const distance = (a, b) => Math.hypot(a.x - b.x, a.y - b.y);
 
 /** @param {ReturnType<typeof createCombat>} combat */
-export function stepCombat(combat) {
+function stepCombat(combat) {
   if (combat.ended) return;
   const { balance } = combat;
   const dt = balance.fixedStepSeconds;

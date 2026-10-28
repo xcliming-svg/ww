@@ -1,5 +1,5 @@
 import { validateContent } from './schema-validators.js';
-import { validateTechGraph } from '../domain/tech/TechGraph.js';
+import { validateTechGraph } from './ValidateTechGraph.js';
 import { makeDomainConfig } from '../domain/model/ContentConfig.js';
 import balance from './ImplementationBalanceConfig.js';
 const modules = import.meta.glob('/data/**/*.json', { eager: true, import: 'default' });
