@@ -1,5 +1,7 @@
 # 코드베이스 표준화 결과와 정적 증거
 
+> 이 문서는 최초 표준화 완료 시점의 기록이다. 이후 승인된 버그 수정과 미결 사항 재분류는 [후속 수정 보고서](REFACTOR_FOLLOWUP_2026-10-28.md)를 따른다.
+
 기준 브랜치: `main` (`86f6a79`). 작업 브랜치: `feat/codebase-standardization-20261028`.
 실행 환경: Windows PowerShell, Node 24.13.1, npm 11.10.0.
 원격 push/main 병합은 수행하지 않았으며, 작업 브랜치와 기존 Git 이력을 보존한다.

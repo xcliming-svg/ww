@@ -33,7 +33,7 @@
 - [x] **1. 조사/계획:** 저장 호출/설계/호환표/Phaser 설치 소스/Worker callback 정적 조사. 이 문서로 영향도와 근거 확정.
 - [x] **2. 저장 수정:** desktop/main.cjs, desktop/builder.json, tools/verification/check-package.mjs, check-references.mjs. 신규 정적 검사가 기존 버전 불일치/패키지 누락을 감지함을 확인 → rules 연결 → npm run check 통과 → 별도 commit.
 - [x] **3. 수명 수정:** src/application/GameCoordinator.js, src/adapters/phaser/BattlefieldScene.js, check-references.mjs. 오류 callback identity 및 dispose/shutdown 계약 검사 → 최소 변경 → npm run check 통과 → 별도 commit.
-- [ ] **4. 재검토/문서:** 읽기 전용 최종 리뷰, 필요한 수정, 결과 문서에 해결/비버그/정책 보류/미검증 구분. git diff --check, 명시 파일 commit.
+- [x] **4. 재검토/문서:** 읽기 전용 최종 리뷰, 필요한 수정, 결과 문서에 해결/비버그/정책 보류/미검증 구분. git diff --check, 명시 파일 commit.
 - [ ] **5. 통합:** origin/main 갱신 확인 → main에 --no-ff merge → npm run check → 일반 push origin main → 원격 HEAD/작업 트리 확인.
 
 ## 진행 기록
@@ -41,3 +41,4 @@
 - 조사 판단: 과거 보고서의 migration 의심은 현행 Annual52의 지원 경로와 구분해야 한다. 자동 변환을 추가하지 않으며 실패 시 원본을 보존하는 기존 계약을 유지한다. 추후 지원하려면 100→52 진행도·교리 선택·경제 보정 승인부터 필요하다.
 - 저장 검증: 수정 전 `check:references`는 Desktop save version/Shared save version source로 FAIL. rules require 추가 직후 `check:package`는 Unpackaged desktop JSON:data/rules.json으로 FAIL. builder 포함 후 전체 `npm run check` PASS(102 modules/199 dependencies, Knip 0, Vite 96 modules). 정상/거부 경로의 실제 Electron 실행은 하지 않았다.
 - 수명 검증: 수정 전 `check:references`는 오류 ownership/messageerror/공유 전송 실패 처리/dispose 무효화/drag 초기화 누락 5항목으로 FAIL. 기존 Worker 실패 복구 경로를 공유하고 shutdown/dispose를 수정한 후 전체 `npm run check` PASS(102 modules/199 dependencies, Knip 0, Vite 96 modules). 도메인/게임 데이터/locale/에셋/CSS/Worker 계산 파일 변경 없음. 이벤트 타이밍의 실제 실행 검증은 하지 않았다.
+- 독립 리뷰: 7e78ecd..402a2da를 읽기 전용 검토하여 Critical/Important/Minor 0건, 병합 가능 판정. 실제 저장/이벤트 타이밍/입력/성능·밸런스는 정적 범위 밖으로 판단 보류했고 미검증을 유지한다. 구형 저장 변환 정책도 승인 영역으로 남긴다.
