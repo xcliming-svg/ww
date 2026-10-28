@@ -38,6 +38,9 @@ function canonicalImport(file, specifier, symbol = '') {
  * @param {import('typescript').Node} node @param {string} file @returns {any} */
 function shape(node, file) {
   if (ts.isParenthesizedExpression(node)) return shape(node.expression, file);
+  // These operators are numeric properties, not children visited by forEachChild.
+  if (ts.isPrefixUnaryExpression(node) || ts.isPostfixUnaryExpression(node))
+    return [node.kind, node.operator, shape(node.operand, file)];
   if (ts.isImportDeclaration(node) && ts.isStringLiteral(node.moduleSpecifier)) {
     const specifier = node.moduleSpecifier.text;
     const clause = node.importClause;
@@ -64,6 +67,7 @@ function shape(node, file) {
     return ['string', node.text];
   }
   if (ts.isNumericLiteral(node)) return ['number', Number(node.text)];
+  if (ts.isBigIntLiteral(node)) return ['bigint', node.text];
   if (ts.isRegularExpressionLiteral(node)) return ['regexp', node.text];
   if (ts.isTemplateLiteralToken(node)) return [node.kind, node.text, node.rawText];
   /** @type {any[]} */

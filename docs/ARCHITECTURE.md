@@ -41,10 +41,10 @@ GameCoordinator는 state/Worker/저장/재생 조정 소유자다. 별도 event 
 | --- | --- |
 | index.html → bootstrap/main | Vite entry, Knip Vite plugin |
 | new Worker(new URL(...)) → combat-worker | Knip 명시 entry, check:references URL/module 검사 |
-| desktop main → preload | package main, Knip 명시 preload entry, 정적 파일 확인 |
+| desktop main → preload | 실제 BrowserWindow.webPreferences.preload의 path.join 인자와 파일을 AST로 대조, Knip 명시 entry |
 | Scene 문자열 | source AST의 super key, 등록 constructor, scene.start target 비교 |
 | IPC 문자열 | main handle/send와 preload invoke/on/removeListener 채널 대응 |
-| import.meta.glob JSON | registry/JSON schema/locale 검사. 후보 JSON을 미사용 파일로 자동 삭제하지 않음 |
+| import.meta.glob JSON | ConfigLoader/bootstrap의 실제 3개 glob 패턴/eager/default 옵션 및 registry/locale 포함 관계 검사. 후보 JSON을 미사용 파일로 자동 삭제하지 않음 |
 | asset 경로/ID | slots + licenses + 실제 파일/hash/OFL 검사 |
 | CLI | npm scripts 자동 인식. npm에 없는 probes/extract/merge/import-annual52/generate-notices는 명시 entry |
 
@@ -67,7 +67,7 @@ entryExports도 검사하며 현재 ignoreDependencies/ignoreExports 목록은 �
 | check:assets | ID/경로/해시/대체 슬롯/라이선스/폰트 헤더 |
 | check:deps | dependency-cruiser: 모듈 방향/해결/순환 |
 | check:unused | Knip: 미사용 파일/export/의존성/진입 설정 |
-| check:references | Scene/Worker/IPC/JSDoc 경계/억제 주석/doctrine schema 참조 |
+| check:references | Scene/Worker/preload/glob/IPC/JSDoc 경계/네이밍/억제 주석/doctrine schema 참조 |
 | check:package | CSP/오프라인/버전 고정/배포 라이선스/생성 JS 구문·interop |
 | build | Vite 정적 번들. 게임/Worker/Electron 기동 없음 |
 

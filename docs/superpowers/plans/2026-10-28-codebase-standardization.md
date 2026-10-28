@@ -25,7 +25,7 @@
 
 ## S1. 정적 검증 통합
 
-- [x] tools/check.mjs의 책임을 tools/verification 아래 schemas/graph/locales/assets/package (Phaser references? S2)로 분리. 데이터 수집/AST 유틸은 실제 공유되는 기능만 둔다.
+- [x] tools/check.mjs의 책임을 tools/verification 아래 schemas/graph/locales/assets/package로 분리. Phaser references는 S2에서 연결했다. 데이터 수집/AST 유틸은 실제 공유되는 기능만 둔다.
 - [x] 게임 함수/생성 validator fixture 실행 제거. 제거한 검증 범위는 분석 문서에 기록. 리터럴/스키마/생성 소스 계약으로 대체.
 - [x] generate-validators에 --check 추가: 기존 생성 코드 그대로 산출하여 바이트 비교, check 중 덮어쓰기 금지.
 - [x] 기존 타입 오류 4건을 타입 선언만으로 해소.
@@ -54,9 +54,9 @@
 
 ## S4. 전체 재검토와 완료 증거
 
-- [ ] 전체 파일/동적 진입/중복/구형 경로/임시 코드 재감사. 새 불필요한 추상화 없음 확인.
-- [ ] 별도 읽기 전용 검토 및 필요한 정적 수정. 의심 기능 버그는 보류 유지.
-- [ ] npm run check, preservation 비교, git diff --check, Git 이력/작업 트리 확인.
+- [x] 전체 파일/동적 진입/중복/구형 경로/임시 코드 재감사. 새 불필요한 추상화 없음 확인.
+- [x] 별도 읽기 전용 검토 및 필요한 정적 수정. 의심 기능 버그는 보류 유지.
+- [x] npm run check, preservation 비교, git diff --check, Git 이력/작업 트리 확인.
 - [ ] 최종 보고서에 변경 파일/커밋/검사 명령·결과/삭제 검증 범위/강제 규칙/미결 사항 기록.
 - 완료 기준: 모든 범위에 실제 정적 근거가 있고, 동작 동일성/출시 준비 완료라고 과장하지 않음.
 - Commit: `docs: record standardization evidence and remaining risks`.
@@ -70,3 +70,6 @@
 - S2 결정: resolver가 domain 순회에 포함되므로 시뮬 report의 별도 resolver 해시/스냅샷 추가를 제거했다. 중복 포함을 피하며 엔진 변경 감지 계약은 유지한다. 기존 보고서는 재생성/재실행하지 않는다. Prettier 설치는 lockfile 정리와 함께 했고 포맷 적용/검사 강제는 S3에서 수행한다.
 - S3 완료: 전체 `npm run check` exit 0, `audit:refactor` PASS (AST 지문 S2와 동일), `git diff --check` PASS. Prettier/환경별 ESLint/네이밍/억제 방지/lockfile 및 생성 interop 정적 검사를 연결했다. AGENTS/README/ARCHITECTURE 및 CI는 동일한 static-only 절차를 설명한다. 원격 CI는 아직 실행하지 않음.
 - S3 결정: TechTreeView의 인라인 JSDoc 단언에서 Prettier가 첫/둘째 포맷을 다르게 생성했다. 타입 설명을 기존 stats 선언에 옮겨 해결했고 실행 표현식 AST는 동일함을 확인했다. formatter ignore/규칙 완화는 하지 않았다.
+- S4 리뷰: 사용량 제한으로 중단된 독립 리뷰를 재개하여 완료했다. Critical/Minor 0건, Important 2건은 감사의 unary operator 누락과 preload/glob 실제 연결 검사 누락이었다. 두 항목을 검사 도구에서 보완했고 게임 코드는 변경하지 않았다. 리뷰의 별도 단항 연산자 10,819개 비교에도 차이가 없었다.
+- S4 판단: 기존 desktop 저장 버전/migration 문제는 이번 사용자 지시에 따라 보류한다. 실제 CJS 실행/저장 장치/listener 수명/UI/원격 CI는 실행하지 않아 미검증으로 기록한다. 정적 코드 검사로 이 범위를 보장한다고 주장하지 않는다.
+- S4 최종 검사: 리뷰 보완 후 전체 `npm run check` exit 0. dependency-cruiser 101 modules/195 dependencies 위반 0, Knip 문제 0, Vite 96 modules 빌드 성공. 강화된 `audit:refactor`는 소스 53개/이동 함수 1개/보호 파일 54개 PASS이며 AST 지문은 `97ff0b77cef0f81a012dafc60819af42b40ab3b0de3acda35425b73341051bfb`다. `git diff --check` PASS, 보호 파일 Git diff 없음. 기존 main 이력과 작업 브랜치를 유지한다.

@@ -1,7 +1,7 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import ts from 'typescript';
-import { files, check, finish, readJson } from './context.mjs';
+import { files, check, finish, readJson, registry } from './context.mjs';
 import { parseSource, literal, readLiteral } from './source.mjs';
 
 /** @type {Map<string,string>} */
@@ -15,6 +15,23 @@ const handles = new Set(),
   sends = new Set(),
   receives = new Set();
 let workers = 0;
+let desktopWindows = 0;
+/** @type {string[]} */
+const preloadTargets = [];
+/** @type {Map<string,string[]>} */
+const globs = new Map();
+const loaderImports = new Set();
+/** @param {import('typescript').Node|undefined} object @param {string} name */
+function property(object, name) {
+  if (!object || !ts.isObjectLiteralExpression(object)) return undefined;
+  const entry = object.properties.find(
+    (item) =>
+      ts.isPropertyAssignment(item) &&
+      (ts.isIdentifier(item.name) || ts.isStringLiteral(item.name)) &&
+      item.name.text === name,
+  );
+  return entry && ts.isPropertyAssignment(entry) ? entry.initializer : undefined;
+}
 const entryNames = new Set(['main.js', 'combat-worker.js', 'contracts.js', 'elements.js']);
 for (const file of files) {
   const ast = await parseSource(file);
@@ -38,6 +55,43 @@ for (const file of files) {
   // The only suppression is the explicitly generated Ajv output (not in files).
   /** @param {import('typescript').Node} node */
   function visit(node) {
+    if (
+      file === 'src/infrastructure/ConfigLoader.js' &&
+      ts.isImportDeclaration(node) &&
+      ts.isStringLiteral(node.moduleSpecifier)
+    ) {
+      loaderImports.add(
+        path.posix.normalize(path.posix.join(path.posix.dirname(file), node.moduleSpecifier.text)),
+      );
+    }
+    if (
+      file === 'desktop/main.cjs' &&
+      ts.isNewExpression(node) &&
+      node.expression.getText(ast) === 'BrowserWindow'
+    ) {
+      desktopWindows++;
+      const preload = property(property(node.arguments?.[0], 'webPreferences'), 'preload');
+      check(
+        !!preload &&
+          ts.isCallExpression(preload) &&
+          preload.expression.getText(ast) === 'path.join',
+        'BrowserWindow preload path expression',
+      );
+      if (preload && ts.isCallExpression(preload)) {
+        const [base, target] = preload.arguments;
+        check(
+          preload.arguments.length === 2 &&
+            base?.getText(ast) === '__dirname' &&
+            !!target &&
+            ts.isStringLiteral(target),
+          'BrowserWindow preload arguments',
+        );
+        if (target && ts.isStringLiteral(target))
+          preloadTargets.push(
+            path.posix.normalize(path.posix.join(path.posix.dirname(file), target.text)),
+          );
+      }
+    }
     if (file.startsWith('src/') && ts.isClassDeclaration(node) && node.name)
       check(/^[A-Z][A-Za-z0-9]*$/.test(node.name.text), `Class naming:${file}:${node.name.text}`);
     if (file.startsWith('src/') && ts.isFunctionDeclaration(node) && node.name)
@@ -123,6 +177,22 @@ for (const file of files) {
       const receiver = node.expression.expression.getText(ast),
         method = node.expression.name.text;
       const first = node.arguments[0];
+      if (receiver === 'import.meta' && method === 'glob') {
+        check(!!first && ts.isStringLiteral(first), `Unresolved JSON glob:${file}`);
+        const options = node.arguments[1];
+        check(!!options && ts.isObjectLiteralExpression(options), `JSON glob options:${file}`);
+        if (options && ts.isObjectLiteralExpression(options)) {
+          const settings = literal(options);
+          check(
+            settings.eager === true &&
+              settings.import === 'default' &&
+              Object.keys(settings).sort().join(',') === 'eager,import',
+            `JSON glob loading contract:${file}`,
+          );
+        }
+        if (first && ts.isStringLiteral(first))
+          globs.set(file, [...(globs.get(file) ?? []), first.text]);
+      }
       if (receiver === 'this.scene' && ['start', 'launch', 'switch', 'run'].includes(method)) {
         check(!!first && ts.isStringLiteral(first), `Unresolved Scene transition:${file}`);
         if (first && ts.isStringLiteral(first)) transitions.push(first.text);
@@ -159,7 +229,54 @@ check(
 for (const target of transitions) check(scenes.has(target), `Missing Scene:${target}`);
 check(workers === 1, 'Single combat Worker creation path');
 await fs.access('src/application/combat-worker.js');
-await fs.access('desktop/preload.cjs');
+check(
+  desktopWindows === 1 && JSON.stringify(preloadTargets) === '["desktop/preload.cjs"]',
+  'BrowserWindow/preload connection',
+);
+for (const target of preloadTargets) await fs.access(target);
+const expectedGlobs = new Map([
+  ['src/infrastructure/ConfigLoader.js', ['/data/**/*.json', '/locales/*.json']],
+  ['src/bootstrap/main.js', ['/locales/*.json']],
+]);
+check(globs.size === expectedGlobs.size, 'JSON glob call sites');
+for (const [file, patterns] of expectedGlobs)
+  check(
+    JSON.stringify(globs.get(file)) === JSON.stringify(patterns),
+    `JSON glob patterns/count:${file}`,
+  );
+/** The three accepted calls use only these two patterns; do not evaluate game modules.
+ * @param {string} file @param {string} pattern */
+function coveredByGlob(file, pattern) {
+  return pattern === '/data/**/*.json'
+    ? /^data\/.+[.]json$/.test(file)
+    : pattern === '/locales/*.json' && /^locales\/[^/]+[.]json$/.test(file);
+}
+check(
+  loaderImports.has('data/schemas/registry.json') && loaderImports.has('desktop/builder.json'),
+  'ConfigLoader registry/desktop imports',
+);
+for (const file of registry)
+  check(
+    loaderImports.has(file) ||
+      (globs.get('src/infrastructure/ConfigLoader.js') ?? []).some((pattern) =>
+        coveredByGlob(file, pattern),
+      ),
+    `Registry file outside loader inputs:${file}`,
+  );
+const localeManifest = await readJson('locales/manifest.json');
+for (const locale of new Set([
+  ...localeManifest.supportedLocales,
+  localeManifest.defaultLocale,
+  localeManifest.fallbackLocale,
+])) {
+  const file = `locales/${locale}.json`;
+  check(
+    registry.includes(file) &&
+      (globs.get('src/bootstrap/main.js') ?? []).some((pattern) => coveredByGlob(file, pattern)),
+    `Locale outside bootstrap/registry:${file}`,
+  );
+  await fs.access(file);
+}
 for (const channel of invokes) check(handles.has(channel), `Unhandled IPC:${channel}`);
 for (const channel of handles) check(invokes.has(channel), `Unused IPC handler:${channel}`);
 for (const channel of receives) check(sends.has(channel), `Unsent IPC event:${channel}`);
@@ -186,4 +303,4 @@ for (const shape of [saveSchema.properties.state, saveSchema.definitions.checkpo
       `Doctrine schema/source enum:${slot}`,
     );
 }
-finish('source references (Scene/Worker/IPC/type boundaries/schema contracts)');
+finish('source references (Scene/Worker/preload/globs/IPC/type boundaries/schema contracts)');
