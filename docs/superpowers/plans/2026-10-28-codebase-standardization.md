@@ -57,7 +57,7 @@
 - [x] 전체 파일/동적 진입/중복/구형 경로/임시 코드 재감사. 새 불필요한 추상화 없음 확인.
 - [x] 별도 읽기 전용 검토 및 필요한 정적 수정. 의심 기능 버그는 보류 유지.
 - [x] npm run check, preservation 비교, git diff --check, Git 이력/작업 트리 확인.
-- [ ] 최종 보고서에 변경 파일/커밋/검사 명령·결과/삭제 검증 범위/강제 규칙/미결 사항 기록.
+- [x] 최종 보고서에 변경 파일/커밋/검사 명령·결과/삭제 검증 범위/강제 규칙/미결 사항 기록.
 - 완료 기준: 모든 범위에 실제 정적 근거가 있고, 동작 동일성/출시 준비 완료라고 과장하지 않음.
 - Commit: `docs: record standardization evidence and remaining risks`.
 
@@ -73,3 +73,4 @@
 - S4 리뷰: 사용량 제한으로 중단된 독립 리뷰를 재개하여 완료했다. Critical/Minor 0건, Important 2건은 감사의 unary operator 누락과 preload/glob 실제 연결 검사 누락이었다. 두 항목을 검사 도구에서 보완했고 게임 코드는 변경하지 않았다. 리뷰의 별도 단항 연산자 10,819개 비교에도 차이가 없었다.
 - S4 판단: 기존 desktop 저장 버전/migration 문제는 이번 사용자 지시에 따라 보류한다. 실제 CJS 실행/저장 장치/listener 수명/UI/원격 CI는 실행하지 않아 미검증으로 기록한다. 정적 코드 검사로 이 범위를 보장한다고 주장하지 않는다.
 - S4 최종 검사: 리뷰 보완 후 전체 `npm run check` exit 0. dependency-cruiser 101 modules/195 dependencies 위반 0, Knip 문제 0, Vite 96 modules 빌드 성공. 강화된 `audit:refactor`는 소스 53개/이동 함수 1개/보호 파일 54개 PASS이며 AST 지문은 `97ff0b77cef0f81a012dafc60819af42b40ab3b0de3acda35425b73341051bfb`다. `git diff --check` PASS, 보호 파일 Git diff 없음. 기존 main 이력과 작업 브랜치를 유지한다.
+- S4 완료: [최종 보고서](../../REFACTOR_RESULT_2026-10-28.md)에 검증한 변경 파일 88개, 단계별 커밋, 실제 검사 결과, 제거된 동작 검증 범위, 강제 규칙 및 미결 사항을 기록했다. 계획 18/18항목을 완료했다. 이 완료율은 요청한 정적 검증·리팩토링 범위이며 동작 동일성 또는 출시 준비의 보장이 아니다.
